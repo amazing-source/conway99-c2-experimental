@@ -24,7 +24,7 @@ Contradiction, parce que **7 ≡ 1 (mod 3)** rend les puissances de 7 invisibles
   **C'est l'analogue exact de la contradiction C3, et il donne seulement ρ₊ + ρ₋ pair.**
   La raison : 7 ≡ −1 (mod 4) est visible modulo 4 (alors que 7 ≡ 1 mod 3), si bien que les 7-rangs inconnus absorbent le 11.
 
-## 2. Pourquoi c'est vide pour une involution (DÉRIVÉ)
+## 2. Pourquoi c'est vide pour une involution (DÉRIVÉ pour les recollements vérifiés ; la conclusion générale est HEURISTIQUE (revue du 24/09, soir))
 - La formule de Milgram, appliquée séparément à L^± = (N_θ^±, b), fixe β± en fonction des données aux premiers impairs.
   Le recollement β₊ + β₋ ≡ 0 équivaut alors à la formule de Milgram pour N_θ **tout entier**, qui ne fait pas intervenir σ.
 - Raison générale (HEURISTIQUE solide) : les caractères de C₂ sont rationnels. Les deux spécialisations sont des Z-réseaux ; les formules de
@@ -35,7 +35,8 @@ Contradiction, parce que **7 ≡ 1 (mod 3)** rend les puissances de 7 invisibles
     l'anti-isométrie 7-adique D₇(L₃⁺) ≅ −D₇(L₋₄⁺) ;
   - côté anti-invariant : M₃⁻ ⊥ M₋₄⁻ ≅ Z₂⁴⁹.
 - **Conclusion.** Le couple (Z⁹⁹, σ) avec les données C2 (27+27, 22+22) est cohérent au niveau des genres équivariants dès que la condition du §3
-  est remplie. Aucune obstruction de type « genre » ne peut tuer C2 : il faut des vecteurs précis (e_x, les 99 projections, les grilles),
+  est remplie. Aucune des obstructions de type « genre » examinées ne tue C2 (HEURISTIQUE : aucun genre équivariant réalisant toutes les
+  données locales n'a été exhibé (revue du 24/09, soir)) : il faut des vecteurs précis (e_x, les 99 projections, les grilles),
   donc de la combinatoire, ou des invariants de classe (séries thêta).
 - Rappel (ÉTABLI) : |Aut Γ| ∈ {1,2,3} dans la littérature (carte 00). Si la preuve C3 est validée, il ne reste que {1,2}.
 

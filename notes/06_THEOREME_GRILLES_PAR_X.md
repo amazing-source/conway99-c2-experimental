@@ -27,7 +27,7 @@ engendrant une grille 3×3 (⇔ arêtes D de type sœur ⇔ « paires sib »). A
    de blocs comme S₇ ; une configuration UNSAT l'est donc pour toutes ses images par S₇.
 5. kissat 4.0.4 (UNSAT, exit 20) + preuve DRAT binaire vérifiée par drat-trim (image `satbox-proof`, drat-trim 2e3b2dc).
 
-## Conséquence (sous réserve des configurations encore en cours)
+## Conséquence (sous réserve des configurations encore en cours) — **PÉRIMÉ** : remplacé par la note 19 (lemme des étoiles, 10 survivants, |Σ| ≤ 4) (revue du 24/09, soir)
 Si les 10 configurations minimales sont certifiées, Σ est l'un des **63 graphes** sur 7 sommets qui les évitent (énumération
 `scripts/sib_graph_survivors.py`, `logs/sib_graph_survivors_all.log`) ; en particulier **n_sib ≤ 9**. Survivants maximaux : K₁,₁,₄ (9 arêtes),
 un graphe à 8 arêtes, quatre à 7 arêtes (dont K₁,₆ + une arête), un à 6 arêtes. (Les tests des survivants maximaux sont en cours.)

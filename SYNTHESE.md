@@ -25,7 +25,7 @@ HEURISTIQUE · RÉFUTÉ. Tout le détail : `JOURNAL.md`, `IDEES.md`, `NEGATIVE_R
   Antériorité non trouvée (argument classique). (`notes/09_…`)
 - **Parités propres à C2** (invariants de Brown des formes b(y, f(A,P)y), cadre validé sans erreur sur 3 graphes réels) :
   rang₇(S − 3I), rang₇(S_out − 3I), rang₇(Q_out − 3I) et ρ₊ sont **pairs**. Ce sont les restes « modulo 4 » de la contradiction C3 :
-  7 ≡ −1 (mod 4) absorbe tout. **Le système de genres de C2 est cohérent** : toutes les structures sont rationnelles, donc pas
+  7 ≡ −1 (mod 4) absorbe tout. **Le système de genres de C2 est cohérent** (sur les formes testées ; HEURISTIQUE au-delà (revue du 24/09, soir)) : toutes les structures sont rationnelles, donc pas
   d'invariant hermitien, et la norme spinorielle est triviale. (`notes/10_…`)
 
 ## 3. Théorème certifié par ordinateur (ÉTABLI, preuves DRAT vérifiées par drat-trim)
@@ -33,7 +33,8 @@ Le graphe Σ des grilles passant par x (paires sœurs) ne contient aucune des co
 allsib (K₇), K2+K2+P3, K3+K2+K2, K2+P5, K2+araignée, P4+P3, K1,3+P3, K3+K3, C₆, K2+K3 pendant, K₁,₁,₄, S7b, S7c et 7 graphes à 6–8 arêtes
 issus de la boucle (20 preuves VERIFIED). Chaîne de confiance et empreintes : `notes/06_THEOREME_GRILLES_PAR_X.md`, `data/cert_results.txt`,
 `data/cnf/MANIFEST.txt`.
-**Conséquence (ÉTABLI) : Σ ∈ 53 graphes possibles, au plus 7 grilles par x.** On tombe à 50 en ajoutant K₄, S6, S7a, S8 (UNSAT solveur, sans
+**Conséquence (ÉTABLI) : Σ ∈ 53 graphes possibles, au plus 7 grilles par x.** [PÉRIMÉ : remplacé par la note 19 — lemme des étoiles,
+10 survivants, |Σ| ≤ 4 (revue du 24/09, soir)] On tombe à 50 en ajoutant K₄, S6, S7a, S8 (UNSAT solveur, sans
 DRAT). La boucle a été arrêtée volontairement (changement de régime demandé par l'utilisateur).
 
 ## 4. Résultats négatifs utiles (RÉFUTÉ / sans contenu)

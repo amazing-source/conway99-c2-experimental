@@ -90,7 +90,8 @@ Au total : 372 équations distinctes, de rang 208 sur 243 moments.
 | 4, 5, 6 | n'existent pas (intégralité) | réalisable : aveugle |
 | **7** | ? | **réalisable** : résidus ≤ 3·10⁻¹¹, λ_min(PSD) ≥ −2·10⁻⁹, espace affine de dimension 35, y_sœur ∈ [0, 1] |
 
-(m = 11, BvLS, n'est pas testé : 12 000 variables, l'énumération des orbites de paires est hors de portée ici. Mais le contrôle positif
+(m = 11, BvLS, n'est pas testé : 12 000 variables, l'énumération des orbites de paires est hors de portée ici. [revue du 24/09, soir : un Burnside
+sur les classes de conjugaison de W(B₁₁), avec des représentants d'orbites, rendrait ce contrôle bon marché ; la règle 00 l. 44 l'exige.] Mais le contrôle positif
 m = 2 et le contrôle négatif m = 3 fonctionnent.)
 
 **Pourquoi c'est automatiquement cohérent (DÉRIVÉ + CALCULÉ).**
@@ -142,6 +143,8 @@ d'allsib utilise donc une information d'ordre plus élevé que les triangles.
 
 ## 6. Suite proposée
 
+0. [revue du 24/09, soir] La note 17 répond à l'étalonnage : allsib meurt par **parité** (H¹(M₇; Z₂) = 0). Les hiérarchies de moments ne voient la
+   parité qu'à degré élevé ; monter les crans de Lasserre a peu de chances de payer (N20).
 1. **Étalonner sur allsib** : trouver le plus petit cran de relaxation qui le réfute. La preuve DRAT et le noyau UNSAT (745 contraintes)
    existent déjà ; leur analyse dirait quel « degré » la réfutation utilise vraiment. Un cran qui ne tue pas allsib ne tuera pas C2.
 2. **Si le matériel le permet** : Lasserre de niveau 2 localisé, symétrisé, d'abord sur allsib puis sur le modèle général.

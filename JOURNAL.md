@@ -73,7 +73,7 @@ Idées : `IDEES.md` (16 pistes, dont 10 hors vocabulaire Q/S/D/SAT).
   `data/cnf/MANIFEST.txt`). **Σ ∈ 53 graphes, ≤ 7 arêtes (ÉTABLI, DRAT seul)** ; 50 si l'on ajoute K₄, S6, S7a, S8 (UNSAT solveur, sans preuve).
   g07_ca15a23af4 : UNKNOWN à 900 s.
 - Prismes et n₃ (`notes/08_…`, DÉRIVÉ) : Σ c = 6P, c̄ = 4 − 2n₃/2079 (Reimbayev, arXiv 2508.03377). **n₃ < 2079 ⇒ une grille existe** ;
-  en C2, n₃ ≡ 0 (mod 6).
+  en C2, n₃ ≡ 0 (mod 6). [**FAUX**, corrigé plus bas (note 20) : n₃/3 ≡ n_one (mod 2).]
 - L'utilisateur révèle que C3 est résolu ailleurs (preuve Lean). À sa demande : comparaison de `conway99-c3-experimental` (invariant « après le
   rang » : discriminants des deux spécialisations de Z₃[C₃], ~1 jour, sans solveur) et de `conway99-c3` (cas, SAT, cubes, DRAT : rien de décidé).
   Clones dans `external_c3/` (hors des dépôts en lecture seule).
@@ -278,3 +278,16 @@ Plan relayé : relaxation SoS de degré 2 sur les arêtes libres, symétrisée, 
     types sont déjà durs.
   - La file des cubes RSF est arrêtée. Suite : un argument à la main sur la formulation compacte, en commençant par A111111.
   - Garde-mémoire v2 : il n'agit que sur une baisse soutenue. Kissat occupe 65 Mo, la machine virtuelle Docker environ 3 Go.
+- **24/09 soir — revue complète (note 22, annexes A–D).**
+  - Sur demande de l'utilisateur : lecture de C3 (étincelle : « quel invariant après le rang ? » ; note 21) et de C1 (instantané en
+    lecture seule, annexe D).
+  - Quatre relecteurs indépendants ont scoré chaque idée, tentée ou non. Chaîne jusqu'aux 10 survivants : saine. Formulation compacte :
+    complète. Erreurs et surinterprétations corrigées dans les notes 06, 09–16, 19–21, IDEES, NEGATIVE_RESULTS, SYNTHESE, REPRISE.
+  - Vérifications personnelles :
+    - constructeur RSF identique à l'octet près au CNF certifié ;
+    - encodages des 18 faits relus ;
+    - cubes de l'étoile libre exhaustifs (10 395) ;
+    - n₃ ≥ 2079 − 9N ;
+    - S ≡ 0 (mod 4) et z₁₁ ≡ 4n_one (mod 8), à partir de L18 de C1.
+  - Diagnostic convergent : tout ce qui a marché est une **parité**, ce qui explique l'échec des solveurs CDCL. Programme : q:parite à
+    l'ordre 7, parité linéaire (Gauss), cocycle à défauts.

@@ -14,9 +14,15 @@ Réciproquement, si aucun bloc n'était libre :
 Couvrir 7 sommets avec au plus 4 arêtes et un degré ≤ 2 force Σ = K₂ + K₂ + P₃, exclu par DRAT.
 
 > **Lemme de l'étoile libre (conjecture) ⇒ C2 n'existe pas.**
+>
+> Énoncés précis (ajoutés à la revue du 24/09, soir) :
+> - **forme globale** (CONJECTURE) : dans toute configuration C2, chaque bloc appartient à une paire sœur. Compte tenu des certificats,
+>   elle **équivaut** à « C2 n'existe pas » : elle ne réduit rien par elle-même ;
+> - **forme locale** (CONJECTURE, strictement plus forte) : RSF(star(c)) avec c libre (aucune paire {c, m} sœur) est UNSAT. C'est elle
+>   que testent les cubes et la formulation compacte du §3 ; à ce jour, aucun indice ni pour ni contre.
 
 Les deux contrôles réels de la famille, Paley(9) à m = 2 et BvLS à m = 11, n'ont aucun bloc libre : toutes leurs paires sont sœurs. La
-conjecture leur est donc compatible.
+conjecture leur est donc compatible — mais cette compatibilité est **vide** : à m = 7, deg Σ ≤ 2, alors que BvLS a deg Σ = 10.
 
 **Test direct en cours.** On prend RSF(star(1)), c'est-à-dire le modèle complet sur les 12 lignes de l'étoile du bloc 1, sans aucune
 paire sœur. On le découpe de façon exhaustive, à symétrie S₆ × (Z₂)⁶ près, selon le couplage A_1 de N(e_1). Cela donne 11 cubes, un
@@ -36,7 +42,7 @@ La note 08 affirmait « aucun prisme σ-invariant ⇒ n₃ ≡ 0 (mod 6) ». C'e
 |---|---|---|---|
 | 1 | Relaxation de parité F₂ du modèle complet : A² = A sur F₂ (projecteur sur un code de dimension 54) | CryptoMiniSat : m=2 SAT, m=3 SAT, m=7 TIMEOUT 600 s | trop faible seule |
 | 2 | Burnside mod 2 sur les sous-graphes d'ordre 6 (Reimbayev) | prismes, 2K₃, C₆, N3 | cohérent (n₃/3 ≡ n_one), aucune contradiction |
-| 3 | Parité du nombre de grilles N ≡ n_sib, et g − (N/11)𝟏 ∈ V₃ | calcul | cohérent |
+| 3 | Parité du nombre de grilles N ≡ n_sib, et g − (N/11)𝟏 ∈ V₃ | calcul | cohérent — **tautologique** (c'est G1 sommé, note 04 l. 32–35) : ne pouvait rien donner |
 | 4 | Cohomologie de Tate de t sur le code C = im A | calcul | C libre comme F₂[C₂]-module, cohérent |
 | 5 | Lemme de l'étoile libre (réduction §0) | 11 cubes RSF, kissat 900 s | A411, A2211, A42 : UNKNOWN (10–11 M conflits) ; A111111, A33, A21111 arrêtés par le garde-mémoire ; les 5 autres pas lancés (file arrêtée, §4) |
 | 6 | Chasse de parité dans un cube, à l'étage Q (comme pour K₁,₃) | `freestar_cube_parity.py`, A111111 | aucune solution Q trouvée en 10 min : non concluant |
@@ -48,6 +54,10 @@ La note 08 affirmait « aucun prisme σ-invariant ⇒ n₃ ≡ 0 (mod 6) ». C'e
 | 12 | Calibration : cibles plantées à m = 7 (une solution existe) | `freestar_planted.py` | cadical trouve 2 solutions sur 3 (11 s, 71 s), la 3e > 120 s. Un UNKNOWN de 10 min ne prouve donc rien |
 
 ## 3. Formulation compacte du problème local (DÉRIVÉ ; validée sur BvLS m = 11)
+
+**Antériorité (revue du 24/09).** Cette formulation précise la « formulation universelle » d'IDEES I-33 (l. 223–227) et la note 19
+(l. 349–353). **Portée de la validation** : correction vérifiée sur BvLS seulement (μ = τ = σ) ; aucune instance à bloc libre n'a été
+confrontée au CNF RSF. La complétude (i)–(iii) ⇔ RSF(star(1)) a été revérifiée à la main par un relecteur indépendant.
 
 **Données.** X est l'ensemble des 12 vecteurs signés ±e_m, m = 2…7, et σ(b) = −b. Les lignes de star(1) sont les 24 racines ±e_1 + b.
 Le modèle RSF(star(1)) équivaut exactement aux trois données suivantes :

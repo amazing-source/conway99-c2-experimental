@@ -49,7 +49,7 @@ coins opposés.
     x **ferme deux droites de M_w en paires D**, de type sib si b = −a, sinon de type one.
   - Si les droites de Λ en w = eᵢ sont sœurs (directions j, k), alors {i,j} et {i,k} sont des paires sœurs, et **les grilles Λ_ij, Λ_ik
     passant par x existent** : une grille hors de x engendre deux grilles par x. C'est l'analogue de la translation de coset, et un lien
-    direct avec le théorème certifié sur Σ (au plus 7 arêtes).
+    direct avec le théorème certifié sur Σ (au plus 7 arêtes) [périmé : au plus 4 arêtes et deg ≤ 2 depuis la note 19 ; voir aussi 15.3 (revue du 24/09, soir)].
   - π(coin) = −(coin opposé) : la paire (Λ, tΛ) est rigide.
 - **Test** (`scripts/grid_offx_phi.py`, modèle C2 exact, grille imposée, un seul fil) : on demande si « NON φ(α) = β » est UNSAT.
   Résultat ci-dessous.

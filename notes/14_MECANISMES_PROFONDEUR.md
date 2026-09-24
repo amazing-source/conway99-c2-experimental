@@ -110,7 +110,7 @@ dimension 30. Versions affaiblies testables :
 ## 4. Le défaut de Hall de C2, mesuré en x (DÉRIVÉ, nouveau)
 
 **(H1) Symétrie des milieux.** σ_v(x) = σ_x(v) ⟺ v est un coin d'un carré D de type sib ⟺ le quadrangle x–p–v–q est dans une grille.
-Cela concerne **4 n_sib ≤ 28 racines sur 84**.
+Cela concerne **4 n_sib ≤ 28 racines sur 84** [aujourd'hui ≤ 16, revue du 24/09, soir].
 
 *Preuve.* Soit v = p + q.
 - σ_v(p) = p + M_p(q) et σ_v(q) = q + M_q(p). Ces deux racines sont voisines de v.
@@ -119,12 +119,12 @@ Cela concerne **4 n_sib ≤ 28 racines sur 84**.
 - Comme q ≠ −p, on obtient M_p(q) = −q et M_q(p) = −p : les deux arcs sœurs, donc {bloc p, bloc q} ∈ Σ.
 - La réciproque se vérifie directement. ∎
 
-La première identité du Lemme 2 de BR échoue donc en x pour **au moins 56 racines**.
+La première identité du Lemme 2 de BR échoue donc en x pour **au moins 56 racines** [aujourd'hui ≥ 68, revue du 24/09, soir].
 
 **(H2) Translations locales.**
 - ρᵢ = σ_x σ_{eᵢ} déplace R⁺ le long d'arêtes ⟺ les droites de M_{eᵢ} sont D-fermantes.
-- Or #(t-orbites D-fermantes) = 2n_sib + n_one ≤ n_sib + 21 ≤ 28, sur 42.
-- La propriété « déplace chaque sommet vers un voisin » du Lemme 2 échoue donc pour **au moins 14 orbites de droites**.
+- Or #(t-orbites D-fermantes) = 2n_sib + n_one ≤ n_sib + 21 ≤ 28, sur 42 [aujourd'hui ≤ 25, revue du 24/09, soir].
+- La propriété « déplace chaque sommet vers un voisin » du Lemme 2 échoue donc pour **au moins 14 orbites de droites** [aujourd'hui ≥ 17].
 
 **(H3) Multiplicité des milieux.**
 - Posons m(a,b) = #{v : σ_v(a) = b}. Alors Σ_{b≠a} m(a,b) = 98 pour tout a.
@@ -143,7 +143,7 @@ La première identité du Lemme 2 de BR échoue donc en x pour **au moins 56 rac
 
 **(H5) R2 et translations.** R2 ⟺ ρ_w déplace chaque point de Λ le long d'une arête : c'est le Lemme 2 de BR restreint aux grilles.
 
-**Lecture.** La borne certifiée |Σ| ≤ 7 dit exactement que **C2 est loin de Hall autour de x**. Une preuve doit montrer l'incompatibilité
+**Lecture.** La borne certifiée |Σ| ≤ 7 [aujourd'hui |Σ| ≤ 4, deg Σ ≤ 2] dit exactement que **C2 est loin de Hall autour de x**. Une preuve doit montrer l'incompatibilité
 de « Hall en x » (σ_x ∈ Aut) et de « loin de Hall autour de x ».
 
 ## 5. Makhnev 1988 [R] (Mat. Zametki 44(5), réf. [7] de Reimbayev)
@@ -166,7 +166,7 @@ a besoin d'une abondance de grilles.
 **Statut.** Inapplicable tel quel. SPÉCULATION : chercher une descente pilotée par t plutôt que par les grilles, vers les 21 carrés D ou
 vers l'orbifold à 50 points (O7).
 
-Corollaire : n₃ > 0 dans tout graphe à 99 sommets. En C2, n₃/3 ≡ n_one (mod 2). (Corrigé le 24/09, note 20 : la note 08 affirmait
+Corollaire : n₃ > 0 dans tout srg(99,14,1,2). En C2, n₃/3 ≡ n_one (mod 2). (Corrigé le 24/09, note 20 : la note 08 affirmait
 « n₃ ≡ 0 (mod 6) » à partir d'une analyse de cas incomplète.)
 
 ## 6. Caractérisations locales des graphes de Hamming [S/R]
@@ -263,4 +263,6 @@ Identités de Venkov sur des trames : les trames de C2 sont minces. Défavorable
   2. R2 = (P_grille), avec un budget long quand la machine est libre.
   3. (P_rés) : SDP du résidu de dimension 30, avec la symétrie t.
 - **Forme d'une contradiction** : « Hall en x » ⇒ une régularité des σ_w pour w ~ x ⇒ une borne inférieure sur les grilles ou les
-  droites D-fermantes, contre |Σ| ≤ 7 et 2n_sib + n_one ≤ 28.
+  droites D-fermantes, contre |Σ| ≤ 7 et 2n_sib + n_one ≤ 28 [aujourd'hui |Σ| ≤ 4 et ≤ 25]. [revue du 24/09, soir : direction douteuse pour les SDP/Lasserre — la note 17
+  montre qu'allsib meurt par un argument de parité (cohomologie Z₂), que les hiérarchies de moments ne voient qu'à degré élevé
+  (bornes de type Grigoriev), ce que confirme N20.]

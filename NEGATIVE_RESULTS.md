@@ -57,7 +57,8 @@ Les 208 fréquences sont linéaires en deux paramètres libres (n₃, z₁₁). 
 éclatées) et résolu le programme linéaire « toutes les fréquences ≥ 0 » (`scripts/reimbayev7_lp.py`).
 Pour (99,14,1,2) : n₃ ∈ [0, 4158] seulement, la borne déjà connue ; contraintes serrées 2n₃ ≤ z₁₁ ≤ 4n₃. Contrôles : Paley(9) donne
 n₃ = 0 (correct) ; BvLS donne [0, 26 730].
-Leçon : la positivité des comptages locaux jusqu'à l'ordre 7 ne force pas de grille (il faudrait n₃ < 2079, note 08).
+Leçon : la positivité des comptages locaux jusqu'à l'ordre 7 ne force pas de grille (il faudrait n₃ < 2079, note 08). [Portée, revue du 24/09, soir :
+le LP n'utilisait ni l'intégralité ni les parités sous t (Burnside mod 2 à l'ordre 7, jamais fait), et une formule sur 208 manque.]
 
 ## N11 — Étage S seul et relaxation A (S + D + sommes par bloc) : UNKNOWN après 7 h (nuit du 23 au 24/09)
 Modèle validé sur le vrai BvLS (m = 11). CP-SAT : 12 fils × 40 min, 3 fils × 20 min (symétrie cyclique d'ordre 7 imposée), puis 4 et 2 fils
@@ -113,7 +114,8 @@ Leçon : aucun de ces mécanismes ne « voit » l'involution. Seul le programme 
 - Théorème 15.3 : la réflexion ponctuelle complète n'est possible que pour quatre blocs distincts. Elle est fausse avec une droite sœur.
 - Relaxation SAT locale (conditions touchant S) : TIMEOUT à 240 s (T3, T1).
 
-Leçon : autour d'une grille, les comptages locaux sont automatiquement cohérents. Le laplacien 12I − M − M² est à poids positifs pour
+Leçon : autour d'une grille, les comptages locaux **retenus** (filtres C3, C4, C8) sont automatiquement cohérents ; la vraie relaxation
+SAT locale a fait TIMEOUT, rien n'est donc établi au-delà (revue du 24/09, soir). Le laplacien 12I − M − M² est à poids positifs pour
 tout φ.
 
 ## N17 — Groupe ⟨φ, τ, ν⟩ et symétries propageables : mal posé, puis vide (24/09, note 15)

@@ -13,10 +13,14 @@ DÉRIVÉ (théorème R1) :
 
 La valeur de φ fixe le type de carré D :
 - si φ(α) = β (même droite par w) : type sib ou one ;
-- si φ(α) est un coin colinéaire à α : type dis ;
+- si φ(α) est un coin colinéaire à α : type dis — **DOUTEUX (revue du 24/09, soir)** : si ce coin porte −a (a ∈ α), soit z = −a+g, alors
+  α ~ tz = a−g et D(α) = {z, tz} partage le bloc de a : type **one**. Ce cas n'est exclu ni par la prop. 15.1 ni par R1. Lire « dis,
+  ou one si le coin porte −a » tant que ce cas n'est pas réglé ;
 - sinon : partenaire D hors de Λ ∪ tΛ.
 
-Conjecture R2 : φ est la réflexion ponctuelle (vraie dans BvLS, 990/990 ; en C2, test court TIMEOUT).
+Conjecture R2 : φ est la réflexion ponctuelle (vraie dans BvLS, 990/990 ; en C2, test court TIMEOUT). [revue du 24/09, soir : l'accord BvLS découle
+de sa structure de classes latérales et n'est pas un indice ; R2 complète échoue dans les types T1/T2/T4 (théorème 15.3). À reformuler :
+« toute grille hors de x est de type T3, φ étant la réflexion », ou à retirer.]
 
 ## O2. Le 2-complexe X_Γ (triangles = droites, carrés = carrés μ)
 DÉRIVÉ :
@@ -29,7 +33,9 @@ DÉRIVÉ :
   Vérification au niveau des chaînes : tr(t | C₀, C₁, C₂) = 1, −7, 14.
 - **Reformulation** (à consolider avec la littérature, recherche en cours) : si tous les coins se ferment (n₃ = 0), le complexe complété
   par les cellules produits se relève en celui de H(7,3), donc 99 divise 3⁷ : absurde. **La non-existence équivaut à dire que la courbure
-  2n₃ = Σ(4 − c) ne peut pas être répartie de façon cohérente.** En C2, la courbure en x vaut au moins 28.
+  2n₃ = Σ(4 − c) ne peut pas être répartie de façon cohérente.** [SPÉCULATION, revue du 24/09, soir : le relèvement demande un théorème de
+  revêtement local → global non démontré ; au mieux, cela redémontre Makhnev 1988.] En C2, la courbure en x vaut au moins 28
+  [aujourd'hui ≥ 42 − 2|Σ| ≥ 34].
 
 ## O3. Négations de carte ι_y et translations locales ρᵢ = t∘ι_{eᵢ}
 - ι_y : bijection de V qui envoie chaque sommet sur celui de coordonnées opposées dans la carte en y. On a ι_x = t (un automorphisme) ;

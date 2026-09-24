@@ -29,7 +29,8 @@ Tous les calculs sont exacts, sauf le test SAT local : énumérations de quelque
 - **DÉRIVÉ.** La réflexion ponctuelle complète (R2 au sens de la note 11) force a, b, c, d dans quatre blocs distincts, avec un motif
   rigide des coins (§2). **R2 complète est donc fausse dès qu'une droite de Λ en w est sœur ou qu'une paire sœur croise les deux
   droites.**
-- **OBSERVÉ (énumération exacte).** R2 « sur les droites » ne découle pas des contraintes locales.
+- **OBSERVÉ (énumération exacte).** R2 « sur les droites » ne découle pas des contraintes locales **retenues** (filtres C3, C4, C8
+  seulement ; la vraie relaxation SAT locale a fait TIMEOUT, §5 — « pas de preuve locale » n'est donc pas établi, revue du 24/09, soir).
   - Il reste 1194 types locaux, à symétrie près, et 263 formes de φ (§3).
   - Deux tests SAT locaux s'arrêtent en TIMEOUT (240 s) : inconclusifs.
 - **Mal posé tel quel.** Le triplet (φ, τ, ω) et le groupe H = ⟨φ, τ, ν⟩ (§4) :
@@ -205,7 +206,8 @@ est trop petit pour la rigidité de type Bondarenko–Radchenko : il faudrait au
 **Cadre.**
 - Λ et Λ′ passent par w et se coupent exactement en ℓ₁ = {w, α, β}.
 - Il n'y a aucune arête entre Λ∖ℓ₁ et Λ′∖ℓ₁ : par G1, leur voisin est dans ℓ₁.
-- Couplages : π (Λ–tΛ), π′ (Λ′–tΛ′), et ψ (Λ′–tΛ), supposé parfait (Λ′ ∩ tΛ = ∅).
+- Couplages : π (Λ–tΛ), π′ (Λ′–tΛ′), et ψ (Λ′–tΛ), supposé parfait (Λ′ ∩ tΛ = ∅). [Portée, revue du 24/09, soir : les intersections Λ′ ∩ tΛ en 1 ou 3 points, permises par R1(2),
+  ne sont pas testées.]
 - Valeurs forcées de ψ : ψ = π sur ℓ₁, ψ⁻¹(tα) = φ′(α), ψ⁻¹(tβ) = φ′(β), et φ(α) = β ⟺ φ′(α) = β.
 - Sur 30 sommets, le graphe induit est alors entièrement déterminé par (φ, φ′, ψ). On teste λ et μ sur toutes les paires.
 

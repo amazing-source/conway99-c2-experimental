@@ -49,8 +49,8 @@ impair (indépendant de σ, carte 09).
   Ils ne peuvent donc pas servir de filtre à une énumération ; ils ne tueraient C2 que combinés à un calcul **indépendant** d'un 7-rang.
 - Pourquoi aucune contradiction n'apparaît : à p = 2, les seuls premiers inconnus sont des 7 (7 ≡ −1 mod 4), dont les puissances absorbent
   tout défaut modulo 4. En C3, 7 ≡ 1 (mod 3) les rendait invisibles. Les données connues (11 via 𝟏, 5 et 3 via les blocs, 3 via le
-  Z⁷(21) intérieur) sont toujours recollées de façon cohérente. **Le système de genres de C2 est cohérent** : aucune obstruction arithmétique
-  de ce type n'existe.
+  Z⁷(21) intérieur) sont toujours recollées de façon cohérente. **Le système de genres de C2 est cohérent** sur les 32 768 formes testées :
+  aucune obstruction arithmétique de ce type n'y apparaît (HEURISTIQUE au-delà %s).
 - Test en cours : l'étage S seul par CP-SAT (`scripts/stage_s_alone.py`). Une solution permettrait de vérifier « rang₇(S − 3I) pair » sur un
   objet réel. Un UNSAT tuerait C2.
 

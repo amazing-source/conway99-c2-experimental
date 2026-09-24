@@ -335,9 +335,9 @@ involution sur 9 points a un nombre impair de points fixes. **Sans grille par x 
 **Type local d'un bloc (`logs/rsf_star_d.txt`).** On prend RSF(star(1)), sans sœur, avec exactement d arêtes D internes à star(1) :
 - d = 5 : **UNSAT** en 6 s. C'est le contrôle attendu : il resterait 2 orbites, et un cycle alterné A₁/B₁ de longueur 2 est impossible.
 - d = 6 : TIMEOUT à 900 s.
-- d = 0 à 4 : en cours.
+- d = 0 à 4 : jamais terminés (lot abandonné ; aucune conclusion, relevé lors de la revue du 24/09 au soir).
 
-**Étoiles mixtes (`logs/star_mixed_probe.txt`) : le lemme des étoiles ne s'étend pas localement.** On prend RSF sur les seules lignes
+**Étoiles mixtes (`logs/star_mixed_probe.txt`) : le lemme des étoiles ne s'étend pas localement *sur ces 6 lignes* (non testé sur les 12 lignes de star(1) ; revue du 24/09).** On prend RSF sur les seules lignes
 des 6 orbites de trois arêtes D internes à star(1). On obtient **SAT** en 0,1–0,2 s pour chacun de ces cas :
 - 2 sœurs + 1 arête one de pivot 1 ;
 - 1 sœur + 2 arêtes one ;
@@ -445,10 +445,11 @@ DRAT si UNSAT ; `scripts/cert_survivors.sh`, `logs/cert_survivors.out`). La sém
 | 2P₃ = 14 15 36 37 | UNKNOWN à 600 s (0,79 M conflits) ; relancé en sémantique exacte |
 
 Puis viennent les survivants à 3 arêtes, en sémantique **exacte** (Σ = H exactement, les 18 autres paires interdites sœurs) :
-K₃, P₄, P₃+K₂, 3K₂ (`scripts/cert_survivors_exact.sh`).
+K₃, P₄, P₃+K₂, 3K₂ (`scripts/cert_survivors_exact.sh`). Résultats (ajoutés à la revue du 24/09) : **survx_K3 et survx_P4 UNKNOWN à 600 s**
+(0,70 M et 0,67 M conflits) ; P₃+K₂ et 3K₂ non lancés.
 
-Leçon : les lignes non sœurs, que les sondes locales ne savaient pas exploiter, suffisent au solveur global en quelques minutes dès
-que Σ a 4 arêtes. Plus Σ est pauvre, plus c'est dur. Le cas Σ ∋ une seule paire, c'est le cas sib du dépôt principal.
+Leçon (corrigée à la revue du 24/09) : les lignes non sœurs, que les sondes locales ne savaient pas exploiter, ont suffi au solveur global
+en quelques minutes **pour C₄ et P₄+K₂** — mais pas pour P₅ ni 2P₃, qui ont aussi 4 arêtes (UNKNOWN à 600 s). Plus Σ est pauvre, plus c'est dur. Le cas Σ ∋ une seule paire, c'est le cas sib du dépôt principal.
 
 ## 12. Quelles lignes non sœurs tuent les petits survivants ? L'étoile d'un bloc libre (CALCULÉ, DRAT)
 
@@ -474,11 +475,12 @@ suivantes sont **linéaires** en les signes Z (un par entrée Q = 1) :
 - toutes les équations (P) « cross ».
 
 Sur BvLS (m = 11), L(Q) compte 8415 équations pour 990 signes. On trouve **rang(A) = 990**, et le système est cohérent.
-- **Les signes sont déterminés par Q** à travers les seules parités. La cohérence de L(Q) impose donc 7425 conditions linéaires indépendantes
-  sur le second membre b(Q), qui dépend lui-même de Q : c'est un filtre extrêmement fort.
+- **Les signes sont déterminés par Q** à travers les seules parités. La cohérence de L(Q) impose donc des conditions linéaires sur le second membre b(Q)
+  (7425 = 8415 − 990 est la dimension du noyau à gauche, pas un nombre de restrictions non triviales sur Q) ; b(Q) dépend lui-même de Q.
+  « Filtre extrêmement fort » est une HEURISTIQUE : testé sur BvLS seulement (revue du 24/09).
 - La parité des orbites « − » n'en est qu'une petite partie. La table échangée (U₁₂⁺ ↔ U₁₂⁻, encore solution de l'étage Q) rend L
   incohérent (rang [A|b] = 991).
-- Conséquence pour les solveurs : l'étage Q + « L(Q) cohérent » équivaut presque au modèle complet. Mais les coefficients de L
+- Conséquence pour les solveurs (HEURISTIQUE, BvLS seulement) : l'étage Q + « L(Q) cohérent » équivaudrait presque au modèle complet. Mais les coefficients de L
   dépendent de Q, et CNF + XOR ne peut pas l'exprimer linéairement.
 
 ## 13. Programme « étoile libre » et état des calculs lourds (CALCULÉ)

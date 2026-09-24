@@ -20,7 +20,7 @@ Nouveaux objets : « lignes » (231 triangles) ; « défaut » δ(ℓ) = somme d
 « grilles » 3×3 ; **grilles passant par x ⇔ arêtes D de type sœur** (en C2).
 
 **Test rapide.** Sur les contrôles : BvLS et Paley(9) sont « allsib » (toutes les arêtes D sœurs, toutes les arêtes s=1 sœurs) — CALCULÉ
-(`logs/z7_check_controls.log`). Phase 2 : allsib à m = 7 → UNSAT en 33 s (non certifié).
+(`logs/z7_check_controls.log`). Phase 2 : allsib à m = 7 → UNSAT en 33 s (non certifié à l'époque ; depuis, allsib est exclu par DRAT et par le lemme des étoiles (revue du 24/09, soir)).
 
 **Verdict.** PROMETTEUR comme langage (explique pourquoi « allsib » est la configuration des cas existants). Question ouverte : quelle fraction de la
 structure « de Hamming » (grilles, directions, défauts nuls) une solution à m = 7 peut-elle avoir ? → idée I-GRILLES.

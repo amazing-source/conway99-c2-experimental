@@ -183,7 +183,7 @@ Statuts : OUVERTE / EN TEST / SURVIT / RÉFUTÉE / ABANDONNÉE / REDONDANTE.
   - (H3) multiplicité des milieux : moyenne 1 + J/1386 sur les paires adjacentes, 1 − J/8316 sur les autres ;
   - (H4) J_x = #{v = p+q : M_p(q) = M_q(p)} ;
   - (H5) R2 = translation locale sur les grilles.
-- **Lecture** : |Σ| ≤ 7 (certifié) dit « loin de Hall autour de x ». Une preuve doit rendre incompatibles « Hall en x » et « loin de
+- **Lecture** : |Σ| ≤ 7 (certifié) [périmé : |Σ| ≤ 4 et deg Σ ≤ 2, note 19 (revue du 24/09, soir)] dit « loin de Hall autour de x ». Une preuve doit rendre incompatibles « Hall en x » et « loin de
   Hall autour de x ».
 - **Tests** :
   - (P_grille) = R2, budget long ;

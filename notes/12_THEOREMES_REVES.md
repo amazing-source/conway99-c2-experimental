@@ -24,7 +24,7 @@ grilles = K₃×K₃ induits.
    - Statut : vraie dans BvLS (990/990).
 2. **Pas de grille hors de x**
    - E : en C2, toute grille contient x.
-   - Pourquoi : N = n_sib ≤ 7, donc n₃ ≥ 2016 (via c̄) ; la géométrie des grilles devient entièrement locale en x.
+   - Pourquoi : N = n_sib ≤ 7, donc n₃ ≥ 2016 (via c̄) [périmé : avec le lemme des étoiles, n_sib ≤ 4 et n₃ ≥ 2043 ; en général n₃ ≥ 2079 − 9N (revue du 24/09, soir)] ; la géométrie des grilles devient entièrement locale en x.
    - Test : SAT court, mode « exist ».
 3. **Triangle de translation**
    - E : si Λ ∌ x passe par eᵢ avec des droites sœurs de directions j, k, alors {i,j}, {i,k}, {j,k} ∈ Σ.
@@ -53,7 +53,7 @@ grilles = K₃×K₃ induits.
      note 13) se relève en H(7,3), donc 99 divise 3⁷ : absurde (Makhnev).
    - Non trivial : **équivalent au problème**. Cela sert de boussole, pas de test.
 8. **Courbure concentrée**
-   - E : la « courbure » κ(y) = Σ_{coins en y}(4 − c) est ≥ 28 en x (prouvé : au plus 7 paires sœurs), et sa moyenne vaut 2n₃/99.
+   - E : la « courbure » κ(y) = Σ_{coins en y}(4 − c) est ≥ 28 en x (prouvé : au plus 7 paires sœurs) [périmé : ≥ 34 avec n_sib ≤ 4 (revue du 24/09, soir)], et sa moyenne vaut 2n₃/99.
    - Rêve : κ est sous-harmonique (Σ_{z∼y} κ(z) ≤ 14κ(y) + c), ce qui forcerait n₃ > 4158 : absurde.
    - Test : impossible en l'absence de graphe ; il faut chercher une identité locale sur κ.
 9. **Monodromie**
