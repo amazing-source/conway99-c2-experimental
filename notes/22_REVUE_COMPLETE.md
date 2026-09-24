@@ -167,7 +167,26 @@ décisive (1 = minutes, 2 = heures, 3 = une journée, 4 = des jours, 5 = des sem
    - Conséquence pour l'étoile libre : un bloc libre n'a pas de grille, donc pas de one-hot G1. L'analogue doit venir des carrés
      one/dis (défauts 2 et 8, note 07). C'est exactement le « cocycle à défauts » (point 3), qui devient la piste principale. Encodage avec variables de signe Z et XOR de (I) et des orbites « − ». Validation obligatoire :
    K₁,₃ doit devenir instantané. Ensuite les cubes A111111 et A6 avec élimination de Gauss.
-3. **Cocycle à défauts** (P4, C3–4), à la main : étendre la note 17 aux carrés one/dis. Le lemme du relecteur A sur les carrés one
+3. **Cocycle à défauts — EN COURS (24/09, fin de soirée).** Premiers acquis :
+   - **Lemme des carrés one** (proposé par le relecteur A, **vérifié**, DÉRIVÉ). Pour α = e₁+e₂, β = e₁+e₃ :
+     - α a exactement 6 + r_α voisines parmi les 24 racines qui évitent les blocs {1,2,3}, par comptage des incidences (I) ;
+     - seules w et tw, troisièmes points des droites sur α—(−β) et (−α)—β, ont 2 voisins dans le carré ;
+     - d'où y₂ − x₀ = 2(r_α + r_β), donc **r_α + r_β ≤ 1**, et w ∉ {±e₂±e₃} ;
+     - avec le défaut 2 de la note 07, il reste exactement trois motifs locaux.
+     - Pour les carrés dis, le même comptage est lâche (4 sommets spéciaux, défaut 8).
+   - **Où vit l'obstruction** (`scripts/freestar_core_families.py`, cube A111111, type τ#0) : sans (iii), SAT en 2,4 s ; sans (ii),
+     SAT en 61 s ; sans (i), TIMEOUT 120 s. Le cœur est l'**interaction de (ii) et (iii)**, c'est-à-dire l'endroit où agit l'involution.
+   - **Gram tordu** (`scripts/freestar_twisted_gram.py`). Avec X = [N_x | Φ] et Q = (z ↦ −z), (XᵀX ± XᵀQX)/2 sont des Gram de
+     projections, fixés par (i), (ii), (iii) et la carte. Ils sont semi-définis positifs pour **les 2 903 types** : aucun type éliminé.
+   - **Enveloppe affine** (`scripts/freestar_hull.py`, 150 solutions de (i)+(ii)). La cible de (iii) est dans l'enveloppe, sur Q
+     (dim 66 = 78 − 12 : tout l'espace permis) comme modulo 2 (dim 55). Aucun invariant linéaire ne sépare l'étoile libre de sa
+     relaxation.
+   - Bilan des classes de certificats bon marché, toutes fermées sur l'étoile libre : parité (Burnside ordre 7, Gauss bits bruts),
+     spectre (Gram tordu), invariants linéaires, LP. S'il existe une obstruction locale, elle est combinatoire.
+   - Test en cours, voie certifiée : sous-cubes (μ, τ) du modèle RSF (`scripts/make_freestar_subcubes.py`, `scripts/cert_fsub.sh`),
+     A111111 en 4 types, kissat 900 s + DRAT.
+   - Plan initial (à la main) : étendre la note 17 aux carrés one/dis. Le lemme du relecteur A sur les carrés one
+     (r_α + r_β ≤ 1) est à vérifier d'abord. : étendre la note 17 aux carrés one/dis. Le lemme du relecteur A sur les carrés one
    (r_α + r_β ≤ 1) est à vérifier d'abord.
 4. En parallèle, quand la machine est libre : survivants en sémantique exacte (I-34) ; archivage des LRAT des certificats critiques.
 
