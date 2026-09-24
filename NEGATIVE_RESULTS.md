@@ -105,3 +105,63 @@ Leçon :
 - **Nombres d'intersection triples** : aucun paramètre de Krein nul ; pour {x, v, tv}, [111] = 0 forcé, sans contradiction.
 
 Leçon : aucun de ces mécanismes ne « voit » l'involution. Seul le programme de Hall (I-30) l'utilise de façon essentielle.
+
+## N16 — R2 (renormalisation sur les grilles) : pas de preuve locale ; R2 complète réfutée en cas sœur (24/09, note 15)
+- Filtres exacts : blocs (multiplicités), disjonction de Λ et tΛ, lemme S1 vu depuis w. Survivants :
+  - 64 (T1), 86 (T2), 105 (T3), 76 (T4a), 44 (T4b) φ sur 105 ;
+  - soit 1194 types locaux à symétrie près.
+- Théorème 15.3 : la réflexion ponctuelle complète n'est possible que pour quatre blocs distincts. Elle est fausse avec une droite sœur.
+- Relaxation SAT locale (conditions touchant S) : TIMEOUT à 240 s (T3, T1).
+
+Leçon : autour d'une grille, les comptages locaux sont automatiquement cohérents. Le laplacien 12I − M − M² est à poids positifs pour
+tout φ.
+
+## N17 — Groupe ⟨φ, τ, ν⟩ et symétries propageables : mal posé, puis vide (24/09, note 15)
+- cyc(φ) = 2⁴ toujours.
+- τ n'est forcé que sur les échanges P–P.
+- L'ombre Φ n'est définie que pour 56 types. L'ordre 3 y dépend d'un choix non canonique et n'est jamais forcé.
+- Les 112 types à stabilisateur non trivial donnent des g qui fixent x et w. Or, en C2, Aut = ⟨t⟩, donc aucun g ne peut se propager.
+  Le « forcer » serait le lemme (P).
+
+## N18 — Recollement de deux grilles partageant une droite en w (sans étiquettes) : aucun φ éliminé (24/09, note 15)
+- 8325 paires (φ, φ′) respectent le statut commun de la droite. 3977 admettent un couplage ψ compatible avec λ et μ sur les
+  30 sommets.
+- Les 105 φ gardent un partenaire.
+- La version étiquetée reste à faire, si l'on garde la voie des grilles.
+
+## N19 — Relaxation de moments de degré 2 (Shor + Sherali-Adams 1 + contraintes multipliées + PSD), symétrisée : réalisable à m = 7 (24/09)
+- 243 moments d'orbite, 372 équations de rang 208 : espace affine de dimension 35. y_sœur ∈ [0, 1].
+- Contrôles : m = 2 réalisable, m = 3 irréalisable, m = 4, 5, 6 réalisables alors que ces graphes n'existent pas.
+
+Leçon : au degré 2, l'équation srg ne voit que la somme λ + μ, et aucune information de second ordre n'a de pouvoir.
+
+## N20 — Ajout des moments de triangles (degré 3, λ séparé de μ, Sherali-Adams 2) : réalisable à m = 7, et même pour allsib (24/09)
+- Cet ajout réfute m = 3 et m = 4, mais pas m = 5, 6, 7.
+- À m = 7, y_sœur ∈ [0, 1] : allsib (UNSAT en 18 s par kissat, preuve DRAT) passe la relaxation.
+
+Leçon : la contradiction, même dans le cas le plus rigide, est d'un ordre supérieur aux triangles. Étalonner les crans suivants sur allsib.
+
+## N21 — Sondes locales du cœur sans grille : rien de décidable en 15 min (24/09, note 19)
+Toutes les sondes ci-dessous sont sans paire sœur.
+
+| Système | Verdict |
+|---|---|
+| RS, 4 blocs, Σ\|B = ∅ ou 1 arête | TIMEOUT 300 s |
+| RSF(star(1)) | TIMEOUT 900 s |
+| RSF(orbites de {1,2,3,4}) | TIMEOUT 900 s |
+| RSF(star(1) ∪ star(2)) | TIMEOUT 900 s |
+| d_1 = 6 | TIMEOUT 900 s |
+| d_1 = 5 | UNSAT 6 s (contrôle) |
+
+Leçon : soit l'obstruction est globale, soit elle est de type parité, et invisible au CDCL comme pour K₁,₃.
+
+## N22 — Le lemme des étoiles ne s'étend pas localement aux carrés D de type one (24/09, note 19)
+On prend RSF sur les lignes de trois arêtes D internes à star(1), avec au moins un carré one. C'est **SAT** en 0,2 s dans tous les cas.
+
+Leçon : l'obstruction de parité vient de S1 (le voisin de grille évite les deux blocs de la grille), et S1 est propre aux grilles.
+
+## N23 — Décomposition de Benders (χ maître, signes esclave) : ne converge pas (24/09, note 19)
+Sur K2K2P3, on a fait 61 820 itérations en 60 s, avec des clauses interdites de taille ≈ 20.
+
+Leçon : ce ne sont pas les coupes qu'il faut chercher, mais le certificat global indépendant de χ. On le trouve en analysant les
+refus à χ fixé (§6 bis).

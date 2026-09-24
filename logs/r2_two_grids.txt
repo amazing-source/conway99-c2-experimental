@@ -1,0 +1,6 @@
+paires (phi, phi') testees : 8325 ; compatibles : 3977 ; temps 4 s
+phi de L ayant au moins un partenaire (phi', psi) : 105 / 105
+phi de L sans aucun partenaire (0) :
+reflexion : 15 partenaires phi' compatibles
+  l1 fermante : 225 paires, 225 compatibles
+  l1 non fermante : 8100 paires, 3752 compatibles

@@ -209,6 +209,31 @@ table.calc td:nth-child(2) { white-space: nowrap; font-variant-numeric: tabular-
   border-left: 3px solid var(--accent); background: var(--accent-soft); padding: 10px 14px;
   border-radius: 0 8px 8px 0; margin: 14px 0; max-width: 72ch;
 }
+
+/* galerie des graphes Sigma */
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 10px; margin: 12px 0 8px; }
+.gallery figure {
+  background: var(--surface); border: 1px solid var(--rule); border-radius: 8px;
+  padding: 8px 6px 7px; display: flex; flex-direction: column; align-items: center; gap: 2px;
+}
+.gallery figure.dead { background: var(--no-bg); border-color: transparent; }
+.gallery figure svg { width: 100%; max-width: 92px; height: auto; margin: 0; }
+.gallery figcaption { font-family: var(--sans); font-size: 12px; color: var(--ink); text-align: center; margin: 0; line-height: 1.3; }
+.gallery figcaption span { display: block; color: var(--muted); font-size: 11px; font-family: var(--mono); }
+.gv { fill: var(--surface); stroke: var(--ink); stroke-width: 1.1; }
+.ge { stroke: var(--accent); stroke-width: 2.4; stroke-linecap: round; fill: none; }
+.dead .ge { stroke: var(--no); }
+.gl { fill: var(--muted); font-family: var(--sans); font-size: 8.5px; text-anchor: middle; dominant-baseline: middle; }
+
+/* preuve encadree */
+.proof {
+  background: var(--surface); border: 1px solid var(--rule-strong); border-radius: 10px;
+  padding: 14px 18px 12px; margin: 14px 0 18px; max-width: 76ch; box-shadow: var(--lift);
+}
+.proof h3 { margin-top: 2px; }
+.proof ol { padding-left: 1.2em; margin: 8px 0; }
+.proof li { margin-bottom: 6px; }
+.proof p { margin: 8px 0; }
 .note p { margin: 0; }
 footer { font-family: var(--sans); font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 16px; }
 @media (max-width: 520px) {
@@ -227,6 +252,7 @@ section[id] { scroll-margin-top: 16px; }
       <li><a href="#etat">En bref</a></li>
       <li><a href="#cadre">Le cadre</a></li>
       <li><a href="#etabli">Établi</a></li>
+      <li><a href="#sigma">Grilles par x : 10 graphes</a></li>
       <li><a href="#derive">Démontré au labo</a></li>
       <li><a href="#reflexion">Le mouvement « réflexion »</a></li>
       <li><a href="#mecanismes">Mécanismes examinés</a></li>
@@ -251,10 +277,16 @@ section[id] { scroll-margin-top: 16px; }
       <p><strong>Rien n'est tranché</strong> : ni l'existence, ni la non-existence d'un tel graphe.</p>
       <div class="brief">
         <article>
-          <span><span class="tag ok">Établi</span></span>
-          <h3>Au plus 7 grilles par x</h3>
-          <p>Le graphe Σ des grilles 3×3 passant par x est l'un de 53 graphes : 20 configurations exclues par des preuves DRAT
-            vérifiées.</p>
+          <span><span class="tag der">Dérivé</span> <span class="tag ok">DRAT</span></span>
+          <h3>Au plus 4 grilles par x</h3>
+          <p>Le graphe Σ des grilles 3×3 passant par x est passé de 53 à 10 possibilités. Toutes ont au plus 4 arêtes et sont de
+            degré ≤ 2, y compris le graphe vide (<a href="#sigma">détail</a>).</p>
+        </article>
+        <article>
+          <span><span class="tag der">Dérivé</span></span>
+          <h3>Lemme des étoiles</h3>
+          <p>Trois grilles par x ne partagent jamais une droite de x. La preuve est une parité de quelques lignes, et ses
+            18 ingrédients sont certifiés par DRAT dans le modèle exact.</p>
         </article>
         <article>
           <span><span class="tag der">Dérivé</span></span>
@@ -264,9 +296,9 @@ section[id] { scroll-margin-top: 16px; }
         </article>
         <article>
           <span><span class="tag open">Ouvert</span></span>
-          <h3>Il manque un lemme de propagation</h3>
-          <p>Une deuxième réflexion automorphe tuerait C2. L'argument connu casse ici : le 1-voisinage n'engendre que 14 des
-            44 dimensions de l'espace propre.</p>
+          <h3>Il faut des lignes non sœurs</h3>
+          <p>Pour les 10 survivants comme pour le cas sans grille, l'information portée par les grilles par x est épuisée, signes
+            compris. Le lemme de propagation (P) reste l'autre voie.</p>
         </article>
       </div>
     </section>
@@ -341,9 +373,16 @@ section[id] { scroll-margin-top: 16px; }
       <div class="result">
         <p><span class="tag ok">Établi</span> <strong>Théorème des grilles par x (certifié).</strong> Σ ne contient aucune des
           configurations suivantes : allsib (K₇), K2+K2+P3, K3+K2+K2, K2+P5, K2+araignée, P4+P3, K1,3+P3, K3+K3, C₆, K2+K3 pendant,
-          K₁,₁,₄, S7b, S7c, ni 7 graphes à 6–8 arêtes issus de la boucle de réduction. Donc Σ est l'un de 53 graphes sur 7 sommets,
-          et au plus 7 grilles passent par x. Avec K₄, S6, S7a et S8 (UNSAT au solveur, sans preuve DRAT), on descendrait à 50.</p>
-        <p class="src">kissat + drat-trim, 20 preuves VERIFIED · notes/06 · data/cert_results.txt · empreintes dans data/cnf/MANIFEST.txt</p>
+          K₁,₁,₄, S7b, S7c, K₁,₆ + une arête (à l'étage Q), ni 7 graphes à 6–8 arêtes issus de la boucle de réduction. Donc Σ est l'un
+          de 52 graphes sur 7 sommets, et au plus 7 grilles passent par x.</p>
+        <p class="src">kissat + drat-trim, 21 preuves VERIFIED · notes/06, notes/18 · data/cert_results.txt · empreintes dans
+          data/cnf/MANIFEST*.txt</p>
+      </div>
+      <div class="result">
+        <p><span class="tag ok">Établi</span> <strong>Atomes et restrictions aux lignes sœurs (certifiés).</strong> Les 11 atomes du
+          système χ, S6, C₅, P₆ et C₄ + K₂ dans le modèle complet restreint aux lignes sœurs, et C₄ et P₄ + K₂ dans le modèle
+          complet, sont UNSAT avec une preuve DRAT vérifiée. Voir la section suivante.</p>
+        <p class="src">data/cert_results.txt, lignes chi_atom01–11, rsf_*, surv_* et fact* · data/cnf/MANIFEST*.txt</p>
       </div>
       <div class="result">
         <p><span class="tag ok">Établi</span> <strong>Littérature.</strong> |Aut Γ| ∈ {1, 2, 3} (Makhnev–Minakova 2004 ;
@@ -351,6 +390,73 @@ section[id] { scroll-margin-top: 16px; }
           retourne tous les blocs.</p>
         <p class="src">notes/00_CARTE_ETAT_C2.md</p>
       </div>
+    </section>
+
+    <section id="sigma">
+      <h2>Grilles par x : de 53 graphes à 10</h2>
+      <p>Σ est le graphe sur les 7 blocs dont les arêtes sont les paires sœurs, c'est-à-dire les grilles 3×3 passant par x. Quatre
+        outils successifs ont réduit les possibilités (notes 17 à 19).</p>
+      <div class="table-wrap">
+        <table class="calc">
+          <thead><tr><th>Outil</th><th>Σ possibles</th><th>Ce qu'il voit</th></tr></thead>
+          <tbody>
+            <tr><td>Certificats DRAT, modèle complet</td><td>52</td><td>21 configurations exclues, dont K₁,₆ + une arête (à l'étage Q)</td></tr>
+            <tr><td>Système χ : l'étage Q sur les lignes sœurs</td><td>39</td><td>11 atomes minimaux certifiés. Preuve humaine d'allsib
+              par H¹(M₇ ; Z₂) = 0, et de K₃ + K₂.</td></tr>
+            <tr><td>Lemme des étoiles : parité des signes</td><td>15</td><td>Aucune étoile K₁,₃ : Σ est de degré ≤ 2. Élimine
+              24 survivants d'un coup.</td></tr>
+            <tr><td>Système χ signé : modèle complet sur les lignes sœurs</td><td>12</td><td>C₅, P₆ et C₄ + K₂ exclus, et S6 : les quatre ont une
+              preuve DRAT VERIFIED.</td></tr>
+            <tr><td>Modèle complet, survivants à 4 arêtes</td><td>10</td><td>C₄ (495 s) et P₄ + K₂ (252 s) exclus, DRAT VERIFIED. P₅
+              et 2P₃ ne sont pas décidés à 600 s.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><span class="tag der">Dérivé</span> <strong>Le système χ n'avait pas les signes.</strong> RS(orbites sœurs), c'est-à-dire
+        l'étage Q restreint aux lignes sœurs, redonne exactement le système χ. Le modèle complet sur ces mêmes lignes, avec les signes
+        a/b, tue en revanche les 8 configurations χ-possibles que seuls des calculs globaux excluaient (K2+K2+P3 en 2,6 s). Le
+        voisin de grille c<sub>p</sub>(w) porte donc un signe, et ce signe est décisif.</p>
+
+      <div class="proof">
+        <h3><span class="tag der">Dérivé</span> Lemme des étoiles : trois grilles par x ne partagent jamais une droite</h3>
+        <p>Supposons trois paires sœurs {c,a}, {c,b}, {c,d}. Pour une feuille x et une racine w qui évite {c,x}, soit
+          c<sub>x</sub>(w) l'unique voisin de w dans la grille G<sub>x</sub> (G1, code parfait), et τ<sub>x</sub>(w) = ±1 son signe
+          en c.</p>
+        <ol>
+          <li><strong>Fait A</strong> (μ = 2 entre une racine de grille et e<sub>ℓ</sub>). Parmi les 8 racines qui contiennent
+            +e<sub>ℓ</sub> et évitent {c,x}, exactement 4 ont τ<sub>x</sub> = +1.</li>
+          <li><strong>Fait B</strong> (μ = 2 entre deux racines de grilles de même signe en c). Parmi les 12 orbites qui évitent
+            {c,x,y}, exactement 4 ont τ<sub>x</sub> = τ<sub>y</sub>.</li>
+          <li><strong>Parité.</strong> On multiplie six Faits A et trois Faits B. Les membres de gauche coïncident. À droite, chaque
+            paire de feuilles donne −1, car ses deux orbites ±(e<sub>ℓ</sub> + e<sub>z</sub>) et ±(e<sub>ℓ</sub> − e<sub>z</sub>) ont
+            des signes égaux pour l'une et opposés pour l'autre. On obtient (−1)³ = +1 : contradiction.</li>
+        </ol>
+        <p class="small">La preuve utilise seulement G1, S1(a) et μ = 2 : elle est propre à k = 14 et ne vaut pas pour BvLS.
+          Chacun des Faits utilisés est une implication du modèle exact. Les 18 instances sont certifiées par DRAT
+          (VERIFIED). Le cas général suit par symétrie. Elle a été trouvée ainsi : les solveurs échouaient sur K₁,₃, mais
+          réfutaient chaque χ fixé instantanément et par parité ; les certificats, sommés, ne dépendaient plus de χ.</p>
+      </div>
+
+      <p><span class="tag der">Dérivé</span> <strong>Au plus 4 grilles par x, au plus 2 par droite de x.</strong> Les 29 graphes de
+        degré ≤ 2 ont tous été revus : tous ceux qui ont au moins 5 arêtes sont exclus. La borne précédente était 7.</p>
+
+      <h3>Les 10 graphes Σ encore possibles</h3>
+      <p>Chaque dessin place les 7 blocs sur un cercle ; une arête est une grille par x. En rouge, les cinq derniers exclus, avec une
+        preuve DRAT : trois par le système signé, deux par le modèle complet en quelques minutes (C₄ et P₄ + K₂). Les survivants
+        restants passent dans le modèle complet, du plus riche au plus pauvre.</p>
+      <div class="gallery" id="gallery" aria-label="Graphes Σ possibles et exclus"></div>
+
+      <h3>Ce que cela dit</h3>
+      <ul class="facts">
+        <li>Pour les survivants, tout ce que portent les lignes sœurs est satisfaisable, signes compris : il faut des lignes non
+          sœurs. Le modèle complet sait les exploiter : il a tué C₄ et P₄ + K₂ en quelques minutes, là où toutes les sondes locales
+          échouaient.</li>
+        <li><span class="tag open">Ouvert</span> Le cas sans grille (Σ = ∅) est dans la même situation. Aucune sonde locale ne
+          conclut : jusqu'à 22 lignes, 15 min chacune, tout finit en TIMEOUT.</li>
+        <li><span class="tag no">Vide</span> Le mécanisme des étoiles ne s'étend pas localement aux carrés D de type one : les
+          étoiles mixtes sont satisfaisables sur leurs lignes.</li>
+      </ul>
     </section>
 
     <section id="derive">
@@ -522,6 +628,10 @@ section[id] { scroll-margin-top: 16px; }
             <tr><td>R2 sur BvLS</td><td>secondes</td><td>990 / 990, cas entièrement sœur</td></tr>
             <tr><td>Ishida sur 4 modules (calcul exact)</td><td>secondes</td><td>Identité vérifiée partout : vide</td></tr>
             <tr><td>Programme linéaire, fréquences d'ordre 7</td><td>secondes</td><td>n₃ ∈ [0, 4158]</td></tr>
+            <tr><td>Système χ, 1044 graphes Σ (note 18)</td><td>&lt; 1 s chacun</td><td>988 impossibles, 11 atomes certifiés</td></tr>
+            <tr><td>Modèle complet sur les lignes sœurs (note 19)</td><td>3–380 s</td><td>K2+K2+P3, …, S6, C₅, P₆, C₄+K₂ : UNSAT (DRAT)</td></tr>
+            <tr><td>Étoile K₁,₃, système signé</td><td>jusqu'à 1200 s</td><td>TIMEOUT pour tous les solveurs, puis réglé par parité</td></tr>
+            <tr><td>Sondes sans grille (étoile, 4 blocs, 22 lignes)</td><td>300–900 s</td><td>TIMEOUT</td></tr>
           </tbody>
         </table>
       </div>
@@ -540,6 +650,10 @@ section[id] { scroll-margin-top: 16px; }
           solveur les configurations localement riches.</li>
         <li><strong>Cubes de la relaxation A.</strong> Casser les symétries à la main (stabilisateur d'ordre 7 680) avant de découper.</li>
         <li><strong>Carrés D de type one et dis.</strong> Chercher un analogue de G1.</li>
+        <li><strong>Parité au-delà des étoiles (note 19, I-33).</strong> Chercher des combinaisons de comptages μ = 2 indépendantes
+          des données χ qui impliquent des lignes non sœurs. C'est le candidat naturel pour les 12 survivants et pour Σ = ∅.</li>
+        <li><strong>Transfert au dépôt principal (à décider).</strong> « Au plus 2 paires sœurs par bloc » est une contrainte de
+          cardinalité valide qui manque à l'étage Q. Elle réduit fortement le cas sib.</li>
       </ol>
       <p class="small">Laissés de côté : les méthodes de genre (épuisées), Niemeier (trames minces), les fréquences d'ordre ≤ 7
         (aucune borne).</p>
@@ -571,7 +685,9 @@ py -3.12 -m venv .venv
         <li><code>REPRISE.md</code> : état, commandes, historique des calculs, message de reprise pour une nouvelle session.</li>
         <li><code>SYNTHESE.md</code> : tous les résultats, avec leur statut.</li>
         <li><code>notes/14_MECANISMES_PROFONDEUR.md</code> : sections 0, 3, 4 et 12.</li>
-        <li><code>IDEES.md</code> (I-28 à I-30) et <code>NEGATIVE_RESULTS.md</code> (N01–N15).</li>
+        <li><code>notes/17</code> à <code>notes/19</code> : allsib, système χ, système signé et lemme des étoiles
+          (<code>notes/19</code> §6 bis et §9).</li>
+        <li><code>IDEES.md</code> (I-28 à I-33) et <code>NEGATIVE_RESULTS.md</code> (N01–N23).</li>
       </ol>
       <h3>Règles du labo</h3>
       <ul class="facts">
@@ -583,6 +699,47 @@ py -3.12 -m venv .venv
       </ul>
     </section>
 
-    <footer>Laboratoire C2 · carnet tiré du dépôt au 24 septembre 2026 · source de cette page : <code>rapport/c2_lab.html</code></footer>
+    <footer>Laboratoire C2 · carnet tiré du dépôt au 24 septembre 2026 (mis à jour après la note 19) · source de cette page :
+      <code>rapport/c2_lab.html</code></footer>
   </main>
 </div>
+
+<script>
+(function () {
+  var G = [
+    ["Σ = ∅", "", "", false], ["K₂", "67", "67", false], ["P₃", "23 34", "23 34", false], ["2K₂", "17 56", "17 56", false],
+    ["K₃", "13 15 35", "13 15 35", false], ["P₄", "17 56 67", "17 56 67", false], ["P₃ + K₂", "23 34 67", "23 34 67", false],
+    ["3K₂", "15 24 67", "15 24 67", false], ["P₅", "12 23 34 45", "12 23 34 45", false],
+    ["2P₃", "14 15 36 37", "14 15 36 37", false],
+    ["C₄", "23 25 36 56", "23 25 36 56", "modèle complet"], ["P₄ + K₂", "17 24 56 67", "17 24 56 67", "modèle complet"],
+    ["C₅", "12 15 23 34 45", "12 15 23 34 45", "signes"], ["P₆", "12 17 45 56 67", "12 17 45 56 67", "signes"],
+    ["C₄ + K₂", "25 34 36 47 67", "25 34 36 47 67", "signes"]
+  ];
+  var NS = "http://www.w3.org/2000/svg", box = document.getElementById("gallery");
+  if (!box) return;
+  var P = [];
+  for (var i = 0; i < 7; i++) {
+    var a = -Math.PI / 2 + 2 * Math.PI * i / 7;
+    P.push([50 + 34 * Math.cos(a), 50 + 34 * Math.sin(a)]);
+  }
+  function el(n, at) { var e = document.createElementNS(NS, n); for (var k in at) e.setAttribute(k, at[k]); return e; }
+  G.forEach(function (g) {
+    var fig = document.createElement("figure");
+    if (g[3]) fig.className = "dead";
+    var svg = el("svg", { viewBox: "0 0 100 100", role: "img", "aria-label": g[0] + (g[1] ? " : " + g[1] : "") });
+    (g[1] ? g[1].split(" ") : []).forEach(function (e) {
+      var u = P[+e[0] - 1], v = P[+e[1] - 1];
+      svg.appendChild(el("line", { x1: u[0], y1: u[1], x2: v[0], y2: v[1], "class": "ge" }));
+    });
+    P.forEach(function (p, i) {
+      svg.appendChild(el("circle", { cx: p[0], cy: p[1], r: 5.2, "class": "gv" }));
+      var t = el("text", { x: p[0], y: p[1] + 0.4, "class": "gl" }); t.textContent = String(i + 1); svg.appendChild(t);
+    });
+    fig.appendChild(svg);
+    var cap = document.createElement("figcaption");
+    cap.textContent = g[0] + (g[3] ? " — exclu (" + g[3] + ")" : "");
+    var s = document.createElement("span"); s.textContent = g[2] || "aucune arête"; cap.appendChild(s);
+    fig.appendChild(cap); box.appendChild(fig);
+  });
+})();
+</script>

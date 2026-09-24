@@ -1,0 +1,1 @@
+ce5c286b2175200055ea3f2f0b3a0f3c52f3e98788b6d1dae3796554f2f7ea44  stageQ_g07_ca15a23af4.cnf  vars=1197042 clauses=2530948 pairs=[12 13 14 15 16 17 47]  (etage Q, vendor/stage_q.build_q(7) + Y=1 sur les paires)

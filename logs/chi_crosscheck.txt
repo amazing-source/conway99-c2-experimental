@@ -1,0 +1,7 @@
+allsib           etage Q : UNSAT (construction 3.1 s, resolution 3.3 s)
+K3K3             etage Q : UNSAT (construction 2.9 s, resolution 7.4 s)
+g07_ca15a23af4   etage Q : UNSAT (construction 2.9 s, resolution 30.4 s)
+K2K2P3           etage Q : TIMEOUT 240 s
+chi_atom01       etage Q : UNSAT (construction 2.8 s, resolution 28.4 s)
+chi_atom02       etage Q : UNSAT (construction 3.2 s, resolution 45.7 s)
+chi_atom03       etage Q : UNSAT (construction 2.9 s, resolution 25.2 s)

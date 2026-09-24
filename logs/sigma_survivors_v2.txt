@@ -1,0 +1,37 @@
+configurations interdites certifiees (DRAT) : 21
+graphes a 7 sommets : 1044 ; survivants : 52 ; aretes max : 7
+    0 aretes : 1
+    1 aretes : 1
+    2 aretes : 2
+    3 aretes : 5
+    4 aretes : 9
+    5 aretes : 15
+    6 aretes : 13
+    7 aretes : 6
+survivants maximaux : 12
+   7 aretes : 12 23 24 25 34 35 45
+   7 aretes : 13 16 23 26 35 36 56
+   7 aretes : 12 15 23 24 25 34 45
+   7 aretes : 13 14 15 34 35 36 37
+   7 aretes : 12 23 24 25 34 35 37
+   7 aretes : 13 16 23 26 35 46 56
+   6 aretes : 12 26 27 47 56 67
+   6 aretes : 17 27 37 47 57 67
+   6 aretes : 12 23 34 35 36 37
+   5 aretes : 12 17 45 56 67
+   5 aretes : 14 15 36 37 67
+   5 aretes : 25 34 36 47 67
+parmi les survivants : chi-UNSAT 13, chi-SAT 39
+   chi-UNSAT : 7 aretes : 12 23 24 25 34 35 45
+   chi-UNSAT : 7 aretes : 13 16 23 26 35 36 56
+   chi-UNSAT : 7 aretes : 12 15 23 24 25 34 45
+   chi-UNSAT : 7 aretes : 13 16 23 26 35 46 56
+   chi-UNSAT : 6 aretes : 14 15 23 24 25 45
+   chi-UNSAT : 6 aretes : 34 35 36 37 47 56
+   chi-UNSAT : 6 aretes : 12 15 23 25 36 56
+   chi-UNSAT : 6 aretes : 13 16 23 26 35 56
+   chi-UNSAT : 6 aretes : 12 23 34 35 36 37
+   chi-UNSAT : 5 aretes : 12 23 36 37 67
+   chi-UNSAT : 5 aretes : 14 15 36 37 67
+   chi-UNSAT : 5 aretes : 12 23 24 25 67
+   chi-UNSAT : 4 aretes : 13 15 35 67

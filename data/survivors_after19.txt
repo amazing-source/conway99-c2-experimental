@@ -1,0 +1,19 @@
+# Survivants Sigma apres la note 19 (24/09/2026). Semantique : Sigma = ensemble EXACT des paires soeurs (grilles par x).
+# Point de depart : data/survivors39.txt (39 graphes chi-SAT sans configuration certifiee, note 18).
+# Elimines par la note 19 :
+#   - LEMME DES ETOILES (degre max de Sigma <= 2 ; preuve humaine + ingredients verifies par SAT) : les 24 survivants contenant K_{1,3}.
+#   - Systeme chi signe (RSF lignes soeurs) : S6 = 12 26 27 47 56 67 (DRAT VERIFIED, rsf_S6) [contient aussi K_{1,3}],
+#     C5 = 12 15 23 34 45, P6 = 12 17 45 56 67, C4+K2 = 25 34 36 47 67 (schi/one-hot UNSAT ; RSF DRAT VERIFIED : rsf_C5, rsf_P6, rsf_C4K2).
+# Restaient 12 graphes (10 apres le §11 : C4 et P4+K2 exclus par le modele complet), tous de degre <= 2, tous SAT pour le systeme signe des lignes soeurs (il faut des lignes non soeurs) :
+-                  vide (coeur sans grille)
+67                 K2
+23 34              P3
+17 56              2K2
+13 15 35           K3
+17 56 67           P4
+23 34 67           P3 + K2
+15 24 67           3K2
+23 25 36 56        C4        -> EXCLU ensuite : modele complet UNSAT, DRAT VERIFIED (surv_C4, notes/19 §11)
+12 23 34 45        P5
+17 24 56 67        P4 + K2   -> EXCLU ensuite : modele complet UNSAT, DRAT VERIFIED (surv_P4K2, notes/19 §11)
+14 15 36 37        2P3

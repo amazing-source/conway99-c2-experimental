@@ -1,0 +1,3 @@
+familles LM,H3,H4   : UNSAT  (vars 277935, clauses 636405, 31.3 s)
+familles LM,H3      : UNSAT  (vars 257775, clauses 596085, 11.9 s)
+familles LM,H4      : UNSAT  (vars 144375, clauses 309645, 43.5 s)

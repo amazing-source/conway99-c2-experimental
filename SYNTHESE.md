@@ -73,3 +73,56 @@ rationnels, donc le recollement équivaut à la formule de Milgram du réseau to
   - Ishida sur quatre modules (N14) ;
   - Hamming local, Makhnev 1988, Cameron, intersections triples (N15).
 - **Ouvert** : conjecture R2 (vraie dans BvLS, où tout est sœur, donc indice faible) ; J_x ; SDP du résidu.
+
+## Note 15 (24/09) : R2 et types locaux
+- **DÉRIVÉ** :
+  - formule des multiplicités ;
+  - R2 complète ⇒ quatre blocs distincts et motif rigide des coins, donc R2 complète est fausse avec une droite sœur ;
+  - R2 complète en w ⇒ σ_w ∉ Aut.
+- **OBSERVÉ (exact)** :
+  - 1194 types locaux autour d'une grille hors de x ;
+  - aucun élément d'ordre 3 forcé ;
+  - 112 types à symétrie locale, aucune propageable en C2 (Aut = ⟨t⟩ par |Aut| ≤ 3, sans besoin de C3) ;
+  - le recollement de deux grilles par une droite n'élimine aucun φ.
+- **Réserve** : tout ce qui passe par les grilles laisse intact le cœur sans grille.
+
+## Note 16 (24/09) : relaxations de moments
+- **Prémisse corrigée** : 1722 variables binaires à t près (dont 210 vraies arêtes de type II).
+- **CALCULÉ** :
+  - le degré 2 symétrisé (243 moments d'orbite) est réalisable à m = 7, et aveugle même à m = 4, 5, 6 ;
+  - l'ajout des triangles de degré 3 réfute m = 3 et m = 4, mais laisse passer m = 7 et même allsib (certifié impossible).
+- **Conséquence** : la contradiction, si elle existe, est d'un ordre supérieur. Le prochain cran (Lasserre 2 localisé) demande du
+  matériel.
+
+## Note 17 (24/09) : allsib, preuve humaine
+**DÉRIVÉ** : allsib est impossible. La preuve passe par la cohomologie du complexe des couplages M₇ :
+- λ et μ entre paires disjointes ⇒ cocycle Z₂ ;
+- H¹(M₇ ; Z₂) = 0 ⇒ cobord ;
+- μ entre paires qui se coupent ⇒ équirépartition 3/3, impossible pour un cobord.
+
+C'est la première preuve humaine d'un cas certifié, et un patron local → global réutilisable.
+
+## Note 18 (25/09) : système χ, atomes, g07 fermé
+- **ÉTABLI (DRAT)** : g07_ca15a23af4 (K₁,₆ + une arête) est impossible, par l'étage Q. C'était le dernier cas indécis de la boucle Σ.
+- **Système χ** (dérivé de l'étage Q) : il classe les 1044 graphes Σ en 988 impossibles et 56 possibles, à travers 11 atomes minimaux
+  certifiés par DRAT.
+- Il reste **39 graphes Σ possibles**, dont le graphe vide (au plus 7 arêtes).
+- **Preuves humaines** : allsib (cohomologie de M₇) ; K₃ + K₂ (lemme du triangle).
+
+## Note 19 (24/09) : lignes, signes, lemme des étoiles
+- **Système χ signé.** Le système χ, c'est exactement l'étage Q sur les lignes sœurs ; ce qui lui manque, ce sont les **signes**. Le
+  modèle complet restreint aux lignes sœurs tue les 8 configurations χ-SAT certifiées ailleurs, et S6 (DRAT VERIFIED).
+- **LEMME DES ÉTOILES (DÉRIVÉ, preuve humaine courte, ingrédients vérifiés par SAT).** Trois paires sœurs ne partagent jamais un bloc :
+  Σ est de degré ≤ 2.
+  - La preuve est une parité : 6 identités μ = 2 (Fait A) et 3 identités μ = 2 (Fait B) donnent (−1)³ = +1.
+  - Elle est propre à k = 14, par G1.
+  - Ses 18 ingrédients (6 Faits A, 12 Faits B éclatés) sont certifiés par DRAT.
+- **Au plus 4 grilles par x (n_sib ≤ 4) et au plus 2 par droite de x.** La borne précédente était 7.
+- **Modèle complet sur les petits survivants** : C₄ et P₄+K₂ sont exclus (DRAT, 495 s et 252 s). **Σ survivants : 39 → 10.**
+- Avant ce dernier point, Σ survivants : 39 → 12, tous de degré ≤ 2 : ∅, K₂, P₃, 2K₂, K₃, P₄, P₃+K₂, 3K₂, C₄, P₅, P₄+K₂, 2P₃. Pour chacun, l'information
+  des lignes sœurs, signes compris, est épuisée : il faut des lignes non sœurs, comme pour le cœur sans grille.
+- **Cœur sans grille** : aucune obstruction locale visible jusqu'à 22 lignes. Le mécanisme de parité ne s'étend pas localement aux
+  carrés D de type one.
+- **Parité des orbites « − » (DÉRIVÉ, contrôlée sur BvLS).** Toute ligne a un nombre pair de voisins Q = 1 parmi les orbites
+  ±(eᵢ − eⱼ). L'étage Q ne voit pas cette contrainte : il a une symétrie parasite (Z₂)²¹, et l'échange d'une paire la viole. Ce
+  sont 42 XOR à ajouter à l'étage Q.

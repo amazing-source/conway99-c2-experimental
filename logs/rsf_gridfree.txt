@@ -1,0 +1,3 @@
+star1      |S|=12  RSF sans soeur : TIMEOUT resolution 900.0 s, 0 clauses
+orb1234    |S|=12  RSF sans soeur : TIMEOUT resolution 900.0 s, 0 clauses
+star12     |S|=22  RSF sans soeur : TIMEOUT resolution 900.0 s, 0 clauses

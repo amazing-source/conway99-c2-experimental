@@ -1,0 +1,1468 @@
+RESUME : type | orbites de dispositions | types locaux (disposition, phi) | formes de phi | reflexion | types a droites R2
+  T1   |    2 |    16 |  13 | 0 | 1
+  T2   |   11 |   185 |  71 | 0 | 4
+  T3   |   33 |   676 |  92 | 1 | 10
+  T4a  |   15 |   297 |  70 | 0 | 4
+  T4b  |    2 |    20 |  17 | 0 | 1
+== T1  a,b,c,d = ((2, 1), (2, -1), (3, 1), (3, -1)) : |groupe residuel| = 3072 ; dispositions : 1152 (2 orbites) ; types locaux : 16
+  forme (ga z_ac) (de z_ad) (al be) (z_bc z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one', 'sib']  tau force=1 paires (fermantes 1, arcs 1) : 2 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 384, phi par orbite 4) ; stabilisateur 2 : grille:ga->de,de->ga etiq:3->-3,4->-4,5->+6,6->+5,7->-7
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 768, phi par orbite 2) ; stabilisateur 2 : grille:ga->de,de->ga etiq:3->-3,4->-4,5->+6,6->+5,7->-7
+  forme (ga al) (de z_bd) (z_ac z_ad) (be z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 384, phi par orbite 8)
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 768, phi par orbite 4)
+  forme (ga z_bc) (de z_ad) (al z_ac) (be z_bd)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 384, phi par orbite 2) ; stabilisateur 4 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->-3,4->-7,5->-6,6->-5,7->-4 | grille:al->de,be->ga,ga->al,de->be etiq:2->-3,3->+2,4->+6,5->-4,6->-7,7->+5 | grille:al->ga,be->de,ga->be,de->al etiq:2->+3,3->-2,4->-5,5->+7,6->+4,7->-6
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 768, phi par orbite 2) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->-3,4->-7,5->-5,6->-6,7->-4
+  forme (ga de) (al be) (z_ac z_ad) (z_bc z_bd)            droites R2  PP/PK/KK=2/0/2  carres D internes=['one', 'one', 'sib', 'sib']  tau force=2 paires (fermantes 2, arcs 2) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 384, phi par orbite 2) ; ombre Phi : Phi.nu cycles [2, 2, 1, 1, 1, 1, 1, 1, 1, 1] ordre 2 (commute a nu) x1, Phi.nu cycles [3, 3, 1, 1, 1, 1, 1, 1] ordre 3 x2, Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x1 ; stabilisateur 4 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->-3,4->-7,5->-6,6->-5,7->-4 | grille:al->be,be->al etiq:2->-2,4->+7,5->-5,6->-6,7->+4 | grille:ga->de,de->ga etiq:3->-3,4->-4,5->+6,6->+5,7->-7
+  forme (ga z_ac) (de z_bc) (al be) (z_ad z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one', 'sib']  tau force=1 paires (fermantes 1, arcs 1) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 384, phi par orbite 8)
+  forme (ga al) (de be) (z_ac z_ad) (z_bc z_bd)            R2 0/2      PP/PK/KK=2/0/2  carres D internes=['one', 'one']  tau force=2 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 384, phi par orbite 4) ; ombre Phi : Phi.nu cycles [2, 2, 2, 2, 1, 1, 1, 1] ordre 2 (commute a nu) x1, Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x2, Phi.nu cycles [4, 4, 2, 2] ordre 4 x1 ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->-3,4->-7,5->-6,6->-5,7->-4
+  forme (ga al) (de z_ad) (z_ac be) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 384, phi par orbite 8)
+  forme (ga al) (de z_bc) (z_ac be) (z_ad z_bd)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['one']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 384, phi par orbite 8)
+  forme (ga z_ac) (de z_bd) (al be) (z_ad z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'sib']  tau force=1 paires (fermantes 1, arcs 1) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 768, phi par orbite 2) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->-3,4->-7,5->-5,6->-6,7->-4
+  forme (ga al) (de z_bd) (z_ac be) (z_ad z_bc)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 768, phi par orbite 4)
+  forme (ga al) (de z_ad) (z_ac z_bc) (be z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 768, phi par orbite 4)
+  forme (ga z_bc) (de z_bd) (al z_ac) (z_ad be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=['dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 768, phi par orbite 4)
+  forme (ga de) (al z_ac) (z_ad z_bd) (be z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'dis', 'sib']  tau force=1 paires (fermantes 1, arcs 1) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 768, phi par orbite 2) ; stabilisateur 2 : grille:al->be,be->al etiq:2->-2,4->+7,5->-6,6->-5,7->+4
+== T2  a,b,c,d = ((2, 1), (2, -1), (3, 1), (4, 1)) : |groupe residuel| = 192 ; dispositions : 1344 (11 orbites) ; types locaux : 185
+  forme (ga de) (al z_ac) (z_ad z_bd) (be z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 11 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=-6-7 z_bc=+5+6 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=+5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga z_bc) (de z_ad) (al z_ac) (be z_bd)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 11 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->+4,4->+3,5->-7,6->-6,7->-5
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->+4,4->+3,5->-7,6->-6,7->-5
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=-6-7 z_bc=+5+6 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->+4,4->+3,5->-7,6->-6,7->-5
+     coins z_ac=-4-5 z_ad=+5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->+4,4->+3,5->-7,6->-6,7->-5
+  forme (ga al) (de z_bd) (z_ac z_ad) (be z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 9 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=-6-7 z_bc=+5+6 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=+5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga al) (de z_ad) (z_ac be) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 7 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=-6-7 z_bc=+5+6 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=+5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga be) (de z_ad) (al z_ac) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 7 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga z_ac) (de z_bd) (al z_ad) (be z_bc)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'dis', 'one']  tau force=0 paires (fermantes 0, arcs 0) : 7 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->+4,4->+3,5->-7,6->-6,7->-5
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->+4,4->+3,5->-7,6->-6,7->-5
+     coins z_ac=-4-5 z_ad=-6-7 z_bc=+5+6 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->+4,4->+3,5->-7,6->-6,7->-5
+     coins z_ac=-4-5 z_ad=+5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->+4,4->+3,5->-7,6->-6,7->-5
+  forme (ga z_ac) (de z_ad) (al be) (z_bc z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['one', 'one', 'one', 'sib']  tau force=1 paires (fermantes 1, arcs 1) : 6 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:ga->de,de->ga etiq:3->+4,4->+3,5->+6,6->+5,7->-7
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:ga->de,de->ga etiq:3->+4,4->+3,5->+6,6->+5,7->-7
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga z_bc) (de z_bd) (al be) (z_ac z_ad)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'dis', 'sib']  tau force=1 paires (fermantes 1, arcs 1) : 5 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:ga->de,de->ga etiq:3->+4,4->+3,5->+6,6->+5,7->-7
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:ga->de,de->ga etiq:3->+4,4->+3,5->+6,6->+5,7->-7
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:ga->de,de->ga etiq:3->+4,4->+3,5->+6,6->+5,7->-7
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:ga->de,de->ga etiq:3->+4,4->+3,5->+6,6->+5,7->-7
+  forme (ga z_bc) (de be) (al z_ac) (z_ad z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 5 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga z_ad) (de z_bd) (al z_ac) (be z_bc)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 5 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga z_bc) (de al) (z_ac be) (z_ad z_bd)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 4 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=+5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga z_ac) (de al) (z_ad z_bd) (be z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 4 types
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga z_bc) (de al) (z_ac z_ad) (be z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 4 types
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga be) (de z_bd) (al z_ad) (z_ac z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 3 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga de) (al z_ad) (z_ac be) (z_bc z_bd)            R2 1/2      PP/PK/KK=1/1/1  carres D internes=['dis', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 3 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga de) (al z_ad) (z_ac z_bc) (be z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 3 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga de) (al be) (z_ac z_bc) (z_ad z_bd)            droites R2  PP/PK/KK=2/0/2  carres D internes=['one', 'one', 'one', 'sib']  tau force=2 paires (fermantes 2, arcs 1) : 3 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1) ; ombre Phi : Phi.nu cycles [3, 3, 1, 1, 1, 1, 1, 1] ordre 3 x1, Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x2, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1 ; stabilisateur 2 : grille:ga->de,de->ga etiq:3->+4,4->+3,5->+6,6->+5,7->-7
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1) ; ombre Phi : Phi.nu cycles [2, 2, 2, 2, 1, 1, 1, 1] ordre 2 (commute a nu) x1, Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x1, Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1) ; ombre Phi : Phi.nu cycles [3, 3, 1, 1, 1, 1, 1, 1] ordre 3 x1, Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x2, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1 ; stabilisateur 2 : grille:ga->de,de->ga etiq:3->+4,4->+3,5->+6,6->+5,7->-7
+  forme (ga al) (de z_bc) (z_ac be) (z_ad z_bd)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['one']  tau force=1 paires (fermantes 0, arcs 0) : 3 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga be) (de z_bc) (al z_ac) (z_ad z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 3 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga be) (de z_bd) (al z_bc) (z_ac z_ad)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 3 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga z_ac) (de z_bd) (al be) (z_ad z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one', 'sib']  tau force=1 paires (fermantes 1, arcs 1) : 3 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->+4,4->+3,5->-7,6->-6,7->-5
+     coins z_ac=-4-5 z_ad=+5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->+4,4->+3,5->-7,6->-6,7->-5
+  forme (ga al) (de z_bd) (z_ac be) (z_ad z_bc)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 3 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=+5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga z_bc) (de z_bd) (al z_ac) (z_ad be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=['dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 3 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga z_ac) (de z_ad) (al z_bc) (be z_bd)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'one', 'one']  tau force=0 paires (fermantes 0, arcs 0) : 3 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga al) (de z_ac) (z_ad z_bd) (be z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 3 types
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=-6-7 z_bc=+5+6 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=+5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga z_bd) (de z_ad) (al be) (z_ac z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'sib']  tau force=1 paires (fermantes 1, arcs 1) : 2 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga z_bd) (de be) (al z_ad) (z_ac z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga z_bc) (de z_bd) (al z_ad) (z_ac be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=['dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga z_ac) (de z_bc) (al be) (z_ad z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['one', 'one', 'sib']  tau force=1 paires (fermantes 1, arcs 1) : 2 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga z_ad) (de be) (al z_ac) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga de) (al z_ac) (z_ad be) (z_bc z_bd)            R2 1/2      PP/PK/KK=1/1/1  carres D internes=['dis', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 2 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga z_bd) (de be) (al z_bc) (z_ac z_ad)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga de) (al z_bc) (z_ac z_ad) (be z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 2 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga be) (de z_bd) (al z_ac) (z_ad z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga be) (de z_ac) (al z_bc) (z_ad z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['one']  tau force=1 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga z_ad) (de al) (z_ac z_bd) (be z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga z_bd) (de z_ad) (al z_ac) (be z_bc)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-4-5 z_ad=-6-7 z_bc=+5+6 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga de) (al z_ad) (z_ac z_bd) (be z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 2 types
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 192, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->+4,4->+3,5->-7,6->-6,7->-5
+  forme (ga z_bd) (de z_ac) (al be) (z_ad z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['sib']  tau force=1 paires (fermantes 1, arcs 1) : 2 types
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->+4,4->+3,5->-7,6->-6,7->-5
+     coins z_ac=-4-5 z_ad=-6-7 z_bc=+5+6 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->+4,4->+3,5->-7,6->-6,7->-5
+  forme (ga de) (al z_ac) (z_ad z_bc) (be z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 2 types
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->+4,4->+3,5->-7,6->-6,7->-5
+     coins z_ac=-4-5 z_ad=-6-7 z_bc=+5+6 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->+4,4->+3,5->-7,6->-6,7->-5
+  forme (ga z_bd) (de z_ac) (al z_ad) (be z_bc)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->+4,4->+3,5->-7,6->-6,7->-5
+     coins z_ac=-4-5 z_ad=-6-7 z_bc=+5+6 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->+4,4->+3,5->-7,6->-6,7->-5
+  forme (ga z_bc) (de z_ac) (al be) (z_ad z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one', 'sib']  tau force=1 paires (fermantes 1, arcs 1) : 2 types
+     coins z_ac=-4-5 z_ad=-6-7 z_bc=+5+6 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=+5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga al) (de z_ad) (z_ac z_bc) (be z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-4-5 z_ad=-6-7 z_bc=+5+6 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 2)
+     coins z_ac=-4-5 z_ad=+5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga be) (de z_ac) (al z_ad) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga z_ac) (de be) (al z_ad) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga z_bc) (de be) (al z_ad) (z_ac z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga z_bc) (de be) (al z_bd) (z_ac z_ad)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga de) (al be) (z_ac z_ad) (z_bc z_bd)            droites R2  PP/PK/KK=2/0/2  carres D internes=['dis', 'one', 'one', 'sib']  tau force=2 paires (fermantes 2, arcs 1) : 1 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1) ; ombre Phi : Phi.nu cycles [2, 2, 2, 2, 1, 1, 1, 1] ordre 2 (commute a nu) x1, Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x1, Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1 ; stabilisateur 2 : grille:ga->de,de->ga etiq:3->+4,4->+3,5->+6,6->+5,7->-7
+  forme (ga al) (de be) (z_ac z_ad) (z_bc z_bd)            R2 0/2      PP/PK/KK=2/0/2  carres D internes=['dis', 'one']  tau force=2 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2) ; ombre Phi : Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x1, Phi.nu cycles [3, 3, 3, 3] ordre 3 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1, Phi.nu cycles [6, 6] ordre 6 x1
+  forme (ga be) (de z_ad) (al z_bc) (z_ac z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['one']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga be) (de al) (z_ac z_ad) (z_bc z_bd)            R2 0/2      PP/PK/KK=2/0/2  carres D internes=['one', 'one']  tau force=2 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1) ; ombre Phi : Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x2, Phi.nu cycles [6, 6] ordre 6 x1
+  forme (ga be) (de al) (z_ac z_bc) (z_ad z_bd)            R2 0/2      PP/PK/KK=2/0/2  carres D internes=['dis', 'one']  tau force=2 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1) ; ombre Phi : Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x1, Phi.nu cycles [3, 3, 3, 3] ordre 3 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1, Phi.nu cycles [6, 6] ordre 6 x1
+  forme (ga z_ad) (de al) (z_ac be) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['one']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga z_ac) (de al) (z_ad be) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['one', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga z_bd) (de al) (z_ac z_bc) (z_ad be)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga z_ac) (de be) (al z_bc) (z_ad z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['one', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga be) (de z_bc) (al z_bd) (z_ac z_ad)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['one']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga de) (al z_bd) (z_ac z_ad) (be z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga z_bc) (de z_ad) (al be) (z_ac z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'sib']  tau force=1 paires (fermantes 1, arcs 1) : 1 types
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->-2,3->+4,4->+3,5->-7,6->-6,7->-5
+  forme (ga z_bc) (de al) (z_ac z_bd) (z_ad be)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga z_ac) (de al) (z_ad z_bc) (be z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga be) (de z_bc) (al z_ad) (z_ac z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga z_ac) (de z_bc) (al z_ad) (be z_bd)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'one']  tau force=0 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 192, phi par orbite 1)
+  forme (ga z_bd) (de al) (z_ac z_ad) (be z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga z_ad) (de z_ac) (al be) (z_bc z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['one', 'sib']  tau force=1 paires (fermantes 1, arcs 1) : 1 types
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1) ; stabilisateur 2 : grille:ga->de,de->ga etiq:3->+4,4->+3,5->+6,6->+5,7->-7
+  forme (ga z_ad) (de z_bd) (al be) (z_ac z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one', 'sib']  tau force=1 paires (fermantes 1, arcs 1) : 1 types
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga al) (de be) (z_ac z_bc) (z_ad z_bd)            R2 0/2      PP/PK/KK=2/0/2  carres D internes=['one', 'one']  tau force=2 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2) ; ombre Phi : Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x2, Phi.nu cycles [6, 6] ordre 6 x1
+  forme (ga al) (de z_ac) (z_ad be) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['one']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga z_ad) (de z_ac) (al z_bc) (be z_bd)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis']  tau force=0 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=-3-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga al) (de z_ac) (z_ad z_bc) (be z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=-6-7 z_bc=+5+6 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 2)
+  forme (ga z_bd) (de z_bc) (al z_ad) (z_ac be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=['dis']  tau force=0 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=-6-7 z_bc=+5+6 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 2)
+== T3  a,b,c,d = ((2, 1), (3, 1), (4, 1), (5, 1)) : |groupe residuel| = 64 ; dispositions : 1728 (33 orbites) ; types locaux : 676
+  forme (ga z_bc) (de z_ad) (al z_ac) (be z_bd)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'dis', 'one']  tau force=0 paires (fermantes 0, arcs 0) : 33 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=-2+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=-2-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+7 z_bd=-3+6  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-6,7->-7
+     coins z_ac=-2-6 z_ad=-5-7 z_bc=-4+7 z_bd=-3+6  (orbite de dispositions 16, phi par orbite 1) ; stabilisateur 4 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-6,7->-7 | grille:al->de,be->ga,ga->al,de->be etiq:2->+5,3->+4,4->+2,5->+3,6->+7,7->-6 | grille:al->ga,be->de,ga->be,de->al etiq:2->+4,3->+5,4->+3,5->+2,6->-7,7->+6
+     coins z_ac=-3-6 z_ad=-4-7 z_bc=-5+7 z_bd=-2+6  (orbite de dispositions 16, phi par orbite 1) ; stabilisateur 4 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-6,7->-7 | grille:al->de,be->ga,ga->al,de->be etiq:2->+5,3->+4,4->+2,5->+3,6->+7,7->-6 | grille:al->ga,be->de,ga->be,de->al etiq:2->+4,3->+5,4->+3,5->+2,6->-7,7->+6
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+7 z_bd=-4+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-6 z_ad=-4+6 z_bc=-5-7 z_bd=-2+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+  forme (ga z_ac) (de z_bd) (al z_ad) (be z_bc)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 29 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=-2+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+7 z_bd=-3+6  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-6,7->-7
+     coins z_ac=-2-6 z_ad=-5-7 z_bc=-4+7 z_bd=-3+6  (orbite de dispositions 16, phi par orbite 1) ; stabilisateur 4 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-6,7->-7 | grille:al->de,be->ga,ga->al,de->be etiq:2->+5,3->+4,4->+2,5->+3,6->+7,7->-6 | grille:al->ga,be->de,ga->be,de->al etiq:2->+4,3->+5,4->+3,5->+2,6->-7,7->+6
+     coins z_ac=-3-6 z_ad=-4-7 z_bc=-5+7 z_bd=-2+6  (orbite de dispositions 16, phi par orbite 1) ; stabilisateur 4 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-6,7->-7 | grille:al->de,be->ga,ga->al,de->be etiq:2->+5,3->+4,4->+2,5->+3,6->+7,7->-6 | grille:al->ga,be->de,ga->be,de->al etiq:2->+4,3->+5,4->+3,5->+2,6->-7,7->+6
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+7 z_bd=-4+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-6 z_ad=-4+6 z_bc=-5-7 z_bd=-2+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+  forme (ga z_bc) (de al) (z_ac z_ad) (be z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 21 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+7 z_bd=-3+6  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+7 z_bd=-4+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga al) (de z_ac) (z_ad z_bd) (be z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 19 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=-2+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-6 z_ad=-4+6 z_bc=-5-7 z_bd=-2+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga de) (al z_ac) (z_ad z_bd) (be z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 19 types
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+7 z_bd=-3+6  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+7 z_bd=-4+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga z_ac) (de al) (z_ad z_bd) (be z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 17 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+7 z_bd=-3+6  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+7 z_bd=-4+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga z_bd) (de z_ac) (al z_bc) (z_ad be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=[]  tau force=0 paires (fermantes 0, arcs 0) : 16 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=-2-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-6 z_ad=-4+6 z_bc=-5-7 z_bd=-2+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+  forme (ga z_bc) (de z_bd) (al be) (z_ac z_ad)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 16 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=-2+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=-2-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_ac) (de z_ad) (al be) (z_bc z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 16 types
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-5-7 z_bc=-4+7 z_bd=-3+6  (orbite de dispositions 16, phi par orbite 4)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+7 z_bd=-4+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga al) (de z_ad) (z_ac z_bc) (be z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 16 types
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-5-7 z_bc=-4+7 z_bd=-3+6  (orbite de dispositions 16, phi par orbite 4)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+7 z_bd=-4+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_ad) (de z_bc) (al z_bd) (z_ac be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=[]  tau force=0 paires (fermantes 0, arcs 0) : 12 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-6 z_ad=-4+6 z_bc=-5-7 z_bd=-2+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+  forme (ga z_bc) (de be) (al z_bd) (z_ac z_ad)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 12 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=-2+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_bc) (de z_ad) (al z_bd) (z_ac be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=['dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 12 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=-2+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-3-6 z_ad=-4+6 z_bc=-5-7 z_bd=-2+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+  forme (ga z_ac) (de al) (z_ad be) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 11 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-6 z_ad=-4+6 z_bc=-5-7 z_bd=-2+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga z_ad) (de al) (z_ac z_bc) (be z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 11 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=-2-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga de) (al z_ad) (z_ac z_bc) (be z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 11 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_ad) (de z_ac) (al z_bd) (be z_bc)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis']  tau force=0 paires (fermantes 0, arcs 0) : 11 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=-2+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga be) (de z_ac) (al z_ad) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 11 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=-2+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_ad) (de z_bd) (al z_ac) (be z_bc)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'one']  tau force=0 paires (fermantes 0, arcs 0) : 11 types
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+7 z_bd=-3+6  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga be) (de al) (z_ac z_ad) (z_bc z_bd)            R2 0/2      PP/PK/KK=2/0/2  carres D internes=['dis', 'one']  tau force=2 paires (fermantes 0, arcs 0) : 10 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1) ; ombre Phi : Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x1, Phi.nu cycles [4, 4, 2, 2] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1, Phi.nu cycles [6, 6] ordre 6 x1
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1) ; ombre Phi : Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x1, Phi.nu cycles [4, 4, 2, 2] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1, Phi.nu cycles [6, 6] ordre 6 x1
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2) ; ombre Phi : Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x1, Phi.nu cycles [4, 4, 2, 2] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1, Phi.nu cycles [6, 6] ordre 6 x1
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 2) ; ombre Phi : Phi.nu cycles [5, 5, 1, 1] ordre 5 x2, Phi.nu cycles [6, 6] ordre 6 x2
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1) ; ombre Phi : Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x2, Phi.nu cycles [6, 6] ordre 6 x1
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1) ; ombre Phi : Phi.nu cycles [4, 4, 2, 2] ordre 4 x1, Phi.nu cycles [6, 6] ordre 6 x3
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; ombre Phi : Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x2, Phi.nu cycles [6, 6] ordre 6 x1 ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; ombre Phi : Phi.nu cycles [2, 2, 2, 2, 1, 1, 1, 1] ordre 2 (commute a nu) x1, Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x2, Phi.nu cycles [3, 3, 3, 3] ordre 3 x1 ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-3-6 z_ad=-4+6 z_bc=-5-7 z_bd=-2+7  (orbite de dispositions 32, phi par orbite 1) ; ombre Phi : Phi.nu cycles [2, 2, 2, 2, 1, 1, 1, 1] ordre 2 (commute a nu) x1, Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x2, Phi.nu cycles [3, 3, 3, 3] ordre 3 x1 ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; ombre Phi : Phi.nu cycles [3, 3, 3, 3] ordre 3 x1, Phi.nu cycles [4, 4, 2, 2] ordre 4 x1, Phi.nu cycles [6, 6] ordre 6 x2 ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+  forme (ga z_ad) (de al) (z_ac be) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['one']  tau force=1 paires (fermantes 0, arcs 0) : 10 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=-2-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-3-6 z_ad=-4+6 z_bc=-5-7 z_bd=-2+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga z_bc) (de al) (z_ac be) (z_ad z_bd)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 10 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=-2-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga z_bd) (de be) (al z_ad) (z_ac z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 10 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=-2+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=-2-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga z_bc) (de be) (al z_ac) (z_ad z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['one', 'one', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 10 types
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=-2+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=-2-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga z_ac) (de z_ad) (al z_bc) (be z_bd)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'one']  tau force=0 paires (fermantes 0, arcs 0) : 10 types
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+7 z_bd=-4+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga be) (de z_ad) (al z_ac) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 10 types
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_bc) (de be) (al z_ad) (z_ac z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 9 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->ga,be->de,ga->al,de->be etiq:2->+4,3->+5,4->+2,5->+3,6->+7,7->+6
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=-2-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->ga,be->de,ga->al,de->be etiq:2->+4,3->+5,4->+2,5->+3,6->+7,7->+6
+  forme (ga de) (al z_bd) (z_ac z_ad) (be z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 9 types
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_bc) (de z_ad) (al be) (z_ac z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 9 types
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+7 z_bd=-3+6  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-6,7->-7
+     coins z_ac=-2-6 z_ad=-5-7 z_bc=-4+7 z_bd=-3+6  (orbite de dispositions 16, phi par orbite 2) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-6,7->-7
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+  forme (ga z_ad) (de be) (al z_bc) (z_ac z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=[]  tau force=1 paires (fermantes 0, arcs 0) : 8 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->ga,be->de,ga->al,de->be etiq:2->+4,3->+5,4->+2,5->+3,6->+7,7->+6
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->ga,be->de,ga->al,de->be etiq:2->+4,3->+5,4->+2,5->+3,6->+7,7->+6
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=-2-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->ga,be->de,ga->al,de->be etiq:2->+4,3->+5,4->+2,5->+3,6->+7,7->+6
+  forme (ga z_ad) (de be) (al z_bd) (z_ac z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 8 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_bc) (de z_ac) (al z_ad) (be z_bd)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 8 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga be) (de z_ac) (al z_bd) (z_ad z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=[]  tau force=1 paires (fermantes 0, arcs 0) : 8 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=-2+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->de,be->ga,ga->be,de->al etiq:2->+5,3->+4,4->+3,5->+2,6->-7,7->-6
+  forme (ga z_bc) (de al) (z_ac z_bd) (z_ad be)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 8 types
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+7 z_bd=-3+6  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga z_bc) (de z_bd) (al z_ac) (z_ad be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=['dis', 'one', 'one']  tau force=0 paires (fermantes 0, arcs 0) : 8 types
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-5-7 z_bc=-4+7 z_bd=-3+6  (orbite de dispositions 16, phi par orbite 4)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga al) (de be) (z_ac z_bc) (z_ad z_bd)            R2 0/2      PP/PK/KK=2/0/2  carres D internes=['dis', 'one']  tau force=2 paires (fermantes 0, arcs 0) : 7 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1) ; ombre Phi : Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x1, Phi.nu cycles [4, 4, 2, 2] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1, Phi.nu cycles [6, 6] ordre 6 x1
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1) ; ombre Phi : Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x1, Phi.nu cycles [4, 4, 2, 2] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1, Phi.nu cycles [6, 6] ordre 6 x1
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1) ; ombre Phi : Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x1, Phi.nu cycles [4, 4, 2, 2] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1, Phi.nu cycles [6, 6] ordre 6 x1
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; ombre Phi : Phi.nu cycles [3, 3, 3, 3] ordre 3 x1, Phi.nu cycles [4, 4, 2, 2] ordre 4 x1, Phi.nu cycles [6, 6] ordre 6 x2 ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; ombre Phi : Phi.nu cycles [2, 2, 2, 2, 2, 2] ordre 2 (commute a nu) x1, Phi.nu cycles [4, 4, 2, 2] ordre 4 x2, Phi.nu cycles [6, 6] ordre 6 x1 ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-3-6 z_ad=-4+6 z_bc=-5-7 z_bd=-2+7  (orbite de dispositions 32, phi par orbite 1) ; ombre Phi : Phi.nu cycles [2, 2, 2, 2, 2, 2] ordre 2 (commute a nu) x1, Phi.nu cycles [4, 4, 2, 2] ordre 4 x2, Phi.nu cycles [6, 6] ordre 6 x1 ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; ombre Phi : Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x2, Phi.nu cycles [6, 6] ordre 6 x1 ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+  forme (ga be) (de z_ac) (al z_bc) (z_ad z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['one']  tau force=1 paires (fermantes 0, arcs 0) : 7 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_bc) (de z_ac) (al be) (z_ad z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 7 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=-2-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga z_ac) (de be) (al z_ad) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 7 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=-2+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_bd) (de z_ac) (al z_ad) (be z_bc)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 7 types
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+  forme (ga z_bd) (de z_ad) (al be) (z_ac z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 7 types
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_bd) (de al) (z_ac z_bc) (z_ad be)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 7 types
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga z_ad) (de z_ac) (al z_bc) (be z_bd)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis']  tau force=0 paires (fermantes 0, arcs 0) : 6 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_bc) (de z_ac) (al z_bd) (z_ad be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=['dis']  tau force=0 paires (fermantes 0, arcs 0) : 6 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=-2+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga al) (de z_ac) (z_ad be) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['one']  tau force=1 paires (fermantes 0, arcs 0) : 6 types
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_ad) (de be) (al z_ac) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['one', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 6 types
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=-2-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_ac) (de z_ad) (al z_bd) (be z_bc)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'one']  tau force=0 paires (fermantes 0, arcs 0) : 6 types
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+7 z_bd=-4+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_ad) (de z_bd) (al be) (z_ac z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 6 types
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga al) (de z_bd) (z_ac z_bc) (z_ad be)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 6 types
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga z_ac) (de z_bd) (al z_bc) (z_ad be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=['dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 6 types
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-3-6 z_ad=-4+6 z_bc=-5-7 z_bd=-2+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+  forme (ga de) (al be) (z_ac z_ad) (z_bc z_bd)            droites R2  PP/PK/KK=2/0/2  carres D internes=['dis', 'one', 'one', 'one']  tau force=2 paires (fermantes 2, arcs 0) : 5 types
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1) ; ombre Phi : Phi.nu cycles [5, 5, 1, 1] ordre 5 x2, Phi.nu cycles [6, 6] ordre 6 x2
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2) ; ombre Phi : Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x1, Phi.nu cycles [4, 4, 2, 2] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1, Phi.nu cycles [6, 6] ordre 6 x1
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1) ; ombre Phi : Phi.nu cycles [2, 2, 2, 2, 1, 1, 1, 1] ordre 2 (commute a nu) x1, Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x2, Phi.nu cycles [3, 3, 3, 3] ordre 3 x1
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1) ; ombre Phi : Phi.nu cycles [2, 2, 2, 2, 2, 2] ordre 2 (commute a nu) x1, Phi.nu cycles [4, 4, 2, 2] ordre 4 x2, Phi.nu cycles [6, 6] ordre 6 x1
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; ombre Phi : Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x2, Phi.nu cycles [6, 6] ordre 6 x1 ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+  forme (ga be) (de z_bd) (al z_ac) (z_ad z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['one', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 5 types
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->de,be->ga,ga->be,de->al etiq:2->+5,3->+4,4->+3,5->+2,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga be) (de z_bd) (al z_ad) (z_ac z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 5 types
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga be) (de z_ad) (al z_bc) (z_ac z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 5 types
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga be) (de z_ad) (al z_bd) (z_ac z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 5 types
+     coins z_ac=-2-4 z_ad=-3-6 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_ad) (de z_ac) (al be) (z_bc z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 5 types
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=-2-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=+6-7 z_bd=-5+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga be) (de al) (z_ac z_bc) (z_ad z_bd)            R2 0/2      PP/PK/KK=2/0/2  carres D internes=['dis', 'one']  tau force=2 paires (fermantes 0, arcs 0) : 5 types
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1) ; ombre Phi : Phi.nu cycles [5, 5, 1, 1] ordre 5 x2, Phi.nu cycles [6, 6] ordre 6 x2
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1) ; ombre Phi : Phi.nu cycles [2, 2, 2, 2, 2, 2] ordre 2 (commute a nu) x1, Phi.nu cycles [4, 4, 2, 2] ordre 4 x2, Phi.nu cycles [6, 6] ordre 6 x1
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; ombre Phi : Phi.nu cycles [2, 2, 2, 2, 2, 2] ordre 2 (commute a nu) x1, Phi.nu cycles [4, 4, 2, 2] ordre 4 x2, Phi.nu cycles [6, 6] ordre 6 x1 ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1) ; ombre Phi : Phi.nu cycles [2, 2, 2, 2, 1, 1, 1, 1] ordre 2 (commute a nu) x1, Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x2, Phi.nu cycles [3, 3, 3, 3] ordre 3 x1
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; ombre Phi : Phi.nu cycles [2, 2, 2, 2, 1, 1, 1, 1] ordre 2 (commute a nu) x1, Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x2, Phi.nu cycles [3, 3, 3, 3] ordre 3 x1 ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+  forme (ga z_ac) (de z_bc) (al be) (z_ad z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 4 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga z_ac) (de z_bd) (al be) (z_ad z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 4 types
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-5-7 z_bc=-4+7 z_bd=-3+6  (orbite de dispositions 16, phi par orbite 2) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-6,7->-7
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+  forme (ga al) (de z_ac) (z_ad z_bc) (be z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 4 types
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-5-7 z_bc=-4+7 z_bd=-3+6  (orbite de dispositions 16, phi par orbite 4)
+  forme (ga z_bd) (de al) (z_ac be) (z_ad z_bc)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=[]  tau force=1 paires (fermantes 0, arcs 0) : 4 types
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_bd) (de al) (z_ac z_ad) (be z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 4 types
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga de) (al z_ac) (z_ad be) (z_bc z_bd)            R2 1/2      PP/PK/KK=1/1/1  carres D internes=['one', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 4 types
+     coins z_ac=-2-5 z_ad=-3-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga be) (de z_bc) (al z_ac) (z_ad z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 4 types
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga de) (al z_bc) (z_ac z_bd) (z_ad be)            R2 1/2      PP/PK/KK=1/1/1  carres D internes=['one']  tau force=1 paires (fermantes 1, arcs 0) : 4 types
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+  forme (ga de) (al be) (z_ac z_bc) (z_ad z_bd)            droites R2  PP/PK/KK=2/0/2  carres D internes=['dis', 'one', 'one', 'one']  tau force=2 paires (fermantes 2, arcs 0) : 4 types
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1) ; ombre Phi : Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x1, Phi.nu cycles [4, 4, 2, 2] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1, Phi.nu cycles [6, 6] ordre 6 x1
+     coins z_ac=-2-6 z_ad=-4+6 z_bc=-5-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; ombre Phi : Phi.nu cycles [4, 4, 2, 2] ordre 4 x1, Phi.nu cycles [6, 6] ordre 6 x3 ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; ombre Phi : Phi.nu cycles [4, 4, 2, 2] ordre 4 x1, Phi.nu cycles [6, 6] ordre 6 x3 ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; ombre Phi : Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x2, Phi.nu cycles [6, 6] ordre 6 x1 ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+  forme (ga z_bd) (de z_ad) (al z_ac) (be z_bc)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'one']  tau force=0 paires (fermantes 0, arcs 0) : 4 types
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+7 z_bd=-4+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_ad) (de al) (z_ac z_bd) (be z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 4 types
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+7 z_bd=-3+6  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga de) (al z_ad) (z_ac z_bd) (be z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 4 types
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+7 z_bd=-3+6  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-6,7->-7
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+  forme (ga z_ac) (de be) (al z_bc) (z_ad z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 3 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-4-6 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga be) (de z_bc) (al z_bd) (z_ac z_ad)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 3 types
+     coins z_ac=-2-3 z_ad=-4-6 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga de) (al z_bd) (z_ac be) (z_ad z_bc)            R2 1/2      PP/PK/KK=1/1/1  carres D internes=['one']  tau force=1 paires (fermantes 1, arcs 0) : 3 types
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-4 z_ad=-5-6 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-5+6 z_bc=-4-7 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+  forme (ga z_bd) (de z_ac) (al be) (z_ad z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['one']  tau force=1 paires (fermantes 1, arcs 0) : 3 types
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga de) (al z_ac) (z_ad z_bc) (be z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 3 types
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga al) (de z_ad) (z_ac z_bd) (be z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 3 types
+     coins z_ac=-2-6 z_ad=-5-7 z_bc=-4+7 z_bd=-3+6  (orbite de dispositions 16, phi par orbite 4)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+7 z_bd=-4+6  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_ad) (de z_bc) (al z_ac) (be z_bd)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'one']  tau force=0 paires (fermantes 0, arcs 0) : 3 types
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+  forme (ga z_ac) (de al) (z_ad z_bc) (be z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_ac) (de z_bc) (al z_bd) (z_ad be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=['dis']  tau force=0 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-2-6 z_ad=-3-4 z_bc=-5-7 z_bd=+6+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_bc) (de z_bd) (al z_ad) (z_ac be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=['dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=-2+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=-2-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga z_bd) (de be) (al z_ac) (z_ad z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['one']  tau force=1 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-4+6 z_bd=-3+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-5 z_ad=-6-7 z_bc=-3+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga al) (de z_bc) (z_ac be) (z_ad z_bd)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['one']  tau force=1 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=-2-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-3-6 z_ad=-4+6 z_bc=-5-7 z_bd=-2+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga z_ad) (de z_bd) (al z_bc) (z_ac be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=['dis']  tau force=0 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=-2-7 z_bd=+6+7  (orbite de dispositions 32, phi par orbite 2)
+     coins z_ac=-3-6 z_ad=-4+6 z_bc=-5-7 z_bd=-2+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga de) (al z_bd) (z_ac z_bc) (z_ad be)            R2 1/2      PP/PK/KK=1/1/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 2 types
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-4-7 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-3+6 z_bc=-5-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga be) (de al) (z_ac z_bd) (z_ad z_bc)            R2 0/2      PP/PK/KK=2/0/2  carres D internes=[]  tau force=2 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+7 z_bd=-3+6  (orbite de dispositions 32, phi par orbite 1) ; ombre Phi : Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x2, Phi.nu cycles [6, 6] ordre 6 x1 ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-6,7->-7
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+7 z_bd=-5+6  (orbite de dispositions 64, phi par orbite 1) ; ombre Phi : Phi.nu cycles [2, 2, 2, 2, 1, 1, 1, 1] ordre 2 (commute a nu) x1, Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x2, Phi.nu cycles [3, 3, 3, 3] ordre 3 x1
+  forme (ga z_ad) (de z_bc) (al be) (z_ac z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['one']  tau force=1 paires (fermantes 1, arcs 0) : 2 types
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-4+6 z_bd=-5+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-7,7->-6
+  forme (ga z_bd) (de z_bc) (al z_ac) (z_ad be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=['one']  tau force=0 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+     coins z_ac=-2-6 z_ad=-4-7 z_bc=-5+6 z_bd=-3+7  (orbite de dispositions 32, phi par orbite 2)
+  forme (ga z_ac) (de be) (al z_bd) (z_ad z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-2-3 z_ad=-5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga z_ac) (de z_bc) (al z_ad) (be z_bd)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-2-3 z_ad=-6-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga de) (al z_ad) (z_ac be) (z_bc z_bd)            R2 1/2      PP/PK/KK=1/1/1  carres D internes=['dis', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=-2+7  (orbite de dispositions 64, phi par orbite 1)
+  forme (ga de) (al be) (z_ac z_bd) (z_ad z_bc)            REFLEXION   PP/PK/KK=2/0/2  carres D internes=['one', 'one']  tau force=2 paires (fermantes 2, arcs 0) : 1 types
+     coins z_ac=-2-6 z_ad=-5-7 z_bc=-4+7 z_bd=-3+6  (orbite de dispositions 16, phi par orbite 1) ; ombre Phi : Phi.nu cycles [2, 2, 2, 2, 1, 1, 1, 1] ordre 2 (commute a nu) x1, Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x2, Phi.nu cycles [3, 3, 3, 3] ordre 3 x1 ; stabilisateur 4 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-6,7->-7 | grille:al->de,be->ga,ga->al,de->be etiq:2->+5,3->+4,4->+2,5->+3,6->+7,7->-6 | grille:al->ga,be->de,ga->be,de->al etiq:2->+4,3->+5,4->+3,5->+2,6->-7,7->+6
+  forme (ga al) (de be) (z_ac z_bd) (z_ad z_bc)            R2 0/2      PP/PK/KK=2/0/2  carres D internes=[]  tau force=2 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-2-6 z_ad=-5-7 z_bc=-4+7 z_bd=-3+6  (orbite de dispositions 16, phi par orbite 2) ; ombre Phi : Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x2, Phi.nu cycles [6, 6] ordre 6 x1 ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->+5,5->+4,6->-6,7->-7
+  forme (ga z_bd) (de z_bc) (al be) (z_ac z_ad)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 1 types
+     coins z_ac=-2-6 z_ad=-3-7 z_bc=-5+6 z_bd=-4+7  (orbite de dispositions 64, phi par orbite 1)
+== T4a  a,b,c,d = ((2, 1), (3, 1), (2, -1), (4, 1)) : |groupe residuel| = 96 ; dispositions : 1344 (15 orbites) ; types locaux : 297
+  forme (ga al) (de z_bd) (z_ac z_ad) (be z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'dis']  tau force=1 paires (fermantes 0, arcs 1) : 15 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 48, phi par orbite 2)
+     coins z_ac=-5-6 z_ad=-3-4 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=+5-7 z_bc=+6+7 z_bd=-3-4  (orbite de dispositions 48, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3-7 z_bc=+5+7 z_bd=-4+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bc) (de z_ad) (al z_ac) (be z_bd)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 15 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 48, phi par orbite 2)
+     coins z_ac=-5-6 z_ad=-3-4 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=+5-7 z_bc=+6+7 z_bd=-3-4  (orbite de dispositions 48, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3-7 z_bc=+5+7 z_bd=-4+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_ac) (de z_ad) (al be) (z_bc z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 14 types
+     coins z_ac=-5-6 z_ad=-3-4 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=+5-7 z_bc=+6+7 z_bd=-3-4  (orbite de dispositions 48, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3-7 z_bc=+5+7 z_bd=-4+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bc) (de al) (z_ac z_ad) (be z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 14 types
+     coins z_ac=-5-6 z_ad=-3-4 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=+5-7 z_bc=+6+7 z_bd=-3-4  (orbite de dispositions 48, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3-7 z_bc=+5+7 z_bd=-4+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga al) (de z_ad) (z_ac z_bc) (be z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one', 'one']  tau force=1 paires (fermantes 0, arcs 1) : 13 types
+     coins z_ac=-5-6 z_ad=-3-4 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3-7 z_bc=+5+7 z_bd=-4+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_ac) (de z_bd) (al z_ad) (be z_bc)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 13 types
+     coins z_ac=-5-6 z_ad=-3-4 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3-7 z_bc=+5+7 z_bd=-4+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bc) (de z_bd) (al be) (z_ac z_ad)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 12 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 48, phi par orbite 2)
+     coins z_ac=-5-6 z_ad=-3-4 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=+5-7 z_bc=+6+7 z_bd=-3-4  (orbite de dispositions 48, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3-7 z_bc=+5+7 z_bd=-4+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga de) (al z_ad) (z_ac z_bc) (be z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 9 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga al) (de z_ad) (z_ac be) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 1) : 8 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 48, phi par orbite 2)
+     coins z_ac=-5-6 z_ad=+5-7 z_bc=+6+7 z_bd=-3-4  (orbite de dispositions 48, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bc) (de z_bd) (al z_ac) (z_ad be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=['dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 7 types
+     coins z_ac=-5-6 z_ad=-3-4 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=+5-7 z_bc=+6+7 z_bd=-3-4  (orbite de dispositions 48, phi par orbite 2)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3-7 z_bc=+5+7 z_bd=-4+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga de) (al z_ac) (z_ad z_bd) (be z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 7 types
+     coins z_ac=-5-6 z_ad=-3-4 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3-7 z_bc=+5+7 z_bd=-4+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga be) (de z_bd) (al z_ad) (z_ac z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 7 types
+     coins z_ac=-5-6 z_ad=-3-4 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3-7 z_bc=+5+7 z_bd=-4+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_ac) (de z_ad) (al z_bd) (be z_bc)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'one']  tau force=0 paires (fermantes 0, arcs 0) : 7 types
+     coins z_ac=-5-6 z_ad=-3-4 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3-7 z_bc=+5+7 z_bd=-4+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bc) (de be) (al z_ac) (z_ad z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 6 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 48, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga de) (al z_bc) (z_ac z_ad) (be z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 6 types
+     coins z_ac=-5-6 z_ad=-3-4 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga al) (de z_bd) (z_ac z_bc) (z_ad be)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 1) : 5 types
+     coins z_ac=-5-6 z_ad=-3-4 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_ac) (de be) (al z_ad) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 5 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga de) (al z_bd) (z_ac z_ad) (be z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 5 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bc) (de z_ac) (al be) (z_ad z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 4 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 48, phi par orbite 2)
+     coins z_ac=-5-6 z_ad=+5-7 z_bc=+6+7 z_bd=-3-4  (orbite de dispositions 48, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bd) (de be) (al z_ad) (z_ac z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 4 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 48, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bc) (de z_bd) (al z_ad) (z_ac be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=['dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 4 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 48, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_ac) (de z_bc) (al z_bd) (z_ad be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=['dis']  tau force=0 paires (fermantes 0, arcs 0) : 4 types
+     coins z_ac=-5-6 z_ad=-3-4 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_ac) (de z_bc) (al be) (z_ad z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 4 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga de) (al z_ad) (z_ac be) (z_bc z_bd)            R2 1/2      PP/PK/KK=1/1/1  carres D internes=['dis', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 4 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bc) (de z_ac) (al z_ad) (be z_bd)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 4 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bd) (de z_ac) (al z_bc) (z_ad be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=[]  tau force=0 paires (fermantes 0, arcs 0) : 4 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga be) (de z_bc) (al z_bd) (z_ac z_ad)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 4 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bc) (de be) (al z_bd) (z_ac z_ad)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 4 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_ad) (de z_bc) (al z_bd) (z_ac be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=[]  tau force=0 paires (fermantes 0, arcs 0) : 4 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga al) (de z_ac) (z_ad z_bd) (be z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 1) : 4 types
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bc) (de al) (z_ac be) (z_ad z_bd)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 3 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 48, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga de) (al z_ac) (z_ad be) (z_bc z_bd)            R2 1/2      PP/PK/KK=1/1/1  carres D internes=['dis', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 3 types
+     coins z_ac=-5-6 z_ad=-3-4 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga al) (de z_ad) (z_ac z_bd) (be z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis']  tau force=1 paires (fermantes 0, arcs 1) : 3 types
+     coins z_ac=-5-6 z_ad=+5-7 z_bc=+6+7 z_bd=-3-4  (orbite de dispositions 48, phi par orbite 1) ; stabilisateur 2 : grille:al->ga,be->de,ga->al,de->be etiq:2->-2,3->+4,4->+3,5->+6,6->+5,7->-7
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3-7 z_bc=+5+7 z_bd=-4+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga de) (al be) (z_ac z_ad) (z_bc z_bd)            droites R2  PP/PK/KK=2/0/2  carres D internes=['dis', 'one', 'one', 'one']  tau force=2 paires (fermantes 2, arcs 0) : 3 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1) ; ombre Phi : Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x1, Phi.nu cycles [3, 3, 3, 3] ordre 3 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1, Phi.nu cycles [6, 6] ordre 6 x1
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1) ; ombre Phi : Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x2, Phi.nu cycles [6, 6] ordre 6 x1
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1) ; ombre Phi : Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x2, Phi.nu cycles [6, 6] ordre 6 x1
+  forme (ga al) (de be) (z_ac z_bc) (z_ad z_bd)            R2 0/2      PP/PK/KK=2/0/2  carres D internes=['one', 'one']  tau force=2 paires (fermantes 0, arcs 1) : 3 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1) ; ombre Phi : Phi.nu cycles [3, 3, 1, 1, 1, 1, 1, 1] ordre 3 x1, Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x2, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1) ; ombre Phi : Phi.nu cycles [2, 2, 2, 2, 1, 1, 1, 1] ordre 2 (commute a nu) x1, Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x1, Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1) ; ombre Phi : Phi.nu cycles [2, 2, 2, 2, 1, 1, 1, 1] ordre 2 (commute a nu) x1, Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x1, Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1
+  forme (ga al) (de z_bc) (z_ac be) (z_ad z_bd)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['one']  tau force=1 paires (fermantes 0, arcs 1) : 3 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bd) (de be) (al z_bc) (z_ac z_ad)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 3 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_ad) (de be) (al z_bd) (z_ac z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['one']  tau force=1 paires (fermantes 0, arcs 0) : 3 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_ac) (de z_bd) (al be) (z_ad z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 3 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga al) (de z_bd) (z_ac be) (z_ad z_bc)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 1) : 3 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_ac) (de be) (al z_bd) (z_ad z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 3 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_ac) (de z_bc) (al z_ad) (be z_bd)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 3 types
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=-4+6 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bc) (de be) (al z_ad) (z_ac z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis']  tau force=1 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 48, phi par orbite 1) ; stabilisateur 2 : grille:al->ga,be->de,ga->al,de->be etiq:2->-2,3->+4,4->+3,5->-5,6->+7,7->+6
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bd) (de z_ad) (al z_bc) (z_ac be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=['dis']  tau force=0 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-3-4 z_ad=-5-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 48, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bd) (de al) (z_ac z_ad) (be z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-5-6 z_ad=+5-7 z_bc=+6+7 z_bd=-3-4  (orbite de dispositions 48, phi par orbite 2)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga al) (de be) (z_ac z_ad) (z_bc z_bd)            R2 0/2      PP/PK/KK=2/0/2  carres D internes=['dis', 'one']  tau force=2 paires (fermantes 0, arcs 1) : 2 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1) ; ombre Phi : Phi.nu cycles [2, 2, 2, 2, 1, 1, 1, 1] ordre 2 (commute a nu) x1, Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x1, Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1) ; ombre Phi : Phi.nu cycles [3, 3, 1, 1, 1, 1, 1, 1] ordre 3 x1, Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x2, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1
+  forme (ga al) (de z_ac) (z_ad be) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['one']  tau force=1 paires (fermantes 0, arcs 1) : 2 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga be) (de z_ac) (al z_ad) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-3-5 z_ad=-4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bc) (de z_ac) (al z_bd) (z_ad be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=['dis']  tau force=0 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga al) (de z_ac) (z_ad z_bc) (be z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 1) : 2 types
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga de) (al z_ac) (z_ad z_bc) (be z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 2 types
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_ad) (de z_bd) (al be) (z_ac z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 2 types
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bc) (de z_ad) (al be) (z_ac z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 2 types
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bc) (de al) (z_ac z_bd) (z_ad be)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga de) (al z_bc) (z_ac z_bd) (z_ad be)            R2 1/2      PP/PK/KK=1/1/1  carres D internes=['one']  tau force=1 paires (fermantes 1, arcs 0) : 2 types
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=-3-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bd) (de al) (z_ac z_bc) (z_ad be)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['one']  tau force=1 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga be) (de z_ad) (al z_bd) (z_ac z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga be) (de z_bc) (al z_ad) (z_ac z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3-7 z_bc=+5+7 z_bd=-4+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga de) (al z_ad) (z_ac z_bd) (be z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 2 types
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+     coins z_ac=-5-6 z_ad=-3-7 z_bc=+5+7 z_bd=-4+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga de) (al z_bc) (z_ac be) (z_ad z_bd)            R2 1/2      PP/PK/KK=1/1/1  carres D internes=['one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=-4-7 z_bd=+6+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga de) (al z_bd) (z_ac be) (z_ad z_bc)            R2 1/2      PP/PK/KK=1/1/1  carres D internes=['one']  tau force=1 paires (fermantes 1, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bc) (de z_ad) (al z_bd) (z_ac be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=['dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=+5-6 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bd) (de z_ac) (al be) (z_ad z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['one']  tau force=1 paires (fermantes 1, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bd) (de z_ac) (al z_ad) (be z_bc)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_ad) (de z_ac) (al z_bd) (be z_bc)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis']  tau force=0 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-3-5 z_ad=-6-7 z_bc=+5+6 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga de) (al z_bd) (z_ac z_bc) (z_ad be)            R2 1/2      PP/PK/KK=1/1/1  carres D internes=['one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 1 types
+     coins z_ac=-5-6 z_ad=-3+5 z_bc=+6-7 z_bd=-4+7  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bd) (de be) (al z_ac) (z_ad z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga z_bd) (de z_ad) (al z_ac) (be z_bc)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'one']  tau force=0 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-5-6 z_ad=-4-7 z_bc=+5+7 z_bd=-3+6  (orbite de dispositions 96, phi par orbite 1)
+  forme (ga de) (al be) (z_ac z_bc) (z_ad z_bd)            droites R2  PP/PK/KK=2/0/2  carres D internes=['dis', 'one', 'one', 'one']  tau force=2 paires (fermantes 2, arcs 0) : 1 types
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1) ; ombre Phi : Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x1, Phi.nu cycles [3, 3, 3, 3] ordre 3 x1, Phi.nu cycles [5, 5, 1, 1] ordre 5 x1, Phi.nu cycles [6, 6] ordre 6 x1
+  forme (ga z_bd) (de z_ad) (al be) (z_ac z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['one', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 1 types
+     coins z_ac=-5-6 z_ad=-4+5 z_bc=+6-7 z_bd=-3+7  (orbite de dispositions 96, phi par orbite 1)
+== T4b  a,b,c,d = ((2, 1), (3, 1), (2, -1), (3, -1)) : |groupe residuel| = 1536 ; dispositions : 1152 (2 orbites) ; types locaux : 20
+  forme (ga z_ac) (de z_ad) (al be) (z_bc z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 2 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 384, phi par orbite 4)
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 768, phi par orbite 2)
+  forme (ga al) (de z_bd) (z_ac z_ad) (be z_bc)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 0, arcs 1) : 2 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 384, phi par orbite 4)
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 768, phi par orbite 2)
+  forme (ga z_bc) (de z_ad) (al z_ac) (be z_bd)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 2 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 384, phi par orbite 2) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->-7,5->-6,6->-5,7->-4
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 768, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->-7,5->-5,6->-6,7->-4
+  forme (ga de) (al be) (z_ac z_ad) (z_bc z_bd)            droites R2  PP/PK/KK=2/0/2  carres D internes=['one', 'one', 'one', 'one']  tau force=2 paires (fermantes 2, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 384, phi par orbite 2) ; ombre Phi : Phi.nu cycles [2, 2, 2, 2, 1, 1, 1, 1] ordre 2 (commute a nu) x1, Phi.nu cycles [3, 3, 2, 2, 1, 1] ordre 6 x2, Phi.nu cycles [4, 4, 2, 2] ordre 4 x1 ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->-7,5->-6,6->-5,7->-4
+  forme (ga z_ac) (de z_bc) (al be) (z_ad z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 384, phi par orbite 4)
+  forme (ga z_bc) (de z_ac) (al be) (z_ad z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'one', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 384, phi par orbite 4)
+  forme (ga al) (de be) (z_ac z_ad) (z_bc z_bd)            R2 0/2      PP/PK/KK=2/0/2  carres D internes=['one', 'one']  tau force=2 paires (fermantes 0, arcs 2) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 384, phi par orbite 2) ; ombre Phi : Phi.nu cycles [2, 2, 1, 1, 1, 1, 1, 1, 1, 1] ordre 2 (commute a nu) x1, Phi.nu cycles [3, 3, 1, 1, 1, 1, 1, 1] ordre 3 x2, Phi.nu cycles [4, 4, 1, 1, 1, 1] ordre 4 x1 ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->-7,5->-6,6->-5,7->-4
+  forme (ga al) (de z_ad) (z_ac be) (z_bc z_bd)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['dis', 'one']  tau force=1 paires (fermantes 0, arcs 1) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 384, phi par orbite 4)
+  forme (ga al) (de z_bc) (z_ac be) (z_ad z_bd)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['one']  tau force=1 paires (fermantes 0, arcs 1) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 384, phi par orbite 4)
+  forme (ga z_bd) (de z_ac) (al z_bc) (z_ad be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=[]  tau force=0 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+5-7 z_bd=+6+7  (orbite de dispositions 384, phi par orbite 2) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->-7,5->-6,6->-5,7->-4
+  forme (ga z_ac) (de z_bd) (al be) (z_ad z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 768, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->-7,5->-5,6->-6,7->-4
+  forme (ga z_bc) (de z_ad) (al be) (z_ac z_bd)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 768, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->-7,5->-5,6->-6,7->-4
+  forme (ga al) (de z_bd) (z_ac be) (z_ad z_bc)            R2 0/2      PP/PK/KK=1/1/1  carres D internes=['dis']  tau force=1 paires (fermantes 0, arcs 1) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 768, phi par orbite 2)
+  forme (ga al) (de z_ad) (z_ac z_bc) (be z_bd)            R2 0/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'dis']  tau force=1 paires (fermantes 0, arcs 1) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 768, phi par orbite 2)
+  forme (ga de) (al z_ac) (z_ad z_bd) (be z_bc)            R2 1/2      PP/PK/KK=1/2/1  carres D internes=['dis', 'dis', 'dis', 'one']  tau force=1 paires (fermantes 1, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 768, phi par orbite 2)
+  forme (ga z_bc) (de z_bd) (al z_ad) (z_ac be)            R2 0/2      PP/PK/KK=0/3/0  carres D internes=['dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 768, phi par orbite 2)
+  forme (ga z_ac) (de z_bd) (al z_ad) (be z_bc)            R2 0/2      PP/PK/KK=0/4/0  carres D internes=['dis', 'dis', 'dis', 'dis']  tau force=0 paires (fermantes 0, arcs 0) : 1 types
+     coins z_ac=-4-5 z_ad=+4-6 z_bc=+6-7 z_bd=+5+7  (orbite de dispositions 768, phi par orbite 1) ; stabilisateur 2 : grille:al->be,be->al,ga->de,de->ga etiq:2->+3,3->+2,4->-7,5->-5,6->-6,7->-4

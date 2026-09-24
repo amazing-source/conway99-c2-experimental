@@ -1,0 +1,5 @@
+12 17 45 56 67           onehot : UNSAT 19.5 s (6632 vars, 15864 clauses)
+25 34 36 47 67           onehot : UNSAT 9.1 s (6632 vars, 15864 clauses)
+12 23 34 45              onehot : SAT   0.3 s (4938 vars, 11322 clauses)
+17 24 56 67              onehot : SAT   0.4 s (4640 vars, 10816 clauses)
+14 15 36 37              onehot : SAT   0.3 s (4640 vars, 10816 clauses)

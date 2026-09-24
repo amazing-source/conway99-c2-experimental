@@ -1,0 +1,10 @@
+K2K2P3           12 34 56 67              |S|= 8  RSF (signe, lignes soeurs): UNSAT   construction 0.1 s, resolution 2.6 s, 80320 clauses
+K2P5             12 34 45 56 67           |S|=10  RSF (signe, lignes soeurs): UNSAT   construction 0.1 s, resolution 3.8 s, 115096 clauses
+K2spider         12 34 45 47 56           |S|=10  RSF (signe, lignes soeurs): UNSAT   construction 0.1 s, resolution 4.2 s, 113528 clauses
+P4P3             12 23 37 45 56           |S|=10  RSF (signe, lignes soeurs): UNSAT   construction 0.1 s, resolution 3.9 s, 115096 clauses
+g06_03276f8462   12 24 25 47 56 67        |S|=12  RSF (signe, lignes soeurs): UNSAT   construction 0.2 s, resolution 104.2 s, 153712 clauses
+g06_0fa0ea004a   23 34 36 47 56 67        |S|=12  RSF (signe, lignes soeurs): UNSAT   construction 0.1 s, resolution 126.7 s, 152144 clauses
+g06_177a07b777   23 25 36 47 56 67        |S|=12  RSF (signe, lignes soeurs): UNSAT   construction 0.1 s, resolution 18.5 s, 153712 clauses
+S7c              23 26 34 35 47 56 67     |S|=14  RSF (signe, lignes soeurs): UNSAT   construction 0.2 s, resolution 25.8 s, 200872 clauses
+K4               12 13 14 23 24 34        |S|=12  RSF (signe, lignes soeurs): TIMEOUT construction 0.0 s, resolution 300.0 s, 0 clauses
+S6               12 26 27 47 56 67        |S|=12  RSF (signe, lignes soeurs): UNSAT   construction 0.1 s, resolution 141.6 s, 150576 clauses

@@ -1,0 +1,3 @@
+star1 sans soeur, d_1 = 5 aretes D internes : UNSAT   6.0 s
+star1 sans soeur, d_1 = 6 aretes D internes : TIMEOUT 900.0 s
+star1 sans soeur, d_1 = 0 aretes D internes : TIMEOUT 900.0 s

@@ -155,6 +155,12 @@ Statuts : OUVERTE / EN TEST / SURVIT / RÉFUTÉE / ABANDONNÉE / REDONDANTE.
   - Dans le cas des droites sœurs : **R2 ⟺ {1,j}, {1,k} ∈ Σ** (la propagation de grille, question E7 du labo).
   - « Translation locale partout » (ρᵢ = t∘ι_{eᵢ}) implique allsib : impossible.
 - **Décision** : poursuivre. Il faut une preuve de R2, ou un test long quand la machine est libre.
+- **Mise à jour (24/09, note 15)** :
+  - R2 **complète** est FAUSSE dès qu'une droite de Λ en w est sœur (théorème 15.3) ; elle n'est possible qu'en T3 (quatre blocs), avec
+    un motif rigide des coins ;
+  - R2 « sur les droites » n'est pas forcée localement (1194 types locaux) ;
+  - le chemin R2 ⇒ ρ_w automorphe est bloqué : R2 complète ⇒ σ_w ∉ Aut ;
+  - statut : AFFAIBLIE (plus de preuve locale possible) ; reste un dictionnaire entre les grilles et le programme Δ.
 
 ## I-29 COMPLEXE X_Γ (triangles + carrés μ) LOCALEMENT ISOMORPHE À CELUI DE H(7,3)
 - **Statut** : OUVERTE. Faits DÉRIVÉS : liens identiques (K₁₄ bicolore) ; points fixes de t = étoile de x + 21 centres de carrés D ;
@@ -183,3 +189,55 @@ Statuts : OUVERTE / EN TEST / SURVIT / RÉFUTÉE / ABANDONNÉE / REDONDANTE.
   - (P_grille) = R2, budget long ;
   - (P_J) : la configuration à 7 points, forcée ou interdite ?
   - (P_rés) : SDP du résidu de dimension 30 avec la symétrie t.
+
+## I-31 RELAXATIONS DE MOMENTS SYMÉTRISÉES (note 16)
+- **Statut** : OUVERTE ; outil construit et validé.
+- **Outil** : orbites de W(B_m), représentation régulière de l'algèbre commutante, contraintes multipliées.
+- **Résultats** :
+  - degré 2 : réalisable (N19) ;
+  - degré 3 sur les triangles : réalisable à m = 7, et même pour allsib (N20).
+- **Test d'étalonnage** : trouver le plus petit cran qui réfute allsib (Sherali-Adams 3 local, Lasserre 2 localisé). La preuve DRAT
+  d'allsib existe : son analyse dirait le degré réellement utilisé.
+- **Coût** : les crans suivants demandent le comptage des orbites de quadruplets et un SDP plus gros. C'est ici que le matériel
+  compte.
+
+## I-32 COCYCLES DE RECOLLEMENT ET COHOMOLOGIE (note 17) — le patron local → global
+- **Statut** : SURVIT. Il tue allsib par une preuve humaine.
+- **Mécanisme** : rigidité locale (grilles-codes parfaits) ⇒ donnée de recollement Z₂ (échange des t-orbites) ⇒ cocycle (λ/μ) ⇒
+  cobord (H¹(M₇ ; Z₂) = 0) ⇒ contradiction avec une équirépartition 3/3 (μ entre paires qui se coupent).
+- **Prochaines cibles** :
+  - les configurations Σ certifiées (K2+K2+P3, K3+K3…) ;
+  - le cocycle à défauts construit sur les carrés D one/dis ;
+  - le cœur sans grille.
+
+## I-33 PARITÉ DES CONNEXIONS : au-delà du lemme des étoiles (note 19)
+- Le lemme des étoiles est la première obstruction de parité **indépendante de χ** : une combinaison de Faits A et B.
+- Piste 1. Chercher des combinaisons analogues impliquant des lignes non sœurs. Au sommet e_c, la bijection μ entre racines évitant c
+  et arêtes de K₁₂ − A_c est générale. Il faudrait un analogue du Fait A là où S1 échoue, avec des « termes de défaut » : les racines
+  ±w₀, et les racines à ν = 0.
+- Piste 2. Donner aux solveurs le certificat sous forme linéaire. Il faut ajouter des variables Z_p(W) = b[U_p⁺,W] ⊕ b[U_p⁻,W], puis les
+  équations (L1) et (L2) sur ces variables : Gauss conclut alors instantanément. À généraliser en variables de « côté » pour les
+  carrés one.
+- Pour les 12 survivants de degré ≤ 2, la parité des lignes sœurs est cohérente (`logs/parity_classify.txt`). Une parité mixte
+  lignes sœurs / lignes non sœurs est le candidat naturel.
+- **Formulation universelle au sommet e_c** (valable pour toute configuration, grille ou non) :
+  - la bijection μ E : avoid(c) → arêtes de K₁₂ − A_c ;
+  - le Fait A universel, #{w ∋ +e_ℓ, g ∈ E(w)} = 2 − [A_c(g) ∋ +e_ℓ] − [B_c(g) ∋ +e_ℓ], avec 1 − … si ℓ est l'autre bloc de g ;
+  - le Fait B universel : chaque arête de K₁₂ − A_c porte exactement une racine ;
+  - l'involution π : E(w) ↦ E(−w) sur les 60 arêtes, sans point fixe.
+
+  Le lemme des étoiles est le cas où trois arêtes de A_c sont des arêtes D sib. Pour les arêtes D one, les défauts rendent les
+  comptes impairs (par exemple 1 + 2 = 3), et les étoiles mixtes sont SAT. Une obstruction sans grille devra combiner **toutes** les
+  étoiles star(c), c = 1..7, avec un comptage global des types D (piste « cohomologique », comme H¹(M₇) pour allsib).
+- **Transfert possible** (à décider par l'utilisateur, hors du labo) : « deg Σ ≤ 2 » et « |Σ| ≤ 4 » sont des cardinalités valides sur
+  les variables Y de l'étage Q du dépôt principal, et elles manquent à l'étage Q. Le lemme des étoiles utilise les signes.
+
+## I-34 FINIR LES SURVIVANTS Σ PAR LE MODÈLE COMPLET, DU PLUS RICHE AU PLUS PAUVRE (note 19 §11)
+- **C₄ tué** en 495 s (DRAT) dans le modèle complet, alors que toutes les sondes locales échouaient. Le solveur global exploite les
+  lignes non sœurs.
+- **Ordre** : 4 arêtes en sémantique « au moins », puis 3 arêtes en sémantique exacte (Σ = H, les autres paires interdites sœurs),
+  puis 2 arêtes (P₃, 2K₂), puis K₂.
+- **K₂ exact est le cas sib du dépôt principal**, réduit par nos résultats : aucune autre paire sœur, et donc une seule grille par x.
+  Pour ce cas-là, il faudra un découpage en cubes, piloté par la structure autour de la grille (partition équitable à 18 cellules,
+  note 04).
+- Σ = ∅ reste le cœur.

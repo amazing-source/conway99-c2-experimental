@@ -4,3 +4,4 @@ data/cnf/*.cnf
 external_c3/
 __pycache__/
 *.pyc
+data/tmp/

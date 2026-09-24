@@ -1,0 +1,11 @@
+b=4 g000 -                              aretes= 0  RS: TIMEOUT construction 0.0 s, resolution 300.0 s
+b=4 g001 34                             aretes= 1  RS: TIMEOUT construction 0.0 s, resolution 300.0 s
+b=4 g002 24 34                          aretes= 2  RS: SAT     construction 0.3 s, resolution 25.2 s
+b=4 g003 12 34                          aretes= 2  RS: SAT     construction 0.3 s, resolution 19.4 s
+b=4 g004 23 24 34                       aretes= 3  RS: SAT     construction 0.3 s, resolution 0.4 s
+b=4 g005 14 24 34                       aretes= 3  RS: SAT     construction 0.3 s, resolution 1.9 s
+b=4 g006 12 14 23                       aretes= 3  RS: SAT     construction 0.3 s, resolution 2.4 s
+b=4 g007 14 23 24 34                    aretes= 4  RS: SAT     construction 0.3 s, resolution 0.5 s
+b=4 g008 12 14 23 34                    aretes= 4  RS: SAT     construction 0.3 s, resolution 1.9 s
+b=4 g009 12 13 14 23 34                 aretes= 5  RS: SAT     construction 0.3 s, resolution 0.3 s
+b=4 g010 12 13 14 23 24 34              aretes= 6  RS: SAT     construction 0.3 s, resolution 0.3 s

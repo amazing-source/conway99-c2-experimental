@@ -18,3 +18,6 @@ six==1.17.0
 sympy==1.14.0
 typing_extensions==4.16.0
 tzdata==2026.4
+clarabel==0.11.1
+cvxpy==1.9.3
+scs==3.3.1

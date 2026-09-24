@@ -1,0 +1,4 @@
+Sigma=12 23 34 45 + lignes {67} (|S|=10, Sigma exact) : TIMEOUT 300.0 s
+Sigma=12 23 34 45 + lignes {13} (|S|=10, Sigma exact) : SAT     3.5 s
+Sigma=12 23 34 45 + lignes {35} (|S|=10, Sigma exact) : SAT     3.7 s
+Sigma=12 23 34 45 + lignes {16} (|S|=10, Sigma exact) : SAT     13.4 s

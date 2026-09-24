@@ -1,0 +1,17 @@
+variables : 1722  {'etiquette': 462, 'bloc': 420, 'disjoints': 840}
+classes de conjugaison : 110 ; |W(B7)| = 645120
+orbites sur les variables (moments d'ordre 1) : 4
+   type etiquette : 2 orbites
+   type bloc      : 1 orbites
+   type disjoints : 1 orbites
+orbites sur les paires ordonnees (dim algebre commutante = somme m_lambda^2) : 234
+orbites sur les paires non ordonnees (moments d'ordre 2 distincts) : 142
+   paires ordonnees bloc      x bloc      : 22 orbites
+   paires ordonnees bloc      x disjoints : 18 orbites
+   paires ordonnees bloc      x etiquette : 30 orbites
+   paires ordonnees disjoints x bloc      : 18 orbites
+   paires ordonnees disjoints x disjoints : 25 orbites
+   paires ordonnees disjoints x etiquette : 23 orbites
+   paires ordonnees etiquette x bloc      : 30 orbites
+   paires ordonnees etiquette x disjoints : 23 orbites
+   paires ordonnees etiquette x etiquette : 45 orbites

@@ -1,0 +1,4 @@
+fleches soeurs a-seules 1->[2, 3] (lignes de star(1) concernees) : SAT 0.0 s
+fleches soeurs a-seules 1->[2, 3, 4] (lignes de star(1) concernees) : SAT 0.2 s
+fleches soeurs a-seules 1->[2, 3, 4, 5] (lignes de star(1) concernees) : TIMEOUT 300.0 s
+fleches soeurs a-seules 1->[2, 3, 4, 5, 6, 7] (lignes de star(1) concernees) : TIMEOUT 300.0 s

@@ -1,0 +1,4 @@
+1479b1c14d82fd98aa46396d3103ccc8d65e6da4159057cbb29a57ced5bc5aaa  rsf_S6.cnf  vars=69012 clauses=150576 pairs=[12 26 27 47 56 67]  (RSF lignes soeurs, scripts/row_system_full.build)
+fa1a4be5783889466f75aa4b420afdbfbb0eb5ce2f43f49ea757bead8eb0367d  rsf_C5.cnf  vars=52247 clauses=111960 pairs=[12 15 23 34 45]  (RSF lignes soeurs, scripts/row_system_full.build)
+a19ea3d5cae2dcbb1794944aae644c404351659eefc8f6ed1108d24c2e2c0c2b  rsf_P6.cnf  vars=53191 clauses=113528 pairs=[12 17 45 56 67]  (RSF lignes soeurs, scripts/row_system_full.build)
+899e39a35729b7c69a350a3cd45fecff6299325379c7ac2780405e5be74904db  rsf_C4K2.cnf  vars=53191 clauses=113528 pairs=[25 34 36 47 67]  (RSF lignes soeurs, scripts/row_system_full.build)

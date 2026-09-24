@@ -151,3 +151,106 @@ l'historique, et ménager la machine (processeur et RAM limités : calculs mono-
     - J_x par la configuration à 7 points M_p(q) = M_q(p).
   - Makhnev 1988 (réf. [7] de Reimbayev) : descente 99 → 33 sous n₃ = 0, régime opposé à C2. Hamming local, Cameron : inapplicables.
   - Ishida étendu aux modules des droites, arêtes et carrés μ : identité vérifiée partout (6 = 6, 0 = 0, 0 = 0), mécanisme vide (N14).
+
+### Phase 7 — R2, types locaux, recollement (24/09, suite ; note 15)
+Demande : preuve humaine de R2 en supposant φ(a) ≠ −a, lien avec le programme Δ et avec le théorème annoncé du dépôt C3 ;
+puis (suggestions relayées « à prendre avec des pincettes ») classer les φ survivants, étudier (φ, τ, ω), recoller deux grilles.
+- **Formule des multiplicités** : m(u,v) = 2 − [u ~ φ(v)] − [φ(u) ~ v] − [φ(u) = v] (DÉRIVÉ).
+- **Théorème 15.3 (DÉRIVÉ)** : R2 complète ⇒ a, b, c, d dans quatre blocs distincts, avec un motif rigide des coins. Elle est donc
+  **fausse** dès qu'une droite de Λ en w est sœur.
+- **Énumération exacte** (`r2_label_constraints.py`, `r2_types.py`) :
+  - 1194 types locaux à symétrie près (W(B₆) × D₄), 263 formes de φ, 20 types « droites R2 ». Une preuve locale de R2 est impossible.
+  - Le filtre S1-vu-depuis-w n'élimine rien de plus.
+- **(φ, τ, ω, H)** :
+  - τ n'est forcé que sur les échanges P–P ;
+  - l'ombre Φ n'existe que pour 56 types ;
+  - l'ordre 3 apparaît pour certains choix, jamais pour tous. Pour la réflexion, ⟨Φ, ν⟩ est le groupe de Klein.
+- **Symétries candidates g** : 112 types en ont une. Aucune ne peut se propager en C2 (Aut = ⟨t⟩, et g fixerait x et w).
+- **C3** : inutile ici (|Aut Γ| ≤ 3 suffit). Le README du dépôt C3 (23/09) dit que la conclusion n'est pas encore acquise ; il a été
+  lu seul, pour l'énoncé.
+- **Incompatibilité** : R2 complète en w ⇒ σ_w ∉ Aut.
+- **Recollement de deux grilles** partageant une droite (`r2_two_grids.py`, sans étiquettes, 4 s) :
+  - 3977 paires (φ, φ′) compatibles sur 8325 ;
+  - aucun φ éliminé.
+- **Tests SAT locaux** (`r2_local_sat.py`, relaxation touchant S) : T3 et T1 en TIMEOUT à 240 s.
+
+### Phase 8 — relaxations de moments (24/09, soir ; note 16)
+Plan relayé : relaxation SoS de degré 2 sur les arêtes libres, symétrisée, avec contraintes multipliées ; puis cran ciblé si réalisable.
+- **Prémisse corrigée** : 1722 variables (à t près), pas 210. 210 est le nombre de vraies arêtes de type II.
+- **Tailles** (Burnside sur W(B₇)) :
+  - 4 moments d'ordre 1, 142 d'ordre 2 ;
+  - PSD réduite à 243 × 243 par la représentation régulière.
+- **Degré 2** (`sos2_relax.py`, cvxpy + Clarabel installés dans `.venv`) :
+  - m = 2 réalisable ✓, m = 3 irréalisable ✓, m = 4, 5, 6 réalisables (aveugle à l'intégralité) ;
+  - **m = 7 réalisable**, espace affine de dimension 35, y_sœur ∈ [0, 1] ;
+  - raison : au degré 2, λ et μ sont fusionnés dans (P).
+- **Degré 3, triangles** (`sos3_triangles.py`) :
+  - réfute m = 3 et m = 4 ;
+  - **m = 5, 6, 7 réalisables**, y_sœur ∈ [0, 1] : même allsib (certifié UNSAT) passe.
+- Axes B et C du plan : contenus dans ces relaxations ; C ne peut pas réfuter allsib.
+
+### Phase 9 — pari « C2 n'existe pas » : preuve humaine d'allsib (24/09, nuit ; note 17)
+- Allsib se ramène exactement, par le lemme S1, à une connexion à valeurs dans D₄ sur KG(7,2) (`allsib_connection.py`).
+  - UNSAT en 31 s ;
+  - **LM + H3 suffisent** ; H4 n'est pas nécessaire ; LM seul et H3 + H4 s'arrêtent en TIMEOUT à 300 s.
+- **Preuve humaine (DÉRIVÉ)** :
+  - λ et μ entre paires disjointes ⇒ le caractère d'échange des t-orbites est un 1-cocycle c sur le complexe des couplages M₇ ;
+  - H¹(M₇ ; Z₂) = 0 (calculé : rangs 20 et 85) ⇒ c est un cobord ;
+  - μ entre paires qui se coupent ⇒ #{r : c(ij,r) + c(ik,r) = 1} = 3, alors qu'un cobord donne 0 ou 6. Contradiction.
+- Patron local → global identifié (rigidité → cocycle → topologie → comptage). La suite : le rejouer sur les autres configurations,
+  puis avec les carrés D one/dis (« cocycle à défauts »).
+
+### Phase 10 — système χ des paires sœurs (25/09, nuit ; note 18)
+- **Système χ** : la preuve d'allsib, transportée au niveau des orbites (étage Q), pour toute configuration Σ. Contraintes dérivées de (Q1)–(Q4) :
+  bij, disj, int, fibre, bloc.
+- **Résultats** :
+  - 16 des 26 configurations certifiées ou candidates sont χ-UNSAT (moins d'une seconde chacune), **dont g07_ca15a23af4**, resté UNKNOWN
+    à 900 s dans le modèle complet ;
+  - **g07_ca15a23af4 certifié** à l'étage Q : kissat 38 s, DRAT de 543 Mo VERIFIED ;
+  - contrôle croisé par l'étage Q (encodage indépendant) : allsib, K3K3, g07 et les atomes 01, 02, 03 sont UNSAT ;
+  - classification des 1044 graphes : 988 χ-UNSAT, 56 χ-SAT, **11 atomes minimaux (CNF χ avec DRAT VERIFIED)** ;
+  - Σ : 52 survivants après les certificats, **39 après le système χ**.
+- **Preuves humaines** : lemme du triangle (répartition 3 par classe antipodale) et corollaire K₃ + K₂. Le noyau de la preuve humaine est
+  vérifié UNSAT, et chacun de ses ingrédients est nécessaire.
+- **Suite** : preuves humaines des atomes 02 à 11 ; les 39 survivants ; le système χ à défauts, où une paire D chevauche 1 orbite
+  (type one) ou 2 (type dis).
+
+### Phase 11 — systèmes de lignes, système χ signé, lemme des étoiles (24/09, après-midi ; note 19)
+- **Méthode.** On écarte le « χ à défauts » : pour les paires D de types one et dis, il n'a pas de domaine canonique. On étudie
+  plutôt les systèmes de lignes :
+  - RS(S) : l'étage Q, filtré par support ;
+  - RSF(S) : le modèle complet, filtré par support. RSF(tout) reproduit K2K2P3.cnf **au sha256 près**.
+- **RS(lignes sœurs) ≡ système χ** : 23 contrôles sur 23, puis monotonie.
+- **Il manque les signes, pas des lignes.** RSF(lignes sœurs) réfute les 8 configurations χ-SAT certifiées ailleurs, et S6, un
+  survivant maximal : **rsf_S6 DRAT VERIFIED**.
+- **Système χ signé.** Il s'écrit (sbloc, sbij, sdisj, sint), par une connexion D₄ et des signes σ_p. Contrôles :
+  - correction par transfert de modèles, 8 sur 8 ;
+  - second encodage « un parmi quatre » ;
+  - 3 à 60 fois plus rapide que RSF.
+- **Étoiles.**
+  - K₁,₃ résiste à tous les solveurs : cadical, CryptoMiniSat avec parités, kissat 1200 s.
+  - À χ fixé, c'est réfuté en 0,0 s. La réfutation est une pure parité : 300 cas sur 300.
+  - Les certificats se somment en un système **indépendant de χ**, (L1) + (L2).
+  - ⇒ **LEMME DES ÉTOILES : trois paires sœurs ne partagent jamais un bloc (degré de Σ ≤ 2).** Preuve humaine par G1, S1(a) et
+    μ = 2 (deux fois).
+  - Ses deux ingrédients sont vérifiés par SAT dans RSF (Fait A : 9 cas ; Fait B éclaté : 12 cas), puis **certifiés par DRAT**
+    (18 CNF, toutes VERIFIED).
+  - La parité seule classe les 1044 graphes : K₁,₃ est l'**unique atome**.
+- **Survivants : 39 → 12.**
+  - 24 tombent par le lemme ;
+  - C₅, P₆ et C₄+K₂ tombent par le système signé (**DRAT VERIFIED**, de même que S6).
+  - Restent ∅, K₂, P₃, 2K₂, K₃, P₄, P₃+K₂, 3K₂, C₄, P₅, P₄+K₂ et 2P₃, tous SAT sur les lignes sœurs.
+- **Modèle complet sur les survivants à 4 arêtes**, kissat 600 s :
+  - C₄ : UNSAT, 495 s, DRAT ;
+  - P₄+K₂ : UNSAT, 252 s, DRAT ;
+  - P₅ et 2P₃ : UNKNOWN.
+  → **10 survivants**. Lots en cours : 3 arêtes, 2 arêtes et K₂ en Σ exact, puis P₅ et 2P₃ en Σ exact.
+- **Parité des orbites « − »** : toute ligne a un nombre pair de voisins Q = 1 « − ». Contrôlée sur BvLS ; l'étage Q ne la voit pas.
+- **Cœur sans grille.**
+  - Sondes RS et RSF locales (star(1), 4 blocs, star(1) ∪ star(2), type d_1) : TIMEOUT. Seul d_1 = 5 donne UNSAT, comme contrôle.
+  - Étoiles mixtes (arêtes D de type one) : SAT sur leurs lignes. Le mécanisme des étoiles est propre aux grilles.
+- **Méthodologie.**
+  - Un solveur qui échoue à χ libre mais réussit instantanément à χ fixé signale un certificat global caché. Il faut le chercher à χ
+    fixé, puis sommer.
+  - Une affirmation non calculée de la première version de la note (« (L1)+(L2) compatibles pour K₁,₃ ») était fausse. Elle a été
+    corrigée.

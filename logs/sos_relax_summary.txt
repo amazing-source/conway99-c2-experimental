@@ -1,0 +1,54 @@
+== degre 2 (sos2_relax.py) ==
+m=2 : racines 4, variables 2, orbites de paires (avec la constante) 5  [0.0 s]
+   equations lineaires distinctes : 11  [0.0 s]
+   feas : statut optimal, valeur 0.0, y_soeur = 1.0  [0.0 s]
+m=3 : racines 12, variables 30, orbites de paires (avec la constante) 53  [0.0 s]
+   equations lineaires distinctes : 114  [0.0 s]
+   feas : statut infeasible, valeur inf, y_soeur = None  [0.1 s]
+m=4 : racines 24, variables 132, orbites de paires (avec la constante) 153  [0.0 s]
+   equations lineaires distinctes : 262  [0.0 s]
+   feas : statut optimal_inaccurate, valeur 0.0, y_soeur = 0.128162  [2.2 s]
+m=5 : racines 40, variables 380, orbites de paires (avec la constante) 216  [0.0 s]
+   equations lineaires distinctes : 344  [0.1 s]
+   feas : statut optimal_inaccurate, valeur 0.0, y_soeur = 0.146226  [10.5 s]
+m=6 : racines 60, variables 870, orbites de paires (avec la constante) 238  [0.1 s]
+   equations lineaires distinctes : 367  [0.3 s]
+   feas : statut optimal_inaccurate, valeur 0.0, y_soeur = 0.148844  [16.5 s]
+m=7 : racines 84, variables 1722, orbites de paires (avec la constante) 243  [0.6 s]
+   equations lineaires distinctes : 372  [0.9 s]
+   feas : statut optimal_inaccurate, valeur 0.0, y_soeur = 0.144287  [18.1 s]
+   ysib_min : statut optimal_inaccurate, valeur 2.0692345383740817e-07, y_soeur = 0.0  [19.6 s]
+   ysib_max : statut optimal_inaccurate, valeur 0.999997263989498, y_soeur = 0.999997  [21.5 s]
+== degre 2 + triangles de degre 3 (sos3_triangles.py) ==
+m=2 : racines 4, variables 2, orbites de paires (avec la constante) 5  [0.0 s]
+   equations lineaires distinctes : 11  [0.0 s]
+   triangles de racines (a t pres) : 0 ; orbites : 0
+   equations (P_adj) distinctes : 1
+   feas : statut optimal, y_soeur = 1.0  [0.0 s]
+m=3 : racines 12, variables 30, orbites de paires (avec la constante) 53  [0.0 s]
+   equations lineaires distinctes : 114  [0.0 s]
+   triangles de racines (a t pres) : 80 ; orbites : 7
+   equations (P_adj) distinctes : 3
+   feas : statut infeasible, y_soeur = None  [0.2 s]
+m=4 : racines 24, variables 132, orbites de paires (avec la constante) 153  [0.0 s]
+   equations lineaires distinctes : 262  [0.0 s]
+   triangles de racines (a t pres) : 880 ; orbites : 13
+   equations (P_adj) distinctes : 4
+   feas : statut infeasible, y_soeur = None  [3.3 s]
+m=5 : racines 40, variables 380, orbites de paires (avec la constante) 216  [0.0 s]
+   equations lineaires distinctes : 344  [0.1 s]
+   triangles de racines (a t pres) : 4560 ; orbites : 15
+   equations (P_adj) distinctes : 4
+   feas : statut optimal_inaccurate, y_soeur = 1e-06  [12.7 s]
+m=6 : racines 60, variables 870, orbites de paires (avec la constante) 238  [0.1 s]
+   equations lineaires distinctes : 367  [0.3 s]
+   triangles de racines (a t pres) : 16240 ; orbites : 16
+   equations (P_adj) distinctes : 4
+   feas : statut optimal_inaccurate, y_soeur = 0.142722  [17.3 s]
+m=7 : racines 84, variables 1722, orbites de paires (avec la constante) 243  [0.6 s]
+   equations lineaires distinctes : 372  [0.9 s]
+   triangles de racines (a t pres) : 45920 ; orbites : 16
+   equations (P_adj) distinctes : 4
+   feas : statut optimal_inaccurate, y_soeur = 0.138973  [19.3 s]
+   ysib_min : statut optimal_inaccurate, y_soeur = 0.0  [19.5 s]
+   ysib_max : statut optimal_inaccurate, y_soeur = 1.0  [22.5 s]
