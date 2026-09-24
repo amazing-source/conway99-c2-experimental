@@ -1,0 +1,11 @@
+﻿python.exe : C:\Users\RESEARCHER\Desktop\c2_experimental\.venv\Lib\site-packages\networkx\algorithms\graph_hashing.py:211: 
+UserWarning: The hashes produced for graphs without node or edge attributes changed in v3.5 due to a bugfix (see 
+documentation).
+Au caractère Ligne:1 : 397
++ ... al\scripts; & ..\.venv\Scripts\python.exe sib_loop.py 900 6 3 *> ..\l ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\RESEARCHER\...documentation).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  node_labels = _init_node_labels(G, edge_attr, node_attr)
+iteration 1: survivors 57, maximal 9, to test 9, observed-to-certify 6

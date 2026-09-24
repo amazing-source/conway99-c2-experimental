@@ -1,0 +1,42 @@
+
+=== Paley(9) = H(2,3) : n=9 k=4 r=1 s=-2 ; sigma a 1 point(s) fixe(s)
+  th=  1 f=  4  E_th 2-entier=True  pair=True  det={3: 4}  P2: det mod 4 = 1, attendu 1
+     P4: f + sum exces = 0 mod 8 (attendu 0)   p=3 exces=4 {1: (2, 1), 2: (1, 1)}
+     N^+ : rang  2, b pair=True, Gram divisible par 2=True, det(b/2)={3: 2} (type impair)
+     N^- : rang  2, b pair=True, Gram divisible par 2=True, det(b/2)={3: 2} (type impair)
+  th= -2 f=  4  E_th 2-entier=True  pair=True  det={3: 4}  P2: det mod 4 = 1, attendu 1
+     P4: f + sum exces = 0 mod 8 (attendu 0)   p=3 exces=4 {1: (2, 1), 2: (1, 1)}
+     N^+ : rang  2, b pair=True, Gram divisible par 2=True, det(b/2)={3: 2} (type impair)
+     N^- : rang  2, b pair=True, Gram divisible par 2=True, det(b/2)={3: 2} (type impair)
+
+=== T(7) : n=21 k=10 r=3 s=-2 ; sigma a 3 point(s) fixe(s)
+  th=  3 f=  6  E_th 2-entier=True  pair=True  det={5: 6, 7: 1}  P2: det mod 4 = 3, attendu 3
+     P4: f + sum exces = 0 mod 8 (attendu 0)   p=5 exces=4 {1: (6, -1)}; p=7 exces=6 {1: (1, 1)}
+     P5 (p=5): rang_p(A-3I) = 7 ; 1 + dim D_p = 7
+     N^+ : rang  3, b pair=True, Gram divisible par 2=True, det(b/2)={5: 3, 7: 1} (type impair)
+     N^- : rang  3, b pair=True, Gram divisible par 2=True, det(b/2)={5: 3} (type impair)
+  th= -2 f= 14  E_th 2-entier=True  pair=True  det={3: 1, 5: 6}  P2: det mod 4 = 3, attendu 3
+     P4: f + sum exces = 0 mod 8 (attendu 0)   p=3 exces=6 {1: (1, -1)}; p=5 exces=4 {1: (6, -1)}
+     P5 (p=5): rang_p(A--2I) = 7 ; 1 + dim D_p = 7
+     N^+ : rang  8, b pair=True, Gram divisible par 2=False, det(b/2)=None (type None)
+     N^- : rang  6, b pair=True, Gram divisible par 2=True, det(b/2)={5: 3} (type impair)
+
+=== L2(7) = K7 x K7 : n=49 k=12 r=5 s=-2 ; sigma a 1 point(s) fixe(s)
+  th=  5 f= 12  E_th 2-entier=True  pair=True  det={7: 12}  P2: det mod 4 = 1, attendu 1
+     P4: f + sum exces = 0 mod 8 (attendu 0)   p=7 exces=4 {1: (10, 1), 2: (1, -1)}
+     N^+ : rang  6, b pair=True, Gram divisible par 2=True, det(b/2)={7: 6} (type impair)
+     N^- : rang  6, b pair=True, Gram divisible par 2=True, det(b/2)={7: 6} (type impair)
+  th= -2 f= 36  E_th 2-entier=True  pair=True  det={7: 12}  P2: det mod 4 = 1, attendu 1
+     P4: f + sum exces = 0 mod 8 (attendu 0)   p=7 exces=4 {1: (10, 1), 2: (1, 1)}
+     N^+ : rang 18, b pair=True, Gram divisible par 2=True, det(b/2)={7: 6} (type impair)
+     N^- : rang 18, b pair=True, Gram divisible par 2=True, det(b/2)={7: 6} (type impair)
+
+=== Paley(49) : n=49 k=24 r=3 s=-4 ; sigma a 1 point(s) fixe(s)
+  th=  3 f= 24  E_th 2-entier=True  pair=True  det={7: 16}  P2: det mod 4 = 1, attendu 1
+     P4: f + sum exces = 0 mod 8 (attendu 0)   p=7 exces=0 {1: (14, -1), 2: (1, -1)}
+     N^+ : rang 12, b pair=True, Gram divisible par 2=True, det(b/2)={7: 8} (type impair)
+     N^- : rang 12, b pair=True, Gram divisible par 2=True, det(b/2)={7: 8} (type impair)
+  th= -4 f= 24  E_th 2-entier=True  pair=True  det={7: 16}  P2: det mod 4 = 1, attendu 1
+     P4: f + sum exces = 0 mod 8 (attendu 0)   p=7 exces=0 {1: (14, -1), 2: (1, -1)}
+     N^+ : rang 12, b pair=True, Gram divisible par 2=True, det(b/2)={7: 8} (type impair)
+     N^- : rang 12, b pair=True, Gram divisible par 2=True, det(b/2)={7: 8} (type impair)

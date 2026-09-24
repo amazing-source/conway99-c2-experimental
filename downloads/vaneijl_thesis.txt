@@ -1,0 +1,3527 @@
+=== PAGE 1 ===
+EINDHOVEN UNIVERSITY OF TECHNOLOGY 
+Department of Mathematics and Computing Science 
+MASTER'S THESIS 
+On the p-rank of the adjacency matrices 
+of strongly regular graphs 
+C.A. van Eijl 
+Supervisor: 
+Prof. dr. A.E. Brouwer 
+October 1991 
+
+=== PAGE 2 ===
+Contents 
+Introduction 
+3 
+1 Preliminaries 
+5 
+1.1 
+Matrix theory ............................•....... 
+S 
+1.2 Graph theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 
+7 
+1.2.1 
+General concepts. . . . . . . . . . . . • . . . . . . . . . . . . . . . . .. 
+7 
+1.2.2 
+Strongly regular graphs ... . . . . . . . . . . . . . . • . • . . . . . .. 
+7 
+1.3 
+Cod..es ............,.."".,,,.,,,,,,...,,,,.....,,....,,..,,.,. 
+9 
+1.4 Groups........................................ 
+9 
+2 The Smith normal form 
+11 
+2.1 
+Definitions and results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 
+11 
+2.2 
+Applications of the Smith nonnal fonn ....................... 
+13 
+3 On the p-rank of strongly regular graphs with integral eigenvalues 
+16 
+3.1 
+Prelim inari es . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 
+16 
+3.2 General theorems .................................. 17 
+3.3 Bounds from subgraphs and examples . . . . . . . . . . . . . • . . . . . . . . .. 
+19 
+3.4 Switching-equivalent graphs . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 
+21 
+4 On the p-rank of Paley graphs 
+Z4 
+4.1 
+Circulants ...................................... 24 
+4.2 Paley graphs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . • . . . . .. 
+26 
+5 Bounds from character theory 
+32 
+5.1 
+Group representations and modules •••. . . . . . . . . . . . . . . . . • . . .. 
+32 
+5.2 Olaracter theory . . . . . . . . . . . • . . . . . . . . . . . . . . . . . . . . . .. 
+34 
+5.2.1 Generalities................................. 
+34 
+5.2.2 
+Ordinary characters ........... . . . . • . . . . . . . . • • . .. 
+36 
+5.2.3 
+Modular characters .......•...........•....•.... 37 
+5.3 Application to strongly regular graphs . . . . . . . • . . . . . • . . . . . . • • .. 
+39 
+5.4 Rank 3 graphs . . . . . . . . . . . . . . . . . . . . . • . . . . . . . • • . . . .. 
+42 
+6 Results 
+4S 
+6.1 
+The Higman-Sims family .............................. 45 
+6.2 The McLaughlin graph and its subconstituents. . . . . . . . . . . . . . . . . . .. 
+47 
+6.3 Graphs related to the McLaughlin graph by switching . . . . . . . . . . . . . . .. 
+50 
+
+=== PAGE 3 ===
+6.4 
+Other graphs derived from S (4, 7,23) . . . . . . . . . . . . . . . . . . . . . . ., 
+52 
+6.5 
+The Cameron graph ............... . . . . . . . . . . . . . . . . .. 
+54 
+6.6 The Hoffmann-Singleton graph and related graphs. . . . . . . . . . . . . . . . ., 
+54 
+6.7 
+Graphs derived from the Golay codes . . . . . . . . . . . . . . . . . . . . . . ., 
+55 
+6.8 
+Rank 3 graphs related to S2m(Q) •...••..••••••••••••..•••• , 
+58 
+6.9 Table of the results . . . . . . . . . . . • . • . • • . . . . . . . • . . . . . . . .. 
+60 
+Appendix 
+62 
+2 
+
+=== PAGE 4 ===
+Introduction 
+In this thesis we study the rank over the finite field of p elements, or p-rank, of the adjacency matrices 
+of strongly regular graphs. Such matrices may be used as generator matrices for p-ary codes and in 
+this connection the detennination of the p-rank is of particular importance, since it is the dimension 
+of the code. 
+For various incidence structures, the p-ranks of associated (0, 1) matrices have been investigated. 
+As an example of such investigations that are explicitly related to enor correcting codes, we mention 
+the papers of Bagchi and Sastry [2] and Hamada [9], who deal with generalized polygons and block 
+designs. respectively. However, also other problems give rise to the study of the p-rank of incidence 
+matrices. For example. Linial and Rothschild [13] solve a set theoretical problem by detennining 
+the p-rank of the incidence matrix of subsets (see also Wilson [21]). Furthennore. self-dual codes 
+associated with symmetric designs are investigated by Lander [12] in order to derive new results on 
+the parameters of such designs. Bagchi. Brouwer and Wilbrink [1] and Brouwer and Haemers [3] 
+give results on the p-rank of the adjacency matrices of some strongly regular graphs. As a matter of 
+fact. these are the only papers known to us which deal with our subject. 
+Let A denote the adjacency matrix of a strongly regular graph. We shall not restrict our investi-
+gations to the p-rank of A. but study the p-rank of A + T I for any integer T. For most combinations 
+of p and T. the p-rank of A + T I is completely detennined by the parameters of the graph. For the 
+remaining cases. it is really necessary to investigate the structure of the graph. 
+Linear algebra. coding theory and group theory play an important role in deriving results on the 
+p-rank of a strongly regular graphl. Chapter 1 gives a survey of the concepts used from these areas. 
+Besides that. it provides an introduction to the theory of strongly regular graphs. 
+The p-rank of an integral matrix is easily derived from its Smith nonnal fonn. which is the subject 
+of Chapter 2. We shall detennine the Smith nonnal fonn of the adjacency matrices of two infinite 
+families of strongly regular graphs. namely. the lattice graphs and the triangular graphs. 
+In Chapter 3 the p-rank of strongly regular graphs with integral eigenvalues is considered. We 
+isolate the combinations of p and T for which the detennination of the p-rank of A + T I is nontrivial 
+and give a general upper bound for these cases. Furthennore. it is investigated how the P-ranks of 
+switching-equivalent graphs are related. 
+Chapter 4 deals with Paley graphs. For these graphs. the p-rank of A + T I will be detennined for 
+every p and T. 
+In Olapter 5 it is shown how character theory can be used to obtain a set of possible values for 
+the p-rank of a graph. We also investigate for which graphs such a set is expected to be small. 
+In the last chapter we detennine (bounds for) the p-rank of a considerable number of graphs. 
+especially sporadic graphs. A table of the results concludes this chapter. 
+I By the rank of a graph we mean the rank of its adjacency matrix. 
+3 
+
+=== PAGE 5 ===
+Chapter 1 
+Preliminaries 
+In this thesis many concepts from different areas of mathematics are used. Although most of them are 
+elementary, we think it convenient for the reader to have a brief survey. Besides that. some notation is 
+introduced and a few results on matrices and strongly regular graphs are given. The results are stated 
+without proof. for which the reader is referred to the literature. As far as matrix theory is concerned. 
+proofs can be found in any textbook, for example Marcus and Minc [16]. For the theory of strongly 
+regular graphs we refer to the surveys of Cameron [5] and Seidel [19]. 
+The first convention is that the letter p always denotes a prime. We assume that the reader is 
+familiar with the basic notions from the theory of finite fields. If not, it suffices to study the first 
+sections of Chapter 4 of MacWilliams and Sloane (15]. A finite field with q elements is denoted by 
+lFq• 
+1.1 
+Matrix theory 
+Let us first establish some notation. The set of all n x m matrices with entries in a field F is denoted 
+by Fnxm. We shall mainly deal with square matrices. Usually, the rows and columns of a matrix will 
+be indexed by elements of a given set. A vector:! always denotes a row vector. 
+The n x n identity matrix is denoted by In- Furthermore. On denotes the n x n all-zero matrix and 
+I n the all-one matrix of size n. The all-one and all-zero vector are written as In and Qn. respectively. 
+When no confusion can occur. the index n is omitted. 
+We write diag( aI, a2, ... , an) for a diagonal matrix of size n with diagonal elements ai, 1 :5 i :5 
+n. Diag(a~l, ail, ... ) denotes the matrix 
+Similarly. a block diagonal matrix consisting of nl blocks MJ, nz blocks M2. etc .• is denoted by 
+diag(M~1 ,Mi2 , ... ). 
+Denote by V the n-dimensional vectorspace over F. Let Vi and V2 be linear subspaces of V. The 
+sum of VI and Vz is denoted by VI + V2. If Vi n Vz = {Q}, then we write Vi EB Vz for the direct sum 
+of the two subspaces. 
+Now let F be a field and let M be an element of Fnxn for some integer n. The matrix M is said 
+to be nonsingular if det( M) # 0 and singular otherwise. The characteristic polynomial of M is the 
+polynomial p( z) = det( M - zI). The eigenvalues of M are the zeros of p( z). If ). is an eigenvalue of 
+5 
+
+=== PAGE 6 ===
+M, then there exists a nonzero vector.l such that ~ M = A.l. The vector ~ is called an eigenvector of 
+M (belonging to A). By the algebraic multiplicity of A we mean its multiplicity as a root of p( z). The 
+geometric multiplicity is the dimension of the corresponding eigenspace V,\ := {~ E V I ~M = A.l}. 
+The spectrum of M is the set of eigenvalues including their algebraic multiplicities. 
+The geometric multiplicity of A is at most its algebraic multiplicity. If equality holds. then 
+I: dim(V'\i) = n. 
+(1.1 ) 
+Ai 
+This is equivalent to the assertion that V has a basis consisting of the eigenvectors of M. In this case, 
+we omit the adjective and speak about the multiplicity of the eigenvalue. 
+The matrix M is called diagonalizable if there exists a nonsingular matrix S E pnxn such that 
+S-1 M S = A, where A is a diagonal matrix. M is diagonalizable if and only if (1.1) holds. If 
+M' E Fnxn, M M' = M'M and both matrices are diagonalizable. then they can be diagonalized by 
+the same nonsingularmatrix S. 
+Set (~!l' .. '~m) := {L~l O:i~ilO:i E F}. the vectorspace over F generated bY.ll,· " '~m' We 
+write 'Rp(M) for the rowspace of Mover F, that is, the veClorspace generated by the rows of M. 
+The F-rank of M is defined as the dimension of np(M). We use the notation rF(M). In the special 
+case that F = IF'q, we write rq(M) and nq(M) to denote the rank and rowspace of Mover IF'q, 
+respectively. 
+The kernel of Mover F, denoted by Np(M), is defined as 
+We have 
+dim np(M) + dimNp(M) = n. 
+Oearly, if A is an eigenvalue of M, then VA = Np(M - AI). 
+M is said to be equivalent to M' if there exist two nonsingularelements P and Q of Fnxn, such 
+thatM = PM'Q. Notation: 
+If r F = r, then M :::::: diag(1 r, on-r). 
+The following row operations are called elementary: 
+(i) 
+interchanging rows; 
+(ii) 
+adding a multiple of a row to another row; 
+(iii) 
+mUltiplying a row by a nonzero element of F. 
+The elementary column operations are defined similarly. It is evident that if M ~ M', then M can 
+be obtained from M' by applying a sequence of elementary row and column operations. 
+The trace of M is the sum of its diagonal elements and is denoted by tr(M). One easily sees that 
+it satisfies the following property: 
+tr(MM') = tr(M'M), M,M' E Fnxn. 
+If .0 is a set and .0' C .0, then the characteristic vector of .of is the vector f with coordinates 
+indexed by the elements of.Q satisfying 
+if wE .of 
+otherwise. 
+6 
+
+=== PAGE 7 ===
+Finally. a permutation matrix is a square matrix which has precisely one 1 in each column and 
+each row and zeros elsewhere. 
+1.2 Graph theory 
+1.2.1 
+General concepts 
+A (simple. undirected) graph r is a pair (V, E), where V is a finite nonempty set of elements called 
+vertices and E is a finite set of unordered pairs of distinct vertices of V called edges. The number of 
+vertices of r is called the order of r and is denoted by v. If e = {x, y} is an edge of r, then x and 
+y are said to be adjacent and e is said to be incident to x and y. For each vertex x ,in a graph r, the 
+number of vertices adjacent to x is called the valency of x. A vertex of valency 0 is called an isolated 
+vertex. If all the vertices of r have the same valency. then r is said to be a regular graph. 
+A subgraph of a graph r is a graph A = (VI, Ed such that VI ~ V and EI ~ E. If VI is any 
+subset of vertices of r. then the subgraph induced by VI is the subgraph of r obtained by taking the 
+vertices in VI and joining those pairs of vertices of Vi which are joined in r. An induced subgraph 
+of r is a subgraph induced by some subset Vl of V. 
+The complement of r (denoted by f) is the graph with the same vertex set as r. but where two 
+venices are adjacent iff they are not adjacent in r. 
+A graph consisting of v isolated vertices is called a coc/ique of size v. Its complement is a regular 
+graph of valency v-I. which is called the complete graph or clique of size v. 
+Two graphs r and A are said to be isomorphic (written r 9! A) if there is a one-to-one correspon-
+dence between their venex sets which preserves the adjacency of venices. An automorphism of r is 
+a one-to-one mapping d> of 11 onto itself such that ¢( x) and ¢(y) are adjacent iff x and y are. The 
+automorphisms of r form a group under composition, called the automorphism group of r. It is said 
+to be transitive if it contains transformations mapping each vertex of r to every other venex. 
+A graph r can be described by its (0.1) adjacency matrix A of size v defined by numbering the 
+vertices and taking aij = 1 iff the vertices i and j are adjacent. By the eigenvalues of r. we mean the 
+eigenvalues of A. which are independent of the numbering of the venices. Since A is a symmetric 
+matrix, its eigenvalues are real. Graphs with the same spectrum are called cospectral. Cospectral 
+graphs are not necessarily isomorphic. Denote by B the adjacency matrix of f. the complement of r. 
+then 
+Iv + A+ B = Jv' 
+When considering a graph r. its adjacency matrix will always be denoted by Ar. unless stated 
+otherwise. If no confusion can occur. we simply write A. 
+1.2.2 Strongly regular graphs 
+A graph is called strongly regular if there exist integers k, A and p such that: 
+1. the graph is regular with valency k; 
+2. the number of vertices adjacent to two adjacent venices is A; 
+3. the number of vertices adjacent to two non-adjacent venices is p. 
+If r is a strongly regular graph (or srg for shon) with parameters (v, k, A, p). then its complement f 
+is also strongly regular with parameters 
+(ii, k, X, j1) = (v, v - k - I, v - 2k + p - 2, v - 2k + A). 
+7 
+
+=== PAGE 8 ===
+Usually, the valency of t is denoted by 1. Disconnected graphs and their complements will be ex~ 
+eluded, Le. we assume 0 < J.L < k < v-I. 
+Let A be the adjacency matrix of r. For the rest of this section, A is regarded as an element of 
+I1VXti. The matrix A satisfies 
+AJ = kJ, 
+Al = kI+'\A+J.L(J-I-A). 
+(1.2) 
+We see that the al1~ne vector is an eigenvector of A with eigenvalue k. The adjacency matrix A has 
+two other eigenvalues rand s (r > s), which are the solutions of xl + (J.L - >.)x + (J.L - k) = O. Their 
+multiplicities I and 9 satisfy 
+I+g = v-I, 
+k + Ir+ gs = O. 
+Oearly, I and 9 can be expressed in terms of v, k, A and J.L. From the integrality of I and g, a strong 
+necessary condition on the parameters of a srg is obtained. If I = 9 (the so~called half~case), we 
+have v = 4J.L + 1, k = 2J.L, >. = J.L - 1 and the graph has the same parameters as its complement. 
+Otherwise, the eigenvalues r and s are integers. 
+For later use, we mention the following relations between k, A, mu, rand s: 
+>. -
+J.L = r + s, 
+J.L = k + rs. 
+(1.3 ) 
+These relations immediately follow from the equality xl + (J.L - A)X + (J.L - k) = (x - r)( x - s). 
+Let A be the linear span of {I, A, B} over 11, where B denotes the adjacency matrix of f. The 
+vectorspace A is closed with respect to ordinary matrix multiplication and is called the adjacency 
+algebra or Bose-Mesner algebra of r. Since the matrices in A are symmetric and commute with each 
+other, they can be simultaneously diagonalized. Therefore • .A admits a (unique) basis of minimal 
+idempotents {Eo, El, El} satisfying 
+2 
+LEi = J, 
+i=O 
+EjEj = Cij Ej, 
+(1.4) 
+where Cij denotes the Kronecker delta. The following tables list them as linear combinations of the 
+basis {I, A, B} and vice versa: 
+I A 
+vEo 
+1 
+1 
+VEl I If 
+VEl 9 BI 
+B 
+1 
+-/r.:tl 
+-g~ 
+Eo 
+I 
+1 
+A 
+k 
+B 
+I 
+1 
+1 
+r 
+s 
+-r -1 -8 - 1 
+From the right hand table and (1.4). we obtain that AEI = rEI and AEl = SE2. The columns 
+of the Ei span the eigenspaces of all the matrices of.A. Thus the rank of Ei equals the dimension 
+of the ith eigenspace. It follows that r{EJ) = I and r(El) = g, where 1'(M) denotes the l1~rankof M. 
+8 
+
+=== PAGE 9 ===
+The last concept discussed here is switching. Let r == (V, E) be a (not necessarily strongly 
+regular) graph and let VI be a nonempty proper subset of V. Set V2 : = V \ VI. We construct a new 
+graph r' == (V, E') in the following way: 
+if VI, v; E Vi, then { VI ,va E E' iff { Vlt va E E; 
+if \12, ~ E Yz, then {\12,~} E E' iff {\12, v;} E E; 
+if VI E Vb \12 E Vl, then { v}, \12} E E' iff {VI, \12} (/. E. 
+r and r' are said to be SWitching-equivalent. Vi is called the switching-set. 
+lt can be proven that ifr is strongly regular, its parameters satisfy 
+V +4rs + 2r + 28 = 0 
+and r' is regular, then r' is again a srg, either with different parameters, or with the same parameters 
+but nonisomorphic to r, or isomorphic to r. If VI = {y I x '" y} for an arbitrary vertex x of r, then 
+r' is the disjoint union of x and a srg with k = 21t. 
+1.3 Codes 
+We shall recall only a few basic concepts from coding theory here. 
+By a p--ary linear code e oflength n and dimension k, we mean a k-dimensional subspace of the 
+n-dimensional vectorspace over F p provided with its standard basis. The elements of e are called 
+codewords. A third parameter of the code is the minimum distance d, defined as 
+d:= min{d(fbfl)lfbfl E e, fl :/: fl} , 
+where the Hamming distance d(~, y) between two n-tuples ~ and y denotes the number of coordinates 
+on which ~ and J!. differ. If e has ~inimum distance d, then e is ;; r ¥ l-error correcting code. 
+If {fl , ... ,fk} is a basis for e, then the matrix 
+( 
+fl ) 
+Me= L 
+is called a generator matrix for C. 
+The dual C J. of C is defined as 
+CJ. := {~E F;I C£,~) ::: 0 for all fEe}, 
+where (', .) denotes the ordinary inner product. The dimension of CJ. is n - k. The code e is said to 
+be self-orthogonal if C c eJ.. In case C = eJ., the code is called self-dual. 
+1.4 Groups 
+In this section a few elementary concepts from group theory are recalled. For more details we refer 
+to Suzuki [20]. 
+We assume the reader to be familiar with the concept of a group. Let G be a finite group with 
+identitye. The number of elements of G is called the order of the group and denoted by JGI. If 9 is 
+an element of G, then the order of 9 is defined as the smallest integer 12 for which gn ;;:: e. 
+9 
+
+=== PAGE 10 ===
+The set {g-lgtg I 9 E G} is called the conjugacy class of g}. A subgroup H of G is called 
+normal if H9 :;;:: {g-lhg I h E H} ;;:: H for every 9 E G. If H is a nonnal subgroup of G, then 
+the factor group G / H is defined as the group of cosets gH :;;:: {gh I h E H} with multiplication 
+(gI H )({J2H):;;:: (gl{J2)H. The index of H in Gis the order ofG/H. 
+Let G and G' be two groups. A function 1 : G t--t G' is called a homomorphism from G into G' 
+if it satisfies 
+f(gd/({J2) ;;:: l(glg2) for all gil {J2 E G. 
+If 1 induces a one-to-one correspondence and is surjective, then 1 is said to be an isomorphism. In 
+that case, we say that G and G' are isomorphic and write G ~ G', 
+If G acts on a set X, then the action of G is wrinen on the right. Thus, if x E X and 9 E G, then 
+the image of x under 9 is denoted by xg. The orbit of x is defined as 
+{X919EG}. 
+If X is itself an orbit, then G is called transitive. 
+A ring R is an additive abelian group (i.e. x + y ;;:: y + x for all x, Y E R). together with a 
+mu)tiplicationsatisfying(xy)z;;:: x(yz), x(y+z) = xy+xz, (x+y)z;;:: xz+yzandwhichcontains 
+an identity element e such that XI" ;;:: ex ;;:: x. Furthennore, let F be a field and V a veclorspace over 
+F which is also a ring. If (q!J.Q ;;:: c(.Y:Q) = ~(c.'!!.) for all C E F and .y, .'!!. E V, then V is called an 
+F-algebra. 
+10 
+
+=== PAGE 11 ===
+Chapter 2 
+The Smith normal form 
+Throughout this section, M denotes an n x n matrix with integral entries and R-rank r. The Smith 
+nOImal fOIm of M is a diagonal matrix obtained from M by a sequence of elementary row and 
+column operations over 7Z, from which the p-rank of M is easily derived for all primes p. We first 
+give definitions and prove some general results. In the second section, the Smith nOImal fOIm of the 
+adjacency matrices of triangular graphs and lattice graphs is calculated. 
+2.1 Definitions and results 
+For more details on the theory discussed here we refer to Newman [17]. 
+Definitions M is called unimodular if I det( M) I = 1. Two integral matrices M and N are said 
+to be unimodularly equivalent (denoted by M ,...., N) if there exist unimodular matrices P and Q such 
+that M = PNQ. 
+Theorem 2.1 Mis unimodularlyequivalentto a diagonal matrix S = diag(s}, ... , snO, ... ,0), where 
+r is the R-rank of M and Si I 8i+l, 1 ::; i ::; r - L 
+PROOF. If M is the all-zero matrix, then there is nothing to prove. Hence, we assume that M contains 
+a nonzero element, that can be brought to the (1,1) position by suitable row and column interchanges. 
+Applying the Euclidean algorithm, this element may be replaced by the greatest common divisor of 
+the elements of the first row and column. Now all these elements. except the (1,1) element, can be 
+made zero. Denote this new matrix by M. Oearly. M f'V M. Suppose that M contains an element 
+mij that is not divisible by mn. Adding the ith row to the first row and proceeding as described 
+before, we finally reach a state where the element in the (1,1) position divides every element of the 
+matrix, and all the other elements of the first row and column are zero. 
+The entire procedure is now repeated with the submatrix obtained by deleting the first row and 
+column of },f. Since unimodularly equivalent matrices have the same rank, we eventually obtain a 
+diagonal matrix with the required properties. 
+0 
+Theorem 2.2 The diagonal entries of the matrix S which is described by Theorem 2.1, are uniquely 
+determined, up to sign. 
+For the proof of this theorem we introduce the concept of the determinantal divisors of M, di ( M), 1 ::; 
+i ::; n. They are defined as the greatest common divisor of all deteIminants of i x i submatrices of 
+M. 
+11 
+
+=== PAGE 12 ===
+PROOF OF THE THEOREM. From the fact that unimodularly equivalent matrices have the same deter-
+minantal divisors (see [17] for a proof), it follows that 
+i 
+di(M) = II Sj, 1 $ i $ r. 
+j=1 
+Thus SI = dl(M) and Sj = di(M)/di_1(M), 2 $ i $ r. Since the detenninantal divisors are 
+detennined up to sign. the statement is proved. 
+0 
+S is called the Smith normal form (SNF) of M. We shall use the notation S(M). The Si are 
+known as the invariant factors of M. 
+The p-rank of M is easily derived from SCM). Let S(M) = diag(sI," ., sr,O, ... , 0). Then 
+rp(M) = Tp(S(M)) = r*. where r'" satisfies pI Sr" and p ISr.+l. Oearly, we have Tp(M) $ T, the 
+rank of M over the real field. 
+Example 2.1 Let us detennine the SNF of In - In. the adjacency matrix of the complete graph 
+of size n. 
+0 1 1 
+1 
+0 
+1 
+1 
+1 
+1 ° 
+1 
+1 
+1 -1 
+0 
+° 
+I n - In = 
+1 1 0 
+1 
+N 
+1 
+0 -1 
+0 
+'" diag( p~-l ,n - 1). 
+1 
+1 
+0 
+1 
+0 
+0 
+-1 
+Thus 
+{ n-l if pi (n-1) 
+rp(Jn - 1n)= 
+n 
+otherwise. 
+More generally. S( I n + ,In) = diag(l, ,n-2, ,(, + n ), , E LZ. 
+If for M a unimodularly equivalent diagonal matrix is known, then S(M) is easily detennined. 
+Let S(M) = diag(sl, ... , Sr, 0, ... ,0) and letpl,P2, ... , Pk be the complete set of primes which occur 
+as divisors of the Si. Thus for appropriate nonnegative integers eij we have 
+S 1 
+-_ 
+pen pel2 
+pEII< 
+1 
+2 .•. k 
+, 
+__ 
+perl n:;r2 
+pErk 
+Sr 
+1 r4 
+••• k 
+• 
+Since SdSi+l. 1 $ i $ T - I, the eij satisfy 
+0$ elj $ e2j $ ... $ erj, 1 $ j $ k. 
+The set of prime powers p~'J ,1 $ i $ r,l $ j $ k, including repetitions, is called the set of 
+elementary divisors. Given this set, the invariant factors can easily be reconstructed because of the 
+ordering condition. If 
+€J. := max eiJ' 1 < J' < k, 
+19$r 
+---
+12 
+
+=== PAGE 13 ===
+then sr == p~1 p~ •.. p~k. Deleting these primes from the set of elementary divisors, we determine 
+Sr-l in the same way, and so on. This leads to the following theorem: 
+Theorem 2.3 If M N A = diag(Al, ... , Ar,O, ... , 0), then the set of prime power factors of the 
+Ai,l :5 i:5 r, is equal to the set of elementary divisors of SCM). 
+PROOF. We first note that from Theorem 2.2 it follows that S(M) = S(A). Let p be any prime that 
+divides some Ai, 1 :5 i:5 r. Order the Ai according to ascending powers of p: 
+so that 0 :5 el :5 ... :5 er • Then di. the i-th determinantal divisor of A. satisfies 
+d 
+fl",e, 
+( 
+) 
+1 
+i == P 
+Ii, 
+p, Ii = . 
+Thus. if Sj denotes the i-th invariant factor of S(A), and hence of S(M), then 
+81 = dj, 
+Si = d;jdi-l = pe.p" (p,P) = 1, 2:5 i:5 r. 
+Thus pe, is an elementary divisor, 1 :5 i :5 r. Applying the same argument for all primes p which 
+divide some Ai, we obtain the result. 
+0 
+2.2 Applications of the Smith normal form 
+The adjacency matrices of lattice graphs and triangular graphs have a very simple structure. This 
+enables us to compute their SNF by hand. 
+The lattice graph L2( n) has as vertices the ordered pairs (x, Y) E {I, ... , n}2, where two 
+vertices are adjacent iff they have a common coordinate. L2( n) has parameters (v, k, A, Ii) = 
+(n2,2(n - 1), n - 2,2). For n :f 4, L2{n) is unique, i.e. every graph with the same parameters is 
+isomorphic to L2( n). For n = 4, there is exactly one nonisomorphiccospectra1 graph, theShrikhande 
+graph (see Cameron [5] for a description). 
+Proposition 2.4 The SNF of the lattice graph L2 ( n ) is equal to 
+PROOF. Let An be the adjacency matrix of L2( n) with columns and rows indexed in the following 
+13 
+
+=== PAGE 14 ===
+order: (1,1), (1,2), ... , (1, '1'1), (2, 1), ... , ('1'1, '1'1), Then 
+In - In 
+In 
+In 
+In 
+In 
+I n - In 
+In 
+In 
+An = 
+In 
+In 
+In -In 
+In 
+In 
+In 
+In 
+In - In 
+On 
+-('1'1 - 2)Jn 2In - In 
+2In - I n 
+In 
+On 
+On 
+On 
+On 
+2In - I n 
+I n - 211'4 
+On 
+On 
+2In - I n 
+On 
+I n - 2In 
+..... 
+diag(In, (In - 2In)n-2 ,2('1'1 - 2)(Jn - In)) 
+,...., 
+diag(12n- 2,2(n-2)2, {2(n - 2)}2n-3,2(n - 1)('1'1 - 2» -' An. 
+-, 
+Since StAn) = An, the result follows. 
+o 
+For sake of completeness, we mention that S(As) = S(A4) = diag(16,24,45, 12). where As 
+denotes the adjacency matrix of the Shrikhande graph. 
+The triangular graph T( n ) has as vertices the 2-element subsets of {I, 2, ' , , , '1'1 }. Two vertices 
+are adjacent iff they are not disjoint as subsets. The parameters of T( '1'1) are (v, k, A,p) = (!n( n -
+1), 2( n - 2), n 
+2,4). T( '1'1) is unique except for n = 8. In that case, there are three nonisomorphic 
+graphs, the Chang graphs. These will be discussed in the next chapter. 
+Proposition 2.5 The SNF of the triangular graph T( n) is equal to 
+diag(l n-2, 2~(n-2)(n-3), {2( '1'1 - 4)}n-Z, (n - 2)('1'1 - 4)) 
+if2 ! '1'1 
+diag(1n-l ,2i(n-l)(n-4), {2(n _4)}n-2,2(n - 2)('1'1 - 4)) 
+otherwise. 
+PROOF. Let An be the adjacency matrix of T( '1'1), corresponding to the following labelling of the rows 
+and columns: {1,2}, {1,3}, ... , {I, n}, {2,3},.", {n - 1, n}. Furthermore, let a~ denote the all-a 
+matrix of size i x j, a E 7Z. Then we have 
+1~.2 
+O~_3 
+Or4 
+01-3 
+J,,_I - 1 .. - 1 
+1!_3 
+... 
+l~ 
+1 
+1 .. -2 
+1 .. - 3 
+h 
+1 
+A" = 
+1!.3 
+Or~ 
+OJ""'' 
+Ij-2 1,,-2 
+J .. _2 - 1.,.-2 
+'" 
+1~ 
+1 
+1,,-3 
+h 
+1 
+Oro 
+°1-
+j 
+01-3 li-3 1,,-3 
+11-3 1 .. -3 
+J,,-3 -/,,-3 ... l! 
+1 
+I: 
+I 
+... 
+0:-4 It 12 
+0:-5 If h 
+<>:-6 If 12 
+: ~. * J2 - /z 
+If 
+0!_3 
+11 
+0~-4 11 
+0~_5 11 
+1"'1 
+11 
+0 
+I 
+14 
+
+=== PAGE 15 ===
+I 
+n-2 
+O~_l 
+(n -4)~_1 
+2~_3 
+... 
+22 
+2 
+2~_3 
+22-> 
+2"-
+I 
+(n _4)j-2 0,,-2 
+(n - 4)J,,_1 
+... 
+00 
+0 
+2(J - /),,-3 
+2(h - 12) 
+0 
+OJ-· 
+1 .. _2 
+0,,-2 
+O"-:~ 
+... 
+02-· 
+OJ-' 
+n-
+2j-'> 
+O":~ 
+n-
+OJ-J 
+2(J - 1) .. -3 
+2j-
+0::; 
+OJ- 2j-" 2(J - I}n .... 
+21 !(n-'2)(n-3j 
+21 
+O~_l 
+2;_5 OJ 2(J2 - I2) 
+2 
+O~_l 
+2~-4 
+00 
+I 
+where 
+( (n - 2)( n - 4 ) 
+{(n-4)2n_z 
+) 
+(n-2)(n-4) 
+{(n-4)Z}~_2 
+) 
+(n - 4)(n - 6)Jn-z 
+"" 
+{2(n _ 4)}1-
+2(n - 4)(J - I)n-z 
++2( n - 4 )In-z 
+"'" ( (n - 2)(n - 4) {-2(n - 4)}~_Z) 
+d' 
+({2( _ 4)}n-2 ( _ 2)( _ 4» 
+{2(n-4)}i-
+-2(n-4)ln_z 
+"" lag 
+n 
+, n 
+n 
+. 
+Thus An "" diag(1 n-2 ,2i(n-2)(n-3), {2(n -4 )}n-Z, (n - 2)(n -4) =: An. Applying Theorem 2.3, 
+we obtain 
+S A 
+- S A 
+_ { An 
+if 2 I n 
+( n)- (n)-
+diag(ln-I,2!(n-l)(n-4),{2(n-4)}n-2,2(n-2)(n-4» 
+otherwise. 
+o 
+We recall the fact that if fp(M) = f, then M can be reduced over Fp to a diagonal matrix 
+diag(l 1', on-1'), the so-called canonical form. In general, there will only be a few primes p for which 
+Tp(M) < n, since Tp(M) = n unless p is a divisor of det(M). Hence in practice it will not be far 
+more efficient to compute the SNF of M than to determine the canonical form for those primes p that 
+divide det(M). 
+In the subsequent chapters we shall try to determine the p-rank of several (classes of) strongly 
+regular graphs, without making use of the methods mentioned above. For some primes the rank can 
+be calculated in a rather easy way; for other primes we can only derive bounds. In the proofs the next 
+lemma will be frequently used. 
+Lemma 2.6 Let M be a nonsingular matrix and suppose pk II det(M). Then Tp(M) 2: n - k. (By 
+pk II a, a E Zl,wemeanthatpk I a,butpk+l la.) 
+PROOF. Since dele S ( .AI») = det( M) f: 0, the diagonal elements 8j of S (.AI) are unequal to zero for 
+1 :5 i :5 n. Furthermore. because Sj I 8i+l, 1 :5 i :5 n - 1, at most k of the invariant factors are 
+divisible by p. 
+0 
+15 
+
+=== PAGE 16 ===
+Chapter 3 
+On the p-rank of strongly regular graphs 
+with integral eigenvalues 
+Let r be a STg of order v with integral eigenvalues k, T and 8. In this chapter it is proven that the 
+p-rank of .4 is completely determined by the parameters of r when p does not divide both T and s. 
+For the remaining primes p. an upper bound for r p{ A) is derived. A similar result is obtained for the 
+p-rank of .4 + T I, T E 7Z. Furthermore. we examine how the p-ranks of switching-equivalent graphs 
+are related. 
+3.1 Preliminaries 
+In this section a few elementary but useful lemmas from matrix theory are recalled. We omit the 
+proofs. which can be found in any textbook on matrix theory (e.g. Marcus and Minc [16]). 
+Let M, MI and M2 be n x n matrices with entries in some field F. 
+Lemma 3.1 If M = M} + M2. then 
+I TF(MI) - TF(M2) I::; TF(M) ::; TF(Md + TF(M2). 
+In particular. IT F( M) - T F( I n - M) I ::; 1. 
+Lemma 3.2 If M = MIM2. then 
+This lemma will mainly be used in one of the following forms: 
+(a) If MIM2 = On, then TF(Mt) + TF(M2) ::; n; 
+(b) If MIM2 = I n • then TF(Md + TF(M2) ::; n + 1. 
+Lemma 3.3 Let AI, ... , Ak, Ai E F, Ai :/; Aj for i :/; j, be the complete set of eigenvalues of M. 
+Then thefollowing are equivalent: 
+1. TIf=l (M - AJ) = On 
+2. l:f=t dim(NF( M - Ail)) = n. 
+16 
+
+=== PAGE 17 ===
+3.2 General theorems 
+Throughout this section. let A be the adjacency matrix of a srg r with parameters (v, k, ).., p) and 
+integral eigenvalues k, r, s with multiplicities 1, f and g, respectively. Denote the rank of A over .It 
+by r(A). 
+Theorem 3.4 Define 00 := k{modp), 0) := r (modp), Q2 := s(modp). Then thefollowing holds: 
+(i) 
+ifprecisely one of QO, Ql, Q2 is equal to zero, say Qi with multiplicity mi. 
+then Tp(A) = v - mi; 
+(iia) if QO = 0, Ql = 0 and Q2 ;/; 0, then Tp(A) = g; 
+(iib) ifQo = 0, QI ;/; o and Q2 = 0, then Tp(A) = f; 
+(iii) 
+if Qt = 0 and Q2 = 0, then T p{ A) ::; min(f, g) + 1. 
+PROOF. The characteristic polynomial of A over Fp is (x -
+QO)(x - Qdf(x -
+Q2)9. Since the 
+dimension of the kernel of A is at most the multiplicity of the eigenvalue 0 as a root of the characteristic 
+polynomial of A. a lower bound for r 1'( A) is 
+(3.1 ) 
+where (i = 0 or 1, depending on whether O'i is equal to zero or not. This bound also follows 
+immediately from Lemma 2.6. 
+Define m:= max«(I - (0), (1 - (t)f, (1- (2)9). Suppose m > O. Let 0' be the eigenvalue of A 
+over .It corresponding to m (thus 0' E {k, r, s }). Then an upper bound for T p( A) is 
+rp(A) = rp(A - cd) :5 r(A -
+0'1) = V - m. 
+(3.2) 
+Combining (3.1) and (3.2) proves (i) and (iii). 
+Now assume p I k, pi rand p l. s. By (1.2). 
+A( A - s1) = (k - p)1 + ().. - p - s)A + pJ. 
+From Section 1.2 we recall the following relations between the parameters: 
+p = k + rs and ).. - p = r + s. 
+Thus, under the assumptions made. 
+A(A - sl) == 0 (modp). 
+Combining (3.1) and Lemma 3.2 yields 
+Thus rp(A) = 9 as claimed. Assertion (iib) is proven in a similar way. 
+o 
+Hence, the only primes p for which the determination of TpCA) is nontrivial, are the primes that 
+divide both r and s. 
+The question arises whether the upper bound in case (iii) is good or not. From the results in 
+Chapter 6, we might conclude that the bound is often fairly good. However, most of the graphs that 
+are examined, have small for 9 « 25), so we can not say anything in general. 
+Remark Sometimes a slightly better upper bound can be obtained in case (iii) as follows. Without 
+17 
+
+=== PAGE 18 ===
+loss of generality, suppose f < g. Then according to the above theorem, Tp(A) ~ f + 1. Consider 
+the minimal idempotent El satisfying r( El) = f. Let Cl be the smallest integer such that Cl El is an 
+integral matrix, say 
+CIE} = clOI + ellA + CJzB, cli E :th. 
+Suppose thatp I clo,pl clzand P Jell. Then rp(A) = rp(CtEl) ~ r(cIEt) = f. 
+The next theorem is a generalization of Theorem 3.4 for A + rI, r E :th. Its spectrum is 
+(k + r) 1, ( r + r)f , (s + r)9. where the multiplicities are written as exponents. 
+Theorem 3.5 Define ao := (k + r) (modp), at := (r + r) (modp), 0'2 := (8 + r) (modp). Then 
+the/ollowing holds: 
+(i) 
+ifprecisely one 0/0'0, ai, 0'2 is equal to zero, say ai with multiplicity mi, 
+then Tp(A + r1) = v - mi; 
+(iia) 
+ifao = O,a} = 0 and a21 0, then rp(A + r1) = 9 + €, where € = Oifp I pand 1 
+otherwise; 
+(iib) 
+if 0'0 = 0,al1 0 and 0'2 = 0, then Tp(A + rI) = f + f., where f. = 0 ifp I pand 1 
+otherwise: 
+(iii) 
+if a} = 0 and a2 = 0, then rp(A + r I) ~ min(f, g) + 1. 
+PROOF. We shall only prove (iia). 
+(A+r1)(A-sI) = (k-p-rs)I+().-p+r-s)A+pJ 
+= -s(T+r)I+(r+r)A+pJ 
+-
+pJ(modp). 
+From (i) it follows that rp(A - s1) = f + 1 under the assumptions of (iia). Replacing A by A + r I 
+in (3.1) yields, together with Lemma 3.2, 
+9 ~ rp(A + rI) ~ 9 + rp(/iJ). 
+Lemma 3.3 assens that Tp( A + r 1) = 9 if and only if 
+(A + rI)(A - s1) == 0 (modp). 
+Hence the conclusion holds. 
+o 
+Thus. when studying the p-rank of A + rI for a given Stg r with integral eigenvalues k, rand 
+s, we may restrict ourselves to the values of p and r for which both r + r and s + r are divisible by 
+p. There is no known general strategy to determine (bounds for) the p-rank of A + r I. In the next 
+section we give a few small lemmas which might be useful, especially if f or 9 is small. In that case, 
+it is often easy to obtain a good lower bound from an induced subgraph, as is shown in Examples 3.1 
+and 3.2. 
+18 
+
+=== PAGE 19 ===
+3.3 Bounds from subgrapbs and examples 
+Let r be a STg. not necessarily with integral eigenvalues. and let 1" E ll. Suppose r contains an 
+induced subgraph r' of order v'. Let A' be the adjacency matrix of r'. Then we obviously have 
+Tp(A + 1"Iv) ~ Tp(A' + rIv')' In partiCUlar. the following holds: 
+Lemma 3.6 Ifr contains a clique o/size nand T ¢ 1 (modp), then 
+T (A + 1"1) > { n - 1 if p I ( n. + 1" - 1) 
+p 
+-
+n 
+otherwISe. 
+PROOF. If r contains a clique of size n. then I n + (T - 1 )In is a submatrix of A + T Iv. In Example 
+2.1 it was derived that S( I n + (1' - 1 )In) = diag( 1, (1" -
+1)n-2, (1' - 1)( n + T - 1)). from which the 
+result follows. 
+0 
+If r contains a coclique of size n. then n is a lower bound for T pC A + 1'1) if T is not divisible by 
+p. On the other hand, Theorem 3.5 provides an upper bound for the size of a coclique in a srg with 
+integral eigenvalues. 
+Proposition 3.7 The size 0/ a coelique in a strongly regular graph with integral eigenvalues is at 
+most min(f, g) + 1. 
+PROOF. Let C be a coclique in a srg r and set n := ICI. Let PI and P2 be two (not necessarily distinct) 
+primes satisfying PI I (T + 1) and P21( S - 1) (such primes exist since both T and s are different from 
+zero). Then. under the assumption that the eigenvalues of r are all integers, we obtain from Theorem 
+3.5 
+Hence. the statement holds. 
+n ::; Tp1(A + 1)::; 9 + 1, 
+n ::; TP1(A - /) ::; f + 1. 
+o 
+In this way, we have almost proven the Cvetkovit bound for strongly regular graphs with integral 
+eigenvalues. This bound assens that the size of a coclique C in a graph r can not exceed the number 
+of nonnegative (nonpositive) eigenvalues of r (see Cvetkovit. Doob and Sachs [7]). For a STg this 
+yields I CI ::; min(f + 1, g). 
+Our problem is related to another graph theoretic problem. namely the detennination of the 
+chromatic number of r. This number. usually denoted by x(r). is defined as the minimal number of 
+colors needed for a coloring of the venices of r in which adjacent vertices have different colors. 
+If X(r) = X. then there is one coclique of size at least r 
+v / xl contained in r. Hence an upper 
+bound for X(r) provides a lower bound for Tp(A + TI) whenp Ar. and vice versa. However, general 
+upper bounds for X(r) do not give useful lower bounds for rp(A + l' /). 
+When we study the p-rank of a given graph, both r p( A + r/) and T p( J - A - r/) will be 
+considered. The relation between the two ranks is expressed by 
+dim('R.p( A + T /) + (1) 
+= dim('R.p( J - A -
+T I) + (1). 
+(3.3) 
+In view of this, the following lemma turns out to be often useful. 
+19 
+
+=== PAGE 20 ===
+Lemma 3.8 lfp lv, p I k, then Tp(J - A) ;::: Tp(A) + l. 
+PROOF. We have 1( J - A) ;::: {v - k)l :¢ Q (mod p). thus 1 E 'Rp{ J - A). Consider A as a generator 
+matrix of a p-ary linear code C. Because <.r., 1) ;::: k == 0 (mod p) holds for every row !. of A, the dual 
+code CJ. contains 1. As (1,1) ;::: v :¢ 0 (modp), the all-one vector is not contained in Kp(A). The 
+conclusion now follows from (3.3), 
+0 
+A last lemma, before we discuss some examples: 
+Lemma 3.9 The 2-rank of the adjacency matrix of any graph is even. 
+For a proof of this lemma. we refer to the Appendix (A5). 
+Example 3.1 The Clebsch graph can be described in the following way: take as vertices all subsets 
+of {I, ... , 5} of even cardinality; two vertices are adjacent whenever their symmetric difference 
+has cardinality 4. This yields a STY with parameters (v, k, >',/1) ;::: (16,5.0,2). Its spectrum is 
+51, 110, ( - 3)5. From the discussion at the end of the previous section it follows that we only have to 
+determine the 2-rank: of A + 1 and B := J - A-I. 
+By Theorem 3.5, we find TZ( A + 1) $ 6. Now consider the subgraph on the five vertices of 
+cardinality 4 and the vertex {I, 2}. Let A I be the corresponding submatrix of A. Then 
+A' + 16 ;::: (ff ff
+T
+), where ff ;::: (00011). 
+Since 1'2(A + 116) 2:: T2(A' + 16) ;::: 6, we conclude that T2(A + /) = 6. 
+Furthermore, IT2(A+/)-T2(B)1 $ 1 (Lemma 3.1) and Tz(B) is even (Lemma 3.9), so 1'z(B) = 6. 
+Example 3.2 The Gewirtz graph has parameters (v,k,>.,/1) ;::: (56,10,0,2) and is unique. Its 
+spectrum is 101,235, ( -4 )ZO. A construction of this graph is given in Chapter 6. Since l' -
+S ;::: 6, the 
+only interesting cases are T2(A) and T3(A + /). In this example, we shall only determine f2(A). In 
+Chapter 6. the other case is dealt with. 
+From the parameters of the graph we deduce that A contains a 20 x 20 submatrix A' of the 
+following form: 
+° 
+1 
+19 
+Q9 
+1 ° 
+Q9 
+19 
+14 
+Q~ 09 
+19 
+Q9 19 
+19 
+09 ). 
+Oearly, 1'z(A) 2:: 18. 
+Assume w.l.o.g. that 
+A = (::1 ~~~). 
+Every row in [A21IA22] has a zero in the first two columns, a one in exactly two of the columns 
+3,4, ... ,11 and a one in exactly two of the columns 12,13, ... ,20. Suppose T2(A) = 18. Let!. be 
+a row of [AZII AZ2]' Then!. can be expressed as the sum (modulo 2) of four of the rows 3,4, ... ,20. 
+Since k = 10, one of these four rows must have at least three ones in common with!.. This contradicts 
+/1 = 2. Hence. 18 < 1'z (A) $ 21. Since r2 (A) is even, it follows that TZ ( A) ;::: 20. 
+In Chapter 6 it will be proven that 1 can be written as the sum of an even number of rows of A. 
+This implies that 1 is an element of both 'Rz(A) and 'Rz(J -- A), hence r2(J -- A) = rz(A) = 20. 
+20 
+
+=== PAGE 21 ===
+3.4 Switching-equivalent graphs 
+In Section 2 it was shown that the p-rank of a srg with integral eigenvalues is completely detennined 
+by its spectrum when p does not divide both T and s. Hence cospectral graphs have the same p-rank 
+for primes p satisfying this condition. However. this not necessarily holds when p I r and p Is, For 
+example, we shall see that the triangular graph T(8) and the Chang graphs have different 2-ranks 
+(Example 3.3), Qearly. isomorphic graphs have the same rank over any field F p. since labelling the 
+rows and columns of a matrix in a different way does not change the rank. 
+Switching-equivalent graphs need not be isomorphic or even cospectral. but when the p-rank of 
+one graph is known, there are only a few possible values for the p-rank of the other graph(s). 
+Lemma 3.10 Ifrl and r2 are switching-equivalent, then ITp(Al) - Tp(A2)1 $ 2. 
+PROOF. 
+Assume that the rows and columns of At and A2 are labelled in the same way. 
+Set 
+Bi : = ) - Ai - I for i = 1,2. From the definition of switching as given in Chapter 1, it is readily 
+seen that 
+B2 - Az = D(Bl - Al)D, 
+where D is a diagonal matrix with dii = -1 if the ith row and column of Al are indexed by an 
+element of the switching-set and 1 otherwise. This is equivalent to 
+) - 2Az = D() - 2At)D. 
+(3.4 ) 
+For p > 2, the above-mentioned relation yields 
+from which the result is easily derived by Lemma 3.1. 
+If p = 2, relation (3.4) gives a trivial result, but in this case we can give a more explicit relation 
+between 'R2(Al) and 'RZ(A2)' Denote by £. the characteristic vector of the switching-set with respect 
+to the labelling of the columns of Aland A2. Then 
+(3.5) 
+Hence. the assenion is also proven for p = 2. 
+o 
+Of course. this lemma also holds when Al and Az are substituted by Al + r I and A2 + r I for 
+r E iZ. 
+Lemma 3.11 Let r be a srg on v vertices that is switching-equivalent to the disjoint union 01 a vertex 
+and a srg r' on v-I vertices. Denote the eigenvalues olr by k, rand s. 
+(a) /121 rand 2 I s, then T2( Ar) = rz( Ar' ) + (, where ( = 2 if 1 E 'R2( Ar) and 0 otherwise. 
+(b) 1121C T + 1) and 21(s + 1), then Ir2(Ar + Iv) - Tz(Ap + Iv-I)I $ 1. 
+PROOF. W.l.o.g. assume that the first row of Ar, denoted by r., is the characteristic vector of the 
+switching-set VI. Write A instead of Ar and denote by A* the matrix obtained from A by switching 
+with respect to lil • that is, A* = diag(O, Ar'). Now (3.5) takes the following fonn: 
+'R2(A + rI) + (1,r) = 'R2(A* + rI) + (1,r), r = 0,1. 
+(a) Since r E 'R2( A) and 1 rt 'R2( A" + (r.), we have dim ('Rz( A) + (1}) = dim('R2( A") + (r) + 1. 
+Because both T2( A) and T2( Ap ) = T2( A") are even (Lemma 3.9). the following holds: 
+21 
+
+=== PAGE 22 ===
+• if 1 E 'Rz(A). then T2(A) = T2(Ar') + 2 (and 1: (/. 'R2(A*)); 
+• if 1 (/. 'Rz(A). then Tz(A) = r2(Ap) (and 1: E 'R2(A*)). 
+(b) Denote by B and B' the adjacency matrices oft and t', respectively. If p divides both r + 1 and 
+s + I, then (a) applies to rz(B) and Tz,(B'). In Section 1.2. we mentioned the fact that both 'V and the 
+valency ofr' are even. Hence, by Lemma 3.8, rz,(A' + Iv-I) = Tz,(B') + 1. 
+If 1 E 'Rz,( B), then r2( A + Iv) = rz( B) - 01. where 01 = 0 if 1 E 'Rz( A + Iv) and 1 otheJWise. 
+From this we get 
+(3.6) 
+If the all-one vector is not contained in 'R2( B). a similar argument is used to derive that 
+where 62 = 1 if 1 E 'R2(A + Iv) and OotheJWise. Combining (3.6) and (3.7) yields the result. 
+0 
+To illustrate the foregoing, we calculate the 2-rank of the SchHUli graph and the Chang graphs, 
+which can all be obtained from T(8) by switching. 
+Example 3.3 The triangular graph T(8) has been discussed in Chapter 2. Its vertex set is the 
+set of unordered pairs of {I, ... ,8} and two pairs are adjacent whenever they are not disjoint. T( 8) 
+has parameters ('V, k, A, J1) = (28,12,6,4), spectrum 121,47, (_2)20 and its 2-rank is 6 (Proposition 
+2.S). 
+The SchHUii graph r s is obtained from T(8) by isolating one vertex through switching and then 
+removing it. Its parameters are (v, k, A, J1) = (27,16,10,8). The spectrum of r sis 271,46, (-2?o. 
+It can be shown that the Schlafli graph is unique, Le. every graph with the same parameters is 
+isomotphic to it. Let As denote the adjacency matrix of r s. Consider the adjacency matrix As as 
+shown in the previous chapter and take the first row as the characteristic vector of the switching set 
+(Le. switching is performed with respect to the the set { {I, x}, {2, x} 13 ::; x ::; 8} and the vertex 
+{I, 2} is isolated). Then the first six rows of As can be written as: 
+( J, - I, I, 
+11 ) 
+o 
+. 
+o 
+We see that 16 is a submatrix of As. Hence Tz(As) ~ 6 and equality holds because of Lemma 3.11 
+and the fact that Tz(As) = 6. 
+The Chang graphs Ci, 1 ::; i ::; 3, are obtained from T(8) by switching with respect to 
+(Cd 
+{{I,2}, {3,4}, {S,6}, {7,8}}; 
+(Cz) 
+{{1,2},{2,3},{3,4},{4,S},{S,6},{6,7},{7,8},{1,8}}; 
+(C3) 
+{{1,2},{2,3},{1,3},{4,S},{S,6},{6,7},{7,8},{4,8}}. 
+The Chang graphs all have the same parameters as T(S). There are no other graphs with these 
+parameters. 
+It is easy to give for every i, 1 ::; i ::; 3. a submatrix .4~. of Ac. of 2-rank 8. The submatrices are 
+formed by the rows and columns labelled by { {I , 2}, ... , {I , 8} , { x , y} }, where {x, y} = {3, S} for 
+22 
+
+=== PAGE 23 ===
+Cl and {x, y} = {2,4} for Cz and C3. 
+A~, = C 
+J, ;. I, v~ ), A~, = ( 
+1 
+Js - Is 
+111 
+1 
+1 
+!!:l 
+1 
+1 
+1 
+1 
+Js - Is 
+1l~ 
+1 
+113 
+where 111 = (101000),!!:l = (01000) and 113 = (10000). Hence 8 :$ fz(Ac') :$ f2(As) + 2 = 8 for 
+1 :$ i :$ 3, where the right hand inequality follows from Lemma 3.10. Of course, the upper bound is 
+also obtained from Theorem 3.4. 
+Let fl denote the characteristic vector of the switching-set of T(8) and Ct. From Lemma 3.11 it 
+follows that 11$ 'Rz( As). Substituting this in (3.5) yields, together with the obtained results, 
+8 ~ dim('Rz( As) + (fl) + 1 = dim('Rz( ACl) + (f1,l) ~ 8, 
+which is only possible if (f1' 1) C 'Rz( ACl) and fl 1$ 'Rz( As). Examining A~l' we see that 
+LiE{Z,4,6,7,S}!{I,i} + !{3,S} == 1 (mod 2) must hold. Since 1 can be written as the sum of an even 
+number of rows of Ac1 , this vector is also contained in 'Rz( Jzs - ACI)' Hence fZ( Jzs - Ac1 ) = 
+TZ( Ac1 ) = 8. The same arguments can be used to derive that rz( Jzs - AC2} = rz( Jzs - AC3) = 8. 
+Lemma 3.8 yields that rz(Jz7 - As) = 7. Finally, since 17 is a submatrix of Jzs - As and 
+Irz(Jzs - As) - fz(As)\ :$ 1, we conclude that rz(Jzs - As) = 7. 
+23 
+
+=== PAGE 24 ===
+Chapter 4 
+On the p-rank of Paley graphs 
+Paley graphs are strongly regular graphs with half-case parameters. Hence, their eigenvalues are not 
+necessarily integral. In this chapter we study the p-rank of Ap + (71, where Ap denotes the adjacency 
+matrix of a Paley graph and CT E 7Z. In fact, Tp(Ap + CT1) will be completely determined for all 
+values of p and CT. However, we first discuss a method that enables us to calculate the p-rank of a 
+circulant in an easy way. This method is based upon results from algebraic coding theory, especially 
+from the theory of cyclic codes. 
+4.1 Circulants 
+Definition A matrix of the form 
+[ 
+·0 
+al 
+an-l 
+1 
+T 
+ao 
+Un-2 
+a2 
+ao 
+is called a circulant. 
+In this section it is shown how the p-rank of a circulant can be determined by regarding it as a 
+generator matrix of a cyclic code. 
+Definition A linear code C is called cyclic if for every codeword (co, c}, ... , cn-d the word 
+(Cn-I, Co, ... , Cn-2) is also in C. 
+The theory of cyclic codes is based upon the identification of codewords with a set of polynomials. 
+Let F be any finite field lFq• Denote by F[x] the set of polynomials in x with coefficients from F. 
+The ring Rn := F[x]/(xn - 1) consists of the residue classes of F[x] modulo xn - 1. As a system 
+of representatives we take the set of polynomials of F[ x 1 of degree less than n. Now the codeword 
+(co, CI, .•• , cn-I) is associated with the polynomial c( x) = 2:i;ol CjXi in Rn. Then a cyclic shift 
+corresponds to multiplying c( x) by x in Rn. 
+Definitions A principal ideal I of Rn is a linear subspace of Rn consisting of all multiples of a 
+fixed polynomialg(x). We call g( x) a generator polynomial of I. This is denoted by I = (g(x )). 
+24 
+
+=== PAGE 25 ===
+I can be considered as a cyclic code of length n. The next theorem proves that every cyclic code 
+is a principal ideal. 
+Theorem 4.1 ([l5.p.190D Let e be a cyclic code of length n. 
+(a) 
+There is a unique monic polynomial 9 (x) of minimal degree in e. 
+(b) g( x ) is a generator polynomial 0/ C. 
+(c) 
+g(x)isafactorofx'l1-l. 
+(d) 
+Any e(x) E e can be written uniquely as e(x) == f(x )g(x) in F[x], where f(x) E F[x] 
+has degree less than n - r, r == deg(g( x». The dimension ofe is n - r. 
+PROOF. (a) Suppose gl(X),92(X) E C are monic and of minimal degree. Because e is linear, 
+gl(X) - 92(X) is in e. But gl(X) - 92(x) has lower degree than gl(X) and g2(X). a contradiction, 
+unless gl(X) == 92(X). 
+(b) Suppose e(x) E e. Write c(x) == q(x)g(x) + rex) in Rn. where deg(r(x)) < r. Linearity yields 
+that rex) E e, so rex) == O. Therefore, c(x) E (g(x»). 
+(c) Write xn - 1 == h(x)g(x) + rex) in F[x], where deg(r(x)) < r. This implies that rex) == 
+- h( x )g( x} E C in Rn. a contradiction unless r( x) == O. 
+(d) From (b), it follows that any c(x) E C, deg(c(x» < n, can be wrinen as q(x)g(x) in Rn. Thus 
+c(x) 
+== 
+q(x)g(x)+ e(x)(xn -1) in F[xl, 
+== 
+(q(x)+e(x)h(x»g(x) 
+inF[x], 
+== 
+!(x)g(x) 
+in F[x], 
+where deg(! (x)) ::; n - r - 1. Thus the code consists of multiples of g( x ) by polynomials of degree 
+::; n -
+r - 1, evaluated in F[x]. There are n -
+r linearly independent multiples of g(x), namely 
+g(x), xg(x), ... , xn-r-1g(x). Thus the code has dimension n - r. 
+0 
+Let A be a circulant of size n with entries in F. Then A can be considered as a generator matrix of 
+a cyclic code Cover F. If (ao, at. . .. , an-I) is a row of A and a(x) :== L:i:J aixi, then e = (a(x )}. 
+Write gcd(x, y) for the greatest common divisor of x and y. According to Theorem 4.1, there is a 
+polynomial g( x) which is a factor of gcd(xn - 1, a( x» such that C == (g( x)}. We claim that g( x} is 
+actually equal to gcd(xn - 1, a(x ». 
+Lemma 4.2 ([15, p.199]) Let g( x) be afactor of xn - 1 and let e be the code generated by g( x). Let 
+p(x) E Rn be such that gcd(xn - 1 ,p(x» == 1. Then p(x )g(x) is also a generator polynomial/orC. 
+PROOF. It is evident that (p(x)g(x») ~ (g(x») holds. If h(x) == (xn -1)/g(x),thengcd(h(x),p(x») 
+= 1. Hence, there exist polynomials u( x) and v( x ) such that 
+1 
+== 
+u(x)p(x) + v(x)h(.1:) 
+in F[x], 
+g(x) 
+== 
+u(x)p(x)g(x)+v(x)(xn-l) inF[x], 
+== 
+u(x)p(x)g(x) 
+inRn • 
+Thus (g(x») ~ (p( x )g( x)). We conclude that C = (g( x)} = (p(x )g( x». 
+o 
+Continuing with the above notation, r F (A) is now easily determined from the foregoing. 
+Corollary 4.3 The F-rank of A equals n - deg(g(x », where g(x) == gcd( a( x), xn - 1). 
+25 
+
+=== PAGE 26 ===
+Example 4.1 Let An be the adjacency matrix of the n-gon: 
+Thus An is a circulant. Take a( x) = 1 + x2• 
+Over F 2 we have 
+1 0 
+o 1 
+o 0 
+{ 
+x2 + 1 if n is even 
+gcd( a( x), xn + 1) = 
+x + 1 
+if n is odd. 
+Thus r2(A2m) = 2(m - 1) and r2(A2m+d = 2m. 
+Over F p , p > 2, we have 
+{ 
+x2 + 1 if n=:O (mod 4) 
+gcd(a(x),xn -1) = 
+1 
+otherwise. 
+Hence rp(An) = n - 2 if n=:O (mod 4) and rp(An) = n otherwise. 
+4.2 Paley graphs 
+The Paley graphs are an infinite class of strongly regular graphs that satisfy J = g. hence their 
+eigenvalues are not necessarily integral. They are defined in the following way. Take F = F q , where 
+q == 1 (mod 4). The Paley graph P( q) has vertex set F, with two different vertices x and y joined if 
+and only if x - y is a nonzero square in F. Since -1 is a square in F, the adjacency is well defined. 
+P( q) is strongly regular with parameters 
+1 
+1 
+-I+vq 
+-l-vq 
+v=q,k==2(q-I),A+I=J.l==4"(q-l),r= 
+2 
+,s= 
+2,J==g=k. 
+Clearly, P( q ) has the same parameters as its complement P( q). 
+Lemma 4.4 P(q) and p(q) are isomorphic. 
+PROOF. Write P and P instead of P( q) and P( q). It is evident that two vertices x and y of P are 
+adjacent iff x - y is not a square. Now let a be a nonsquare in F and define the function <f; : F .........,. F 
+as <f;(x) := ax, x E F. Let <f;(P) be the graph with vertex set <f;(F) = F where two vertices x and y 
+are adjacent whenever <f;-I (x) '" <f;-I (y). Since ax - ay is not a square iff x - y is a nonzero square, 
+it follows that <f;(P) == P. Hence P ~ P. 
+0 
+We denote the adjacency matrix of P( q) by A( q). Combining Lemma 3.1 and Lemma 4.4 yields 
+Lemma 4.5 Foreveryprimep, Irp(A(q»- rp(A(q)+I)1 ~ 1. 
+Let us first consider the case where qis a prime (congruent to 1 (mod 4». Then F = {O, 1, ... , q-
+I}. If we number the rows and columns of A( q) from 0 to q - 1, then A( q) is a circulant (suppose 
+axy = 1, then x - y is a square, thus (x + 1) - (y + 1) is a square, hence a(x+l)modv,(y+l)modv = 1). 
+Thus the p-rank of A( q) can be determined for any prime p by means of Corollary 4.3. 
+26 
+
+=== PAGE 27 ===
+However, let us examine first for which primes p the detennination of T p( A( q» might be nontriv· 
+ial. Since det(A(q» = !(q - 1 )(1(q - 1 »(q-l)/2 # 0, Lemma 2.6 can be applied. which yields 
+(i) 
+ifp l{q - 1), then Tp(A(q)) = q; 
+(ii) 
+if411 (q - 1), then T2{A(q» = q - 1. 
+Hence, the calculation of Tp( A( q» by application of Corollary 4.3 can be restricted to those primes p 
+that divide 9. The next table shows the values of Tp(A(q» for q < 100 and p I~: 
+q 
+p 
+Tp(A(q» 
+q 
+p 
+Tp(A(q» 
+13 
+3 
+6 
+53 
+13 
+26 
+17 
+2 
+8 
+61 
+3,5 
+30 
+29 
+7 
+14 
+73 
+2,3 
+36 
+37 
+3 
+18 
+89 
+2,11 
+44 
+41 
+2,5 
+20 
+97 
+2,3 
+48 
+The values of rp(A(q» in the table suggest that rp(A(q» = !(q - 1) for p 19. It will be proven 
+that this holds indeed. 
+In the introduction of this chapter we claimed that for all values of p and (I E LZ the ~rank of 
+A( q) + (I I could be completely detennined. The next theorem shows that for most combinations of 
+p and (I this can be attained by applying simple arguments from linear algebra. The remaining cases 
+are dealt with in Theorem 4.9. 
+Theorem 4.6 Let q be a prime power, q == 1 (mod 4). Denote by A the adjacency matrix of the Paley 
+graph P( q). Then the following holds: 
+(a) if (12 - (I + {t is not divisible by p, then 
+r p( A + (I I) = { qq - 1 if p I (k + (I) 
+otherwise; 
+(b) if q == 1 (modp), then rp(A) = k and rp(A + I) 
+k + 1; 
+(c) if q is a square modulo p, q ~ 1 (modp), then rp(A + (I} I) = rp(A + (121) = ~(q + 1), 
+where (I}, (12 E F p satisfy at + a2 == 1 (modp) and ata2 == -J,L (modp); 
+PROOF. Let a E LZ. The matrix A + (II has eigenvalues k + a, a + 4-
+1 and (I - ~ 
+and 
+detenninant (k + (I)(a2 - (I - {t)(q-l)/2. Assume thatdet(A + (II) # O. Otherwise. replace A + (II 
+by A + (a + plIo 
+Qearly. if det(A + (II) is not divisible by p, then Tp(A + (II) = q. Furthennore. if pi (k + (I) 
+and p 1«(12 - (I - {t), then Tp(A + (II) = q - 1. This is obvious if p II (Ie + (I). If Y I (k + (I), then 
+consider the matrix A + «(I + p )1. Since p II (k + (I + p) and p 1 ( (p + (I? - (p + (I) - {t). we get 
+Tp(A + (II) = Tp(A + «(I + p)I) = q - 1. Hence. assertion (a) is proven. 
+Now we tum to the case where (12 - (I - {t == 0 (mod p). Let us first detennine the (I E F p that 
+satisfy (12 - (I - {t == 0 (mod p). 
+If p = 2, then there is no solution for (I if J,L is odd. If {t is even, then both 0 and 1 satisfy the 
+equation. 
+If p > 2, then we must solve 
+a2 - (I - {t 
+_ o (modp), 
+(2(1 - 1)2 
+_ 
+4Jt + 1 == q(modp). 
+(4.1) 
+27 
+
+=== PAGE 28 ===
+We distinguish three cases: 
+(1) 
+if q is not a square modulo p, then (4.1) has no solutions; 
+(2) 
+if q == 0 (modp). the only solution is 0" == !(p + 1 )(modp); 
+(3) 
+if q is a nonzero square modulo p, then (4.1) has two different solutions 
+0"),0"2 E Fp satisfying 0"1 + 0"2 == 1 (modp) and (710"2 == -p (modp). 
+The statements (b) and (c) deal with the case oftwo different solutions 0"1 and 0"2 for (4.1). From 
+(A + O"Jl)(A + 0"21) 
+::;; 
+A2 + (0"1 + 0"2)A + 0"10"21 
+and Lemma 3.2, it follows that 
+= (p + 0"10"2)1 + (0"1 + 0"2 - I)A + pJ 
+_ 
+pJ (modp), 
+rp(A + O"tl) + rp(A + 0"2I) :::;; q + rp(pJ). 
+Suppose p Ill. Then 0"1 == 0 (modp), (72 == 1 (modp) and 
+q::;; rp(I) ::; rp(A + 1) + rp( -A) :::;; q. 
+(4.2) 
+(4.3) 
+From p III it follows that p I v, but p A (k + 1). Thus by Lemma 3.8. we find 1 E np( A + 1) and 
+1 f/. Rp( A). Together with Lemma 4.5 this yields 
+rp(A + 1) ::;; rp(J - A - 1) + 1 ::;; rp(A) + 1. 
+Substituting this in (4.3) gives rp( A) ::;; ~(q - 1) and Tp( A + I) ::;; h q + 1), which proves (b). 
+Now suppose p All, while q is still a nonzero square (mod p). Then we have 
+(4.2) 
+q::;; rp(I) :::;; rp(A + (71 I) + rp(-A - 0"21) :::;; q + 1. 
+The left hand inequality holds, because «71 - 0"2)2 == q ¢. 0 (mod p). 
+The proof of (c) is completed by showing that rp(A + O"i1) 2: ~(q + 1) for i = 1,2. Let 
+q == p2 (mod p), p E Fr Suppose p I( k + 0") for 0" ::;; 0"1,0"2 and recall that 0" satisfies (4.1). Then 
+k + 0" == !(q - 1) + 2(1 ± p) == O(modp), which implies p2 ± p == O(modp). In that case, 
+q == 0 (modp) or q == 1 (modp), a contradiction. Thus p l(k + 0"). 
+WJ.o.g. we assume that det( A + 0" I) f:. 0 for 0" ::;; 0"1,0"2. Now Lemma 2.6 yields that if 
+p II (0"2 - 0" -Il). then rp(A + 0"1) 2: i(q+ 1). Ifrl(0"2 - 0" - p), then p II «p+ 0")2 - (p+ 0") - Il), 
+since20"-1 == ±p(modp)and P¢.O (modp). Hence again, we get rp(A+O"1) ::;; rp(A+(p+O")I) 2: 
+i(q+l}. 
+0 
+From the proof of this theorem it follows that there is one case left, namely, when there is exactly 
+one solution for (4.1). Then p and (7 satisfy q == 0 (modp) and (7 == !(p + 1 )(modp). Applying the 
+same arguments as in the proof of the above theorem does not yield good bounds. From 
+(A + ~(P + 1 )I)2 
+::;; 
+~p(pe-l + p + 2)1 + pA + pJ 
+-
+IlJ (modp), 
+we obtain the upper bound 
+28 
+
+=== PAGE 29 ===
+Funhennore. det(A + ~I) = !p!(q+l)(pe-l + 1 )(i(p - pe-l )(q-l)/2. Hence only for e = 1 a 
+nontrivial lower bound is yielded by Lemma 2.6. 
+We computed rp(A(pe) + E.:flI) for several small values of p and e. The values obtained in 
+this way suggested that rp(A(pe) + ~I) = (~y~. This has been proven by Brouwer (personal 
+communication). The result is obtained by applying the following theorem to the matrix 2A(pe)+ I - J. 
+Theorem 4.7 Let F be afield and let A and B be two subsets of F. Set m := IAI and n := IBI. Let 
+M be an m X n matrix with the rows labelled by the elements of A and the columns by the elements 
+of B. Define the entries of M by 
+Mab := pea, b), 
+where p( x, y) : = Lf=o Li=o Cij xi yj for d and e satisying d < m and e < n. Define the subspace 
+5 S;;; Fly] by 
+e 
+5:= (2:Cijyj 10 ~ i $ d). 
+j=O 
+Then rF(M) = dimeS). 
+PROOF. Set V := FB, that is. V is the vectorspace consisting of all maps from B into F. Define an 
+evaluation map E : F[y] ~ 
+V by 
+E(f(y))(b):= feb), 
+for all b E B. 
+In fact. Ef is the restriction of f to B (notation: fiB). Define R := 'RF(M). We claim that 5::' R, 
+from which the result follows. In order to prove this. we show that 
+(1) Eis is injective; 
+(2) 
+E(5) = R. 
+Indeed, combining (1) and (2) yields S ~ E( 5) = R as claimed. 
+We first show that the kernel of Eis contains the all-zero vector only. Let f E 5. Suppose 
+f( b) = 0 for every b E B. Then f has n zeros. However. f is a polynomial of degree at most e. Since 
+we assumed that n > e, this implies that f( b) can not be zero for every b E B unless the coefficients 
+of f all equal zero. This proves (1). 
+Funhennore.let 1:.a be a row of M. The yth entry is p( a, y) = Li at Lj CijyJ, which is a linear 
+combination of elements of 5. Thus R S;;; E(S). 
+We are left with the proof of E(5) S;;; R, which is equivalent to Rl. S;;; E(S)l.. Let 1:. E Rl.. 
+Denote its coordinate rb by r( b). Then 1:. satisfies for every a E A 
+L r(b)p(a,b) = O. 
+beB 
+Thus 
+i,j,/) 
+for a in A. Regard the left hand expression as a polynomial in a, then 
+d Lxi L r(b)cijtr1 = 0 
+1=0 
+j,b 
+for x E A. Since d < m, this polynomial can not have m zeros unless Lj.b r( b )Cijb1 = 0 for every 
+i, 0 ~ i ~ e. But. in that case, r. is contained in E(5)1.. Hence Rl. S;;; E(S)l., which completes the 
+29 
+
+=== PAGE 30 ===
+proof of the theorem. 
+o 
+We shall apply this theorem to the matrix Q defined in the following way. Take F = F q' where q 
+is the power of an odd plime p, say q = pe. We introduce here the Legendre symbol X that is defined 
+for x E Fq by 
+x(x):= { 
+~ 
+-1 
+if x is a nonzero square in F q 
+if x = 0 
+otherwise. 
+Oearly, X( x) = x(q-I)/2. Let Q be the q x q matrix with rows and columns indexed by the elements 
+of Fq and entries Qxy := X(y - x). Then 
+Qxy=(y_x)(q-l)/2= L (_I)i T 
+x i y(-i+(q-l)/2). 
+(q-l)/2 
+(-I ) 
+i=O 
+Z 
+Q is called a lacobsthal matrix. It clearly satisfies the conditions of Theorem 4.7. In this case, the set 
+S takes the following form: 
+We obviously have 
+dim(S) = I{i I ( T ) ¢ O(modp), O:S i:S ~(q - I)}I· 
+In order to compute this number. we need the following well-known result from number theory. 
+Theorem 4.8 (Lucas) Let the p-ary expansions of I and k be I = Li lipi and k = Li kipi, where 
+o :S Ii, ki :S p - 1. Then 
+For a proof of this theorem we refer to Van Lint [14, p.47J. 
+Recalling that q = pe. one easily verifies that 
+1 
+e-l 1 
+. 
+-(q -1) = L -(p - l)pt. 
+2 
+i=O 2 
+Furthermore. write i = Lj:6 ijpJ. For every ij there are ~ 
+choices such that ( T ) 
+# O. Thus, 
+( 
+q-l ) 
+by Theorem 4.8. there are (E:f r possible values for i such that T 
+# O. By Theorem 4.7. 
+Tq( Q) = dim( S), hence 
+30 
+
+=== PAGE 31 ===
+Obviously, if q == 1 (mod4) and A denotes the adjacency matrix of the Paley graph P(q), then 
+Q = 2A + 1 - J. From 
+Q2 = q1 - J == -J (modp) and (2A + 1)2 = q1 + (q - I)J == -J (modp), 
+we obtain that both 'R.p(2A + 1) and 'R.p(2A + 1 - J) contain the all-one vector, hence r p( A + 21) = 
+Tp(Q). Since the entries of Q are elements of both Fp and F q, we have Tp(Q) = Tq(Q). Together 
+with the obvious fact that T p( A + Et! 1) = T p(2A + 1), this proves the following theorem. 
+Theorem 4.9 Let Abe the adjacency matrix o!the Paley graph P(q).lfq = pe, then fp(A+91) = 
+(9ye. 
+Hence for every Paley graph P( q) with adjacency matrix A and for every combination of p and 
+(7 E 7L, the p-rank of A + (J I is given by Theorem 4.6 or Theorem 4.9. 
+31 
+
+=== PAGE 32 ===
+Chapter 5 
+Bounds from character theory 
+Character theory provides a powerful tool for proving theorems on finite groups. By applying results 
+from this theory to an automorphism group of a srg r, a set of possible values for the p-rank of A can 
+be obtained. Of course, such a set will only be of help if it is small. 
+The aim of the first two sections is to introduce definitions and results from representation and 
+character theory. We do not give many details and usually omit proofs; for an extensive treatment 
+we refer to Isaacs [11]. The application of character theory to our problem is discussed in Section 3. 
+Finally. a class of graphs is presented for which it is expected that a small set of possible values for 
+rp(A) can be derived. 
+5.1 Group representations and modules 
+Throughout this chapter. G will denote a finite group with identity €. Furthermore, let F be a field. 
+We denote by GL( n, F) the group of all nonsingularelements of Fnxn. 
+Definition An F-represemation of G of degree n is a homomorphism ~ : G 1---+ G L( n, F). 
+Example 5.1 Let G act on a finite set n. The permutation representation n of Gover F is de-
+fined in the following way: label the rows and columns of n(g), 9 E G. by the elements of 0 and 
+set 
+(n() 
+,_ {I if WIg = Wz 
+9 
+""1.Wl·-
+0 
+otherwise. 
+Thus n maps each 9 E G to the appropriate permutation matrix. If we take n = G, then n is called 
+the regular F-representation of G. 
+Denote by F[G] the set of all formal sums LgEG agg, ag E F. If addition is performed compo-
+nentwise and multiplication is defined as 
+(L aglgJ)( L agzg2):= L L (ag1 a91 )(gtg2). 
+glEG 
+gzEG 
+gIEG91EG 
+then F[G] can be considered as a ring with identity €. It is easy to see that F[G] can also be con-
+sidered as a vectorspace over F of dimension IGI. Since (c:r)y = c(xy) = x(cy) for all c E F and 
+x, y E F[G], F[G] is an F-algebra. 
+32 
+
+=== PAGE 33 ===
+Definition Let V be a finite dimensional vectorspace over F. Suppose for every £ E V and x E F[ G] 
+that a unique £X E V is defined. Assume for all x, y E F[ G], E, w E V and c E F that 
+(a) 
+(!:! + lQ)x = EX + lQX; 
+(b) 
+E(X + y) =!:!X + EY; 
+(c) 
+(!:!x)y = !:!{xy); 
+(d) 
+(CE)X = C(EX) = E( ex); 
+(e) 
+E€ = E· 
+Then V is called an F[G]-module. 
+There is a one-to-one correspondence between F-representations of G of degree n and F[G]-
+modules of dimension n. Let 4> be a representation of degree n and denote by V the n-dimensional 
+vectorspace over F. Then 
+!!(2: agg):= 2: ag(!:!4>(g» E V 
+g€G 
+g€G 
+holds for every Lg€G agg E F[G]. It is easily verified that V is an F[G]-module. 
+Conversely, if V is an F[G)-module, choose an F-basis Eh1!2, ... ,!:!n for V. Let 4>(g) be the 
+element of Fnxn satisfying 
+( 
+!:!l ) 
+~n 
+4>(g) = 
+( 
+!:!~g ) . 
+!:!ng 
+Then 4> is an F-representation of G. Note that the representation depends on the basis. 
+Usually we shall explain ideas from the representation point of view. However, the foregoing 
+implies that results for representations can be easily expressed in terms of modules (and vice versa). 
+In the rest of this section we write 'modules' instead of ' F[ G)-modules' and 'representations' instead 
+of' F-representations'. 
+Two representations 4> and 'f' are said to be similar if there exists a nonsingular matrix P such 
+that, for every 9 E G, 
+If 4> and 'f' correspond to modules V and W, respectively. then the representations are similar iff V 
+and IV are isomorphic, i.e. there exists an invertible linear transformation 0 : V 1----+ W satisfying 
+O(!:!x) = O(!:!)x for all!:! E V and x E F[G]. 
+Let V be a module. A submodule U of V is a linear subspace of V that satisfies 1fX E U for every 
+M E U and x E F[G]. V is called reducible if V has a nontrivial submodule (that is, other than {Q} or 
+V). Otherwise, we say that V is irreducible. V is completely reducible if it can be written as a direct 
+sum of irreducible submodules. 
+Theorem 5.1 ([ 11, p.4]) Let G be a finite group and F a field whose characteristic does not divide 
+IGI. Then every F[G]-module is completely reducible. 
+This theorem is generally known as Maschke's Theorem. 
+It is evident that there exists a composition series for a module 11, that is, a series of submodules 
+of the form 
+33 
+
+=== PAGE 34 ===
+such that for each i the factor module Vi-I /Vi is a nonzero irreducible module. An irreducible module 
+U is called an irreducible constituent of V of multiplicity m if U ~ Vi-I/Vi for precisely m values of 
+i. The Jordan-Holder Theorem ([20. p.43D asserts that the set of composition factors of V does not 
+depend on the choice of composition series. 
+These concepts can be translated into the language of representations as follows. Let U be a 
+proper nonzero submodule of a module V. Choose a basis bu for U and extend it to a basis for V. By 
+a suitable numbering of the basis vectors. the representation Cl> associated with V takes the following 
+form: 
+Cl>(g) -
+(Cl>2(9) 
+9(9») 
+9 E G 
+-
+0 
+Cl>I (g )' 
+. 
+(5.1 ) 
+Here Cl>I is the representation corresponding to U with respect to bu and Cl>2 is a representation 
+corresponding to V / U. As far as (ir)reduciblility is concerned. the same terminology is used for 
+representations as for the associated modules. 
+If there exists a submodule W C V in the above situation so that V = U E& W. then. for an 
+appropriate choice of basis of V. Cl> -:: diag(Cl>J, Cl>;). where Cl>; is the representation corresponding 
+to W. Hence. if Cl> is a completely reducible representation. then Cl> is similar to a representation in 
+block diagonal form. where each block is an irreducible representation. 
+We see that the irreducible representations play an important rOle in representation theory. As a 
+matter of fact, they can be considered as the building blocks for all representations. It can be proven 
+(see [11. p.14 7]) that there exist only finitely many irreducible F -representations up to similarity. 
+Finally, let Cl> be an F-representation of G and let t be a field containing F. Then <l> can also be 
+considered as at-representation. It is entirely possible that <l> is irreducible over F. but reducible as an 
+P -representation. If Cl> is irreducible for every field t 2 F. then Cl> is said to be absolutely irreducible. 
+Definition The field F is called a splitting field for G if every irreducible F-representation of G 
+is absolutely irreducible. 
+5.2 Character theory 
+5.2.1 Generalities 
+For most applications of representations, it is not necessary. to distinguish between similar repre-
+sentations. Therefore. it would be useful to have a function defined on the set of representations 
+that distinguishes between nonsimilar irreducible representations. but has the same value for similar 
+representations. A character is such a function. 
+Definition Let Cl> be an F-representation of G. Then the F-character cP of G afforded by Cl> is 
+the function given by cP(g) = tr(Cl>(g». 9 E G. 
+If 1I is an F[G]-module corresponding to the F-representation <l> of G and <l> affords cPt then we 
+also say that 1I affords cPo Let us first show that characters do indeed satisfy the required properties. 
+Proposition 5.2 Let <l> and'll be F-representations that afford the characters </> and '1/.', respectively. 
+If <l> and'll are similar, then ¢ = '1/.'. 
+34 
+
+=== PAGE 35 ===
+PROOF. If 4> and -¥ are similar representations, then p-l4>(g)P == -¥(g) for some nonsingularmatrix 
+P. This shows that 1/1(g) = tr{'I'(g) = tr(p- l 4>(g)P) = tr(4)(g)) = <I>(g) for every 9 E G. Hence 
+<I>==~ 
+0 
+Theorem 5.3 ([ 11, p.155]) Let F be any field. Then the characters afforded by nonsimilar irreducible 
+F -representations of G are nonzero, distinct and linearly independent. 
+Let us give some examples. In fact, these are the only characters that we shall deal with. 
+Example 5.2 The F-character afforded by the trivial representation 4>(g) == 1, for every 9 E G, 
+is denoted by 10 and is called the principal F-character. Obviously. 10(g) == 1 for all 9 E G. 
+Example 5.3 Consider the permutation representation n defined in Example 5.1. If n is consid-
+ered as a representation over a field of characteristic 0, then the permutation character 11" afforded by 
+nis 
+lI"(g)==I{wEOlwg=w}l, gEG. 
+If 0 == G, then the regular character p satisfies 
+peg) _ { IGI 
+-
+0 
+ifg == e 
+otherwise. 
+In the following proposition, some elementary properties of characters are proven: 
+Proposition 5.4 Let 4> be an F-representation that affords the character <1>. Denote by F the F[G]-
+module corresponding to 4>. 
+(a) 
+The set of characters is closed under addition. 
+(b) 
+If U is a proper nonzero submodule of ll, then II affords the character <1>1 + <1>2. where 
+<1>1 and <1>2 denote the character afforded by U and V / U • respectively. 
+(c) 
+Characters are constant on the conjugate classes of the group. 
+PROOF. (a) Define for 9 E G 
+_ 
+( 4>(g) 
+0 
+) 
+.:.(g) := 
+0 
+-¥(g) 
+. 
+Obviously.::: is also an F-representation of G and affords the character e = <I> + "p. 
+(b) This follows from (5.1). 
+(c) <1>( h -1 gh) == tr(4)( h -1 gh» = tr( 4>( h -1 )4>(g )4>( h» = tr(4)( h -1 )4>( h )4>(g» = tr(4)(g)) = <I>{g) 
+for all g, hE G. 
+0 
+By the exponent of G we mean the least positive integer d such that gd = e for all 9 E G. 
+Naturally, d IIGI. 
+Lemma 5.5 Let 4> be an F -representation of G of degree n affording the character <p and let 9 E G. 
+Let d denote the exponent of G. Suppose that the polynomial xd - 1 splits into linear factors over F. 
+Then 4>(g) is similar to a diagonal matrix diag( €1 , ••• , €n), where the €i satisfy €1 == 1, 1 ~ i ~ n. 
+PROOF. For each 9 E G we have 4>(g)d == 4>(gd) == In. Thus the eigenvalues €i of 4>(g) satisfy 
+£1 == L By assumption. the €j are elements of F, hence 4>(g) is diagonalizable over F. This proves 
+35 
+
+=== PAGE 36 ===
+the lemma. 
+o 
+Thus. if F satisfies the condition of the above lemma. then 4>(g) is the sum of the eigenvalues of 
+ct>(g ). counting multiplicities. We also deduce from this lemma that an algebraically closed field is a 
+splitting field for every group. 
+5.2.2 Ordinary characters 
+This section deals with characters over C, the so-called ordinary characters. 
+Lemma 5.6 ([11.p.16]) The number of similarity classes of irreducible representations equals the 
+number of conjugacy classes of G. 
+Theorem 5.3 yields that this latter number is also the number of distinct characters afforded by 
+irreducible representations. (In this section 'character' always means 'C-character' and the same 
+holds for 'representation'.) These characters are called irreducible and the set of all irreducible 
+(['-characters of G is denoted by Irr(G). 
+Since C has characteristic 0, it follows from Maschke's Theorem that every C-representation ct> is 
+completely reducible. Thus for the character 4> afforded by ct>, we have 4> = I:XiElrr(G) niXi, where 
+nj denotes the multiplicity of the irreducible representation that affords Xi as constituent of ct>. The 
+Xi with nj > 0 are called the irreducible constituents of <p. 
+For later use we introduce the following concept: 
+Definition Let <P and 1/J be ([,-characters of G. Then 
+1 ~ 
+-
+[¢, 1/J]:= TG1 L.... 4>(g)¢(g) 
+gEG 
+is called the inner product of 4> and '¢. 
+We state without proof ([ 11. p.21 J) that 
+where Oij denotes the Kronecker delta. Hence. if 4> = LXElrr(G) niXi is a character of G. then 
+[¢, ¢] = L n;. 
+(5.2) 
+The degree of an ordinary character is defined as the degree of the corresponding representation. 
+Since ct>( e) = Ideg(lfJ) for every representation ct>. we can also say that the degree of a character 4> is 
+equal to ¢( e ). 
+Definition An algebraic integer is a complex number which is a root of a monic polynomial with 
+integer coefficients. 
+The set of all algebraic integers forms a ring that we shall denote by R*. For an ordinary char-
+acter <P. we have ¢(g) E R* for all 9 E G. This holds because of Lemma 5.5 and the fact that C is 
+36 
+
+=== PAGE 37 ===
+algebraically closed. 
+For a particular group G, the irreducible characters are usually presented in a character table as 
+shown below. The rows are indexed by the irreducible characters; the columns correspond to the 
+conjugacy classes of G. A class is denoted by the order of its elements. Oasses of elements of the 
+same order are distinguished by subscripts. 
+In [6], the so-called Atlas, the character tables of many finite groups are given. 
+Example 5.4(a) The character table of As. the alternating group of degree 5. has the following 
+form: 
+Oass: 
+1 
+2 
+3 
+51 
+52 
+Xl : 
+1 
+1 
+1 
+1 
+1 
+X2 : 
+4 
+0 
+1 -1 -1 
+X3 : 
+5 
+1 -1 
+0 
+0 
+X4 : 
+3 -1 
+0 
+01 
+°2 
+xs: 
+3 -1 
+0 
+02 
+01 
+where 01 = ¥, 02 = 1-20 . 
+5.2.3 Modular characters 
+The theory of modular characters is concerned with the connections between ordinary representations 
+and representations over a field of characteristic p. We shall need only a few results from this theory. 
+For proofs and more details the reader is referred to Chapter 15 of [11]. 
+Throughout this section we fix a prime p. The (p-)modular characters are defined in a particular 
+field F" that is constructed in the following way. Choose a maximal ideal I 2 pR* of R'" and 
+set F* := R* /1. Let (J : R* ~ 
+F* be defined as 8(r) := rI, r E R*. Furthermore. let 
+U:= {f E £'1 fn = 1 for some n E 7Z withp In}. Oearly,U ~ n*. 
+The field F* has the following properties: 
+(a) 
+F* has characteristic p; 
+(b) 
+F* is algebraically closed; 
+(c) 
+8: U.....- F'" \ {OJ is an isomorphism of multiplicative groups. 
+Definition If p divides the order of 9 E G, then 9 is called p-singular. Otherwise, 9 is said to be 
+p-regular. 
+Let 4> be an P* -representation of G of degree n. Denote by S the set of p-regular elements of G. 
+We define a function "1 : S ~ 
+R* in the following way. Let ¢> denote the P* -character afforded by ct> 
+and let 9 E S. From Property (b) and Lemma 5.5 it follows that ¢>(g) = Ei:l fi, where the fj E F* 
+denote the eigenvalues of 4>(g), counting multiplicities. Property (c) says that for each i, 1 $ i $ n, 
+there exists a unique Uj E U such that 8( Uj) = fj. Define "1(g) := Ei=1 Uj. 
+Definition The function "1 is called the modular character or Brauer character of G afforded by 
+4>. 
+Strictly speaking, it is not correct to define "1 as the modular character afforded by 4>, since the 
+maximal ideal I is not uniquely determined. To avoid this problem, we always assume that a particular 
+37 
+
+=== PAGE 38 ===
+maximal ideal I has been fixed. 
+We notice that the modular characters are only defined on the p-regular elements of G. It can be 
+proven that this is sufficient to reconstruct the full F*-character afforded by cl>. 
+Similar P* -representations afford equal modular characters and modular characters are constant 
+on conjugacy classes. Both statements follow from the fact that similar representations have the same 
+eigenvalues. 
+Let cl>1, ••• ,cl>m be a set of representatives for the similarity classes ofirreducible P* -representations 
+of G and let T/i be the modular character afforded by cl>i. The T/i are called the irreducible modular 
+characters and we write IM( G) = {T/l, ••• , T/m}. 
+Theorem S.7 IIM( G) I equals the number of conjugacy classes of p-regular elements of G. Further-
+more, the irreducible modular characters are nonzero, distinct and linearly independent. 
+Modular characters connect Irr( G) and the representations of characteristic p as is shown in the 
+next theorem. 
+Theorem S.8 Let <p be an ordinary character of G and let 4> denote the restriction of <p to S, the set 
+of p-regular elements of G. Then 4> is a modular character of G. 
+Thus 4> = LT/iEIM(G) niT/i, for some nonnegative integers ni which are not all zero. The next 
+theorem shows that the construction of p-modular character tables for G can be restricted to those 
+primes p that are a divisor of IGI. 
+Theorem S.9 Suppose P fiGI. Then IM(G) = Irr(G). 
+The Modular Atlas ([ 18]) provides for many finite groups G the tables of irreducible p-modular 
+characters. As an example, the tables of p-modular characters of As for p = 2, 3, 5 are presented. 
+We establish the notation that the irreducible p-modular characters are denoted by xf. 
+Example S.4(b) G = As 
+p = 2: 
+a: 
+1 
+3 
+51 
+52 
+P = 3: 
+a: 
+1 
+2 
+51 
+52 
+Xi: 
+1 
+1 
+1 
+1 
+x3 • 
+1 . 
+1 
+1 
+1 
+1 
+X2 . 
+2 . 
+2 -1 
+f31 
+132 
+X3 • 
+2 . 
+3 -1 -f31 
+-132 
+X2 . 
+3 . 
+2 -1 
+132 
+f31 
+X3 . 
+3 . 
+3 -1 -132 -f31 
+X2 . 
+4 . 
+4 
+1 -1 -1 
+x3 . 
+4 • 
+4 
+0 
+-1 
+-1 
+P = 5: 
+a: 1 
+2 
+3 
+XS • 
+1 • 
+1 
+1 
+1 
+~: 3 -1 
+0 
+~: 5 
+1 -1 
+where f31 = -11'15, 132 = -1'2v'5. 
+In the following section we shall need the next lemma: 
+Lemma S.10 Let cl> be an F* -representation which affords the modular character T/. Then T/( e) = 
+deg(cl». 
+PROOF. Recall that cl>( e) = Ideg(/l». Since U and F* are isomorphic, we must have B( 1) = 1. Hence, 
+the conclusion holds. 
+0 
+Inspired by this lemma, we define the degree of a modular character T/ afforded by the F*-
+representation cl> in the same way as the degree of an ordinary character, i.e. deg( T/) : = deg( cl». 
+38 
+
+=== PAGE 39 ===
+5.3 
+Application to strongly regular graphs 
+Let us now explain how representation and character theory can be used to obtain more information on 
+the p-rank of the adjacency matrix A of a srg r. For notational convenience, we shall only consider 
+rp(A), but all results can be easily translated into results for the p-rank of A + ul, u E 7Z. 
+Let F be a field. Take for G an automorphism group of r. Then G acts as a permutation group 
+on the vertex set V of r. Denote by 4ll F the permutation representation of G acting on V regarded as 
+an F-representation. Consider also A as a matrix with entries in F. 
+Proposition 5.11 4ll F(9) commutes with A/or every 9 E G. 
+PROOF. This follows from 
+(411~(9)A411F(9))ij = (A)ig,jg = (A)ij 
+and the fact that 4ll~(g) = 4llFI (g). 
+This proposition yields 
+o 
+for every 9 E G. Hence 'R F( A) can be considered as a submodule of the F[ G)-module corresponding 
+to <1>F. 
+Let us first deal with the case F = C. Denote by 'R( A) the rowspace of A over C and by r( A) the 
+C-rank of A. For the C-representation of G acting on V we simply write 4ll. Finally, <1>(A) denotes 
+the C -representation corresponding to the submodule 'R(.4). 
+Let <I> and <1>( A) denote the characters afforded by <1> and <l>( A), respectively. Because r( A) == 
+v == deg( <1», we have </> == </>( A). In C the minimal idempotents Ei, 0 ~ i ~ 2, can be expressed as 
+linear combinations of I, A and J. So from the above remark it follows that 'R( Ei) is a submodule 
+of 'R(A), 0 ~ i ~ 2. In fact, 
+hence <1> can be written as 
+<1> == diag(<1>o, <1>1, <1>2), 
+where <1>i :== <1>(Ei). Denote by <Pi the character afforded by <1>i and recall that vEo == J. Then 
+<I> == tG + </>1 + </>2, with deg( <pd = f and deg( </>2) == g. 
+(5.3) 
+We now tum to fields of characteristic p. Let us first introduce some notation. Since p is not 
+fixed, we write F; and IMp( G) instead of F* and IM( G). Furthermore, <1>; denotes the permutation 
+representation of G considered as an F;-representation and <1>;(A) the representation associated with 
+the submodule 'R;( A), the rowspace of A over F;. The notation 'R;( A) should not be confused with 
+'Rp( A), which as usual denotes the rowspace of A over F p. Finally, if <I> is an ordinary character, 
+then ;p denotes the restriction of <I> to the p-regular elements of G. Theorem 5.8 asserts that;P is a 
+p-modular character. 
+A first observation is that the p-rank of A equals its rank over F;. Together with Lemma 5.10, 
+this yields 
+rp(A) = dim 'R;(A) == deg(<f>P(A»), 
+(5.4) 
+39 
+
+=== PAGE 40 ===
+where ¢>P(A) denotes the p-modular character afforded by <I>;(A). Now what can we say about 
+¢>P(A)? 
+Let ¢>P denotes the p-modular character afforded by <1>;. Since 4>(g) is equal to the number of 
+vertices fixed under the action of g. it follows from the next lemma that the character ¢>P can be 
+computed in a rather easy way. 
+Lemma 5.12 Let 4? and ¢>P be as defined above. Then 4? = ¢>p. 
+PROOF. Let 9 be a p-regular element of G. By definition. 4?(g) = 4>(g) = tr(<I>(g) = 2:i=1 fi. 
+where the f, denote the eigenvalues of <I>(g ). counting multiplicities. Furthermore. let () be as defined 
+in Section 5.2.3. Then ¢>P(g) = 2:i=lO-1(1li). where the Tli denote the (F;-)eigenvalues of <I>;(g). 
+But <I>;(g) = <I>(g) for every element 9 of G. so £, = (}-1 (Tli) for all i. which proves the statement. 0 
+Since n;( A) is a submodule of the module associated with <1>;. we can write ¢>P as 
+<J>1' = <J>1' ( A) + 4>f 
+for some p-modular character 4>f. Hence a set of possible values for the p-rank of A is 
+{ L nixf(e) 10$ ni $ ni, 1 $ i $ IIMp(G)I}, 
+xfeIMp(G) 
+where ni denotes the multiplicity of xf as constituent of ¢>p. For the case that we are interested in, 
+namely when p divides r and s, this set can be reduced to 
+{ L nixf(e) 10$ ni $ ni, 1 $ i $ IIMp(G)I, L nixf(e) $ min(j,g) + I}, 
+xfeIMp(G) 
+where the upper bound of Theorem 3.4 is used. 
+From now on it is assumed that p I r and pis. Under this assumption, a set smaller then the one 
+above can be obtained by considering the minimal idempotents Ei, 0 $ i $ 2. 
+Define Li := h::l.!: E n{Ei) n ~V} and Lf:= {.!:(modp)l.!: ELi}, 0 $ i $ 2. 
+Proposition 5.13 Lf is a vectorspace over F l' of dimension r( Ed. 
+PROOF. Set p : = r( Ei). Let {.!:l' .. ',.!:p} be a ~-basis of L,. Then {.!:i (mod p) 11 $ i $ p} is a 
+basis for Lf. If!..:= 2:f=1 (Xi~i E P~v. then il. ELi. thus il. = 2:f=l f3i~i for some Pi E ~. This 
+implies that p I (Xi for all i. From this it follows that dime Lf) = p. 
+0 
+Let Ef be a basis for Lf. Consider L~ = (I), Lf and L~ as p-ary linear codes. We recall from 
+Chapter 1 that the minimal idempotents satisfy 
+Thus (.!:],~) == o (modp) for every .!:t ELf and ~ E Lr This implies L~ C (Lf).L and 1 E (Lf).L. 
+Since dim( Lf).L = v - dim( Lf) = 9 + 1 and 9 $ dim( L~ + (l}) $ 9 + 1, it follows that 
+dim(Lf).L /(L~ + (1))) $ 1, 
+(5.5) 
+40 
+
+=== PAGE 41 ===
+with equality iff 1 E L~. From AEI = rEI and the assumption that r == 0 (mod p). we get 
+1<.p{A) C (L)).L. 
+Combining (5.S) and (5.6) yields 
+dim(1<.p(A)j(1<.p(A) n L~» $; 1. 
+By similar arguments we obtain 
+(5.6) 
+(5.7) 
+(5.8) 
+So far everything has been considered over F p instead of F;. It is obvious that the above relations 
+still hold when 1<.p( A), Lf and L~ are substituted by 1<.;( A), 1<.;( En and 1<.;( En. respectively. The 
+R; ( Ef), 0 $; i $; 2. are also submodules of the module corresponding to Cl>;. Oearly. ¢'P (EG) = 1 G. 
+where IG is considered as a p-modularcharacter. Write ¢'P(En and ¢'P(En as 
+¢'P(En = L 11iXf and ¢l'(Ei) = L 12iXf· 
+xfeIMp(G) 
+xfeIMp(G) 
+From (5.7) and (5.8) with R;(A), R;(Ef) and R;(En instead of Rp(A), Lf and L~, respectively. 
+and the above expressions, we obtain that ¢'P( A) is an element of the set 
+{6xg + L lixf 16 E {O, I}, xg(e) = 1,0:; Ii $; min(rli,,2i), 1 :; i:; IIMpl}. 
+(5.9) 
+xfeIMp(G) 
+This leads to the following theorem: 
+Theorem 5.14 Let r be a srg with eigenvalues k, rand s and let G be a group of automorphisms 
+ofr. Denote by ¢ the ordinary character afforded /:Jy the permutation representation ofG acting on 
+r. Let the p-modular character xj be an irreducible constituent of 41>( Ei) with multiplicity nij for 
+i = 1,2. Thus 
+¢;>(Ed = L nlixf and ¢;>(F;z) = L nZiXf, 
+xfeIMp(G) 
+xfeIMp{G) 
+If p divides r and s, then 
+rp(A) E { 6 + L nixf( e) 16 E {O, I}, ° 
+$; ni :; mine nli, nZi), 1 $; i $; lIMp I }. 
+xfeIMp(G) 
+PROOF. Let Lf, i = 1,2. be as defined before. Let Bi be a 7Z-basis for R(Ei) such that Bf := 
+{~(modp) I ~ E Bd is a basis for Lf (cf. Proposition 5.13). Then ¢'P(A) is an element of the set (5.9) 
+with Ef substituted by Bf. Because Tp(A) = deg( ¢'P(A)). it suffices to show that 41>(E;) = ¢P(Bn 
+for i = 1,2. 
+Denote the C -representation of G on the basis Bi by '¥ and the F; -representation of G on Bf by 
+'1';. Let 'l/J denote the character afforded by 'I' and let ¢'P denote the p-modular character afforded by 
+'1';. By definition, 41>(Ej) = iiJP and ¢P(Bn = '¢r>. Since 'I'{g) = ,¥;(g) for all p-regular elements 
+of G, we obtain from Lemma 5.12 that 
+iiJP = 'tjJp. 
+Hence 41>( Ed = ¢P( Bn for i = 1,2, which proves the theorem. 
+o 
+41 
+
+=== PAGE 42 ===
+Remark The set of possible values for rp(A) as given in the above theorem always contains 1 
+and, in many cases, also 2. However, we shall never mention these possibilities, since for the graphs 
+to be discussed, it will always be easy to find a submatrix of A of p-rank 3. 
+In general we want to determine both r p( A) and r p( J - A). In that case, the following lemma is 
+often useful. 
+Lemma 5.15 Let <f>P(A) be the character afforded by the permutation representation Cl>;(A) of G 
+acting on r. If 1 E np(A), then the principal character IG (regarded as a p-modular character) is 
+a constituent of <f>P( A). 
+PROOF. Obviously, since (1) is a submodule of n;( A). 
+o 
+Let us illustrate the foregoing with a small example. A more interesting example will be discussed 
+at the end of the next section. 
+Example S.S The full automorphism group of the triangular graph T(5) (cf. Section 2.2) is Ss, 
+the symmetric group of degree 5. Thus the alternating group As is also a group of automorphisms of 
+the graph. Since the spectrum ofT(5) is 61,14, (_2)5, the only interesting case is r3(A - f). Denote 
+by 4> the permutation character associated with the action of As on the vertices of T(5). 
+We first determine the irreducible constituents of 4> by means of the table in Example 5.4(a). Since 
+4>(e) = to, 4>((12)(34)) = 2, 4>((123)) = I and 4>((12345)) = 0, we find that 4> = XI + X2 + X3. 
+By (5.3),4>(£1) = X2 and 4>(£2) = X3. 
+From the tables in Example 5.4(b) we find that XI = XI, X~ = X~ and X~ = XI + X~. Hence, by 
+Theorem 5.14, 4>3(A - 1) = :d or 4>3(A - 1) = xi + X~. The rows of A - f add up to -1 (modulo 
+3), thus 1 E n3(A - 1). Now it follows from Lemma 5.15 that XI is an irreducible constituent of 
+4>3(A - 1). Thus r3(A - 1) = I + deg(x~) = 5. Taking A as in Proposition 2.5, a subgraph of 
+A - f of 3-rank 5 is readily found. Furthermore, r3(A - 1) :$ 5 by Theorem 3.5. Hence indeed, 
+T3(A - 1) = 5. Finally, since -J( J - A + 1) == J (mod 3), we also find that T3(J - A + 1) = 5. 
+S.4 Rank 3 graphs 
+Continuing with the notation of the previous section, it seems reasonable to assume that the set (5.9) 
+will be large if Cl> has many irreducible constituents. Let G act transitively on a finite set n. If Gw , 
+the subgroup of G fixing wEn, has p orbits on n, then G is said to be a rank p group. Denote by 
+7r the permutation character of G as defined in Example 5.3. Write 7r as 7r = Lx.Elrr(G) niXi, where 
+ni denotes the multiplicity of Xi as a constituent of 7r. In [II, p.68] it is proven that [7r, 7r 1 = p, where 
+[ , 1 denotes the inner product as defined in Section 2. From (5.2) we obtain that L nr = p. Hence 
+7r has at most p irreducible constituents. Thus if G is a group of automorphisms acting transitively 
+on the vertex set of r and has low rank, then probably G gives rise to a small set of possible values 
+for the p-rank of A. We now introduce a class of graphs for which such an automorphism group exists. 
+Let G and n be as defined above. If G is a rank 3 group of even order, then a STg r can be 
+constructed from G in the following way. Take n as the vertex set of r. Denote the three orbits of 
+G w, wEn by {w}, r w and ~w. Let two vertices WI and W2 be adjacent whenever WI E r W2' The 
+adjacency is well defined, because from the assumption that IGI is even, it follows that WI E r W2 iff 
+42 
+
+=== PAGE 43 ===
+W2 E r WI' Oearly. G is a transitive group of automorphisms of the graph. For obvious reasons, r is 
+called a rank 3 graph. 
+Denote by 4» the permutation representation of G with respect to O. Write </> for the character 
+afforded by 4». From the above discussion it follows that</> has precisely three irreducible constituents. 
+say </> = Xl + X2 + X3, Xi E Irr(G). Now according to (5.3). we have Xl = IG. deg(X2) = f and 
+deg{X3) = g. Hence for a rank 3 graph we expect the set (S.9) to be small when G is the group that 
+defines the graph. 
+We conclude this chapter with an example in which we study the p-rank of three rank 3 graphs. 
+We shall only give the groups from which these graphs are derived. By applying Theorem 5.14 to 
+these groups. small sets of possible values for the p-rank are obtained. In some cases the actual value 
+of the p-rank can be easily determined from this set; in other cases we need more information about 
+the structure of the graph. The character tables of the groups involved can be found in the Atlas and 
+the Modular Atlas. The degree of an irreducible character is written as a subscript. Characters of the 
+same degree are distuinguished by letters. 
+Example 5.6 Let r be a rank 3 graph derived from the group G and let x be a vertex of r. It 
+may happen that G x has a rank 3 representation on the set r:r. which denotes the set of vertices 
+adjacent to x. This process may occur several times and yield a so-called rank 3 tower. 
+In this example we shall investigate the p-rank of the first three elements of the Suzuki tower. 
+v 
+k 
+). 
+p, 
+r 
+s 
+f 
+9 
+G 
+r1 
+36 
+14 
+4 
+6 
+2 
+-4 
+21 
+14 G2(2) 
+rl 
+100 
+36 
+14 12 
+6 
+-4 
+36 
+63 HJ 
+r3 
+416 100 
+36 20 20 
+-4 
+65 
+350 G2(4) 
+r4 1782 416 100 96 20 -16 780 1001 Suz 
+The groups involved in this tower are the Chevalley groups G2(2) and G2( 4), the sporadic Hall-Janko 
+group and the sporadic Suzuki group. For more details on the rank 3 representations we refer to 
+Hubaut [to]. 
+The permutation representation of G2 (2) acting on rl affords the ordinary character Xl + XI4 + X21. 
+From the Modular Atlas we obtain 
+and 
+,,3 _ 3 
+3 
+_ .3 
+3 
+,,3 
+2 3 
+3 
+_ .3 
+3 
+X14 -
+XI + X3a + X3b + X7, 
+X21 = Xl + X6a + X6b + X7' 
+Theorem 5.14 yields that 14 :5 r2(At}, r2(J - Ad :5 15. Since r2(AJ) is even (Lemma 
+3.9) and rl(J - Ad satisfies flU - Ad :5 r(6J - 3Al + J) = r(E2) = 14, we conclude that 
+f2(Ad = rl(J - Ad = 14. 
+For the 3-rank of At + J( -J) we can only deduce that 7 :5 r3(Al + J( -J» :5 9. However. this 
+is a considerable improvement on the upper bound 15. which is obtained from Theorem 3.5. 
+For the Hall-lanko graph r 2 the interesting cases are r2(A2) and 1'5(A2 - J). With respect to H J 
+we have </>(Et) = X36 and <p(~) = X63. which satisfy 
+,,2 
+_ 2 
+\'36 = X36, 
+43 
+
+=== PAGE 44 ===
+and 
+X~6 = xi + XI4 + X~l , 
+X~3 = XI + ~l + X~l . 
+From Theorem 5.14 and the fact that rz(Az) is even, it immediately follows that r2(A2) = 36. 
+Furthennore. wehaverz(J -Az) = 36+£, where £ equals OorI depending on whether 1 E RdJ -Az) 
+or not. 
+Looking only at the characters. we obtain that 21 :5 T5(Az - I( -J» :s 23. This result can be 
+slightly improved in the following way. It is easily verified that 
+3(Az - 1)2 == J (modS) and 3(1 - Az)(J - A2 + I) == J (modS). 
+Hence xi is a constituent of 4>5(Az - I( -J» by Lemma 5.15. 
+Thus 22 :5 r2(Az - I) = 
+T2(J - A2 + I) :s 23. 
+As for r 3 we restrict ourselves to TZ ( A3). The irreducible characters X65 and X350 of G2 (4) satisfy 
+X~s = x1 + x14a + x14b + x16' 
+X~so = 6X! + 4X~a + 4X~b + x14a + X!4b + 2x16 + x196' 
+First of all, we notice that r2(A3) > T2(A2) = 36. The strict inequality can be seen in the following 
+way. Since 4>2(A2) = X~6 (where X~6 is a character of H J). Lemma 5.15 implies that 1 is not 
+contained in R2( A2)' The induced subgraph on a vertex of r3 and its neighbours has adjacency 
+matrix 
+Now it is evident that r2(A2) = T2(A3) would imply that 1 E R2(A2). From R(Ed = R(161 + 
+4A3 - J) it follows that xi as constituent of Xis corresponds to (l). This leads to the conclusion 
+that r2(A3) E {50,64} if R2(A3) does not contain the all-one vector and T2(A3) E {38,52,66} 
+otherwise. Furthennore, r2(J - A3) E {37,38,50,51,52,64,65,66}. 
+44 
+
+=== PAGE 45 ===
+Chapter 6 
+Results 
+In this chapter we shall detennine (bounds for) the p-rank of a considerable number of strongly regular 
+graphs. In most cases the theory of the previous chapters is not sufficient to detennine the p-rank 
+completely, hence we also have to examine the structure of the graph. A table of the results is given 
+at the end of this chapter. All graphs discussed here are described in Brouwer and Van Lint [4] or 
+Hubaut [10]. 
+In general. the notation is the same as used in the previous chapters. The subscripts of the 
+irreducible characters indicate their degree. The character tables of the groups involved can all 
+be found in the Atlas or the Modular Atlas. Furthennore, 'subgraph' will always mean 'induced 
+subgraph'. 
+The graphs that we consider are often constructed from other combinatorial objects. The reader 
+who is not familiar with (some of) these concepts is referred to the Appendix. Besides definitions, 
+results that are used in order to detennine the p-rank are mentioned there. We refer to the Appendix 
+by (An), where n indicates the section. 
+In this chapter we mainly deal with so-called sporadic graphs. These graphs are related to the 
+sporadic groups by means of their group of automorphisms. Usually, the sporadic group acts as a rank 
+3 group on the vertex set of the corresponding graph. As for the greater part of the groups mentioned 
+here we refer to the literature for a description, e.g. Suzuki [20]. 
+6.1 
+The Higman.Sims family 
+The Steiner systems S(4, 7,23) and S(3,6,22) (AI) give rise to many sporadic graphs. The three 
+graphs of the Higman-Sims family are derived from S(3, 6, 22). Each of them is a unique rank 3 
+graph. 
+The Higman-Sims graph r Hi has parameters (v, k, A, It) = (100,22,0,6) and is obtained by 
+the following construction. Take as vertex set the 22 points and 77 blocks of S(3,6,22) and the 
+symbol 00. Join 00 to all the points, join a point to the 21 blocks containing it and let two blocks 
+be adjacent whenever they are disjoint. The subgraph on the 77 blocks is a srg with parameters 
+(v, k, A, It) = (77,16,0,4 ) and is denoted by r 77. Let xo be a point of S(3, 6, 22). The subgraphofr 77 
+on the blocks not containing Xo is again strongly regular with parameters (v, k, A, It) = (56,10,0,2). 
+This graph is the Gewirtz graph which has already been discussed in Example 3.2. We shall denote 
+it by r G. 
+Label the first row of A H , by 00, the next 22 rows by the points and the last 56 rows by the blocks 
+45 
+
+=== PAGE 46 ===
+not containing xo. Then AHi has the following fonn: 
+( 
+0 
+1 ... 1 0 ... 0 ) 
+A H • = 
+11 
+022 
+Nt 
+, 
+!t Nt 
+An 
+(6.1 ) 
+Let us start with the Gewirtz graph. Its spectrum is 101,235, ( -4 )20, Hence the only interesting 
+cases are f2(AG) and f3(AG + 1). In Example 3.2 we derived that f2(AG) = 20. Funhennore, we 
+claimed that 1 could be written as the sum of an even number of rows of Aa. which implied that 
+f2( J - AG ) = 20. This will be proven now. 
+fa is a rank 3 graph derived from P5L(3,4). The corresponding pennutation representation 
+affords the ordinary character Xl + X20 + X35. The 2·modular characters X~ and X~s satisfy 
+fzo = 2xr + ~a + X§b' 
+xj5 = xI + Xia + Xib + ~a + ~b' 
+Since 1'z(Aa) = 20, we have ¢2(Aa) = 2xr + X~a + ~b' The constituent xi of ~5 corresponds 
+to the submodule (1). because 24El = 161 + 4Aa - J, thus! ELi. From this we conclude that 
+! E 'RdAa). Number the points of 5(3,6,22) from 1 to 22 and assume that the vertices of fa do 
+not contain 22. The rows of Aa labelled by the following blocks fonn a basis of 'R2( Aa ). 
+(1 2 5 12 18 19)* 
+(l 4 6 8 12 13)* 
+(l5 6 7 914) 
+(l 7 11 13 16 18)* 
+(1 9 10 11 12 15)* 
+(245 91113)* 
+(2 5 6 8 10 15)* 
+(278 11 12 14)* 
+(345 10 12 14)* 
+(346 71115) 
+(3 7 8 9 10 13)* 
+(45 7 8 1821)* 
+(469101721)* 
+(47 912 16 19) 
+(48 10 11 1620)* 
+(5 6 11 12 1621) 
+(57 10 11 17 19)* 
+(5 8 9 12 17 20) 
+(6710 12 1820)* 
+(68 91118 19) 
+The sum of the rows indexed by the *·marked blocks equals 1 (modulo 2). This is easily veri-
+fied from the submatrix of Aa corresponding to these blocks. Hence, 1 can indeed be written as the 
+sum of an even number of rows of A G • 
+Let us now examine the 3-rank of Aa + I. From the Modular Atlas we obtain 
+... 3 _.3 
+3 
+3 
+X35 - Xl + X15 + X19' 
+So 1'3( J - Aa - I) :2: 19. We claim that equality holds. The Gewirtz graph is a subgraph of a s1'g 
+f on 112 vertices (the first subconstituent of the McLaughlin graph) that will be discussed in the next 
+section. It will be shown that f3( J - Ar - I) ::; 19. This proves our claim. From Lemma 3.8 we 
+find 1'3(Aa + I) = f3(J - Aa - I) + 1 = 20. 
+We mention here that Brouwer and Haemers [3] have obtained the same results by different 
+methods. 
+rn has spectrum 161,255,(_6)21, so we only have to detennine 1'2(An). Obviously. 20 = 
+1'2(AG ) ::; 1'2(An) ::; 1'(221 - llAn + 2J) = f(Ez) = 21 holds. By Lemma 3.9, rz(An) is even, 
+hence 1'2 (An) = 20. From Lemma 3.8 it follows that f2 (J - An) = 21. 
+The spectrum of the Higman-Sims graph is 221,277, (_8)22. Therefore. we consider 1'2(AH.) and 
+1'5(AHi + 3/). 
+Examining the matrix AHi in (6.1), we observe that a row of AHi indexed by a point can not 
+be expressed as the sum of rows labelled by blocks. From this, it follows that 20 = T2(An) < 
+1'2(AH.) ::; 23. Because 1'z(AH,) has to be even, we conclude that 1'2(AH,) = 22. In order to 
+46 
+
+=== PAGE 47 ===
+detennine rl(J - AHi ), we consider the matrix J - AH• in more detaiL As in (6.1), let the first row 
+be labelled by 00. Furthennore. assume that the second row is indexed by xo and that the last 56 rows 
+are indexed by the blocks not containing Xo. Thus the submatrix of J - AHi on the last 56 rows and 
+columns is J - Aa' Since rl( J - Aa) = 20. we can choose 20 rows of J - Aa that are linearly 
+independent over Fl. Denote these rows by Qj, 1 5 i 5 20, and let gi be the corresponding row 
+of J - AHa' thus gi = (ll;~i;Qi)' Denote the first row of J - AHi by!!o. Then!!o = (1O;~;1). 
+Obviously, dim( (,g, 10 5 i 5 20}) = 21. Suppose that the second row can be expressed as a linear 
+combination of the gi' Then for the first two coordinates the following must hold: 
+and for the last 56 coordinates 
+Thus 
+L7~1 Ai 
+== 
+1 (mod2), 
+L7~1 Ad:!i 
+== Q (mod2). 
+Since the Qi fonn a basis for R2( J - Aa), it follows from the second equation that Ai = 0 for 
+1 5 i S 20, which contradicts the first equation. Hence. T2 (J - A H.) ~ 22. Together with the upper 
+bound T2(J - AH.) S r(lOJ - 5AH• + J) = r(E2) = 22, this yields T2(J - AHi ) = 22. 
+For rs( A H. + 31) we have 22 = TS( An + 31n) < rs( A Hi + 31)00) S 23. The strict inequality is 
+obtainedbythesameargumentasusedfortheinequalitY T2(AnJ < T2(AH.). Thus Ts(AHi+31) = 23. 
+Furthennore, from (21 - AH.)(J - AHi - 31) == J (mod5), it follows that rs(AH. + 31) S TS(J-
+A Hi - 31). Together with the upper bound derived in Theorem 3.5, this yields TS( J - AHi - 31) = 23. 
+6.2 The McLaughlin graph and its subconstituents 
+The McLaughlin graph r M is the unique graph with parameters (v, k, A,tt) = (275,112,30,56). It 
+can be constructed in the following way. Denote the set of points of the Steiner system S ( 4, 7, 23 ) 
+by X and the set of blocks by B. Let Bl be the set of blocks containing a fixed point Xo and define 
+B2 := B \ Bt • Take as vertex set of r M the set X \ {xo} u B. Join a block Bl E Bl to all points that 
+are nonincident to it; join a block of B2 to the points incident to it. Let two blocks of Bi, i = 1,2, 
+be adjacent when they have a single point in common. Finally, a block Bl E Bl is joined to a block 
+B2 E B2 whenever they intersect in three points. r M is a rank 3 graph with the sporadic McLaughlin 
+group as group of automorphisms. 
+The spectrum ofr Mis 1121,2252, (_28)22, so the interesting cases are Tz(AM), T3(AM + J) and 
+Ts(AM + 31). Let ¢ be the character afforded by the pennutation representation of the McLaughlin 
+group acting on r M' then 
+<P = Xl + X22 + X25Z· 
+Because X~2 = X~2 and the 2-rank of AM is even (Lemma 3.9). it immediately follows that 
+T2(A M ) = 22. Furthennore rz(J - AM) = 23 by Lemma 3.8. 
+Oearly, the subgraph of r M induced on the 22 points is a coclique. Thus T3(AM + 1) ~ 22. 
+We claim that in fact equality holds. Denote by P B the set of points adjacent to the block B. Thus 
+I P B I = 16 if B E Bl and I P B I = I B I = 7 otherwise. Let Bi and B; be two different blocks of Bi for 
+47 
+
+=== PAGE 48 ===
+i = 1, 2. From the above-mentioned construction of r M we deduce that 
+if BJ ,..., B;, then IBI n B;I = 1 and {xo} E BI n B;, hence [PI n P;I = 10; 
+if Bl '" B;, then IBI n B;I = 3 and {xo} E BI n B;, hence IPI n P;I = 12; 
+if BI ,..., Bl, then IBI n Bli = 3 and {xo} tJ. Bl n Bl, hence IPI n Pli = 4; 
+if Bl '" Bl, then IBt n Bli = 1 and {xo} tJ. BI n Bz, hence IPI n Pzl = 6; 
+if Bl '" B~, then IBl n B~I = 1 and {xo} tJ. B'J, n B~, hence IPz n p~r = 1; 
+if B2 '" B~, then IBl n B~I = 3 and {xo} tJ. Bl n B~, hence IPz n p;r = 3. 
+Now it is easily verified that for every block B the row !B satisfies 
+!B == L !p (mod 3). 
+pEPB 
+Hence indeed T3 (A M + 1) = 22. Again Lemma 3.8 yields that r3( J - AM - I) = r3 (A M + 1) -1 = 21. 
+By the subconstituents of a graph we mean the induced subgraphs on the vertex sets {x I x "" y} 
+and {x I x '" y} for an arbitrary vertex y. The subconstituents of the McLaughlin graph are both 
+strongly regular. We shall denote them by r U2 and r l62 and their parameters are (112, 30. 2. 10) and 
+(162,56, 10,24), respectively. Thus 
+( 
+0 
+1. .. 1 0 ... 0 ) 
+AM = 
+11 
+Am 
+N 
+. 
+Ql 
+Ni 
+AI62 
+(6.2) 
+Now Ts(A},f+31) is easily detennined. The second subconstituentrl62 has spectrum 561 ,2140, (_16)21. 
+Hence. 22 ~ Ts(AM + 31) ~ 23. Considering the matrix AM + 31 with AM as in (6.2), we no-
+tice that the first row can not be written as the sum of some of the last 162 rows because of the 
+first coordinate. Hence Ts(AM + 31) = 23. From (21 - AM )(J - AM - 31) == J (modS). it 
+follows that Ts(AM + 31) ~ TS(J - AM - 31). Together with the usual upper bound, this yields 
+TS( J - AM - 31) = 23. Let us now tum to the subconstituents ofr,\r 
+We start with r ll2 • Since its spectrum is 301,29°, (_lO)ZI, we shall consider Tl(A1I2 ) and 
+T3(A112. + 1). However. let us first give a direct description ofrl12 • Choose two points x and y from 
+the point set of S( 4,7,23). Take as vertices the 112 blocks that contain exactly one of these points. 
+Join two blocks containing the same point when this is the only point they have in common. Join a 
+block containing x to a block containing y iff they intersect in three points. This produces directly the 
+STg (112,30,2. 10). Notice that the subgraph on the blocks containing x (y) is the Gewirtz graph. 
+We first consider T'J,(Auz). The graph r 1l2 is the point graph of the generalized quadrangle 
+GQ(3, 9) (A2). Bagchi, Brouwer and Wilbrink [1] have proven that the 2-rank of the adjacency 
+matrix of the point graph of GQ ( q, q2) for odd q equals q3 - q2 + q + 1. Hence rl( Am) = 22. 
+We prove that rl( J - A1I2 ) = 22 by showing that 1 can be written as an even number of rows of 
+Am' In GQ(3, 9) every line is incident with four points. Take a line I = {Xl, Xl, X3, xd. WJ.o.g. 
+assume that the first four rows of AU2 are indexed by the points Xi, 1 ~ i $ 4. Then from the 
+parameters of the graph. it follows that these rows can be written as 
+[ 
+~~~~ 
+1101 
+1110 
+48 
+
+=== PAGE 49 ===
+nus obviously proves the statement. 
+The last result can also be obtained in a different way, using the fact that T2( Anz) = T2( AM)' 
+Without loss of generality assume that the first 22 rows of Am form a basis for R2( Am ). Set 
+Qi := (1; l!a; .!!i) for 1 ::; i ::; 22, where Qi denotes the ith row of Am and Qi is the corresponding row 
+of AM' with the latter as in (6.2). Because the Qj are a basis for R2( AM)' there exist Ai, 1 ::; i ::; 22, 
+such that 
+Et;tAiQi :; (O;l;Q) (mod 2). 
+Thus E Ai :; 0 (mod2) and E AjQj :; 1 (mod 2). which is equivalent to the assenion that 1 can be 
+written as an even number of rows of Am. 
+Let us now look at T3(J - Am -I) and T3(Am +1). It is clear from Lemma 3.8 that T3(AIl2 +1) = 
+T3( J - Am - I) + 1. For the Gewittz graph r G we derived before that T3( J - AG - I) 2:: 19. so 
+(6.3 ) 
+Set p := T3( J - Am - I). Without loss of generality. assume that the first p rows of J - Am - I 
+are linearly independent. Denote by L the ith row of J - AM - I, with AM as in (6.2). Let 
+S ~ 'R3(J - AM - I) be defined as 
+Thendim(S) = p. One easHy sees that the first row of J - AM -I is not contained in S. because other-
+wise the first p rows of J - Am - I would not be linearly independent. A row indexed by a block can not 
+be contained inS + (II). because of the first coordinate. Thus T3(J - AM - 1) 2:: T3(J - Am - 1)+2. 
+Combining this with (6.3), we conclude that T3(J - Am - I) = 19. 
+This also proves that 
+T3( J - AG - I) = 19. 
+The graph r l62 can be constructed from the projective plane PG(2, 4) (A3) in the following way. 
+Let the venex set consist of the 21 points, the 21 lines and one class of 120 Fano subplanes. Join a 
+point to a line when they are not incident; join a point to a Fano plane when they are incident; join 
+a line to a Fano plane when they have two points in common and join twO Fano planes when they 
+intersect in one point. 
+( 
+021 
+Nt NZ) points 
+Al62 = 
+N{ 
+OZl 
+N3 
+lines 
+Ni Nt 
+A' 
+Fano planes 
+(6.4 ) 
+nus graph is a rank 3 graph derived from PSU4(3). Since r l62 has spectrum 561,214°, (-16)21, the 
+interesting cases are f2( Al62 ) and f3( Al62 + 1). 
+We first consider f2( AI62 ). Goethals and Seidel [8] have shown that the venex set of rl62 
+can be split into two halves such that the induced subgraphs on these halves both form a strongly 
+regular graph on 81 venices with spectrum 201,26°, ( -7)2°. Denote this graph by r SI ' Then 
+20 = T2(AsI) ::; T2(A I62 ) 
+::; 21. Because T2(A I62 ) is even by Lemma 3.9. we conclude that 
+T2(Al62 ) = 20. 
+In order to determine the 2·rank of J - Am' write the matrix as 
+There are 61 ones in every column of JSI -
+ASI and 45 ones in each column of N. Hence the sum of 
+the rows of [JSI -
+ASliN] equals 1 (modulo 2). In order to find out whether 1 is contained in 'R2( Al62 ) 
+49 
+
+=== PAGE 50 ===
+or not, we look at the pennutation character <I> = Xl + X2i + X140 yielded by the action of P 5U4(3) 
+on the vertices of r l62 • From T2 ( Al(2 ) = 20 and 
+X21 = xi + ~o, 
+Xl40 = ~o + xi2o, 
+it follows that ¢>2 (Al62 ) = x220• We see that ¢>2( A162 ) has no constituent of degree 1. thus, by Lemma 
+5.15, the all-one vectoris not contained in 'R2(AI62 ). Hence T2(J - Al(2 ) = 21. 
+For the 3-rank of AI62 + J and J -
+Al62 -J, we look at (6.4). It is evident that T3(Al62 + J) ~ 21. 
+In PG(2,4) every line is incident to 5 points and every Fano subplane is incident to 7 points. Thus 
+Nl has 16 ones in every column, while N2 has 7 ones per column. So 
+21 
+21 
+L!i == 1 (mod 3) and L(1- !i) == -1 (mod 3), 
+i=l 
+i=l 
+where Ii denotes the ith row of Al62 + J. This proves that T3(Al62 + J) = T3( J - AI62 -I). 
+Let I be a line and I a Fano subplane. Denote by PI the set of points not incident to I and by P, 
+the set of points incident to I (thus 1111 = 16 and IP,I = 7). From the construction Ofrl62 it follows 
+that 
+if 
+I # I' , then 
+IP/np/,I 
+12; 
+if 
+1"" I, then 
+IPI nPII 
+= 4' , 
+if 11- I, then 
+IP/nPII 
+= 6; 
+if I'" I', then IPf n PI'I 
+1; 
+if 11-1', then IPf n PI'I 
+3. 
+From this it follows that any row of AI62 + J can be written as a linear combination of the first 21 
+rows. Hence T3 (AI62 + I) = T3 (J - AI62 - J) = 21. 
+6.3 Graphs related to the McLaughlin graph by switching 
+Let r~ be the graph obtained by adjoining an isolated vertex to the McLaughlin graph. This graph 
+can be switched into several interesting graphs one of which is strongly regular. The adjacency matrix 
+A ~ of r~ satisfies 
+T2(A~J 
+T3(A::' + I) 
+= 
+T2(J-A::')-1 
+= T3( J - A::' - I) + 1 
+r5(A~ - 2/) 
+= 22; 
+= 22; 
+= 24 .. 
+Define a graph r~6 on the 23 points and 253 blocks of 5(4,7,23) by joining a point to the 
+blocks containing it and joining two blocks whenever they intersect in one point. From the explicit 
+construction of r M as given in the previous section, it is immediately seen that isolating a point from 
+r~6 by switching produces r~f' Note that r;,6 is not strongly regular. However, the subgraph induced 
+on the blocks is a srg with parameters (v, k, A, J.L) = (253,112,36,60). This graph is denoted by r 253 
+and will be discussed in the next section. 
+Write the adjacency matrix of r~ as 
+N 
+). 
+~3 
+(6.5 ) 
+50 
+
+=== PAGE 51 ===
+The submatrix N has 7 ones in each column and 77 ones in every row. Thus 
+276 
+276 
+L:!i == 1 (mod2) and L:(1- !i) == 1 (mod2), 
+i=l 
+i=l 
+where!i denotes the ith row of A;'6. Hence T2(A;'6) = T2(J - A;'6). From Lemma 3.11 it follows 
+that T2(A;'6) = T2(A M ) +2 = 24. Thus T2(A;'6) = T2(J - A;'6) = 24. 
+Furthennore, we prove that T3(A;,6 + I) = T3(J - A;'6 - I) = 23. Oearly, T3(A;'6 + I) ~ 23, 
+since h3 is a submatrix of A;'6 + I. Let x denote a point, B a block and X the point set of S( 4,7,23). 
+Write !x erB ) for the row of A;'6 + I indexed by x (B). From the fact that two blocks of S(4, 7,23) 
+intersect in 1 or 3 points, it follows that 
+L:!x ==!B (mod 3). 
+reB 
+SO T3 (A;76 + 1) = 23. The proof is completed by observing that 
+L:!x == 1 (mod 3) and 
+L: (1-!x) == -1 (mod3), 
+rex 
+reX 
+The graphs r~ and r;'6 can be switched into a STg r 276 with parameters (v, k, A, J-L) = (276,140,58,84). 
+This graph was first constructed by Goethals and Seidel [8]. Its spectrum is 1401,2252, ( _28)23. Hence 
+the interesting cases are T2(.4n6)' T3(An6 + I) and TS(An6 - 21). 
+Let us start with T2( Az76). In [8] the first six rows of An6 are given by 
+(6.6) 
+where Di := [didi ... di], 0 ::; i ::; 9, is a 6 x 27 matrix and [dodl ... d9] denotes the incidence matrix 
+of the 2-(6,3,2) design (AI). Thus there are 3 ones in every column di , 0 ::; i ::; 9. Hence 
+6 
+6 
+L:!i == 1 (mod2) and L:(1-!d == 1 (mod2), 
+i=l 
+i=l 
+where Ii denotes the ith row of(6.6). Thus T2(A276 ) = T2(J - An6) and T2(An6) = T2(A M ) +2 = 24 
+by Lemma 3.10. 
+For the 3-rank of An6 + I and J - An6 - I, Lemma 3.10 yields 
+22 = 
+T3(A;'6 + 1) - 2 
+::; 
+T3(An6 + 1) 
+::; 
+T3(A~ + I) + 2 
+21 
+= T3(J-A;,6-I)-2::; T3(J-An6-1)::; 
+T3(J-A~-1)+2 
+For TS(An6 - 21) we find the following bounds: 
+22 = Ts(A~ - 21) - 2 ::; TS(An6 - 21) ::; 24, 
+< 24, 
+< 23. 
+where Theorem 3.5 provides the upper bound. The same bounds apply to TS( J - Az76 + 2I), since 
+TS (J - An6 + 21) = TS (Az76 - 2I). This can be seen by consideration of 
+(6.7) 
+51 
+
+=== PAGE 52 ===
+with the Di as in (6.6). Denote the ith row of (6.7) by r.i. then 
+6 
+6 
+LL == J. (modS) and L{l- r.d == J. (modS). 
+i=1 
+i=1 
+Thus rs( An, - 21) = rs( J -- ~ 
++ 21). 
+The above graphs are switching-equivalent to a graph that consists of 11 mutually nonadjacent 
+triangles and 243 further venices each of which is adjacent to exactly one venex of each triangle 
+(see [8] for more details). The subgraph on the 243 venices is strongly regular with parameters 
+(v, k, A, 11-) = (243,110,37,60). This graph is called the Delsarte graph~ we denote it by rD' Its 
+spectrum is 1101,222°, (_25)22, hence we only have to consider r3{AD + 1). In [8] it is proven that 
+r D contains a subgraph on 162 venices that can be switched into r l62 • the second subconstituent of 
+the McLaughlin graph. Hence 19 = r3(Al62 +1)-2 5 r3(A D +1) 523,wherethelowerboundis 
+obtained by applying Lemma 3.10 and the upper bound is the bound derived in Theorem 3.5. Since 
+r3 (J -- AI62 -- 1) = r3 (Al62 + 1). the same bounds apply to r3 (J - AD + 1). 
+6.4 Other graphs derived from S ( 4, 7, 23 ) 
+Most graphs discussed in this chapter are derived from the Steiner system 5(4,7,23). This also holds 
+for the three srgs that are studied in this section. Their parameters are 
+r253 
+(V,k,A,p);:: (253,112,36,60); 
+r 176 
+: 
+(V,k,A,p) ;:: 
+(176,70, 18,34}; 
+r l20
+: 
+(V,k,A,J1.) = (120,42,8,18). 
+We have seen r 253 already as a subgraph of the graph r;6' which was discussed in the previous 
+section. It is constructed by taking as venices the blocks of 5(4,7,23) and joining the blocks 
+intersecting in one point. Clearly, the subgraph on the blocks containing a fixed point is the graph 
+r 77 of the Higman-Sims family. The graph r 253 has spectrum 1121,2230, (_26)22, thus we shall 
+investigate r2( Azs3) and f7( Azs3 - 21). 
+r 253 is a rank 3 graph derived from M23. The associated permutation character is Xl + X22 + XZ30. 
+From the Modular Atlas we obtain 
+,,2 
+_ 
+2 
+2 
+.2 
+,2 
+.2 
+X230 -
+XlIa + Xllb + X44a + X44b + Xl20 
+and 
+.. 7 
+7 
+.. 7 
+7 + 7 
+XZ2 = X22, 
+X230 = X22 
+X20S' 
+Since r2(~) 2: rz(A,,) = 20 and r2(Azs3) is even, we find r2(Azs3) = 22 by application of 
+Theorem 5.14. Furthermore, Lemma 3.8 yields that f2(J -- Azs3) = r2(Am) + 1 = 23. 
+We also obtain from Theorem 5.14 that 22 5 n(A -- 21) 5 23. Since 
+3J(Azs3 - 21) 
+== 
+J 
+(mod7), 
+-2J(J -- Azs3 + 21) 
+== 
+J 
+(mod 7), 
+it follows from Lemma 5.15 that xi is an irreducible constituent both of {P(Azs3 - 21) and of 
+q/(J - Azs3 + 21). We conclude that n(Azs3 -- 21) = f7(J - Azs3 + 21) = 23. 
+52 
+
+=== PAGE 53 ===
+r 176 is the subgraph of r 2S3 on the blocks not containing a fixed point. Every other element of the 
+point set of 5(4,7,23) is contained in 56 of the 176 blocks. The subgraph on the blocks containing 
+a second fixed point is the Gewirtz graph. Deleting these blocks produces a graph on 120 vertices 
+which is again strongly regular. This graph is r 12O • 
+The spectrum ofrl76 is 701 ,21S4, (_18)21. Therefore we shall consider Tz(Al76 ) and Ts(Al76 -21). 
+The Mathieu group Mn acts as a rank 3 group on the vertex set ofr116 • The corresponding permutation 
+character is Xl + X21 + X1S4. For X21 and X1S4 the following holds: 
+~1 = xt + xtoa + xtOb' 
+xtS4 = 2xt + xtoa + xtOb + xi4 + ~8 
+and 
+(6.8) 
+Using the facts that the Gewirtz graph r a is a subgraph of r l16 and that Tz(Aa ) = 20. we find 
+Tz(A176 ) = 20 or Tz(A176 ) = 22, depending on whether the all-one vectoris contained in Rz(AI76 ) or 
+not. For the 2-rank of J - A176 • we obtain that 20 ::; TZ( J - A176 ) ::; 22. 
+We now prove that Ts(A176 - 21) = TS(J - A176 + 21) = 22. Applying Theorem 5.14 to (6.8) 
+yields 21 ::; 1'7(A176 - 21( -J» ::; 22. The rows of A176 - 21 add up to ~ (modulo 5) and the same 
+holds for the rows of J - AI76 + 21. Hence the assertion is true by Lemma 5.15. 
+The last graph discussed in this section has spectrum 421,299, ( -12 fO, hence the interesting cases 
+are T2(A I2O ) and 1'7(AI2O - 21). P5L(3,4) is a group of automorphisms for r 12O • The permutation 
+representation of its action on the vertices of the graph affords the character ¢ = Xl + X20 + X3S + X64. 
+For 4>( Ed = X3S + X64 and 4>{ E2) = X20 we have 
+A2 
+2.2.2.2.2 
+2 
+A2 
+2.2.2 
+4> (Ed = XI + XSa + XS/) + X9a + X9b + X64, 
+4> (~) = 2XI + X9a + X9b 
+(6.9) 
+and 
+"'1 
+1 
+7 
+1 
+A1 
+7 
+1 
+¢ (Ed = XI9 + X35 + X45' 
+4> (~) = XI + X19' 
+For the 7-rank of Al20 - 2/ and J - A120 + 2/. we immediately obtain from 
+3J(AI2O -21) == 
+J (mod7), 
+-2J(J -
+Al20 + 2/) 
+== 
+J (mod7), 
+and the constituents of J? (Ed and J7 (~) that r,( A 120 - 21) = r7(J -
+Al20 + 21) = 20. 
+Theorem 5.14 yields that r2(A I2O ) E {1O, 18,20}. Number the points of 5(4,7,23) from 1 to 23. 
+Take as vertex set of r 120 the set 8' which is defined as the collection of blocks containing neither 1 
+nor 2. Assume that {I ,2, 3,4,5, 6, 7} is a block of 5(4,7,23). Then every 3-subset of {3,4, 5,6, 7} 
+is contained in exactly four blocks of S'. The blocks containing 3 and one of the 2-subsets of {4, 5,6} 
+form a coclique of size 12; the same holds for the blocks containing 3, 7 and one of {4, 5, 6}. Let 
+A' be the 24 x 24 submatrix of A120 corresponding to the 24 blocks described above. By a suitable 
+labelling of the rows and columns. we get 
+A' = ( ~1 I ~ ). 
+The matrix N has the following form: 
+{345} 
+{346} 
+{356} 
+53 
+(6.10) 
+(6.11 ) 
+
+=== PAGE 54 ===
+Every Ni. 1 $; i $; 3, is a 4 x 4 matrix with two ones in each row and column. Thus r2(Ni) ~ 2. 
+Hence from (6.10) and (6.11) it follows that rzCAI20) ~ rz(A') ~ 12. This leads to the conclusion 
+that rz(AI20 ) = 20 if 1 E 'R2(AI20 ) and 18 otherwise. For the 2-rank of J - AI20 we find 18 $; 
+T2(J - AI20 ) $; 20. 
+6.5 The Cameron graph 
+The Cameron graphr c haspararneters (v, k, >',/J) = (231,30, 9,3)and is constructed from 8(3,6,22) 
+in the following way: take as vertices the unordered pairs from the point set of the Steiner system 
+and let two pairs be adjacent when they are disjoint and their union is contained in a block. Since its 
+spectrum is 301, 95S, (_3)17S, we shall examine T3(Ac) and Tz(Ac + I). 
+Clearly. MZ2 is a group of automorphisms of r c' For the character 4> afforded by the permutation 
+representation of M22 acting on r c' we find 
+4> = Xl + XZl + XSS + XlS4· 
+Thus 4>(EJ) = XSS and 4>(E,.) = X21 + X154. 
+Let us first deal with T3(Ac). Then 
+"3 
+3 
+"3 
+_ ;3 
+3 
+_ ;3 
+3 
+3 
+¢ (Ed = Xss and ¢ (Ez) = Xl + XII + X49a + X49b + Xss· 
+Thus 55 $; r3(J - Ac) $; r(211 + 7Ac - J) = r(EI) = 55. Furthermore. r3(Ac) = 55 or 56, 
+depending on whether 1 is contained in 'R3( Ac ) or not. 
+The 2-rank of Ac + / is not as easily determined as the 3-rank of Ac. since 
+¢i(Ed = xi + xToa + xrOb + Xi4 and 4>2(E2) = 3X1 + 2\100 + 2xTob + xi4 + ~8' 
+Taking into account that rz(J - Ac -I) $; r(211 + 7Ac - J) = r(Et) = 55 and r2(J - Ac - /) 
+is even (Lemma 3.9). we obtain that r2(J - Ac - I) E {1O,20,34,44,54}. By Lemma 3.8. 
+rl(Ac + I) = T2(J - Ac -I) + 1. 
+The set of possible values for r3(Ac + I) can be reduced by examining the structure of the graph 
+in more detail. Number the points of S(3, 6, 22) from 1 to 22. The vertices {I, i}, 2 $; i $ 22, form 
+a coclique. hence T2(Ac + I) ~ 21. Without loss of generality assume that {I, 2,3,4,5, 6} is a block 
+of S(3, 6, 22). We claim that 
+!{Z.3} ¢ !{1,4} + !{l.S} + !{l,6} (mod2). 
+From this it follows that 'R2(Ac + /) is not generated by the rows !{l,i}, 2 $; i $; 22. A counting 
+argument shows that there are 20 pairs {x,y} with x,y E {7, ... ,22} such that {I,4,x,y} is 
+contained in a block and {2, 3, x, y} not. Assume that {7. 8} is such a pair. From the fact that two 
+blocks of S (3, 6, 22) intersect in 0 or 2 points, it follows that neither {I, 5, 7 ~ 8} nor {I, 6, 7, 8} is 
+contained in a block. NOW!{Z,3} has a zero at the coordinate corresponding to {7,8}. whereas the 
+sum of the three rows mentioned above has a one at the same coordinate. Hence rz( Ac + I) > 21. 
+We conclude that rl(Ac + /) E {35,45,55}. 
+6.6 The Hoffmann"Singleton graph and related graphs 
+In Brouwer and Van Lint [4] it is shown that the venex set of the Higman-Sims graph can be split 
+into two halves such that the each of the induced subgraphs is a sry with parameters ('/), k, A, /J) = 
+54 
+
+=== PAGE 55 ===
+(50,7,0,1), This graph is called the Hoffmann-Singleton graph and is denoted by rHo' The group 
+P S U3 (52) acts as rank 3 group on the vertex set of rHo' The action yields the pennutation character 
+XI + X21 + X28· 
+rHo has spectrum 71,228, (_3)21, Thus only Ts(A Ho - 21) is of interest. The irreducible 
+5-modular constituents of ~1 and XS28 are 
+:Bl = 2x1 + x1g, :Bs = xi + xi + X19' 
+Thus 19 :$ rs(AHo - 2/) :$ 21. The lower bound can be improved since 
+(AHo - 21)2 
+== 
+J 
+(modS), 
+(21 - AHo)(J - AHo + 2/) 
+== 
+J 
+(modS). 
+So Rs(AHo - 21) and Rs(J - AHo + 21) both contain the all-one vector. Thus, by Lemma 5.15, 
+20::; Ts(A Ho - 2/) = TS(J -- AHo + 21) ::; 21. 
+The action of PSU3(52) on the edges ofr Ho gives rise to a STg r l7S with parameters (v, k, >..,p) = 
+(175,72,20,36). This graph is also produced by isolating a vertex of the graph r176 discussed in 
+Section 4, and deleting it. Its spectrum is 721, 21S3 , ( -18 )21. Therefore. we shall consider T2( Am) 
+and Ts(A17S -- 2/). 
+The 2-rank of A175 is easily detennined. We derived before that T2( A176 ) = 20 + f, where f = 2 
+if 1 E R2( A176 ) and 0 otherwise. Now it immediately follows from Lemma 3.11 that T2( Am) = 20. 
+Funhennore, T2( J - Am) = 21 by Lemma 3.8. 
+The group P S U3 (52) is an automorphism group of r 17S ' The associated pennutation character <P 
+equals <p = XI + X21 + .\:28 + XI2S. Hence ¢i(E)) = .\:28 + X125. ¢i(E2) = X21 and 
+J>s(Ed = xi + xi + X19 + X12s, ¢s(~) = 2xj + X19' 
+Thus by Theorem 5.14,19::; Ts(A17S -- 2/(-J»::; 21. Since 
+(A17S -- 2/)2 
+== 
+J (mod5), 
+(2/-Al15)(J-A17S+2/) 
+== 
+J (modS), 
+it follows from Lemma 5.15 that 20:$ Ts(Am - 21) = TS(J - Am + 21) ::; 21. 
+r 176 can also be switched into a STg with parameters (v, k, >..,p) = (176,90, 38, 54) and spectrum 
+901 ,2153 , ( -18)22. We denote this graph by r~76' 
+Applying Lemma 3.11, we find that T2(A~76) = 22 if 1 E R2(A~76) and 20 otherwise. Then we 
+also know that 20 ::; T2( J - A:76 ) $ 22. 
+Since k = 90, the sum of the rows of A:76 -- 21 equals 3. (modulo 5) and the same holds for the 
+sum of the rows of J -- A:76 + 2/. By Theorem 3.5 and Lemma 3.10, 
+20 = Ts(A176 -- 2/) - 2 $ Ts(A~76 - 21) = TS(J - A;6 + 21) $ 23. 
+6.7 Graphs derived from the Golay codes 
+The Golay codes (A4) give rise to several STgS (see [4]). In this section we shall study three of them. 
+The Berlekamp-Van Lint-Seidel graph r BLS has parameters (v, k, >..,p) = (243,22,1,2) and is 
+constructed in the following way. Take as vertices the 3s = 243 cosets of the [11,6] ternary Golay 
+55 
+
+=== PAGE 56 ===
+code and join two vertices when the corresponding cosets have representatives differing by a vector 
+of weight one. Its spectrum is 221,4132,(_5)110, hence the only interesting case is T3(A BLS - 1). 
+The Mathieu group MIl is a group of automorphisms of r BLS' The pennutation representation of its 
+action on the graph affords the character 6Xl + 6XlO + 3X44 + X4S. Furthennore, 
+<pCEd = 3XI + 4XlO + X44 + X4S, 
+<p(~) = 2XI + 2XlO + 2X44. 
+The 3-modular characters 4>3 (Ed and 4>3 (~) satisfy 
+4>3(EJ) = 3x~ + X~a + ¥Sb + 5x~0 + X~4 + x~s, 
+4>3(~) = 2x~ + 2X~a + 2¥Sb + 4x~0 + 2X~4' 
+Now Theorem 5.14 yields the following set of possible values for T3(A BLS - 1): 
+{al +5(a2 + (3) + lOa4 +24as10 Sal S 3, 0 S a2,a3,as S 1,0 S a4 S 4}. 
+We shall reduce this set to 
+(6.12) 
+We first show that al = 3. Take as representatives of the cosets the vectors of weight S 2. Let 
+1 a( -1 )boc denote a vector having a one at a, a minus one at b and a zero at c coordinates. Then by a 
+suitable labelling of the rows and columns, A BLS - I can be written as 
+-1 
+1 
+1 
+11 
+-Ill 
+III 
+11 
+III 
+-Ill 
+N{ 
+N.1 I 
+Nt 
+Nt 
+Nl 
+Nl 
+A' + Iss 
+N4 
+Nt 
+A' + Iss 
+Nt 
+N1 
+N2 
+N3 
+Ns 
+]''.'6 
+A" + 1110 
+011 
+11010 
+(-1 )1010 
+1209 
+(-1)209 
+11( -1)109 
+It is easily seen that NI has 2 ones in every column and that N2 and N3 have both lone per column. 
+Thus T3( ABLS - 1) contains the following linearly independent vectors: 
+.!Z1·-
+(-1; Ill; 111; Qss; Qss; Ql1o), 
+.!!z := (-1; -Ill; 111; -15s; Qss; 1110), . 
+~ := ( -1 ; 111 ; -Ill ; Qss; -15S; 1110)' 
+These three vectors are all invariant under the action of MIl on the coordinates. This proves our 
+claim. Since 
+-.!Z1 + 12 + 1b == 1 (mod3) 
+and 1-.!ZI' 1 +.!!z and 1 + ~ are contained in R3(J - ABLS +1), this also shows that T3(A BLS -1) = 
+T3(J - ABLS + I). 
+In order to prove that a4 = 4, we obseJVe that every element of MIl maps a vector 1 a( -1 )boc to 
+a vector 1 a( -1 )boc. Consider the following four subspaces over F3: 
+RIa .-
+(I11010 ), 
+RIb .-
+(I( _1)1010 )' 
+R2a .-
+(Ii 11 SiS 11), 
+R2b .-
+(I~ 11 SiS 11), 
+56 
+
+=== PAGE 57 ===
+where Ii (I:) denotes the sum of the rows corresponding to a vector 1209 (( -1 )209 ) and a 1 ( - 1) at the 
+ith coordinate. These four subspaces are submodules of dimension 11 of the module corresponding 
+to the pennutation representation <1> of MIl on the vertex set of r BLS' Let ¢} be the (3-modular) 
+character afforded by <1>, then 
+~I + 1G E R2a; .Y.I +.Y.2 E R2b). Set R := RIa + RIb + R2a + R2b. It is easily verified that 
+Hence indeed. 0'4 = 4. 
+We have proven that the set (6.12) contains the value of T3( A BLS - 1). It has been computed by 
+Brouwer that the actual 3-rank of A BLS - I equals 67. 
+The Delsarte graph r D with parameters (v, k, >., Jl) = (243, lID, 37,60) has been introduced in 
+Section 3 as a subgraph of a graph on 276 vertices related to the McLaughlin graph by switching. 
+However. r D can also be directly constructed in the following way. Take as vertices the codewords 
+of the unique ternary Golay code of length 11 and dimension 5. Join two vertices when they have 
+Hamming distance 6. 
+We derived before that 19;:; T3(AD - 1(-J));:; 23. The lower bound can be slightly improved 
+by using characters. The Mathieu group MIl is an automorphism group of rD' Denote by <I> the 
+pennutation character yielded by the action of Mil on the vertex set of rD' Because 9 = 22. the 
+irreducible constituents of <1>( E2) must have degree;:; 22. The irreducible characters of Mil of degree 
+;:; 22 are XI, XIOa, XIOb, XIOc and XII. They satisfy 
+~. 3 
+~) 
+XI 
+= 
+I, 
+~3 
+\'IOi = 
+3 
+XlOi for i E {a, b, c}, 
+i II = 333 
+XI + X5a + X5b' 
+Applying Theorem 5.14 to the above-mentioned relations and recalling that T3(AD + 1( -J)) ~ 19. 
+it follows that T3(A D + 1( -J) ~ 20. 
+We finally consider a rank 3 graph derived from M24. This graph. which is denoted by r l288 • 
+has parameters (v, k, >., Jl) = (1288,792,476,504). Its spectrum is 7921,81035, ( -36 )252. Hence the 
+interesting cases are T2( A 1288 ) and TIl (AI288 + 31). 
+Let us first give an explicit description of r l288 . Take as vertices the cosets of {Q, l} in the extended 
+binary Golay code which contain two dodecads. Join two cosets when they have Hamming distance 
+12. 
+The II-rank of AI288 + 31 is easily obtained from Theorem 5.14. Let <I> denote the pennutation 
+character corresponding to the action of M24 on the vertex set of the graph. Then <1>( EI) = XI035 and 
+<I>(~) = X252. The irreducible constituents of ¢II(EJ) and ¢II(~) are given by 
+¢II(EJ) = XH9 + x~lx" 
+¢11(E2) = x~j + XH9 ' 
+Thus. by Theorem 5.14.229 ;:; Til (AI288 +31(-J»);:; 230. Since the sum of the rows of A 1288 +31 
+(J -
+AI288 - 31) equals 1 (-~) (modulo 11). the all-one vector is contained both in RIl (AI288 + 31) 
+and in RI d J -
+AI288 - 31). So Til (AI288 + 31) == Til (J -
+AI288 - 31) = 230 by Lemma 5.15. 
+57 
+
+=== PAGE 58 ===
+For the constituents of X~52 and XT035 we find 
+X152 
+= 2XTla + 2xTlb + ~4a + ~44b + XT20' 
+XT035 
+= 
+;t2252 + 3XT + ~44a + Xitb + X~20a + X~20b' 
+When not examining the structure of the graph in more detail, we can only conclude that ¢2(AI288) is 
+a constituent of ¢2( EI), which implies that the 2-rank of AI288 is an element of the set 
+6.8 
+Rank 3 graphs related to S2m ( q) 
+Infinite classes of strongly regular rank 3 graphs are derived from classicaL groups. For a survey we 
+refer to [4J or (lOJ. Here we shall consider the p-rank of elements of one such class. 
+Let q be a prime power of p. Denote by V2m,q the 2m-dimensional vectorspace over IFq. Define 
+the symplectic form hm,q : V2m,q X V2m,q 1--+ IF q (A5) by 
+Denote by P2m,q the collection of points of the projective geometry PG(2 m - 1, q). Take P2m,q as 
+vertex set of a graph r2m,q and join two different vertices (:g) and (Q) by an edge iff hm,q(J!, Q) = O. 
+Then r2m,q is a srg with parameters 
+q2m_1 
+q2m-l_ q 
+~m-2_1 
+V= 
+,k= 
+,A+2=J.L= 
+,r=qm-I-l,s=-qm-I_l. 
+q-l 
+q-l 
+q-l 
+From the eigenvalues it follows that if q is even, then the only interesting case is r2( A + 1). If q is 
+odd, then r2(A) and rp(A + 1) are the nontrivial cases (recall that p is such that q = pe). r2m ,q is a 
+rank 3 graph derived from S2m (q). 
+If q = 2, then r2( A2m,2) is easily determined by induction. Let (J!), (Q) be two different elements 
+of P2m -2,2. Then 
+Put A' := A2m-2,2 + hm-2. Then it follows from the above-mentioned relation that, by a suitable 
+labelling of the rows and columns, A2m.2 + hm can be expressed as 
+A' 1T 
+A' 
+1T 
+1 
+1 
+1 
+A' 
+11 
+A' 
+1 
+1 
+A' 
+J - A' 11 
+1 
+A' 
+J - A' 
+58 
+A' 
+1T 
+J - A' 
+1 
+A' 
+I 
+J - A' 11 
+A' 
+J - A' 
+J - A' 
+1 
+A' 
+(J!; (0)) 
+(Q; 10)) 
+(J!; lO)) 
+((Q; 01)) 
+(J!; 01)) 
+(Q; 11)) 
+((J!;ll)) 
+
+=== PAGE 59 ===
+where (!f) denotes an element of P2m-2,2. Perfonning suitable elementary row and column operations 
+over F2 on A2m.2 + hm we get 
+A' IT A' IT A' IT A' 
+1 
+1 
+1 
+J1 
+J 
+V 
+J 
+A2m,2 + hm ::: 
+I 
+1 
+I 
+IJ 
+J 
+~ 
+J 
+I 
+I 
+IJ 
+J J1 
+J 
+A' A' A' A' 
+I 
+1 
+1 
+1 
+1 
+1 
+1 
+1 
+1 
+1 
+0 
+(note that the rows of A' add up to I (modulo 2». Thus 
+(6.13) 
+The graph A4,2 has the same parameters as the complement of the triangular graph T(6). From 
+the uniqueness of the latter, it follows that T2( A4,2 + I) = T2( AT(8)) + 1 = 5 (Proposition 2.5). 
+Substituting this in (6.13) yields 
+T2( A2m,2 + 1) = 2m + 1. 
+Finally. since v = 22m -1 and k = 22m- 1 - 2 for r2m,2. we find T2(J - A2m,2 - I) = 2m by Lemma 
+3.8. 
+For q > 2. the adjacency matrix A2m.q is not as easi1y described as for q = 2. In that case we have 
+to look at the character obtained from the action of S2m ( q) on the vertices of r 2m,q. Let us examine 
+r4,3 and r4,S. 
+The action of S4(3) on the venex set of r4,3 yields the character Xl + XIS + X24. From the 
+Modular Atlas we obtain 
+and 
+X~3 -
+,,3 + X3 
+X" 3 -- X,3 + X3 
+IS -
+"S 
+10, 
+24 -
+10 
+14' 
+For r 4.3 we have v = 40 and k = 12, so it immediately follows from Lemma 3.8 and Theorem 
+5.14 that r3(A4 ,3 + 1) = T3(J - A4,3 - I) + 1 = 11. 
+Concerning the 2-rank, we derive that T2(.44,3) = 14 or 16 depending on whether IE R2(A4.3), 
+and 14 ::; T2(J - A4,3) = T2(81- 4A4,3 + J) ::; r(E2) = 15. 
+59 
+
+=== PAGE 60 ===
+The character afforded by the pennutation representation of S4(5) acting on r4,S equals Xl + 
+X65 + X90· We only examine the 2-rank of A4,5, since the Modular Atlas does not give a table of the 
+5-modular irreducible characters of S4(5). For X~5 and X~o we find 
+~s = xr + ~4' ~o = xt + Xt2a + Xt2b + X~4· 
+So r2(~,3) = 64 or 66 depending on whether 1 E n.2(~,3) or not, and 64 ::; r2(J - A4,3) = 
+r2(24I -
+6~,3 + J) ::; r(~) = 65. 
+6.9 Table of the results 
+To conclude this chapter, we list the results on the p-rank of srgs that have been derived in this chapter 
+or in the examples of Chapters 3 and 5. For results on the lattice and triangular graphs we refer to 
+Chapter 2. 
+If a set of possible values for rp( A + (J 1) is given, then 'idem' means that the same set holds for 
+rp( J - A -
+(J I). The entry '(=)' denotes that rp( J - A -
+(J 1) = rp( A + (J 1) and '(-1)' denotes that 
+r p( J - A -
+(J I) = r p( A + (J 1) - 1. Furthennore, the entry' *' in the last column indicates that this 
+result is not derived in this thesis (but is given for sake of completeness). Finally, the graphs No. 25 
+have parameters al = 22m - 1, a2 = 22m- 1 - 1 and a3 + 2 = a4 = 22m- 2 -
+1. 
+60 
+
+=== PAGE 61 ===
+No. 
+v 
+k 
+A 
+f.t 
+P 
+0' 
+Tp(A + 0'1) 
+Tp(J - A - 0'1) 
+1 
+16 
+5 
+0 
+2 
+2 
+1 
+6 
+6 
+Ex. 3.1 
+2 
+27 
+16 
+10 
+8 
+2 
+0 
+6 
+7 
+Ex. 3.3 
+3 -1 
+7 
+7 
+'" 
+3 
+36 
+14 
+4 
+6 
+2 
+0 
+14 
+14 
+Ex. 5.6 
+3 
+1 
+7$;T$;9 
+idem 
+4 
+40 
+12 
+2 
+4 
+2 
+0 
+14, 16 
+14 $; r $; 16 
+6.8 
+3 
+1 
+11 
+10 
+5 
+50 
+7 
+0 
+1 
+5 -2 
+20,21 
+(=) 
+6.6 
+6 
+56 
+10 
+0 
+2 
+2 
+0 
+20 
+20 
+Ex. 3.2 
+3 
+1 
+20 
+19 
+6.1 
+7 
+77 
+16 
+0 
+4 
+2 
+0 
+20 
+21 
+6.1 
+8 
+100 
+22 
+0 
+6 
+2 
+0 
+22 
+22 
+6.1 
+5 -2 
+23 
+23 
+9 
+100 
+36 
+14 
+12 
+2 
+0 
+36 
+35,36 
+Ex. 5.6 
+5 -1 
+22,23 
+idem 
+10 
+112 
+30 
+2 
+10 
+2 
+0 
+22 
+22 
+6.2 
+3 
+1 
+20 
+19 
+11 
+120 
+42 
+8 
+18 
+2 
+0 
+18,20 
+18 $; r $; 20 
+6.4 
+7 -2 
+20 
+20 
+12 
+156 
+30 
+4 
+6 
+2 
+0 
+64,66 
+64,65 
+13 
+162 
+56 
+10 
+24 
+2 
+0 
+20 
+21 
+6.2 
+3 
+I 
+21 
+21 
+14 
+175 
+72 
+20 
+36 
+2 
+0 
+20 
+21 
+6.6 
+5 -2 
+20,21 
+(=) 
+15 
+176 
+70 
+18 
+34 
+2 
+0 
+20,22 
+20 $; r $; 22 
+6.4 
+5 -2 
+22 
+22 
+16 
+176 
+90 
+38 
+54 
+2 
+0 
+20,22 
+20 $; r $; 22 
+6.6 
+5 -2 20 $; r $; 23 
+(=) 
+17 
+231 
+30 
+9 
+3 
+2 
+1 
+35,45,55 
+(-1) 
+6.5 
+3 
+0 
+55 
+55,56 
+18 
+243 
+22 
+1 
+2 
+3 -1 
+67 
+67 
+6.7 
+19 
+243 
+110 
+37 
+60 
+3 -1 
+20 $; r $; 23 
+idem 
+6.4.6.7 
+20 
+253 
+112 
+36 
+60 
+2 
+0 
+22 
+23 
+6.4 
+7 -2 
+23 
+23 
+21 
+275 
+112 
+30 
+56 
+2 
+0 
+22 
+23 
+6.2 
+3 
+1 
+22 
+21 
+5 -2 
+23 
+23 
+22 
+276 
+140 
+58 
+84 
+2 
+0 
+24 
+24 
+6.3 
+3 
+1 22$;r$;24 
+21 $; r $; 23 
+5 -2 
+23,24 
+idem 
+23 
+416 
+100 
+36 
+20 
+2 
+0 
+38,50,52, 
+37,38,50,51 
+Ex. 5.6 
+64,66 
+52,64,65,66 
+24 
+1288 792 476 504 
+11 
+3 
+230 
+230 
+6.8 
+25 
+al 
+a2 
+a3 
+a4 
+2 
+1 
+2m + 1 
+2m 
+6.8 
+61 
+
+=== PAGE 62 ===
+Appendix 
+Al t-Designs 
+Let X be a set of v elements. called points. and 8 a collection of k-subsets of X. called blocks, 
+such that every t-subset of X is contained in exactly A blocks. The pair (X,8) is called at-design 
+or, more preciseI y. a t-( v, k, A) design. 
+If A = 1. the design is called a Steiner system. Notation: 8(t, k, v). We shall only deal with the 
+following Steiner systems: 
+bo 
+b1 
+~ b3 
+h4 bs 
+S 
+8(5,8,24) 759 253 77 21 
+5 
+1 4,2,0 
+8(4,7,23) 253 
+77 
+21 
+5 
+1 
+3,1 
+8(3,6,22) 77 
+21 
+5 
+1 
+2,0 
+The column bi gives the number of blocks in which an arbitrary i-tuple is contained. Hence bo denotes 
+the number of blocks. The last column gives the possible values for the intersection of two different 
+blocks. 
+8 (4,7,23) is obtained from 8(5, 8, 24) by taking all blocks containing a fixed point and deleting 
+this point. In the same way, 8(3,6,22) is derived from 8(4,7,23). The remaining blocks form a 
+3-(22.7,4) design. From this design we obtain a 2-(21.6,4) design and a 2-(21,7,12) design. The 
+former can also be derived from 8(3,6, 22) by deleting aU blocks containing a fixed point. 
+v 
+k t 
+bo 
+hI 
+~ h) 
+s 
+22 7 3 176 56 16 4 3,1 
+21 7 2 120 40 12 
+3,1 
+21 6 2 56 
+16 
+4 
+2,0 
+An automorphism of a design is a permutation of the points such that blocks are carried into 
+blocks. The sporadic Mathieu groups M24 and M23 are the full automorphism groups of 8(5,8,24) 
+and 8(4, 7,23). respectively; the Mathieu group M22 is a group of index 2 in the full automorphism 
+group of 8(3,6,22). 
+A2 Partial geometries 
+A partial geometry with parameters (1(, R, T) consists of a set of elements, called points, and a 
+collection of J( -subsets, called lines. such that 
+62 
+
+=== PAGE 63 ===
+(i) 
+every point is on R lines; 
+(ii) 
+for every pair of points there is at most one tine containing them both (if there 
+exists such a line for a pair {x, y}. then x and y are said to be collinear); 
+(iii) if a point p is not on a tine L. then p is collinear with exactly T points of L. 
+A partial geometry with T = 1 is called a generalized quadrangle GQ(s, t), where s := K - 1 and 
+t:= R - 1. 
+The point graph of a partial geometry is defined as foUows. Take the points as vertices and join 
+two vertices by an edge iff they are collinear. This graph is strongly regular with parameters 
+v = KT-1«K - l)(R -1) + T), k = R(K -1), ~ = K - 2 + (R -l)(T - 1), p = RT. 
+A3 Projective geometries 
+The projective geometry of dimension mover F q can be defined as the collection of linear sub-
+spaces of the vectorspace V := ~+l. It is denoted by PG( m, q). The I-dimensional subspaces of 
+V are called points and the 2-dimensional subspaces of V are called lines. 
+A projective plane is defined as a collection of points and lines satisfying 
+(i) 
+for every pair of two points there is a unique line containing them both; 
+(ii) 
+any two lines meet in a unique point; 
+(iii) 
+there exist four points no three of which are on a line. 
+It is a Steiner system S(2, n + 1, n2 + n + 1) for some n ~ 2. when taking the lines as blocks. A 
+projective geometry of dimension 2 is a projective plane; the converse does not necessarily hold. 
+A collineation of PG( m, q) is a permutation of the points carrying lines into lines. The full 
+collineation group is denoted by prL(m + l,q). Every element of GL(m + l,q). the group of 
+nonsingular (m + 1) x(m + 1) matrices with entries in F q, induces a collineationof PG(m, q). The 
+projective general linear group PG L( m + 1, q) consists of all collineations induced by the elements of 
+G L( m + 1, q). The subgroup induced by the matrices of determinant 1 is denoted by P S L( m + 1, q). 
+A subplane of a projective plane is a subset of points and lines which is itself a projective plane. 
+The subplanes of order 2 in PG(2, 4) are called Fano sub planes. There are 360 Fano subplanes which 
+fall into 3 orbits under the action of P S L(3, 4). Fano planes in the same orbit intersect in an odd 
+number of points; those in different classes have an even number of points in common. 
+A4 The Golay codes 
+Several strongly regular graphs are derived from the extended binary Golay code g24 and the ternary 
+Golay code gil. For an extensive treatment of the Golay codes. we refer to Chapter 20 of Mac Williams 
+and Sloane [15]. 
+The extended binary Golay code {h4 is a [24,12] code with minimum distance 8. The 759 
+codewords of weight 8 form an S(5, 8,24) and are called octads. The 1288 codewords of weight 
+12 are called dodecads. The code is self-dual. The automorphism group of a code is fonned by the 
+permutations of the coordinates which map every codeword to a codeword. The Mathieu group M24 
+is the full automorphism group of g24. 
+gil is a [11.6,5] code over F3 which contains its dual. The Mathieu group Mll is a group of 
+automorphisms for the code. The dual go is a [11.5] code consisting of the all-zero word. 110 words 
+of weight 6 and 132 words of weight 9. 
+63 
+
+=== PAGE 64 ===
+Let C be an [n, k] linear code over F q. For any vector £> the set 
+is caUed a coset of C. Two vectors £ and y are in the same coset iff £ -
+11 is a codeword. Two cosets 
+are either disjoint or coincide. The 35 = 243 cosets of (ill are uniquely represented by the 220 vectors 
+of weight 2. the 22 vectors of weight 1 and the all-zero vector. This holds. because the minimum 
+distance of the code equals 5, hence every vector of weight::; 2 must be in a coset containing no other 
+word of weight::; 2. 
+AS Symplectic forms 
+Let V be a vectorspace of finite dimension n over a field F. A bilinear form I on V is said to 
+be symplectic if I(J!, y.) = 0 for every J! e V. A symplectic form satisfies 
+1(y.,J./.) = - l(lZ,J!) 
+for all Y.,lZ e V. 
+A symplectic form I is called degenerate if there exists an element Y. :f:. Q such that I(y., lZ) = Q 
+for alllZ e V. If II and h are both symplectic forms defined on V, then they are called equivalent if 
+there exists a linear transformation 9 on V such that 11 (J!, lZ) = h ( 9(y), 9(lZ» for all y., lZ e v. 
+Theorem Let I be a nondegenerate symplectic form defined on a vectors pace V. Then dimeV') 
+is even and I is equivalent to r, where r is defined as 
+For a proof of this theorem we refer to Suzuki [20, p.373]. 
+A linear transformation () on V is said to leave the form I invariant if for every y., lZ e V 
+The symplectic group Sn(q) consists of all n x n matrices over Fq leaving the nondegenerate sym-
+plectic form r invariant. 
+We conclude this section with the proof of Lemma 3.9 in which it is stated that the 2-rank of the 
+adjacency matrix of any graph is even. 
+A matrix M with entries in a field F of characteristic :f:. 2 satisfying M = - MT, corresponds to 
+the symplectic form I defined by 
+1(Y.,lZ):= JJr.MlZT. 
+It is easily verified that I is indeed a symplectic form. If char(F) = 2, then a symmetric matrix 
+M e pnxn with zeros on the diagonal represents a symplectic form in a similar way. 
+The form I is nondegenerate on the rowspace of Mover F. Thus, by the above-mentioned 
+theorem, 'RF( M) is even. The adjacency matrix of a graph is symmetric and its diagonal elements 
+all equal zero, hence its 2-rank is even. 
+64 
+
+=== PAGE 65 ===
+Bibliography 
+[1] 
+Bagchi, B., A.E. Brouwer and H.A. Wilbrink, Notes on binary codes related to the 0(5, q) 
+generalized quadrangle for odd q, Geometriae Dedicata 39 (1991), 339 - 355. 
+[2} 
+Bagchi, B. and N.S.N. Sastry, Codes associated with generalized polygons, Geometriae Dedi-
+cata 27 (1988), 1 - 8. 
+[3] 
+Brouwer. A.E. and W.H. Haemers. The Gewirtz graph - an exercise in the theory of graph 
+spectra, to appear in Eur. J. Comb. 
+[4] 
+Brouwer, A.E. and J.H. van Lint, Strongly regular graphs and partial geometries. in: Enumer-
+ation and Design, D.M. Jackson and S.A. Vanstone (eds.), Academic Press. Toronto, 1984, 85 
+-122. 
+[5] 
+Cameron, P.]., Strongly regular graphs, in: Selected topics in graph theory. L.W. Beineke and 
+RJ. Wilson (eds.), Academic Press, London, 1978,337 - 360. 
+[6] 
+Conway, lH., RT. Cunis, RP. Parker and RA. Wilson, Atlas offmite groups, Oarendon Press, 
+Oxford, 1985. 
+[7] 
+Cvetkovic, D.M., M. Doob and H. Sachs, Spectra of Graphs: Theory and Application. Aca-
+demic Press, New York, 1980. 
+[8] 
+Goethals, lM. and J.J. Seidel, The regulartwo-graph on 276 vertices, Discrete Math. 12 (1975), 
+143 - 158. 
+[9] 
+Hamada. N., On the p-rank of the incidence matrix of a balanced or panially balanced incom-
+plete block design and its applications to error correcting codes, Hiroshima Math. J. 3 (1973), 
+153 - 226. 
+[10] 
+Hubaut, X.L., Strongly regular graphs, Discrete Math. 13 (1975), 357 - 381. 
+[11] 
+Isaacs. I.M., Character Theory of Finite Groups, Academic Press, New York, 1976. 
+[12] 
+Lander. E.S .• Symmetric Designs: An Algebraic Approach. Cambridge University Press, Cam-
+bridge. 1983. 
+[13] 
+Linial. N. and B. Rothschild, Incidence matrices of subsets - a rank fonnula, SIAM J. A/g. 
+Discr. Meth. 2 (1981),333 - 340. 
+{14] 
+Lint, lH. van, Introduction to Coding Theory, Springer-Verlag, New York. 1982. 
+65 
+
+=== PAGE 66 ===
+[15] 
+MacWilliams, F.1. and N.1.A. Sloane, The Theory of Error-Correcting Codes, North-Holland, 
+Amsterdam, 1977. 
+[16] 
+Marcus, M. and H. Minc, A Survey of Matrix Theory and Matrix Inequalities, Allyn and Bacon, 
+Boston, 1964. 
+[17] 
+Newman, M., Integral Matrices, Academic Press, London, 1972. 
+[18] 
+Parker, R.P., Modular Atlas. Preprint, 1989. 
+[19] 
+Seidel, J.1 .• Strongly regular graphs, in: Surveys in Combinatorics, B. Bollobas (00.), Proc. 7th 
+British Comb. Conf., London Math. Soc. Lecture Note Series, No. 38, Cambridge 1979, 157 -
+180. 
+[20] 
+Suzuki, M., Group Theory I, Springer Verlag, Berlin, 1982. 
+[21] 
+Wilson, R.M., A diagonal fonn for the incidence matrices of t-subsets vs. k-subsets, Eur. J. 
+Combinatorics 11 (1990),609 - 615. 
+66 

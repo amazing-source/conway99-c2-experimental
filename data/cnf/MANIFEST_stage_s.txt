@@ -1,0 +1,2 @@
+b668780d3327d9a0c5ff60800482af6ad08177dc4e5bcf009529505cea6418b4 *data/cnf/stage_s_alone.cnf
+3ad23797565c331405fda653111b7571cd60f97b9146d45d0fdb9bd40599a179 *data/cnf/stage_s_alone_breakid.cnf

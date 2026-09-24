@@ -1,0 +1,6 @@
+﻿cover4_K2K2P3 4 UNSAT 32.1
+K6_on_1to6_uncover7 15 UNSAT 32.7
+K5_on_1to5_plus_67 11 UNSAT 29.3
+cover5_P3P3K2 5 UNSAT 37.0
+K5_on_1to5_uncover67 10 UNSAT 38.2
+cover6_star7 6 TIMEOUT 300.0

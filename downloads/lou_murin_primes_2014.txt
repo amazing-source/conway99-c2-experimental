@@ -1,0 +1,581 @@
+=== PAGE 1 ===
+ON THE STRONGLY REGULAR GRAPH OF PARAMETERS
+(99, 14, 1, 2)
+SUZY LOU AND MAX MURIN
+Abstract. In an attempt to ﬁnd a strongly regular graph of parameters (99, 14, 1, 2)
+or to disprove its existence, we studied its possible substructure and constructions.
+1. Introduction
+Throughout the paper, the character ∼will denote adjacency; G will denote the
+graph with the parameters under question, assuming it exists; and V will denote the
+vertex set of G.
+Deﬁnition 1.1. A strongly regular graph with parameters (n, k, λ, µ) is a k-regular
+graph on n vertices such that a pair of vertices has λ neighbors in common if they
+are adjacent, and µ neighbors in common otherwise. There are many parameter sets
+for which it can be proven that no strongly regular graph exists, but for many other
+parameter sets, neither existence nor existence of a corresponding strongly regular
+graph has been shown. One of these parameter sets is (99, 14, 1, 2).
+Though these graphs are easy to deﬁne, it is not yet well understood for which
+parameter sets there exist at least one corresponding graph. Because of this lack
+of understanding, it is desirable to ﬁnd out whether or not a parameter set such as
+(99, 14, 1, 2) might correspond to a graph. In addition, it is unknown whether there is
+a Moore graph, a graph with diameter k and girth 2k+1, with 57 vertices and girth 5.
+If this graph exists, it would be strongly regular and would complete the classiﬁcation
+of Moore graphs. Though this particular problem is not related to Moore graphs,
+these two facts contribute to the interest in strongly regular graphs.
+In studying this graph, we created several unsuccessful attempts at construction.
+We also found certain properties, such as bounds for the chromatic number and the
+size of a maximal independent set, possible substructures, and possible orders of
+automorphisms. In Section 2 we will ﬁrst examine the ways the strongly regular
+graph of parameters (9, 4, 1, 2) could potentially be a substructure. In Section 3 we
+will discuss attempted constructions with Fano-planes, followed by a discussion in
+Section 4 of maximal independent sets and a discussion of a triangle decomposition
+in Section 5. Section 6 will contain a discussion of possible orders of automorphisms
+in the graph. Section 7 will discuss the relationship of G with rotational block designs,
+and ﬁnally Section 8 will discuss the structures that arise from an automorphism of
+order 7.
+2. The srg(9, 4, 1, 2) as a substructure
+Let H be the unique strongly regular graph of parameters (9, 4, 1, 2).
+Key words and phrases. Strongly regular graphs.
+The project was supported by the PRIMES-USA program of MIT.
+1
+
+=== PAGE 2 ===
+2
+S. LOU AND M. MURIN
+Theorem 2.1. If G contains H minus an edge as a subgraph, then it contains H as
+an induced subgraph.
+Proof. Suppose, for the sake of contradiction, that there H minus an edge was an
+induced subgraph in G.
+According a lemma of Wilbrink and Brouwer[1], the following equation holds for
+an induced subgraph of a strongly regular graph with parameters (n, k, λ, µ), such
+that the induced subgraph has N vertices, of degree d1, . . . , dN, and M edges:
+(n −N) −(kN −2M) + λM + µ
+N
+2
+
+−M
+
+−
+N
+X
+i=1
+di
+2
+
+= x0 +
+N
+X
+j=3
+j −1
+2
+
+xj,
+where xj denotes the number of vertices outside the subgraph adjacent to exactly j
+vertices in the induced subgraph.
+One may verify that no vertex outside of the subgraph is adjacent to more than
+3 vertices in this particular subgraph; otherwise, at least one of the parameters is
+violated. Therefore, applying the lemma above, x0 + x3=5.
+The induced subgraph is illustrated in Fig. 1.
+Figure 1. An illustration of the induced subgraph, which we shall
+prove does not exist in G.
+For convenience, the induced subgraph on the vertices labeled Xa, Xb, Ya, Yb, Za,
+Zb will be referred to as the "prism." Consider the bold edges. Each of these edges
+must form a triangle with another vertex. Keeping the third and fourth parameters
+in mind, we ﬁnd that the two vertices that form a triangle with these edges are not
+adjacent to any vertex of the triangular prism and do not coincide.
+Vertices X and Z share vertex Y as a common neighbor and have one more common
+neighbor. Again by examining the third and fourth parameters we ﬁnd that this other
+
+=== PAGE 3 ===
+ON THE STRONGLY REGULAR GRAPH OF PARAMETERS (99, 14, 1, 2)
+3
+common neighbor is not adjacent to any vertex of the triangular prism and does not
+coincide with the vertices previously mentioned.
+This results in the subgraph shown in Fig. 2:
+Figure 2. A more detailed subgraph that must exist in G if the in-
+duced subgraph shown in Fig. 1 exists.
+Let S be the set of the 60 vertices such that they are the neighbors of a vertex in
+the prism, that are themselves not in the prism.
+By the fourth parameter, X and Z are each adjacent to 2 vertices in S. Similarly,
+vertex Y is adjacent to no such vertices. We ﬁnd that X and Z are hence adjacent
+to 9 vertices that are not in S, and for both X and Z, 2 of these 9 neighbors are
+already drawn in the diagram. Similarly, Y has 10 neighbors that do not belong to
+S, and two of them are drawn in the diagram.
+Given this information, we can directly compute x0: it is 5. Thus, x3 = 0.
+Figure 3. All the vertices that have 2 or more neighbors in S ∩{1, 2, 3}
+Consider a vertex v belonging to this set of ﬁve vertices. By the fourth parameter,
+exactly twelve of its neighbors belong to S. We also know that v shares two neighbors
+with each of X, Y , Z. How is this possible? That would seem to make 18 neighbors
+
+=== PAGE 4 ===
+4
+S. LOU AND M. MURIN
+of v, so we must be overcounting. At least 4 neighbors of v must either be adjacent
+to two of X, Y , Z, or simultaneously be adjacent to one of X, Y , and Z and belong
+to S. (Recall it is impossible for a vertex belonging to S to be adjacent to more than
+one of X, Y , and Z.)
+That is to say, each of these ﬁve are adjacent to four of the green vertices in the
+subgraph shown in Fig. 3, where H −4, H −5, H −6, H −7 are the vertices that
+simultaneously are adjacent to one of X, Y , and Z and belong to S.
+Choosing 4 vertices from 7 is the same as not choosing 3 from the 7, and we note
+that because of the fourth parameter, at least 2 members of the set {H −1, H −
+2, H −6, H −7} must not be chosen, and similarly, at least two members of the
+set {H −1, H −3, H −4, H −5} must not be chosen. That means that H −1 can
+never be chosen. Then H −1 has no neighbors from the vertices constituting x0.
+However, since H −1 does not belong to S, we can count its neighbors: 2 are shown
+in the previous diagram; by the fourth parameter, 8 of its neighbors belong to S. Its
+remaining neighbors must be adjacent to one or more of X, Y , and Z, but not to any
+vertices of the triangular prism. But it already shares two neighbors with Y , and for
+each of vertex X and vertex Z it needs only 1 more common neighbor. Then H −1
+has only 12 neighbors, contradiction.
+□
+3. Labelings with Fano planes
+Deﬁnition 3.1. A Fano plane is a set of seven 3-element subsets, called lines, of
+{1, . . . , 7} such that every pair of lines share exactly one element. The elements are
+also called points.
+There are 30 distinct Fano planes, which can be grouped into two disjoint sets of 15
+Fano planes, such that two Fano-planes in the same set have the following property:
+the two Fano planes share exactly one 3-element set, one Fano plane can be obtained
+from the other by cyclically permuting the three elements of this shared 3-element
+set. In addition, if we cyclically permute three elements of a single set of a Fano
+plane, the result is a Fano plane in the same set of 15 Fano planes as the initial Fano
+plane.
+Suppose one of these disjoint sets of 15 Fano planes is {F0, F1, . . . , F14}. Suppose
+that F0, F2n−1, and F2n share a line for n ∈1, . . . , 7. Then we can label G as follows:
+Call a central vertex F0, and its 14 neighbors F0 . . . F14, such that F0, F2n−1, and F2n
+form a triangle.
+For the other 84 vertices in the graph, suppose a vertex is the common neighbor
+of Fi and Fj. If Fk is the Fano-plane such that Fi, Fj, Fk all share a line, and e is
+the shared line, then label the vertex as (Fk, e).
+One attempt at construction was to create rules for adjacency among the vertices
+(Fk, e). However, none of the rules that were tried worked. A few rules that were the
+most noteworthy were the following.
+1. Consider neighbors of Fx of the form (F, l). Connect two of them if the line the
+Fano-plane portion of their labellings share is in F0. This rule is equivalent to the
+impossible construction with srg(9, 4, 1, 2).
+2. Connect (Fx, lm) and (Fy, ln) if lm and ln are disjoint.
+3. Consider Fx and Fy that form a triangle with F0. Connect a neighbor of Fx of
+form (F, l) and a neighbor of Fy of form (F, l) if the Fano-plane part of their label is
+the same.
+
+=== PAGE 5 ===
+ON THE STRONGLY REGULAR GRAPH OF PARAMETERS (99, 14, 1, 2)
+5
+4. The following is not a rule, but rather a set of conditions for a rule.
+Let e be the line Fk shares with F0. In that case, Fk can be obtained from F0 by
+cyclically permuting e. Consider the vertex e ∩l, which we will call P. Deﬁne the
+root of a vertex (Fk, l) to be the point such that P occupies the position it previously
+occupied before the rotation.
+The root has the following property: Consider any one of the four lines of Fk that
+do not contain P, and consider two points of that line, a and b. Then a, b, and the
+root do not form a line in F0. It is the only point with this property.
+Consider (Fk, l); suppose its root is P and that it is connected to Fa and Fb. Then
+consider all the lines that contain P but are not included in F0. There are 12 such
+lines. For each line lm that is one of the twelve, consider the three vertices such that
+lm is included in their label. Choose one of them whose root is part of l and connect
+(Fk, l) to it.
+The reason these conditions cannot be met is the condition that (Fk, l) shares
+exactly one vertex with Fa and with Fb: there is no way to meet this condition.
+4. Independent sets and 2-block designs of parameters (22, 4, 2).
+Theorem 4.1. An independent set in G of size 9 cannot be maximal.
+Proof. Suppose there were such a maximal independent set, I. Let xi be the number
+of vertices in V \ I adjacent to exactly i vertices in I, and let yi denote the set of
+vertices with i neighbors in I. For i ≥6, xi = 0. This is because a vertex vj with j
+neighbors in I needs 2(9 −j) + j = 18 −j common neighbors with the vertices of I,
+and has 14 −j neighbors in V \ I. But if vj had a neighbor with 6 or more neighbors
+in I, then it would have to have at least 19 −j common neighbors with the vertices
+of I. Thus, if there were a vertex with 6 or more neighbors in I, it would have no
+neighbors in V \ I, which is clearly impossible.
+Lemma 4.2. Related to the above observation, for all vertices vj in V \ I, if a, b, c,
+and d are the number of neighbors of vj with, respectively 2, 3, 4, and 5 neighbors in
+I, a + 2b + 3c + 4d = 4. This also means that a vertex in V \ I can never serve as a
+common neighbor for a vertex in y5 and a vertex with 2 or more neighbors in I.
+Proof. A vertex vj with j neighbors in I needs 2(9−j)+j = 18−j common neighbors
+with the vertices of I. The actual number of common neighbors is 2a+3b+4c+5d+
+(14 −j −a −b −c −d). Setting this equal to 18 −j yields the above.
+□
+We have
+x1 + x2 + x3 + x4 + x5 = 90
+x1 + 2x2 + 3x3 + 4x4 + 5x5 = 9 ∗14 = 126
+x2 + 3x3 + 6x4 + 10x5 = 2
+9
+2
+
+= 72.
+In addition, we have x5 ≤3. Suppose, on the contrary, we had 4 vertices A, B, C, D
+such that each had 5 neighbors in I. If A and B shared only one common neighbor,
+no vertex could have more than 4 neighbors in I without sharing 3 neighbors with
+A or B. Thus, they must share 2 common neighbors. Then C and D must both be
+adjacent to the vertex of I adjacent to neither A nor B, as well as 2 vertices adjacent to
+A only and 2 vertices adjacent to B only. Then C and D share 3 common neighbors,
+contradiction. Note that if x5 = 3, then any pair of vertices with 5 neighbors in I
+
+=== PAGE 6 ===
+6
+S. LOU AND M. MURIN
+share two common neighbors in I. In this case, 6 vertices in I have 2 neighbors in
+y5, and 3 vertices in I have 1 neighbor in y5.
+The only solutions to the above equations are: (78, 0, 0, 12, 0), (77, 0, 6, 4, 3),
+(77, 2, 0, 10, 1), (76, 4, 0, 8, 2), (77, 1, 3, 7, 2), (79, 3, 3, 5, 3), (75, 6, 0, 6, 3).
+However, none of these solutions work. In the ﬁrst solution, (78, 0, 0, 12, 0), consider
+the 12 vertices with 4 neighbors in I. For every time a vertex in I is adjacent to such
+a vertex, it gains a common neighbor with a diﬀerent vertex in I 3 times. In total, it
+must gain 2 ∗8 = 16 common neighbors in I, but 16 is not divisible by 3, so this is
+impossible.
+Now note that the number of edges from y2 ∪y3 to y4 ∪y5 is at most |y2 ∪y3|,
+because each vertex of y2 ∪y3 has at most one neighbor in y4 ∪y5. On the other
+hand, it is also at least |y4|−|y5|, because at most |y5| members of y4 have a neighbor
+in y5, and the rest must have a neighbor in y2 ∪y3. For the third, fourth, and ﬁfth
+solutions, this causes an immediate contradiction.
+In the second solution, (77, 0, 6, 4, 3), Lemma 4.2 implies that the 3 vertices in y5
+each have 2 neighbors in y3, and none in y4. Thus every vertex in y4 ∪y5 must have
+a neighbor in y2 ∪y3, but this means there are at least 7 edges between y2 ∪y3 and
+y4 ∪y5, while on the other hand there are at most 6; contradiction.
+In the sixth solution, (79, 3, 3, 5, 3), consider the 5 vertices in y4. As mentioned
+before, 6 vertices in I have 2 neighbors in y5, and 3 vertices in I have 1 neighbor in
+y5. Each vertex in y4 must have at least 2 neighbors in I that have 1 neighbor in
+y5, or else it shares at least 3 neighbors with a vertex in y5. Thus, each serves as a
+common neighbor either 1 or 3 times for the 3 vertices in I that have 1 neighbor in
+y5. These 3 vertices share a common neighbor a total of 6 times, so we see that each
+of the 5 vertices in y4 has exactly 2 neighbors out of these 3 vertices in I. Then none
+of them is adjacent to a vertex in y5. Then the only way for Lemma 4.2 to be fulﬁlled
+with respect to the vertices in y5 is for a vertex to be adjacent to 2 vertices in y3, or
+1 vertex in y3 and 2 vertices in y2. Then 2 vertices in y5 share a common neighbor in
+y3 or y2, as well as 2 common neighbors in I, contradiction.
+In the seventh solution, (75, 6, 0, 6, 3), as above, the 6 vertices in y4 must each be
+adjacent to exactly 2 vertices in I that have 1 neighbor in y5. Thus, no edges exist
+between y4 and y5. Then to fulﬁll the lemma, each vertex in y5 has 4 neighbors in
+y2. Then 2 vertices in y5 share at least 2 neighbors in y2 as well as 2 neighbors in I,
+contradiction.
+Thus, all possibilities lead to a contradiction.
+□
+Theorem 4.3. The largest independent set of a strongly regular graph of parameters
+(99, 14, 1, 2) has size at most 22. If it has size 22 then every vertex not belonging to
+the independent set has exactly 4 neighbors in the independent set.
+Proof. Let I be a maximal independent set with n vertices. The set S of all vertices
+with at least one neighbor in I has size 99 −n. The number of edges between S and
+I is 14n.
+Suppose S = {s1, . . . , s99−n}. Let F(i) be the number of neighbors si has in I.
+Therefore, P99−n
+i=1 F(i) = 14n. In addition, because 2 nonadjacent vertices share 2
+neighbors, P99−n
+i=1
+ F(i)
+2
+
+= 2
+ n
+2
+
+= n2 −n. Therefore, P99−n
+i=1 F(i)2 = 2n2 + 12n.
+By the RMS-AM inequality,
+qP99−n
+i=1
+F(i)2
+99−n
+=
+q
+2n2+12n
+99−n
+≥
+P99−n
+i=1
+F(i)
+99−n
+=
+14n
+99−n. After
+some algebra, this turns into −n2 −5n + 594 ≥0, so −27 ≤n ≤22. Thus, the
+
+=== PAGE 7 ===
+ON THE STRONGLY REGULAR GRAPH OF PARAMETERS (99, 14, 1, 2)
+7
+maximum size of I is 22, as desired. Equality holds when F(i) is equal across all
+values of i; thus, for all i, F(i) = 14∗22
+77
+= 4.
+□
+The 77 vertices outside the independent set all have 4 neighbors in S.
+5. Miscellaneous.
+Assuming existence, G has a unique triangle decomposition. Consider a triangle
+and all triangles adjacent to it. This is illustrated in Fig. 4.
+Figure 4. An illustration of a triangle in G and all adjacent triangles.
+Since there are 99∗14
+2
+= 693 edges in the graph, there are 693
+3 = 231 disjoint triangles
+in the graph. We can consider a graph T on 231 vertices such that each triangle in G
+is a vertex of T and two vertices in T are adjacent iﬀthe corresponding triangles in
+G share a vertex. The graph T is 18-regular, and because G has diameter 2, T has
+diameter 3. In the above diagram, a central vertex in T is called v.
+Lemma 5.1. The chromatic number of G is between 5 and 11.
+Proof. The lower bound of 5 is a direct consequence of the fact that the maximum
+size of an independent set in G is 22.
+By the second parameter, there is a perfect matching between the vertices Xi and
+Yi. Similarly, there is a perfect matching between the vertices Yi and Zi, and Xi and
+Zi. Then these edges determine disjoint cycles of total length 36, each cycle of length
+divisible by 3.
+As a result, the induced subgraph on the 36 vertices is 3-regular.
+By Brook’s
+Theorem, these vertices can be 3-colored. Assign them an arbitrary 3-coloring.
+Let the set V ′ = V \ {X1, . . . , X12, Y1, . . . , Y12, Z1, . . . , Z12}.
+Now, consider the
+vertices of V ′. By the fourth parameter, each one has two neighbors of the form Xi,
+two neighbors of the form Yi, and two neighbors of the form Zi. Thus, the induced
+
+=== PAGE 8 ===
+8
+S. LOU AND M. MURIN
+subgraph on these vertices is 8-regular. Again by Brook’s Theorem, these vertices
+can be 8-colored. Assign them an arbitrary 8-coloring with colors that have not been
+used before.
+Now consider X, Y , and Z, which have not been assigned colors. Assign them 3
+distinct colors from the 8-coloring on the vertices in V ′.
+Thus, the graph is 11-colorable.
+□
+Let us shift our attention again to T, so that a vertex refers to a triangle, and
+a G-vertex refers to a vertex in the traditional sense. Consider the set of vertices
+distance 2 from v. Now deﬁne the following:
+α : The number of such vertices connected to exactly one G-vertex distance 1 from
+v.
+α −vertex : A vertex with the above property.
+β : The number of such vertices connected to exactly two G-vertices distance 1
+from v.
+β −vertex : A vertex with the above property.
+γ : The number of such vertices connected to exactly three G-vertices distance 1
+from v.
+γ −vertex : A vertex with the above property.
+One may easily verify the following equations:
+α + β = 180
+β + 3γ = 36
+α −3γ = 144.
+Also, the number of vertices distance 3 from v is 32 −γ = 20 + β
+3. The value γ is an
+integer between 0 and 12. Note that γ cannot be 11: as we noted before, the perfect
+matchings between the vertices of form Xi, Yi; Yi, Zi, and Xi, Zi fall into disjoint
+cycles of lengths divisible by 3 and summing to 36. But if γ = 11, we have 11 3-cycles
+and three loose edges that do not fall into cycles; contradiction.
+If γ = 12 for all vertices in T, then this reduces to the impossible labeling with
+srg(9, 4, 1, 2). This is apparent after relabeling the previous diagram as in Fig. 5.
+Figure 5. A relabeling of the diagram in Fig. 4 that demonstrates
+the connection between γ = 12 and the ﬁrst structure discussed.
+
+=== PAGE 9 ===
+ON THE STRONGLY REGULAR GRAPH OF PARAMETERS (99, 14, 1, 2)
+9
+6. Possible orders of automorphisms of G
+Theorem 6.1. srg(99, 14, 1, 2) has no automorphisms of p > 14, where p is prime.
+Proof. An automorphism of the graph G of order p must have at least one orbit of
+order p, since p is prime. However, not every point of the graph can be in such an
+orbit, since p ∤99. Since the graph is connected, at least one point in an orbit must
+connect to a point P not in an orbit. However, by applying the automorphism, we
+can see that the P connects to every point in the orbit, so deg P = 14 ≥p > 14.
+This is a contradiction, so no automorphisms of order p exist.
+□
+Theorem 6.2. srg(99, 14, 1, 2) has no automorphisms of order 13.
+Proof. Assume such an automorphism π exists. Then, as before, we must have at
+least one automorphism of order 13, and points not in any orbits. By connectedness,
+there must exist a point P which connects to an orbit; thus, P must connect to every
+point in that orbit. P must also connect to exactly one more point, which cannot
+be in an orbit.
+By the property λ = 1, P must share a common neighbor with
+each of these points. Thus, two points A and B in the orbit must be connected to
+each other. Since π has order 13, and A and B are in the same orbit, there exists a
+positive integer n < 13 such that πn(A) = B. Since π is an automorphism, πn is also
+an automorphism. Thus, B connects to πn(B). However, P and B are connected,
+and have two common neighbors: A and πn(B). This is a contradiction, so π cannot
+exist.
+□
+Theorem 6.3. srg(99, 14, 1, 2) has no automorphism of order 11.
+Proof. Assume that some such automorphism π exists. Let n be the number of orbits
+of size 11 of π. Then, 1 ≤n ≤9. First, examine the case that n < 9. In this case,
+orbits of size 1 exist. By connectedness, there must be a point P that connects to an
+orbit. Each of the points in the orbit must connect to another neighbor of P. Since
+P has 3 neighbors outside of the orbit and 11 inside it, there must be two points in
+the orbit that connect. As before, contradiction. Thus, n = 9.
+Let us label the orbits A1 through A9. Then, let us deﬁne a matrix M by Mij being
+the number of points in Ai that any point in Aj connects to. Note that Mij = Mji,
+so M is symmetric.
+If any two points in the same orbit Ai, P and Q, are connected, then there exists
+a j such that P = πj(Q). Then, since π is an automorphism, πj(P) ∼πj(Q) = P.
+πj(P) is also in Ai. If the same process is repeated with P and πj(P), we get back
+Q. Therefore, for any point in Ai, all of its neighbors in Ai can be paired, and thus
+Mii is even for all i.
+Let us consider the eigenvalues of M. The eigenvalues of the adjacency matrix
+of G are 14, 3, and −4.
+Any eigenvector of M corresponds to an eigenvector of
+G, the correspondence being to set every point in Ai to the corresponding value in
+the eigenvector of M. By the deﬁnition of M, the eigenvalue must also be equal:
+therefore, the eigenvalues of M must be in the set {14, 3, −4}. Since the adjacency
+matrix of G has the eigenvalue 14 with multiplicity 1, M can have this eigenvalue
+with multiplicity at most 1; the vector ⟨1, 1, 1, 1, 1, 1, 1, 1, 1⟩has this eigenvalue, so
+the multiplicity of the eigenvalue 14 is exactly 1. Next, note that the sum of the
+eigenvalues is equal to the trace, and that the diagonal of M must contain only
+positive even integers. Thus, the sum of the eigenvalues must be an even positive
+
+=== PAGE 10 ===
+10
+S. LOU AND M. MURIN
+integer that is a sum of 14 and eight values from the set {3, −4}. The only such even
+positive sums are 38, 24, and 10.
+Let us now consider the matrix M 2. Since Mij counts the number of ways to get
+from one speciﬁc point in Ai to any point in Aj by a path of length exactly 1, (M 2)ij
+counts the number of ways to get from any speciﬁc point in Ai to some point in Aj
+along a path of length exactly 2. In other words, (M 2)ij is the number of common
+neighbors one speciﬁc point of Ai has with all of the points of Aj. First, consider
+the case that i = j. Any point has degree 14, so it has 14 common neighbors with
+itself. Then, any point of the orbit Ai is connected to Mii points on the same orbit
+by the deﬁnition of M. For each one it is connected to, it has 1 common neighbor;
+otherwise, it has 2. Thus, (M 2)ii = 14 + Mii + 2(10 −Mii) = 34 −Mii. If i̸ = j, then
+(M 2)ij = Mij + 2(11 −Mij) = 22 −Mij, similarly. Therefore, (M 2 + M)ij = 34 if
+i = j and 22 otherwise.
+By deﬁnition,
+(M 2)ii =
+9
+X
+j=1
+M 2
+ij = 34 −Mii.
+This implies that every value in M must be at most 5.
+Since the degree of any vertex is 14, the sum of the values of any row must be equal
+to 14. By trying every possibility, it can be shown that there are only seven possible
+rows of M that fulﬁll these two equations, up to permutation:
+0, 4, 3, 2, 1, 1, 1, 1, 1
+0, 4, 2, 2, 2, 2, 1, 1, 0
+0, 3, 3, 3, 2, 1, 1, 1, 0
+0, 3, 3, 2, 2, 2, 2, 0, 0
+2, 4, 2, 2, 1, 1, 1, 1, 0
+2, 3, 3, 2, 2, 1, 1, 0, 0
+4, 2, 2, 1, 1, 1, 1, 1, 1
+The ﬁrst value in each listing must lie on the diagonal.
+Note that the value 5 occurs in no row. Therefore, it is never possible to have a
+value of 5 in M. Thus, the sum of the eigenvalues can never be 38, so it must be
+either 24 or 10.
+Since we know every possible row, we can now try every possibility. No such matrix
+exists. Therefore, there is no automorphism of order 11.
+□
+7. Block designs of the parameters (22, 4, 2).
+Deﬁnition 7.1. A block design of parameters (22, 4, 2) is comprised of a set S of 22
+values (for convenience let them be the integers from 0 to 21), called treatments, and
+a set B of 77 4-subsets of S, called blocks, such that every value k in S is in exactly
+14 members of B; and every pair of distinct values in S is in exactly 2 members of
+B.
+Let G be some srg(99, 14, 1, 2) that has an independent set S of size 22. Then, let
+G\S be B. Let the graph G′ be G with every edge between two points of B removed;
+G′ is bipartite with parts S and B. As noted earlier, every vertex in B must have
+degree 4 in G′. Let B′ = {{k ∈S | k ∼b} | b ∈B}. Since the srg parameter µ is
+2, every pair of members of S must have two common neighbors. Thus, (S, B′) is a
+
+=== PAGE 11 ===
+ON THE STRONGLY REGULAR GRAPH OF PARAMETERS (99, 14, 1, 2)
+11
+(22, 4, 2)-block design. Note, however, that not every block design corresponds with
+a potential G′: some block designs have repeated blocks, or blocks that share three
+elements: this would lead to two points in B having four or three common neighbors,
+respectively.
+Every possible graph that has an independent set of size 22 can thus be associated
+with a block design. One notable family of block designs is the family of cyclic, or
+1-rotational, block designs, which have the property that if any block {a1, a2, a3, a4}
+is in the design, then the block {a1 + 1, a2 + 1, a3 + 1, a4 + 1} is also in the design
+(addition modulo 22). Some members of this family have repeated blocks or blocks
+that share three members; these do not form viable graphs.
+Every block in a cyclic block design is part of a family of blocks produced by adding
+one to each element. For a block b, let f(b) be the block generated by adding 1 to
+every element of b modulo 22. Clearly, f 22(b) = b. Thus, the order of b under f must
+divide 22. If the order was 1, then for some k in b, k + 1, k + 2, k + 3, and k + 4
+would also have to be in b, contradiction. A similar contradiction arises for an order
+of 2. Thus, the orders of all blocks must be either 11 or 22. If the order is 11, then
+the block must be equal to {k1, k1 + 11, k2, k2 + 11}; if it is not of this form, it must
+have order 22.
+Another family of block designs is the family of 2-rotational block designs, with
+the property that if any block {a1, a2, a3, a4} is in the design, then the block {a1 +
+2, a2 + 2, a3 + 2, a4 + 2} is also in the design. Thus, the family of 2-rotational block
+designs is a superset of the family of cyclic block designs. Deﬁning the function g(b)
+as f(f(b)), with f as before, then every block in such a design must have g11(b) = 1.
+As before, no block can have an order of 1, so every block in such a block design has
+order 11.
+An attractive potential construction of G from a 2-rotational block design is to
+require that if two points in G′ labeled by blocks b1 and b2 are connected, then so
+are g(b1) and g(b2). This, however, would mean that g would be an automorphism
+of G with order 11.
+As shown above, this is impossible, so the most attractive
+construction does not work. It might still be possible to create an srg(99, 14, 1, 2)
+from a 2-rotational block design through some method.
+8. Automorphisms of order 7.
+Assume that some automorphism π of G of order 7 existed. Then, since 7 does not
+divide 99, there must be at least one orbit of size 1. Since the graph is connected,
+at least one orbit of size 1 must connect to an orbit of size 7. Let us call the point
+in this orbit P, and let us call the orbit of size 7 to which P connects A. Since P
+is connected to a point in A, it must have exactly one common neighbor with that
+point. No element of A can connect to any other orbits of size 1, because then P
+would have seven common neighbors with that orbit. Thus, the common neighbor
+must be in an orbit of size 7; call that orbit B. It is connected to A and P.
+Therefore, P connects to two orbits of size 7, A and B; P has degree 14, so it does
+not connect to any other orbits of size 1. Thus, any other orbits of size 1 must be
+connected to two orbits of size 7 similarly. Thus, if there are k orbits of size 1, there
+must be at least 2k orbits of size 7. This requires 15k points, so k ≤99/15 < 7. The
+number of orbits of size 7 is (99 −k)/7, which must be an integer, so k must be 1
+modulo 7. Therefore, k must equal 1, and thus P is the only orbit of size 1.
+
+=== PAGE 12 ===
+12
+S. LOU AND M. MURIN
+Let us label the members of A and B as A1 through A7 and B1 through B7 respec-
+tively, so that π(Ai) = Ai+1. We know that every point in A must connect to a point
+in B, so WLOG let Ai connect to Bi. No Ai can also connect to any Bj for i̸ = j,
+since that would cause Ai and P to have two common neighbors, even though they
+are connected to each other. Similarly, Ai is not connected to Aj for any j.
+Since Ai and Bj are not connected for i̸ = j, they must share two common neigh-
+bors, one of which must be P.
+Let this common neighbor be called Qi,j.
+Note
+that Ai+1 and Bj+1 have the common neighbor Qi+1,j+1, but also Ai+1 = π(Ai) and
+Bj+1 = π(Bj), so Qi+1,j+1 = π(Qi,j).
+Let us deﬁne Cα
+β as Q−α+β,α+β for α ∈{1, 2, 3}. Then, Cα
+β+k = Q−α+β+k,α+β+k =
+πk(Q−α+β,α+β) = πk(Cα
+β ). Also, Ai ∼Cα
+i+α and Cα
+i ∼Bi+α. Deﬁne Dα
+β as Qα+β,−α+β
+for α ∈{1, 2, 3}. As before, Dα
+β+k = πk(Dα
+β). Also, Bi ∼Cα
+i+α and Cα
+i ∼Ai+α.
+Now, note that any Ai and Aj for unequal i and j must share a common neighbor;
+let this be Ri,j = Rj,i. Let us similarly deﬁne the neighbor of Bi and Bj as R′
+i,j. As
+before, Ri+k,j+k = πk(Ri,j). Then, we can deﬁne Eα
+β as R−α+β,α+β for α ∈{1, 2, 3}.
+Therefore, as before, Eα
+( β + k) = πk(Eα
+β ). Similarly deﬁne F α
+β as R′
+−α+β,α+β. Once
+again, F α
+( β + k) = πk(F α
+β ).
+Let us now deﬁne a 15 by 15 matrix M. The columns and rows correspond to P,
+A, B, C1, C2, C3, D1, D2, D3, E1, E2, E3, F 1, F 2, and F 3 in that order, and Mij is
+deﬁned as the number of times any point in the ith orbit is adjacent to some point
+in the jth orbit.
+Lemma 8.1. Either Mii = 0 or Mii = 2.
+Proof. If there is an edge within Ci, then clearly there is a 7-cycle within Ci. If
+there are 2 7-cycles, then it is easy to verify that the parameters of the graph are
+violated.
+□
+Further note that no point in P, A, or B is adjacent to any other point in its own
+orbit, so M11 = M22 = M33 = 0. Thus, the trace is at most 12 × 2 = 24, and as
+before, must be even. The eigenvalues of M must be a subset of the eigenvalues of
+G, as shown in the proof of Theorem 6.3, so M has one eigenvalue equal to 14, the
+rest being either 3 or −4. If a of the eigenvalues are −4, then the trace is equal to
+14 + 42 −7a, which must be divisible by 7. Thus, the trace is either 0 or 14.
+9. Acknowledgements
+We are grateful to MIT PRIMES-USA for providing us with this project, and to
+Dr. Peter Csikvari for suggesting the problem and mentoring us.
+References
+[1] H. A. Wilbrink and A. E. Brouwer, A (57, 14, 1) strongly regular graph does not exist, Indaga-
+tiones Mathematicae (Proceedings) 86 (1983), 117–21.

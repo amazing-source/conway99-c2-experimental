@@ -1,0 +1,89 @@
+﻿=== sauvegarde 2026-09-23T23:37:36 ===
+GUID du mode de gestion de l’alimentation : 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c  (Haute performance)
+GUID du mode de gestion de l’alimentation : 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c  (Haute performance)
+  Alias de GUID : SCHEME_MIN
+  GUID du sous-groupe : 238c9fa8-0aad-41ed-83f4-97be242c8f20  (Veille)
+    Alias de GUID : SUB_SLEEP
+    GUID du paramètre d’alimentation : 29f6c1db-86da-48c5-9fdb-f2b67b1f44da  (Veille après)
+      Alias de GUID : STANDBYIDLE
+      Valeur minimale possible : 0x00000000
+      Valeur maximale possible : 0xffffffff
+      Incrément possible des paramètres : 0x00000001
+      Unités possibles des paramètres : secondes
+    Index actuel du paramètre de courant alternatif : 0x00000000
+    Index actuel du paramètre de courant continu : 0x00000000
+
+    GUID du paramètre d’alimentation : 94ac6d29-73ce-41a6-809f-6363ba21b47e  (Autoriser la veille hybride)
+      Alias de GUID : HYBRIDSLEEP
+      Index possible du paramètre : 000
+      Nom convivial possible du paramètre : Désactivé
+      Index possible du paramètre : 001
+      Nom convivial possible du paramètre : Activé
+    Index actuel du paramètre de courant alternatif : 0x00000001
+    Index actuel du paramètre de courant continu : 0x00000001
+
+    GUID du paramètre d’alimentation : 9d7815a6-7ee4-497e-8888-515a05f02364  (Mettre en veille prolongée après)
+      Alias de GUID : HIBERNATEIDLE
+      Valeur minimale possible : 0x00000000
+      Valeur maximale possible : 0xffffffff
+      Incrément possible des paramètres : 0x00000001
+      Unités possibles des paramètres : secondes
+    Index actuel du paramètre de courant alternatif : 0x00000000
+    Index actuel du paramètre de courant continu : 0x00000000
+
+    GUID du paramètre d’alimentation : bd3b718a-0680-4d9d-8ab2-e1d2b4ac806d  (Autoriser les minuteurs de sortie de veille)
+      Alias de GUID : RTCWAKE
+      Index possible du paramètre : 000
+      Nom convivial possible du paramètre : Désactiver
+      Index possible du paramètre : 001
+      Nom convivial possible du paramètre : Activer
+      Index possible du paramètre : 002
+      Nom convivial possible du paramètre : Minuteurs de sortie de veille importants seulement
+    Index actuel du paramètre de courant alternatif : 0x00000001
+    Index actuel du paramètre de courant continu : 0x00000001
+
+GUID du mode de gestion de l’alimentation : 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c  (Haute performance)
+  Alias de GUID : SCHEME_MIN
+  GUID du sous-groupe : 7516b95f-f776-4464-8c53-06167f40cc99  (Affichage)
+    Alias de GUID : SUB_VIDEO
+    GUID du paramètre d’alimentation : 3c0bc021-c8a8-4e07-a973-6b14cbcb2b7e  (Éteindre l’affichage après)
+      Alias de GUID : VIDEOIDLE
+      Valeur minimale possible : 0x00000000
+      Valeur maximale possible : 0xffffffff
+      Incrément possible des paramètres : 0x00000001
+      Unités possibles des paramètres : secondes
+    Index actuel du paramètre de courant alternatif : 0x00000000
+    Index actuel du paramètre de courant continu : 0x00000258
+
+    GUID du paramètre d’alimentation : aded5e82-b909-4619-9949-f5d71dac0bcb  (Luminosité de l’affichage)
+      Alias de GUID : VIDEONORMALLEVEL
+      Valeur minimale possible : 0x00000000
+      Valeur maximale possible : 0x00000064
+      Incrément possible des paramètres : 0x00000001
+      Unités possibles des paramètres :  %
+    Index actuel du paramètre de courant alternatif : 0x00000064
+    Index actuel du paramètre de courant continu : 0x00000064
+
+    GUID du paramètre d’alimentation : f1fbfde2-a960-4165-9f88-50667911ce96  (Luminosité assombrie de l'affichage)
+      Valeur minimale possible : 0x00000000
+      Valeur maximale possible : 0x00000064
+      Incrément possible des paramètres : 0x00000001
+      Unités possibles des paramètres :  %
+    Index actuel du paramètre de courant alternatif : 0x00000032
+    Index actuel du paramètre de courant continu : 0x00000032
+
+    GUID du paramètre d’alimentation : fbd9aa66-9553-4097-ba44-ed6e9d65eab8  (Activer la luminosité adaptative)
+      Alias de GUID : ADAPTBRIGHT
+      Index possible du paramètre : 000
+      Nom convivial possible du paramètre : Désactivé
+      Index possible du paramètre : 001
+      Nom convivial possible du paramètre : Activé
+    Index actuel du paramètre de courant alternatif : 0x00000000
+    Index actuel du paramètre de courant continu : 0x00000000
+
+
+HKEY_CURRENT_USER\Control Panel\Desktop
+    ScreenSaveActive    REG_SZ    1
+
+
+

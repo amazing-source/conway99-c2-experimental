@@ -1,0 +1,9 @@
+c turning on binary mode checking
+c parsing input formula with 666183 variables and 1510460 clauses
+c finished parsing, read 125782222 bytes from proof file
+c detected empty clause; start verification via backward checking
+c 155530 of 1510460 clauses in core                            
+c 182417 of 2135541 lemmas in core using 3183963 resolution steps
+c 3249 RAT lemmas in core; 28618 redundant literals in core lemmas
+s VERIFIED
+c verification time: 161.951 seconds

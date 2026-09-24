@@ -1,0 +1,3 @@
+{"mode": "only_dis", "tlimit": 600.0, "result": "TIMEOUT", "solve_s": 600.0}
+{"mode": "no_sib", "tlimit": 600.0, "result": "TIMEOUT", "solve_s": 600.0}
+{"mode": "only_one", "tlimit": 600.0, "result": "TIMEOUT", "solve_s": 600.0}

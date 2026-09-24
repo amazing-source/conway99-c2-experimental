@@ -1,0 +1,11 @@
+﻿pairs [(1, 2)] : max |cos| between lifted eigenvectors of different eigenvalues = 0.000e+00
+pairs [(1, 2), (3, 4)] : max |cos| between lifted eigenvectors of different eigenvalues = 0.000e+00
+pairs [(1, 2), (1, 3)] : max |cos| between lifted eigenvectors of different eigenvalues = 0.000e+00
+pairs [(1, 2), (3, 4), (5, 6)] : max |cos| between lifted eigenvectors of different eigenvalues = 0.000e+00
+pairs [(1, 2), (1, 3), (2, 3)] : max |cos| between lifted eigenvectors of different eigenvalues = 0.000e+00
+conf with 2 pairs, theta=3: span dim 5
+conf with 2 pairs, theta=-4: span dim 3
+conf with 2 pairs, theta=3: span dim 5
+conf with 2 pairs, theta=-4: span dim 3
+conf with 21 pairs, theta=3: span dim 21
+conf with 21 pairs, theta=-4: span dim 7

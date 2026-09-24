@@ -1,0 +1,2 @@
+external_c3/conway99-c3-experimental/ https://github.com/amazing-source/conway99-c3-experimental.git af18b15bd1ba8dda1af75f603c253bff54fe6df5
+external_c3/conway99-c3/ https://github.com/amazing-source/conway99-c3.git 8e95aa4f39b75d3564cc0055858786acc2930510

@@ -1,0 +1,18 @@
+﻿=== m=2  dims: const 1, diag 0, offdiag-quad 1, pair-rest 0  (total 2 of 2)
+  Q_out on const    invariance defect 5.661e-16 ; compressed spectrum {np.float64(2.0): np.int64(1)}
+  Q_out on offquad  invariance defect 5.661e-16 ; compressed spectrum {np.float64(-2.0): np.int64(1)}
+  odd: linear 2, rest 0
+  S_out on linear   invariance defect 0.000e+00 ; compressed spectrum {np.float64(0.0): np.int64(2)}
+  S_out on oddrest  invariance defect 0.000e+00 ; compressed spectrum {}
+  S_out on symX     (dim 0) invariance defect 0.000e+00 ; compressed spectrum {}
+  S_out on antiX    (dim 0) invariance defect 0.000e+00 ; compressed spectrum {}
+=== m=11  dims: const 1, diag 10, offdiag-quad 55, pair-rest 44  (total 110 of 110)
+  Q_out on const    invariance defect 1.364e-15 ; compressed spectrum {np.float64(20.0): np.int64(1)}
+  Q_out on diag     invariance defect 2.100e-15 ; compressed spectrum {np.float64(-2.0): np.int64(10)}
+  Q_out on offquad  invariance defect 6.396e-01 ; compressed spectrum {np.float64(-3.5): np.int64(44), np.float64(4.0): np.int64(11)}
+  Q_out on pairrest invariance defect 8.027e-01 ; compressed spectrum {np.float64(1.9008): np.int64(1), np.float64(2.1858): np.int64(1), np.float64(2.2736): np.int64(1), np.float64(2.3816): np.int64(1), np.float64(2.4505): np.int64(1), np.float64(2.4603): np.int64(1), np.float64(2.4794): np.int64(1), np.float64(2.5): np.int64(30), np.float64(2.5093): np.int64(1), np.float64(2.539): np.int64(1), np.float64(2.5436): np.int64(1), np.float64(2.5884): np.int64(1), np.float64(2.6561): np.int64(1), np.float64(2.803): np.int64(1), np.float64(2.8786): np.int64(1)}
+  odd: linear 11, rest 99
+  S_out on linear   invariance defect 2.884e-04 ; compressed spectrum {np.float64(0.0): np.int64(11)}
+  S_out on oddrest  invariance defect 2.131e-01 ; compressed spectrum {np.float64(-5.0): np.int64(34), np.float64(-4.9633): np.int64(1), np.float64(-4.7689): np.int64(1), np.float64(-4.5906): np.int64(1), np.float64(-4.4117): np.int64(1), np.float64(-4.1857): np.int64(1), np.float64(-4.0093): np.int64(1), np.float64(-3.5599): np.int64(1), np.float64(-3.3573): np.int64(1), np.float64(-2.0948): np.int64(1), np.float64(-0.4277): np.int64(1), np.float64(0.4188): np.int64(1), np.float64(1.5158): np.int64(1), np.float64(1.7702): np.int64(1), np.float64(2.3056): np.int64(1), np.float64(2.8828): np.int64(1), np.float64(3.0598): np.int64(1), np.float64(3.3673): np.int64(1), np.float64(3.4543): np.int64(1), np.float64(3.7241): np.int64(1), np.float64(3.9636): np.int64(1), np.float64(4.0): np.int64(45)}
+  S_out on symX     (dim 54) invariance defect 6.232e-01 ; compressed spectrum {np.float64(-5.0): np.int64(11), np.float64(-2.5204): np.int64(4), np.float64(-2.296): np.int64(5), np.float64(-1.8293): np.int64(5), np.float64(-0.2454): np.int64(4), np.float64(1.382): np.int64(3), np.float64(3.3981): np.int64(5), np.float64(3.618): np.int64(3), np.float64(3.6749): np.int64(4), np.float64(4.0): np.int64(10)}
+  S_out on antiX    (dim 55) invariance defect 6.544e-01 ; compressed spectrum {np.float64(-4.6882): np.int64(4), np.float64(-4.618): np.int64(3), np.float64(-4.5459): np.int64(5), np.float64(-2.8022): np.int64(5), np.float64(-2.4233): np.int64(4), np.float64(-2.382): np.int64(3), np.float64(0.0): np.int64(1), np.float64(1.2225): np.int64(4), np.float64(1.282): np.int64(5), np.float64(2.1772): np.int64(5), np.float64(4.0): np.int64(16)}

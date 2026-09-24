@@ -1,0 +1,21 @@
+Paley(9)           n=9 k=4 lam=1 mu=2 r=1 s=-2 fix=1 adj=4  t={(1, 1): 2, (1, -1): 6, (-2, 1): 2, (-2, -1): 6}  -> 0/32768 f en desaccord
+L2(7)              n=49 k=12 lam=5 mu=2 r=5 s=-2 fix=1 adj=12  t={(5, 1): 6, (5, -1): 2, (-2, 1): 2, (-2, -1): 6}  -> 0/32768 f en desaccord
+Paley(49)          n=49 k=24 lam=11 mu=12 r=3 s=-4 fix=1 adj=24  t={(3, 1): 4, (3, -1): 4, (-4, 1): 4, (-4, -1): 4}  -> 0/32768 f en desaccord
+
+Conway-99, C2 (1 point fixe, 14 sommets u ~ sigma u, 84 autres) ; 32768 f admissibles (coeffs mod 8)
+  rho+=0 rho-=0 k+=0 k-=0 (mod 2) :      0 f en desaccord
+  rho+=0 rho-=0 k+=0 k-=1 (mod 2) :      0 f en desaccord
+  rho+=0 rho-=0 k+=1 k-=0 (mod 2) :      0 f en desaccord
+  rho+=0 rho-=0 k+=1 k-=1 (mod 2) :      0 f en desaccord
+  rho+=0 rho-=1 k+=0 k-=0 (mod 2) :  16384 f en desaccord   ex. ('P', 0, 0, 0, 1, 0, 2)
+  rho+=0 rho-=1 k+=0 k-=1 (mod 2) :  16384 f en desaccord   ex. ('P', 0, 0, 0, 1, 0, 2)
+  rho+=0 rho-=1 k+=1 k-=0 (mod 2) :  16384 f en desaccord   ex. ('P', 0, 0, 0, 1, 0, 2)
+  rho+=0 rho-=1 k+=1 k-=1 (mod 2) :  16384 f en desaccord   ex. ('P', 0, 0, 0, 1, 0, 2)
+  rho+=1 rho-=0 k+=0 k-=0 (mod 2) :  16384 f en desaccord   ex. ('P', 0, 0, 0, 1, 0, 2)
+  rho+=1 rho-=0 k+=0 k-=1 (mod 2) :  16384 f en desaccord   ex. ('P', 0, 0, 0, 1, 0, 2)
+  rho+=1 rho-=0 k+=1 k-=0 (mod 2) :  16384 f en desaccord   ex. ('P', 0, 0, 0, 1, 0, 2)
+  rho+=1 rho-=0 k+=1 k-=1 (mod 2) :  16384 f en desaccord   ex. ('P', 0, 0, 0, 1, 0, 2)
+  rho+=1 rho-=1 k+=0 k-=0 (mod 2) :      0 f en desaccord
+  rho+=1 rho-=1 k+=0 k-=1 (mod 2) :      0 f en desaccord
+  rho+=1 rho-=1 k+=1 k-=0 (mod 2) :      0 f en desaccord
+  rho+=1 rho-=1 k+=1 k-=1 (mod 2) :      0 f en desaccord

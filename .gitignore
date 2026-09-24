@@ -1,0 +1,6 @@
+# Regenerables (voir REPRISE.md) : environnement Python, CNF (empreintes dans data/cnf/MANIFEST*.txt), clones externes (commits dans logs/)
+.venv/
+data/cnf/*.cnf
+external_c3/
+__pycache__/
+*.pyc

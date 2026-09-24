@@ -1,0 +1,6 @@
+﻿built: vars 668577 clauses 1507905 selectors 2394 (1.0s)
+round 0: core 745 constraints (76.2s)  types {'D': 40, 'I': 289, 'PS': 236, 'PC': 180}
+   blocks touched (multiplicity): {1: 247, 2: 379, 3: 243, 4: 366, 5: 374, 6: 359, 7: 354}
+round 1: core 745 constraints (0.0s)  types {'D': 40, 'I': 289, 'PS': 236, 'PC': 180}
+   blocks touched (multiplicity): {1: 247, 2: 379, 3: 243, 4: 366, 5: 374, 6: 359, 7: 354}
+saved C:\Users\RESEARCHER\Desktop\c2_experimental\scripts\..\data\core_12_13_14_15_16_17_23_24_25_26_27_34_35_36_37_45_46_47_56_57_67.json

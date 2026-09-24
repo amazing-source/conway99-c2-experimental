@@ -1,0 +1,636 @@
+=== PAGE 1 ===
+Induced Subgraphs of Order Seven and Their
+Frequencies in srg(n, k, 1, 2)
+Reimbay Reimbayev
+Abstract
+In this paper, we examine the structure of strongly regular graphs with
+parameters λ = 1 and µ = 2. In particular, we provide a complete clas-
+sification of induced subgraphs of order seven and determine their relative
+frequencies. These findings contribute to a finer understanding of the local
+structure of such graphs and may be useful in related combinatorial and
+algebraic investigations.
+1
+Introduction
+Strongly regular graphs form an important class of combinatorial structures, aris-
+ing naturally in algebraic graph theory, finite geometry, and design theory. They
+are characterized by four parameters (n, k, λ, µ), which impose strict regularity
+conditions on the adjacency relations between vertices. A graph with parameters
+(n, k, λ, µ) is said to be strongly regular if it is k-regular of order n, such that
+every pair of adjacent vertices has exactly λ common neighbors, and every pair of
+non-adjacent vertices has exactly µ common neighbors [1, 2]. Another definition
+of strongly regular graphs, perhaps more precise as it cuts away some trivial cases
+such as complete graphs, is given by means of spectral graph theory, in which the
+finite graph is strongly regular if its spectrum consists of exactly three eigenvalues,
+one of which is k with multiplicity one [3].
+Since their introduction by R.C. Bose in their foundational paper [4], the
+strongly regular graphs have been a central object of study in algebraic graph the-
+ory. Bose established many of the basic parameter relations for strongly regular
+graphs and highlighted their deep connections with combinatorial design theory.
+A systematic treatment of strongly regular graphs and their algebraic properties
+was later developed in the monograph Algebraic Graph Theory by Chris Godsil
+and Gordon Royle [5], which remains a standard reference in the field. Earlier,
+1
+arXiv:2608.19410v1  [math.CO]  19 Aug 2026
+
+=== PAGE 2 ===
+spectral techniques were extensively developed by Dragoˇs Cvetkovi´c at al in Spec-
+tra of Graphs [6], providing powerful tools for analyzing eigenvalue constraints and
+non-existence results.
+A large body of research has focused on existence, classification, and construc-
+tion of strongly regular graphs with prescribed parameters. Surveys and databases
+compiled by Andries Brouwer and collaborators remain essential tools in this di-
+rection [2].
+The specific case for λ = 1 and µ = 2 has attracted attention due to its connec-
+tion with long-standing existence problems. For instance, the possible existence of
+a graph with parameters srg(99, 14, 1, 2) has remained open for decades [7]. But
+this is just one graph from the family of strongly regular graphs for which only
+few known to exist, e.g. those with valencies k = 2, 4 and, surprisingly 22 [8].
+There have been some extensive studies by Makhnev et. al. on the structure of
+such graphs with regard to their automorphism groups [9]. Using Wilbrink and
+Brouwer’s lemma [10], Lou and Murin were able to establish a forbidden subgraph
+of order 9 in case when k = 14 [11].
+Our recent work investigates structural properties of this family of graphs and
+establishes lower bounds on the number of hexagons, linking cycle structure to ex-
+istence questions [12]. This demonstrates how local subgraph counts can provide
+insight into global feasibility. In a similar vein, we have studied induced subgraphs
+of order six in strongly regular graphs with λ = 1 and µ = 2, giving a complete
+enumeration of all such configurations [13]. Furthermore, we have also provided
+complete enumeration of induced Hamiltonian subgraphs of order seven with their
+relative frequencies [14]. This line of research emphasizes the importance of un-
+derstanding small subgraph structure as a means of probing the fine combinatorial
+properties of these graphs.
+The present work builds on these developments by extending the local analysis
+to subgraphs of order seven and determining their relative frequencies, thereby
+contributing to a more detailed understanding of the structure of this important
+class of strongly regular graphs.
+2
+Subgraphs and Frequencies
+There are 208 subgraphs of order seven in srg(n, k, 1, 2). All of them are given in
+the main figure - Figure 1, spanned over several pages below. Their frequencies
+are given further, denoted by zi, while the subgraphs are denoted by capital letter
+Zi . Some of the subgraphs might be non existent, i.e. have a frequency zero
+depending on the values of n3 and z11. Theses are the free variables as the exact
+values for zi-s are not known. We follow the same convention as in previous work
+[13] for n3, while z11 is the frequency of the graph Z11 as agreed. We omit all the
+2
+
+=== PAGE 3 ===
+derivations of the formulas for frequencies as they are very similar to what have
+done earlier [14]. In fact, this is the extension on the latter work, in which we have
+looked at Hamiltonian subgraphs of order seven, while here we have considered all
+the rest of the subgraphs and their frequencies.
+z1 =1
+4nk(k −2) −n3,
+z2 =n3 −z11
+4 ,
+z3 =z11 −2n3,
+z4 =2n3,
+z5 =4n3,
+z6 =z11
+2 ,
+z7 =2n3,
+z8 =1
+2nk(k −2)(k −4) −2(k −4)n3,
+z9 =1
+4nk(k −2) −n3 + z11
+4 ,
+z10 =2n3,
+z11 =z11,
+z12 = 1
+48nk(k −2)(k −4),
+z13 =1
+8nk(k −2)(k −4) −n3,
+z14 =1
+2nk(k −2)(k −4),
+z15 =1
+2nk(k −2)(k −4) −2n3 −z11
+2 ,
+z16 =nk(k −2)(k −4) −4n3,
+z17 =nk(k −2)(k −4) −z11,
+z18 =1
+2nk(k −2)(k −4),
+z19 =1
+4nk(k −2)(k −4) −z11
+2 ,
+z20 =1
+2nk(k −2)(k −4) −4n3,
+z21 =nk(k −2)(k −3)(k −4) −2n3 −z11
+2 ,
+z22 =nk(k −2)(k −4) −8n3,
+3
+
+=== PAGE 4 ===
+4
+
+=== PAGE 5 ===
+5
+
+=== PAGE 6 ===
+6
+
+=== PAGE 7 ===
+Figure 1: All possible subgraphs of order six in srg(n, k, 1, 2).
+7
+
+=== PAGE 8 ===
+z23 =nk(k −2)(k −4) −4n3,
+z24 =2nk(k −2)(k −4) −8n3 −z11,
+z25 =1
+2nk(k −2)(k −4) −z11,
+z26 =4(k −4)n3 −z11,
+z27 =2(k −4)n3,
+z28 =2(k −6)n3,
+z29 =4(k −4)n3 −2z11,
+z30 =4(k −5)n3,
+z31 =2(k −6)n3,
+z32 =nk(k −2)(k −4) −4n3,
+z33 =1
+4nk(k −2)(k −4) −n3,
+z34 =1
+2nk(k −2)(k −4) −3
+2z11,
+z35 =nk(k −2)(k −4) −2n3 −3
+2z11,
+z36 =1
+6nk(k −2)(k −4) −z11
+2 ,
+z37 =1
+2nk(k −2)(k −4) −z11
+2 ,
+z38 =1
+4nk(k −2)(k −4) −n3 −z11
+4 ,
+z39 = 1
+24nk(k −2)(k −4)(k −8) −1
+3(n −6k + 15)n3,
+z40 =2nk(k −2)(k −4) −8n3 −2z11,
+z41 =2
+3nk(k −2)(k −4) −4n3,
+z42 = 1
+16nk(k −2)(k −4)(k −6),
+z43 =1
+2nk(k −2)(k −4)(k −5),
+z44 =1
+8nk(k −2)(k −4)(k −6),
+z45 =1
+2nk(k −2)(k −4)(k −8) + 4n3 + z11,
+z46 =1
+4nk(k −2)(k −4)(k −5) + z11
+2 ,
+z47 =1
+2nk(k −2)(k −4)(k −6) + 2n3 + z11
+2 ,
+8
+
+=== PAGE 9 ===
+z48 =1
+4nk(k −2)(k −4)(k −6) + 2n3,
+z49 =1
+4nk(k −2)(k −4)(k −8) + 2n3 + z11
+2 ,
+z50 =1
+2nk(k −2)(k −4)(k −6),
+z51 =1
+4nk(k −2)(k −4)2 −2(k −4)n3 + z11
+2 ,
+z52 =nk(k −2)(k −4)(k −6) −4(k −6)n3 + z11,
+z53 =nk(k −2)(k −4)2 −4(k −4)n3 + z11,
+z54 =1
+2nk(k −2)(k −4)(k −5) + 2n3,
+z55 =nk(k −2)(k −4)(k −5) −4(k −5)n3,
+z56 =nk(k −2)(k −4)(k −7) + 8n3 + z11,
+z57 =1
+2nk(k −2)(k −4)(k −6) −4(k −6)n3,
+z58 =nk(k −2)(k −4)(k −8) −4(k −8)n3 + 3z11,
+z59 =1
+2nk(k −2)(k −4)(k −7) −2(k −6)n3 + 2z11,
+z60 =1
+2nk(k −2)(k −4)(k −5) −2(2k −9)n3 + 3
+2z11,
+z61 =nk(k −2)(k −4)(k −5) −8(k −5)n3 + 2z11,
+z62 =1
+4nk(k −2)(k −4)(k −6),
+z63 =1
+4nk(k −2)(k −4)(k −8) + 4n3,
+z64 =1
+2nk(k −2)(k −4)(k −6) + 4n3,
+z65 =1
+2nk(k −2)(k −4)(k −6) + 4n3,
+z66 =2nk(k −2)(k −4)(k −6) −4(k −7)n3 + z11,
+z67 =nk(k −2)(k −4)(k −8) −2(k −14)n3,
+z68 =nk(k −2)(k −4)(k −6) −2(k −9)n3 + z11,
+z69 =2nk(k −2)(k −4)(k −7) −4(k −9)n3 + 4z11,
+z70 =1
+2nk(k −2)(k −4)(k −8) + 6n3 + z11
+2 ,
+z71 =1
+4nk(k −2)(k −4)(k −6) −2(k −6)n3,
+z72 =1
+2nk(k −2)(k −4)(k −7) −4(k −7)n3,
+9
+
+=== PAGE 10 ===
+z73 =nk(k −2)(k −4)(k −7) −4(k −7)n3 + z11,
+z74 =nk(k −2)(k −4)(k −7) −4(k −6)n3 + 3z11,
+z75 =nk(k −2)(k −4)(k −6) −2(2k −11)n3 + 2z11,
+z76 =1
+8nk(k −2)(k −4)(k −8) + n3 + z11
+4 ,
+z77 =1
+2nk(k −2)(k −4)(k −6) −2(k −6)n3,
+z78 =nk(k −2)(k −4)(k −7) −4(k −6)n3 + 4z11,
+z79 =1
+8nk(k −2)(k −4)(k −12) + 6n3,
+z80 =1
+2nk(k −2)(k −4)(2k −7) + 16n3 + 3
+2z11,
+z81 =1
+4nk(k −2)(k −4)(k −10) + 2n3 + 2z11,
+z82 =(n −6k + 18)n3,
+z83 =2(n −6k + 16)n3 + z11,
+z84 =1
+2nk(k −2)(k −4)(2k −7) + 16n3 + 3
+2z11,
+z85 =1
+2nk(k −2)(k −4)(k −9) + 8n3 + 3
+2z11,
+z86 =nk(k −2)(k −4)(k −8) + 12n3 + 5
+2z11,
+z87 = 1
+32nk(k −2)(k −4)(k2 −16k + 68) −n3 −z11
+4 ,
+z88 =1
+4nk(k −2)(k −4)(k2 −12k + 40) −4n3 −z11,
+z89 =1
+8nk(k −2)(k −4)(k2 −16k + 68) + 2(k −8)n3 −3
+2z11,
+z90 =1
+4nk(k −2)(k −4)(k2 −11k + 32) −2(n −7k + 21)n3 −2z11,
+z91 =1
+2nk(k −2)(k −4)(k2 −12k + 38) + 4(k −6)n3 −z11,
+z92 =1
+2nk(k −2)(k −4)(k2 −12k + 40) −4(n −7k + 24)n3 −3z11,
+z93 = 1
+96nk(k −2)(k −4)(k2 −20k + 114) −n3 −z11
+2 ,
+z94 = 1
+24nk(k −2)(k −4)(k −8)(k −12) + 2(k −8)n3,
+z95 = 1
+16nk(k −2)(k −4)(k2 −12k + 44) −(n −6k + 21)n3,
+10
+
+=== PAGE 11 ===
+z96 =1
+2nk(k −2)(k −4)(2k2 −29k + 118) + (6k −80)n3 −11
+2 z11,
+z97 = 1
+14nk(k −2)(k −4)(2k2 −30k + 133) −10n3 −z11,
+z98 =1
+4nk(k −2)(k −4)(n −6k + 20) −4n3,
+z99 =nk(k −2)(k −4)(k2 −14k + 56) + (6k −76)n3 −6z11,
+z100 =1
+2nk(k −2)(k −4)(k2 −14k + 50) + (6k −40)n3 −z11,
+z101 =nk(k −2)(k −4)(k2 −13k + 44) + 12(k −6)n3 −5z11,
+z102 =nk(k −2)(k −4)(k2 −14k + 53) + (12k −94)n3 −9
+2z11,
+z103 =1
+2nk(k −2)(k −4)(n −6k + 21) −2(n −6k + 20)n3 −2z11,
+z104 =nk(k −2)(k −4)(n −6k + 21) −2(n −6k + 26)n3 −2z11,
+z105 = 1
+12nk(k −2)(k −4)(k −6)(k −8),
+z106 =1
+2nk(k −2)(k −4)(k2 −13k + 44) + 4(k −7)n3 −z11,
+z107 =1
+2nk(k −2)(k −4)(k2 −15k + 64) + 4(k −11)n3 −6z11,
+z108 =1
+4nk(k −2)(k −4)(k2 −14k + 52) + 4(k −6)n3 −5
+2z11,
+z109 =1
+2nk(k −2)(k −4)(k −6)2 + 4(k −6)n3,
+z110 =1
+4nk(k −2)(k −4)(k2 −14k + 50) + 2(2k −13)n3 −z11
+2 ,
+z111 =1
+2nk(k −2)(k −4)(k2 −12k + 37) + 8(k −5)n3 −5
+2z11,
+z112 =1
+8nk(k −2)(k −4)(k2 −12k + 44) −(n −6k + 20)n3 −5
+4z11,
+z113 =nk(k −2)(k −4)(k2 −13k + 46) + 4(3k −20)n3 −6z11,
+z114 =1
+2nk(k −2)(k −4)(k2 −14k + 54) + 8(k −7)n3 −4z11,
+z115 = 1
+48nk(k −2)(k −4)(k −6)(k −8),
+z116 =1
+4nk(k −2)(k −4)(k −6)2,
+z117 =1
+4nk(k −2)(k −4)(k2 −12k + 41) −6n3 −z11
+2 ,
+11
+
+=== PAGE 12 ===
+z118 =1
+2nk(k −2)(k −4)(k2 −14k + 51) + 4(k −8)n3 −z11,
+z119 =1
+4nk(k −2)(k −4)(k2 −12k + 36) + 2(k −6)n3,
+z120 =1
+2nk(k −2)(k −4)(k2 −16k + 71) + 4(k −14)n3 −4z11,
+z121 =1
+4nk(k −2)(k −4)(k2 −16k + 68) + 4(k −10)n3,
+z122 = 1
+12nk(k −2)(k −4)(k −6)(k −8) + 2(k −6)n3,
+z123 =1
+2nk(k −2)(k −4)(k2 −14k + 52) + 4(2k −13)n3 −4z11,
+z124 =1
+6nk(k −2)(k −4)(k −5)(k −6),
+z125 =nk(k −2)(k −4)(k2 −11k + 32) + 4(k −7)n3 −z11,
+z126 =nk(k −2)(k −4)(k2 −14k + 52) + 12(k −8)n3 −3z11,
+z127 =1
+8nk(k −2)(k −4)(k2 −10k + 26) −n3,
+z128 =1
+2nk(k −2)(k −4)(k2 −12k + 38) + 4(k −6)n3 −z11,
+z129 =1
+2nk(k −2)(k −4)(k2 −13k + 49) + 2(2k −17)n3 −7
+2z11,
+z130 =1
+2nk(k −2)(k −4)(k2 −13k + 44) + 8(k −6)n3 −2z11,
+z131 =1
+2nk(k −2)(k −4)(k2 −11k + 32) + 2(3k −16)n3 −2z11,
+z132 =1
+4nk(k −2)(k −4)2(k −5) + 2(k −4)n3 −z11
+2 ,
+z133 =1
+8nk(k −2)(k −4)(n −6k + 17),
+z134 = 1
+720nk(k −2)(k −4)(k −6)(k −8)(k −10),
+z135 = 1
+24nk(k −2)(k −4)(k −6)2(k −8),
+z136 =1
+6nk(k −2)(k −4)(k3 −20k2 + 141k −348) −(8k −52)n3 + z11,
+z137 =1
+4nk(k −2)(k −4)(k3 −18k2 + 113k −250) −2(3k −20)n3 + z11,
+z138 = 1
+12nk(k −2)(k −4)(k −6)(k2 −12k + 38) −2(k −6)n3,
+z139 =1
+2nk(k −2)(k −4)(k3 −20k2 + 147k −396) −4(7k −55)n3 + 9z11,
+12
+
+=== PAGE 13 ===
+z140 =1
+8nk(k −2)(k −4)(k3 −20k2 + 144k −372) −8(k −7)n3 + 3
+2z11,
+z141 =nk(k −2)(k −4)(k3 −19k2 + 133k −344) −4(12k −89)n3 + 20z11,
+z142 =1
+2nk(k −2)(k −4)(k3 −18k2 + 116k −266) −8(3k −17)n3 + 7z11,
+z143 =1
+6nk(k −2)(k −4)(k3 −18k2 + 120k −302) −6(k −8)n3 + 3z11,
+z144 =1
+2nk(k −2)(k −4)(k3 −20k2 + 150k −426) −10(2k −21)n3 + 27
+2 z11,
+z145 =1
+4nk(k −2)(k −4)(k −8)(k2 −11k + 44) + 4n3(n −7k + 34) + 4z11,
+z146 =1
+4nk(k −2)(k −4)(k3 −17k2 + 104k −232) −4(k −8)n3 + z11,
+z147 =1
+8nk(k −2)(k −4)(k3 −18k2 + 118k −284) + 2n3(n −8k + 32) + 2z11,
+z148 =1
+2nk(k −2)(k −4)(k3 −17k2 + 106k −248) + 4n3(n −9k + 40) + 7z11,
+z149 = 1
+12nk(k −2)(k −4)(k −6)(n −6k + 18),
+z150 =1
+4nk(k −2)(k −4)(k −6)(k2 −10k + 30) −4n3(k −6) + z11,
+z151 = 1
+12nk(k −2)(k −4)(k3 −15k2 + 80k −152) + 2
+3n3(n −9k + 30) + z11,
+z152 =1
+8nk(k −2)(k −4)(k3 −20k2 + 148k −412) −2n3(3k −26) + 4z11,
+z153 = 1
+16nk(k −2)(k −4)(k3 −20k2 + 140k −344) −2(k −7)n3 + z11
+2 ,
+z154 =1
+8nk(k −2)(k −4)(k −7)(k2 −12k + 44) −2n3(3k −20) + 3
+2z11,
+z155 =1
+8nk(k −2)(k −4)(k −8)(k2 −14k + 60) −2n3(5k −39) + 2z11,
+z156 = 1
+24nk(k −2)(k −4)(k3 −23k2 + 192k −588) −2n3(2k −17) + 2z11,
+z157 = 1
+288nk(k −2)(k −4)(k −12)(k2 −12k + 50) + 1
+3n3(n −6k + 24),
+z158 = 1
+72nk(k −2)(k −4)(k −8)(k2 −16k + 78) −2(k −8)n3,
+z159 = 1
+64nk(k −2)(k −4)(k3 −18k2 + 114k −268) + n3 + z11
+4 ,
+z160 =1
+4nk(k −2)(k −4)(k3 −18k2 + 120k −308) + 4n3(n −7k + 29) + 7z11,
+13
+
+=== PAGE 14 ===
+z161 =1
+4nk(k −2)(k −4)(k3 −17k2 + 106k −242) + 2n3(n −10k + 42) + 7
+2z11,
+z162 =1
+8nk(k −2)(k −4)(k3 −18k2 + 118k −288) + 2n3(n −8k + 32) + 5
+2z11,
+z163 =1
+8nk(k −2)(k −4)(k3 −18k2 + 116k −268) −2n3(2k −13) + z11
+2 ,
+z164 =1
+8nk(k −2)(k −4)(k3 −20k2 + 148k −404) −2n3(4k −29) + 4z11,
+z165 = 1
+32nk(k −2)(k −4)(k3 −22k2 + 178k −540) −2n3(k −9) + 2z11,
+z166 = 1
+16nk(k −2)(k −4)(k3 −18k2 + 114k −268) + 2n3(n −6k + 19) + 3
+2z11,
+z167 =1
+2nk(k −2)(k −4)(k3 −18k2 + 120k −304) + 2n3(3n −23k + 104) + 9z11,
+z168 = 1
+20nk(k −2)(k −4)(k3 −20k2 + 152k −440) −2n3(k −11) + 3
+2z11,
+z169 = 1
+24nk(k −2)(k −4)(2k3 −37k2 + 257k −710) + n3(n −6k + 35) + 7
+4z11,
+z170 = 1
+240nk(k −2)(k −4)(k −6)(k −8)(k2 −12k + 40),
+z171 = 1
+12nk(k −2)(k −4)(k4 −23k3 + 208k2 −890k + 1536) + 4n3(2k −13) −z11,
+z172 = 1
+96nk(k −2)(k −4)(k4 −26k3 + 268k2 −1304k + 2520) + (2k −13)n3 −z11
+4 ,
+z173 =1
+4nk(k −2)(k −4)(k4 −23k3 + 216k2 −998k + 1944) −4n3(2n −21k + 105) −15z11,
+z174 =1
+4nk(k −2)(k −4)(k4 −22k3 + 198k2 −878k + 1644) −6n3(n −11k + 54) −29
+2 z11,
+z175 = 1
+24nk(k −2)(k −4)(k4 −26k3 + 274k2 −1400k + 2928) + 2n3(7k −50) −5
+2z11,
+z176 = 1
+84nk(k −2)(k −4)(k4 −24k3 + 236k2 −1136k + 2264) + 6(5k −34)n3 −9z11,
+z177 = 1
+16nk(k −2)(k −4)(k4 −22k3 + 194k2 −824k + 1428) −n3(n −14k + 64) −9
+4z11,
+z178 =1
+4nk(k −2)(k −4)(k4 −23k3 + 220k2 −1052k + 2174) −2n3(5n −44k + 240) −21z11,
+z179 =1
+8nk(k −2)(k −4)(k4 −24k3 + 241k2 −1212k + 2596) + 6(5k −41)n3 −27
+2 z11,
+z180 =1
+8nk(k −2)(k −4)(k4 −25k3 + 258k2 −1316k + 2820) + 4(9k −70)n3 −27
+2 z11,
+z181 = 1
+16nk(k −2)(k −4)(k4 −22k3 + 198k2 −876k + 1664) −2n3(2n −13k + 52) −4z11,
+14
+
+=== PAGE 15 ===
+z182 = 1
+32nk(k −2)(k −4)(k4 −22k3 + 190k2 −780k + 1312) + 2(k −7)n3 −z11
+2 ,
+z183 = 1
+16nk(k −2)(k −4)(k4 −21k3 + 176k2 −714k + 1212) −2n3(n −8k + 31) −5
+2z11,
+z184 = 1
+16nk(k −2)(k −4)(k4 −24k3 + 232k2 −1096k + 2184) −2n3(n −11k + 59) −4z11,
+z185 = 1
+192nk(k −2)(k −4)(k4 −26k3 + 280k2 −1508k + 3456) + 2n3(k −8) −z11,
+z186 = 1
+48nk(k −2)(k −4)(k4 −26k3 + 274k2 −1412k + 3096) −2n3(n −8k + 40) −2z11,
+z187 = 1
+16nk(k −2)(k −4)(k4 −22k3 + 198k2 −876k + 1648) −4n3(n −7k + 27) −9
+2z11,
+z188 = 1
+64nk(k −2)(k −4)(k4 −24k3 + 238k2 −1176k + 2520) −n3(n −8k + 39) −5
+2z11,
+z189 = 1
+40nk(k −2)(k −4)(k4 −22k3 + 202k2 −924k + 1840) −2n3(n −6k + 24) −2z11,
+z190 = 1
+192nk(k −2)(k −4)(k5 −28k4 + 326k3 −2000k2 + 6576k −9408) −(2k −13)n3 + z11
+4 ,
+z191 = 1
+16nk(k −2)(k −4)(k5 −26k4 + 290k3 −1764k2 + 5952k −9072)
++ 2n3(4n −37k + 166) + 12z11,
+z192 = 1
+48nk(k −2)(k −4)(k5 −28k4 + 338k3 −2228k2 + 8136k −13320)
++ (k2 −30k + 166)n3 + 5z11,
+z193 = 1
+16nk(k −2)(k −4)(k5 −26k4 + 295k3 −1858k2 + 6594k −10812)
++ 2n3(7n −52k + 236) + 37
+2 z11,
+z194 = 1
+16nk(k −2)(k −4)(k5 −27k4 + 320k3 −2108k2 + 7824k −13312)
++ 2n3(4n −48k + 269) + 23z11,
+z195 = 1
+64nk(k −2)(k −4)(k5 −28k4 + 348k3 −2420k2 + 9496k −16912)
+−2n3(11k −81) + 15
+2 z11,
+z196 = 1
+96nk(k −2)(k −4)(k5 −26k4 + 286k3 −1700k2 + 5592k −8400)
++ 2n3(n −7k + 28) + 2z11,
+z197 = 1
+192nk(k −2)(k −4)(k5 −28k4 + 338k3 −2240k2 + 8304k −14208)
++ 2n3(n −7k + 31) + 2z11,
+15
+
+=== PAGE 16 ===
+z198 = 1
+384nk(k −2)(k −4)(k5 −26k4 + 292k3 −1808k2 + 6276k −10104)
++ n3(n −6k + 22) + z11,
+z199 =
+1
+2304nk(k −2)(k −4)(k6 −30k5 + 396k4 −3000k3 + 14084k2 −39768k + 54528)
+−1
+3n3(2n −12k + 45) −z11
+2 ,
+z200 = 1
+288nk(k −2)(k −4)(k6 −30k5 + 396k4 −3000k3 + 14012k2 −38952k + 51312)
+−2n3(n −9k + 40) −5
+2z11,
+z201 = 1
+96nk(k −2)(k −4)(k6 −29k5 + 376k4 −2846k3 + 13500k2 −38664k + 53472)
+−2n3(5n −36k + 153) −23
+2 z11,
+z202 = 1
+64nk(k −2)(k −4)(k6 −30k5 + 406k4 −3228k3 + 16128k2 −48672k + 70624)
+−2n3(7n −63k + 306) −22z11,
+z203 = 1
+384nk(k −2)(k −4)(k6 −30k5 + 412k4 −3364k3 + 17392k2 −54576k + 82272)
+−1
+3n3(4n −60k + 345) −19
+4 z11,
+z204 = 1
+768nk(k −2)(k −4)(k7 −32k6 + 464k5 −4048k4 + 23428k3 −91424k2
++ 226032k −279168) + 2n3(3n −21k + 86) + 6z11,
+z205 = 1
+768nk(k −2)(k −4)(k7 −32k6 + 470k5 −4204k4 + 25168k3 −102104k2
++ 263184k −338976) + n3(6n −48k + 215) + 31
+4 z11,
+z206 =
+1
+7680nk(k −2)(k −4)(k8 −34k7 + 528k6 −5040k5 + 33236k4 −157832k3
++ 532944k2 −1184160k + 1353600) −n3(3n −20k + 78) −11
+4 z11,
+z207 =
+1
+322560nk(k −2)(k −4)(k9 −36k8 + 586k7 −5856k6 + 41156k5 −217104k4
++ 869528k3 −2564928k2 + 5119200k −5376000) + n3
+3 (n −6k + 21) + z11
+4 ,
+z208 = 1
+32nk(k −2)(k −4)(k5 −28k4 + 342k3 −2308k2 + 8724k −15016)
++ n3(5n −58k + 321) + 45
+4 z11.
+16
+
+=== PAGE 17 ===
+3
+Conclusion
+In conclusion, we have studied the structure of a class of strongly regular graphs
+with parameters λ = 1 and µ = 2. In particular, we have determined all induced
+subgraphs of order seven and computed their relative frequencies. In doing so,
+we have used extensively Wolfram Alpha, a computational engine, for algebraic
+calculations [15]. These results provide a more detailed understanding of the local
+structure of such graphs and illustrate how global parameters influence small-scale
+configurations.
+Although the existence of several graphs in this parameter regime remains un-
+resolved—most notably the srg(99, 14, 1, 2), known as the 99-vertex Conway graph
+problem [7]—we believe that the results developed in this paper may offer useful
+insights toward addressing such open questions. In particular, the classification
+and frequency analysis of small induced subgraphs could serve as a tool for con-
+straining or guiding future constructions.
+References
+[1] Royle, Gordon, List of Large Graphs and Families, http://people.csse.uwa.
+edu.au/gordon/remote/srgs/
+[2] Brouwer, Andries E., Parameters of Strongly Regular Graphs, https://www.
+win.tue.nl/~aeb/graphs/srg/srgtab.html
+[3] Brouwer, Andries; van Maldeghem, Hendrik (2022), Strongly Regular Graphs,
+Cambridge University Press.
+[4] Bose, R.C. (1963), Strongly regular graphs, partial geometries and partially
+balanced designs, Pacific Journal of Mathematics,13(1), 389-419.
+[5] Godsil, C.; Royle, G. (2001), Algebraic Graph Theory (Vol. 207), Springer-
+Verlag.
+[6] Cvetcovic, D.M.; Doob,M.; Sachs, H. (1980), Spectra of Graphs: Theory and
+Application, Academic Press.
+[7] Conway, John (Update 2017), Five $ 1,000 Problems, On-Line Encyclopedia
+of Integer Sequences, OEIS sequance A248380.
+17
+
+=== PAGE 18 ===
+[8] Berlekamp, E.R.; Van Lint, J.H.; Seidel, J.J.(1973), A strongly regular graph
+derived from the perfect ternary Golay code, A survey of combinatorial theory,
+Amsterdam, 25-30.
+[9] Makhnev, A; Minkova, I (2004), On automorphisms of strongly regular graphs
+with parameters λ = 1, µ = 2, Discrete Mathematics and Applications.
+[10] Wilbrink, H.; A., Brouwer, A. E. (1983, January). A (57, 14, 1) strongly
+regular graph does not exist. In Indagationes Mathematicae (Proceedings) (Vol.
+86, No. 1, pp. 117-121). North-Holland.
+[11] Lou, S.; Murin, M. On The Strongly Regular Graph of Parameters (99, 14, 1,
+2).
+[12] Reimbayev, R (2024), The Lower Bound for Number of Hexagons in Strongly
+Regular Graphs with Parameters λ = 1 and µ = 2, ArXiv
+[13] Reimbayev, R (2025), The Subgraphs of Order Six of the Family of Strongly
+Regular Graphs with Parameters λ = 1 and µ = 2, ArXiv
+[14] Reimbayev, R (2025), Hamiltonian Subgraphs of Order Seven in srg(n,k,1,2),
+ArXiv
+[15] Wolfram Alpha LLC.(2026) Wolfram—Alpha. https:wolframalpha.com
+18

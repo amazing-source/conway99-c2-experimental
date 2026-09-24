@@ -1,0 +1,1169 @@
+=== PAGE 1 ===
+arXiv:1509.05933v6  [math.CO]  20 Sep 2017
+There is no (75, 32, 10, 16) strongly regular graph
+Jernej Azarija a
+Tilen Marc a
+September 21, 2017
+a Institute of Mathematics, Physics and Mechanics, Ljubljana, Slovenia
+jernej.azarija@gmail.com
+tilen.marc@imfm.si
+Abstract
+We show that there is no (75, 32, 10, 16) strongly regular graph. The
+result is obtained by a mix of algebraic and computational approaches.
+The main idea is to build large enough induced structure and apply the
+star complement technique. Our result implies that there is no regular
+two-graph on 76 vertices and no partial geometry with parameters
+pg(4, 7, 2).
+In particular, it implies that there is no (76, 35, 18, 14)
+strongly-regular graph. In order to solve this classiﬁcation problem we
+also develop an eﬃcient algorithm for the problem of ﬁnding a maximal
+clique in a graph.
+1
+Introduction
+A popular notion in algebraic graph theory is the concept of a strongly
+regular graph. We say that a k-regular graph of order v and diameter 2
+is strongly regular with parameters (v, k, λ, µ) if any pair of non-adjacent
+vertices has precisely λ common neighbors while two non-adjacent vertices
+share µ common neighbors.
+A fundamental question about strongly regular graphs is for which pa-
+rameters does a strongly regular graph exist? For example the notorious
+question about the existence of a graph of order 3250, girth 5, and diameter
+2 (also known as Moore graph) asks for the existence of a strongly regular
+graph (from now on SRG) with parameters (3250, 57, 0, 1). There are essen-
+tially four general ways to rule out certain parameters for SRG’s from being
+realizable. An easy double-counting argument gives us the condition that
+(v −k −1)µ = k(k −λ −1) .
+1
+
+=== PAGE 2 ===
+The second condition requires that the numbers
+1
+2
+"
+(v −1) ±
+2k + (v −1)(λ −µ)
+p
+(λ −µ)2 + 4(k −µ)
+#
+,
+are integers, and comes from counting the multiplicities of the eigenvalues
+of a SRG.
+Finally one way to rule out certain SRG is through the so-called Krein
+and absolute bounds see [8, pp.
+231].
+All the described criterion’s still
+leave room for many parameters for which it is not known whether there
+exists such a SRG. The state of aﬀairs for all possible parameters on up to
+1300 vertices is tracked by Brouwer on his web site [5]. It can be seen that
+on up to 100 vertices there are essentially 15 parameters whose classiﬁca-
+tion is still open, the smallest three being (65, 32, 15, 16), (69, 20, 7, 5), and
+(75, 32, 10, 16). We found the parameters of the last one the most intrigu-
+ing since the existence of the SRG with (75, 32, 10, 16) is connected to the
+existence of certain so called two-graphs, and referred in [8, pp. 263] as one
+of the oldest open problems in this topic. Moreover, it is also connected to
+the existence of certain partial geometries.
+Given that there is no general technique for deciding whether a cer-
+tain parameter is realizable, a lot of eﬀort has been put into establishing
+certain structural results about the missing SRG’s. Speciﬁcally for a po-
+tential SRG X with parameters (75, 32, 10, 16), Haemers and Tonchev [11]
+showed in 1996 that the chromatic number of X is at least 6. Four years
+later Makhnev showed [14] that X does not contain a 16-regular subgraph.
+Recently Behbahani and Lam [2] also derived some constraints about the
+structure of the automorphism group of X. Particularly, they showed that
+if p is a prime dividing | Aut(X)|, then p = 2 or p = 3.
+In this paper we use the so called star-complement technique [6] in or-
+der to establish that in fact a SRG with parameters (75, 32, 10, 16) does not
+exist. Moreover, since existence of such a graph is in one to one correspon-
+dence with the question of existence of regular two-graph on 76 vertices [8,
+pp. 249], our result implies that there is no regular two-graph with such
+order. The result has even further consequences: Deﬁne a partial geometry
+pg(s, t, α), for s, t, α ≥1, as incidence structure C = (P, L, I) consistent of
+points P, lines L, and set I ⊂P × L of incidences (we say that p ∈P is
+incident with l ∈L if (p, l) ∈I), such that the following holds. Each pair of
+points has at most one line incident with both of them. Each line is incident
+with s + 1 points, while each point is incident with t + 1 lines. Finally, if a
+point p and a line l are not incident, there are exactly α pairs (q, m) ∈I,
+2
+
+=== PAGE 3 ===
+such that p is incident with m and q is incident with l. The point graph
+of pg(s, t, α) is the graph on its points with two points adjacent if they are
+incident with a common line. This graph is a strongly regular graph [4]. Up
+to now the existence of pg(4, 7, 2) was unknown, but it was known that the
+point graph of this geometry must be a SGR with parameters (75, 32, 10, 16).
+Therefore our result shows that also pg(4, 7, 2) does not exist. As an appli-
+cation of Seidel switching one can also deduce that the non-existence of a
+(75, 32, 10, 16) SRG implies that there is no (76, 35, 18, 14) SRG [9].
+The star-complement technique turned out to be a useful tool for re-
+proving classiﬁcation results for some SRG’s [16, 17] although its direct
+application fails for SRG’s with a large number of vertices or valency. The
+two main drawbacks being the large search space for induced subgraphs and
+the problem of computing the clique number of some large graphs.
+In this paper we address both problems by presenting an application
+of the interlacing principle that is very eﬀective at pruning the underlying
+search space as well as an eﬃcient algorithm for ﬁnding the clique number.
+The algorithm for computing the clique number is crucial since computing
+the clique number of most of our graphs is computationally infeasible for all
+state of the art programs.
+The paper is organized as follows. In the next section we introduce the
+star-complement technique and the interlacing criterion that we use. In the
+following two sections we use the star complement technique in order to
+ﬁrst establish the clique number of X and ﬁnally show that X does not
+exist. We ﬁnish by presenting the obtained results and discussing some of
+the computational aspects.
+2
+Preliminaries
+2.1
+Star complements
+The idea behind star-complements revolves around the notion of a so called
+star-complement graph. Let G be a simple graph of order n, AG its adjacency
+matrix and r one of its eigenvalues with multiplicity f. We will say that r
+is an eigenvalue of G whenever we mean that r is an eigenvalue of AG.
+An induced subgraph H ⊆G is called a star-complement for G and
+eigenvalue r if it has order n −f and r is not an eigenvalue of H. As it
+turns out [6], there is a star-complement for every eigenvalue of G.
+For
+convenience we record this fact in the following proposition.
+Proposition 1. If G is a graph and r an eigenvalue of G, then G has a
+3
+
+=== PAGE 4 ===
+star complement for r.
+Before explaining the role of star-complements, let us mention that one
+can construct a star-complement for an eigenvalue r by extending an induced
+subgraph of G that does not contain r as an eigenvalue [16, Lemma 3]. More
+precisely:
+Proposition 2. Let G be a graph with eigenvalue r. If H′ is an induced
+subgraph of G that does not contain r as an eigenvalue then there exist a star
+complement H for G and eigenvalue r so that H′ is an induced subgraph of
+H.
+The main motivation of star-complements is that they in some way allow
+us to reconstruct G. The reader can ﬁnd the precise implications in [6, pp.
+150], in this paper we shall formulate the theory to suit the needs of our
+application.
+Let H be a star-complement for G with eigenvalue r and deﬁne the inner
+product
+⟨u, v⟩= u(rI −AH)−1vt .
+The compatibility graph of H and r denoted by Comp(H, r) is the graph
+with vertex set
+V (Comp(H, r)) = {u ∈{0, 1}n−f | ⟨u, u⟩= r and ⟨u, −→1 ⟩= −1} ,
+and adjacency deﬁned as
+u ∼v ⇐⇒⟨u, v⟩∈{−1, 0} .
+Let us remark that the condition that the inner product of a vertex of
+Comp(H, r) and the all-ones vector is −1 does not hold in general but only
+if we assume that G is a regular graph, see [19].
+As it turns out, the problem of constructing G is reduced to the problem
+of ﬁnding cliques in Comp(H, r). Speciﬁcally
+Proposition 3. If r is an eigenvalue of G with multiplicity f, H a star
+complement for G and r, then Comp(H, r) has a f-clique.
+This already sets the general idea behind the application of the star
+complement technique.
+Suppose G is a SRG with parameters (v, k, λ, µ)
+and r an eigenvalue of G with (large) multiplicity f. Suppose that we know
+that H′ is a induced subgraph of G and does not have r as an eigenvalue.
+If H′ is large enough we can compute its compatibility graph and check for
+4
+
+=== PAGE 5 ===
+f-cliques. If the obtained graph does not have such a clique then G does
+not exist.
+In most cases we cannot directly ﬁnd an induced subgraph H′ large
+enough to be a star complement. In that case, by Proposition 2, we can
+extend H′ in all possible ways to obtain candidates for a star-complement
+of G and r. Depending on how large H′ is, we may obtain a large set of
+candidates, and for each such candidate H we need to compute the respective
+clique number of Comp(H, r).
+The set of all possible candidates for star-complements gets large very
+quickly and hence we need an eﬃcient pruning method that we explain in
+the next subsection.
+2.2
+Interlacing
+If n > m and λ1 ≥· · · ≥λn, µ1 ≥· · · ≥µm are two sequences of real
+numbers, we say that {µi}m
+i=1 interlaces {λi}n
+i=1 if
+λi ≥µi ≥λn−m+i
+for
+i ∈{1, . . . , m} .
+The well-known interlacing principle states that the eigenvalues of an
+induced subgraph of G interlace the eigenvalues of G. As it turns out this is
+not a very eﬀective condition for pruning the induced subgraphs obtained in
+our application. A much more eﬀective criterion is to used the ‘partitioned’
+version of the interlacing principle [10, Cor. 2.3] which we state as follows.
+Suppose V = (V1, . . . , Vk) is a partition of the vertices of G. Let e(Vi, Vj)
+denote the number of edges between the vertices of Vi and Vj if i̸ = j, and
+the number of edges in the graph induced by Vi otherwise. Consider the
+k × k matrix AV = (ai,j)k
+i,j=1 where
+ai,j =
+( e(Vi,Vj)
+|Vi|
+if
+i̸ = j
+2e(Vi)
+|Vi|
+if
+i = j
+.
+As it turns out, the eigenvalues of AV interlace the eigenvalues of G.
+Proposition 4. Let G be a graph and V a partition of its vertices. Then,
+the eigenvalues of G are interlaced by the eigenvalues of AV.
+Given that we want to decide whether a graph H with vertex set
+{v1, . . . , vk} is an induced subgraph of G we consider the partition
+V = ({v1}, . . . , {vk}, V (G) \ V (H)) .
+5
+
+=== PAGE 6 ===
+Since in our scenario G is regular, we can always compute the number of
+edges in V (G) \ V (H) as well as between the vertices of V (H) and V (G) \
+V (H). We call the matrix that is obtained from H by using this partition
+the partitioned adjacency matrix of H.
+From Proposition 4 we have that the eigenvalues of the partitioned ma-
+trix of H must interlace the eigenvalues of G. This turns out to be quite
+a sharp pruning condition which we will call the interlacing condition. In
+particular if the interlacing condition of a graph H is not satisﬁed, we shall
+say that H does not interlace G.
+Let us remark that this condition appears to be more eﬃcient than
+the positive-deﬁniteness criterion used in [7]. More precisely, we were able
+to ﬁnd graphs such that the pruning condition used in [7] is satisﬁed but
+they do not interlace our graph. We were however not able to ﬁnd graphs
+satisfying the converse situation. However, the drawback of this criterion is
+that the matrices in question are not symmetric and hence computing their
+eigenvalues is a much less eﬃcient task.
+2.3
+Approach
+The problem of determining whether a (v, k, λ, µ) SRG graph G exists is
+thus reduced to the following. Pick an eigenvalue r of G with large multi-
+plicity. Start with a large induced subgraph H′ that does not have r as an
+eigenvalue and must appear as an induced subgraph of G. Extend H′ to a
+star-complement of G and r using the described pruning conditions to get
+rid of invalid graphs. Finally, for all potential star-complements H compute
+the clique number of Comp(H, r). In practice, Comp(H, r) can be a very
+large and dense graph and we explain how to compute its clique number in
+Section 5.
+Now, let us describe our approach for the classiﬁcation of SRG with
+parameters (75, 32, 10, 16). For the eigenvalue we take r = 2 and look for
+a small list L with graphs of large order such that at least one member
+of L is an induced subgraph of a (75, 32, 10, 16) SRG X. When the list is
+obtained, we proceed to show that no graph in L is an induced subgraph of
+X as follows. For H ∈L let sc(H) be a largest induced subgraph of H that
+does not have 2 as an eigenvalue and has order at most 19. Note that sc(H)
+may not be unique and in this case we can pick an arbitrary such subgraph.
+If |V (sc(H))| = 19 then sc(H) is a star complement for X and we use the
+theory described above to verify that ω(Comp(sc(H), 2)) < 56, and hence
+that H is not an induced subgraph of X. If |V (sc(H))| < 19 then we extend
+sc(H) by adding 19 −|V (sc(H))| vertices in all possible ways to obtain (by
+6
+
+=== PAGE 7 ===
+Proposition 2) a list of possible star complements for X. Again, we show
+that none of the obtained star complements has a compatibility graph with
+a large enough clique. The process of extending an induced subgraph H
+to a graph of order 19 is done by inductively introducing new vertices in
+all possible ways, and in the end removing all candidates that have 2 as an
+eigenvalue or do not interlace. In order to minimize the list of candidate
+graphs we also make use of the following observation. Suppose that there is a
+pair of vertices u, v ∈V (H) that does not yet have many common neighbors
+in the induced subgraph - that is u ∼v and |N(u) ∩N(v)| < λ = 10,
+or u̸ ∼v and |N(u) ∩N(v)| < µ = 16.
+Suppose further that for every
+S ⊂V (H) \ {u, v} all the graphs obtained by adding a new vertex adjacent
+to S ∪{u, v} that interlace X also do not contain 2 as an eigenvalue. Let us
+say that such a pair of vertices is graceful.
+In virtue of Proposition 2 we can simply use these graphs when building
+a complete list of star complements of X having H as subgraph. Stating it
+as a proposition
+Proposition 5. If u, v is a graceful pair for H and L a list of all graphs
+obtained by adding a new vertex x to H that is joined to u, v and a subset
+of V (H) \ {u, v}. Then there exist a star complement G for X such that at
+least one of the members of L is an induced subgraph of G.
+The described approach is performed by the program extend.c that we
+describe later. In particular, it turns out that the above procedure is compu-
+tationally feasible if the list L of induced subgraphs does not include graphs
+that are, when reduced to a subgraph without eigenvalue 2, of order less
+than 17. In practice, this is almost the same as demanding that for each
+G ∈L we have n(G) −k2(G) ≥17, where n(G) is the order of G and k2(G)
+is the multiplicity of eigenvalue 2 in G.
+3
+Cliques in a SRG with parameters (75, 32, 10, 16)
+In what follows let X denotes a possible strongly regular graph with pa-
+rameters (75, 32, 10, 16). Our main goal is to prove that X does not exits.
+In order to do so we ﬁrst establish a structural claim related to its cliques.
+Notice that the Hoﬀman bound [8, pp. 204] implies that X has indepen-
+dence number at most 5 and hence that X has clique number at most 5. On
+the other hand, Bondarenko, Prymak, and Radchenko developed a general
+tool for bounding the number of 4-cliques in a strongly regular graph [3]. In
+particular, they have established that a SRG with parameters (75, 32, 10, 16)
+has at least 783 4-cliques.
+7
+
+=== PAGE 8 ===
+In this section we show that in fact X has clique number 5, more pre-
+cisely, we show the following result.
+Proposition 6. If X exists, its clique number is 5. Moreover, every 4-clique
+of X is contained in a 5-clique.
+In order to prove the result we need to recall a very useful lemma whose
+proof the reader may ﬁnd in [3]. Let H be an induced subgraph of order
+m of a (v, k, λ, µ) strongly regular graph G, and let (d0, d1, . . . , dm−1) be
+a vector such that di denotes the number of vertices of H having degree i
+in H. Similarly let (b0, . . . , bm) be a vector where bi denotes the number
+of vertices of G −H that have i neighbors in H. The next lemma gives a
+relationship between these numbers.
+Lemma 1. With notation as above, the following three equations hold
+m
+X
+i=0
+bi = v −m ,
+m
+X
+i=0
+ibi = mk −
+m−1
+X
+i=0
+jdj ,
+m
+X
+i=0
+i
+2
+
+bi =
+m
+2
+
+µ −
+m−1
+X
+i=0
+i
+2
+
+di + 1
+2(λ −µ)
+m−1
+X
+i=0
+idi .
+(1)
+Suppose now that X has a 4-clique K4 that is not contained in a 5-clique.
+Letting H = K4 and applying the above Lemma it can easily be veriﬁed that
+there are 4 solutions (b0, b1, b2, b3) (notice that by our assumption b4 = 0)
+to the above system, namely
+(3, 20, 48, 0), (0, 29, 39, 3), (1, 26, 42, 2) and (2, 23, 45, 1).
+(2)
+In what follows we analyze all these possibilities, showing that none of
+these solutions occurs as a conﬁguration in X. We split the proof into four
+sections each dealing with a diﬀerent value of (b0, b1, b2, b3). The general
+idea is to use the structure given by a speciﬁc conﬁguration to ﬁnd a small
+list of graphs that must be an induced subgraph of X. For each possible
+case we have written simple Sage [20] programs that build graphs with the
+established structure and prune them using the interlacing principle we de-
+scribed. Whenever we assert that some induced structure is not possible or
+say that there is a list of graphs satisfying it, there is a corresponding Sage
+program that computed this part of the claim. Each such program (with
+8
+
+=== PAGE 9 ===
+the respective output) is recorded in Table 1 and is available online, see [1].
+Throughout the rest of the paper K4 will denote a 4-clique of X.
+In the next section we shall analyze the case when X has clique number
+5. Since we will also need a glimpse into this case already in this section,
+let us remark at this point that if K5 is a 5-clique of X then every vertex in
+V (X)−V (K5) has precisely two neighbors in K5. One way to see this claim
+is to use the above system of equalities which only gives (0, 0, 70, 0, 0, 0) as
+a solution vector. Finally, let us remark that throughout the paper we will
+use the notation X[S] to denote the subgraph of X induced by the set of
+vertices S ⊆V (X).
+3.1
+Case (3, 20, 48, 0)
+Let us denote with X0, X1, X2 the subsets of vertices in V (X) \ V (K4) that
+have, respectively, 0,1, and 2 neighbors in K4. Moreover, denote the vertices
+in X0 by x1, x2, x3.
+Lemma 2. Every vertex in X2 has precisely two neighbors in X0 while each
+two vertices in X0 are not adjacent and have all 16 common neighbors in
+X2.
+Proof. Let xi ∈X0. We use an argument that will be repeatedly used in
+this paper. Since xi is not adjacent to any of the vertices in K4 it has to
+have 16 common neighbors (since X is strongly regular with µ = 16) with
+each of its vertices. Thus there are 4·16 paths of length 2 from xi to K4. On
+the other hand, xi has 32 neighbors (X is 32-regular) in X0 ∪X1 ∪X2. All
+the neighbors are in fact in X2, for otherwise they could not form 64 2-paths
+to K4. In particular this implies that the vertices of X0 are not adjacent,
+proving the last statement of the lemma.
+Since for 1 ≤i < j ≤3 it holds |N(xi) ∩N(xj)| = 16, |N(xi)| = 32, and
+|X2| = 48, we have
+48 ≥|N(x1) ∪N(x2) ∪N(x3)| = 3 · 32 −3 · 16 + |N(x1) ∩N(x2) ∩N(x3)|,
+by the inclusion-exclusion principle.
+Thus N(x1) ∩N(x2) ∩N(x3) = ∅.
+Therefore every vertex in X2 is adjacent to precisely two vertices in X0.
+For i ∈{1, 2, 3} let Xi,j
+2
+⊆X2 be the graphs induced by N(xi) ∩N(xj).
+By the above lemma, the are of order 16.
+Lemma 3. Each of the graphs X1,2, X1,3, X2,3 is isomorphic to the disjoint
+union of cycles.
+9
+
+=== PAGE 10 ===
+Proof. Let v ∈X1,2. We count the number of 2-paths from v to K4. Since
+v is adjacent to 2 vertices of K4, there must be 2 · 10 + 2 · 16 such paths,
+counted as in the previous lemma. Denote with k the number of neighbors
+of v in X2. By the previous lemma, v is adjacent to 2 vertices in X0, thus
+it is adjacent to 32 −2 −2 −k vertices in X1. By counting 2-paths we thus
+have:
+2 · 10 + 2 · 16 = 2k + 1(28 −k) + 0 · 2 + 2 · 3 .
+Therefore, v has k = 18 neighbors in X2, and since it is not adjacent to
+x3 it must have 16 neighbors in X2 −X1,2 = N(x3). This implies that v has
+precisely 2 neighbors in X1,2.
+In [14] an analysis of of subgraphs in X (if existent) was made. For
+two non-adjacent vertices x, y in X call the subgraph of X induced on the
+common neighbors of x and y a µ-subgraph. It was shown that if X exists,
+then it does not have a regular µ-subgraph. Lemma 3.1 states that each
+of X1,2, X1,3, X2,3 is a µ subgraph, while Lemma 3 states that it is regular.
+This cannot be, thus the case (3, 20, 48, 0) is impossible.
+3.2
+Case (1, 26, 42, 2)
+Let X0, X1, X2, X3 be the sets of vertices having 0, 1, 2, and 3 neighbors in
+K4, respectively. In particular, let x0 ∈X0 and x1̸ = x2 ∈X3. In what
+follows we prove a series of claim describing the structure of a graph with
+this conﬁguration.
+Lemma 4. Vertices x1 and x2 are not adjacent.
+Proof. Suppose x1 ∼x2. There are up to isomorphism only two possible
+induced graphs on K4 ∪{x1, x2}.
+Moreover, if we add the vertex x0 we
+obtain 6 candidate graphs for an induced subgraph of X. None of them
+interlaces X, which was an easy task to check by computer.
+Lemma 5. Vertex x0 is adjacent to both vertices in X3. Moreover, it has 2
+neighbors in X1 and 28 neighbors in X2.
+Proof. For the sake of contradiction, suppose x0 is adjacent to k ∈{0, 1}
+vertices of X3. Let t be the number of neighbors of x0 in X1. By double
+counting 2-paths from x0 to K4 we obtain:
+4 · 16 = 3k + t + 2(32 −k −t) ,
+which gives that k = t. Without loss of generality suppose that x1 is not
+adjacent to x0. By counting the number of 2-paths in a similar way we
+10
+
+=== PAGE 11 ===
+obtain that x1 has 8 neighbors in X2. But by strong regularity, x0 and x1
+must have 16 common neighbors which is not possible since x0, x1 can share
+at most k ≤1 common neighbors in X1 and 8 common neighbors in X2.
+Hence x0 is adjacent to both x1 and x2 and so k = t = 2 and the claim
+follows.
+In virtue of Lemma 5, let x′
+0, x′′
+0 be the vertices in X1 that are adjacent
+to x0.
+Lemma 6. Vertices x1, x2 each have 19 neighbors in X1 and 9 neighbors in
+X2. In particular, 12 or 13 vertices of X1 are adjacent to both x1 and x2, 6
+or 7 vertices only to x1, and 6 or 7 only to x2.
+Proof. The ﬁrst part of the claim is an easy application of the already used
+double counting argument. Let now Nx1 and Nx2 be the neighbors of x1 and
+x2 in X1, respectively. Since |Nx1 ∪Nx2| ≤26 (the size of X1), we must have
+|Nx1 ∩Nx2| ≥12 by the inclusion-exclusion principle. On the other hand, x1
+and x2 must have 16 common neighbors. Since x0 is a common neighbor and
+they have 2 or 3 common neighbors on K4 it follows that |Nx1 ∩Nx2| ≤13.
+The other assertions follow easily.
+Lemma 7. For i = 1, 2, the vertex xi is adjacent to at least one of the
+vertices in {x′
+0, x′′
+0}.
+Proof. For i = 1, 2, the vertex xi has 10 common neighbors with x0. By
+Lemma 6, xi only has 9 neighbors in X2, thus it must be adjacent to at least
+one of x′
+0, x′′
+0.
+Let X−0
+2
+be the set of vertices in X2 that are not adjacent to x0. By
+Lemma 5, |X−0
+2 | = 14.
+Lemma 8. At most one vertex from X−0
+2
+is adjacent to x1, and at most
+one is adjacent to x2.
+Proof. Vertex x1 shares at most 2 common neighbors with x0 in X1 (possibly
+x′
+0 or x′′
+0). Thus it must have at least 8 out of 9 neighbors in X2 adjacent to
+x0. By symmetry, the claim holds for x2.
+Lemma 9. Each vertex in X[X−0
+2 ] that is not adjacent to any of the vertices
+in {x1, x2} has degree t ≤2 and it has t neighbors in {x′
+0, x′′
+0}. Vertices (at
+most two) in X−0
+2
+that are adjacent to exactly one of x1 and x2 have degree
+t −1 in X[X−0
+2 ] and t ≥1 neighbors in {x′
+0, x′′
+0}. If there exists a vertex in
+X−0
+2
+that is adjacent to both in x1 and x2, then it is adjacent to both vertices
+in {x′
+0, x′′
+0} and has degree 0 in X[X−0
+2 ].
+11
+
+=== PAGE 12 ===
+Proof. Let v ∈X−0
+2 . Notice that v must have 16 common neighbors with x0.
+First, assume it is not adjacent to x1 or x2. Then their common neighbors
+can only be in {x′
+0, x′′
+0}, say t of them, and in X2 \X−0
+2 . By double counting
+2-paths from v to K4 we obtain that v has 16 neighbors in X2. Thus t of
+them must be in X−0
+2 .
+Second, assume that v is adjacent to exactly one of the x1, x2. Then it
+has 16−1−t neighbors in X2\X−0
+2 . On the other hand, by double counting,
+its degree in X[X2] is 14. Thus it’s degree in X[X−0
+2 ] is t −1.
+Finally, if v is adjacent to x1 and x2, it has degree 12 in X[X2], thus all
+this neighbors have to be in X2 \X−0
+2
+and it also has to be adjacent to both
+vertices in {x′
+0, x′′
+0}.
+Lemma 10. Each of the vertices x′
+0, x′′
+0 has 15 −t neighbors in X−0
+2 , where
+t ∈{1, 2} is the number of its neighbors in {x1, x2}. Moreover, x′
+0 and x′′
+0
+are not adjacent.
+Proof. By double counting 2-paths from x′
+0 to K4 we have that x0 has 25−2t
+neighbors in X2. Vertices x0 and x′
+0 have 10 common neighbors. Let s be
+equal to 1 if x′
+0 and x′′
+0 are adjacent and 0 otherwise. x0 and x′
+0 must have
+10−t−s common neighbors in X2, thus x′
+0 has 24−2t−(10−t−s) = 15−t+s
+neighbors in X−0
+2 . Similar holds for x′′
+0 and since |X−0
+2 | = 14, x′
+0 and x′′
+0 have
+more than 10 common neighbors. Thus they are not adjacent and s = 0.
+The lemma holds.
+The above lemmas give enough structure to be able to computationally
+obtain a small list of graphs that interlace X and at least one of them
+must be induced subgraph of X, provided that X contains a K4 with this
+conﬁguration. See Table 1 and [1] for the Sage program.
+Proposition 7. There are 3597 graphs of the form K4∪{x0, x′
+0, x′′
+0, x1, x2}∪
+X−0
+2
+that interlace X.
+3.3
+Case (2, 23, 45, 1)
+Let X0 = {x0, x1}, X1, X2, X3 = {x3} be the sets of vertices having 0, 1, 2,
+and 3 neighbors in K4, respectively.
+Again, we start by proving certain
+structural claims about this conﬁguration.
+Lemma 11. x0̸ ∼x1.
+Proof. If x0 ∼x1, then the number of 2-paths from x0 to K4 is at most
+3 + 2 · 30. But since x0 is not adjacent to any vertex of K4, it should have
+precisely 4 · 16 2-paths to it.
+12
+
+=== PAGE 13 ===
+Lemma 12. x0 ∼x3 and x1 ∼x3.
+Proof. Suppose x0 is not adjacent to x3 and let N0, N1, respectively, be the
+sets of neighbors of x0, x1 in X2. By double counting 2-paths to K4 from x0
+or x1 we have |N0| = 32 while |N1| = 32 −2t where t ∈{0, 1} depending on
+whether x1 is adjacent to x3 or not. Since all the neighbors of x0 are in X2,
+we have |N0 ∩N1| = 16. But this implies |N0 ∪N1| = 48 −2t ≥46 which is
+not possible since X2 has size 45.
+Lemma 13. Vertices x0 and x1 have precisely one neighbor in X1.
+In
+particular, the two neighbors are distinct.
+Proof. Let t be the number of neighbors of x0 in X1. By counting 2-paths
+from x0 to K4 we have
+16 · 4 = 3 + t + 2 · (32 −1 −t) ,
+which gives that t = 1, and x0 has 30 neighbors in X2. Same holds for x1.
+Let again N0, N1 be the sets of neighbors of x0, x1 in X2. Then |N0 ∪N1| ≤
+45, thus |N0 ∩N1| ≥15.
+Since x0 and x1 have a common neighbor x3,
+|N0 ∩N1| = 15 and |N0 ∪N1| = 45. This implies also that x0 and x1 cannot
+have a common neighbor in X1.
+The last two lemmas now imply that X2 can be partitioned into sets
+X0
+2, X{0,1}
+2
+, X1
+2 each of size 15 such that every vertex in Xi
+2 is adjacent to xi
+and not adjacent to x1−i for i = 0, 1 and every vertex in X0,1
+2
+is adjacent to
+both x0 and x1. Let us denote the neighbors of x0, x1 in X1 by x′
+0 and x′
+1
+respectively.
+Lemma 14. If x3 is adjacent to x′
+1, then it has 1 neighbor in X0
+2, otherwise
+it has no neighbor in X0
+2.
+Proof. x3 has 10 neighbors in X2 by double counting of 2-paths to K4. On
+the other hand, it must have 10 common neighbors with x1. Notice that the
+common neighbors can only be in X2 ∪{x′
+1}. If x3 is adjacent to x′
+1, then it
+must have 9 neighbors in X0,1
+2
+∪X1
+2 thus 1 in X0
+2. On the other hand, if x3
+is not adjacent to x′
+1, then it must have all 10 neighbors in X0,1
+2
+∪X1
+2 and
+no neighbor in X0
+2.
+Lemma 15. The graph X[X0
+2] has maximal degree 2. If v ∈X0
+2 has degree
+2, then it is not adjacent to x3 but it is with x′
+1, if it has degree 1, it is
+adjacent with either both x3 and x′
+1 or none of them, and if it has degree 0,
+it is adjacent to x3 and not adjacent with x′
+1.
+13
+
+=== PAGE 14 ===
+Proof. Pick a vertex v ∈X0
+2 and let s ∈{0, 1} indicate if it is adjacent with
+x′
+1 and t ∈{0, 1} indicate if it is adjacent with x3. Let r be the number of
+neighbors of v in X2. We count 2-paths from v to K4:
+2 · 10 + 2 · 16 = 2 · 3 + 3t + 2r + (32 −2 −t −r −1) .
+Thus r = 17 −2t. Vertices v and x1 must have 16 common neighbors. This
+implies that the number of neighbors of v in X0,1
+2
+∪X1
+2 is 16 −t −s. Hence
+we have that v has (17 −2t) −(16 −t −s) = 1 −t + s neighbors in X0
+2 and
+hence the lemma follows.
+By generating graphs with the established structure (see Table 1 and [1])
+we infer that none of them interlaces X.
+Proposition 8. No graph of the form X0
+2 ∪{x0, x1, x′
+1, x3} ∪K4 interlaces
+X.
+3.4
+Case (0, 29, 39, 3)
+Let X1, X2 and X3 = {x0, x1, x2} be the respective subsets of vertices of
+X. There are three non-isomorphic ways to introduce 3 vertices to K4 by
+joining each vertex to 3 vertex of K4. Each such graph G1, G2, G3 can be
+uniquely described by a tuple⃗n = (n1, n2, n3, n4) counting the number of
+edges from the i′th vertex of K4 to X3. By relabeling the vertices of K4
+if needed we obtain three tuples (0, 3, 3, 3), (1, 3, 3, 2) and (2, 2, 2, 3).
+We
+proceed by establishing certain structural claims about this conﬁguration,
+for the simple implementation see Table 1 and [1].
+Lemma 16. The vertices of X3 form an independent set.
+Proof. No matter how we introduce edges among the vertices of X3 in the
+graph K4 ∪X3 we do not obtain a graph interlacing X.
+Lemma 17. Every vertex x ∈{x0, x1, x2} has 21 neighbors in X1 and 8
+neighbors in X2.
+Proof. Let x have k neighbors in X1 and l = 32−3−k neighbors in X2. We
+count the number of paths of length 2 from x to K4. We have 3 · 10 + 16 =
+3 · 3 + k + 2 · (32 −k −3) and thus k = 21 and l = 8.
+Let X0
+2, X1
+2, X3
+2 be the neighbors in X2 of x0, x1, x2 respectively.
+We
+have proved that |X0
+2| = |X1
+2| = |X2
+2| = 8. Notice that the sets X0
+2, X1
+2, X2
+2
+need not be disjoint.
+14
+
+=== PAGE 15 ===
+Lemma 18. It holds |X0
+2 ∩X1
+2|, |X0
+2 ∩X2
+2|, |X1
+2 ∩X2
+2| ∈{0, 1}.
+Proof. Vertices x0 and x1 have 16 common neighbors, at least 2 of them are
+on K4. Each of x0, x1 has 21 neighbors in X1, where |X1| = 29. Thus they
+must have at least 13 common neighbors in X1. The latter implies that they
+have at most one common neighbor in X2. Same holds for all other pairs
+from the assertion of the lemma.
+Lemma 19. For i ∈{1, 2} the graph X[X0
+2 \ Xi
+2] is triangle-free.
+Proof. Assume that there exists a triangle in X[X0
+2 \ Xi
+2]. Together with x0
+it forms a K4. Assume this K4 does not extend to a K5. Vertex xi is not
+adjacent to any of the vertices of this K4. Thus we have have a 4-clique
+with some vertices that are not adjacent to it. We have already covered this
+conﬁguration before and shown that it is not feasible. On the other hand, if
+K4 extends to a K5, we have a K5 and a vertex that is adjacent to at most
+one vertex on it. Again, this is not possible, since every vertex not on K5
+must have precisely two neighbors on K5.
+Let X−0
+1
+denote the subgraph of X1 induced on all the vertices not
+adjacent to x0 and let Xi
+1 be the set of vertices in X1 adjacent to xi for
+i ∈{0, 1, 2}.
+Lemma 20. The graph X−0
+1
+has 8 vertices. At most one of the vertices in
+X−0
+1
+is not adjacent to x1 and at most one is not adjacent to x2. Moreover,
+the graph on X−0
+1
+\Xi
+1, for i ∈{1, 2}, has no triangles. Each vertex v ∈X−0
+1
+has degree k in X−0
+1
+at most 3 and is adjacent to precisely 9 −t −m + k
+vertices in X0
+2, where t ∈{0, 1, 2} is the number of vertices adjacent to v in
+{x1, x2} and m ∈{0, 1} the number of common neighbors of v and x0 on
+K4.
+Proof. By Lemma 17, |X0
+1| = 21, thus |X−0
+1 | = 8. For i ∈{1, 2}, xi and x0
+share at least 2 neighbors on K4. Since they are non-adjacent, they share
+16 neighbors, thus at most 14 in X1. This implies |X0
+1 ∩Xi
+1| ≤14, thus
+|X0
+1 ∪Xi
+1| ≥21 + 21 −14 = 28. Since |X1| = 29 we see that there exist at
+most one vertex in X1 that is not adjacent to x0 and to xi.
+If there is a triangle in the graph induced by X−0
+1
+\ Xi
+1, this triangle
+forms a K4 with x0, while xi is not adjacent to any of its vertices. If this
+4-clique is not a part of a 5-clique the assertion follows since this case has
+already been dealt with (a K4 with some vertices not adjacent to it). On
+the other hand, if this K4 is a part of a K5, we have an induced subgraph of
+K5 together with a vertex that is adjacent to one or none of the vertices on
+15
+
+=== PAGE 16 ===
+K5. Again, this is not possible since every vertex not on K5 has precisely
+two neighbors in V (K5). Hence X0,2
+1
+is indeed triangle-free.
+Let now v ∈X−0
+1
+be as in the lemma. Denote with j the number of its
+neighbors in X1. By counting 2-paths to K4 we get
+10 + 3 · 16 = 3 + 3t + j + 2(32 −1 −t −j),
+hence j = 7 + t. Denote with l the number of neighbors of v in X0
+2. Vertex
+v and x0 have 16 common neighbors, thus
+16 = (j −k) + l + m = (7 + t −k) + l + m,
+from which we get 9 −t −m + k = l ≤8. This implies also that k ≤2.
+Lemma 21. Let v be a vertex of X[X0
+2] with degree k, t ∈{0, 1, 2} neighbors
+in {x1, x2}, and m ∈{1, 2} the number of common neighbors of v and x0
+on K4. Then:
+k + m + t ≤3.
+In particular k ≤2.
+Proof. Let v ∈X0
+2. Denote with j the number of neighbors of v in X1. By
+counting 2-paths from v to K4 we get:
+2 · 10 + 2 · 16 = 2 · 3 + 1 · 3 + 3t + j + 2(32 −2 −1 −t −j),
+thus j = 15 + t. Let now l ≤8 be the number of neighbors of v in X−0
+1 .
+Vertices v and x0 have 10 common neighbors:
+10 = k + m + (j −l) = k + m + (15 + t −l),
+thus 5 + k + m + t = l ≤8 and k + m + t ≤3. Since m ∈{1, 2}, k ≤2.
+By generating all graphs induced by K4 ∪{x0, x1, x2} ∪X0
+2 ∪X−0
+1
+we
+obtain
+Proposition 9. There are 18089 non-isomorphic graphs of the form K4 ∪
+{x0, x1, x2} ∪X0
+2 ∪X−0
+1
+that interlace X.
+The case analysis carried in this section resulted in a list of 21686 non-
+isomorphic graphs, resulting in 6688644 star complements and roughly 40000
+compatibility graphs. By verifying that they all have clique number smaller
+than 56 we established Proposition 6.
+16
+
+=== PAGE 17 ===
+Claim
+Program
+Output
+Lemma 4
+K4/126422/Claim-1.sage
+/
+Proposition 7
+K4/126422/Case126422.sage
+K4/12622/cands126422.g6
+Proposition 8
+K4/223451/Case223451.sage
+/
+Lemma 16
+K4/029393/Claim1.sage
+/
+Proposition 9
+K4/029393/generateFinal.sage
+K4/029393/cands029393.g6
+Lemma 24
+K5/triangles/extendTriangle.sage
+K5/triangles/candsTriag.g6
+Table 1: Sage programs constructing small induced structure. Code is avail-
+able at [1]
+4
+Main result
+Let K5 be a 5-clique of X with vertex set {k1, . . . , k5}. The only possible
+conﬁguration of vertices not in K5 is (0, 0, 70, 0, 0, 0), therefore every vertex
+of X that is not in K5 has precisely two neighbors in K5. For 1 ≤i < j ≤5,
+let Xi,j be vertices in V (X)\V (K5) that are adjacent to ki and kj. Since
+ki and kj are adjacent, they must have 10 common neighbors, 3 of them
+already on K5. Hence V (G) \V (K5) is partitioned into 10 sets of 7 vertices,
+namely X0,1, X0,2, . . . , X4,5. In what follows we establish structural results
+about these partitions.
+Lemma 22. For any 1 ≤i < j ≤5 the graph Xi,j is either K7 or K3 ∪K4
+or K1 ∪K3 ∪K3.
+Proof. Assume there exists an edge e = {x, y} in the graph Xi,j. Then the
+vertices {x, y, ki, kj} induce a 4-clique. By the result of the previous section,
+every 4-clique is contained in a 5-clique. Clearly, the additional vertex must
+be in Xi,j. Hence we have proved that every edge e in Xi,j is contained in
+a triangle in Xi,j. Let T be a triangle in Xi,j and v ∈Xi,j a vertex not on
+T. Since T ∪{ki, kj} induces a 5-clique, every vertex not on this 5-clique is
+adjacent to exactly 2 vertices on this clique. Since v is adjacent to ki and
+kj, it is not adjacent to T and the lemma follows.
+As it turns out every pair of triangles in distinct partitions Xi,j, Xk,l
+induce quite a regular structure.
+Lemma 23. Let 1 ≤i < j ≤5, 1 ≤k < l ≤5 and let T, T ′ be two triangles
+of Xi,j and Xk,l, respectively. Let c = |{i, j, k, l}|. If c = 3, then the edges
+from T to T ′ form a perfect matching. If c = 4, they form a complement of
+a perfect matching.
+17
+
+=== PAGE 18 ===
+Proof. First assume c = 3. Since T ∪{ki, kj} forms a 5-clique, every vertex
+of T ′ is adjacent to exactly 2 vertices in this 5-clique. Since c = 3, it must
+be adjacent to exactly one vertex in T. Similarly, every vertex of T must be
+adjacent to exactly one vertex in T ′. Thus, the edges from T to T ′ form a
+perfect matching. The case when c = 4 is similar.
+Our next lemma shows that not all partitions Xi,j contain a triangle. In
+fact at most 7 do. For a simple implementation used in the lemma see Table
+1 and [1].
+Lemma 24. There are at least three distinct pairs {i, j}, {k, l}, {m, n} such
+that Xi,j, Xk,l and Xm,n are independent sets of X.
+Proof. Using Lemma 23 and Proposition 4 we wrote a Sage program gen-
+erating all possible graphs on {k1, . . . , k5} and 8 triangles, each contained
+in a diﬀerent set Xi,j, for 1 ≤i < j ≤5. There are 2 non isomorphic ways
+to chose 8 sets for triangles (among 10 sets) and for each such a way there
+are non-equivalent ways how to choose (complements of) perfect matchings
+among triangles. All the obtained graphs in one conﬁguration do not inter-
+lace X, while in the other conﬁguration only one non-isomorphic example
+was found giving rise to 117 compatibility graphs. None of them has a clique
+of order 56. Thus the lemma follows.
+We are now able to prove our main theorem. The lists of graphs obtained
+in this part are too large to be hosted online hence they are not included in
+Table 1. However they can be obtained by a request to the authors.
+Theorem 1. The graph X does not exist.
+Proof. By the previous lemma, at least 3 graphs among Xi,j, for 1 ≤i <
+j ≤5, are independent sets.
+It is an easy check that there are 4 non-
+isomorphic conﬁgurations for the choice of 3 sets among Xi,j. These are:
+(X1,2, X2,3, X4,5), (X1,2, X2,3, X1,3), (X1,2, X2,3, X2,4), (X1,2, X2,3, X3,4). No-
+tice that in all combinations we have sets X1,2, X2,3.
+First we analyze the possible candidates for graphs induced by
+{k1, . . . , k5} ∪X1,2 ∪X2,3. We do this by generating all bipartite graphs
+that can represent X1,2 ∪X2,3.
+This is done using McKay’s program genbg.
+Adding the vertices
+{k1, . . . , k5} and removing non-interlacing graphs we end up with a list of
+654325 graphs. By computing sc(G) for every such graph G and extending
+it to have order 19 we end up with a list of 361547477 star complements.
+18
+
+=== PAGE 19 ===
+By computing their respective compatibility graphs and removing isomor-
+phisms we end up with about 1006 graphs. We have veriﬁed that none of
+these graphs has a clique of order 56 hence implying our assertion.
+5
+Computational aspects
+In this section we brieﬂy describe the computational tools and resources
+used to produce our result. As described in Section 2.3, our approach re-
+quired generating a list of candidates for an induced subgraph of X, compute
+their compatibility graphs and check their clique numbers. Most programs
+were written and tested independently in C and Sage, however most of the
+computation was performed only by C programs due to their eﬃciency.
+5.1
+Extending graphs and computing compatibility graphs
+As described in Section 2 we generated a list of graphs L such that if X exists
+then one of the graphs in L must be an induced subgraph of X. In order
+to rule out the existence of X we had to obtain star complements for each
+of the graphs in L and check the clique number of its compatibility graphs.
+Some of the graphs in L already had star complements as induced subgraphs
+and were easy to handle. However some of the graphs did not, and in this
+case we had to ﬁnd maximal induced subgraphs with no 2 as eigenvalue,
+and extend them to have order 19. When choosing these subgraphs we tried
+to maximize the order of the automorphism group while minimizing the
+number of obtained subgraphs - note that two non isomorphic members of
+L may have isomorphic subgraphs. Both lists L and the one obtained from
+it are available on the GitHub page.
+Let us remark that we have found out that the process of extending
+graphs is computationally feasible whenever the obtained subgraphs have
+order 17. For otherwise we obtained far too many graphs of order 19.
+The task of extending graphs to have order 19 was done by the already
+introduced program extend.c which takes as input a ﬁle with graphs given
+in graph6 string format and for each graph outputs all possible ways to
+introduce a new vertex to it so that the newly obtained graph interlaces
+X. If the input graph has a graceful pair of vertices then the extensions
+giving the minimal amount of graphs is written. Again, graphs are written
+in graph6 format.
+After each iteration of extend.c we used McKay’s shortg [15] program
+to remove isomorphic graphs from the obtained lists. Extending a graph of
+19
+
+=== PAGE 20 ===
+order 18 takes roughly 0.5 seconds on a standard desktop machine and the
+whole computation for the proof of our main took roughly 240 CPU hours.
+To compute compatibility graphs we wrote a program that takes as input
+a list of star complements and for each output writes the graph6 representa-
+tion of its compatibility graph. The program is called compGraph2graph6.c
+and is found on GitHub [1]. We have found that the average compatibility
+graph gets computed in 0.5 seconds and hence the instances of Theorem 1
+were computed in about 5000 CPU hours. Let us note that the program
+does not output compatibility graphs with order smaller than the clique
+number sought - in our case 57.
+The computationally most intensive part was computing the clique num-
+ber of the obtained compatibility graph. This step took roughly 150000 CPU
+hours and was carried on a computational grid of 2000 CPU’s.
+Both programs use the GNU GSL library for linear algebra routines and
+make use of the precision guaranteed by their implementation. Finally let us
+remark that in some of the steps we made use of the GNU parallel program
+[21].
+5.2
+Computing the clique number
+While it is in general hard to compute the clique number of a graph, the
+structure of compatibility graphs makes this task a little easier. As one may
+suspect by its deﬁnition, Comp oﬀers a lot of symmetry which we exploit as
+follows. First let us denote with G[N(v)] the subgraph of G induced by the
+neighbors of a vertex v ∈V (G).
+Suppose we wish to compute the clique number ω(G) and let v ∈V (G).
+Then either v is contained in a maximal clique of G or is not. In the latter
+case the maximal clique of G equals the maximal clique in Comp −v. In
+other words
+ω(G) = max(ω(G) −v, ω(G[N(v)])) + 1) .
+Now, the key fact in computing ω(Comp) is that its automorphism group
+is fairly large and hence in computing its clique number we can remove
+the entire orbit o(v) of a vertex v.
+Given that o(v) is fairly large, the
+obtained graph Comp −o(v) is much smaller. We need not stop here. The
+key property that is used in the above idea is the fact that if u, v ∈V (G)
+are in the same orbit of Aut(G), then the graphs G[N(u)] and G[N(v)] are
+isomorphic. For our purposes we can deﬁne the extended orbit of a graph G
+as a partition of ˜O(G) of V (G) such that two vertices u, v are in the same
+20
+
+=== PAGE 21 ===
+part if and only if G[N(u)] ∼= G[N(v)]. Summarizing the above ideas into
+pseudo code we designed Algorithm 1.
+Algorithm 1 Algorithm for computing clique numbers of symmetric graphs
+1: procedure cliqueNumber(G,c)
+2:
+cl ←0
+3:
+while |V (G)| > c do
+4:
+˜O ←extendedOrbits(G)
+5:
+if | ˜O| = |V (G)| then
+6:
+break
+7:
+o ←some orbit of ˜O
+8:
+v ←an element of o
+9:
+cltmp ←cliqueNumber(G[v]), c) + 1
+10:
+if cltmp > cl then
+11:
+cl ←cltmp
+12:
+G ←G −o
+return max(cl, cliqueNumberBruteforce(G))
+In order to compute the clique number of our compatibility graphs we
+used a variant of Algorithm 1 which leaves out two major details. Namely
+the computation of the extended orbits of G and the cliqueNumberBruteforce
+routine. For the later, we needed an established program that calculates the
+clique number of a graph. We have found out that on our instances the
+program mcqd [13] drastically outperforms the well known clique ﬁnding
+algorithm Cliquer [18]. Hence whenever our input graph is small enough,
+we simply use mcqd. Since we only need to determine whether our graph has
+a clique of size at least 56 or not we made use of an additional optimization.
+Suppose we are trying to decide whether a graph G has a clique of size
+k and the greedy coloring algorithm shows that we can properly color the
+vertices of G using less than k colors. Then the clique number of G is smaller
+than k and we can stop our search. This is the essential idea behind the
+implementation of mcqd and we used it to obtain an even more eﬃcient test
+for compatibility graphs.
+The second problem of computing the extended orbits is reduced to the
+problem of computing the orbits of the automorphism groups and canonical
+forms of graphs. While the computational complexity of these two problems
+is not settled, it is well known that in practice both problem oﬀer eﬃcient
+practical solutions. For example, it takes Bliss [12] about 5 seconds of CPU
+time on a standard laptop to compute the full automorphism group of a
+typical compatibility graph of order 6000 and density 0.4.
+21
+
+=== PAGE 22 ===
+In order to compute the extended orbits of a graph G we ﬁrst compute
+the orbits O of its automorphism group. Finally for every representative
+of O we compute the canonical form of G[N(v)] and join orbits with equal
+canonical forms.
+A simple implementation of the above algorithm was implemented in
+Sage and is available on the GitHub repository under the name cliqueNum-
+ber.sage. We used a more eﬃcient C++ implementation that we will present
+in a subsequent paper.
+Finally, let us remark that both mcqd and Bliss were integrated into Sage
+for the purposes of this paper.
+6
+Final remarks
+We have shown that a (75, 32, 10, 16) SRG does not exists by presenting a
+classiﬁcation approach based on the star complement technique. The main
+property that we exploited was the fact that such a SRG has an eigenvalue of
+high multiplicity, namely 56 which implies that the star complement graph is
+small (19 vertices). Thus one can avoid the combinatorial explosion of con-
+structing all possible star complements, provided that one can build large
+enough induced structure for the star complement graph. In our case this
+was established by building the star complement around a maximal clique
+of our SRG. Two things were crucial for our approach to work. First was
+the fact that many of the obtained compatibility graphs were isomorphic
+thus signiﬁcantly reducing the number of graphs whose clique number was
+to be determined. The second crucial part was the fact that compatibil-
+ity graphs had large automorphism groups thus allowing to exploit their
+symmetries when computing their clique number. We believe that a similar
+approach can be used to classify at least one of the following open parameters
+(69, 20, 7, 5), (95, 40, 12, 20), (96, 45, 24, 18), (99, 42, 21, 15).
+Acknowledgements
+The authors are indebted to Nejc Trdin for kindly sharing his computa-
+tional resources, Nathann Cohen for Sage development related tasks, and
+Sandi Klavˇzar for fruitful discussions. The authors would also like to thank
+Jan Jona Javorˇsek and Barbara Kraˇsovec for their support in using the com-
+putational grid. Finally, the authors would like to thank W.H Haemers for
+his remark about the non-existence of a (76, 35, 18, 14) SRG.
+22
+
+=== PAGE 23 ===
+References
+[1] J.
+Azarija.
+Programs
+related
+to
+the
+paper
+”On
+the
+non
+existence
+of
+a
+(75, 32, 10, 16)
+strongly-regular
+graph”.
+https://github.com/jazarija/SRG75321016.
+[2] M. Behbahani and C. Lam. Strongly regular graphs with non-trivial
+automorphisms. Discrete Math., 311:132–144, 2011.
+[3] A.V. Bondarenko, A. Prymak, and D. Radchenko. Non-existence of
+(76, 30, 8, 14) strongly regular graph and some structural tools. arXiv
+preprint arXiv:1410.6748, 2014.
+[4] A. E. Brouwer and J. H. van Lint. Strongly regular graphs and partial
+geometries.
+Enumeration and design (Waterloo, Ont., 1982), pages
+85–122, 1984.
+[5] A.
+E.
+Brower.
+Parameters
+of
+Strongly
+Regular
+Graphs.
+http://www.win.tue.nl/ aeb/graphs/srg/srgtab.html.
+[6] D. M. Cvetkovi´c, P. Rowlinson, and S. Simic. Eigenspaces of Graphs.
+Number 66. Cambridge University Press, 1997.
+[7] J. Degraer. Isomorph-free exhaustive generation algorithms for associ-
+ation schemes. PhD thesis, Ghent University, 2007.
+[8] C. Godsil and G. F. Royle.
+Algebraic Graph Theory, volume 207.
+Springer Science & Business Media, 2013.
+[9] W. H. Haemers. personal communication.
+[10] W. H. Haemers. Interlacing eigenvalues and graphs. Linear Algebra
+Appl., 226:593–616, 1995.
+[11] W. H. Haemers and V. D. Tonchev. Spreads in strongly regular graphs.
+Des. Codes Cryptogr., 8:145–157, 1996.
+[12] P. Kaski and T. A. Junttila. Engineering an eﬃcient canonical labeling
+tool for large and sparse graphs. In ALENEX, volume 7, pages 135–149,
+2007.
+[13] J. Konc and D. Janeziˇc. An improved branch and bound algorithm
+for the maximum clique problem. MATCH Commun. Math. Comput.
+Chem., 58:569–590, 2007.
+23
+
+=== PAGE 24 ===
+[14] A. A. Makhnev.
+On strongly regular graphs with parameters
+(75, 32, 10, 16) and (95, 40, 12, 20).
+Fundam. Prikl. Mat., 6:179–193,
+2000.
+[15] B. D. McKay and A. Piperno. Practical graph isomorphism, II. J. of
+Symbolic Comput., 60:94 – 112, 2014.
+[16] M. Miloˇsevi´c.
+An example of using star complements in classifying
+strongly regular graphs. Filomat, 22:53–57, 2008.
+[17] M. Miloˇsevi´c and D. Stevanovi´c. A spectral proof of the uniqueness
+of a strongly regular graph with parameters (81, 20, 1, 6). European J.
+Combin., 30:957–968, 2009.
+[18] S. Niskanen and P. ¨Osterg˚ard.
+Cliquer User’s Guide: Version 1.0.
+Communications Laboratory, Helsinki University of Technology, Espoo,
+Finland, Tech. Rep. T48, 2003.
+[19] P. Rowlinson and B. Tayfeh-Rezaie.
+Star complements in regular
+graphs: old and new results.
+Linear Algebra Appl., 432:2230–2242,
+2010.
+[20] W. A. Stein et al. Sage Mathematics Software (Version 6.5.0). The
+Sage Development Team, 2015. http://www.sagemath.org.
+[21] O. Tange et al. GNU Parallel - The command-line power tool. The
+USENIX Magazine, 36:42–47, 2011.
+24

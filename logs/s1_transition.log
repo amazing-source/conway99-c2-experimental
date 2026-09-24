@@ -1,0 +1,16 @@
+﻿=== m=2 : 4 roots ; s=1 degrees {np.int64(2)}, s=0 degrees {np.int64(0)}
+   s=1 cycles: 1  lengths {4: 1} ; sigma-invariant cycles 1, sigma-paired 0
+   rank_F2(A1) = 2   rank_F3 = 2
+   rank_F2(A1+I) = 4   rank_F3 = 3
+   rank_F2(A0) = 0   rank_F3 = 0
+   rank_F2(A0+I) = 4   rank_F3 = 4
+   rank_F2(H) = 2   rank_F3 = 2
+   rank_F2(H+I) = 4   rank_F3 = 3
+=== m=11 : 220 roots ; s=1 degrees {np.int64(2)}, s=0 degrees {np.int64(18)}
+   s=1 cycles: 55  lengths {4: 55} ; sigma-invariant cycles 55, sigma-paired 0
+   rank_F2(A1) = 110   rank_F3 = 110
+   rank_F2(A1+I) = 220   rank_F3 = 165
+   rank_F2(A0) = 110   rank_F3 = 163
+   rank_F2(A0+I) = 132   rank_F3 = 166
+   rank_F2(H) = 108   rank_F3 = 209
+   rank_F2(H+I) = 132   rank_F3 = 219

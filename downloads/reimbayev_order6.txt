@@ -1,0 +1,991 @@
+=== PAGE 1 ===
+The Subgraphs of Order Six of the Family of
+Strongly Regular Graphs with Parameters λ = 1
+and µ = 2
+Reimbay Reimbayev
+Abstract
+Strongly regular graphs are highly symmetrical and can be described
+fully with just a few parameters yet the existence of many of them is still
+under the question. Due to this uncertainty, it is of immense interest to
+study their structure, in particular to obtain all the possible subgraphs of
+lower order. In this paper we study the family of strongly regular graphs
+with parameters λ = 1 and µ = 2 and establish all their subgraphs of order
+six.
+1
+Introduction
+The existence of srg(99, 14, 1, 2), famously known as Conway’s 99-vertex graph
+problem [1], is an intriguing one.
+But this is just one graph from the family
+of strongly regular graphs for which only few known to exist, e.g.
+those with
+valencies k = 2, 4 and, surprisingly 22 [2]. For that reason it is of interest to study
+the structure for the entire family of such graphs rather than just for a particular
+one. In this paper we have studied all possible subgraphs of order up to six and
+gave their numbers depending on the order n (or valency k, which is interrelated)
+of such graphs given they do exist.
+As a short reminder, the graph is strongly regular if a pair of its vertices has
+exactly λ common neighbors given they are adjacent, or µ common neighbors
+otherwise [3, 4]. Another way of defining strongly regular graphs, perhaps more
+precise as it cuts away some trivial cases like complete graphs, is by using spectral
+graph theory by which the finite graph is strongly regular if its spectrum consists
+of exactly three eigenvalues, one of which is k with multiplicity one [5].
+There have been some extensive studies by Makhnev et. al. on the structure of
+the family of strongly regular graphs with parameters λ = 1 and µ = 2 with regard
+to their automorphism groups [6]. Also, Makhnev was able to partially answer to
+1
+arXiv:2508.03377v2  [math.CO]  3 Nov 2025
+
+=== PAGE 2 ===
+the question of the existence of the graph srg(99, 14, 1, 2) in his earlier work [7].
+Using Wilbrink and Brouwer’s lemma [8], Lou and Murin were able to establish a
+forbidden subgraph of order 9 in cade when k = 14 [9]. This fact should hold true
+for any k, which needs a strict proof of course.
+In our previous work we have shown that the existance of this graph depends
+also on number of hexagons it contain [10], for which we have set a lower bound. It
+worth to note that the number of subgraphs of order up to five are all uniquely de-
+fined. And only starting with subgraphs of order six the problem of their quantifi-
+cation begins. In this paper we have resolved this problem for six vertex subgraphs
+setting one of the values, namely n3, as a free variable.
+We will divide the paper into subsections in the following matter. First we
+will bring all the possible six-vertex subgraphs with derivations of their possible
+numbers. Then the formulas will be summarized at the end of the subsection.
+One who wishes to skip all the derivations can fast forward to the end of the next
+subsection.
+Also, in order to find some of the values for six-vertex subgraphs it is necessary
+to know the values for five-vertex subgraphs upfront, which are in our case are
+all exact and depend only on n and k.
+We will omit the derivations of those
+values, giving just formulas further, as they can be obtain in a similar but much
+easier way. Together with five-vertex subgraphs, we will also give values for all
+four-vertex subgraphs also without derivations.
+Finally, we need the next proposition.
+Proposition 1. Consider pi for i = 3, 4, 5 is the number of triangles, quadrilaterals
+and pentagons respectively in a strongly regular graph srg(n, k, 1, 2). Then,
+p3 =1
+6nk,
+p4 =1
+8nk(k −2),
+p5 =1
+5nk(k −2)(k −4).
+Proof. The proof has given in [10].
+2
+Derivations of the Formulas
+A strongly regular graphs of sufficiently high order with parameters λ = 1 and µ =
+2, for simplicity henceforth call it a graph G, have exactly 62 possible subgraphs
+of order six (Figure 1).
+Note that for the graphs of smaller order not all the
+subgraphs would exist. The subgraphs were obtained through extensive search of
+all six-vertex graphs that do not break strong-regularity condition for the main
+2
+
+=== PAGE 3 ===
+graph. Let us denote Ni the graphs of type i from the Figure 1 and by ni the
+number of such graphs in G.
+As the exact numbers for six-vertex subgraphs are not known, compared to
+five-vertex ones, for which it is easy to obtain the exact formulas, we will have to
+use n3 as a free variable compared to which all other values will be calculated.
+For n1, given a quadrilateral, recover triangles on its opposite sides. So we get
+the relation
+2p4 = 3n1 + n3.
+Thus,
+n1 = 1
+12nk(k −2) −1
+3n3.
+Notice, that we have left n3 as an unknown parameter through which we will define
+all other values as noted above.
+For n2, given a quadrilateral, choose this time triangles on adjacent sides,
+n2 = 4p4 = 1
+2nk(k −2).
+For n3, n3 = n3.
+For n4, given a triangle v0v1v2, there exist exactly 3(k −2) distinct vertices of
+G, each adjacent to exactly one of the vertices of the triangle v0v1v2. Choose one,
+w0, assume it is adjacent to v0. The next two vertices w1 and w2 are predetermined
+as common neighbors of w0 and v1 and w0 and v2 respectively. Now, v0v1v2w0w1w2
+can give us a subgraph isomorphic to either N1 or N4. Thus, by this construction
+we will get:
+3(k −2)p3 = 6n1 + n4.
+From where,
+n4 = 1
+2nk(k −2) −6n1 = 2n3.
+For n5, choose an edge v1v2. Excluding a triangle based on v1v2, choose one of
+the k
+2 −1 incident triangles for each vertex v1 and v2. We obtain:
+|E(G)|(k
+2 −1)2 = n5 + 2n3 + 3n1.
+And after algebraic operations,
+n5 = 1
+8nk(k −2)(k −4) −n3.
+For n6, choose a quadrilateral, recover a triangle based on one of its sides. There
+are exactly k −2 vertices adjacent to the third recovered vertex of the triangle.
+Thus,
+4(k −2)p4 = n6 + 2n4 + 6n1.
+3
+
+=== PAGE 4 ===
+Figure 1: All possible subgraphs of order six in srg(n, k, 1, 2).
+4
+
+=== PAGE 5 ===
+Plugging the values,
+n6 = 1
+2nk(k −2)(k −3) −2n3.
+For n7, choose a quadrilateral, at one of its vertices recover one of the k
+2 −2
+triangles that are not based on the sides of the quadrilateral. Notice that there
+cannot be any new edges between the quadrilateral and the triangle. We have
+4p4(k
+2 −2) = n7.
+So,
+n7 = 1
+4nk(k −2)(k −4).
+For n8, choose a pentagon. Recover on one of its sides a triangle. Thus,
+5p5 = n8 + n4.
+And
+n8 = nk(k −2)(k −4) −2n3.
+For n9, choose an edge. Due to topology of the graph, there exactly k −2
+quadrilaterals based on that edge. Choose two. Thus,
+|E(G)|
+k −2
+2
+
+= n9 + n4 + 3n1.
+After some algebra,
+n9 = 1
+4nk(k −2)(k −4) −n3.
+For n10, choose a pentagon in p5 ways.
+Now we have exactly five pairs of
+vertices at distance two from each other on that pentagon. To each such pair,
+there is a unique vertex to recover a quadrilateral on the given pair of vertices.
+We have
+5p5 = 2n10 + 2n4.
+From where,
+n10 = 1
+2nk(k −2)(k −4) −2n3.
+Notice that N10 will be counted twice by this construction due to two distinct
+pentagons, while N4 - due to two pairs of vertices of the same pentagon.
+For n11, let us notice that the graph N11 has only one vertex of degree three.
+We will use that vertex as a starting point for our construction, n ways. Three
+adjacent to the first vertex but mutually not connected vertices can be chosen in
+1
+6k(k−2)(k−4) ways. Out of these three choose a pair and complete a quadrilateral.
+5
+
+=== PAGE 6 ===
+By this we have obtain the fifth vertex. To choose the last vertex of degree one (a
+leaf) we have k −4 choices.
+nk(k −2)(k −4)
+6
+3(k −4) = n11 + 2n10.
+Or
+n11 = 1
+2nk(k −2)(k −4)(k −6) + 4n3.
+For n12, it has been already found in [10]. Here we find it in another much
+easier way in two steps. First, we find the number of paths P5, which we denoted
+earlier m13. Choose a vertex, the middle one in P5; next, two vertices adjacent to
+it; and finally, two leaves. We have
+nk(k −2)
+2
+(k −3)2 = m13 + 5p5.
+Or
+m13 = 1
+2nk(k −2)(k2 −8k + 17).
+Next construction: choose P5 from G. Two leaves of P5 share exactly two
+neighbors all distinct from other vertices of chosen P5.
+Choosing one of these
+neighbors, we have
+2m13 = 6n12 + 2n9 + n8 + n2.
+Plugging all known values,
+n12 = 1
+12nk(k −2)(2k2 −21k + 53) + n3.
+For n13, choose a quadrilateral. Next, choose an edge of G that is not incident
+to that quadrilateral. We have:
+p4(|E(G)| −12 −4(k −4)) = n13 + n11 + n10 + 2n9 + n7 + n6 + 2n4 + 3n1.
+From where
+n13 = 1
+32nk(k −2)(k −4)(k2 −12k + 42) −n3.
+For n14, consider all pairs of triangles that do not share a common vertex.
+Thus,
+1
+2p3(p3 −1) −1
+2n · k
+2(k
+2 −1) = n1 + n3 + n5 + n14.
+So,
+n14 =
+1
+144nk(k −2)(k −4)(k −12) + n3
+3 .
+6
+
+=== PAGE 7 ===
+For n15, choose a vertex. Then choose two adjacent to it triangles and a leaf.
+We have
+n15 = n
+k/2
+2
+
+(k −4) = 1
+8nk(k −2)(k −4).
+For n16, choose a vertex, then two triangles adjacent to it. To one of the four
+degree-two vertices attach a leaf in k −4 ways.
+n16 = n
+k/2
+2
+
+4(k −4) = 1
+2nk(k −2)(k −4).
+For n17, choose a quadrilateral, recover on one of its sides a triangle, at one
+of the vertices of degree three attach a leaf in k −4 ways. The graph has been
+uniquely built.
+n17 = p4 · 4 · 2(k −4) = nk(k −2)(k −4).
+For n18, choose a quadrilateral, recover a triangle on one of its sides. To one
+of the remaining vertices of the quadrilateral of degree two attach a leaf in k −4
+ways. We obtain
+p4 · 4 · 2(k −4) = n18 + 2n4.
+Thus,
+n18 = nk(k −2)(k −4) −4n3.
+For n19, notice that it has only one vertex of degree five. We will start the
+construction from it. Choose a vertex, a triangle attached to it, and three leaves.
+n19 = n · k
+2 · (k −2)(k −4)(k −6)
+6
+= 1
+12nk(k −2)(k −4)(k −6).
+For n20, choose a vertex, a triangle attached to it, and two leaves. To one of
+the two new vertices of the triangle, attach a leaf in k −4 ways. Thus,
+n20 = n · k
+2 · (k −2)(k −4)
+2
+· 2(k −4) = 1
+2nk(k −2)(k −4)2.
+For n21, choose a triangle , for every vertex of the triangle choose one of its
+other k −2 neighbors. We get,
+p3(k −3)3 = n21 + n6 + n4 + 2n1.
+So,
+n21 = 1
+6nk(k −2)(k −3)(k −4) + 2
+3n3.
+7
+
+=== PAGE 8 ===
+For n22, once more we look at the vertex of highest degree of the subgraph. To
+that vertex we attach a triangle in k/2 ways, and add two other vertices, to one
+of which we need to add an extra vertex out of k −5 possible choices. Thus,
+n22 = n · k
+2 · (k −2)(k −4)
+2
+· 2(k −5) = 1
+2nk(k −2)(k −4)(k −5).
+For n23, choose a triangle. To two of its vertices add their neighbors, one to
+each, there will be (k −2)(k −3) possibilities to do it. Now to one of them add a
+vertex that would be at distance two from all the vertices of the triangle - in k −4
+ways. We have,
+p3 · 3(k −2)(k −3) · 2(k −4) = n23 + 2n8.
+Thus,
+n23 = nk(k −2)(k −4)(k −5) + 4n3.
+For n24 choose an edge. From one side attach a triangle to it in k/2 −1 ways,
+to the other side two leaves. Thus we have,
+|E(G)| · 2(k
+2 −1)(k −2)(k −4)
+2
+= n24 + n18 + n4.
+Or
+n24 = 1
+4nk(k −2)(k −4)(k −6) + 2n3.
+For n25, we start again the construction from the vertex of highest degree of
+the subgraph. Attach a triangle and a leaf to it. Extend the leaf further by adding
+to it one of the k −4 neighbors that are not adjacent to any other vertices. To
+the last vertex we will add another its neighbor such that it is still at distance two
+from the original vertex as well as from the first added leaf - (k −3) ways. We
+have
+n · k
+2(k −2)(k −4)(k −3) = n25 + 2n8.
+So,
+n25 = 1
+2nk(k −2)(k −4)(k −7) + 4n3.
+For n26, choose a quadrilateral. On one of its vertices attach two leaves. We
+have,
+n26 = p4 · 4 · (k −4)(k −6)
+2
+= 1
+4nk(k −2)(k −4)(k −6).
+For n27, choose a quadrilateral, attach two leaves to the neighboring two vertices
+of it. We have
+p4 · 4(k −4)2 = n27 + 2n9.
+8
+
+=== PAGE 9 ===
+So,
+n27 = 1
+2nk(k −2)(k −4)(k −5) + 2n3.
+For n28, choose a quadrilateral. Attach two leaves on its opposite sides. We
+have
+p4 · 2(k −4)2 = n28 + n10.
+. Then
+n28 = 1
+4nk(k −2)(k −4)(k −6) + 2n3.
+For n29, choose a pentagon from G. To one of its vertices attach a leaf, which
+might turn out to be not a leaf but just make sure to not choose a common neighbor
+with one of its immediate neighbors. We have
+p5 · 5(k −4) = n29 + 4n10 + n4.
+And thus,
+n29 = nk(k −2)(k −4)(k −6) + 6n3.
+For n30, start from the vertex of highest degree of the subgraph, to which choose
+five mutually non adjacent its neighbors. Thus,
+n30 = n · 1
+5!k(k −2)(k −4)(k −6)(k −8) =
+1
+120nk(k −2)(k −4)(k −6)(k −8).
+For n31, start from the vertex of highest degree of the subgraph; add four leaves,
+to one of which add one more vertex in k −5 ways. Thus,
+n31 = n · 1
+4!k(k −2)(k −4)(k −6) · 4(k −5) = 1
+6nk(k −2)(k −4)(k −5)(k −6).
+For n32, choose an edge; to each of its vertices add two non adjacent vertices.
+We get
+|E(G)| · ((k −2)(k −4)
+2
+)2 = n32 + n27 + n9.
+After some calculations,
+n32 = 1
+8nk(k −2)(k −4)(k2 −10k + 26) −n3.
+For n33, choose a vertex of degree three of the subgraph; as a starting point
+from that vertex we can rebuild the rest of the graph. We have,
+n · k(k −2)(k −4)
+6
+· 3(k −4)2 = n33 + n29.
+9
+
+=== PAGE 10 ===
+So
+n33 = 1
+2nk(k −2)(k −4)(k2 −10k + 28) −6n3.
+For n34, similarly to the previous case, we will start the construction from the
+vertex of degree three and proceed adding vertices. We have,
+n · k(k −2)(k −4)
+6
+· 3(k −4) · (k −3) = n34 + 2n29 + 2n10.
+n34 = 1
+2nk(k −2)(k −4)(k2 −11k + 34) −8n3.
+For n35, choose P5 from G in m13 ways. Add a vertex to one of its end vertices
+such that the new vertex will not be connected to any of the two preceding vertices
+in exactly k −3 ways. Thus,
+m13 · 2(k −3) = 2n35 + 2n29 + 12n12 + 2n8.
+And
+n35 = 1
+2nk(k −2)(k −4)(k2 −11k + 36) −10n3.
+Due to not the best choice of numeration of subgrpaphs, further calculations
+cannot be carried out in linear fashion as the calculation of n36 requires the knowl-
+edge of the values that come after it. Here we have to skip to n44.
+For n44, reconstruction of the subgraph follows straight forward pattern working
+out from the vertex of highest degree and further. We have,
+n44 = n· 1
+4!k(k−2)(k−4)(k−6)·(n−k−1−6−4(k−5)) = 1
+24nk(k−2)(k−4)(k−6)(n−5k+13).
+For n45, we choose a quadrilateral of G, then choose a pair of vertices that
+are not adjacent to any vertices of the quadrilateral. This pair can be mutually
+adjacent, thus giving us
+p4 ·
+n −8 −4(k −4)
+2
+
+= n45 + n13.
+So,
+n45 = 1
+64nk(k −2)(k −4)(k −6)(k2 −8k + 26) + n3.
+For n46, start the construction from the vertex of degree three of the subgraph.
+Choose three mutually non adjacent vertices, one of which continue further. Fi-
+nally, we need to choose the last vertex our of the ones located at distance two
+10
+
+=== PAGE 11 ===
+from the first vertex such that it is still non adjacent to two other leaves. Then
+we have
+n · k(k −2)(k −4)
+6
+· 3(k −4) · (n −k −4 −3(k −4)) = n46 + n34.
+n46 = 1
+4nk(k −2)(k −4)(k3 −14k2 + 72k −140) + 8n3.
+Once more we need to fast forward to n60 before we find n47.
+For n60, choose a triangle K3 in p3 ways. Denote N(K3) a set of vertices in G
+at distance one from a vertex in K3, and W(K3) - at distance two from all vertices
+of K3. In order to built a bigger component of the subgraph we can add one of the
+vertices from N(K3) in 3(k −2). Now choose a vertex from W(K3) such that it is
+not adjacent to the previously chosen vertex. This vertex is adjacent to exactly six
+vertices from N(K3). Complete the construction choosing the neighboring vertex
+that is not one of those six. We have
+p3 · 3(k −2) · (|W(K3)| −(k −4)) · (k −6) = 2n60 + n25.
+Or,
+n60 = 1
+8nk(k −2)(k −4)(k2 −12k + 38) −2n3.
+For n47, similar to n60, we will choose the connected component first and then
+two non adjacent to that component vertices. We have
+n · k/2 · (k −2)
+n −k −1 −2(k −2) −(k −4)
+2
+
+= n47 + n60.
+Or
+n47 = 1
+16nk(k −2)(k −4)(k −6)(k2 −8k + 22) + 2n3.
+For n48, first of all we will show that any P3 from G can be completed to a
+pentagon in exactly 2(k −4) ways.
+Proposition 2. A path P3 in G can be completed to exactly 2(k −4) pentagons in
+G.
+Proof. In order to show that notice that each pentagon contains exactly 5 paths
+P3. So the average number of pentagons that a given P3 belongs to is 5p5 divided
+to the number of all P3-s in G and that is
+5 · 1
+5nk(k −2)(k −4)/1
+2nk(k −2) = 2(k −4).
+11
+
+=== PAGE 12 ===
+That means we just need to prove that this is a maximal number of possible
+pentagons for a given P3. Assume a path given v1v0v2. Denote w another common
+neighbor to v1 and v2 along with v0, and z a vertex that completes a triangle on
+edge v0v2. Now there are exactly k −3 neighbors of v1 to which we can continue
+our path without being connected to v0 or v2. From those k −3 vertices there are
+at most 2(k −3) −2 = 2(k −4) paths of length two to the vertex v2 that can
+complete to a pentagon. We subtract two as we have exactly one path that goes
+through vertex w and one through z. The statement is proven.
+Now we proceed with a construction of subgraphs N48. Choose a middle vertex
+of P5 and recover the entire paths, by doing that we will use the previous propo-
+sition. The last, possibly isolated, vertex we will choose such that it can only be
+adjacent to end points of the constructed path in n −3k + 4 ways. Thus,
+n · k(k −2)
+2
+· ((k −3)2) −2(k −4) · (n −3k + 4) = n48 + 2n35 + 6n12.
+And
+n48 = 1
+4nk(k −2)(k −4)(k3 −14k2 + 75k −160) + 14n3.
+For n62, choose a triangle. Similarly, denote W the set of all vertices of G that
+are at distance two from the three vertices of the triangle. Notice that G[W] is
+regular of degree k −6 and |W| = n −3 −3(k −2). Now choose a vertex from W
+and two its neighbors also from W. We have
+p3 · |W|
+k −6
+2
+
+= n62 + 6n14.
+Or
+n62 = 1
+24nk(k −2)(k −4)(k2 −14k + 54) −2n3.
+For n49, we will make similar construction like for n62 starting with a triangle,
+but this time we choose first an edge from W in |W|(k−6)
+2
+ways, and the last vertex
+also from W in |W| −2 ways. We have
+p3 · |W|(k −6)
+2
+· (|W| −2) = n49 + 2n62 + 6n14.
+So
+n49 = 1
+48nk(k −2)(k −4)(k3 −16k2 + 94k −216) + 2n3,
+For n50, we will start the construction from the vertex of degree three of the
+subgraph. The last vertex, possibly isolated, we choose at distance two from the
+12
+
+=== PAGE 13 ===
+first vertex such that it is also not adjacent to three other vertices at distance one
+from the starting vertex. Thus, we have
+n · 1
+6k(k −2)(k −4) · 3(n −k −1 −2(k −3) −1 −(k −4)) = n50 + 2n28.
+And
+n50 = 1
+4nk(k −2)(k −4)(k2 −10k + 30) −4n3,
+For n51, choose a triangle, to two of its vertices attach two vertices such that
+they are not adjacent, (k −2)(k −3) ways. The final, possibly isolated, vertex of
+the subgraph can be chosen from W. We have
+nk
+6 · 3(k −2)(k −3) · 1
+2(k −2)(k −4) = n51 + n23 + n8.
+Or
+n51 = 1
+4nk(k −2)(k −4)(k2 −9k + 22) −2n3.
+Here, for n52, we can find its exact value. Start the construction from the
+vertex of degree four, call it v0. Choose a triangle, in k/2 ways, and two leaves,
+in 1
+2(k −2)(k −4) ways, attached to v0. From the set of vertices at distance two
+from v0 we can choose the vertex that is not adjacent to any other already chosen
+vertices. Thus,
+n52 = n·k
+2·1
+2(k−2)(k−4)(n−k−1−2(k−2)−2(k−5)−1) = 1
+4nk(k−2)(k−4)(n−5k+12).
+For n53, choose a pentagon. Notice that all five vertices of the triangles based
+on the sides of this pentagon are distinct. Then we can choose for the last vertex
+of the subgraph one of the n −10 remaining vertices. We can get
+p5 · (n −10) = n53 + 2n10 + n29.
+So
+n53 = 1
+5nk(k −2)(k −4)(n −5k + 15) −2n3.
+For n54, start from the vertex of degree four, v0; choose two adjacent to it
+triangles. From the set of vertices at distance two from v0 choose the last vertex
+non adjacent to any other previously chosen vertices. We have
+n54 = n ·
+k/2
+2
+
+· (n −k −1 −2(k −2) −2(k −4)).
+Or
+n54 = 1
+16nk(k −2)(k −4)(k −6).
+13
+
+=== PAGE 14 ===
+For n55, choose a quadrilateral, recover a triangle at one of its sides. The last
+vertex choose such that it is not adjacent to any vertices of the quadrilateral. Thus
+we have
+p4 · 4(n −8 −4(k −4)) = n55 + n6.
+And
+n55 = 1
+4nk(k −2)(k −4)(k −6) + 2n3.
+For n56, start the construction from the vertex of degree three, call it v0. Choose
+a triangle and a leaf attached to v0. Continue the leaf further attaching another
+vertex to it. The sixth vertex we choose from the set of vertices at distance two
+from v0 with extra requirements of not being adjacent to any of the chosen vertices
+except the very last one. Then we have
+n · k
+2 · (k −2)(k −4)(n −k −2 −2(k −2) −(k −4)) = n56 + n25.
+Or
+n56 = 1
+2nk(k −2)(k −4)(n −5k + 14) −4n3.
+Once more, we need the value of n58 before looking for n57. For that notice
+that we have a relation
+m6 · 2(k −3) = 2n58 + 2n35 + n25.
+This is due to the fact that in five-vertex subgraph M6 we can prolong its com-
+ponent P3 path to P4 by adding to either of its sides a vertex in k −3 ways.
+Thus,
+n58 = 1
+8nk(k −2)(k −4)(k3 −15k2 + 86k −190) + 8n3.
+Now for n57, start the construction from choosing an isolated edge, in |E(G)|
+ways. Next choose a pair of vertices from those what are not incident to the chosen
+one. There will be exactly |E(G)| −3 −7(k −2) −2(k −2)(k −4) edges to choose
+the pair from. Notice that by this construction we might end up with a five-vertex
+subgraph. Thus
+|E(G)|
+|E(G)| −3 −7(k −2) −2(k −2)(k −4)
+2
+
+= 3m14+m6+n60+2n13+n58+3n57.
+And
+n57 = nk(k −2)(k −4)(k4 −18k3 + 140k2 −564k + 996)/192 −4
+3n3.
+For n59, start the construction from the vertex of degree three, v0. Choose
+three other vertices from its neighborhood. Lastly, choose an edge from the set
+14
+
+=== PAGE 15 ===
+of vertices at distance two from v0 such that it is not a base for any triangle on
+previously chosen vertices. We get
+n· 1
+6k(k−2)(k−4)·(|E(G)|−3
+2k−k(k−2)−3(k
+2 −1)) = n59+n34+n29+2n28+2n10.
+Or
+n59 = 1
+24nk(k −2)(k −4)(k −6)(k2 −10k + 34) + 2n3.
+For n61, consider five-vertex subgraph M3. Notice that two isolated vertices
+should have exactly two common neighbors due to the topology of the graph. Then
+2m3 = 2n61 + 2n32 + n34 + n20 + n26.
+From which
+n61 = 1
+16nk(k −2)(k −4)(k3 −16k2 + 96k −220) + 5n3.
+The rest of the values n36 −n43 can be found from the equations directly. But
+we will stick to constructions wherever it is possible so we can use the equations
+as the way of check. It will also decrease the calculations tremendously. Again we
+have to go from top to bottom.
+For n43, choose a triangle. From the set W of vertices at distance two from all
+the vertices of the triangle, choose three vertices. We have
+p3
+W
+3
+
+= n43 + n62 + n49 + 2n14.
+And
+n43 =
+1
+288nk(k −2)(k −4)(k4 −18k3 + 130k2 −460k + 720) −2
+3n3.
+For n42, consider five-vertex subgrpaph M3. The component P3 in it we can
+continue in k −3 was in either direction. By that we have
+m3 · 2(k −3) = 2n42 + 2n48 + n34.
+Thus
+n42 = 1
+16nk(k −2)(k −4)(k4 −17k3 + 120k2 −430k + 684) −10n3.
+For n41, consider again M3. Two isolated vertices of the subgraph has exactly
+two common neighbors so there exactly 2(k−2) vertices that are neighbors to only
+one of them. Thus, we obtain a relationship
+m3 · 2(k −2) = 2n41 + 2n48 + n46 + 2n51 + n50.
+15
+
+=== PAGE 16 ===
+Or
+n41 = 1
+16nk(k −2)(k −4)(k4 −18k3 + 136k2 −524k + 892) −14n3.
+For n40, we start the construction from the vertex v0 of degree three. Then
+choose three mutually non-adjacent its neighbors. Lastly, choose the pair of ver-
+tices from the set of vertices at distance two from v0 such that none is adjacent to
+any previously chosen vertices. We have
+n · k(k −2)(k −4)
+6
+·
+n −k −1 −3 −3(k −4)
+2
+
+= n40 + n54.
+Or
+n40 = 1
+48nk(k −2)(k −4)(k4 −18k3 + 130k2 −460k + 696) −2n3.
+For n39, consider five-vertex subgraph M4. There are exactly n−k −5 vertices
+of the graph G excluding the ones that are already in M4 that are not adjacent to
+the only isolated vertex of the subgraph. Thus we have
+m4 · (n −k −5) = n54 + n56 + 3n49 + n48 + 2n41 + 2n39.
+Or
+n39 =
+1
+128nk(k −2)(k −4)(k5 −20k4 + 176k3 −884k2 + 2588k −3624) + 6n3.
+For n38, we start the construction from the vertex v0 of degree two, then choose
+its two neighbors. We have obtained P3. Lastly, we choose three vertices from the
+set of all vertices of G that are not adjacent to any of the vertices of P3. We have
+n · k(k −2)
+2
+·
+n −3k + 4
+3
+
+= n38 + n41 + 2n61 + n62.
+Or
+n38 = 1
+96nk(k −2)(k −4)(k5 −20k4 + 172k3 −828k2 + 2300k −3048) + 6n3.
+For n37, consider five-vertex subgraph M1. To one of its five isolated vertices
+add its neighboring vertex. We have
+m1 · 5k = 2n37 + 2n38 + 3n40 + 4n44 + 5n30.
+And
+n37 =
+1
+768nk(k−2)(k−4)(k6−22k5+212k4−1208k3+4484k2−10456k+12288)−3n3.
+16
+
+=== PAGE 17 ===
+And finally, for n36 we use the equation
+m1(n −5) = n30 + 6n36 + 2n37 + n38 + n40 + n44.
+So
+n36 =
+1
+23040nk(k−2)(k−4)(k7−24k6+248k5−1520k4+6436k3−19520k2+38896k−40704)+1
+3n3.
+Thus we have obtained all the formulas for the number of subgraphs of order
+six in G. Below is the summary of all our calculations of ni-s.
+n1 = 1
+12nk(k −2) −n3
+3 ,
+n2 =1
+2nk(k −2),
+n3 =n3,
+n4 =2n3,
+n5 =1
+8nk(k −2)(k −4) −n3,
+n6 =1
+2nk(k −2)(k −3) −2n3,
+n7 =1
+4nk(k −2)(k −4),
+n8 =nk(k −2)(k −4) −2n3,
+n9 =1
+4nk(k −2)(k −4) −n3,
+n10 =1
+2nk(k −2)(k −4) −2n3,
+n11 =1
+2nk(k −2)(k −4)(k −6) + 4n3,
+n12 = 1
+12nk(k −2)(2k2 −21k + 53) + n3,
+n13 = 1
+32nk(k −2)(k −4)(k2 −12k + 42) −n3,
+n14 = 1
+144nk(k −2)(k −4)(k −12) + n3
+3 ,
+n15 =1
+8nk(k −2)(k −4),
+n16 =1
+2nk(k −2)(k −4),
+n17 =nk(k −2)(k −4),
+17
+
+=== PAGE 18 ===
+n18 =nk(k −2)(k −4) −4n3,
+n19 = 1
+12nk(k −2)(k −4)(k −6),
+n20 =1
+2nk(k −2)(k −4)2,
+n21 =1
+6nk(k −2)(k −3)(k −4) + 2n3
+3 ,
+n22 =1
+2nk(k −2)(k −4)(k −5),
+n23 =nk(k −2)(k −4)(k −5) + 4n3,
+n24 =1
+4nk(k −2)(k −4)(k −6) + 2n3,
+n25 =1
+2nk(k −2)(k −4)(k −7) + 4n3,
+n26 =1
+4nk(k −2)(k −4)(k −6),
+n27 =1
+2nk(k −2)(k −4)(k −5) + 2n3,
+n28 =1
+4nk(k −2)(k −4)(k −6) + 2n3,
+n29 =nk(k −2)(k −4)(k −6) + 6n3,
+n30 = 1
+120nk(k −2)(k −4)(k −6)(k −8),
+n31 =1
+6nk(k −2)(k −4)(k −5)(k −6),
+n32 =1
+8nk(k −2)(k −4)(k2 −10k + 26) −n3,
+n33 =1
+2nk(k −2)(k −4)(k2 −10k + 28) −6n3,
+n34 =1
+2nk(k −2)(k −4)(k2 −11k + 34) −8n3,
+n35 =1
+2nk(k −2)(k −4)(k2 −11k + 36) −10n3,
+n36 =
+1
+23040nk(k −2)(k −4)(k7 −24k6 + 248k5 −1520k4 + 6436k3 −19520k2
++ 38896k −40704) + 1
+3n3,
+n37 = 1
+768nk(k −2)(k −4)(k6 −22k5 + 212k4 −1208k3 + 4484k2 −10456k + 12288) −3n3,
+n38 = 1
+96nk(k −2)(k −4)(k5 −20k4 + 172k3 −828k2 + 2300k −3048) + 6n3,
+18
+
+=== PAGE 19 ===
+n39 = 1
+128nk(k −2)(k −4)(k5 −20k4 + 176k3 −884k2 + 2588k −3624) + 6n3,
+n40 = 1
+48nk(k −2)(k −4)(k4 −18k3 + 130k2 −460k + 696) −2n3,
+n41 = 1
+16nk(k −2)(k −4)(k4 −18k3 + 136k2 −524k + 892) −14n3,
+n42 = 1
+16nk(k −2)(k −4)(k4 −17k3 + 120k2 −430k + 684) −10n3,
+n43 = 1
+288nk(k −2)(k −4)(k4 −18k3 + 130k2 −460k + 720) −2
+3n3,
+n44 = 1
+24nk(k −2)(k −4)(k −6)(n −5k + 13),
+n45 = 1
+64nk(k −2)(k −4)(k −6)(k2 −8k + 26) + n3,
+n46 =1
+4nk(k −2)(k −4)(k3 −14k2 + 72k −140) + 8n3,
+n47 = 1
+16nk(k −2)(k −4)(k −6)(k2 −8k + 22) + 2n3,
+n48 =1
+4nk(k −2)(k −4)(k3 −14k2 + 75k −160) + 14n3,
+n49 = 1
+48nk(k −2)(k −4)(k3 −16k2 + 94k −216) + 2n3,
+n50 =1
+4nk(k −2)(k −4)(k2 −10k + 30) −4n3,
+n51 =1
+4nk(k −2)(k −4)(k2 −9k + 22) −2n3,
+n52 =1
+4nk(k −2)(k −4)(n −5k + 12),
+n53 =1
+5nk(k −2)(k −4)(n −5k + 15) −2n3,
+n54 = 1
+16nk(k −2)(k −4)(k −6),
+n55 =1
+4nk(k −2)(k −4)(k −6) + 2n3,
+n56 =1
+4nk(k −2)(k −4)(k2 −10k + 30) −4n3,
+n57 =nk(k −2)(k −4)(k4 −18k3 + 140k2 −564k + 996)/192 −4
+3n3,
+n58 =1
+8nk(k −2)(k −4)(k3 −15k2 + 86k −190) + 8n3,
+n59 = 1
+24nk(k −2)(k −4)(k −6)(k2 −10k + 34) + 2n3,
+19
+
+=== PAGE 20 ===
+Figure 2: All possible subgraphs of order four in srg(n, k, 1, 2).
+n60 =1
+8nk(k −2)(k −4)(k2 −12k + 38) −2n3,
+n61 = 1
+16nk(k −2)(k −4)(k3 −16k2 + 96k −220) + 5n3,
+n62 = 1
+24nk(k −2)(k −4)(k2 −14k + 54) −2n3.
+First of all notice that the values for n3 are not given.
+The arguments of
+symmetry tell us that it should be equal zero, but then it would follow immediately
+that srg(99, 14, 1, 2), an infamous strongly regular of Conway, doesn’t exist [7]. All
+other values for other six-vertex subgraphs are given in terms of n, k and n3. Of
+course, it is possible using the relation between n and k to get rid of n altogether
+but then the formulas become very cumbersome.
+3
+Four- and Five-Vertex Subgraphs
+There are only nine subgraphs of order four in G. They are given in Figure 2.
+Denote them Li and their quantities li(i = 1, 9). It is a trivial exercise to find the
+number of each subgraph of order four. They are as follows:
+20
+
+=== PAGE 21 ===
+l1 = 1
+192nk(k −2)(k −4)(k3 −6k2 + 10k −12),
+l2 = 1
+16nk(k −2)(k −4)(k2 −4k + 6),
+l3 = 1
+16nk(k −2)(k2 −6k + 10),
+l4 =1
+2nk(k −2)(n −3k + 4),
+l5 =1
+2nk(k −2)(k −3),
+l6 =1
+6nk(k −2)(k −4),
+l7 = 1
+12nk(k −2)(k −4),
+l8 =1
+8nk(k −2),
+l9 =1
+2nk(k −2).
+Based on these values, we can find the values for the five-vertex subgraphs. For
+that, we can use the following equations bounding the values for four-vertex sub-
+graphs with five-vertex ones. To obtain these equations we need to consider all the
+possible graphs that can be obtained by adding to a given four-vertex subgraph
+exactly one vertex out of n −4 remaining in G. On the other hand, we can obtain
+the same quantities by subtracting a vertex from a given five-vertex subgraph. It
+is a tedious but straight-forward exercise.
+l1(n −4) =5m1 + 2m2 + m3 + m5 + m9,
+l2(n −4) =3m2 + 2m3 + 4m4 + m6 + 2m7 + 3m8 + m11 + m12 + m17,
+l3(n −4) =m4 + 2m6 + m13 + 3m14 + m19 + m21,
+l4(n −4) =2m3 + 3m5 + 2m6 + 2m7 + 4m10 + m11 + 2m12 + 2m13 + m15 + 2m16,
+l5(n −4) =m7 + 2m11 + 2m13 + 2m15 + m16 + 5m18 + 2m20 + 2m21,
+l6(n −4) =m5 + 4m9 + m11 + m15 + 2m17,
+l7(n −4) =2m8 + m12 + 2m14 + m21,
+l8(n −4) =m10 + m15 + m20,
+l9(n −4) =m12 + 2m16 + 2m17 + 4m19 + 2m20 + m21.
+By Mi here we denote the subgraph of type i from the Figure 3 and mi - the
+number of such subgraphs in G. Notice, we can also use these equations to check
+the values for mi-s. They are given below. Figure 3 depicts their configurations.
+21
+
+=== PAGE 22 ===
+m1 = 1
+960nk(k −2)(k −4)(n −4k + 6)(k3 −6k2 + 14k −36),
+m2 = 1
+96nk(k −2)(k −4)2(k3 −8k2 + 26k −48),
+m3 = 1
+16nk(k −2)(k −4)(k3 −10k2 + 38k −60),
+m4 = 1
+32nk(k −2)(k −4)(k3 −10k2 + 40k −68),
+m5 =1
+6nk(k −2)(k −4)(n −4k + 8),
+m6 =1
+8nk(k −2)(k −4)(k2 −8k + 20),
+m7 =1
+4nk(k −2)(k −4)(k2 −7k + 16),
+m8 = 1
+24nk(k −2)(k −4)(n −4k + 8),
+m9 = 1
+24nk(k −2)(k −4)(k −6),
+m10 =1
+8nk(k −2)(n −4k + 8),
+m11 =1
+2nk(k −2)(k −4)2,
+m12 =1
+4nk(k −2)(k −4)2,
+m13 =1
+2nk(k −2)(k2 −8k + 17),
+m14 = 1
+24nk(k −2)(k −4)(k −6),
+m15 =1
+2nk(k −2)(k −4),
+m16 =1
+2nk(k −2)(k −3),
+m17 =1
+4nk(k −2)(k −4),
+m18 =1
+5nk(k −2)(k −4),
+m19 =1
+8nk(k −2),
+m20 =1
+2nk(k −2),
+22
+
+=== PAGE 23 ===
+Figure 3: All possible subgraphs of order five in srg(n, k, 1, 2).
+m21 =1
+2nk(k −2)(k −4).
+Similarly, we can derive the equations bounding the values for ni-s with the
+values for mi-s. In fact we can do it for subgraphs of any orders given that we
+studied all the possible configurations of them.
+m1(n −5) =n30 + 6n36 + 2n37 + n38 + n40 + n44,
+m2(n −5) =n19 + n31 + 4n37 + 2n38 + 4n39 + n41 + 2n42 + 3n43 + n46 + n47 + n52 + n59,
+m3(n −5) =n20 + n26 + 2n32 + n34 + 3n38 + 3n40 + 2n41 + 2n42 + 4n45 + n46 + 2n47 + 2n48
++ n50 + 2n51 + 2n61,
+m4(n −5) =n15 + n22 + n33 + 2n39 + 2n41 + n48 + 3n49 + n54 + n56 + 6n57 + 2n58 + n60,
+m5(n −5) =n20 + 2n28 + n31 + n34 + 2n40 + 4n44 + n46 + n50 + 2n52 + 2n59,
+m6(n −5) =n7 + n11 + 4n13 + n16 + n23 + n24 + n25 + n34 + 2n35 + n41 + 2n58 + 3n59
++ 2n60 + 4n61 + 3n62,
+m7(n −5) =n17 + 3n21 + 2n27 + n29 + 2n33 + 2n35 + 2n42 + 2n46 + 2n48 + 2n50 + n51 + 5n53
++ 2n55 + 2n56 + 2n58,
+m8(n −5) =n24 + 3n43 + n47 + 2n49 + n56 + n62,
+m9(n −5) =2n19 + n26 + 5n30 + n31 + n44,
+m10(n −5) =n6 + n11 + 2n13 + 2n45 + n50 + n55,
+m11(n −5) =2n10 + n11 + n17 + n18 + n20 + 2n22 + 2n24 + 2n26 + 2n27 + 2n29 + 3n31 + 4n32
++ 2n33 + n34 + n46,
+23
+
+=== PAGE 24 ===
+m12(n −5) =n16 + n18 + n22 + n23 + n25 + 2n47 + 2n51 + 2n52 + 4n54 + 2n55 + n56 + 2n60,
+m13(n −5) =n2 + 2n6 + 2n8 + 2n9 + 2n11 + 6n12 + n18 + n23 + 2n25 + 2n28 + 2n29 + n33
++ 2n34 + 2n35 + n48,
+m14(n −5) =2n5 + 6n14 + n25 + n49 + n60 + 2n62,
+m15(n −5) =2n4 + 2n7 + 4n9 + 2n10 + n11 + n17 + n18 + 2n26 + 2n27 + 2n28 + n50,
+m16(n −5) =2n2 + n4 + 2n6 + n8 + 2n16 + n17 + 2n20 + 3n21 + n23 + n51,
+m17(n −5) =n7 + 4n15 + n17 + 3n19 + n20 + n22 + n52,
+m18(n −5) =n4 + n8 + 2n10 + n29 + n53,
+m19(n −5) =n2 + n15 + n16 + n54,
+m20(n −5) =6n1 + 2n2 + 2n3 + 2n4 + n6 + n17 + n18 + n55,
+m21(n −5) =4n3 + 4n5 + 2n7 + 2n8 + n16 + n18 + n22 + n23 + 2n24 + n25 + n56.
+4
+Conclusion
+In this paper we have studied the structure of a class of strongly regular graphs with
+parameters λ = 1 and µ = 2. In particular we have found the subgraphs of order up
+to six: all their configurations and their number if the graph with given parameters
+do exist. All the subgraphs of order up to five have exact values that depend only
+on parameters n and k, which are themselves interdependent. In fact, we can say
+that they depend only on valency of G. While starting from subgraphs of order
+six it is required one additional parameter n3 in order to define the number of each
+subgraph in G. Well, at least we were not able to avoid it. All the arguments
+of symmetry tell that n3 must be equal zero. But that would immediately mean,
+as shown by Makhnev [7], that an srg(99, 14, 1, 2) doesn’t exist, while the rest of
+the graphs from the family must be of more coerce structure, namely consist of
+Paley-9 as building blocks.
+Some preliminary research done on subgraphs of order seven tells us that their
+numbers depend on two parameters one of which can be chosen the same n3. This
+is clearly a direction to work on although no conclusions might be guaranteed.
+References
+[1] Conway, John (Update 2017), Five $ 1,000 Problems, On-Line Encyclopedia
+of Integer Sequences, OEIS sequance A248380.
+24
+
+=== PAGE 25 ===
+[2] Berlekamp, E.R.; Van Lint, J.H.; Seidel, J.J.(1973), A strongly regular graph
+derived from the perfect ternary Golay code, A survey of combinatorial theory,
+Amsterdam, 25-30.
+[3] Royle, Gordon, List of Large Graphs and Families, http://people.csse.uwa.
+edu.au/gordon/remote/srgs/
+[4] Brouwer, Andries E., Parameters of Strongly Regular Graphs, https://www.
+win.tue.nl/~aeb/graphs/srg/srgtab.html
+[5] Brouwer, Andries; van Maldeghem, Hendrik (2022), Strongly Regular Graphs,
+Cambridge University Press.
+[6] Makhnev, A; Minkova, I (2004), On automorphisms of strongly regular graphs
+with parameters λ = 1, µ = 2, Discrete Mathematics and Applications.
+[7] Makhnev, A. (1988), Strongly Regular Graphs with λ = 1, Matemticheskie
+Zametki, Vol.44, No.5, pp.667-672, Academy of Sciences of the USSR.
+[8] Wilbrink, H.; A., Brouwer, A. E. (1983, January). A (57, 14, 1) strongly regular
+graph does not exist. In Indagationes Mathematicae (Proceedings) (Vol. 86, No.
+1, pp. 117-121). North-Holland.
+[9] Lou, S.; Murin, M. On The Strongly Regular Graph of Parameters (99, 14, 1,
+2).
+[10] Reimbayev, R (2024), The Lower Bound for Number of Hexagons in Strongly
+Regular Graphs with Parameters λ = 1 and µ = 2, ArXiv
+25

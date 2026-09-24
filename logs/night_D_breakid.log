@@ -1,0 +1,14 @@
+c BreakID version 1a022d0f55a398f0bce4757f7365c9f7fafde94b
+c Detecting symmetry groups...
+c Finished symmetry breaking. T: 4.59 s  T-out: N T-rem: 1.00
+c Num generators: 0
+c Detecting subgroups...
+c Finding subgroups breaking. T: 0.00 s 
+c num subgroups: 0
+c matrices detected: 0
+c row swaps detected: 0
+c extra binary symmetry breaking clauses added: 0
+c regular symmetry breaking clauses added: 0
+c row interchangeability breaking clauses added: 0
+c total symmetry breaking clauses added: 0
+c auxiliary variables introduced: 0

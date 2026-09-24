@@ -1,0 +1,12 @@
+﻿=== m=2 k=4 r=1 s=-2  d=r-s=3  N=2
+D-edge types: {'sib': 1, 'one': 0, 'dis': 0}
+s=1 edge ends from reps (each s=1 edge counted per endpoint rep): {'sister': 4, 'nonsister': 0}
+rank_F3(S - rI) = 2   (rank over Q = g_S = 2)
+  3-adic SNF(rI-S): rank 2, exponents [(0, 2)]
+  3-adic SNF(S-sI): rank 2, exponents [(0, 2)]
+=== m=11 k=22 r=4 s=-5  d=r-s=9  N=110
+D-edge types: {'sib': 55, 'one': 0, 'dis': 0}
+s=1 edge ends from reps (each s=1 edge counted per endpoint rep): {'sister': 220, 'nonsister': 0}
+rank_F3(S - rI) = 35   (rank over Q = g_S = 55)
+  3-adic SNF(rI-S): rank 55, exponents [(0, 35), (1, 10), (2, 10)]
+  3-adic SNF(S-sI): rank 66, exponents [(0, 35), (1, 10), (2, 21)]

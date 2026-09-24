@@ -1,0 +1,11 @@
+# WSL 2, donc la VM de Docker Desktop. Même fichier sur chaque machine, porté par le kit testhunch.
+[wsl2]
+# Plafond de la VM. Sans lui, WSL peut prendre la moitié de la RAM et ne la rend presque jamais.
+memory=4GB
+
+[experimental]
+# Rend à Windows le cache de la VM après un temps d'inactivité. « dropcache » et non « gradual » :
+# Docker Desktop utilise les cgroups v2, avec lesquels « gradual » ne fonctionne pas.
+autoMemoryReclaim=dropcache
+# Le disque virtuel rend l'espace libéré (images supprimées) au lieu de ne faire que grossir.
+sparseVhd=true
