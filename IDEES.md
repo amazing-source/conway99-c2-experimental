@@ -241,3 +241,14 @@ Statuts : OUVERTE / EN TEST / SURVIT / RÉFUTÉE / ABANDONNÉE / REDONDANTE.
   Pour ce cas-là, il faudra un découpage en cubes, piloté par la structure autour de la grille (partition équitable à 18 cellules,
   note 04).
 - Σ = ∅ reste le cœur.
+
+## I-35 PROPAGATEUR DE PARITÉ À COEFFICIENTS VARIABLES (note 19 §10)
+- **Constat.** Sur BvLS, les parités de (I) et des (P) « cross » forment, à Q fixé, un système linéaire L(Q) de rang plein en les
+  signes : 8415 équations, 990 signes, rang 990. Les signes sont déterminés par Q, et la cohérence de L(Q) impose des milliers de conditions
+  linéaires sur le second membre b(Q), qui dépend de Q.
+- **Obstacle.** Dans CNF + XOR, les coefficients de L dépendent des variables de Q. L'élimination de Gauss ne s'applique qu'une fois Q
+  fixé, c'est pourquoi CryptoMiniSat n'a rien gagné, sur K₁,₃ comme sur star(1).
+- **Idée d'ingénierie** (hors session, pour la machine prêtée ou le dépôt principal) : un propagateur DPLL(T) qui, à chaque nœud
+  partiellement assigné en Q, tient à jour l'élimination de Gauss des équations de L dont le support est déjà fixé, et coupe dès
+  qu'elles sont incohérentes. C'est la généralisation mécanique de ce qui a trouvé le lemme des étoiles : réfuter chaque χ par parité,
+  puis sommer.

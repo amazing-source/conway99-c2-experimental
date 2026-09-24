@@ -1,0 +1,3 @@
+Sigma=23 25 36 56 + lignes {26 35} (|S|=12, Sigma exact) : TIMEOUT 600.0 s
+Sigma=23 25 36 56 + lignes {26 35 12 13 15 16} (|S|=20, Sigma exact) : TIMEOUT 600.0 s
+Sigma=23 25 36 56 + lignes {26 35 27 37 57 67} (|S|=20, Sigma exact) : TIMEOUT 600.0 s

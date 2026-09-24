@@ -456,6 +456,12 @@ section[id] { scroll-margin-top: 16px; }
           conclut : jusqu'à 22 lignes, 15 min chacune, tout finit en TIMEOUT.</li>
         <li><span class="tag no">Vide</span> Le mécanisme des étoiles ne s'étend pas localement aux carrés D de type one : les
           étoiles mixtes sont satisfaisables sur leurs lignes.</li>
+        <li><span class="tag ok">DRAT</span> Les réfutations passent par l'étoile d'un bloc libre, sans grille par sa droite. Pour
+          P₄ + K₂, les grilles et les 12 lignes de star(3) suffisent (100 s). Pour C₄, ce sous-système ne conclut pas en 15 min : le
+          modèle complet reste le meilleur format.</li>
+        <li><span class="tag der">Dérivé</span> Les parités des signes forment, à Q fixé, un système linéaire de rang plein (BvLS :
+          8415 équations, 990 signes, rang 990). Les signes sont déterminés par Q, mais les coefficients dépendent de Q : aucun
+          solveur actuel n'exploite cette structure.</li>
       </ul>
     </section>
 

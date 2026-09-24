@@ -1,0 +1,2 @@
+star(1) sans soeur, RS + 12 XOR, CryptoMiniSat : TIMEOUT (900.5 s)
+star(1) sans soeur, RSF + 168 XOR, CryptoMiniSat : TIMEOUT (900.2 s)

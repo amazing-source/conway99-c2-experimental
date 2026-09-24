@@ -2,7 +2,8 @@
 avec au moins les paires soeurs de Sigma, pour certification kissat + drat-trim (scripts/cert_run.sh).
 C'est un sous-ensemble des contraintes du modele complet (construction identique, verifiee par sha256 sur K2K2P3 : notes/19 §2),
 donc UNSAT ici => Sigma (au moins) impossible dans le modele complet.
-Usage : python make_rsf_cnf.py <nom> "<paires>"      -> data/cnf/<nom>.cnf + ligne dans data/cnf/MANIFEST_rsf.txt
+Usage : python make_rsf_cnf.py <nom> "<paires>" ["<paires supplementaires dont on ajoute les lignes>" [exact]]
+        -> data/cnf/<nom>.cnf + ligne dans data/cnf/MANIFEST_rsf.txt
 """
 import hashlib, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
@@ -10,15 +11,20 @@ import row_system_full
 from rs_experiments import sister_orbits, parse
 
 name, ps = sys.argv[1], sys.argv[2]
+extra = sys.argv[3] if len(sys.argv) > 3 else ""
+exact = len(sys.argv) > 4 and sys.argv[4] == "exact"
 E = parse(ps)
-clauses, nv, outer, A, B = row_system_full.build(sister_orbits(E), sigma=E)
+S = sister_orbits(E) + (sister_orbits(parse(extra)) if extra.strip() else [])
+clauses, nv, outer, A, B = row_system_full.build(sorted(set(S)), sigma=E, sigma_exact=exact)
 path = os.path.join(HERE, "..", "data", "cnf", name + ".cnf")
 h = hashlib.sha256()
 with open(path, "w", newline="\n") as f:
-    head = "c RSF(orbites soeurs) du modele orbite m=7, paires soeurs %s\np cnf %d %d\n" % (ps, nv, len(clauses))
+    head = "c RSF(orbites soeurs%s) du modele orbite m=7, paires soeurs %s%s\np cnf %d %d\n" % (
+        (" + lignes de [%s]" % extra) if extra.strip() else "", ps, " exact" if exact else "", nv, len(clauses))
     f.write(head); h.update(head.encode())
     for c in clauses:
         line = " ".join(map(str, c)) + " 0\n"; f.write(line); h.update(line.encode())
 with open(os.path.join(HERE, "..", "data", "cnf", "MANIFEST_rsf.txt"), "a", newline="\n") as f:
-    f.write("%s  %s.cnf  vars=%d clauses=%d pairs=[%s]  (RSF lignes soeurs, scripts/row_system_full.build)\n" % (h.hexdigest(), name, nv, len(clauses), ps))
+    f.write("%s  %s.cnf  vars=%d clauses=%d pairs=[%s] lignes_en_plus=[%s]%s  (RSF, scripts/row_system_full.build)\n"
+            % (h.hexdigest(), name, nv, len(clauses), ps, extra, " exact" if exact else ""))
 print(name, nv, len(clauses), h.hexdigest())

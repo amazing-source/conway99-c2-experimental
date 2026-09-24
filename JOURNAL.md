@@ -254,3 +254,11 @@ Plan relayé : relaxation SoS de degré 2 sur les arêtes libres, symétrisée, 
     fixé, puis sommer.
   - Une affirmation non calculée de la première version de la note (« (L1)+(L2) compatibles pour K₁,₃ ») était fausse. Elle a été
     corrigée.
+- **Suite (même après-midi), après le commit ef1ff6d.**
+  - **Noyaux DRAT des réfutations du modèle complet.** Celui de P₄+K₂ touche 41 lignes, surtout l'étoile du bloc libre 3. Celui de
+    C₄ touche 25 lignes, dont toute l'étoile du bloc libre 1.
+  - **RSF(lignes sœurs de P₄+K₂ + star(3))** : UNSAT, 100 s, **DRAT VERIFIED**. Vingt lignes suffisent, mais la réfutation est dense.
+  - **Lot « étoile libre »** (lignes sœurs + star(c), c libre), kissat 900 s : C₄ et 2P₃ sont UNKNOWN. La suite est en cours.
+  - **L(Q), système linéaire des parités de signes** : sur BvLS, rang = 990 = nombre de signes. Les signes sont déterminés par Q, et la
+    cohérence de L(Q) impose 7425 conditions linéaires sur le second membre b(Q).
+  - Lots en Σ exact sur les survivants à 3 arêtes (600 s) : K₃ et P₄ UNKNOWN. Les autres ont été suspendus au profit des noyaux.

@@ -443,3 +443,60 @@ K₃, P₄, P₃+K₂, 3K₂ (`scripts/cert_survivors_exact.sh`).
 
 Leçon : les lignes non sœurs, que les sondes locales ne savaient pas exploiter, suffisent au solveur global en quelques minutes dès
 que Σ a 4 arêtes. Plus Σ est pauvre, plus c'est dur. Le cas Σ ∋ une seule paire, c'est le cas sib du dépôt principal.
+
+## 12. Quelles lignes non sœurs tuent les petits survivants ? L'étoile d'un bloc libre (CALCULÉ, DRAT)
+
+**Noyaux DRAT des réfutations du modèle complet.** On extrait les noyaux avec `scripts/core_run.sh`, c'est-à-dire drat-trim avec
+l'option `-c`. On les rattache aux groupes de contraintes par une reconstruction étiquetée, identique au sha256 près
+(`scripts/core_groups.py`).
+- **P₄+K₂** = 17 24 56 67 (bloc libre : 3) : 41 lignes sur 42 servent. Les paires non sœurs les plus sollicitées dans (P) sont celles
+  du **bloc libre 3** : 23:61, 34:59, 13:55, 35:54, 36:45, 37:39.
+- **C₄** = 23 25 36 56 (blocs libres : 1, 4, 7) : 25 lignes sur 42 servent, dont **toute l'étoile star(1)** (les 12 orbites
+  sur {1,m}), plus 34+, 37−, 47±, 67+.
+
+**Test direct (DRAT).** RSF(lignes sœurs de P₄+K₂ + les 12 lignes de star(3)), Σ exact, donne **UNSAT en 100 s, DRAT VERIFIED**
+(`rsfx_P4K2_star3`). Vingt lignes suffisent : les grilles plus l'étoile du bloc libre. Le noyau de cette réfutation
+(`scripts/core_groups_rsf.py`) est dense : il utilise les 20 lignes et 346 des 380 équations (P). Il n'y a pas de petit sous-noyau
+apparent.
+
+**Programme « étoile libre ».** On teste la même recette sur les 10 survivants (et C₄ en contrôle) : lignes sœurs + star(c) pour
+un bloc libre c, Σ exact, kissat 900 s (`scripts/cert_freestar.sh`). Résultats au §13.
+
+**Système linéaire complet des parités de signes, L(Q) (`scripts/sign_parity_system.py`, contrôle BvLS).** À Q fixé, les parités
+suivantes sont **linéaires** en les signes Z (un par entrée Q = 1) :
+- toutes les contraintes (I) ;
+- toutes les équations (P) « cross ».
+
+Sur BvLS (m = 11), L(Q) compte 8415 équations pour 990 signes. On trouve **rang(A) = 990**, et le système est cohérent.
+- **Les signes sont déterminés par Q** à travers les seules parités. La cohérence de L(Q) impose donc 7425 conditions linéaires indépendantes
+  sur le second membre b(Q), qui dépend lui-même de Q : c'est un filtre extrêmement fort.
+- La parité des orbites « − » n'en est qu'une petite partie. La table échangée (U₁₂⁺ ↔ U₁₂⁻, encore solution de l'étage Q) rend L
+  incohérent (rang [A|b] = 991).
+- Conséquence pour les solveurs : l'étage Q + « L(Q) cohérent » équivaut presque au modèle complet. Mais les coefficients de L
+  dépendent de Q, et CNF + XOR ne peut pas l'exprimer linéairement.
+
+## 13. Programme « étoile libre » et état des calculs lourds (CALCULÉ)
+
+**Étoile libre.** On prend RSF(lignes sœurs de Σ + star(c), c libre), avec Σ exact et kissat 900 s (`scripts/cert_freestar.sh`,
+deux voies en parallèle).
+- C₄ + star(1) : UNKNOWN à 900 s (4,5 M conflits). Pourtant le modèle complet tue C₄ en 495 s : le noyau de C₄ utilise, en plus de
+  star(1), les lignes 34, 37, 47 et 67. Pour kissat, l'étoile libre seule n'est **pas** le bon sous-système pour C₄.
+- 2P₃ + star(2) : UNKNOWN à 900 s.
+- Tous les autres (P₅, 3K₂, P₃+K₂, P₄, K₃, 2K₂, P₃, K₂, ∅) ont été **interrompus par la surveillance mémoire** : la mémoire libre est
+  tombée sous 3 Go entre 17:37 et 17:58, à cause des autres applications de la machine combinées aux deux conteneurs.
+- Reprise sur une seule voie (`scripts/cert_freestar2.sh`, `logs/cert_freestar2.out`) :
+  - P₅ + star(6) : UNKNOWN à 900 s (4,4 M conflits) ;
+  - 3K₂ et ∅ : **non lancés**, la mémoire libre restait sous le seuil de 3,8 Go.
+  Les calculs sont suspendus tant que la machine sert à autre chose.
+
+**Sans grille, parité explicite.**
+- RS(star(1)) sans sœur, plus les 12 XOR de la parité des orbites « − », sous CryptoMiniSat : TIMEOUT à 900 s.
+- La variante RSF(star(1)), plus les 168 XOR de toutes ses contraintes (I), sous CryptoMiniSat : TIMEOUT à 900 s. Même avec les
+  parités explicites, une étoile sans grille ne livre aucune contradiction locale en 15 min.
+
+**Bilan de méthode.**
+- Pour les petits survivants, le **modèle complet** reste le meilleur format pour kissat : C₄ en 495 s, P₄+K₂ en 252 s.
+- Les sous-systèmes « bien choisis » ne sont pas plus faciles, sauf P₄+K₂ + star(3), en 100 s.
+- L'étoile du bloc libre est bien la zone que sollicitent les réfutations, mais pas un certificat autonome en général.
+- Les survivants restants (P₅, 2P₃, K₃, P₄, P₃+K₂, 3K₂, P₃, 2K₂, K₂, ∅) demandent des calculs de 30 à 60 min chacun, ou un découpage
+  en cubes. Mieux vaut les faire sur une machine libre (voir REPRISE §6).
