@@ -66,7 +66,7 @@ décisive (1 = minutes, 2 = heures, 3 = une journée, 4 = des jours, 5 = des sem
 | Cubes RSF, cadical, CP-SAT, MILP, recuit sur l'étoile libre | CALCULÉ, non concluant | 1 | – | UNKNOWN ne vaut rien (calibration) |
 | **Parité rendue linéaire** : variables Z, XOR, élimination de Gauss ; propagateur DPLL(T) (19c, 19i, I-33, I-35) | ouvert | **4** | 2–3 | tout ce qui a marché était une parité |
 | **Cocycle à défauts** : note 17 étendue par les carrés one/dis (07, I-32, 17b) | ouvert | **4** | 3–4 | seul patron local → global qui a réussi |
-| **q:parite** : Burnside mod 2 à l'ordre 7 sous t (N10, L18 de C1) | ouvert | 3 | 3 | une parité de \|Σ\| tuerait la moitié des survivants |
+| q:parite : Burnside mod 2 à l'ordre 7 sous t (N10, L18 de C1) | **fait (24/09) : aucune contradiction** | 1 | – | à l'ordre 7, n_sib n'a qu'un poids pair ; une parité de \|Σ\| demanderait l'ordre 9 (§5) |
 | Scinder (iii) : résoudre ι = Φ∘(−1)∘Φ⁻¹ puis Φ | ouvert | 3 | 2 | deux problèmes bien plus petits |
 | Survivants en sémantique exacte, cube-and-conquer (I-34) | ouvert | 3 | 3–4 | réduirait C2 au seul cas Σ = ∅ |
 | E7 pour les 6 survivants contenant P₃ (I-18) | ouvert | 3 | 2 | coins forcés par S1 |
