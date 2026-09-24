@@ -151,7 +151,21 @@ décisive (1 = minutes, 2 = heures, 3 = une journée, 4 = des jours, 5 = des sem
      indépendante), puis calculer la parité des copies t-invariantes. Retrouver la 208ᵉ formule, contrôler la règle de somme Σz_i = C(99, 7) (C1 y a trouvé des erreurs), puis
    calculer pour chaque motif d'ordre 7 la parité des copies t-invariantes (qui contiennent toutes x). But : une contrainte de parité
    sur n_sib = |Σ|, n_one, n_dis. Une parité de |Σ| éliminerait la moitié des 10 survivants.
-2. **Parité linéaire** (P4, C2–3). Encodage avec variables de signe Z et XOR de (I) et des orbites « − ». Validation obligatoire :
+2. **Parité linéaire — ESSAYÉ le 24/09 au soir (`scripts/gauss_propagator.py`, `scripts/run_qb.py`, `scripts/k13_facts_gauss.py`) :
+   outil sain, mais insuffisant au niveau des bits bruts (P → 2).**
+   - Propagateur externe (IPASIR-UP, CaDiCaL 1.9.5 via pysat 1.9) : conséquences mod 2 de (R), (D), (I), (P) ; linéarisation sous
+     l'affectation courante ; Gauss-Jordan avec suivi des combinaisons ; conflits et implications avec raisons explicites.
+   - Version (q, b), q = a ⊕ b : modulo 2 tous les termes b·b disparaissent, donc à Q fixé tout est linéaire en les signes
+     (c'est L(Q)). On branche d'abord sur les q (callback decide).
+   - Correction : sur K₂ (SAT), modèle trouvé en 0,7 s et vérifié ; le moteur travaille (122 conflits, 1 576 implications).
+   - **K₁,₃ (lignes sœurs) : TIMEOUT 300 s**, dans les deux versions, et même en ajoutant les 18 faits A/B comme contraintes de
+     cardinalité (cadical seul : TIMEOUT 180 s dans les deux cas).
+   - Diagnostic (DÉRIVÉ, relecture du §6 bis de la note 19) : la parité du lemme des étoiles vit au **niveau χ**. Les signes ε_ℓ(W)
+     sont définis relativement à la grille ; ils ne deviennent linéaires que grâce au caractère **one-hot** donné par S1 (exactement un
+     des quatre bits a_{p±}, b_{p±} vaut 1), lui-même issu de G1. Le certificat du labo (parity_L12, 9 équations) est écrit en
+     variables χ ; les bits bruts ne le voient pas.
+   - Conséquence pour l'étoile libre : un bloc libre n'a pas de grille, donc pas de one-hot G1. L'analogue doit venir des carrés
+     one/dis (défauts 2 et 8, note 07). C'est exactement le « cocycle à défauts » (point 3), qui devient la piste principale. Encodage avec variables de signe Z et XOR de (I) et des orbites « − ». Validation obligatoire :
    K₁,₃ doit devenir instantané. Ensuite les cubes A111111 et A6 avec élimination de Gauss.
 3. **Cocycle à défauts** (P4, C3–4), à la main : étendre la note 17 aux carrés one/dis. Le lemme du relecteur A sur les carrés one
    (r_α + r_β ≤ 1) est à vérifier d'abord.

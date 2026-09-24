@@ -296,3 +296,9 @@ Plan relayé : relaxation SoS de degré 2 sur les arêtes libres, symétrisée, 
   - 4 classes déterminées par la carte et 7 réduites à la main : toutes cohérentes. **Aucune contradiction, aucune contrainte nouvelle.**
   - n_sib n'apparaît qu'avec un poids pair à l'ordre 7 : une parité de |Σ| demanderait l'ordre 9.
   - C1 (construction par RRR) a reçu nos faits utiles et a corrigé ses notes ; il n'élague avec aucun lemme UNSAT.
+- **24/09 soir — propagateur de Gauss** (`scripts/gauss_propagator.py`).
+  - Construction : IPASIR-UP ; version (q, b) où tous les termes b·b disparaissent mod 2 ; branchement sur le niveau Q.
+  - Sain : K₂ SAT avec modèle vérifié.
+  - Ne réfute pas K₁,₃ en 300 s, même avec les 18 faits A/B.
+  - Diagnostic : la parité du lemme des étoiles vit au niveau χ, grâce au caractère one-hot de S1/G1 ; les bits bruts ne la voient pas.
+  - Pour un bloc libre (sans grille), l'analogue doit venir des carrés one/dis : cocycle à défauts, piste principale.
