@@ -1,0 +1,105 @@
+{"m": 3, "free": false, "i": 0, "mu": [1, 0, 3, 2], "tau": [1, 0, 3, 2], "sisters": 2, "verdict": "UNSAT", "s": 0.5, "sol": null}
+{"m": 3, "free": false, "i": 1, "mu": [1, 0, 3, 2], "tau": [2, 3, 0, 1], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 3, "free": false, "i": 2, "mu": [3, 2, 1, 0], "tau": [1, 0, 3, 2], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 3, "free": false, "i": 3, "mu": [3, 2, 1, 0], "tau": [3, 2, 1, 0], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 4, "free": false, "i": 0, "mu": [1, 0, 3, 2, 5, 4], "tau": [1, 0, 3, 2, 5, 4], "sisters": 3, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 4, "free": false, "i": 1, "mu": [1, 0, 3, 2, 5, 4], "tau": [1, 0, 4, 5, 2, 3], "sisters": 1, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 4, "free": false, "i": 2, "mu": [1, 0, 3, 2, 5, 4], "tau": [2, 4, 0, 5, 1, 3], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 4, "free": false, "i": 3, "mu": [5, 3, 4, 1, 2, 0], "tau": [1, 0, 3, 2, 5, 4], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 4, "free": false, "i": 4, "mu": [5, 3, 4, 1, 2, 0], "tau": [1, 0, 4, 5, 2, 3], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 4, "free": false, "i": 5, "mu": [5, 3, 4, 1, 2, 0], "tau": [1, 0, 5, 4, 3, 2], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 4, "free": false, "i": 6, "mu": [5, 3, 4, 1, 2, 0], "tau": [2, 4, 0, 5, 1, 3], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 4, "free": false, "i": 7, "mu": [5, 3, 4, 1, 2, 0], "tau": [2, 5, 0, 4, 3, 1], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 4, "free": false, "i": 8, "mu": [5, 3, 4, 1, 2, 0], "tau": [5, 3, 4, 1, 2, 0], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 4, "free": false, "i": 9, "mu": [5, 4, 3, 2, 1, 0], "tau": [1, 0, 3, 2, 5, 4], "sisters": 1, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 4, "free": false, "i": 10, "mu": [5, 4, 3, 2, 1, 0], "tau": [1, 0, 4, 5, 2, 3], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 4, "free": false, "i": 11, "mu": [5, 4, 3, 2, 1, 0], "tau": [2, 4, 0, 5, 1, 3], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 4, "free": false, "i": 12, "mu": [5, 4, 3, 2, 1, 0], "tau": [2, 5, 0, 4, 3, 1], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 4, "free": false, "i": 13, "mu": [5, 4, 3, 2, 1, 0], "tau": [5, 4, 3, 2, 1, 0], "sisters": 1, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 0, "mu": [1, 0, 3, 2, 5, 4, 7, 6], "tau": [1, 0, 3, 2, 5, 4, 7, 6], "sisters": 4, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 1, "mu": [1, 0, 3, 2, 5, 4, 7, 6], "tau": [1, 0, 3, 2, 6, 7, 4, 5], "sisters": 2, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 2, "mu": [1, 0, 3, 2, 5, 4, 7, 6], "tau": [1, 0, 4, 6, 2, 7, 3, 5], "sisters": 1, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 3, "mu": [1, 0, 3, 2, 5, 4, 7, 6], "tau": [2, 3, 0, 1, 6, 7, 4, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 4, "mu": [1, 0, 3, 2, 5, 4, 7, 6], "tau": [2, 4, 0, 6, 1, 7, 3, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 5, "mu": [7, 3, 6, 1, 5, 4, 2, 0], "tau": [1, 0, 3, 2, 5, 4, 7, 6], "sisters": 1, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 6, "mu": [7, 3, 6, 1, 5, 4, 2, 0], "tau": [1, 0, 3, 2, 6, 7, 4, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 7, "mu": [7, 3, 6, 1, 5, 4, 2, 0], "tau": [1, 0, 4, 6, 2, 7, 3, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 8, "mu": [7, 3, 6, 1, 5, 4, 2, 0], "tau": [1, 0, 4, 7, 2, 6, 5, 3], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 9, "mu": [7, 3, 6, 1, 5, 4, 2, 0], "tau": [1, 0, 6, 4, 3, 7, 2, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 10, "mu": [7, 3, 6, 1, 5, 4, 2, 0], "tau": [1, 0, 6, 7, 5, 4, 2, 3], "sisters": 1, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 11, "mu": [7, 3, 6, 1, 5, 4, 2, 0], "tau": [1, 0, 7, 6, 5, 4, 3, 2], "sisters": 1, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 12, "mu": [7, 3, 6, 1, 5, 4, 2, 0], "tau": [2, 3, 0, 1, 6, 7, 4, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 13, "mu": [7, 3, 6, 1, 5, 4, 2, 0], "tau": [2, 4, 0, 6, 1, 7, 3, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 14, "mu": [7, 3, 6, 1, 5, 4, 2, 0], "tau": [2, 4, 0, 7, 1, 6, 5, 3], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 15, "mu": [7, 3, 6, 1, 5, 4, 2, 0], "tau": [2, 6, 0, 7, 5, 4, 1, 3], "sisters": 1, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 16, "mu": [7, 3, 6, 1, 5, 4, 2, 0], "tau": [2, 7, 0, 6, 5, 4, 3, 1], "sisters": 1, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 17, "mu": [7, 3, 6, 1, 5, 4, 2, 0], "tau": [3, 2, 1, 0, 6, 7, 4, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.3, "sol": null}
+{"m": 5, "free": false, "i": 18, "mu": [7, 3, 6, 1, 5, 4, 2, 0], "tau": [3, 4, 6, 0, 1, 7, 2, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.3, "sol": null}
+{"m": 5, "free": false, "i": 19, "mu": [7, 3, 6, 1, 5, 4, 2, 0], "tau": [3, 4, 7, 0, 1, 6, 5, 2], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 20, "mu": [7, 3, 6, 1, 5, 4, 2, 0], "tau": [4, 3, 6, 1, 0, 7, 2, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.3, "sol": null}
+{"m": 5, "free": false, "i": 21, "mu": [7, 3, 6, 1, 5, 4, 2, 0], "tau": [7, 3, 6, 1, 5, 4, 2, 0], "sisters": 1, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 22, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [1, 0, 3, 2, 5, 4, 7, 6], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 23, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [1, 0, 3, 2, 6, 7, 4, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 24, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [1, 0, 3, 2, 7, 6, 5, 4], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 25, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [1, 0, 4, 5, 2, 3, 7, 6], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 26, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [1, 0, 4, 7, 2, 6, 5, 3], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 27, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [1, 0, 5, 4, 3, 2, 7, 6], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 28, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [1, 0, 5, 7, 6, 2, 4, 3], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 29, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [1, 0, 6, 4, 3, 7, 2, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 30, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [1, 0, 6, 5, 7, 3, 2, 4], "sisters": 0, "verdict": "UNSAT", "s": 0.3, "sol": null}
+{"m": 5, "free": false, "i": 31, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [1, 0, 7, 5, 6, 3, 4, 2], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 32, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [2, 3, 0, 1, 6, 7, 4, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.8, "sol": null}
+{"m": 5, "free": false, "i": 33, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [2, 3, 0, 1, 7, 6, 5, 4], "sisters": 0, "verdict": "UNSAT", "s": 0.6, "sol": null}
+{"m": 5, "free": false, "i": 34, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [2, 4, 0, 6, 1, 7, 3, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.4, "sol": null}
+{"m": 5, "free": false, "i": 35, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [2, 4, 0, 7, 1, 6, 5, 3], "sisters": 0, "verdict": "UNSAT", "s": 0.4, "sol": null}
+{"m": 5, "free": false, "i": 36, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [2, 5, 0, 6, 7, 1, 3, 4], "sisters": 0, "verdict": "UNSAT", "s": 0.3, "sol": null}
+{"m": 5, "free": false, "i": 37, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [2, 5, 0, 7, 6, 1, 4, 3], "sisters": 0, "verdict": "UNSAT", "s": 0.3, "sol": null}
+{"m": 5, "free": false, "i": 38, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [3, 2, 1, 0, 7, 6, 5, 4], "sisters": 0, "verdict": "UNSAT", "s": 0.5, "sol": null}
+{"m": 5, "free": false, "i": 39, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [3, 4, 7, 0, 1, 6, 5, 2], "sisters": 0, "verdict": "UNSAT", "s": 0.4, "sol": null}
+{"m": 5, "free": false, "i": 40, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [3, 5, 6, 0, 7, 1, 2, 4], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 41, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [3, 6, 5, 0, 7, 2, 1, 4], "sisters": 0, "verdict": "UNSAT", "s": 0.5, "sol": null}
+{"m": 5, "free": false, "i": 42, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [4, 5, 6, 7, 0, 1, 2, 3], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 43, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [4, 5, 7, 6, 0, 1, 3, 2], "sisters": 0, "verdict": "UNSAT", "s": 0.3, "sol": null}
+{"m": 5, "free": false, "i": 44, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [4, 6, 5, 7, 0, 2, 1, 3], "sisters": 0, "verdict": "UNSAT", "s": 0.5, "sol": null}
+{"m": 5, "free": false, "i": 45, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [4, 6, 7, 5, 0, 3, 1, 2], "sisters": 0, "verdict": "UNSAT", "s": 0.4, "sol": null}
+{"m": 5, "free": false, "i": 46, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [4, 7, 6, 5, 0, 3, 2, 1], "sisters": 0, "verdict": "UNSAT", "s": 0.4, "sol": null}
+{"m": 5, "free": false, "i": 47, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [5, 4, 7, 6, 1, 0, 3, 2], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 48, "mu": [7, 5, 6, 4, 3, 1, 2, 0], "tau": [7, 5, 6, 4, 3, 1, 2, 0], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 49, "mu": [7, 6, 3, 2, 5, 4, 1, 0], "tau": [1, 0, 3, 2, 5, 4, 7, 6], "sisters": 2, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 50, "mu": [7, 6, 3, 2, 5, 4, 1, 0], "tau": [1, 0, 3, 2, 6, 7, 4, 5], "sisters": 1, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 51, "mu": [7, 6, 3, 2, 5, 4, 1, 0], "tau": [1, 0, 4, 5, 2, 3, 7, 6], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 52, "mu": [7, 6, 3, 2, 5, 4, 1, 0], "tau": [1, 0, 4, 6, 2, 7, 3, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 53, "mu": [7, 6, 3, 2, 5, 4, 1, 0], "tau": [2, 3, 0, 1, 6, 7, 4, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 54, "mu": [7, 6, 3, 2, 5, 4, 1, 0], "tau": [2, 4, 0, 6, 1, 7, 3, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.3, "sol": null}
+{"m": 5, "free": false, "i": 55, "mu": [7, 6, 3, 2, 5, 4, 1, 0], "tau": [2, 4, 0, 7, 1, 6, 5, 3], "sisters": 0, "verdict": "UNSAT", "s": 0.3, "sol": null}
+{"m": 5, "free": false, "i": 56, "mu": [7, 6, 3, 2, 5, 4, 1, 0], "tau": [2, 6, 0, 4, 3, 7, 1, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 57, "mu": [7, 6, 3, 2, 5, 4, 1, 0], "tau": [2, 6, 0, 7, 5, 4, 1, 3], "sisters": 1, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 58, "mu": [7, 6, 3, 2, 5, 4, 1, 0], "tau": [2, 7, 0, 4, 3, 6, 5, 1], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 59, "mu": [7, 6, 3, 2, 5, 4, 1, 0], "tau": [2, 7, 0, 6, 5, 4, 3, 1], "sisters": 1, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 60, "mu": [7, 6, 3, 2, 5, 4, 1, 0], "tau": [7, 6, 3, 2, 5, 4, 1, 0], "sisters": 2, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 61, "mu": [7, 6, 3, 2, 5, 4, 1, 0], "tau": [7, 6, 4, 5, 2, 3, 1, 0], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 62, "mu": [7, 6, 5, 4, 3, 2, 1, 0], "tau": [1, 0, 3, 2, 5, 4, 7, 6], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 63, "mu": [7, 6, 5, 4, 3, 2, 1, 0], "tau": [1, 0, 3, 2, 6, 7, 4, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.3, "sol": null}
+{"m": 5, "free": false, "i": 64, "mu": [7, 6, 5, 4, 3, 2, 1, 0], "tau": [1, 0, 4, 6, 2, 7, 3, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 65, "mu": [7, 6, 5, 4, 3, 2, 1, 0], "tau": [1, 0, 5, 4, 3, 2, 7, 6], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 66, "mu": [7, 6, 5, 4, 3, 2, 1, 0], "tau": [1, 0, 5, 6, 7, 2, 3, 4], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 67, "mu": [7, 6, 5, 4, 3, 2, 1, 0], "tau": [2, 3, 0, 1, 6, 7, 4, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.5, "sol": null}
+{"m": 5, "free": false, "i": 68, "mu": [7, 6, 5, 4, 3, 2, 1, 0], "tau": [2, 3, 0, 1, 7, 6, 5, 4], "sisters": 0, "verdict": "UNSAT", "s": 0.7, "sol": null}
+{"m": 5, "free": false, "i": 69, "mu": [7, 6, 5, 4, 3, 2, 1, 0], "tau": [2, 4, 0, 6, 1, 7, 3, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.5, "sol": null}
+{"m": 5, "free": false, "i": 70, "mu": [7, 6, 5, 4, 3, 2, 1, 0], "tau": [2, 4, 0, 7, 1, 6, 5, 3], "sisters": 0, "verdict": "UNSAT", "s": 1.0, "sol": null}
+{"m": 5, "free": false, "i": 71, "mu": [7, 6, 5, 4, 3, 2, 1, 0], "tau": [2, 5, 0, 7, 6, 1, 4, 3], "sisters": 0, "verdict": "UNSAT", "s": 0.8, "sol": null}
+{"m": 5, "free": false, "i": 72, "mu": [7, 6, 5, 4, 3, 2, 1, 0], "tau": [2, 6, 0, 4, 3, 7, 1, 5], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 73, "mu": [7, 6, 5, 4, 3, 2, 1, 0], "tau": [2, 6, 0, 5, 7, 3, 1, 4], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 5, "free": false, "i": 74, "mu": [7, 6, 5, 4, 3, 2, 1, 0], "tau": [2, 7, 0, 5, 6, 3, 4, 1], "sisters": 0, "verdict": "UNSAT", "s": 0.3, "sol": null}
+{"m": 5, "free": false, "i": 75, "mu": [7, 6, 5, 4, 3, 2, 1, 0], "tau": [7, 6, 5, 4, 3, 2, 1, 0], "sisters": 0, "verdict": "UNSAT", "s": 0.2, "sol": null}
+{"m": 6, "free": false, "i": 0, "mu": [1, 0, 3, 2, 5, 4, 7, 6, 9, 8], "tau": [1, 0, 3, 2, 5, 4, 7, 6, 9, 8], "sisters": 5, "verdict": "UNSAT", "s": 0.3, "sol": null}
+{"m": 6, "free": false, "i": 1, "mu": [1, 0, 3, 2, 5, 4, 7, 6, 9, 8], "tau": [1, 0, 3, 2, 5, 4, 8, 9, 6, 7], "sisters": 3, "verdict": "UNSAT", "s": 0.3, "sol": null}
+{"m": 6, "free": false, "i": 2, "mu": [1, 0, 3, 2, 5, 4, 7, 6, 9, 8], "tau": [1, 0, 3, 2, 6, 8, 4, 9, 5, 7], "sisters": 2, "verdict": "UNSAT", "s": 0.3, "sol": null}
+{"m": 6, "free": false, "i": 3, "mu": [1, 0, 3, 2, 5, 4, 7, 6, 9, 8], "tau": [1, 0, 4, 5, 2, 3, 8, 9, 6, 7], "sisters": 1, "verdict": "UNSAT", "s": 0.4, "sol": null}
+{"m": 6, "free": false, "i": 4, "mu": [1, 0, 3, 2, 5, 4, 7, 6, 9, 8], "tau": [1, 0, 4, 6, 2, 8, 3, 9, 5, 7], "sisters": 1, "verdict": "UNSAT", "s": 0.4, "sol": null}
+{"m": 6, "free": false, "i": 5, "mu": [1, 0, 3, 2, 5, 4, 7, 6, 9, 8], "tau": [2, 3, 0, 1, 6, 8, 4, 9, 5, 7], "sisters": 0, "verdict": "UNSAT", "s": 2.1, "sol": null}
+{"m": 6, "free": false, "i": 6, "mu": [1, 0, 3, 2, 5, 4, 7, 6, 9, 8], "tau": [2, 4, 0, 6, 1, 8, 3, 9, 5, 7], "sisters": 0, "verdict": "UNKNOWN", "s": 60.0, "sol": null}
+{"m": 6, "free": false, "i": 7, "mu": [9, 3, 8, 1, 5, 4, 7, 6, 2, 0], "tau": [1, 0, 3, 2, 5, 4, 7, 6, 9, 8], "sisters": 2, "verdict": "UNSAT", "s": 0.5, "sol": null}
+{"m": 6, "free": false, "i": 8, "mu": [9, 3, 8, 1, 5, 4, 7, 6, 2, 0], "tau": [1, 0, 3, 2, 5, 4, 8, 9, 6, 7], "sisters": 1, "verdict": "UNSAT", "s": 0.3, "sol": null}
+{"m": 6, "free": false, "i": 9, "mu": [9, 3, 8, 1, 5, 4, 7, 6, 2, 0], "tau": [1, 0, 3, 2, 6, 7, 4, 5, 9, 8], "sisters": 0, "verdict": "UNSAT", "s": 2.7, "sol": null}
+{"m": 6, "free": false, "i": 10, "mu": [9, 3, 8, 1, 5, 4, 7, 6, 2, 0], "tau": [1, 0, 3, 2, 6, 8, 4, 9, 5, 7], "sisters": 0, "verdict": "UNSAT", "s": 21.5, "sol": null}

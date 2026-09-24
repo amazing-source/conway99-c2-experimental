@@ -418,11 +418,17 @@ Il reste Σ_{V ∈ N₁(U)} e_V ≡ 0. Le calcul vaut pour tout m. ∎
 - Candidat de transfert vers les calculs d'étage Q du dépôt principal (décision de l'utilisateur).
 - Sur les lignes sœurs, c'est exactement la « signabilité » de χ_p (§6 bis, point 3).
 
-**Lien avec le théorème de rang F₂ du dépôt** : rang_F₂(A₁ + Nb Nbᵀ) = 13 à m = 7. La parité des orbites « − » dit exactement que
+**Lien avec le théorème de rang F₂ du dépôt** : rang_F₂(A₁ + Nb Nbᵀ) = 20 à m = 7. La parité des orbites « − » dit exactement que
 e ∈ ker_F₂(A₁ + Sh). En effet Sh·e ≡ 0, car chaque bloc est dans 6 orbites « − ». Un changement de signe sur un bloc ℓ remplace e par
 e + Nb_ℓ, et les colonnes de Nb sont elles aussi dans le noyau. La classe [e] modulo ⟨Nb⟩ est donc canonique.
 - Sur BvLS (`scripts/f2_kernel_bvls.py`) : le noyau est de dimension 66 et contient ⟨Nb, e⟩, de dimension 11.
-- À m = 7 : le noyau est de dimension 29 et contient ⟨Nb, e⟩, de dimension 7. Les 22 autres dimensions dépendent de la configuration.
+- À m = 7 : le noyau est de dimension 22 et contient ⟨Nb, e⟩, de dimension 7. Les 15 autres dimensions dépendent de la
+  configuration.
+- **Correction** (24/09). La première version de ce paragraphe donnait « rang 13, noyau de dimension 29 », en prenant la
+  multiplicité de 3 dans S_out (20) au lieu de S_full (27).
+  - Le calcul correct : S_full ≡ projecteur 2-entier sur son espace propre de valeur propre 3, donc rang_F₂ S_full = 27.
+  - Le complément de Schur par rapport au bloc I₇ donne alors rang(A₁ + Sh) = 27 − 7 = 20.
+  - C'est cohérent avec BvLS : 55 − 11 = 44, et le rang calculé y vaut bien 44.
 
 C'est la partie locale et explicite du théorème de rang, ligne par ligne.
 

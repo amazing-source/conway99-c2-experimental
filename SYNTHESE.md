@@ -17,7 +17,8 @@ HEURISTIQUE · RÉFUTÉ. Tout le détail : `JOURNAL.md`, `IDEES.md`, `NEGATIVE_R
   (cité par Lou–Murin 2014, qui prouvent « grille moins une arête ⇒ grille » mais n'excluent pas les grilles). (`notes/04_…`)
 - **Lemme S1** (vue depuis x) : une paire de blocs « sœur » (⇔ grille par x ⇔ arête D de type sib) partitionne exactement les 40 racines
   complémentaires en 4 classes (2(m−2) = C(m−2,2) ⇔ m = 7) ; à m = 11 c'est un empilement de densité 1/2 (vérifié sur BvLS). (`notes/03_…`)
-- **Prismes et n₃** : Σ c = 6·#prismes, donc c̄ = 4 − 2n₃/2079 (via Reimbayev). **n₃ < 2079 ⇒ Γ contient une grille** ; en C2, n₃ ≡ 0 (mod 6).
+- **Prismes et n₃** : Σ c = 6·#prismes, donc c̄ = 4 − 2n₃/2079 (via Reimbayev). **n₃ < 2079 ⇒ Γ contient une grille** ; en C2, n₃/3 ≡ n_one (mod 2). Corrigé le 24/09 : l'ancien « n₃ ≡ 0 (mod 6) » était faux,
+  voir la note 20.
   (`notes/08_…`)
 - **Parité du 7-rang** (indépendant de σ) : N₃ = Z⁹⁹ ∩ V₃ est pair, 2-unimodulaire, de déterminant 7^ρ·11. Il en découle que **rang₇(A − 3I) = 1 + ρ
   est impair** et que D₇(N₃) est un F₇-espace quadratique **de type moins** (formule de l'oddité). Prédictions vérifiées sur 4 graphes réels.

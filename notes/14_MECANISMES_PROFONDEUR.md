@@ -166,7 +166,8 @@ a besoin d'une abondance de grilles.
 **Statut.** Inapplicable tel quel. SPÉCULATION : chercher une descente pilotée par t plutôt que par les grilles, vers les 21 carrés D ou
 vers l'orbifold à 50 points (O7).
 
-Corollaire : n₃ > 0 dans tout graphe à 99 sommets ; en C2, n₃ ≡ 0 (mod 6) (note 08).
+Corollaire : n₃ > 0 dans tout graphe à 99 sommets. En C2, n₃/3 ≡ n_one (mod 2). (Corrigé le 24/09, note 20 : la note 08 affirmait
+« n₃ ≡ 0 (mod 6) » à partir d'une analyse de cas incomplète.)
 
 ## 6. Caractérisations locales des graphes de Hamming [S/R]
 

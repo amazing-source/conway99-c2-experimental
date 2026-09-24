@@ -3,3 +3,10 @@
 17:49:02 memoire libre 3067 Mo < 3072 : arret des conteneurs
 17:53:32 memoire libre 3048 Mo < 3072 : arret des conteneurs
 17:58:23 memoire libre 2972 Mo < 3072 : arret des conteneurs
+19:11:15 memoire libre 3059 Mo < 3072 : arret des conteneurs
+19:16:47 memoire libre 3049 Mo < 3072 : arret des conteneurs
+19:22:18 memoire libre 3033 Mo < 3072 : arret des conteneurs
+19:33:57 memoire libre 2986 Mo < 3072 : arret des conteneurs
+19:45:54 memoire libre 3057 Mo < 3072 : arret des conteneurs
+19:59:16 memoire libre 3013 Mo < 3072 (1re lecture, on attend la suivante)
+19:59:36 memoire libre 2921 Mo < 3072 (soutenue) : arret des conteneurs

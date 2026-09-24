@@ -18,8 +18,14 @@ Il y a 99·21 = 2079 triplets (y;ℓ₁,ℓ₂), d'où la **moyenne c̄ = 6P/207
 2. n₃ = 0 ⇔ c ≡ 4 ⇔ toutes les paires de droites engendrent des grilles (structure de Hamming, impossible à 99 sommets).
    La borne n₃ ≤ 4158 (connue) est exactement « P ≥ 0 » (c ≡ 0).
 3. Sans grille : c ∈ {0,1,2} partout, donc n₃ ≥ 2079.
-4. **C2** : aucun prisme n'est σ-invariant (vérifié : un prisme σ-invariant forcerait u ∼ σu pour un extérieur, ou deux droites σ-invariantes
-   disjointes, or seules les 7 droites de x sont σ-invariantes) ⇒ P pair ⇒ **n₃ ≡ 0 (mod 6)**.
+4. ~~**C2** : aucun prisme n'est σ-invariant ⇒ P pair ⇒ n₃ ≡ 0 (mod 6).~~ **FAUX, corrigé le 24/09 (note 20).**
+   L'analyse des cas avait oublié l'involution du prisme qui échange les deux triangles en permutant deux barreaux. Dans ce cas,
+   les deux barreaux échangés sont des arêtes D, et le troisième est l'arête intérieure e_c ∼ −e_c.
+   - Les prismes σ-invariants sont exactement les ensembles {e_c, −e_c, a, b, −a, −b}, où {a,b} est une arête D interne à star(c)
+     (de type sib, ou one de pivot c), avec a, b ∋ +e_c.
+   - Il y en a Σ_c d_c = **2 n_sib + n_one**. Vérifié sur BvLS : 110 prismes σ-invariants = 2·55
+     (`scripts/burnside_prisms_bvls.py`).
+   - Donc **P ≡ n_one (mod 2), c'est-à-dire n₃/3 ≡ n_one (mod 2)**, et non n₃ ≡ 0 (mod 6).
    Prismes passant par x ↔ transitions sœurs : #prismes(x) = S_sis = 4n_sib + 2n_half (arêtes sœurs de H), à comparer à la moyenne
    6P/99 = 84 − 2n₃/99 par sommet.
 5. En x, c ∈ {0,2,4} (σ) : c̄(x) = (2n_half + 4n_sib)/21.

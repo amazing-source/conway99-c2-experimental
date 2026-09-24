@@ -262,3 +262,19 @@ Plan relayé : relaxation SoS de degré 2 sur les arêtes libres, symétrisée, 
   - **L(Q), système linéaire des parités de signes** : sur BvLS, rang = 990 = nombre de signes. Les signes sont déterminés par Q, et la
     cohérence de L(Q) impose 7425 conditions linéaires sur le second membre b(Q).
   - Lots en Σ exact sur les survivants à 3 arêtes (600 s) : K₃ et P₄ UNKNOWN. Les autres ont été suspendus au profit des noyaux.
+- **CORRECTION (24/09, note 20).** La note 08 affirmait « aucun prisme σ-invariant ⇒ n₃ ≡ 0 (mod 6) ». C'est **faux**.
+  - Les prismes σ-invariants sont les {±e_c, ±a, ±b}, où {a,b} est une arête D interne à star(c) ; il y en a 2 n_sib + n_one.
+  - BvLS le confirme : 110 = 2·55.
+  - La bonne relation est n₃/3 ≡ n_one (mod 2). Les notes 08 et 14, la synthèse et la page sont corrigées.
+- **24/09 soir — lemme de l'étoile libre (note 20).**
+  - **Réduction.** Si aucun bloc n'est libre, Σ = K₂+K₂+P₃, déjà exclu par DRAT. Donc **lemme de l'étoile libre ⇒ C2 n'existe pas**.
+  - **Formulation compacte** du problème local RSF(star(1)) (DÉRIVÉ, validée exactement sur BvLS m = 11). Les données sont deux
+    couplages μ, τ de 12 points et une bijection Φ entre les 60 racines lointaines et les 60 paires hors μ, avec trois familles de
+    comptes (i), (ii), (iii). On compte 2 903 types (μ, τ) à symétrie B₆ près, dont 4 seulement pour le cube A111111.
+  - **Aucun solveur générique ne tranche** : kissat sur RSF (cubes A411, A2211, A42 : UNKNOWN à 900 s), cadical, CP-SAT, MILP,
+    recuit.
+  - **Calibration.** Avec une solution plantée à m = 7, cadical n'en trouve que 2 sur 3 en moins de 120 s. Un UNKNOWN ne vaut donc
+    rien comme indice d'absence. La famille m = 3, 4, 5 est entièrement UNSAT, mais pour des raisons de comptage. À m = 6, certains
+    types sont déjà durs.
+  - La file des cubes RSF est arrêtée. Suite : un argument à la main sur la formulation compacte, en commençant par A111111.
+  - Garde-mémoire v2 : il n'agit que sur une baisse soutenue. Kissat occupe 65 Mo, la machine virtuelle Docker environ 3 Go.
