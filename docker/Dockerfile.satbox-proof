@@ -1,0 +1,5 @@
+# Reconstruit depuis `docker history --no-trunc satbox-proof` : satbox + drat-trim (preuves DRAT, scripts/cert_run.sh).
+FROM satbox:latest
+RUN (apt-get update && apt-get install -y --no-install-recommends git build-essential ca-certificates || true) && \
+    git clone --depth 1 https://github.com/marijnheule/drat-trim /opt/drat-trim && cd /opt/drat-trim && make && cp drat-trim /usr/local/bin/ && \
+    rm -rf /var/lib/apt/lists/*

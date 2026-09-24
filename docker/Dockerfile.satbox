@@ -1,0 +1,7 @@
+# Reconstruit depuis `docker history --no-trunc satbox` (logs/docker_history_satbox.txt) ; pas encore reconstruit a partir de ce fichier.
+# Les depots sont clones a HEAD (--depth 1), comme a l'origine. Versions de l'image d'origine : kissat 4.0.4, cadical 3.0.1.
+FROM ubuntu:24.04
+RUN apt-get update && apt-get install -y --no-install-recommends build-essential git ca-certificates && rm -rf /var/lib/apt/lists/*
+RUN git clone --depth 1 https://github.com/arminbiere/kissat /opt/kissat && cd /opt/kissat && ./configure && make -j4 && cp build/kissat /usr/local/bin/
+RUN git clone --depth 1 https://github.com/arminbiere/cadical /opt/cadical && cd /opt/cadical && ./configure && make -j4 && cp build/cadical /usr/local/bin/
+WORKDIR /work

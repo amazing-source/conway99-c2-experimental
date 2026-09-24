@@ -65,3 +65,43 @@ Modèle validé sur le vrai BvLS (m = 11). CP-SAT : 12 fils × 40 min, 3 fils ×
 syntaxique).
 Leçon : l'étage S n'est pas le « maillon faible » facile. Une attaque par le calcul exigerait de casser les symétries à la main (W(B₇),
 d'ordre 322 560 effectif) et de découper en cubes, soit des jours de calcul. C'est le régime du dépôt C3 « calcul », qui n'a pas conclu.
+
+## N12 — Krein gradué à deux points pour la paire (Γ, t) : aucun pouvoir discriminant (24/09)
+Les traces ⟨E_i^a ∘ E_j^b, E_k^c⟩ ne dépendent que des comptes (n₀, n₁, n₂) de sommets à distance 0/1/2 de leur image. Pour C2
+(1, 14, 84), toutes sont ≥ 0 ; c'est encore vrai pour des involutions hypothétiques avec a₁ = 0, 28, 42 (`scripts/graded_krein.py`,
+`logs/graded_krein.txt`).
+Leçon : la positivité de Schur à deux points est trop grossière ; il faudrait passer à trois points (Schrijver).
+
+## N13 — Tests courts de la salve « reset » : inconclusifs (limites machine)
+- Conjecture R2 (φ = réflexion) : `grid_offx_phi.py SS phi`, TIMEOUT 300 s (modèle exact complet plus une grille imposée).
+- Ansatz « partition en 11 grilles » : `grid_spread.py`, TIMEOUT 300 s (≈ 4 500 variables de couplage, 1,9 Go de RAM).
+
+Aucune conclusion : il faudrait des budgets plus longs, et pour l'ansatz une brisure de symétrie sérieuse (S₁₁ × Aut(K₃×K₃)¹¹).
+
+## N14 — Identité d'Ishida (quotient de Brauer) sur les modules de permutation dérivés : vide (24/09)
+tr(t·E) = rang_{F₂}(E[F,F] mod 2), pour tous les idempotents 2-entiers issus de Bose–Mesner (`scripts/ishida_modules.py`,
+`logs/ishida_modules.txt`) :
+
+| Module | Rang = trace |
+|---|---|
+| sommets | 1 = 1, 0 = 0, 0 = 0 (a₁ = 14 seulement) |
+| droites, 7 fixes | 6 = 6 |
+| arêtes, 7 fixes | 0 = 0 |
+| carrés μ, 21 carrés D fixes | 0 = 0, car e (arêtes entre deux carrés D) est pair |
+
+Leçon :
+- le côté trace est fixé par les paramètres (1, 0, 0) ;
+- le côté rang ne voit que la configuration fixe, dont la seule partie variable est paire.
+
+## N15 — Mécanismes de caractérisation locale : inapplicables à C2 (24/09, note 14)
+- **Bondarenko–Radchenko (Prop 1)** : exige que N(v) soit une base propre (g = k) ; ici rang 14 < 44, 54.
+- **Hamming local (Egawa, Nomura, Brouwer, Matsumoto, Mollard)** :
+  - revêtement H(7,3) → Γ impossible (2187/99 ∉ Z) ;
+  - diamètre 2 ;
+  - Γ n'est pas faiblement modulaire ;
+  - l'hypothèse de Mollard équivaut à n₃ = 0.
+- **Makhnev 1988** : la descente 99 → 33 exige n₃ = 0 ; C2 est à l'extrême opposé (au plus 7 grilles par x).
+- **Cameron 1975** : l'inégalité de variance des triades est stricte (710 > 200).
+- **Nombres d'intersection triples** : aucun paramètre de Krein nul ; pour {x, v, tv}, [111] = 0 forcé, sans contradiction.
+
+Leçon : aucun de ces mécanismes ne « voit » l'involution. Seul le programme de Hall (I-30) l'utilise de façon essentielle.

@@ -1,0 +1,588 @@
+<title>Laboratoire C2 Conway-99</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+:root {
+  --ground: #F3F5F7;
+  --surface: #FFFFFF;
+  --ink: #17212B;
+  --muted: #586575;
+  --rule: #D6DDE5;
+  --rule-strong: #B7C2CE;
+  --accent: #0B6B72;
+  --accent-soft: #DCEDEE;
+  --ok: #1D6A44;   --ok-bg: #E1F1E7;
+  --der: #2A4A97;  --der-bg: #E3E9F7;
+  --open: #855700; --open-bg: #F6ECD4;
+  --no: #9A3224;   --no-bg: #F5E0DB;
+  --code-bg: #EBEFF3;
+  --lift: 0 1px 2px rgba(20, 32, 44, .06), 0 6px 18px rgba(20, 32, 44, .05);
+  --serif: "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", serif;
+  --sans: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --ground: #0E1318;
+    --surface: #151C24;
+    --ink: #E2E7ED;
+    --muted: #9AA6B4;
+    --rule: #27313D;
+    --rule-strong: #3A4656;
+    --accent: #5BC0C6;
+    --accent-soft: #143338;
+    --ok: #7CD3A1;   --ok-bg: #15301F;
+    --der: #A6BAF2;  --der-bg: #1B2746;
+    --open: #E7BB5F; --open-bg: #372A10;
+    --no: #F19C8D;   --no-bg: #3B1C17;
+    --code-bg: #1B232D;
+    --lift: none;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ground: #0E1318;
+  --surface: #151C24;
+  --ink: #E2E7ED;
+  --muted: #9AA6B4;
+  --rule: #27313D;
+  --rule-strong: #3A4656;
+  --accent: #5BC0C6;
+  --accent-soft: #143338;
+  --ok: #7CD3A1;   --ok-bg: #15301F;
+  --der: #A6BAF2;  --der-bg: #1B2746;
+  --open: #E7BB5F; --open-bg: #372A10;
+  --no: #F19C8D;   --no-bg: #3B1C17;
+  --code-bg: #1B232D;
+  --lift: none;
+}
+
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-inline: 20px;
+  padding-block: 28px 72px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
+}
+@media (min-width: 1060px) {
+  .page { grid-template-columns: 200px minmax(0, 1fr); gap: 48px; }
+}
+
+/* sommaire */
+.toc { font-family: var(--sans); font-size: 13.5px; }
+.toc h2 {
+  font-size: 11.5px; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--muted); margin: 0 0 8px; font-weight: 600;
+}
+.toc ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.toc a { color: var(--ink); text-decoration: none; }
+.toc a:hover { color: var(--accent); }
+.toc a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+@media (min-width: 1060px) {
+  .toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 24px); align-self: start; }
+  .toc ol { flex-direction: column; gap: 7px; border-left: 1px solid var(--rule); padding-left: 14px; }
+}
+
+main { min-width: 0; }
+main > section { padding-block: 8px 30px; border-top: 1px solid var(--rule); }
+main > header { padding-bottom: 26px; }
+p, li, dd { max-width: 72ch; }
+h1, h2, h3 { font-family: var(--sans); text-wrap: balance; line-height: 1.25; }
+h1 { font-size: 2.35rem; font-weight: 600; margin: 6px 0 12px; letter-spacing: -.01em; }
+h2 { font-size: 1.42rem; font-weight: 600; margin: 26px 0 12px; }
+h3 { font-size: 1.08rem; font-weight: 600; margin: 24px 0 8px; }
+.eyebrow {
+  font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--accent); margin: 0;
+}
+.lede { font-size: 1.14rem; color: var(--ink); margin: 0 0 12px; }
+.meta { font-family: var(--sans); font-size: 14px; color: var(--muted); margin: 0; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+code, pre, kbd { font-family: var(--mono); font-size: .86em; }
+code { background: var(--code-bg); padding: .06em .32em; border-radius: 4px; overflow-wrap: anywhere; }
+pre {
+  background: var(--code-bg); border: 1px solid var(--rule); border-radius: 8px;
+  padding: 12px 14px; overflow-x: auto; line-height: 1.5; margin: 10px 0 14px;
+}
+pre code { background: none; padding: 0; font-size: 1em; }
+strong { font-weight: 600; }
+.small { font-size: .92rem; color: var(--muted); }
+sub, sup { line-height: 0; }
+
+/* etiquettes de statut */
+.tag {
+  display: inline-block; font-family: var(--sans); font-size: 11px; font-weight: 600;
+  letter-spacing: .06em; text-transform: uppercase; padding: 2px 7px; border-radius: 4px;
+  vertical-align: .12em; white-space: nowrap;
+}
+.tag.ok { color: var(--ok); background: var(--ok-bg); }
+.tag.der { color: var(--der); background: var(--der-bg); }
+.tag.open { color: var(--open); background: var(--open-bg); }
+.tag.no { color: var(--no); background: var(--no-bg); }
+.tag.obs { color: var(--muted); background: var(--code-bg); }
+
+/* etat en bref */
+.brief { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-top: 14px; }
+.brief article {
+  background: var(--surface); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 14px 16px 16px; box-shadow: var(--lift); display: flex; flex-direction: column; gap: 6px;
+}
+.brief h3 { margin: 2px 0 0; font-size: 1.02rem; }
+.brief p { margin: 0; font-size: .95rem; }
+
+/* cadre + figure */
+.frame { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; align-items: start; }
+@media (min-width: 820px) { .frame { grid-template-columns: minmax(0, 1fr) 300px; } }
+figure { margin: 0; }
+figure svg { width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto; }
+figcaption { font-size: .9rem; color: var(--muted); margin-top: 6px; }
+.tri { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.3; stroke-linejoin: round; }
+.pt { fill: var(--surface); stroke: var(--ink); stroke-width: 1.4; }
+.ctr { fill: var(--ink); }
+.lab { fill: var(--muted); font-family: var(--sans); font-size: 12px; text-anchor: middle; }
+.lab-x { fill: var(--ink); font-family: var(--serif); font-style: italic; font-size: 17px; }
+
+ul.facts, ol.facts { padding-left: 1.2em; margin: 8px 0 14px; }
+ul.facts li, ol.facts li { margin-bottom: 7px; }
+dl.legend { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 12px; margin: 10px 0 0; font-size: .95rem; }
+dl.legend dt { margin: 0; }
+dl.legend dd { margin: 0; }
+
+/* resultats */
+.result { margin: 0 0 12px; }
+.result > p { margin: 0; }
+.result .src { font-family: var(--sans); font-size: 12.5px; color: var(--muted); }
+
+/* chaine de preuve */
+.chain { list-style: none; margin: 16px 0 18px; padding: 0; display: grid; gap: 0; max-width: 640px; }
+.chain li { position: relative; padding-left: 30px; max-width: none; }
+.chain li::before {
+  content: ""; position: absolute; left: 9px; top: 0; bottom: 0; width: 2px; background: var(--rule-strong);
+}
+.chain li:first-child::before { top: 20px; }
+.chain li:last-child::before { bottom: calc(100% - 20px); }
+.chain .node {
+  background: var(--surface); border: 1px solid var(--rule-strong); border-radius: 8px;
+  padding: 9px 13px; margin: 6px 0; position: relative;
+}
+.chain .node::before {
+  content: ""; position: absolute; left: -26px; top: 15px; width: 10px; height: 10px;
+  border-radius: 50%; background: var(--surface); border: 2px solid var(--accent);
+}
+.chain .node b { font-family: var(--sans); font-size: 13px; font-weight: 600; display: block; color: var(--muted); letter-spacing: .02em; }
+.chain .gap {
+  border: 1.5px dashed var(--open); background: var(--open-bg); border-radius: 8px;
+  padding: 9px 13px; margin: 6px 0; position: relative;
+}
+.chain .gap::before {
+  content: "?"; position: absolute; left: -29px; top: 10px; width: 18px; height: 18px; border-radius: 50%;
+  background: var(--open); color: var(--surface); font-family: var(--sans); font-size: 12px; font-weight: 600;
+  display: grid; place-items: center;
+}
+.chain .gap b { font-family: var(--sans); font-size: 13px; font-weight: 600; display: block; color: var(--open); }
+
+/* tableaux */
+.table-wrap { overflow-x: auto; margin: 12px 0 16px; border: 1px solid var(--rule); border-radius: 10px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-family: var(--sans); font-size: 14px; line-height: 1.45; }
+th, td { text-align: left; vertical-align: top; padding: 9px 12px; border-bottom: 1px solid var(--rule); }
+th { font-size: 12px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); background: var(--code-bg); }
+tr:last-child td { border-bottom: 0; }
+td:first-child { font-weight: 600; }
+table.calc td:nth-child(2) { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.mech { min-width: 760px; }
+.calc { min-width: 640px; }
+
+.note {
+  border-left: 3px solid var(--accent); background: var(--accent-soft); padding: 10px 14px;
+  border-radius: 0 8px 8px 0; margin: 14px 0; max-width: 72ch;
+}
+.note p { margin: 0; }
+footer { font-family: var(--sans); font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 16px; }
+@media (max-width: 520px) {
+  body { font-size: 16px; }
+  h1 { font-size: 1.9rem; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 16px; }
+</style>
+
+<div class="page">
+  <nav class="toc" aria-label="Sommaire">
+    <h2>Sommaire</h2>
+    <ol>
+      <li><a href="#etat">En bref</a></li>
+      <li><a href="#cadre">Le cadre</a></li>
+      <li><a href="#etabli">Établi</a></li>
+      <li><a href="#derive">Démontré au labo</a></li>
+      <li><a href="#reflexion">Le mouvement « réflexion »</a></li>
+      <li><a href="#mecanismes">Mécanismes examinés</a></li>
+      <li><a href="#calculs">Calculs</a></li>
+      <li><a href="#pistes">Pistes</a></li>
+      <li><a href="#reprendre">Reprendre</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <header>
+      <p class="eyebrow">Graphe 99 de Conway · branche involution C2</p>
+      <h1>Laboratoire C2</h1>
+      <p class="lede">Existe-t-il un srg(99, 14, 1, 2) muni d'une involution t qui fixe un seul sommet x&nbsp;? Ce carnet rassemble ce que le
+        laboratoire expérimental a établi, démontré, testé et écarté, et comment reprendre le travail.</p>
+      <p class="meta">État au 24 septembre 2026 · dépôt privé
+        <a href="https://github.com/amazing-source/conway99-c2-experimental">amazing-source/conway99-c2-experimental</a>, branche master</p>
+    </header>
+
+    <section id="etat">
+      <h2>En bref</h2>
+      <p><strong>Rien n'est tranché</strong> : ni l'existence, ni la non-existence d'un tel graphe.</p>
+      <div class="brief">
+        <article>
+          <span><span class="tag ok">Établi</span></span>
+          <h3>Au plus 7 grilles par x</h3>
+          <p>Le graphe Σ des grilles 3×3 passant par x est l'un de 53 graphes : 20 configurations exclues par des preuves DRAT
+            vérifiées.</p>
+        </article>
+        <article>
+          <span><span class="tag der">Dérivé</span></span>
+          <h3>C2 est « de Hall en un seul point »</h3>
+          <p>t est la réflexion ponctuelle σ<sub>x</sub> d'une famille définie en tout sommet ; une seule de ces réflexions peut être
+            un automorphisme.</p>
+        </article>
+        <article>
+          <span><span class="tag open">Ouvert</span></span>
+          <h3>Il manque un lemme de propagation</h3>
+          <p>Une deuxième réflexion automorphe tuerait C2. L'argument connu casse ici : le 1-voisinage n'engendre que 14 des
+            44 dimensions de l'espace propre.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="cadre">
+      <h2>Le problème et la carte en x</h2>
+      <div class="frame">
+        <div>
+          <p>Γ = srg(99, 14, 1, 2) : 99 sommets de degré 14 ; deux sommets adjacents ont exactement 1 voisin commun, deux sommets non
+            adjacents en ont 2. Chaque arête est dans une unique droite (un triangle) et chaque sommet est sur 7 droites. D'après la
+            littérature, |Aut Γ| ∈ {1, 2, 3} ; une involution fixe un seul sommet x et échange les deux autres points de chaque droite
+            passant par x (lemme de Makhnev).</p>
+          <ul class="facts">
+            <li><strong>Sommets intérieurs.</strong> N(x) = 7K₂ : sept blocs {eᵢ, −eᵢ}, chacun formant une droite avec x.</li>
+            <li><strong>Racines.</strong> Les 84 autres sommets sont les racines ±eᵢ ± eⱼ de D₇ : chacune est le second voisin
+              commun de deux sommets intérieurs non colinéaires. Les 99 sommets forment la boule de rayon 2 de H(7, 3), et t agit
+              par −1.</li>
+            <li><strong>Inconnue.</strong> Le graphe 12-régulier des arêtes entre racines. Le modèle exact a deux étages :
+              Q = a + b (étage Q) et S = a − b (étage S, avec W = 2S + I et W² = 49I).</li>
+            <li><strong>Couplages locaux.</strong> En chaque sommet intérieur c, les 6 droites qui évitent x apparient les 12
+              demi-étiquettes des autres blocs : c'est M<sub>c</sub>.</li>
+            <li><strong>Carrés D.</strong> D(u) = N(u) ∩ N(tu) est une t-orbite ; les 84 racines forment 21 carrés D, de type
+              sib, one ou dis.</li>
+            <li><strong>Σ.</strong> Les paires de blocs sœurs, c'est-à-dire les grilles 3×3 passant par x ; n<sub>sib</sub> = |Σ|.</li>
+            <li><strong>Contrôles.</strong> Toute obstruction proposée doit échouer sur m = 2 (srg(9, 4, 1, 2)) et m = 11
+              (Berlekamp–van Lint–Seidel, srg(243, 22, 1, 2)).</li>
+          </ul>
+        </div>
+        <figure>
+          <svg viewBox="0 0 340 340" role="img" aria-labelledby="fig-x">
+            <title id="fig-x">Les sept droites passant par x</title>
+            <path class="tri" d="M170.0 170.0 L144.5 54.8 L195.5 54.8 Z"/>
+            <path class="tri" d="M170.0 170.0 L244.1 78.2 L276.0 118.1 Z"/>
+            <path class="tri" d="M170.0 170.0 L288.0 170.7 L276.6 220.5 Z"/>
+            <path class="tri" d="M170.0 170.0 L243.0 262.7 L197.0 284.9 Z"/>
+            <path class="tri" d="M170.0 170.0 L143.0 284.9 L97.0 262.7 Z"/>
+            <path class="tri" d="M170.0 170.0 L63.4 220.5 L52.0 170.7 Z"/>
+            <path class="tri" d="M170.0 170.0 L64.0 118.1 L95.9 78.2 Z"/>
+            <circle class="pt" cx="144.5" cy="54.8" r="5"/><circle class="pt" cx="195.5" cy="54.8" r="5"/>
+            <circle class="pt" cx="244.1" cy="78.2" r="5"/><circle class="pt" cx="276.0" cy="118.1" r="5"/>
+            <circle class="pt" cx="288.0" cy="170.7" r="5"/><circle class="pt" cx="276.6" cy="220.5" r="5"/>
+            <circle class="pt" cx="243.0" cy="262.7" r="5"/><circle class="pt" cx="197.0" cy="284.9" r="5"/>
+            <circle class="pt" cx="143.0" cy="284.9" r="5"/><circle class="pt" cx="97.0" cy="262.7" r="5"/>
+            <circle class="pt" cx="63.4" cy="220.5" r="5"/><circle class="pt" cx="52.0" cy="170.7" r="5"/>
+            <circle class="pt" cx="64.0" cy="118.1" r="5"/><circle class="pt" cx="95.9" cy="78.2" r="5"/>
+            <text class="lab" x="126" y="40">e₁</text><text class="lab" x="215" y="40">−e₁</text>
+            <text class="lab" x="281.0" y="85.5">2</text>
+            <text class="lab" x="308.4" y="205.6">3</text>
+            <text class="lab" x="231.6" y="301.9">4</text>
+            <text class="lab" x="108.4" y="301.9">5</text>
+            <text class="lab" x="31.6" y="205.6">6</text>
+            <text class="lab" x="59.0" y="85.5">7</text>
+            <circle class="ctr" cx="170" cy="170" r="5.5"/>
+            <text class="lab-x" x="180" y="196">x</text>
+          </svg>
+          <figcaption>Le voisinage de x : sept droites de sommet commun x, une par bloc. L'involution t échange les deux points de chaque
+            droite, par exemple e₁ et −e₁.</figcaption>
+        </figure>
+      </div>
+      <h3>Étiquettes de statut</h3>
+      <dl class="legend">
+        <dt><span class="tag ok">Établi</span></dt><dd>Preuve relue ou certificat vérifié.</dd>
+        <dt><span class="tag der">Dérivé</span></dt><dd>Démontré au labo ; preuve écrite dans <code>notes/</code>.</dd>
+        <dt><span class="tag obs">Observé</span></dt><dd>Constaté ou plausible (observé, heuristique), non prouvé.</dd>
+        <dt><span class="tag open">Ouvert</span></dt><dd>Conjecture ou question en cours.</dd>
+        <dt><span class="tag no">Vide</span></dt><dd>Réfuté, ou sans pouvoir discriminant pour C2.</dd>
+      </dl>
+    </section>
+
+    <section id="etabli">
+      <h2>Ce qui est établi</h2>
+      <div class="result">
+        <p><span class="tag ok">Établi</span> <strong>Théorème des grilles par x (certifié).</strong> Σ ne contient aucune des
+          configurations suivantes : allsib (K₇), K2+K2+P3, K3+K2+K2, K2+P5, K2+araignée, P4+P3, K1,3+P3, K3+K3, C₆, K2+K3 pendant,
+          K₁,₁,₄, S7b, S7c, ni 7 graphes à 6–8 arêtes issus de la boucle de réduction. Donc Σ est l'un de 53 graphes sur 7 sommets,
+          et au plus 7 grilles passent par x. Avec K₄, S6, S7a et S8 (UNSAT au solveur, sans preuve DRAT), on descendrait à 50.</p>
+        <p class="src">kissat + drat-trim, 20 preuves VERIFIED · notes/06 · data/cert_results.txt · empreintes dans data/cnf/MANIFEST.txt</p>
+      </div>
+      <div class="result">
+        <p><span class="tag ok">Établi</span> <strong>Littérature.</strong> |Aut Γ| ∈ {1, 2, 3} (Makhnev–Minakova 2004 ;
+          Behbahani–Lam 2011 ; Crnković–Maksimović 2020 ; Cesarz–Woldar 2025). Pour l'involution : Fix(t) = {x}, a₁(t) = 14, et t
+          retourne tous les blocs.</p>
+        <p class="src">notes/00_CARTE_ETAT_C2.md</p>
+      </div>
+    </section>
+
+    <section id="derive">
+      <h2>Ce qui est démontré au labo</h2>
+      <h3>Pour tout srg(99, 14, 1, 2)</h3>
+      <div class="result">
+        <p><span class="tag der">Dérivé</span> <strong>G1.</strong> Toute grille 3×3 est un code parfait : tout sommet extérieur a
+          exactement un voisin dans la grille. Dans la famille srg(n, k, 1, 2), cela n'arrive que pour k ∈ {4, 14}.</p>
+        <p class="src">notes/04</p>
+      </div>
+      <div class="result">
+        <p><span class="tag der">Dérivé</span> <strong>Lemme S1.</strong> Une paire de blocs sœurs partitionne exactement les 40
+          racines complémentaires en 4 classes, parce que 2(m − 2) = C(m − 2, 2) exactement pour m = 7.</p>
+        <p class="src">notes/03</p>
+      </div>
+      <div class="result">
+        <p><span class="tag der">Dérivé</span> <strong>Prismes et n₃.</strong> Le nombre moyen de coins fermés vaut
+          4 − 2n₃/2079 ; si n₃ &lt; 2079, Γ contient une grille.</p>
+        <p class="src">notes/08 (via Reimbayev)</p>
+      </div>
+      <div class="result">
+        <p><span class="tag der">Dérivé</span> <strong>Parité du 7-rang.</strong> rang₇(A − 3I) est impair, et D₇(N₃) est un
+          F₇-espace quadratique de type moins (formule de l'oddité).</p>
+        <p class="src">notes/09</p>
+      </div>
+      <h3>Propre à C2</h3>
+      <div class="result">
+        <p><span class="tag der">Dérivé</span> <strong>Parités de Brown.</strong> rang₇(S − 3I), rang₇(S<sub>out</sub> − 3I),
+          rang₇(Q<sub>out</sub> − 3I) et ρ₊ sont pairs. Le système de genres de C2 est cohérent : aucune obstruction arithmétique
+          « de genre » ne le tuera. De plus, n₃ ≡ 0 (mod 6).</p>
+        <p class="src">notes/10 · notes/08</p>
+      </div>
+      <div class="result">
+        <p><span class="tag der">Dérivé</span> <strong>Théorème R1.</strong> Une grille Λ qui évite x est disjointe de tΛ ; les
+          arêtes entre Λ et tΛ forment un couplage parfait π ; φ = t∘π est une involution de Λ dont l'unique point fixe est l'unique
+          voisin w de x dans Λ ; les 12 demi-étiquettes des autres blocs apparaissent chacune une seule fois dans Λ.</p>
+        <p class="src">notes/11</p>
+      </div>
+      <div class="result">
+        <p><span class="tag der">Dérivé</span> <strong>Pas de translation partout.</strong> Si chaque translation locale
+          ρᵢ = σ<sub>x</sub>σ<sub>eᵢ</sub> déplaçait ses racines le long d'arêtes, on serait dans le cas allsib, qui est
+          certifié impossible.</p>
+        <p class="src">notes/13, objet O3</p>
+      </div>
+      <div class="result">
+        <p><span class="tag der">Dérivé</span> <strong>Topologie.</strong> Le 2-complexe X<sub>Γ</sub> (triangles et carrés μ) est
+          localement isomorphe à celui de H(7, 3). Les points fixes de t sont l'étoile de x et les 21 centres de carrés D ;
+          tr(t | H₂) − tr(t | H₁) = 21 et χ(X/t) = 869.</p>
+        <p class="src">notes/13, objet O2</p>
+      </div>
+      <div class="result">
+        <p><span class="tag der">Dérivé</span> <strong>Autres faits.</strong> Aucune 22-coclique de Delsarte n'est t-invariante ;
+          chaque droite extérieure porte au plus un côté de carré D ; le réseau des syzygies des droites est pair ; la forme cubique
+          de Norton s'annule sur V⁻. Les défauts de Hall H1 à H5 sont détaillés dans la section suivante.</p>
+        <p class="src">notes/13 · notes/14</p>
+      </div>
+    </section>
+
+    <section id="reflexion">
+      <h2>Le mouvement « réflexion » (salve du 24 septembre)</h2>
+      <p>Jusqu'ici, t servait de symétrie par laquelle on quotientait. On la voit maintenant comme une réflexion ponctuelle parmi
+        d'autres.</p>
+      <p>En tout sommet v, la réflexion σ<sub>v</sub> fixe v et échange les deux autres points de chaque droite passant par v.
+        Elle se prolonge au reste du graphe grâce à μ = 2 : si z a pour voisins communs p et q avec v, alors σ<sub>v</sub>(z) est le
+        second voisin commun de σ<sub>v</sub>(p) et σ<sub>v</sub>(q). C'est une involution de point fixe unique, qui préserve toutes
+        les arêtes, sauf peut-être les 504 arêtes entre racines de la carte en v.</p>
+      <ul class="facts">
+        <li><span class="tag ok">Établi</span> C2 ⟺ σ<sub>x</sub> ∈ Aut(Γ) pour un sommet x.</li>
+        <li><span class="tag der">Dérivé</span> Si σ<sub>x</sub> ∈ Aut(Γ), aucune autre réflexion ne commute avec elle. Comme
+          |Aut Γ| ≤ 3, au plus une réflexion est un automorphisme.</li>
+      </ul>
+
+      <h3>Le mécanisme qui rendrait tout facile</h3>
+      <p>Hall (1960) : si chaque point est le point fixe unique d'une involution automorphe, les produits de deux réflexions sont
+        des translations ; la géométrie est affine sur une boucle de Moufang commutative d'exposant 3, et le nombre de points est
+        une puissance de 3. Bondarenko et Radchenko (2013) obtiennent ces automorphismes pour une famille de srg avec λ = 1 : la
+        multiplicité d'une valeur propre y est égale à la valence, donc N(v) est une base de l'espace propre et la réflexion locale
+        se prolonge en isométrie globale.</p>
+      <ol class="chain" aria-label="Schéma de preuve">
+        <li><div class="node"><b>Hypothèse C2</b>σ<sub>x</sub> est un automorphisme de Γ.</div></li>
+        <li><div class="gap"><b>(P) Propagation : c'est l'étape manquante</b>Obtenir une deuxième réflexion automorphe σ<sub>w</sub>,
+          avec w ≠ x.</div></li>
+        <li><div class="node"><b>Groupe engendré</b>⟨σ<sub>x</sub>, σ<sub>w</sub>⟩ est diédral, d'ordre au moins 6.</div></li>
+        <li><div class="node"><b>Contradiction</b>Impossible, puisque |Aut Γ| ≤ 3.</div></li>
+      </ol>
+      <p><strong>Où l'argument casse (calcul exact).</strong> Dans V₋₄ (dimension 44), le Gram de N(v) vaut (27I − 9P + J)/63.
+        Ses valeurs propres sont 32/63, 18/63 (×6) et 36/63 (×7) : il est de rang 14. Dans V₃ (dimension 54), le Gram
+        (44I + 11P − 2J)/77 est lui aussi de rang 14. Le 1-voisinage ne fixe donc σ<sub>v</sub> que sur 14 dimensions. Les
+        30 autres portent le Gram résiduel des racines, (27I − 9Q + J)/63 − G<sub>D₇</sub>, positif et de rang au plus 30 :
+        c'est la matrice de l'étage S vue autrement.</p>
+      <div class="note"><p>Le lemme (P) équivaut à la mort de C2. Il n'est pas plus facile, mais il dit ce qu'une preuve doit faire :
+        rigidifier ce résidu de dimension 30. Trois versions affaiblies sont testables : (P<sub>grille</sub>) = R2 ;
+        (P<sub>J</sub>) sur la configuration à 7 points ; (P<sub>rés</sub>) par un SDP du résidu.</p></div>
+
+      <h3>C2 est loin de Hall autour de x</h3>
+      <ul class="facts">
+        <li><span class="tag der">H1</span> σ<sub>v</sub>(x) = σ<sub>x</sub>(v) seulement si v est un coin d'un carré D de type sib,
+          c'est-à-dire si le quadrangle x–p–v–q est dans une grille : 4n<sub>sib</sub> ≤ 28 racines sur 84.</li>
+        <li><span class="tag der">H2</span> Au plus 28 des 42 orbites de droites des couplages locaux se ferment en carré D. La
+          propriété « déplacer chaque sommet vers un voisin » échoue donc pour au moins 14 orbites.</li>
+        <li><span class="tag der">H3</span> Soit m(a, b) le nombre de sommets v tels que σ<sub>v</sub>(a) = b. Sa moyenne vaut
+          1 + J/1386 sur les paires adjacentes et 1 − J/8316 sur les autres. Dans une structure de Hall, m = 1 partout et J = 0.</li>
+        <li><span class="tag der">H4</span> J<sub>x</sub> compte les racines v = p + q telles que M<sub>p</sub>(q) = M<sub>q</sub>(p) :
+          une configuration à 7 points, interdite dans toute structure de Hall.</li>
+        <li><span class="tag der">H5</span> R2 est la propriété de translation restreinte aux grilles.</li>
+      </ul>
+      <p><strong>Lecture.</strong> La borne certifiée |Σ| ≤ 7 dit exactement que C2 est loin de Hall autour de x. La contradiction à
+        chercher oppose « Hall en x » à « loin de Hall autour de x ».</p>
+
+      <h3>Conjecture R2</h3>
+      <p><span class="tag open">Ouvert</span> Pour toute grille Λ qui évite x, φ est la réflexion ponctuelle de Λ en w. C'est vrai
+        dans BvLS (990 grilles sur 990), mais BvLS est entièrement de type sœur. L'indice est donc faible, car en C2 c'est le cas
+        non sœur qui compte. En C2, le test court s'est arrêté en TIMEOUT à 300 s.</p>
+    </section>
+
+    <section id="mecanismes">
+      <h2>Mécanismes examinés</h2>
+      <p>Chaque mécanisme a été pris dans sa preuve d'origine, réduit à son idée abstraite, puis confronté à C2.</p>
+      <div class="table-wrap">
+        <table class="mech">
+          <thead><tr><th>Mécanisme</th><th>Idée</th><th>Pourquoi il ne passe pas en C2</th><th>Statut</th></tr></thead>
+          <tbody>
+            <tr><td>Hall 1960</td><td>Réflexions automorphes ⇒ plans affines ⇒ translations ⇒ 3<sup>m</sup> points</td>
+              <td>C2 n'a qu'une réflexion automorphe</td><td><span class="tag open">Bloqué : (P)</span></td></tr>
+            <tr><td>Bondarenko–Radchenko 2013</td><td>N(v) est une base propre, donc la réflexion est globale</td>
+              <td>Rang 14 sur 44 : il reste un résidu de dimension 30</td><td><span class="tag der">Chiffré</span></td></tr>
+            <tr><td>Makhnev 1988</td><td>Descente de 99 à 33 par parallélisme de grilles</td>
+              <td>Exige que tous les quadrangles se ferment en grilles (n₃ = 0) ; C2 a peu de grilles</td><td><span class="tag no">Inapplicable</span></td></tr>
+            <tr><td>Hamming local (Egawa, Nomura, Matsumoto, Mollard)</td><td>Revêtement obtenu en complétant les quadrangles</td>
+              <td>2187/99 n'est pas entier ; Γ est de diamètre 2</td><td><span class="tag no">Inapplicable</span></td></tr>
+            <tr><td>Cameron 1975</td><td>Variance des voisins communs des triades</td>
+              <td>Inégalité stricte : 710 &gt; 200</td><td><span class="tag no">Vide</span></td></tr>
+            <tr><td>Ishida</td><td>Trace = rang, par le quotient de Brauer</td>
+              <td>Vérifiée sur les sommets, droites, arêtes et carrés μ (6 = 6, 0 = 0, 0 = 0) : le côté trace est fixé par les paramètres</td>
+              <td><span class="tag no">Vide</span></td></tr>
+            <tr><td>Intersections triples</td><td>Équations tirées des paramètres de Krein nuls</td>
+              <td>Aucun paramètre de Krein n'est nul pour (99, 14, 1, 2)</td><td><span class="tag no">Vide</span></td></tr>
+            <tr><td>Transfert C3 (Z₂[C₂], genres)</td><td>Comparer les spécialisations d'une même forme</td>
+              <td>Caractères rationnels ; 7 ≡ −1 (mod 4) absorbe tout</td><td><span class="tag no">Vide</span></td></tr>
+            <tr><td>Niemeier et Venkov (Akiyama)</td><td>Identités sur des trames serrées</td>
+              <td>Les trames de C2 sont minces</td><td><span class="tag no">Défavorable</span></td></tr>
+            <tr><td>Fréquences d'ordre 7 (Reimbayev)</td><td>Positivité des comptages de sous-graphes</td>
+              <td>Donne seulement n₃ ∈ [0, 4158]</td><td><span class="tag no">Vide</span></td></tr>
+            <tr><td>Krein gradué à deux points</td><td>Positivité de Schur pour la paire (Γ, t)</td>
+              <td>Tous les termes sont ≥ 0, même pour des involutions hypothétiques</td><td><span class="tag no">Réfuté</span></td></tr>
+            <tr><td>Divers (N01–N08)</td><td>Triangles signés, van Eijl, Terwilliger, harmoniques, quotients, partitions équitables, Ishida sur Sym²</td>
+              <td>Sans contenu, ou réfutés sur les contrôles</td><td><span class="tag no">Vide</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small">Détails : notes/14_MECANISMES_PROFONDEUR.md et NEGATIVE_RESULTS.md (N01–N15). Textes sources dans
+        downloads/profondeur_2409/.</p>
+    </section>
+
+    <section id="calculs">
+      <h2>Calculs</h2>
+      <div class="table-wrap">
+        <table class="calc">
+          <thead><tr><th>Calcul</th><th>Budget</th><th>Résultat</th></tr></thead>
+          <tbody>
+            <tr><td>Certification de Σ (21 configurations, kissat + DRAT)</td><td>18–900 s</td><td>20 UNSAT vérifiés, 1 UNKNOWN</td></tr>
+            <tr><td>Modèle complet (dépôt C2, lecture seule)</td><td>7 × 8 h</td><td>UNKNOWN</td></tr>
+            <tr><td>Étage Q (dépôt C2)</td><td>3 × 2 h</td><td>UNKNOWN</td></tr>
+            <tr><td>Étage S seul, CP-SAT</td><td>40 min × 12 fils</td><td>UNKNOWN (aussi avec la symétrie Z₇ imposée)</td></tr>
+            <tr><td>Nuit A : S + D + sommes par bloc, CP-SAT</td><td>7 h × 4 fils</td><td>UNKNOWN</td></tr>
+            <tr><td>Nuits B, C, D : étage S seul (CP-SAT, kissat, BreakID puis kissat)</td><td>7 h chacune</td><td>UNKNOWN, ≈ 155 M de conflits par graine</td></tr>
+            <tr><td>R2 en C2, grille imposée</td><td>300 s</td><td>TIMEOUT</td></tr>
+            <tr><td>Partition en 11 grilles</td><td>300 s</td><td>TIMEOUT</td></tr>
+            <tr><td>R2 sur BvLS</td><td>secondes</td><td>990 / 990, cas entièrement sœur</td></tr>
+            <tr><td>Ishida sur 4 modules (calcul exact)</td><td>secondes</td><td>Identité vérifiée partout : vide</td></tr>
+            <tr><td>Programme linéaire, fréquences d'ordre 7</td><td>secondes</td><td>n₃ ∈ [0, 4158]</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Leçon : découper le problème en étages ne rend aucun morceau facile, et aucun calcul de plusieurs heures n'a tranché.</p>
+    </section>
+
+    <section id="pistes">
+      <h2>Pistes, par coût croissant</h2>
+      <ol class="facts">
+        <li><strong>(P<sub>J</sub>)</strong> La configuration à 7 points est-elle forcée ou interdite en x ? C'est une question SAT,
+          mais il faut une relaxation locale bien choisie : le modèle complet résiste.</li>
+        <li><strong>(P<sub>grille</sub>)</strong> Relancer R2 avec un budget long quand la machine est libre.</li>
+        <li><strong>(P<sub>rés</sub>)</strong> Un SDP du résidu de dimension 30 avec la symétrie t (rejoint Lasserre et Schrijver,
+          idée I-07).</li>
+        <li><strong>Programme Δ.</strong> Classer le multigraphe 2-régulier des paires D sur les 21 paires de blocs, puis éliminer au
+          solveur les configurations localement riches.</li>
+        <li><strong>Cubes de la relaxation A.</strong> Casser les symétries à la main (stabilisateur d'ordre 7 680) avant de découper.</li>
+        <li><strong>Carrés D de type one et dis.</strong> Chercher un analogue de G1.</li>
+      </ol>
+      <p class="small">Laissés de côté : les méthodes de genre (épuisées), Niemeier (trames minces), les fréquences d'ordre ≤ 7
+        (aucune borne).</p>
+    </section>
+
+    <section id="reprendre">
+      <h2>Reprendre le travail</h2>
+      <p>Tout est dans le dépôt privé
+        <a href="https://github.com/amazing-source/conway99-c2-experimental">amazing-source/conway99-c2-experimental</a>, branche
+        master.</p>
+      <h3>Installer</h3>
+<pre><code>gh repo clone amazing-source/conway99-c2-experimental
+cd conway99-c2-experimental
+py -3.12 -m venv .venv
+.venv\Scripts\pip install -r requirements-lab.txt</code></pre>
+      <h3>Régénérer ce qui n'est pas versionné</h3>
+      <ul class="facts">
+        <li><strong>CNF des configurations Σ :</strong> <code>python scripts/make_cnf.py &lt;nom&gt; "&lt;paires&gt;" [exact]</code> ;
+          empreintes dans <code>data/cnf/MANIFEST.txt</code>.</li>
+        <li><strong>CNF de l'étage S :</strong> <code>python scripts/stage_s_cnf.py data/cnf/stage_s_alone.cnf</code> ; SHA-256 attendu
+          <code>b668780d…</code> (<code>data/cnf/MANIFEST_stage_s.txt</code>).</li>
+        <li><strong>Images Docker</strong> (kissat, cadical, drat-trim, breakid, march_cu) : Dockerfiles reconstruits dans
+          <code>docker/</code>.</li>
+        <li><strong>Clones externes</strong> (<code>external_c3/</code>) : adresses et commits dans
+          <code>logs/external_c3_commits.txt</code>.</li>
+      </ul>
+      <h3>Lire dans cet ordre</h3>
+      <ol class="facts">
+        <li><code>REPRISE.md</code> : état, commandes, historique des calculs, message de reprise pour une nouvelle session.</li>
+        <li><code>SYNTHESE.md</code> : tous les résultats, avec leur statut.</li>
+        <li><code>notes/14_MECANISMES_PROFONDEUR.md</code> : sections 0, 3, 4 et 12.</li>
+        <li><code>IDEES.md</code> (I-28 à I-30) et <code>NEGATIVE_RESULTS.md</code> (N01–N15).</li>
+      </ol>
+      <h3>Règles du labo</h3>
+      <ul class="facts">
+        <li>conway99-involution et conway99-lab-archive sont en lecture seule : rien n'y est écrit, aucune opération git.</li>
+        <li>Aucune mémoire ni note permanente du projet principal n'est modifiée ; aucune autre branche Conway 99 n'est consultée.</li>
+        <li>Pas de calcul SAT ou CP-SAT de plusieurs heures. Quand la machine est chargée : un seul fil, priorité basse, arrêt si la
+          RAM libre passe sous 3 Go.</li>
+        <li>Liberté maximale pour inventer, rigueur maximale pour conclure.</li>
+      </ul>
+    </section>
+
+    <footer>Laboratoire C2 · carnet tiré du dépôt au 24 septembre 2026 · source de cette page : <code>rapport/c2_lab.html</code></footer>
+  </main>
+</div>

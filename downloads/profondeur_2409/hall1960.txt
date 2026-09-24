@@ -1,0 +1,985 @@
+                                                          Marshall Hall, Jr.
+
+     Automorphisms of Steiner Triple Systems
+
+     Abstract: This papertreatsthe following problem in combinatorial analysis:Find an incompletebalanced
+
+     block design D with parameters b, v, r, k, and 2 = 1, possessing an automorphism group G which is doubly
+
+     transitive on theelements of D and such that the subgroupH of ,G fixing all the elements of a block is transi-
+     tive on the remaining elements. Also find transitive extensions of such groups G. If the block design is a finite
+     projective plane, the plane is necessarily Desarguesian. Thus, these properties of the automorphism group
+     may be considered as a "Desarguesian" property of the designs.
+
+     This paper considers the case in which D is a Steiner triple system. The main result is that a "Desarguesian"
+     Steiner triple system is either 1) a projective geometry over GF(2) or 2) an affine geometry over GF(3).TWO
+     intermediate results are of interest: 1) A Steiner triple system has for each element an involution fixing only
+     this element, if and only if every triangle generates an S(9), a Steiner triple system with 9 elements; 2) if a
+
+     Steiner triple system has for each triple an involution fixing only the elements of this triple, then every trian-
+     gle generates an S ( 7 ) or an S(9).
+
+     1. Introduction
+
+     It is a classical result that the validity of the automorphisms. First, if for every point of a triple
+
+     Theorem of Desargues in a projective plane is system S there is an involution fixing only that
+
+     equivalent to the exist,ence of acertain family of point,theneverytriangle(threepoints   of S not
+
+     collineations [I, p. 3521. And recently Ostrom and in a b1oc.k) lies inasystem S(9) with exactly 9
+
+     Wagner [2] have shown that a finite projective points and conversely if all triangleslie in subsystems
+
+     plane is Desarguesian if it has a group of collinea- S(9), then S has the corresponding family of involu-
+
+     tions doubly transitive on its points. Thus a natural tions. Second, if for everytriple of X there is an
+
+     generalization of the Desarguesian property to block involution fixing exactly the points of thistriple,
+
+     designs is the property of having a highly transitive theneverytriangle lies in an S(7) or S(9). The
+
+     group of automorphisms. And conversely afamily converse of the second theorem is false.
+
+     of permutation groups originally investigated by     The final section uses the results of the previous
+
+     Jordan [3] leadsinaverynaturalway  to block sections to characterize Steiner triple systems which
+
+     designs. These are doubly but not triply transitive  have highly transitiveautomorphism groups. If X
+
+     permutation groups in which a subgroup exists hasautomorphismstransitive   on trianglest,hen
+
+     fixing k 2 3 letters and transitive on the remaining there are two types:
+
+     1ett.ers. These groups andtheir relationship to      T y p e I. Every triangle of S generates an X(7).
+     block designs are considered in Section 2.
+
+        The Steiner triple systems are the block designs  T y p e 2. Every triangle of X generates an S(9).
+
+     with IC = 3 and X = 1, i.e., syst.emswith blocks of
+
+     three elements (the elements are called pointsin     The systems of Type 1are precisely the projective
+
+     this paper) in which every pair of distinct elements geometxies over GF(2). In Type 2 it is necessary to
+
+     occdrs together in exactly one block. Two theorems take thestronger hypothesis that theautomorphisms
+
+     in Section 3 relate combinatorial properties of aretransitive on sets of 4 independentpoints (4
+
+460  Steinetriple systems ttohe existence of certain pointsnotin an S(9)) to conclude that S is the
+
+1 IBM JOURNAL NOVEMBER 1960
+affine geometry overGF(3).This stronger hypothesis eters v = n, b = n(n - l)/k(k - l), k = k , r =
+
+isprobablynot necessary, but is needed forthe                 (n - I)/@- l),X = 1. The group G may be regarded
+
+presentproof.Indeed, it is conceivable thatthe                asanautomorphism group of D which i s doubly
+
+entire conclusion holds if we askonly thatthe                 transitive on the letters of D. The subgroup H jixes
+
+automorphism group be doubly trmsitive.                       the letters of a block of D and i s transitiveon the
+
+Muchremains tobe done. Thenature of t,he remaining letters. Conversely if D i s a block design
+
+doubly transitive grouposf the Steiner triple systems withparameters v , b, r, k , and X = 1 whichhas a n
+
+needinsvestigatioAn.nd        of courasnealogous              automorphism group G doubly transitive on the letters
+
+questionscanbestudied   for block designs other of D in which the subgroup H jixing the letters of a
+
+than Steiner triple systems.                                  block i s transitiveon the remaining letters, then G
+
+2. On a class of groups related to block designs              i s a Jordan group on the v letters of D and H i s the
+                                                              subgroup of G jixing k letters and transitiveon the
+
+The following t,heorem isdue originally to Jordan[3] remaining letters.
+
+and the proof may be found in Burnside [4,p. 2071
+
+or in Hall [l,p. 661. The properties of block designs         Proof. The proof of thistheoremisnotmuch
+
+needed here may be found in Mann [5, pp. 83-1291. longer than the statement. Suppose G is a Jordan
+
+   Theorem of Jordan                                          groupand H a,s large as possible. First we show
+
+Let G be a permutation group on n letters which i s           that m = n - k > n / 2 . Since G is primitive there
+primitive, and let H be a transitive subgroup of G
+                                                              exist conjugates H,, H z of H displacing some letters
++ on m letters, jixing the remaining n-m letters,
+                                                              in common but not all. Then H , U H , is transitive
+2 5 m < n. Then (1) ifH i s primitive, G i s n - m 1          on the letters it displaces. By the maximality of H ,
+                                                              H , W H , istransitive on n - 1 or n letters. But
+fold transitive; ( 2 ) in any event G i s doubly transitive.  H , U H , displaces at most 2 m - 1 letters.Hence
+
+ + We are here interested in the second alternative,          2 m - 1 2 n - 1 and m 2 n / 2 . If m = n / 2 and
+                                                              H , W H , displacesexactly n - 1 letters, a third
+where with 2 5 m 5 n - 3 , G is not n - m 1
+
++ fold transitive. Suppose that G is t-ply transitive, but    conjugate H , will be such that either H , W H , or
+
+not t l-ply transitive where 2 5 t 5 n - m - 1.               H , V H , istransitiveon more than n / 2 letters
+
++ We note that if G is n - m fold transitive, it isalso       and on a t most 3n/4. Here 3n/4 < n - 1 since
+
+n - m 1 fold transitive, since H fixes n - m                  n 2 6 for all but trivial cases. Thus we must have
+
+lettersandistransitive on the remaining letters.              m > n / 2 for H with the maximal properties of the
+
+Then the subgroupG* of G fixing f - 2 of the letters theorem.Hence anytwoconjugates of H , say H ,
+
+fixed by H will be doubly but not triply transitive, and H z , displacesome lettersin common and
+
+andeither G = G* (if t = 2) or G is a transitive H , W H , is transitive. By the maximal property of
+
+extension of G*. For example, theMathieugroup                 H this means that H , W H z is trmsitive on n or
+
+M,, quadruplytransitive on 23 letterscontains a n - 1 letters. This is equivalent to saying bhat the
+
+subgroup H fixing 7 lettersandtransitiveonthe                 k letters fixed by H , and the k letters fixed by H ,
+
+remaining 16letters.Asubgroup G* of &Iz3fixing have no letters or exactly one letter in common.
+
+two of the fixed letters of H isdoubly butnot                 Consider the array D of the sets of k letters fixed
+
+triplytransitiveon      21 lettersandcontains     H . by conjugates of H . A pair of distinct letters ai, ai
+
+Group M,, is a transitive extension of G*.                    occurstogetherinone of these sets a t most once,
+
+Let us call a group G a Jordan group if                       since we have shown tha.ttwo such setshave a t
+
+1) G is doubly but not triply transitiveon n letters;         most one letter in common. But, since G is doubly
+2) G has a subgroup H fixing k 2 3 letters and transi-        transitive, a pair a i , a ; will occur togetherinone
+tiveonthe m = n - k letters which it moves                    set. If there are b conjugates of H , D has b blocks
+                                                              each consisting of k letters,there being n letters
+   Theorem 2.1                                                in all. Each unorderedpair ai, ai occurstogether
+
+Let G be a Jordan group on n letters and suppose the exactly once in a block. This says that D is a n in-
+
+subgroup H as large as possible, namely (i) H i s not         complet,e balanced block design whose parameters
+                                                              u , b, r , k , X include v = n, k = IC, and X = 1. But it
+contained in a subgroup H' jixing k' letters 3 5 k' < k
+
+and transitiveon the remaining n - k' letters, and is well known that the parameters satisfy bk = vr,
+
+(ii) H contains all permutations of G jixing the k r ( k - 1) = X(v - 1) whence r = (n - l)/(k - l ) ,
+
+letters which H jixes. Then the sets of k letters $xed by b = n(n - l ) / k ( k - 1). Clearly G permutes the
+
+H and its conjugates in G form the blocks of a n conjugates of H amongthemselves and so G may
+
+incomplete balanced block design D witpharam-                 be considered as an automorphismgroup of D,                46 1
+
+                                                                         IBM JOURNAL NOVEMBER 1960
+     being doubly transitive on theletters of D, and              types. We note that aninvolution of a Steiner system
+
+     having a subgroup H whichfixes theletters of a               S which interchanges twopoints x , y necessarily
+
+     block and is transitive on the remaining letters.            fixes the third point of the triple containing them.
+
+     This completes the proof of the direct part of the           For if a is the involution, (.)a = y , ( y ) a = x , the
+
+     theorem.                                                     triple ( x , yx,)a = y , x,(2). = y , 2,z whence x = (z)a.
+
+     The converse part of the theorem is essentially              By a triangle of a Steinertriplesystem we shall
+
+     obvious. Let D be a block design with parameters             meanthreepointsnotin       a triple. An S(v) is a,
+
+     6, v, r , k , X, where k 2 3 and X = 1, and let G be a       Steiner triple system with exactlyv points.
+
+     group of automorphisms of D, doublytransitive                   Theorem 3.1
+
+     on the letters of D and having a subgroup H fixing           Let S be a Steinertriplesystem in which, for every
+                                                                  point x , there i s a n involution a of S which has x as
+     the lettersof a block and transitiveon the remaining         its only fixed point. Then every triangle of S generates
+                                                                  a n S(9). Conversely supposethat S i s a Steiner
+     letters. The group G cannot be triply transitive, for        triplesystem in whichtriangle generates a n S(9).
+                                                                  Then for every point x of S there i s a n involution (Y
+     if i, j , t are letters of a block B , and if s is a letter  of S which has x as its only fixed point.
+
+     not in B,, then G does not contain a permutation
+
+     mapping i, j, t onto i, j , s. Hence G is doubly but
+
+     nottriplytransitiveandcontainsa  subgroup H
+
+     fixing k 2 3 letters, and transitive on the remaining
+
+     letters. Thus G is a Jordan group and the converse             Proof. Suppose S has a family of involutions such
+                                                                  that for every point x of S there is an involution a
+     of the theorem is proved.                                    which has x as its only fixed point. By the remark
+                                                                  above, if r is a point and (r)a = s, (s)a = r, x , r , s
+     In the Mathieu group M,, mentioned above, the                is a triple of S , and conversely if x , r , s is a triple,
+                                                                  then, since x,r , (r)ais a triple, (r)a = sand (s)a = r.
+     group G* is doubly but not triply transitive on 21
+                                                                  Let 1, 2, 4 be atriangle of X. Then the following
+     letters with a subgroup H transitive on 16 letters
+                                                                  triples are determined:
+     and fixing the rest. In G* a conjugate of H fixes
+
+     k = 5 letters and we have n = v = 21, X = 1for the
+
+     block design D. Here for D,
+
+     r = (n - I)/@ - 1) = 20/4 = 5                                1, 2, 3 2, 4, 6
+
+     and                                                          1, 4, 5
+     6 = n(n - l ) / k ( k - 1) = 21.20/5-4 = 21.                 1, 6, 7.
+
+     Thus D isthe finite projective plane of order                Here we have involutions a,, a,
+                                                                  a, = (1) (2, 3) (4, 5) (6, 7)
+     k - 1 = 4. The group G* is the group of unimodular
+     collineations of the plane. M Z 8is, of course, a transi-
+
+     tive extension of G*.                                        az = (2) (1, 3) (4,6).                       (3.2)
+        In this paper we investigate Jordan groups with
+                                                                  Applying a, to 2, 4, 6 we have (2, 4, 6)a, = 3, 5, 7,
+     k = 3. The corresponding design is, of course, a             a new triple. Thus 2, 5, 7 is not a triple, and a, does
+     Steinertriple system. An automorphism a of a                 not interchange 5 and 7 butmust interchange 5
+     Steiner triple system which fixes two distinct points,       with a further point 8, there being a triple 2, 5, 8,
+     say x , y , willfix the triple, say x , y , z, containing    andlet 9 be the third point of the triple 1, 8, 9.
+     thesetwopoints and therefore will also fix the               We now have triples
+     third point z of the triple. Hence the subgroup H
+
+     fixing a triple is just the subgroup fixing two points.      1, 2, 3 42, ,           6  3, 5, 7
+     Thus if G is a group of automorphisms of a Steiner
+     triplesystem S which is doubly transitive on the             1, 4, 5 2, 5, 8
+
+     points of X,and if the subgroup H , fixing a triple,         1, 6, 7
+
+     is transitive on the remaining points, this is equiva-
+
+     lent to saying that G is transitive on triangles of S , 1, 8, 9
+
+     meaning by a triangle an ordered set of t,hree points        and also involutions
+     not in a triple.                                             a, = (1) (2, 3) (4, 5) (6, 7) (8, 9)
+                                                                  az = (2) (1, 3) (4, 6) (5, 8)
+     3. Combinatorial theorems                                    a3 = (3) (1, 2) (5, 7)
+
+     I n this section we establish two theorems which
+     relate thestructure of a Steiner triple system to
+
+462  the existence of a family of involutions of certain a4 = (4) (1, 5) (2, 6)
+
+IBM JOURNAL NOVEMBER 1960
+   tions                                                that X is a Steinertriplesystemin which every
+
+   (2, 5,S)ar = 3, 4, 9                                 trianglegenerates an S(9). Let 1 be apoint of S
+                                                        and leta, be the permutationwhich fixes 1and inter-
+   (1, 2, 3)a5 = 4, 8, 7
+                                                        changes x and y if 1,x , y ,is a triple of X.We must
+   (4, 8, 7 )6~,1= 5, 9.                         (3.5)  prove that a , is an automorphism of X, namely,
+
+   This adds toour information, giving triples          that a, maps triples of X onto triples. This is trivial
+                                                        for every triple through 1. Hence consider a triple,
+   12,3,24,45,,4,3,7,66,9,89                            say 2, 4, 6 not through 1. Let 3, 5, 7 be the third
+                                                        points of the triples cont,aining 1, 2; 1,4; 1,6 respec-
+   1 , 4 , 255,,              8 3, 5, 7
+                                                        tively. Thus we have
+
+   1, 6 , 7                                             1, 2, 3 24, , 6
+
+   1, 8, 9                                       (3.6)  194, 5
+
+                                                        1, 6, 7.         (3.11)
+
+                                                        By hypothesis the triangle 1, 2, 4 generates a n S(9)
+
+                                                        whose points are 1, . , 7 as above and two further
+
+                                                        points 8, 9. Thus 1, 8, 9 is a triple. If 2, 5, 7 were a
+                                                        triple then we would have to have 2, 8 , 9 as a triple
+                                                        and 8, 9 mould appear in two triples, a conflict.
+
+                                                          Hence 2, 5 is in a triple with one of 8 , 9, say 8.
+                                                        The remainingtriple with 2 must be 2 , 7, 9. This
+                                                        gives triples
+
+                                         (3.12)         1, 2, 3 2, 4, 6
+
+                                                        1, 4, 5 25, , 8
+
+                                                        1, 67, 2, 7, 9
+
+                                                        1 , 8, 9.
+
+                                                        We easily find t,hat tmhe onlypossible way to com-
+                                                        plete (3.12) to an S(9) is to add the further triples
+                                                        which appearin (3.9). Thuswith a , = (1) (2, 3)
+                                                        (4, 5) (6, 7) ( 8 , 9) we find ( 2 , 4, B)u, = 3, 5, 7 and
+                                                        3, 5 , 7 is indeed a triple. This proves that a , is an
+                                                        automorphism of S and the proof of ourtheorem
+                                                        is complete.
+
+                                                          Thereisa second theoremmuchlike the first,
+                                                        though it does notcontainthe converse (which is
+                                                        indeed false). [6]
+
+                                                        e Theorem 3.2
+
+                                                        Let S be a Steiner triple system and suppose that for
+                                                        eachtriple of S there isaninvolulwn whose$xed
+                                                        points are precisely thethree points of the triple.
+
+                                                        Then every triangle of X generates a n S(7) or a n S(9).
+
+                                                        Proof. Let 1, 2 , 4 beatriangleand 1, 2, 3 the
+
+                                                        triple containing 1, 2. Let a = (1) (2) (3) (4,5) be
+
+                                                        an involution fixing the points 1, 2, 3 and no others.
+
+                                                        Then 4,5, x is a triple with x = 1, 2, or 3 and re-
+
+                                                        numbering,suppose x = 1. This renumberingdoes
+
+                                                        noat lterwhat we need to provseince 1, 2, 4; 1,             463
+
+I                                                                        IBM JOURNAL NOVEMBER 1960
+
+1
+                                            THEOREM 3.2
+
+   1 . 2 . 1 . 1 1 . 2 . 1 .13. 2 . 1 . 2                  2.1.3. 1  2.1.3.2
+
+    Figure 1 Case diagram for Theorem 3.2.
+
+   Case 6.Triple 3, 6, 7                                   the value of x in b = (1) (6) ( 8 ) (2, x), since the
+                                                           pair 2, x is in a triple with one of 1, 6, or 8.
+   1 , 2 , 3 2, 4, 6 3, 6, 7
+                                                           Case 2.1.1 b = (I) (6) (8) ( 2 , 3),
+   1,4, 5 2, 5 )7                                          Case 2.1.2 b = (1) (6) (8) (2, 4),
+
+   a =(2()1) (3) (4, 5) (6, 7).             (3.18)         Case 2.1.3 b = (1) (6) (8) (2, 9).
+                                                              In Case 2.1.1, b = (1) (6) (8) (2, 3)
+     Here we must have further triples 1, 6, 8 and if
+   a = (8, 9) then also (1, 6, 8 ) a = 1, 7, 9. Thu, our              ( 2 , 6, 4)b = (3, 6, y) = 3, 6, 7
+   basis for Case 2 is the array                                          and b = (4, 7).
+
+   Case 2
+
+   1,2, 3    2, 4,6              36, , 7                   In the triple 4, 7, z ; z = 1, 6, or 8, of which only
+   1)4, 5    2, 5 , 7                                      z = 8 is consistentwith (3.20). Hence 4, 7, 8 is a
+                                                           triple and also (4, 7, 8)a = 5, 6, 9. Here b = (1) (6)
+   1, 6, 8                                                 (8) (2, 3) (4, 7) (9, t ) with 9, t in a triple with 1, 6,
+                                                           or 8. Thus t = 7, 5, or 2 of which only 2 = 5 is
+          1, 7, 9                           (3.19)         possible. Then (2, 5 , 7)b = 3, 4, 9 and (2, 8 , 9)b =
+   a = (1) (2) (3) (4,5) (6, 7) ( 8 , 9).                  3, 8 , 5 yielding the complete X(9).
+
+   Here in the triple x, 8 , 9 we must have x = 1, 2,      1 , 2 , 343, 64, 75, 86 , 9
+
+   or 3. 1, 8 , 9 is inconsistent. We havetwo cases.       1, 4) 5 2, 5 ) 7 3, 4) 9
+   Case 2.1 Triple 2, 8 , 9. Case 2.2 Triple 3, 8 , 9. We
+
+   shall show that Case 2.1 leads to an X(9) and that      1, 6, 8 2, 8, 9 3, 5 , 8
+
+   Case 2.2 leads to conflicts.                                   1,7, 9
+                                                           a = (1)(2)(3) (4,5) (6, 7) (8, 9)t
+I  Case 6.1                                                b = ((16)) (8) (2, 3(4), 7) (5, 9).
+                                                           Case 6.1.6. b = (1) (6) ( 8 ) ( 2 , 4).
+   1, 2, 3 2, 4, 6 3, 6, 7                                                                          (3.21)
+
+   1)4, 5 2, 5 , 7
+
+   1, 6, 8 2, 8, 9                                         Here (1, 2, 3)b = 1, 4, x = 1, 4, 5 and b = (3, 5)
+
+         1,7, 9                             (3.20)         and in the triple 3 , 5, y of the values y = 1, 6, 8
+   a = (1) (2) (3) (4,5) (6, 7) ( 8 , 9).                  only y = 8 is consistent with (3.20). Hence we have
+                                                           the t,riple 3, 5, 8 and also (3, 5, 8)a = 3, 4, 9. At
+
+   This we mustsubdivide into cases according to this stage we have                                                    465
+
+                                                                                        IBM JOURNAL NOVEMBER 1960
+     Case 2.1.2      24, , 6           3, 6, 7                                a = (1) (2) (3) (4,5) (6, 7) (8, 91,
+                     25, , 7           3, 5, 8                                b = (1) (6) (8) (2, 9) (3, 7)?
+            1, 2, 3  2, 8, 9           3, 4, 9                               c1 = (2) (8) (9) (1, 31,
+            1, 4, 5                                                  bc,b = cZ = (2) (8) (9) (1, 7).
+            1, 6, 8
+
+     1,7, 9                                                          Here
+
+     a = (1) (2)(3) (4, 5) (6, 7) (81 9),                            (1,2, 3)c2 = 7, 2, x = 7, 2, 5 and cz = (3, 5),
+
+     b = (1) (6) (8) (2, 4) (3, 5 ) .           (3.22)               (3, 6, 7>c2= 5, y, 1 = 5, 4, 1 and c2 = (4, 6).
+                                                                     Thus
+     Here (2,5,7)b = ( 4 , 3 ,y) = 4 , 3 , 9whence b = (7,9).        cz = (2) (8) (9) (1, 7) (3, 5) (4, 61,
+     Then (2, 8, 9)b = 4, 8, 7 and (4, 8, 7)a = 5, 6, 9.             (1, 6, 8)c2 = 7, 4, 8 and (7, 4, 8)a = 6, 5, 9,
+     This completes (3.22) to an S(9) and indeed the
+     S(9) identical with that of (3.21).
+
+     Case 2.1.3 b = (1) (6) (8) (2, 9)                               ( 5 , 6, 9)c2 = 3, 4, 9 and (3, 4,9)a = 3, 5 , 8.
+
+     Here (1, 2, 3)b = (1,9, x) = (1, 9, 7) and b = (3,7),           This completes (3.24) tothe same S(9) as (3.21).
+     b = (1) (6) (8) (2, 9) (3, 7). In this case consider            Wenot,e that all subcases of Case 2.1 lead to the
+     an involution c = (2) (8) (9) (1, y). Here y = 3, 6,            same X(9).
+     or 7. If c1 = (2) (8) (9) (1, 3) then bc,b = c2 =
+     (2) (8) (9) (1,7) and the two cases y = 3 and y = 7               We now consider Case 2.2.
+     go together. Thus we need subdivide into only two
+     cases. Case 2.1.3.1, c = (2) (8) (9) (1, 6) and Case            Case 2.2         2, 4, 6  3, 6, 7
+     2.1.3.2, c1 = (2) (8) (9) (1, 3) and c2 = (2) (8) (9)                  1, 2 , 3  2, 5, 7  3, 8, 9
+                                                                            1, 4, 5
+     (1, 7).
+
+     Case 2.13.1                                                           1, 6, 8
+
+     1, 2, 3         2, 4, 6           3, 6, 7                             1, 7, 9
+     1,4, 5          2, 5, 7
+                                                                     a = (1) ((23)) (4, 5) (6, 7) (8, 9).               (3.25)
+
+     1, 6, 8 2, 8, 9                                                 We shall show that this always leads to a conflict.
+
+     1, 7, 9                                                         We consider the involution b = (3) (6) (7) (1, x),
+
+                                                                     and this divides into subcases
+
+     a = (1) @) (3) (4, 5) (6, 7) (8, 91,                            Case 2.6.1 b = (3) (6) (7) (1, 2)
+
+     b = (1) (6) (8) (2, 9) (3, 71,                                  Case 2.2.2 b = (3) (6) (7) (1, 8)
+                                                                     Case 2.6.3 b = (3) (6) (7) (1, 9).
+     c = (2) (8) (9) (1, 6).                    (3.23)
+                                                                     First we treat Case 2.2.1. Here
+     Here (1,2, 3)c = (6, 2, x) = (6, 2, 4) and c = (3,4).
+     Also (3, 6, 7)c = 4, 1, y = 4, 1, 5 and c = (5, 7).             (1, 6, 8 ) b = 2, 6, y = 2, 6, 4 and b = (4, 8).
+     Thus c = (2) (8) (9) (1, 6) (3, 4) (5, 7), (1, 7, 9)c =
+     6 , 5 , 9 a n d (5, 6,9)a = 4 , 7 , 8 . (4,7,8)c = 3 , 5 , 8 ,  Here in the triple 4, 8, x ; z = 3, 6, or 7 of which
+     a.nd (3, 5, 8)a = 3, 4, 9. These triples complete               only x = 7 is consistent with (3.25), and 4, 7, 8
+     (3.23) to the same S(9) as (3.21).                              is a tripleT.hen (4, 7, 8)a = 5, 6, 9. Also
+                                                                     (1, 7, 9)b = 2, 7, f = 2, 7, 5 and b = (5. 9). But
+       As our final case under 2.1 consider Case 2.1.3.2             then (3, 8, 9)b = 3, 4, 5, a conflict. This eliminates
+     with c, = (2) (8) (9) (1, 3) and also c, = (2) (8)              Case 2.2.1.
+
+     (9) (17 7).                                                       Case 2.2.2 b = (3) (6) (7) (1, 8).
+
+     Case 2.1.3.2
+
+     1, 2, 3  2, 4, 6         3, 6, 7                                Here (1, 2, 3)b = 8, 2,3 = 8, 9, 3 and b = (2, 9).
+     1, 4, 5  2, 5, 7                                                But then in the triple 2, 9, y we have y = 3, 6, or 7.
+     1, 6, 8  2, 8, 9                                                All three of these conflict with (2.25). Thus Case
+                                                                     2.2.2 leads to a conflict.
+
+466  1, 7,9                                     (3.24)               Case 2.2.3 b = (3) (6) (7) (1, 9).
+
+IBM JOURNAL NOVEMBER 1960
+Here (1, 2, 3)b = 9, x, 3 = 9, 8, 3 and b = (2, 8).
+
+But then in the triple 2, 8, y we have y = 3, 6, or 7.
+
+All three of these conflict with (3.25). Thus all consider the family F of all 2-subgroups of G,
+
+subcases of Case 2.2 lead to conflicts.                 including the identity as a 2-subgroup. Let U be a
+
+This completes the proof of Theorem 3.2 The 2-subgroup of G fixing more than three points such
+
+only consistent subcase of Case 1 leads to an S(7). that any larger 2-subgroup fixes a t most 3 points.
+
+All consistent subcases of Case 2 lead to the same Here the identity fixes more than three points and
+
+S(9).                                                   so such a 2-subgroup must exist. The third point
+                                                        of a triple containing two points fixed by U must
+4. Steiner triple systems with a Jordan                 also be a fixed point of U and so the fixed points
+    group of automorphisms                              of U form aproperSteinersystem S* (we may
+
+We investigate here the structure of Steiner triple have S* = S if U = 1). Let x, y, z be any triple
+
+systemswithaJordan  group of automorphisms. of S*. Then U is contained in a Sylow 2-subgroup
+
+Our first theorem will require less, namely that the Q*(2) of the subgroup H* fixing x, y , z and Q*(2)
+
+Steinertriplesystem S possess a group of auto- is conjugate to Q(2). Q*(2) fixes precisely the three
+
+morphisms doubly transitive on the points of S.         points x,y, z. Let U C V E &*(2) where[V :U ]= 2.
+
+   Theorem 4.1                                          By the choice of U , V fixes a t most three points,
+
+Suppose a Sdeiner triplesystem S withmorethan           + whence V fixes exactly the three points x, y, z. If
+3 pointshas a group of automorphism G which i s
+doubly transitive on the points of S. Then S possesses  V = U Ut, then U d V and t2 E U whence'1
+a subsystem which i s a n S(7) or a n S(9).
+                                                        fixes the points of X*.A point of S* fixed by t is
+
+                                                        fixed by all of V , whence t fixes exactly the three
+                                                        points x,y , z. Thus t restricted to S* is an involution
+
+Proof. Since G is doubly transitive it is of even fixing exactly the three points x, y , z. But we chose
+
+order. Since N , the number of points of S is odd, G x, y , x as an arbitrary triple of S*. Hence for every
+
+is of order N(N - l ) m ,m being the order of a sub- triple of S* there is an involution of S* fixing
+
+group of G fixing two points. Then N - 1 is even        exactly the threepoints of the triple. Hence Theorem
+and P(2), a Sylow 2-subgroup of G, will not be of
+                                                        3.2 applies to S* and so X*,and therefore 8,contains
+
+an order dividing m. Thus P(2) fixes exactly one an S(7) or an X(9). This completes the proof of
+
+point and displaces the rest. If m is odd, then Theorem 4.1.
+
+every element of P(2) except theidentity, fixes         We can now proceed to our main theorem.
+
+exactly one point, and in particularthere is an            Theorem 4.2
+involution with exactly onefixed point. By transi-
+tibity of G there is for each point of S an involution  The following two properties of a permutation group
+fixing exactly this point. We may now apply Theorem     G are equivalent: 1) G is a Jordan group with a sub-
+3.1 and conclude that every triangle of S generates     group H fixing threeletters andtransitioeonthe
+and S(9), and our theorem is proved.                    remainingletters; 2) G i s an automorphismgroup
+                                                        of a Steinertriplesystem S , and G permutes the
+   Let us now suppose that m is even. Then a sub-       triangles of S transitively.There are two main types
+group H fixing twopoints ai, ai (and hence the
+three points ai, a;, ak of a triple) is of even order   for X:Type 1:Every triangle of S generates a n S(7);
+andhas a Sylow 2-subgroup Q(2). It is 1m- own
+[I, p. 681 that N,(Q(2)) is doubly transitive on the    T y p e 2: Everytriangle of S generates a n S(9). A
+points fixed by Q(2). If x, y are twopoints fixed       Steiner triple systemof T y p e 1 i s a projective geometry
+by Q(2) then Q(2) must also fix thethird point
+                                                        over GF(2). lfin T y p e 2 wefurtherassumethat G
+z of t.he triple x, y , x containing x and y. Hence
+                                                        i s transitiveonindependentsetsoffourpoints(Le.,
+if Q(2)fixes more than the three points ai, a;, ah,     four points noitn a n S(9)), then S i s a n a f i ngeometry
+                                                        over GF(3).
+
+then Q(2) fkes a proper Steiner systemS* containing     Proof. By Theorem 2.1 a Jordan group G with a
+
+fewer points than X,and N,[Q(2)] restricted to X* subgroup H fixing threelettersandtransitive on
+
+is a doubly transitive automorphism group of X*. the rest may be regarded as an automorphism
+
+By induction on the number of points we may group of an incomplete balanced block design with
+
+assume the theoremtrue for S*, which therefore k = 3, X = 1. These designs are the Steiner triple
+
+contains an S ( 7 ) or an S(9).                         systems S. Then G is doublytransitiveand so a
+
+There remains to be considered the case in which permutation fixing two points of S will fix the third
+
+Q(2) fixes exactly the threepoints ai, ai, ah fixed point of the triple containing them, and the group
+
+by H . Then, since G is doubly transitive, there is of such permutations will be transitive on allothers.            467
+
+                                                              IBM JOURNAL NOVEMBER 1960
+     Hence G willbe transitiveon the triangles of S.            x of order 2, andsuppose that for every u E K ,
+     Conversely a group G of automorphisms of S transi-         ( x u - l ~ u =) ~1. The representation of K as a permuta-
+     tive on the triangles of S is a Jordan group with          tiongroupon the cosets of C = C ( x ) , thecentralizer
+                                                                of x represents a conjugate of x , say u"xu by a permu-
+     k = 3. This proves the equivalence of thetwo               tation ai jixingexactly one letter i. For every i and
+     properties of the group G as stated in the theorem.        every transposition ( j , k ) of ai let i, j , k be a triple
+                                                                of a system S. Then S i s a Steinertriplesystem
+       By Theorem 4.1, S contains an S ( 7 ) or an S(9).        in which every triangle generates a n S(9).
+     Since G is transitive on triangles there will be two
+     types for S:
+
+     Type I. Every triangle of S generates an S(7).             Proof of Lemma. Let us first suppose that S is
+     Type 2. Every triangle of S generates an S(9).
+                                                                a Steinertriplesystem in which everytriangle
+
+                                                                generates an S(9). Then by Theorem 3.1 for each
+
+           This information is sufficient to determine the      - - point i of S there is an involutoryautomorphism
+        Type 1 Steinertriplesystems completely, but not
+        those of Type 2.                                        ai of X,ai = (i) ( j , k ) whichfixes only the
+
+           The well known axioms for projective geometry        point i andinterchanges j and k if and only if                =
+     theare following:
+                                                                i,j , k is a triple of X.We note that a , is the unique
+
+                                                                involution of S fixing only the point i, since an
+
+     PG.l There is one and only one line joining two            involution interchanging x and y must fix the third
+     distinct points.
+                                                                point x of the triple x , y, x containing x and y. Hence
+     PG.2 If A , B, C are three points not on a line, and
+                                                                - if r , s, t is atriple of S then a, = (r) (s, t ) ,
+     if D # C is a point on AC, and if E # C is a point
+     on BC, then there exists a point F on DE and also          a, = ( s ) (r, t ) ' , and a, = (1) (r, s) .. , arethe
+
+     on AB.                                                     corresponding involutions fixing only one letter.
+
+     PG.3 Every line contains at least three points.            Butthen aea,an= a t , and similarly a,a,a, = a,
+
+                                                                But then (a,aJ3 = (a,a,a,) (a,a,a,) = a; = 1. And
+
+                                                                of course similar relations hold if r, s, t are permuted.
+
+       Taking the blocks of aSteinertriplesystem as             - Since for any pair s, t there is a triple r, s, t and
+     lines, the axioms PG.l and PG.3 are alwayssatisfied.
+     If every triangle of a Steiner system generates an         a.7 = ( r ) ( s ,1) it follows that k = { a i )is transi-
+     S(7) then we readily verify that PG.2 is also satisfied.
+     Thus aSteinersystem of Type 1 is aprojective               tive. And since we have observed that ai is the
+
+     geometry over GF(2), since an S(7) is a projective         unique involution fixing the point i and no other,
+     plane over GF(2) and by classical procedures the
+                                                                it follows that ai is in the center of the subgroup
+     plane coordinatesmay be extended to the entire
+     projective space. This settles the statements of the       fixing i.This completes the direct part of the lemma.
+     theorem about Steiner systems of Type 1.
+                                                                Conversely let K be a group cont,ainingan element
+       The treatment of systems of Type 2 is far more
+     difficult. An S(9) is an affine plane over GF(3),          x, with x' = 1and suppose that for u E K we have
+     but it is not true that a Steinertriplesystem in
+     which every triangle generatesan S(9) is necessarily       ( 2 ~ - ' 5 u=) ~1. Let C = C ( x ) be the centralizer of
+     an affine geometry over GF(3).
+                                                                x andlet us represent K as apermutation group
+        We may use the converse part of Theorem 3.1
+     to describe Steinertriplesystemsin which every             on the left cosets of C.
+     triangle generates an S(9):                                + + + K = C Cy,
+                                                                * Cy,.                     (4.1)
+
+                                                                Here the representation of x is thepermutation
+
+                                                                a , = (C) 0 . . (CyCi,y,)  0 . where Cy,x = Cyj.
+
+                                                                Thepermutation a, fixes C, but no other coset.
+
+                                                                For if Cyx = Cy, then yxy" = h E C, whence
+
+                                                                xyxy" = yxy-'x. But we have 1 = ( ~ y x y " ) =~
+
+                                                                ~~(yxy-')=~ x3yx3y-l = xyxy-', whence yxy-I = x
+
+     Lemma 4.1                                                  and so y E C and hence Cy = C. It follows that a,
+
+                                                                and its n conjugates all * , a, areinvolutions
+
+     Let S be a Steiner triple systemin which every triangle    where ai fixes the letter i and no other, and ai is in
+
+     generates an X(9). For each point i of S let a, be the     the center of the subgroup fixing i. With a, the
+
+     involutoryautomorphism of S whichfixes i and               permutation representing x andany conjugate ai
+
+     interchanges j and k fi i, j , k i s a triple. For each    representing u-'xu, from ( X U - ~ X U )=~ 1 we conclude
+
+     lriple r, s, twe have a,asa, = a , , ( a , ~ . ) ~= 1 and  that (alai)' = 1. By takingconjugates of this
+
+     corresponding relations obtained by permuting r, s, 2.     relation we conclude more generally that for any
+
+     The group K generated bythe ai's i s transitive.The        a i , a, we have (aia,J3= 1. If ai = (i) . ( j , k ) . a ,
+
+     element ai permuteswith every automorphism fixing          then aiaiai is the conjugate of a, fixing IC and so
+
+468  i. Conversely let K be a groupcontaining a n element       aiaiai = ab, and conversely this relation implies
+
+IBM JOURNAL NOVEMBER 1960
+and sincealso ai = &aka, and aiakai = aka,@<we                " ' " ' '" "'
+
+have ak = ( k ) (i,j ) ... . This shows that ifwe             ( a , b , a) = 1 , (ab,)b, = 1.                                         (4.11
+take the letters 1, . . . , n as points of a system X
+                                                              The argument above provesa little more, namely
+and select triples of points taking i, j, k as a triple       that inagroup K if u3 = v3 = 1 and xu2 = u-l,
+                                                              zvx = v-l, then (u,v} isagroup of exponent 3
+- if a, = (i) 9 . ( j , IC) . . . then we obtain the same     and order a t most 27.
+- triplferom . ai = ( j ) + (i, k ) e e anfdrom
+                                                                When K is generated by four independentinvolu-
+ak = ( k ) . (i, j) . . Thus a selected tripleis              tions, a,, a,, a4, a,,, let us put x = a,, a = ala,,
+                                                              b = ala4,c = ala,,. Then each of the groups ( a , b } ,
+determineduniquelyby     anytwo of its points.                { a ,c}, ( b , c} is of exponent 3 and order a t most 27.
+                                                              Let us write U, = (a, b ) , uz = (b, c ) , Ua = (c, a ) ,
+Furthermore, any pair i, j does occur in one triple,          v1 = (a, b, c), v 2 = (a, b, c-'), us = (b, C, a ) ,
+                                                              214 = (b, c, a-1), 2)s = (C, a, b ) , 216 = (c, a, b-').
+- namely, i, j , IC if a, = (i) . ( j , k ) . . . , since a,
+
+displacesevery letter except i. Thus the system X
+
+of triples is a Steinertriplesystem, since every
+
+pair of points occurs in a unique triple. And since
+
+- aialaz,aiazai, . . , u,u,a, are the same as a,, e ,a,
+
+in someorder, it follows that a, is an automorphism Then we find
+
+of X.Hence Theorem 3.1 is applicable to X and so              a"u,a = ~ " ( 6 c, )a = a-'a(b, c)(b, C, U) = ~ ~ 1 1 3 .
+
+every triangleof X generates an X(9). This completes
+
+the proof of Lemma 4.1.                                       u"v,a = a"(a, b, c)a = a"(a, ~)-'c-'(u,b)ca
+
+   Lemma 4.1 shows that the construction of Steiner                  = (a, b)-lu-lc-lm-la-l(a, ~ ) ~ - ' U " C U
+triple systems in which every triangle generates an
+
+S(9) is precisely equivalent tothe construction of                   = (a, b)"(a, c)c"(u, b)C(C, a)
+
+groups K generated by a set of elements ai of order
+
+2 in which ( u , u ~ =) ~1.                                             -1 -1                                                             (4 .2)
+                                                                     =  u1                    UR.                                 c)aa
+  I n general K is generated by r involutions (ai1.                                        ~       ~  ~ l V .l ~ ~ 3  .
+
+The subgroup K , of K generated by products aia,              a-1v3a = a"@, c , u)a = a"(b, c)"a"(b,
+
+will be of index 2, and since aiai = aia,alai =
+
++ (alai)-l(alaiti)follows that K , giseneratebdy                     = [a"(b, c ) a ] - l ~ ( bc,)a-l
+
+the elements ala,, i # 1. Thus K = K , Klal,                         = 0 , c)(b, c , 4 1 - v ,                           C, a-1)
+with [K : K,] = 2. Indeethde homomorphism
+                                                                     = ( b , C, a)-'@, C, a")
+ai + a,, i = 1 .. r of K has K , asits kernel.We
+
+shall consider the cases r = 2, 3, 4.                                =    -1
+  If r = 2 and K is generated by a,, a, then K ,                        v3 v q .
+
+is cyclic of order 3 generatedby a = alaz and K               In this way we construct the transformation table:
+is of the order 6. Hereput a3 = a,a,al = azaIaz.
+
+Here K correspondsomewhat triviallytothe
+
+Steinseyrstecmonsisting  of a single triple 1,32.,            z a"za                                  b"z b              c- 'XC
+
+If r = 3, let K be generated by a,, a,, a+ where                                                      u1                 UlVl
+
+a3 = a,azal = a,a,a,. If we write a = ala,, b =               u1 u1
+
+and x = a, then a3 = 1, b3 = 1, xax = a,(aIa2)a, = uz u2v3                                            UZ                 uz
+
+a,a, = a-', and similarly xbx = b-'. In the relation
+( ~ u - ~ x=u )1~let us take u = a"b", and so u3 u3
+                                                                                                      u3v6               u3
+
+(xb~za-lb-~=)~ 1 or (b"~-'a"b")~ = 1 or v, u;1u~1u1vlu3 u;'u2u1v1ug1v;'v2
+
+= 1or                    = 1 or (ab)3 = 1. Similarly          v, u;1u3u1v,u;1 u;1u;1u,v2u2 v;l
+
+using: u = a"b we find ( b ~ " a - ' b ) ~= 1 whence          v3 v3'v4                                u,-1u1-1 U2V3U1 u;1u3u2v3u;1
+(ab-1)3 = 1. Theserelationsshow that K , = { a , bj
+
+is the group of exponent 3 with twogeneratorasnd              -1                                      u;1u;1u2v4uU;g11U;1Uzv4U3
+
+K , is of order 27. The corresponding Steiner triple v4 v3
+
+systeims S(9) since x ( a , b)x = (a-', b-') = (a, b ) v5 u ; ~ u , u ~ o ~ u ; ~ 2)i12)6                                u;1u;1u3v&2
+
+vi" and the commutator (a, b ) is in C, the centralizer
+
+of x, and so [K : C ] = 9, the number of conjugates
+                                                              V6 u3-1 u,-1 U3VeU1                                        ?&1?&u3v6ui1. (4.3)
+
+of a, = x. The following well knownrelations hold In the sameway we find the effect of the replace-
+
+in Km, asy easily be verified.                                ments a + a-', b + b-' and c -+c-l.                                                 469
+
+                                                                                                                         IBM JOURNAL NOVEMBER 1960
+     UZ uz                 U;'        U;'                     and also
+
+     u3 u;'                u3         U,'                     1 (cvJ3 =
+
+     v1 uIv;lu;l ulv;lu;l V Z                                 CUI cv, c v1 = 1
+
+     v2 ulv,'u;'           u1v; 'u;   01                      c v 1 c-l c-' v, c 0 1 = 1
+                           u2v;'u,'
+     v3  v4                           u2v;1uz1                v,-1    -1  vz V I  =  1.                              (4 -7)
+                                                                    v1
+
+     v4  213               u2v;1u;1 u2v;1u;'                  Hence by automorphisms of K
+
+                                                              , v: = 1
+     v5 u3v;1u;1 v6                   u3v;1u;1                                    i 1, 6 =
+     v6 u3vi1ui1 v5                                                                      e..
+                                       - --11
+                                                     (4.4)    ( V I , Vz) = 1, (V3, V 4 ) = 1, 1. ( V 5 , v6) = (4.8)
+                                      U3v6 u3
+
+       The relations (4.3) show that the u's and the v's      Transform (4.6) by c-l, obtaining
+     generate a normal subgroup of K , containing (a, b),
+     (b, c), and (c, a ) . This musttherefore be the derived  vz-1 v1 u;' u3 u,,'u,' u3 2)6 uz
+     group K:. Note that the group K subject only to
+     the relations of the lemma hasas automorphisms                           'UZ uz v;' u;l u;' u3 u,' = 1,          (4.9)
+     permutations of the generators and replacement of        whence                                                 (4.10)
+     a generator by its inverse.
+                                                              v,-1 2)' = u2 u3 v5 v,' . u3-1 uz-1
+       Since z(aba)x = a-lb-la-l = (aba)" and
+     xcx = c-I then (aba, c } is of exponent3andin            I n (4.10) replace c by c-l, giving
+     particular (c ab^)^ = 1.We shall apply thecollecting
+     process tothis using the rule RS = SR(R, X)              0'; vz = u,' u;' (u3 vi' U;')(u3 v6 u;l)u, UZ
+     repeatedly. We shall put a bar over the letter to
+     be collected in the next stage:                                      = uz-1 21s-1 v6 uz.                        (4.11)
+
+                                                              Take the inverse of (4.11) and use (4.8)
+
+     c aba c Ca ba caba = 1                                   -1    01    = uz-1    -1  215 uz  = u,'  v5 v i 1  UZ  (4.12)
+                                                                                  v6
+
+     c a b a" C(C, a) b 6 c aba = 1                           Comparing (4.10) and (4.12) we find that v6vi1
+                                                              and u;'u2 permute, or
+     c ab c (c, a)2b(b, a) c Ca ba = 1
+                                                              (v5vi1, u,' uz) = 1.                                   (4.13)
+     c a" b(b, U ) c b ( b , a)' C(C, a) b 6 = 1              Transform (4.13) by b and we find
+
+     c b ( b , C(C, a) b C(C, b(b, a) = 1                     (V6, vi' u;' uz) = 1,                                  (4.14)
+                                                                                                                     (4.15)
+     c(n, b) bc(c, a) bc(a, C) b(b, a) = 1                    whence using (4.8) and (4.13)
+
+     cul b c u 3 ~ c u , ' buy' = 1                           , (v6, u;' u2) = 1                (v5, u;' u2) = 1.
+
+     c u1 b c b ~3 C u;' b u;' = 1                            In (4.15) replace b by b-', giving
+
+     c u1bcbc US u;'u,' u3v5 u2u3-1 b UT' = 1                 (v5) u;' u,,')= 1 (US, u,' u,') = 1.                   (4.16)
+
+     c u1bcbc u;'u321,u2u,' 6 UT' = 1                         But since u.;'= (u-3'u-z')-'u,-'uz, (4.15) and (4.16)
+
+     C u1 bc bc b u,' usus vi' v6 u2vi' u;' u;' = 1           together give
+
+     c u1 c-' u,' u3 v, uz v i 1 u;' u;' = 1.        (4.5)    (u5, u,)= 1 (us, u,)= 1
+
+     If we now use the rule                                   (v6, UZ) = 1              1 . (216, 243) =             (4.17)
+
+     cup-'= c-Yc-'ulc)c = c-l(ulvJc = u1vlv;1v2 = U]VZ,       I n (us, u,) = 1 interchange c and a, giving
+                                                              ( U , V ; ~ Z L ; ~ , u;') = 1, or (u;', u;')= 1,
+     then (4.5) transformed by u1gives                        whence
+
+     1 ) ~ ~ u3 216 ~us'vi' u;' = 1.                 (4 4
+
+         Since (a, b)"c(a, b) and c are of order3 and         (v5, u1> = 1.                                                     (4.18)
+                                                                                                                     in (4.17) and
+470  transformeidnttoheir       inverses by x, they generatMe akinagppropriatseubstitutions
+
+IBM JOURNAL NOVEMBER 1960
+(4.18) we find                                    (4.19)       a"vla = v1w2, b"vlb = v,w3 C-'V,C = vlwl
+                                                               a-'wia = wi b"wib = wi c-'wic = wi
+(vi, ui)= 1 i = 1 , . * .6, j = 1 , 2,3.
+
+The equation (4.11) now takes the form                         axx = a-', x bx = b-', x c x = c-',
+
+v;' -1                                            (4.20)       x ui x = ui,  x V I x = v;' w1,  x wi x = wi.
+
+     v2 = v5 061                                                                                            (4.25)
+
+and permuting the generators, gives
+
+-1  92  =       -I      =     -1                  (4.21)         Further calculations, which willnot be given here,
+              v3            v5                                 show that the relations of (4.25) define a group K
+                    v4            v6.                          of order 2.3*' and thatfor every x e K , ( x z - ~ z z=) ~1.
+                                                               This may bedone by taking an elementary Abelian
+Using (4.19), (4.6) now becomes                                3-group generated by vll w l , w l , w3and extending
+                                                               this group by adjoining us, u2,ul, c, b, and a in
+uz u;' UT' u3       = -1                          (4.22)       succession, using the appropriaterelations from
+                                                               (4.25) to define the extensions, and then checking
+                         215 0 8 212                           ( x x - ' x z ) ~= 1 for representative values of x , observing
+                                                               that if h E C ( x ) then x(hx)"z(hx) = xz-lxz.
+and substituting in this from (4.21) we have
+                                                                 What sort of Steiner triple system S corresponds
+21, Ui1u3 u2 u;l =            -1    -1  = 01 v2.  (4.23)       tothe group K defined bythe relations (4.25)?
+                            v2                                 Here u l , u2,u3,wl, w2,w, e C ( x ) .For g e G we have
+                                  Vz
+
+From the transformation table (4.3) and (4.19) we              g = ae' be' ceJv: h , h e C(x).      (4.26)
+see that the left-hand side of (4.23) is unchanged
+by transformationby a, b, c and therefore vlv2 is              We find
+in the center of K,. Let us write w , = vlv, and
+similarly w2= v3v4, w3 = v&, where wl, w2, w3 are              g x g-1 = x(xgx)g-'
+in thecenter of K,. Since (a-', b-') = (a,b)xvlx = v2,
+xv,x = vl and asv, and v 2 permute by (4.8) it follows                  wi b-"' - x a - e ~
+that xwlx = wl. Thus w1 is in the center of K and
+similarly w z and w3. We may nowuse (4.21) to
+express the v's in terms of v1 and thew's.
+
+21, =     -1  w1                                                                    c-ca v-f    v;f cCesb-"" a-"'
+        v1
+
+v 3 = v1 w1w;'                                                          = x*k(g).                   (4.27)
+
+        w1 wz -1-1      -1                                     The number of conjugates of x is the number of
+214 = v1                                                       values of k(g) and this is in turn the number of
+                                                               points of S. Thus the group K defines a Steiner
+vs = V I PU, w,'                                               triple system with 81 points, and S(81).
+
+w3v6 = v;' w1-1 "1                                (4.24)         We must also consider Steinertriplesystems
+                                                               defined by homomorphic images of K , if we are to
+We can now write relations for K in the following              find alsl ystems generated by fourindependent
+form, applying automorphisms of K to (4.23):                   points, where every trianglegenerates on S(9).
+                                                               We see that
+I x2 = 1 , a 3 = 63 = c 3 = 1 , u ; = u , " = u , " = l
+
+v; = w; = w; = w; = 1                                          k(g) = a'' be' ce' (mod K;).         (4.28)
+
+u1 = ( a , b ) , uz = ( b , c ) , u3 = (c, a)                  Here if S has fewer than 81 points then S corresponds
+v1 = ( a , b , c ) , u-i1 v1 ui = v1                           to a factor group K I T where the kernel T is deter-
+                                                               mined bythe identification of different values of
+(u, , G ' ) = (UZ', u3) = (uz , us)-l
+                                = (u;',u;l)-l = w1             k ( g ) in (4.27). If k(gl)k(g2)-*e T and k(gl) r k(g2)
+                                                               mod K:, then K , / T is generated by at mosttwo
+, , (u3 UT1) = ( G I , U l ) = (u3 u1)-l
+                                                               elements, and we have an S(3) or S(9). Hence
+                                     = ( U i l ) u ; y l = w2
+                                                               suppose k(gl) = k ( g 2 ) mod K:, but k(gl) # k(g2).
+, (Ul 1 u,') = (u;l, u,) = (Ul U J l
+                                                               From (4.27) wesee that this shows that vlwl e T
+                                          = (u;', u;I)-l = w3
+                                                               and by transformation that v,, wl,w2, w, e T.Then
+a"ula = u l , b"ulb = u l , c-'ulc = ulv,
+                                                               - - in K , / T we haverelations vi = 1, i = 1, e , 6.
+
+                                                                  We state theseresultsina lemma whichnow
+
+                                                               leads to theproof of our theorem.
+
+a-'u2a = uzvlwlw;l, b"u,b = u p , c-1u2c = uz                  Lemma 4.2
+
+a-'u3a = us, b"u3b = u 3 v 1 w 1 w ~ ' , c-lu3c = u3 If S i s a Steinertriplesystem in which every triangle                     471
+
+                                                                                                IBM JOURNAL NOVEMBER 1960
+a n X(81) the group K associated with S satisjies             permuteswith every b as well as with x and so
+
+the relations (4.25). If they generate a n S(27) the          is in the center of K . Rut K as a permutation group
+
+associated group K satisfietshe  furtherelalions              is represented on the cosets of C ( x ) . I n this repre-
+
+vi = 1 , i = 1, ... 1 6.                                      sentation every commutator (bi, b,) is represented
+
+                                                              by the identity. Hence we obtain the same Steiner
+
+We now observe that if four independentpoints,                system ifwe take every commutator (bi, b,) to be
+1, 2, 4, 10 generate an S(81),then this S(81) con-
+tains an X(27), corresponding to the subgroup K"              the identity, i.e., if K , is simply an elementary
+of K generated by a, = x,a = alaz,b = ala4and v,.
+For we easily verify that in K* all elements are              Abelian 3-group A and x as a n involution which
+
+products of x, a, b, u,,v,, w,,w2,w 3 in this order           transforms every element of A into its inverse. By
+with appropriate exponents and that in K" there
+are exactly 27 conjugates of x, this corresponding            Lemma 4.1 we can now construct X explicitly. Let
+t o an S(27) generated by points 1 , 2 , 4 ,t , a, = v;'xv,.
+                                                              - b, = 1, bl, , b, be thedistinct elements of A ,
+   We now haveeverything needed to complete
+the proof of Theorem 4.2. Lemma 4.2 shows that                where of course n = 3' for some r. Then x = a,,
+                                                              - a, = b;'xb,,  , a, = bilxb, arethe involutions of
+if X has the property that every triangle generates           - - K . The triples of S are i,j , 5,if ai = (i)* . ( j , k ) . .
+
+an X(9), then if S has more than 9pointsthere                 Here C ( x ) contains the two elements 1, x = a , and
+
+exist four independent points generating an S(27).            the point i is associated with the coset C(z)bi whose
+As we are assuming that our group G of auto-
+                                                              two elements are bi and xbi. Here ai = b;'xbi = xb;'.
+morphisms of X is transitive on sets of four inde-
+                                                              Then i,j , k is a triple of S if and only if C(x)biai =
+pendentpoints, it follows that everyset of four
+independentpoints generates a n S(27). Nowcon-                C(x)b,. But this gives b, = br'b;'. Hence i, j, k is
+
+sider the group K associated with X, and suppose              a triple if and only if b,b,b, = 1 in A . If we write
+
+- K generated by involutions a, = x,a,, * , a,. If we         + + A astheadditive group of r dimensional vectors
+
+write ala2 = b,, ala3 = b, . . . ala, = bVTl then             over GF(3) a relation Pi Pi P, = 0 holds if
+
+                                                              and only if the points Pi,P , , P , lie on a line. Thus
+
+                                                              S may be regarded as theaffine geometry of dimen-
+
+                                                              sion r over GF(3)T. his completes the proof of
+
+                                                              Theorem 4.2.
+
+References and footnotes                                      (61 In a projective geometry of dimension n over GF(2),
+                                                                  every triangle generates an S(7) and the points may be
+[l]Marshall Hall, Jr., Theory of Groups, Macmillan, New           regarded as the elements of an elementary Abelian
+    York, 1959.
+                                                                 2-group A of order a+'with the identity excluded. If F
+[2] T. G. Ostrom and A. Wagner, Math. Zeitschr., 71, 186-199
+    (1959).                                                       is the subgroup of A fixed pointwise by an involution, it
+                                                                  can be shown that [F : 11 2 [A :F ] . Thus, if n 2 4,any
+[3]C. Jordan, Jour. de Math.Pures et A p p l . , 16, 383-408      involution of A fixes a subgroup F of order at least 8
+    (1871).                                                       and hence fixes at least 7 points in the corresponding
+                                                                  Steiner triple system.
+[4] W. Burnside, Theory of Groups of Finite Order, Cambridge
+    University Press, 2nd ed., 1911.                          Received June 27, 1960.
+
+[5]H. B. Mann, Analysis and Design of Experiments, Dover
+    Publications, New York, (1949).
+
+IBM JOURNAL NOVEMBER 1960
+

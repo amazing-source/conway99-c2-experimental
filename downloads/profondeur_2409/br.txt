@@ -1,0 +1,693 @@
+arXiv:1201.0383v3 [math.CO] 3 Feb 2012   On a family of strongly regular graphs with
+                                                                =1
+
+                                                   Andriy V. Bondarenko, Danylo V. Radchenko
+
+                                                                                       Abstract
+                                                    In this paper, we give a complete description of strongly regu-
+                                                lar graphs with parameters ((n2 + 3n - 1)2, n2(n + 3), 1, n(n + 1)).
+                                                All possible such graphs are: the lattice graph L3,3 with parameters
+                                                (9, 4, 1, 2), the Brouwer-Haemers graph with parameters (81, 20, 1, 6),
+                                                and the Games graph with parameters (729, 112, 1, 20).
+
+                                        Keywords: strongly regular graph, automorphism group, Brouwer-Haemers
+                                        graph, Games graph
+                                        AMS subject classification. 05C25, 05C50, 52C99, 41A55, 11D61
+
+                                        1 Introduction
+
+                                        A strongly regular graph  with parameters (v, k, , µ) is an undirected reg-
+                                        ular graph on v vertices of valency k such that each pair of adjacent vertices
+                                        has  common neighbors, and each pair of nonadjacent vertices has µ com-
+                                        mon neighbors. The incidence matrix A of  has the following properties:
+
+                                                                                   AJ = kJ,
+
+                                        and
+                                                                    A2 + (µ - )A + (µ - k)I = µJ,
+
+                                                                                        1
+where I is the identity matrix and J is the matrix with all entries equal to 1.
+These conditions imply that
+
+(1)                          (v - k - 1)µ = k(k -  - 1).
+
+Moreover, the matrix A has only 3 eigenvalues: k of multiplicity 1, one
+positive eigenvalue
+
+                    r  =  1  -µ+   ( - µ)2 + 4(k - µ))
+                          2
+
+of multiplicity
+
+                 f  =     1  v-1-  2k + (v - 1)( - µ)     ,
+                          2        ( - µ)2 + 4(k - µ))
+
+and one negative eigenvalue
+
+                    s  =  1  -µ-   ( - µ)2 + 4(k - µ))
+                          2
+
+of multiplicity
+
+(2)              g  =  1     v-1+  2k + (v - 1)( - µ)     .
+                       2           ( - µ)2 + 4(k - µ))
+
+Clearly, both f and g are integers. This together with (1) gives a family
+of suitable parameters (v, k, , µ) for strongly regular graphs. The list of
+all suitable parameters and known existence results for v  1300 could be
+found in [1] (except for the trivial case when  is a disjoint union of complete
+graphs mKn or its complement). Strongly regular graphs often appear in
+different areas of group theory, geometry, and set theory. Many of strongly
+regular graphs have a large automorphism group, which is the main tool
+to construct them. For example, some strongly regular graphs could be
+naturally obtained from a rank 3 permutation group, see [2]. On the other
+hand, there are strongly regular graphs having trivial automorphism groups.
+The smallest such graph has parameters (25,12,5,6), see [3].
+
+                                   2
+    Arguably, the most widely known strongly regular graphs are Moore
+graphs, with  = 0 and µ = 1. The list of all suitable parameters for
+such graphs are: (5, 2, 0, 1), (10, 3, 0, 1), (50, 7, 0, 1), and (3250, 57, 0, 1). In
+the first 3 cases, the graph with mentioned parameters is unique and has
+an edge transitive automorphism group. That is: the cycle graph C5, the
+Petersen graph, and the Hoffman-Singleton graph. The question whether
+exists a strongly regular graph in the last case is a well-known open prob-
+lem posed by Hoffman and Singleton [4]. However, Higman proved that the
+automorphism group of such a graph could not be even vertex transitive,
+see, for example, [5]. Later, Higman's approach was widely generalized and
+applied for other graphs, see, e.g., [6] and [7]. The typical result is that, if
+for a given parameter set (v, k, , µ) a strongly regular graph exists, then it
+has a small automorphism group. Full description of parameters for which a
+strongly regular graph exists is not likely to be ever done.
+
+    In this paper we will investigate strongly regular graphs with  = 1 and
+negative eigenspaces of dimension g = k. One can deduce directly from (1)
+and (2) that such a graph is either K3 or belongs to the family
+
+                        ((n2 + 3n - 1)2, n2(n + 3), 1, n(n + 1)),
+
+where n  N is the positive eigenvalue.
+    This family includes the lattice graph L3,3 with parameters (9, 4, 1, 2), the
+
+Brouwer-Haemers graph with parameters (81, 20, 1, 6), which is also known
+to be unique [8], and the Games graph with parameters (729, 112, 1, 20), for
+which the uniqueness question was open. We will show that these are the
+only graphs in the family.
+
+Theorem 1. Suppose that there exists a strongly regular graph with param-
+eters ((n2 + 3n - 1)2, n2(n + 3), 1, n(n + 1)). Then n  {1, 2, 4}.
+
+    The proof consists of two parts. First, in Section 3 we will show that each
+graph in the family exhibits certain symmetries (in particular, its group of
+
+                                                3
+automorphisms is vertex-transitive). Then, in Section 4 we will use different
+properties of these symmetries to prove that the set of vertices can be given
+a vector space structure over the finite field F3. In particular, the number of
+vertices in the graph is a power of 3.
+
+    Finally, the resulting diophantine equation has the only three mentioned
+solutions by virtue of [9, Theorem B]. This equation has appeared during
+the studying of ternary linear codes with exactly two nonzero weights and
+with the minimal weight of the dual code at least 4. It was actually shown
+in [10] that each of such codes of dimension 2m implies a strongly regular
+graph from the family with v = 32m vertices.
+
+    The following result completes description of the family.
+
+Theorem 2. The strongly regular graph with parameters (729, 112, 1, 20) is
+unique up to isomorphism.
+
+    We will prove Theorems 1 and 2 in Section 5.
+    In the next section we will explain the Euclidean representation of strongly
+regular graphs, which is the main tool to prove that each graph in the family
+has a vertex transitive automorphism group.
+
+2 Euclidean representation
+
+Let  = (V, E) be a strongly regular graph with negative eigenspace of
+dimension g. Then there exists a set of vectors {xi : i  V }  Rg satisfying
+the following two conditions. First,
+
+               if i = j,
+               if i and j are adjacent,
+           1,  else,
+           
+           
+xi, xj = p,
+
+           
+           q,
+
+               4
+where p, q  (-1, 1). Second condition is that the set {xi : i  V } forms a
+
+spherical 2-design, that is
+
+                                           xi = 0,
+
+                                       iV
+
+and                                                    |V |2
+                                                        g
+                                       xi, xj    2  =         .
+
+                             i,jV
+
+The values of p and q are uniquely determined by these conditions. For more
+
+information on relations between the Euclidean representation of strongly
+
+regular graphs and spherical designs see [11]. To construct such vectors
+
+consider columns {yi : i  V } of the matrix A - f I and put xi := zi/ zi ,
+
+where                                   1
+                                       |V
+       zi                    =  yi  -      |        yj, i  V.
+
+                                              jV
+
+It is easy to check that these vectors satisfy the above mentioned conditions.
+
+The main tool we will use for description of strongly regular graphs is the
+
+fact that each subset {xi : i  U}, where U  V , has a positive definite Gram
+
+matrix {(xi, xj)}i,jU of rank at most g. Similarly, we could get the Euclidean
+representation of  in Rf . However, we will never use it in this paper. The
+
+reason is that f is much larger than g for graphs from the considered family.
+
+Thus, the Euclidian representation in Rg contains much more information.
+
+3 Nontrivial automorphisms
+
+Fix n  2. Let  = (V, E) be a strongly regular graph with parameters
+((n2 + 3n - 1)2, n2(n + 3), 1, n(n + 1)). In this section, we will also fix some
+vertex v of . For any vertex v, let N(v) be the set of all neighbors of v,
+and let N (v) be the set of non-neighbors of v, i.e. N (v) = V \ ({v}  N (v)).
+The subgraph induced on the set N (v) is isomorphic to mK2. Define the
+permutation  on the set {v}  N (v) by switching all pairs of adjacent
+
+                                              5
+vertices in N (v) and leaving v fixed. Our goal in this section is to prove
+the following
+
+Proposition 1. The permutation  can be extended uniquely to an automor-
+phism of .
+
+     To prove Proposition 1 we need the next simple lemma.
+
+Lemma 1. Suppose that m0, m1, . . . , mn-2 are nonnegative integers such that
+
+                        n-2          n-i+1                 n+1
+                                          2                  2
+(3)                                                mi              .
+
+                        i=0
+
+Then the following inequality
+
+                                     n-2  n-i              n
+                                            2              2
+                                                mi              ,
+
+                                     i=0
+
+holds. The equality attains if and only if m0 = 1, and m1 = m2 = . . . =
+mn-2 = 0.
+
+Proof. Since, for each k < n,
+
+                                     k          k+1        n
+                                     2            2
+                                          <                  2  ,
+                                                           n+1
+
+                                                           2
+
+we obtain the statement of lemma by multiplying (3) by                n    /  n+1  .
+                                                                      2         2
+
+Proof of Proposition 1. For the Euclidean representation of the graph  in
+
+Rg   we  have  p  =  -  n2 +2n-1  ,  and  q  =      1   .  Now  computing  the  determinant
+                        n2(n+3)                 n(n+3)
+
+of the Gram matrix we get that vectors {xi : i  N (v)} are linearly in-
+
+dependent. Since |N (v)| = n2(n + 3) = g, this then implies that the set
+
+{xi : i  N (v)} forms a basis in Rg.
+
+     For any vertex u  N (v), we have |N (u)  N (v)| = µ = n(n + 1).
+
+Denote by A(u) the set N(u)  N(v), and by B(u) the set of neighbors of
+
+                                                6
+A(u) that are in N(v) (so that |B(u)| = |A(u)| = n(n + 1)). Then, for
+
+  =    n   ,    =     1   and     =    n  ,  we  have
+     n2-1          n2-1              n-1
+
+(4)                  x = xu +             xi +              xi + xv = 0.
+
+                                  iA(u)              iB(u)
+
+Indeed, it is easy to check that x, xi = 0 for i  N (v), and since the set
+{xi : i  N (v)} forms a basis then x = 0. Applying equation (4) for each
+pair u, w  N (v) we obtain
+
+       
+(5)  xu, xw = p  n|A(u)  A(w)| + |A(u)  B(w)| = n + 1,
+
+        xu, xw = q  n|A(u)  A(w)| + |A(u)  B(w)| = n(n + 1).
+
+    Observe that for a pair of nonnegative integers (k, l) the equation nk +l =
+n + 1 has only two solutions: (1, 1) and (0, n + 1). The equation nk + l =
+n(n + 1) has n + 1 solutions: (n + 1, 0), (n, n), (n - 1, 2n), . . . , (0, n(n + 1)).
+We see that |A(u)  A(w)|  n + 1, so in any case A(u) = A(w). Thus, if
+we extend  to an automorphism of , then A((u)) = B(u), and therefore
+(u) is defined uniquely.
+
+    Now, we fix u  N (v). Clearly, there are exactly n(n + 1) vertices in
+N (v)N (u) with |A(u)A(w)| = 1, and exactly n2(n+3)-2n(n+1) such
+vertices with |A(u)  A(w)| = 0. Let mi, i = 0, 1, . . . , n + 1, be the number of
+vertices w  N (v)  N (u) with |A(u)  A(w)| = i. The numbers mi must
+satisfy three equations
+
+     
+
+                n+1  mi  =   |N (v)    N (u)|        =  n4  +  4n3  +  2n2  -  5n  -  1,
+                i=0
+     
+
+     
+
+(6)             n+1  imi  =  |A(u)|(n2(n     +   3)  -  4)  =  n(n2  -  1)(n   +  2)2,
+                i=0
+
+     
+
+                n+1  i   mi  =  n(n2 - 1)(n + 2)(n2 + n - 1)/2.
+                i=0  2
+     
+
+    Here, the second equation is obtained by counting edges between A(u)
+and N (v)N (u). We get the third equation by counting triples (v1, v2, v3),
+where v1 and v2 are different vertices in A(u), and v3  N (v)  N (u) is
+adjacent to both v1 and v2.
+
+                                                 7
+     Now, solving (6) in mn-1, mn and mn+1 we obtain
+
+     
+
+(7)  mn-1 =  n+1  -  n-2  n-i+1     mi,
+               2     i=0      2
+
+     mn+1 = n2(n + 3) - 2n(n + 1) +      n  -  n-2    n-i       mi.
+                                         2     i=0     2
+
+     The crucial part of the proof is the following inequality
+
+(8)          mn+1  n2(n + 3) - 2n(n + 1)
+
+to be proven later. Assuming (8) it is easy to conclude the proof of Propo-
+sition 1. Indeed, combining (7) and (8) with the statement of Lemma 1 we
+immediately obtain that m0 = 1, and m1 = m2 = . . . = mn-1 = 0. There-
+fore, for each u  N (v) there exists a unique vertex wu  N (v) such that
+A(u) = B(wu). Define  by (u) = wu, u  N (v). Then  is a bijection,
+because ((u)) = u. Finally, since for each pair u, w  N (v)
+
+     |A(u)  A(w)| = |B(u)  B(w)| = |A((u))  A((w))|,
+
+and
+             |A(u)  B(w)| = |B(u)  A(w)| = |A((u))  B((w))|,
+
+we see that  is an automorphism by virtue of (5), proving Proposition 1.
+    Now, we are ready to prove (8).
+    Denote by C(u) the set {w  N (v)  N (u) : |A(u)  A(w)| = 1}, and
+
+by D(u) the set {w  N (v)  N (u) : |A(u)  A(w)| = n + 1}. We have
+|C(u)| = |B(u)| = n(n + 1), and also |D(u)| = mn+1. Thus, to prove (8) it
+is sufficient to show that vectors {xi : i  B(u)  C(u)  D(u)} are linearly
+independent (recall that g = n2(n + 3)).
+
+    First, note that there are no edges between B(u)C(u) and D(u), between
+v and C(u), and between u and B(u). Then, v is connected to each vertex
+in B(u), and u is connected to each vertex in C(u). Also, in the subgraph
+induced on B(u)  C(u) every vertex has a degree 1. Suppose that there is
+a nontrivial linear relation
+
+(9)               ixi +          ixi +         ixi = 0.
+
+       iB(u)             iC (u)         iD(u)
+
+                                 8
+For i  B(u), denote by (i)  V its unique neighbor in C(u). Put
+
+SB = iB(u) i, SC = iC(u) i, and SD = iD(u) i. Now, taking inner
+
+products of both sides in (9) with xv and with xu, we get
+
+                       
+
+(10)                   pSB + qSC + qSD = 0,
+
+                       qSB + pSC + qSD = 0.
+
+    Similarly, taking inner products of both sides in (9) with xi and with x(i)
+for each i  B(u), we obtain
+
+      
+
+(11)  (1 - q)i + (p - q)(i) + qSB + qSC + qSD = 0,
+
+      (p - q)i + (1 - q)(i) + qSB + qSC + qSD = 0.
+
+Subtracting from the first equation in (10) the second we get that SB = SC.
+Similarly, (11) yields i = (i), i  B(u). Now, summing up the first
+equation of (11) over all i  B(u) we obtain
+
+        (1 + p + 2(n2 + n - 1)q)SB + n(n + 1)qSD = 0.
+
+Combining this equation with (10) we get SB = SC = SD = 0. Thus, (11)
+together with inequality 1 + p - 2q > 0, n  2, implies that i = (i) = 0
+for all i  B(u). Therefore, we are left with the relation
+
+                                ixi = 0,
+
+                         iD(u)
+
+where iD(u) i = 0. Let i+ = max(i, 0), and i- = - min(i, 0). Then we
+have
+
+                              i+xi =           i-xi.
+
+                       iD(u)            iD(u)
+
+Normalizing i in such a way that iD(u) i+ = iD(u) i- = 1 we obtain
+the following bound
+
+(12)         i+xi 2 =         i+xi,         i-xi =             i+j- xi, xj
+
+      iD(u)            iD(u)         iD(u)            i,jD(u)
+
+             =                      i+j- xi, xj  q                 i+j- = q,
+
+                       i,jD(u),i=j                    i,jD(u),i=j
+
+                                     9
+where we used the fact that i+i- = 0 for i  D(u), and xi, xj  q for i = j.
+We will now use (12) to show that the quadratic form of three variables
+
+          Q(a, b, c) = a(xu + xv) + b                        xi + c         i+xi 2
+
+                                                iB (u)C (u)          iD(u)
+
+attains a negative value for some a, b, c  R, thus contradicting our assump-
+tion (9). Let (aij) be the symmetric 3 × 3 matrix associated to the quadratic
+form Q. Its entries are:
+
+a11 = xu + xv 2 = 2 + 2q,
+
+a12 = (|B(u)|p + |C(u)|q) + (|B(u)|q + |C(u)|p) = 2n(n + 1)(p + q),
+
+a13 = 2q         i+ = 2q,
+
+          iD(u)
+
+a22 = |B(u)  C(u)|(1 + p + 2(n2 + n - 1)q) = 2n(n + 1)(1 + p + 2(n2 + n - 1)q),
+
+a23 = |B(u)  C(u)|             i+q = 2n(n + 1)q,
+
+                    iD(u)
+
+a33 =         i+xi 2  q.
+
+       iD(u)
+
+We may assume that a33 = q, since Q(a, b, c) can only increase. The deter-
+minant of the resulting matrix is
+
+                 det(aij )  =  - 8(n  +  1)(n4  + 6n3 + 7n2  -  6n   +  1) ,
+                                                n3(n + 3)3
+
+which is negative for n  1. Thus, Q attains a negative value. Therefore
+vectors {xi : i  B(u)  C(u)  D(u)} are linearly independent, proving (8)
+and hence Proposition 1.
+
+    For each v  V , denote by v the automorphism constructed for v = v.
+It follows from the definition that each v is an involution. Moreover, for
+each three vertices u, v, and w forming a triangle, u(v) = w. Since  is a
+connected graph this immediately implies that Aut() is vertex transitive.
+
+                                         10
+4 Structure of automorphisms
+
+We now proceed to study the global structure of strongly regular graphs with
+
+parameters
+
+            ((n2 + 3n - 1)2, n2(n + 3), 1, n(n + 1))
+
+by using the automorphisms we have constructed in Proposition 1. In this
+section, we will prove the following
+
+Proposition 2. The set of vertices V can be given a vector space structure
+over F3 such that v(u) = -(u + v) for all u, v  V , in particular, |V | = 3m
+for some m  N.
+
+First, we establish some properties of v.
+
+Lemma 2. Involutions {u : u  V } satisfy the following:
+
+(i) u(v) = v(u) for all u, v  V ;
+
+(ii) if g is any automorphism of , then gu = g(u)g;
+
+(iii) uvu = u(v) for all u, v  V ;
+(iv) the automorphism uv has no fixed points, and (uv)3 = e for all
+
+      u=v V;
+
+(v) if u and v are adjacent, then for all x  V the vertices x and uv(x)
+     are also adjacent.
+
+Proof. If u and v are adjacent, then they have both vertices u(v) and v(u)
+as common neighbors. Thus the condition  = 1 implies that u(v) = v(u).
+If u and v are nonadjacent, then u(v) is a unique vertex w, such that w is
+nonadjacent to both u and v, and N(u)  N(v)  N(w) = . Hence, in this
+case we also have u(v) = v(u). This proves (i).
+
+                                   11
+    From (i) we see that triples {u, v, w} with w = u(v) are defined sym-
+metrically in u, v, w, that is the following identities
+
+        w = u(v) = v(u), v = u(w) = w(u), u = w(v) = v(w)
+
+hold. Therefore, g must preserve the set of such triples. This means that
+g(u)(g(v)) = g(w) = g(u(v)), which proves (ii).
+
+    Part (iii) follows from (ii) by letting g = v.
+    From (iii) we have uvu = u(v) = v(u) = vuv, hence (uv)3 = e.
+If u(v(x)) = x, then u(x) = v(x), and therefore x(u) = x(v), which
+contradicts u = v. This proves (iv).
+    Finally, since x is a graph automorphism for each x  V , then for an ad-
+jacent pair of vertices u and v the vertices x(u) and x(v) are also adjacent.
+Similarly, the vertices u(x(u)) = x and u(x(v)) = uv(x) are adjacent
+as well. This proves (v).
+
+    In the sequel, we will use the notation u  v for u(v). It is convenient,
+since for any automorphism g we have g(u  v) = g(u)  g(v). The crucial
+part in the proof of Proposition 2 is the following lemma.
+
+Lemma 3. For all u, v, w  V , we have (vwu)2 = e.
+
+Proof. We may assume that u, v, w are different vertices, as other cases are
+covered by Lemma 2.
+
+    Denote g1 = uv, g2 = uww(uv), and g3 = wu(vw). Since u = v
+then u  w = w  (u  v), and w = u  (v  w). Hence, by Lemma 2 (iv),
+the automorphisms g1, g2, and g3 are of order 3, and have no fixed points.
+Moreover, we claim that g1g2g3 = e. Indeed, we have
+
+                                          g1 = uv,
+             g2 = uww(uv) = w(uwwu)vuw = wvuw,
+
+                           g3 = wu(vw) = wuwvwu,
+
+                                               12
+where we used xy = x(y) = xyx repeatedly. Therefore,
+
+                     g1g2g3 = uvwv(uwwu)wvwu =
+                    uvwvwvwu = u(vw)3u = u2 = e.
+
+    Let us first suppose that u and v are adjacent. Then, by Lemma 2 (v),
+the vertices u  w and w  (u  v) are also adjacent. Similarly, w and u  (v  w)
+are adjacent. Using again Lemma 2 (v), we see that {x, gi(x), gi-1(x)} is a
+triangle for any x  V and i  {1, 2, 3}. From g1g2g3 = e we find that
+g3(x) = g2-1(g1-1(x)), therefore g1-1(x) and g3(x) are adjacent. Hence x and
+g1-1(x) are also adjacent, and have two common neighbors g1(x) and g3(x).
+Since  = 1 then g1(x) = g3(x). The choice of x was arbitrary, therefore
+g1 = g3. Thus we obtain
+
+                         g1 = g3  uv = wuwvwu 
+                       v(uw)2vwu = e  (vwu)2 = e,
+
+as claimed.
+    Now, suppose that u and v are nonadjacent. Then there exists t  V
+
+adjacent to both u and v. By the previous case, we have
+
+                                       (twu)2 = e,
+                                       (vwt)2 = e,
+                                      tvut = uv,
+
+where the last equation is another form of (tvu)2 = e. Multiplying the
+first two equations together, we get
+
+                                e = (vwt)2(twu)2 =
+                            vwtv(wttw)utwu =
+
+                                  vw(tvut)wu =
+                              vwuvwu = (vwu)2.
+
+Lemma 3 is proved.
+
+                                               13
+Proof of Proposition 2. Now we can introduce a vector space structure on
+V . Take some vertex v0  V and define it to be the zero vector. Denote the
+multiplication of a vector v  V by scalars from F3 as follows
+
+                     1v = v, 0v = v0, and (-1)v = v0(v).
+
+Finally, for each u, v  V define vector addition by
+
+                                     u + v = v0(u  v).
+
+We only need to check that these operations indeed define a vector space over
+F3. First, let us show the associativity of the vector addition. For arbitrary
+u, v, w  V , we have
+
+     u + (v + w) = (u + v) + w  v0(u  (v + w)) = v0((u + v)  w) 
+          u  (v + w) = (u + v)  w  uv0 (v  w) = wv0 (v  u) 
+                  uv0 w(v) = wv0u(v)  (uv0w)2(v) = v,
+
+which is true by Lemma 3. The rest of axioms are easily deduced from
+Lemma 2. Namely, for each u, v  V we have
+
+                       u + v = v0(u  v) = v0(v  u) = v + u,
+
+             v + v0 = v0 v0(v) = v, (-1)((-1)v) = v0 v0(v) = v,
+v+v = v0 v(v) = v0 v = (-1)v, v+(-1)v = v0 vv0 (v) = vv0 v(v) = v0,
+and
+
+    -(u + v) = v0v0 (u  v) = u(v) = v0 (u) + v0(v) = (-1)u + (-1)v.
+
+Proposition 2 is proved.
+    As a corollary, we see that each strongly regular graph in the family must
+
+have 3m vertices, m  N. For example, there is no strongly regular graph
+with parameters (289, 54, 1, 12).
+
+                                               14
+5 Proof of main results
+
+Now we are ready to prove Theorem 1.
+
+Proof of Theorem 1. By Propositions 1 and 2 it remains to show that the
+diophantine equation n2+3n-1 = 3m has only the following integer solutions
+(n, m) with n > 0:
+
+                                  (1, 1), (2, 2), (4, 3).
+
+Substituting u = 2n + 3 we obtain an equivalent equation
+
+                                      u2 - 13 = 4 · 3m.
+
+By [9, Theorem B], this equation can hold only for m = 1, 2 or 3.
+
+With some more work we can prove that there exists a unique strongly regular
+graph with parameters (729, 112, 1, 20), namely the Games graph.
+
+Proof of Theorem 2. Let  = (V, E) be a strongly regular graph with param-
+eters (729, 112, 1, 20). By Proposition 2 we may assume that V = F36, and
+for any x  V the map x : t  -(t + x) is a graph automorphism. Since
+0x(t) = t + x, we have that all shifts t  x + t are also automorphisms.
+Therefore x and y are adjacent if and only if 0 and x - y are adjacent. The
+last implies that 0 and x are adjacent if and only if 0 and -x are adjacent.
+Hence, we can form a set H  P G(5, F3) by saying [x]  H if and only if 0
+and x are adjacent ([x] is the equivalence class of x  F36 \ {0} in P G(5, F3)).
+The set H consists of 56 points. Now, we claim that H is a cap, i.e., any
+line in P G(5, F3) meets H in at most two points. Indeed, it is sufficient to
+consider three collinear points [x], [y], [x + y]  H. Then 0 is connected to x,
+y, and x + y. Similarly, x + y is connected to x, y, and 0. This contradicts
+the fact that  = 1, as 0 and x + y are connected and have x and y as
+common neighbors. This proves that H is a cap. It was shown by Hill [12]
+that there exists a unique cap with 56 points in P G(5, F3), and therefore H
+
+                                               15
+is isomorphic to it. Hence  is isomorphic to the Games graph, as can be
+seen from the construction given in [13, p.114-115].
+
+References
+
+ [1] A. E. Brouwer, Parameters of strongly regular graphs, tables published
+      electronically at http://www.win.tue.nl/aeb/graphs/srg/srgtab.html.
+
+ [2] R. Griess, Twelve sporadic groups, Springer Monographs in Mathemat-
+      ics, 1998.
+
+ [3] H. Cohn, N. Elkies, A. Kumar, and A. Schu¨rmann, Point configurations
+      that are asymmetric yet balanced, Proc. Amer. Math. Soc. 138 (2010)
+      2863-2872.
+
+ [4] A. J. Hoffman, R. R. Singleton, On Moore graphs with diameters 2 and
+      3, IBM J. Res. Dev. 4 (1960) 497504.
+
+ [5] P. Cameron, Permutation Groups, Cambridge University Press, 1999.
+ [6] M. Macaj, J. Sir´an, Search for properties of the missing Moore graph,
+
+      Linear Algebra and Its Applications, 432 (2010) 2381-2398.
+ [7] A. A. Makhnev, V. V. Nosov, On automorphisms of strongly regular
+
+      graphs with  = 0 and µ = 3, St. Petersburg Math. J., 21 (2010) 779-
+      790.
+ [8] A.E. Brouwer, W.H. Haemers, Structure and uniqueness of the
+      (81,20,1,6) strongly regular graph, Discrete Math. 106/107 (1992) 77-
+      82.
+
+                                               16
+ [9] A. Bremner, R. Calderbank, P. Hanlon, P. Morton, and J. Wolfskill,
+      Two-weight ternary codes and the equation y2 = 4.3a + 13, J. Number
+      Theory 16 (1983) 212-234.
+
+[10] R. Calderbank , W. M. Kantor, The geometry of two-weight codes, Bul-
+      letin of the London Mathematical Society, 18 (1986) 97-122.
+
+[11] P. Cameron, Strongly regular graphs, in Selected Topics in Algebraic
+      Graph Theory (eds. L.W. Beineke and R.J. Wilson), Cambridge Univ.
+      Press, 2004.
+
+[12] R. Hill, Caps and codes, Discrete Math. 22 (1978) 111-137.
+[13] A.E. Brouwer, J.H. van Lint, Strongly regular graphs and partial geome-
+
+      tries, Enumeration and Design - Proc. Silver Jubilee Conf. on Combi-
+      natorics, Waterloo, 1982, pp. 85-122.
+
+Centre de Recerca Matema`tica, Campus de Bellaterra, 08193 Bellaterra (Barcelona), Spain
+and
+Department of Mathematical Analysis, National Taras Shevchenko University, str. Volodymyrska,
+64, Kyiv, 01033, Ukraine
+Email address: andriybond@gmail.com
+
+Department of Mathematical Analysis, National Taras Shevchenko University, str. Volodymyrska,
+64, Kyiv, 01033, Ukraine
+Email address: danradchenko@gmail.com
+
+                                               17
+

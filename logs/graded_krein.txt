@@ -1,0 +1,6 @@
+Paley(9), t=-1         n_h={0: 1, 1: 4, 2: 4} : 35 triplets, 0 negatifs []
+BvLS, t=-1             n_h={0: 1, 1: 22, 2: 220} : 35 triplets, 0 negatifs []
+Conway-99, C2          n_h={0: 1, 1: 14, 2: 84} : 35 triplets, 0 negatifs []
+Conway-99, a1=0        n_h={0: 1, 1: 0, 2: 98} : 35 triplets, 0 negatifs []
+Conway-99, a1=28       n_h={0: 1, 1: 28, 2: 70} : 35 triplets, 0 negatifs []
+Conway-99, a1=42       n_h={0: 1, 1: 42, 2: 56} : 35 triplets, 0 negatifs []

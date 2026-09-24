@@ -1,0 +1,5 @@
+# Reconstruit depuis `docker history --no-trunc c99py` : image Python officielle 3.12.14 + outils du modele.
+FROM python:3.12.14-slim
+RUN apt-get update && apt-get install -y --no-install-recommends build-essential && rm -rf /var/lib/apt/lists/*
+RUN pip install --no-cache-dir "python-sat==1.9.dev15" "numpy==2.5.3" "sympy==1.14.0" "ortools==9.15.6755"
+CMD ["python3"]

@@ -1,0 +1,12 @@
+sommets  theta= 14 : E[x,x]=1/99  rang=1  tr=1
+sommets  theta=  3 : E[x,x]=6/11  rang=0  tr=0
+sommets  theta= -4 : E[x,x]=4/9  rang=0  tr=0
+droites  E_odd : diag=62/77 horsdiag=-1/231  rang_F2=6  tr=tr(t|V3)+tr(t|ker N)=0+(7-1)=6
+aretes   E'=B^T E3 B/17 : diag=6/77 horsdiag=-8/1309  (mod 2 : 0, 0)  rang=0  tr=tr(t|V3)=0
+carres   E=Q^T E-4 Q/39 : diag=4/189 (mod 2 : 0)
+         e=0 aretes entre deux carres D : 16/2457 (mod 2 : 0)
+         e=2 aretes entre deux carres D : -2/2457 (mod 2 : 0)
+         e=4 aretes entre deux carres D : -20/2457 (mod 2 : 0)
+         e=6 aretes entre deux carres D : -38/2457 (mod 2 : 0)
+         e=8 aretes entre deux carres D : -8/351 (mod 2 : 0)
+         => E[F] = 0 mod 2 : rang 0 = tr(t|V-4) = 0

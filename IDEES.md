@@ -140,3 +140,46 @@ Statuts : OUVERTE / EN TEST / SURVIT / RÉFUTÉE / ABANDONNÉE / REDONDANTE.
   rendent le mécanisme vide pour une involution. Sous-produit : rang₇(A − 3I) impair, D₇(N₃) de type moins (`notes/09_…`).
 - **Décision** : ABANDONNÉE pour C2. Pistes dérivées (basses) : classe du réseau √77·N₃* (séries thêta de niveau 77) ; sous-espaces
   isotropes forcés dans D₇(N₃) (le type moins borne leur dimension par ρ/2 − 1 ; les grilles tombent dans le radical).
+
+## I-28 t COMME RÉFLEXION PONCTUELLE — RENORMALISATION SUR LES GRILLES (salve reset)
+- **Statut** : SURVIT. Théorème R1 DÉRIVÉ ; conjecture R2 vraie dans BvLS (990/990), ouverte en C2.
+- **Origine** : reset demandé par l'utilisateur ; systèmes triples de Hall (les réflexions engendrent la structure affine).
+- **Langage** : réflexions ponctuelles, codes parfaits, involutions induites sur des sous-structures.
+- **Différence** : t n'est plus une symétrie par laquelle on quotiente, mais un **générateur de structure affine locale**. Les grilles ne
+  sont plus comptées : on les regarde se transformer.
+- **Upside** : si R2 est vraie et se propage (grilles hors de x ⇒ grilles par x ⇒ …), la structure de Hamming serait forcée de proche en
+  proche, jusqu'à une contradiction avec 99 ≠ 3^k.
+- **Résultats** :
+  - R1 : une grille hors de x est disjointe de son image, avec un couplage parfait π et une involution φ à point fixe unique en
+    w ∈ N(x) ; les étiquettes sont partitionnées ; φ fixe le type D.
+  - Dans le cas des droites sœurs : **R2 ⟺ {1,j}, {1,k} ∈ Σ** (la propagation de grille, question E7 du labo).
+  - « Translation locale partout » (ρᵢ = t∘ι_{eᵢ}) implique allsib : impossible.
+- **Décision** : poursuivre. Il faut une preuve de R2, ou un test long quand la machine est libre.
+
+## I-29 COMPLEXE X_Γ (triangles + carrés μ) LOCALEMENT ISOMORPHE À CELUI DE H(7,3)
+- **Statut** : OUVERTE. Faits DÉRIVÉS : liens identiques (K₁₄ bicolore) ; points fixes de t = étoile de x + 21 centres de carrés D ;
+  Lefschetz ; χ(X/t) = 869.
+- **Idée** : non-existence ⟺ la courbure 2n₃ = Σ(4 − c) ne se répartit pas de façon cohérente. Un relevé en H(7,3) est impossible, car
+  99 ne divise pas 3⁷.
+- **Test** : H₁(X; Z) sur Paley(9) et BvLS (attendu : 0 et Z₃⁶).
+
+## I-30 PROGRAMME DE HALL : C2 = « Hall en un seul point » ; lemme de propagation (salve reset, note 14)
+- **Statut** : OUVERTE, et mieux posée : la cible est identifiée, pas atteinte.
+- **Origine** : Hall 1960 (systèmes triples de Hall) et Bondarenko–Radchenko 2013 (JCTB 103), trouvés par la recherche en profondeur.
+- **Objet** : les réflexions ponctuelles σ_v, définies en tout sommet (diamètre 2, λ = 1, μ = 2). C2 ⟺ σ_x ∈ Aut. Au plus une σ_v est
+  automorphe (|Aut| ≤ 3).
+- **Lemme manquant (P)** : σ_x ∈ Aut ⇒ σ_w ∈ Aut pour un w ≠ x. Équivalent à la mort de C2.
+  - Chez BR, l'étape correspondante marche parce que N(v) est une base propre (g = k).
+  - Ici le 1-voisinage est de rang 14 sur 44 ; le résidu de dimension 30 est l'inconnue (la matrice de l'étage S sous un autre angle).
+- **Défauts de Hall mesurés en x (DÉRIVÉ)** :
+  - (H1) σ_v(x) = σ_x(v) ⟺ v est un coin sib : 4n_sib ≤ 28 racines sur 84 ;
+  - (H2) au plus 28 orbites de droites D-fermantes sur 42 ;
+  - (H3) multiplicité des milieux : moyenne 1 + J/1386 sur les paires adjacentes, 1 − J/8316 sur les autres ;
+  - (H4) J_x = #{v = p+q : M_p(q) = M_q(p)} ;
+  - (H5) R2 = translation locale sur les grilles.
+- **Lecture** : |Σ| ≤ 7 (certifié) dit « loin de Hall autour de x ». Une preuve doit rendre incompatibles « Hall en x » et « loin de
+  Hall autour de x ».
+- **Tests** :
+  - (P_grille) = R2, budget long ;
+  - (P_J) : la configuration à 7 points, forcée ou interdite ?
+  - (P_rés) : SDP du résidu de dimension 30 avec la symétrie t.

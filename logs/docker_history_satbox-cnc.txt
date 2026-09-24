@@ -1,0 +1,10 @@
+RUN /bin/sh -c git clone --depth 1 https://github.com/marijnheule/CnC /opt/CnC && cd /opt/CnC/march_cu && make CFLAGS="-O3 -fno-strict-aliasing -fcommon -DNDEBUG" && cp march_cu /usr/local/bin/ # buildkit
+WORKDIR /work
+RUN /bin/sh -c git clone --depth 1 https://github.com/arminbiere/cadical /opt/cadical && cd /opt/cadical && ./configure && make -j4 && cp build/cadical /usr/local/bin/ # buildkit
+RUN /bin/sh -c git clone --depth 1 https://github.com/arminbiere/kissat /opt/kissat && cd /opt/kissat && ./configure && make -j4 && cp build/kissat /usr/local/bin/ # buildkit
+RUN /bin/sh -c apt-get update && apt-get install -y --no-install-recommends build-essential git ca-certificates && rm -rf /var/lib/apt/lists/* # buildkit
+/bin/sh -c #(nop)  CMD ["/bin/bash"]
+/bin/sh -c #(nop) ADD file:43d479b270bbaf47965cfc86b37f4c517bda83ddefda6f708f98c3b2b7d15396 in / 
+/bin/sh -c #(nop)  LABEL org.opencontainers.image.version=24.04
+/bin/sh -c #(nop)  ARG LAUNCHPAD_BUILD_ARCH
+/bin/sh -c #(nop)  ARG RELEASE

@@ -53,3 +53,23 @@ rationnels, donc le recollement équivaut à la formule de Milgram du réseau to
 2. Preuve humaine : noyau UNSAT minimisé (339 → ~177 contraintes pour K2+K2+P3, en cours) ; connexion D₄ (`notes/05_ALLSIB_STRUCTURE.md`).
 3. Découper le cas sib par le type exact de Σ (≤ 57 sous-cas) avec kissat + DRAT.
 4. Chercher un analogue de G1 pour les carrés D de type one/dis (le vrai cœur du problème : cas one et dis).
+
+## Salve « reset » du 24/09 : t comme réflexion ponctuelle (notes 11 à 14)
+- **Mouvement** : t n'est plus une symétrie par laquelle on quotiente, c'est la réflexion ponctuelle σ_x d'une famille (σ_v) définie en
+  tout sommet. C2 = « Hall en un seul point ».
+- **Mécanisme externe exact** : Hall 1960 et Bondarenko–Radchenko 2013 (réflexions automorphes ⇒ affine sur F₃ ⇒ 3^m). L'étape de
+  propagation échoue pour une raison de dimension : 14 sur 44, soit un résidu de dimension 30. Le lemme manquant (P) est formulé
+  (note 14, §3).
+- **DÉRIVÉ** :
+  - théorème R1 sur les grilles hors de x (note 11) ;
+  - « translation partout » ⇒ allsib, donc impossible ;
+  - défauts de Hall en x, H1 à H5 : σ_v(x) = σ_x(v) seulement sur les 4n_sib ≤ 28 coins sib ; au plus 28 droites D-fermantes sur 42 ;
+    multiplicité des milieux ;
+  - Lefschetz sur X_Γ ;
+  - aucune coclique de Delsarte t-invariante.
+- **Réfuté ou vide** :
+  - Krein gradué à deux points (N12) ;
+  - existence de grille via les fréquences d'ordre 7 (N10) ;
+  - Ishida sur quatre modules (N14) ;
+  - Hamming local, Makhnev 1988, Cameron, intersections triples (N15).
+- **Ouvert** : conjecture R2 (vraie dans BvLS, où tout est sœur, donc indice faible) ; J_x ; SDP du résidu.

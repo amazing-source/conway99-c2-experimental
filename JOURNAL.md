@@ -121,3 +121,33 @@ Idées : `IDEES.md` (16 pistes, dont 10 hors vocabulaire Q/S/D/SAT).
   - C et D (étage S seul, kissat, graines 1 et 2) : UNKNOWN, 158,7 M et 153,8 M de conflits.
   Conclusion : couper le problème en étages ne rend aucun morceau facile. L'étage S seul, comme l'étage Q seul et le modèle complet
   (dépôt C2), résiste à ces budgets. Charge mesurée pendant la nuit : 52 % (compteur « % temps processeur », moyenne sur 30 s).
+
+### Phase 6 — reset intellectuel (24/09, sur demande de l'utilisateur)
+Consigne : ne plus imiter C3, aucune piste privilégiée (Δ compris), creuser en profondeur **un** mouvement conceptuel absent de
+l'historique, et ménager la machine (processeur et RAM limités : calculs mono-fil courts en priorité minimale).
+- **Mouvement choisi : t comme RÉFLEXION PONCTUELLE**, et ce qu'elle induit sur les structures parfaites (notes 11–13).
+  - **Théorème R1 (DÉRIVÉ, preuve écrite)** : une grille Λ ∌ x est disjointe de tΛ ; le couplage π entre elles est parfait ;
+    φ = t∘π est une involution de point fixe unique w ∈ N(x) ; les étiquettes sont partitionnées ; φ fixe le type D des racines.
+  - **Conjecture R2** (φ = réflexion ponctuelle) : vraie dans BvLS, 990/990 (`scripts/bvls_grid_phi.py`). En C2, test court
+    `grid_offx_phi.py SS phi` : TIMEOUT 300 s.
+  - Translations locales ρᵢ = t∘ι_{eᵢ} : « translation partout » implique allsib, donc impossible (DÉRIVÉ).
+  - X_Γ (triangles + carrés μ) est localement isomorphe au complexe de H(7,3). Points fixes de t : étoile de x + 21 centres de carrés D.
+    Lefschetz : tr(t|H₂) − tr(t|H₁) = 21 ; χ(X/t) = 869.
+  - Aucune 22-coclique de Delsarte n'est t-invariante (DÉRIVÉ). Les paires de grilles sont des ensembles intrigants t-invariants de taille 18.
+- 24 théorèmes rêvés (note 12). Réfutés proprement : Krein gradué à deux points (`graded_krein.py`, tous ≥ 0 même pour des involutions
+  hypothétiques) ; « existence de grille » via les fréquences d'ordre 7 (N10).
+- Recherche ciblée (deux agents, en profondeur) : systèmes triples de Hall et caractérisations locales de Hamming ; Ishida et nombres
+  d'intersection triples.
+- Test « partition en 11 grilles » (`grid_spread.py`, ≈ 4 500 variables de couplage) : TIMEOUT 300 s (N13), pic à 1,9 Go de RAM.
+- **Recherche en profondeur des mécanismes externes (note 14)** :
+  - Hall 1960 et Bondarenko–Radchenko 2013 donnent exactement le mécanisme du mouvement « réflexion » : réflexions automorphes ⇒
+    translations ⇒ structure affine sur F₃ ⇒ 3^m sommets. C2 = « Hall en un seul point » (au plus une réflexion est automorphe).
+  - L'étape de BR qui propage (N(v) base propre, g = k) échoue ici : le 1-voisinage est de rang 14 dans V₋₄ (dim 44), et le résidu
+    de dimension 30 porte toute l'inconnue. Lemme manquant formulé : (P) propagation, équivalent à la mort de C2.
+  - Défauts de Hall en x (DÉRIVÉ) :
+    - σ_v(x) = σ_x(v) seulement pour les 4n_sib ≤ 28 coins sib ;
+    - au plus 28 orbites de droites D-fermantes sur 42 ;
+    - multiplicité des milieux m(a,b), de moyenne 1 ± J/… ;
+    - J_x par la configuration à 7 points M_p(q) = M_q(p).
+  - Makhnev 1988 (réf. [7] de Reimbayev) : descente 99 → 33 sous n₃ = 0, régime opposé à C2. Hamming local, Cameron : inapplicables.
+  - Ishida étendu aux modules des droites, arêtes et carrés μ : identité vérifiée partout (6 = 6, 0 = 0, 0 = 0), mécanisme vide (N14).
