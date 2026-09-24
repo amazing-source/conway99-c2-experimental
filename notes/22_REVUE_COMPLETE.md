@@ -128,7 +128,27 @@ décisive (1 = minutes, 2 = heures, 3 = une journée, 4 = des jours, 5 = des sem
 
 ## 5. Programme proposé, dans l'ordre
 
-1. **q:parite** (P3, C3). Retrouver la 208ᵉ formule, contrôler la règle de somme Σz_i = C(99, 7) (C1 y a trouvé des erreurs), puis
+1. **q:parite — FAIT le 24/09 au soir (`scripts/order7_burnside.py`) : aucune contradiction, P → 1.**
+   - Source : famille affine indépendante des 208 fréquences d'ordre 7 (archive en lecture seule), qui concorde avec Reimbayev corrigé
+     de 4 coquilles (audit du dépôt principal). Contrôles : les 208 masques sont canoniques ; Σp = C(99,7) = 14 887 031 544 ; Σq = Σr = 0 ;
+     coefficients entiers.
+   - En C2 : n₃ ≡ n_one et z = z₁₁/4 ≡ n_one (mod 2), donc f_H ≡ p + (q + r)·n_one.
+   - 22 classes admettent une involution compatible avec C2. **4 sont entièrement déterminées par la carte** (types à 2 ou 3 droites par
+     x : 3465, 42, 420, 420 copies invariantes) : toutes cohérentes, ce sont des identités.
+   - **7 autres réduites à la main** à des identités connues, toutes cohérentes :
+     - K₃ + C₄ : 5n_sib + 4n_one + 3n_dis ;
+     - « prisme + x » : Σ_c d_c = 2n_sib + n_one ;
+     - les deux chaînes de triangles, via les paires de M_c et de τ_c : 42 − Σd_c ;
+     - la classe à racines pendantes : 378 + Σd_c ;
+     - triangle + 4 isolés : 2499 − 9n_sib − 10n_one − 11n_dis, via les lignes et (I) ;
+     - graphe vide : 4382 − 2n_sib − n_one, via #triangles(Γ₁) = 126 + 4n_sib + 2n_one.
+   - Les 11 restantes se ramènent à des statistiques de triangles signés, fixées par le spectre ; elles n'ont pas été détaillées.
+   - Pourquoi n_sib n'apparaît jamais avec un poids impair : une paire sœur {i, j} est non ordonnée ; un 7-ensemble t-invariant
+     (x + 3 orbites) la voit deux fois, par (i, j) et (j, i), ou bien elle se compense avec n_dis via n_sib + n_one + n_dis = 21.
+     **Une parité de |Σ| demanderait l'ordre 9** (la grille elle-même), hors de portée des formules connues.
+   - Sous-produit (DÉRIVÉ) : S ≡ 0 (mod 4) et z₁₁ ≡ 4n_one (mod 8).
+   - Programme initial, conservé pour mémoire : retrouver la 208ᵉ formule et contrôler Σz_i = C(99,7) (fait via la famille
+     indépendante), puis calculer la parité des copies t-invariantes. Retrouver la 208ᵉ formule, contrôler la règle de somme Σz_i = C(99, 7) (C1 y a trouvé des erreurs), puis
    calculer pour chaque motif d'ordre 7 la parité des copies t-invariantes (qui contiennent toutes x). But : une contrainte de parité
    sur n_sib = |Σ|, n_one, n_dis. Une parité de |Σ| éliminerait la moitié des 10 survivants.
 2. **Parité linéaire** (P4, C2–3). Encodage avec variables de signe Z et XOR de (I) et des orbites « − ». Validation obligatoire :

@@ -291,3 +291,8 @@ Plan relayé : relaxation SoS de degré 2 sur les arêtes libres, symétrisée, 
     - S ≡ 0 (mod 4) et z₁₁ ≡ 4n_one (mod 8), à partir de L18 de C1.
   - Diagnostic convergent : tout ce qui a marché est une **parité**, ce qui explique l'échec des solveurs CDCL. Programme : q:parite à
     l'ordre 7, parité linéaire (Gauss), cocycle à défauts.
+- **24/09 soir — q:parite (ordre 7), `scripts/order7_burnside.py`.**
+  - Burnside mod 2 sur les 208 classes d'ordre 7 (famille indépendante concordant avec Reimbayev corrigé).
+  - 4 classes déterminées par la carte et 7 réduites à la main : toutes cohérentes. **Aucune contradiction, aucune contrainte nouvelle.**
+  - n_sib n'apparaît qu'avec un poids pair à l'ordre 7 : une parité de |Σ| demanderait l'ordre 9.
+  - C1 (construction par RRR) a reçu nos faits utiles et a corrigé ses notes ; il n'élague avec aucun lemme UNSAT.
