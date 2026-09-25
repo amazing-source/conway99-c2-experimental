@@ -170,3 +170,52 @@ voisins lointains de z est donc imposé par les seules données locales. C'est u
 - arXiv 2608.11211 : bornes heuristiques, aucune structure de droites.
 
 Aucun de ces travaux ne traite le cas C2.
+
+## 10. Vérifications linéaires et spectrales supplémentaires : toutes cohérentes (CALCULÉ / DÉRIVÉ ; NÉGATIF définitif)
+
+Ces tests sont des identités : tout ce qui découle linéairement des relations srg et de t est automatiquement cohérent. Une
+contradiction ne peut venir que de l'intégralité fine (0/1) de la structure.
+- **Sous-matrice signée S[19]** (7 orbites-droites + 12 orbites de star(c)) : pour les 2 903 types, elle a les valeurs propres 3 et −4
+  avec multiplicité exactement 1. C'est ce qu'impose m₃ = 18 ; cela valide aussi mes conventions de signes.
+- **Traces tordues par t sur le graphe lointain F.** On a toujours m₃ = 18 et m₄ = 7 + #composantes. Les répartitions t-paires/impaires
+  valent d₃ = 0 et d₄ = #composantes fixes − 1, et la parité est automatiquement satisfaite.
+- **Tableau à trois entrées** N[a, b, c] = #{z : a ∈ z, b ∈ Φ(z), c ∈ σΦ(−z)}, entier ≥ 0, de marges 2C : faisable (0,2 s) pour les 4 types
+  A111111.
+- **Littérature** (Moore manquant, arXiv 2606.29183) : l'identité trace–rang d'Ishida, appliquée au graphe des arêtes et à celui
+  des non-arêtes de Γ, se réduit à Burnside mod 2.
+
+## 11. Contrainte des grilles sœurs vues depuis un bloc libre (DÉRIVÉ ; spécifique aux survivants)
+
+Si {d, e} ∈ Σ avec d, e ≠ c, la grille G_de est un code parfait (m = 7). Vu de ℓ_c, cela donne :
+- **(G1)** les 4 images Φ_c(±e_d ± e_e) partitionnent les 8 éléments de X_c hors des blocs d, e ;
+- aucun élément des blocs d, e n'apparaît dans ces images.
+
+C'est une contrainte **locale** absente du lemme de l'étoile libre pur, et elle ne vaut que dans un survivant ayant une paire sœur
+hors de c, donc tous sauf Σ = ∅.
+- **3K2** (15 24 67, bloc 3 libre) : les trois paires sœurs couplent les six blocs de X_3, et 12 racines lointaines ont leurs images
+  contraintes.
+- **2P3** (14 15 36 37, bloc 2 libre) : quatre grilles sont concernées.
+
+Tests CP-SAT à 200 s (A111111, τ#0 et τ#3, cinq placements des paires sœurs) : aucune réponse. Non consigné comme résultat.
+
+## 12. État des calculs de la nuit (honnête)
+
+Aucun des essais SAT/CP-SAT ci-dessous n'a conclu dans le temps imparti. Aucun n'est consigné comme résultat.
+
+| essai | détail |
+|---|---|
+| CNF avec équilibre + (iv) + (v), kissat + DRAT | 30 min pour (2,2,2) monolithique, puis 30 min sur le cube 00 (5 M conflits chacun) |
+| niveau Q non signé | 300 s par type, 4 types |
+| (G1) | 200 s par placement, 5 placements |
+
+Le problème κ seul et (ii) seul sont faciles (SAT). Tout couplage des deux via les étiquettes (niveau Q) est dur. C'est là qu'est
+le cœur.
+
+Définitifs cette nuit :
+- ansatz symétrique (2,2,2) : aucune solution équivariante pour les sous-groupes d'ordre ≥ 8, et pour 6 des sous-groupes d'ordre 6 ;
+- relaxations faisables : κ, κ + équilibre, niveau blocs, 3 entrées ;
+- tests spectraux cohérents.
+
+Outils prêts pour qui voudra relancer, avec plus de temps machine :
+- `make_freestar_sos_cnf.py`, CNF validés (formules vérifiées sur BvLS, test planté) ;
+- `make_fsos_cubes.py`, découpage sain par symétrie : 8 cubes pour (2,2,2).
