@@ -174,3 +174,17 @@ f_q = 8.
 - (1,1) à n = 3 : seul S1 avec au moins un β survit. n = 4 et n = 5 restent.
 - (1,0) : non traité.
 - H : il reste les squelettes à au plus 4 blocs α, plus le tout-β, qui est le cœur.
+
+## 8. Filtre machine des squelettes M1 (petit test, moins de 5 min ; `scripts/m1_skeletons.py`, `logs/m1_skeletons.log`)
+Le filtre n'applique que les lemmes démontrés : degrés, 28.1, sa conséquence aux C-blocs (j ∈ In(k)), 28.4 et 28.5. Il est
+conservateur : la structure interne de A n'est pas énumérée, donc il ne peut que sous-tuer. T est fixé à (0, …, n−1), et les
+orientations sont étiquetées.
+- **Contrôle : zéro survivant en (0,1), (0,2) et (1,2)**, conforme aux preuves à la main du §3.
+- Survivants :
+  - (1,0) : n = 3 → 48, n = 4 → 96, n = 5 → 224, n = 6 → 176 ;
+  - (1,1) : n = 3 → 72, n = 4 → 168, n = 5 → 80 ;
+  - (0,0,7) = H : 60 (toutes les orientations, par le tout-β).
+- **Lecture.** Les survivants tiennent tous grâce à des blocs β de T, où G est connexe. Les lemmes locaux sont épuisés sur les
+  mélanges.
+- **Outil suivant : le budget exact paire par paire** (« structures », 25/09). Il vaut en Σ = ∅ avec des carrés « un bloc ». Un
+  partenaire D a φ = 2 exactement (F1), donc chaque paire P′ est doublée par exactement 2 orbites.
