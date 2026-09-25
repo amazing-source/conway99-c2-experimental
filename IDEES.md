@@ -252,3 +252,12 @@ Statuts : OUVERTE / EN TEST / SURVIT / RÉFUTÉE / ABANDONNÉE / REDONDANTE.
   partiellement assigné en Q, tient à jour l'élimination de Gauss des équations de L dont le support est déjà fixé, et coupe dès
   qu'elles sont incohérentes. C'est la généralisation mécanique de ce qui a trouvé le lemme des étoiles : réfuter chaque χ par parité,
   puis sommer.
+
+## I-36 ÉQUILIBRE × CONFIGURATIONS (note 25) — le spectral local qui a fermé une famille
+- **Statut** : a MARCHÉ sur les configurations ancrées (Théorème 25.3, vérifié par « structures »).
+- **Mécanisme** : les composantes de ⟨σ, μ_k, τ_k⟩ en un bloc k sont des réunions de blocs (graphe G_k). Tout lointain a exactement
+  |C|/6 voisins dans chacune. Un carré « un bloc » impose 3 voisins forcés dans la composante de son pivot, vu depuis le
+  troisième bloc.
+- **Suite** :
+  - contrôler G_k hors ancrage, en combinant les cycles libres de R_k (19.1) et le recollement par σ des paires mixtes ;
+  - trouver un analogue pour les carrés disjoints (pas de troisième bloc ; ce sont 4 blocs).

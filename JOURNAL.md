@@ -313,3 +313,14 @@ Plan relayé : relaxation SoS de degré 2 sur les arêtes libres, symétrisée, 
 - Note 24 (`notes/24_P2_ARF_LOCAL.md`) : le niveau p = 2 est vide, invariant d'Arf compris. Elle confirme N09 et les notes 09–10.
   Apport : une formule locale de l'Arf, contrôlée dans 50 cas sur 50 (Paley(q²), graphes de réseaux L_m(n), BvLS), qui redonne
   σ_S ≡ 1 (mod 8). Voir aussi N24.
+
+## 2026-09-25 (soir) : lemme de la queue (note 25)
+- Croisement de l'équilibre (note 23 §8) avec les configurations ancrées du carnet principal (§18–§22). **Lemme 25.1** : si X ⊂ ij
+  est appariée par i à ik, la composante de i dans G_k contient au moins 3 + [j dans la même composante] blocs. **Corollaire 25.2**
+  (queue) : en configuration ancrée, la queue de l'arc entre deux bras a un degré entrant ≤ 2, et la tête ≤ 3.
+- **Théorème 25.3 : aucune configuration ancrée n'existe.** 3⁷ (Théorème P en deux lignes), (6,0,3⁵) et (6,3,3,3,2,2,2) sont
+  exclus ; les deux derniers étaient ouverts dans le carnet principal.
+- **VÉRIFIÉ par « structures »** : relecture adverse étape par étape, plus un contrôle numérique de l'identité d'équilibre générale
+  sur BvLS, avec contrôle négatif. Relecture interne indépendante en cours.
+- Reste, en Σ = ∅ : chaînes tordues de longueur ≥ 4, mélanges et carrés disjoints. 25.1 s'y applique, mais les composantes y sont
+  plus grandes.
