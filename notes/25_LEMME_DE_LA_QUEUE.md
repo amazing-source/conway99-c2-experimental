@@ -2,8 +2,11 @@
 
 Session principale C2, régime sans solveur.
 
-**Statut : DÉRIVÉ, VÉRIFIÉ par la session « structures »** (relecture adverse du 25/09, étape par étape, avec un contrôle
-numérique de l'identité d'équilibre générale sur BvLS). Une relecture interne indépendante est en cours.
+**Statut : DÉRIVÉ, VÉRIFIÉ deux fois.**
+- Par la session « structures » : relecture adverse du 25/09, étape par étape, avec un contrôle numérique de l'identité
+  d'équilibre générale sur BvLS.
+- Par une relecture interne indépendante (agent sans contexte) : « tient, rien de cassé ». Deux corrections de rédaction ont été
+  intégrées : σ parmi les générateurs, et « fourches » remplacé par « paires tordues ».
 - Aucun calcul n'est utilisé.
 - Aucun contrôle positif possible : l'équilibre est propre à k = 14, et BvLS n'a que des carrés sœurs.
 
@@ -30,8 +33,9 @@ Le graphe induit sur N(ℓ_k) est 3-régulier. Ses arêtes sont :
 - (e_k + b) – (e_k + μb), (e_k + b) – (−e_k − τb) et (−e_k + b) – (−e_k − μ(−b)).
 
 Les trois sommets d'une même étiquette b sont dans la même composante, car l'intérieur b est adjacent aux deux racines
-d'étiquette b. Les composantes correspondent donc aux parties S ⊂ X_k stables par μ_k, στ_k et σμ_kσ (σ = −1), avec
-|C_S| = 3|S|.
+d'étiquette b. De plus, les intérieurs b et −b sont adjacents (droite par x₀). Les composantes correspondent donc aux orbites de
+**⟨σ, μ_k, τ_k⟩** sur X_k (σ = −1), avec |C_S| = 3|S|. Ce sont des réunions de blocs, qui forment un graphe G_k sur les 6 autres
+blocs. (Correction : une première version oubliait σ.)
 
 **Lemme d'équilibre (note 23 §8, revérifié ici ligne à ligne).** Soit C une réunion de composantes. Toute racine lointaine z (qui
 évite le bloc k ; il y en a 60) a exactement |C|/6 voisins dans C.
@@ -116,11 +120,12 @@ sont fermés.
 
 ## 4. Ce qui reste, et la suite
 - Hors configurations ancrées, en Σ = ∅, restent :
-  - les **fourches** : une paire dont les deux orbites sont appariées par des blocs différents ;
-  - les **chaînes tordues** ;
-  - les **carrés disjoints** (type dis).
+  - les **paires tordues**, dont les deux orbites sont appariées par des blocs différents (§14 du carnet), et les chaînes tordues
+    de longueur ≥ 4. Les fourches du carnet (§16 : les deux orbites de ij appariées par i à ik et à il) sont ancrées, donc
+    désormais fermées ;
+  - les **carrés disjoints** (type dis), y compris dans les paires mixtes.
 - 25.1 s'applique tel quel à toute orbite appariée « un bloc » : la composante de ±e_i au troisième bloc doit être grande (≥ 6
-  étiquettes). Cela contraint les composantes de ⟨μ_k, στ_k, σμ_kσ⟩, donc les fourches.
+  étiquettes). Cela contraint les composantes de ⟨σ, μ_k, τ_k⟩, donc les paires tordues.
 - Pour les carrés dis, il faut un analogue. Le carré n'a pas de troisième bloc, mais ses 4 sommets rencontrent 4 blocs.
 
 ## 5. Précisions demandées par la relecture de « structures »
@@ -140,3 +145,12 @@ sont fermés.
   - À k = 14 seulement, la variance est nulle.
 - **Portée.** Toutes les configurations ancrées. Pas les chaînes tordues de longueur ≥ 4, ni les mélanges, ni les carrés
   disjoints.
+
+## 6. Simplification (relecture interne) : le corollaire 19.2 est inutile
+- Un bloc de degré entrant 1 est impossible : sa seule paire devrait être appariée à elle-même, donc être sœur.
+- Tout bloc b ayant un arc sortant b → i est un bras en i (le graphe D en i est sans boucle et 2-régulier). Donc d_b ≤ 3 par 25.2.
+- Un bloc de degré 4 ou 5 a un arc sortant, donc il est exclu.
+- On retrouve d ∈ {0, 2, 3, 6} sans l'argument K₂,₂ de 19.1. Le Théorème 25.3 ne repose alors que sur :
+  - l'équilibre ;
+  - la définition de l'ancrage ;
+  - le Lemme 3 du carnet (digones = paires D via k).
