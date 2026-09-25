@@ -119,3 +119,27 @@ directe).
 
 **Bilan provisoire de (1,1).** À n = 3, seul S1 avec au moins un bloc β survit. n = 4 et n = 5 sont à traiter. Pour n = 4, le cas
 « z de degré 0 » donne un squelette avec T = q – r – s – u et les diagonales s → q, u → r, où il faut examiner les choix α/β.
+
+## 6. Famille H (T hamiltonien, tous les degrés égaux à 2) : ce que 28.4 tue
+Petit test machine, **quelques secondes** (`scripts/h_linked_exclusion.py`, `logs/h_linked_exclusion.log`). Il n'applique que le
+lemme 28.4, démontré ci-dessus.
+- Il y a 60 orientations eulériennes de K₇ − C₇.
+- En chaque bloc on a trois choix : α, ou β avec l'un des deux ordres du chemin. Soit 131 220 squelettes.
+
+**Contrôles.**
+- Le circulant m → m+2, m+3 tout-α est tué, comme au 27.2.
+- Tous les squelettes tout-β survivent (7 680 = 60 × 2⁷). C'est attendu : G_c est connexe partout, c'est le cœur.
+
+**Résultat.**
+- 28.4 tue 60 678 squelettes sur 131 220.
+- Il en reste 70 542. Par nombre de blocs α : 0 → 7 680, 1 → 26 880, 2 → 25 312, 3 → 8 904, 4 → 1 610, 5 → 140, 6 → 14, 7 → 2.
+- **Les deux survivants tout-α** sont les circulants m → m+2, m → m−3 (In(c) = {c−2, c+3}) et son miroir.
+  - Pour l'orbite de chaîne (0, 6, 1), j'ai écrit à la main le profil d'équilibre complet sur les 5 blocs, avec F1 et les sommes
+    proches et lointaines.
+  - Ce système est réalisable. Solution : n = (0,1,1,0,0) ; φ(14) = φ(15) = φ(23) = φ(24) = φ(25) = φ(34) = φ(35) = φ(45) = 1 ;
+    φ(12) = φ(13) = 0.
+  - Un profil isolé ne tue donc pas ce squelette.
+
+**Leçon.** 28.4 est un filtre réel, mais faible sur H. La suite demande des arguments qui couplent plusieurs orbites (le budget des
+doubles, l'ordre des cycles libres), comme « structures » en tout-tordu. Le circulant (+2, −3) tout-α, très symétrique (Z₇), est la
+cible naturelle suivante, analogue du Paley du carnet.
