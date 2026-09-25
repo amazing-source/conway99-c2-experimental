@@ -338,3 +338,8 @@ Plan relayé : relaxation SoS de degré 2 sur les arêtes libres, symétrisée, 
   - Diagnostic : l'équilibre ne mord que là où G_c se scinde, c'est-à-dire sur les cycles D fermés (mono-pivot). Le cœur, ce sont
     les configurations où G_c est connexe en tout bloc : le tout-tordu pur et H-β (graphe D formé d'un seul 21-cycle multi-pivot). Il
     y faut un levier global.
+- **26/09, note 28 : mélanges M1.**
+  - Lemme de scission 28.1 : en tout troisième bloc, au plus un cycle D fermé, de longueur ≤ 3.
+  - Lemme d'export des C-blocs 28.2.
+  - **Les familles (0,1), (0,2) et (1,2) sont mortes à la main.**
+  - Restent (1,1) (un squelette survivant à n = 3), (1,0), et H hors circulant.

@@ -1,0 +1,84 @@
+# 28 — Mélanges M1 : lemme de scission, lemme d'export, et trois familles tuées (26/09/2026)
+
+Session principale C2. Tout est à la main (aucun calcul machine). **Statut : DÉRIVÉ, à relire.**
+
+Cadre M1 (note 26) :
+- Σ = ∅ et pas de carré disjoint ;
+- les paires tordues forment un seul cycle T de longueur n ;
+- toutes les autres paires sont ancrées, orientées vers leur ancre.
+
+Rappels de la note 26 :
+- les blocs de T ont d ≤ 2 ;
+- un bloc hors de T a d ∈ {0, 2, 3, 6} ;
+- un « C-bloc » est un bloc hors de T de degré 3, et il y en a au plus deux ;
+- A désigne un bloc de degré 6 (a ∈ {0,1}) ;
+- familles possibles : a = 0 donne (c, n) ∈ {(0,7), (1,6), (2,5)}, avec tous les blocs de T de degré 2 ; a = 1 donne c ≤ 2 et
+  n ≤ 6 − c.
+
+## 1. Lemme de scission (SL), général en Σ = ∅ avec des carrés « un bloc »
+Un **troisième bloc** est un bloc k qui porte au moins une étiquette libre. Autrement dit, c'est le troisième bloc du carré d'au
+moins une orbite, et c'est le cas de tout bloc de degré < 6.
+
+**Lemme 28.1.** En tout troisième bloc k, G_k est de type (6), (4,2) ou (3,3).
+- Un cycle D fermé en k (mono-pivot, toutes ses paires ancrées en k et appariées par k) est une composante de G_k. Il y en a au
+  plus un, et sa longueur est au plus 3.
+- En type (3,3), pour toute orbite X de troisième bloc k (de pivot i et de bras partenaire j) : j est dans la composante qui ne
+  contient pas i, et les deux racines supplémentaires w, w′ de x aussi.
+
+*Preuve.* C'est le raffinement A de « structures » (note 26 §6) : par l'équilibre composante par composante, une composante qui ne
+contient pas i a b ≤ [j ∈ C] + 2 ≤ 3, et b ≥ 2 en Σ = ∅. Un cycle fermé ne contient jamais i. En effet D(X) ⊂ {i, k} est appariée
+par i, donc la paire {i, k} a une étiquette libre en k. ∎
+
+**Conséquence.** Hors de T (t_k = 0), toutes les paires ancrées en k sont sur des cycles fermés, donc d_k ≤ 3. On retrouve la queue.
+
+## 2. Lemme d'export des C-blocs
+**Lemme 28.2.** Soit k un C-bloc : hors de T, d_k = 3, triangle fermé sur In(k), et G_k = (3,3) avec les composantes In(k) et
+Out(k). Alors, **pour tout o ∈ Out(k), les voisins D, au pivot o, de la paire {o, k} sont des paires {o, j} avec j ∈ In(k).**
+*Preuve.* Les deux orbites de {o, k} sont appariées par o (paire ancrée en o). Leurs partenaires X ⊂ {o, j} ont pour troisième bloc
+k, avec i = o ∈ Out(k). Par 28.1 (3,3), on a j ∈ In(k). ∎
+
+**Règle de tête** (26.3) : entre deux bras d'un même carré, un arc ancré a une queue de degré ≤ 2. Un C-bloc est donc toujours la
+tête de ses arcs vers les autres éléments d'un In.
+
+## 3. Trois familles de M1 sont impossibles
+**Théorème 28.3.** Les familles (a, c) = (0, 1), (0, 2) et (1, 2) de M1 sont impossibles.
+
+**(a = 0, c = 1)**, donc n = 6 et tous les blocs de T de degré 2.
+- Soit C le C-bloc, In(C) = {p, q, r} et Out(C) = {s, u, v} ; les six sont dans T.
+- Pour o ∈ Out(C), on a In(o) = {C, j′(o)}.
+- 28.2 impose que les voisins D de {o, C} en o soient des paires {o, j} avec j ∈ {p, q, r}. On passe en revue les structures
+  possibles en o :
+  - structure liée sur In(o) : j′(o) ∈ {p, q, r} ;
+  - chemin Tw – {o,C} – {o,j′} – Tw′ (ou l'ordre inverse) : j′(o) ∈ {p, q, r}, et le Tw adjacent aussi ;
+  - chemin Tw – {o,C} – Tw′ : impossible, car {o, j′} resterait seule, ce qui ferait une boucle.
+- Donc s, u et v reçoivent chacun leur second arc depuis {p, q, r}.
+- Comptage dans T : les 9 paires ancrées donnent Σ des degrés internes = 9 = 3·1 (s, u, v) + 3·2 (p, q, r). Donc aucune paire de
+  {s, u, v} n'est ancrée : elles sont toutes tordues.
+- {s, u, v} serait alors un triangle de T, alors que T est un 6-cycle. Contradiction.
+
+**(a = 0, c = 2)**, donc n = 5.
+- On pose C₁ → C₂. Par la règle de tête, les deux autres éléments p, q de In(C₂) pointent vers C₁. Donc In(C₁) = {p, q, r}.
+- T = {p, q, r, s, u}, Out(C₁) = {C₂, s, u} et Out(C₂) = {r, s, u}.
+- On a In(s) = {C₁, C₂}, car d_s = 2. Par 28.2 appliqué à C₁, les deux voisins D de {s, C₁} doivent être des {s, j} avec
+  j ∈ {p, q, r}.
+- Or ni {s, C₂} ni une paire ancrée ne conviennent : il faudrait le chemin Tw – {s,C₁} – Tw′, et {s, C₂} serait alors seule, ce qui
+  ferait une boucle. Contradiction.
+
+**(a = 1, c = 2).**
+- Même début : C₁ → C₂, In(C₂) = {C₁, p, q}, In(C₁) = {p, q, r}. Les « autres » sont {p, q, r, s}.
+- Donc In(s) ⊇ {C₁, C₂}, puis In(s) = {C₁, C₂} puisque d_s ≤ 2.
+- Si s ∉ T : la structure liée {s,C₁} – {s,C₂} contredit 28.2, car C₂ ∉ In(C₁).
+- Si s ∈ T : même contradiction que ci-dessus. ∎
+
+## 4. Ce qui reste dans M1
+- **(a = 1, c = 1)**, n ∈ {3, 4, 5}. 28.2 impose que s, u ∈ Out(C) ∖ {A} reçoivent un arc de In(C), ou, si d = 1 et s ∈ T,
+  que leurs deux voisins sur T soient dans In(C).
+  - Pour n = 3, le cas « le bloc de degré 1 est s » meurt : s → u donnerait j′(u) = s ∉ In(C).
+  - Il reste un squelette survivant à ce niveau : T = {p, s, u} avec d_p = 1, In(s) = {C, j_s} et In(u) = {C, j_u}, j_s, j_u ∈ {q, r}.
+  - Il faut l'équilibre croisé ou le budget.
+- **(a = 1, c = 0)**, n ∈ {3, …, 6} : non traité.
+- **(a = 0, c = 0)** = H (T hamiltonien, tous les degrés égaux à 2). Il contient H-β, qui est dans le cœur. Le circulant α est mort
+  (27.2).
+
+**Bilan M1** : sur les six familles (a, c), trois sont tuées à la main, et le circulant de H aussi. Restent (1,1), (1,0) et H hors
+circulant.
