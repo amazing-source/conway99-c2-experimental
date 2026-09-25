@@ -143,3 +143,34 @@ lemme 28.4, démontré ci-dessus.
 **Leçon.** 28.4 est un filtre réel, mais faible sur H. La suite demande des arguments qui couplent plusieurs orbites (le budget des
 doubles, l'ordre des cycles libres), comme « structures » en tout-tordu. Le circulant (+2, −3) tout-α, très symétrique (Z₇), est la
 cible naturelle suivante, analogue du Paley du carnet.
+
+## 7. Lemme de la paire propre liée (28.5), et le circulant (+2, −3) est mort
+**Lemme 28.5 (général en Σ = ∅, carrés « un bloc »).** Supposons qu'un bloc c porte une structure liée fermée sur {a, b}, et que la
+paire {a, b} soit ancrée en b (a → b). Alors f_a ≥ 8, où f_a = 2·out_a + t_a est le nombre d'orbites libres en a.
+*Preuve.*
+- Les deux orbites sœurs x₁, x₂ de {a, b} sont libres en a (appariées par b) et évitent c.
+- En c, leur paire est contenue dans L_c. Par l'équilibre, elles n'ont aucune racine dans les carrés liés de c, donc φ_x({c, a}) = 0.
+- Leurs voisins sur le graphe libre en a ne sont donc ni des orbites de {a, c} (paire ancrée en c, libre en a), ni leur sœur.
+- Il reste R, formé des f_a − 4 autres orbites libres. Si |R| ≤ 2, les deux sœurs ont le même ensemble R de voisins : elles ont
+  deux voisins communs, et un 4-cycle se ferme, contre 19.1. ∎
+
+**En H** (f = 2·2 + 2 = 6 partout) : **un bloc α ne peut pas avoir ses deux prédécesseurs reliés par une corde.** Ses prédécesseurs
+sont donc consécutifs sur T.
+- **Le circulant (+2, −3) tout-α en meurt.** On a In(4) = {2, 0}, avec la corde 0 → 2 et Out(0) = {2, 4}.
+- Vérifié aussi à la main par le profil de l'orbite de {0, 2} : l'équilibre en 4 donne n₄ = 0, puis n₁ = n₆ = 1 pour les deux
+  sœurs.
+- Son miroir meurt aussi. **Aucune configuration tout-α de H ne survit.**
+
+**Recomptage** (`scripts/h_linked_exclusion2.py`, `logs/h_linked_exclusion2.log`, quelques secondes).
+- 28.4 et 28.5 laissent **30 346** squelettes de H sur 131 220.
+- Par nombre de blocs α : 0 → 7 680, 1 → 14 336, 2 → 7 168, 3 → 1 148, 4 → 14. **Au plus 4 blocs α.**
+- Chaque bloc α a ses prédécesseurs consécutifs sur T.
+
+**Dans M1 hors de H**, 28.5 ne tue pas S1. Pour la paire liée {p, r} en q (r → p), on a f_r = 8. Pour {C, q} en s et en u, on a
+f_q = 8.
+
+**Où en est M1.**
+- (0,1), (0,2) et (1,2) sont morts.
+- (1,1) à n = 3 : seul S1 avec au moins un β survit. n = 4 et n = 5 restent.
+- (1,0) : non traité.
+- H : il reste les squelettes à au plus 4 blocs α, plus le tout-β, qui est le cœur.
