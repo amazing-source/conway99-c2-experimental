@@ -82,3 +82,40 @@ tête de ses arcs vers les autres éléments d'un In.
 
 **Bilan M1** : sur les six familles (a, c), trois sont tuées à la main, et le circulant de H aussi. Restent (1,1), (1,0) et H hors
 circulant.
+
+## 5. Lemme d'exclusion par paire liée (général), et la famille (a = 1, c = 1) à n = 3
+**Lemme 28.4 (exclusion liée).** Supposons réunies les trois conditions suivantes :
+- (i) en un bloc c, il y a une structure liée fermée sur {i, k}, c'est-à-dire une composante L_c = {i, k} ;
+- (ii) il existe un carré de pivot i et de bras j, k, qui donne l'orbite (i, j, k) avec j ∉ {i, k} ;
+- (iii) G_k = (4,2), avec L_k la paire liée en k, M_k les 4 autres blocs formant une seule composante, et j ∉ L_k.
+
+Alors c'est une contradiction.
+
+*Preuve.* Soit x dans l'orbite (i, j, k).
+- **En c.** L_c = {i, k} et j ∉ L_c. On a φ_x({c, i}) = 0 par F1, car c ≠ k. Par l'équilibre (27.1), φ_x({c, k}) = 2 − 1 = 1.
+- **En k.** i ∈ M_k, car {i, k} a une étiquette libre en k. j ∈ M_k par (iii). La composante M_k est donc serrée : les racines de x
+  dans M_k sont exactement v et σv, d'où φ_x({k, r}) = 0 pour tout r ∈ M_k ∖ {i}.
+- Or i → c et k → c (car i, k ∈ In(c)), donc c ∈ Out(k) ⊂ M_k. Donc φ_x({k, c}) = 0. Contradiction. ∎
+
+(iii) vaut automatiquement en un bloc hors de T de degré 2, ainsi qu'en un bloc α de T de degré 2 (structure liée plus chaîne
+directe).
+
+**Famille (a = 1, c = 1), n = 3.** Notations : In(C) = {p, q, r}, Out(C) = {A, s, u}.
+- Par 28.2 et les comptages (§4), T = {p, s, u}, d_p = 1, et j_s, j_u ∈ {q, r}.
+- À symétrie près (s ↔ u, q ↔ r), il reste trois squelettes :
+  - **S1** : q→s, q→u, s→r, u→r, r→p, p→q, r→q ;
+  - **S2** : q→s, r→u, s→r, u→q, p→q, q→r, r→p ;
+  - **S3** : q→s, r→u, s→r, u→q, p→r, r→q, q→p.
+- **S2 est impossible.** Le carré {s,C} – {s,q} existe en s, que s soit α (structure liée) ou β (chemin p – C – q – u) : il donne
+  l'orbite (s, C, q). On a L_r = {s, q}, et G_q = (4,2) avec L_q = {u, p} ∌ C. 28.4 s'applique.
+- **S3 est impossible.** L'orbite (u, C, r) existe en u, que u soit α ou β. On a L_q = {u, r}, et G_r = (4,2) avec L_r = {s, p} ∌ C.
+  28.4 s'applique.
+- **S1 : α en s et en u à la fois est impossible.** L'orbite (s, p, u) du carré de chaîne en s, avec L_r = {s, u}, contredit 28.4 en u,
+  car p ∉ L_u = {C, q}.
+  - Restent (α_s, β_u), (β_s, α_u) et (β_s, β_u).
+  - Pour l'orbite (s, p, u) dans (α_s, β_u), le profil complet d'équilibre, sur les 5 blocs et avec F1, est **réalisable** (solution
+    explicite trouvée à la main). Un profil isolé ne suffit donc pas. Il faudra les interactions entre orbites : le budget, ou
+    l'ordre des cycles libres.
+
+**Bilan provisoire de (1,1).** À n = 3, seul S1 avec au moins un bloc β survit. n = 4 et n = 5 sont à traiter. Pour n = 4, le cas
+« z de degré 0 » donne un squelette avec T = q – r – s – u et les diagonales s → q, u → r, où il faut examiner les choix α/β.
