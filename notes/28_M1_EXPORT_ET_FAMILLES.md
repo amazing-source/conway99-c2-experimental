@@ -202,3 +202,33 @@ orientations sont étiquetées.
   forcé en (β, β).
 - Les survivants tiennent par des blocs de T en β, où G est connexe. Ils demandent des arguments entre orbites : le budget exact
   paire par paire, et l'ordre des cycles libres, avec l'argument « deux sœurs, deux voisins communs » (19.1).
+
+## 10. Niveau « bloc » (19.1 + profils), et la famille (1,1) à n = 3 est fermée
+**Lemme 28.6 (forçage par les sœurs).** Soit {j, m} une paire ancrée en m, dont les deux sœurs sont libres en j. Si leurs profils
+forcent tous deux un voisin dans une paire tordue {j, t}, ils sont adjacents à l'unique orbite libre P de {j, t} en j. On a alors
+n_m(P) = 2. Si le profil de P interdit n_m = 2, c'est une contradiction.
+
+**S1 est mort, quels que soient les modes en s et en u.** Notations (§5) : T = {p, s, u}, In(q) = {p, r}, In(r) = {s, u},
+In(s) = In(u) = {C, q}, In(p) = {r}, In(C) = {p, q, r}.
+- Les deux sœurs de {s, r} ont pour triple (r, s, u), via la structure liée en r. Leurs profils utilisent :
+  - en q, la partie M : φ(qu) + φ(qC) + φ(qA) = 3 ;
+  - en q, la partie L : φ(pq) = 1 ;
+  - en C, la partie Out : φ(Cu) + φ(CA) = 2 ;
+  - en p, le total : n_p + φ(pu) + φ(pC) + φ(pA) = 3 ;
+  - la somme lointaine, égale à 8.
+  On en tire φ(uA) = n_p − 1, donc **n_p = 1** pour chacune.
+- {s, p} est tordue, donc elle n'a qu'une orbite libre P en s, de triple (p, s, r) (chemin u – r – s en p). P est voisine des deux
+  sœurs, donc n_r(P) = 2.
+- Or, en r, L_r = {s, u} donne, pour P ⊂ {p, s} : φ_P({r,s}) + φ_P({r,u}) = 2 − 1 = 1, donc n_r(P) ≤ 1. ✗
+
+**Théorème 28.7. La famille M1 (a = 1, c = 1, n = 3) est impossible** : S2 et S3 tombent par 28.4, S1 par 28.6. C'est à la main ;
+le filtre `scripts/m1_blocks.py` avait localisé le bloc fautif (s).
+
+**Filtre au niveau bloc** (`scripts/m1_blocks.py`, `logs/m1_blocks.log`, 72 s, sain). À chaque bloc portant au plus 8 orbites
+libres, on énumère les graphes libres 2-réguliers conformes à 19.1 et on exige un profil réalisable pour chaque orbite de triple
+connu ; les autres blocs sont laissés libres.
+- Contrôle : les tout-β de H survivent tous.
+- Résultats : **(1,1,3) passe de 72 à 0** (conforme au Théorème 28.7), **(1,0,4) de 96 à 48** ; le reste est inchangé :
+  (1,0,3) 48, (1,0,5) 224, (1,0,6) 176, (1,1,4) 168, (1,1,5) 80, H 60.
+- Pistes : étendre le niveau bloc aux blocs à 10 ou 12 orbites libres ; ajouter la structure de A ; rédiger à la main les
+  éliminations de (1,0,4).
