@@ -1,0 +1,7 @@
+# 26/09 small tests (definitive only)
+circulant 23/0 symmetric cycles: F2 infeasible 21/22 (F1 LP-infeasible: cycles 0,3,16; F2 LP-infeasible 20/22, LP-feasible: 10,13); survivor cycle 10: P2 UNKNOWN
+circulant 23/0 random cycles (seed 1): F2 infeasible 33/33
+general H-beta, 6 D7-classes x 6 random (seed 7): F2 infeasible 36/36
+general H-beta LP of F2, 30 random (seed 3): LP infeasible 30/30
+circulant, cycles variable: F2 OPTIMAL (7s); P2 UNKNOWN (270s, not a result)
+controls: fix all blocks to cycle 10 -> OPTIMAL; to cycle 0 -> INFEASIBLE; noP2/noPPE symmetric: 20/22 feasible
