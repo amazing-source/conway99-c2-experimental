@@ -324,3 +324,10 @@ Plan relayé : relaxation SoS de degré 2 sur les arêtes libres, symétrisée, 
   sur BvLS, avec contrôle négatif. Relecture interne indépendante en cours.
 - Reste, en Σ = ∅ : chaînes tordues de longueur ≥ 4, mélanges et carrés disjoints. 25.1 s'y applique, mais les composantes y sont
   plus grandes.
+- **Note 26 (soir) : la queue hors ancrage.**
+  - Cadre M1 : un seul cycle tordu T, le reste ancré.
+  - Les blocs de T ont d ≤ 2. Les blocs hors de T ont d ∈ {0,2,3,6}, et la queue y tient.
+  - Il y a au plus deux C-blocs ; la liste des cas de sommes est courte.
+  - **Pas de fermeture** : T hamiltonien avec une orientation eulérienne de K₇ − C₇ survit.
+  - Raffinement composante par composante de « structures » (types (6), (4,2), (3,3)) intégré.
+  - Partage : « structures » prend le tout-tordu pur, C2 garde les mélanges.
