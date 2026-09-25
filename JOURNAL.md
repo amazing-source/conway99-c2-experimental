@@ -331,3 +331,10 @@ Plan relayé : relaxation SoS de degré 2 sur les arêtes libres, symétrisée, 
   - **Pas de fermeture** : T hamiltonien avec une orientation eulérienne de K₇ − C₇ survit.
   - Raffinement composante par composante de « structures » (types (6), (4,2), (3,3)) intégré.
   - Partage : « structures » prend le tout-tordu pur, C2 garde les mélanges.
+- **Note 27 : équilibre croisé.**
+  - Lemme de profil : l'équilibre est appliqué à la même étiquette x en plusieurs blocs.
+  - **Théorème 27.2 : le survivant hamiltonien circulant (α partout) est impossible**, par φ_x({0,3}) = 0 en 0 et = 1 en 3.
+  - Lemme 27.3 : motif interdit général.
+  - Diagnostic : l'équilibre ne mord que là où G_c se scinde, c'est-à-dire sur les cycles D fermés (mono-pivot). Le cœur, ce sont
+    les configurations où G_c est connexe en tout bloc : le tout-tordu pur et H-β (graphe D formé d'un seul 21-cycle multi-pivot). Il
+    y faut un levier global.
