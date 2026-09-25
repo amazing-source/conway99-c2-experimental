@@ -112,10 +112,12 @@ directe).
   28.4 s'applique.
 - **S1 : α en s et en u à la fois est impossible.** L'orbite (s, p, u) du carré de chaîne en s, avec L_r = {s, u}, contredit 28.4 en u,
   car p ∉ L_u = {C, q}.
-  - Restent (α_s, β_u), (β_s, α_u) et (β_s, β_u).
-  - Pour l'orbite (s, p, u) dans (α_s, β_u), le profil complet d'équilibre, sur les 5 blocs et avec F1, est **réalisable** (solution
-    explicite trouvée à la main). Un profil isolé ne suffit donc pas. Il faudra les interactions entre orbites : le budget, ou
-    l'ordre des cycles libres.
+  - **CORRECTION (26/09) : α en s est impossible, quel que soit u.** La première version affirmait que le profil de l'orbite
+    (s, p, u) était réalisable. C'était **faux** : j'avais oublié que r → p rend la paire {p, r} interne en p, donc n_r = 0.
+    - Pour l'orbite (s, p, u), qui existe dès que s est α (carré de chaîne), les équations en q, r, C (partie Out) et la somme
+      lointaine donnent φ(uA) = n_r − 1. Avec n_r = 0, on obtient φ(uA) = −1. ✗
+    - Par la symétrie s ↔ u, α en u est impossible aussi. **S1 impose β en s et en u.**
+    - Contrôle machine (`scripts/m1_profiles.py`) : le solveur de profils, validé ci-dessous, tue bien ces cas.
 
 **Bilan provisoire de (1,1).** À n = 3, seul S1 avec au moins un bloc β survit. n = 4 et n = 5 sont à traiter. Pour n = 4, le cas
 « z de degré 0 » donne un squelette avec T = q – r – s – u et les diagonales s → q, u → r, où il faut examiner les choix α/β.
@@ -134,11 +136,10 @@ lemme 28.4, démontré ci-dessus.
 - 28.4 tue 60 678 squelettes sur 131 220.
 - Il en reste 70 542. Par nombre de blocs α : 0 → 7 680, 1 → 26 880, 2 → 25 312, 3 → 8 904, 4 → 1 610, 5 → 140, 6 → 14, 7 → 2.
 - **Les deux survivants tout-α** sont les circulants m → m+2, m → m−3 (In(c) = {c−2, c+3}) et son miroir.
-  - Pour l'orbite de chaîne (0, 6, 1), j'ai écrit à la main le profil d'équilibre complet sur les 5 blocs, avec F1 et les sommes
-    proches et lointaines.
-  - Ce système est réalisable. Solution : n = (0,1,1,0,0) ; φ(14) = φ(15) = φ(23) = φ(24) = φ(25) = φ(34) = φ(35) = φ(45) = 1 ;
-    φ(12) = φ(13) = 0.
-  - Un profil isolé ne tue donc pas ce squelette.
+  - **CORRECTION (26/09).** La première version affirmait que le profil de l'orbite de chaîne (0, 6, 1) était réalisable. C'était
+    **faux** : j'avais donné n₂ = 1, alors que la paire {6, 2} est interne en 6 (In(6) = {4, 2}), d'où n₂ = n₄ = 0.
+    - Avec n₁ = n₅ = 0, le système force n₃ = 2, puis φ(13) = −1. ✗
+    - Ce squelette meurt donc déjà par un profil isolé. Il meurt aussi par 28.5 (§7).
 
 **Leçon.** 28.4 est un filtre réel, mais faible sur H. La suite demande des arguments qui couplent plusieurs orbites (le budget des
 doubles, l'ordre des cycles libres), comme « structures » en tout-tordu. Le circulant (+2, −3) tout-α, très symétrique (Z₇), est la
@@ -188,3 +189,16 @@ orientations sont étiquetées.
   mélanges.
 - **Outil suivant : le budget exact paire par paire** (« structures », 25/09). Il vaut en Σ = ∅ avec des carrés « un bloc ». Un
   partenaire D a φ = 2 exactement (F1), donc chaque paire P′ est doublée par exactement 2 orbites.
+
+
+## 9. Solveur de profils (`scripts/m1_profiles.py`, `logs/m1_profiles.log`, 12 s) : validation, puis résultat
+- **Validation sur des cas connus.**
+  - Circulant (+2,+3) : les orbites (1,2,0) du 27.2 et (5,6,4) du 28.4 sont infaisables. ✓
+  - Circulant (+2,−3) : l'orbite (0,6,1) est infaisable. Cela confirme la correction du §6 : le solveur avait raison contre ma
+    première rédaction.
+  - La contrainte clé, n_r ≤ nombre d'orbites libres de {j, r} en j, est bien appliquée.
+- **Résultat sur M1.** Les profils isolés (équilibre composante par composante là où les composantes sont certaines, F1 et sommes)
+  ne tuent aucun squelette de plus, au niveau « il existe un choix de structures ». Ils éliminent en revanche des choix α : S1 est
+  forcé en (β, β).
+- Les survivants tiennent par des blocs de T en β, où G est connexe. Ils demandent des arguments entre orbites : le budget exact
+  paire par paire, et l'ordre des cycles libres, avec l'argument « deux sœurs, deux voisins communs » (19.1).
