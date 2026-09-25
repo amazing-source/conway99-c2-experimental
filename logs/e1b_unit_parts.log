@@ -1,0 +1,25 @@
+Paley(3^2)     v=  9 th=  1 f=   4 E_xx=    4/9 u+=1 u-=1 ratio=1 | th= -2 f=   4 E_xx=    4/9 u+=1 u-=1 ratio=1
+Paley(5^2)     v= 25 th=  2 f=  12 E_xx=  12/25 u+=5 u-=1 ratio=5 | th= -3 f=  12 E_xx=  12/25 u+=5 u-=1 ratio=5
+Paley(7^2)     v= 49 th=  3 f=  24 E_xx=  24/49 u+=1 u-=1 ratio=1 | th= -4 f=  24 E_xx=  24/49 u+=1 u-=1 ratio=1
+Paley(11^2)    v=121 th=  5 f=  60 E_xx= 60/121 u+=1 u-=1 ratio=1 | th= -6 f=  60 E_xx= 60/121 u+=1 u-=1 ratio=1
+Paley(13^2)    v=169 th=  6 f=  84 E_xx= 84/169 u+=5 u-=1 ratio=5 | th= -7 f=  84 E_xx= 84/169 u+=5 u-=1 ratio=5
+L_2(5)         v= 25 th=  3 f=   8 E_xx=   8/25 u+=1 u-=1 ratio=1 | th= -2 f=  16 E_xx=  16/25 u+=1 u-=1 ratio=1
+L_3(5)         v= 25 th=  2 f=  12 E_xx=  12/25 u+=5 u-=1 ratio=5 | th= -3 f=  12 E_xx=  12/25 u+=5 u-=1 ratio=5
+L_4(5)         v= 25 th=  1 f=  16 E_xx=  16/25 u+=1 u-=1 ratio=1 | th= -4 f=   8 E_xx=   8/25 u+=1 u-=1 ratio=1
+L_5(5)         v= 25 th=  0 f=  20 E_xx=    4/5 u+=5 u-=1 ratio=5 | th= -5 f=   4 E_xx=   4/25 u+=5 u-=1 ratio=5
+L_2(7)         v= 49 th=  5 f=  12 E_xx=  12/49 u+=1 u-=1 ratio=1 | th= -2 f=  36 E_xx=  36/49 u+=1 u-=1 ratio=1
+L_3(7)         v= 49 th=  4 f=  18 E_xx=  18/49 u+=1 u-=7 ratio=7 | th= -3 f=  30 E_xx=  30/49 u+=1 u-=7 ratio=7
+L_4(7)         v= 49 th=  3 f=  24 E_xx=  24/49 u+=1 u-=1 ratio=1 | th= -4 f=  24 E_xx=  24/49 u+=1 u-=1 ratio=1
+L_5(7)         v= 49 th=  2 f=  30 E_xx=  30/49 u+=1 u-=7 ratio=7 | th= -5 f=  18 E_xx=  18/49 u+=1 u-=7 ratio=7
+L_6(7)         v= 49 th=  1 f=  36 E_xx=  36/49 u+=1 u-=1 ratio=1 | th= -6 f=  12 E_xx=  12/49 u+=1 u-=1 ratio=1
+L_2(11)        v=121 th=  9 f=  20 E_xx= 20/121 u+=1 u-=1 ratio=1 | th= -2 f= 100 E_xx=100/121 u+=1 u-=1 ratio=1
+L_3(11)        v=121 th=  8 f=  30 E_xx= 30/121 u+=1 u-=3 ratio=3 | th= -3 f=  90 E_xx= 90/121 u+=1 u-=3 ratio=3
+L_4(11)        v=121 th=  7 f=  40 E_xx= 40/121 u+=1 u-=1 ratio=1 | th= -4 f=  80 E_xx= 80/121 u+=1 u-=1 ratio=1
+L_5(11)        v=121 th=  6 f=  50 E_xx= 50/121 u+=1 u-=3 ratio=3 | th= -5 f=  70 E_xx= 70/121 u+=1 u-=3 ratio=3
+L_6(11)        v=121 th=  5 f=  60 E_xx= 60/121 u+=1 u-=1 ratio=1 | th= -6 f=  60 E_xx= 60/121 u+=1 u-=1 ratio=1
+L_2(13)        v=169 th= 11 f=  24 E_xx= 24/169 u+=1 u-=1 ratio=1 | th= -2 f= 144 E_xx=144/169 u+=1 u-=1 ratio=1
+L_3(13)        v=169 th= 10 f=  36 E_xx= 36/169 u+=5 u-=1 ratio=5 | th= -3 f= 132 E_xx=132/169 u+=5 u-=1 ratio=5
+L_4(13)        v=169 th=  9 f=  48 E_xx= 48/169 u+=1 u-=1 ratio=1 | th= -4 f= 120 E_xx=120/169 u+=1 u-=1 ratio=1
+L_5(13)        v=169 th=  8 f=  60 E_xx= 60/169 u+=5 u-=1 ratio=5 | th= -5 f= 108 E_xx=108/169 u+=5 u-=1 ratio=5
+L_6(13)        v=169 th=  7 f=  72 E_xx= 72/169 u+=1 u-=1 ratio=1 | th= -6 f=  96 E_xx= 96/169 u+=1 u-=1 ratio=1
+BvLS           v=243 th=  4 f= 132 E_xx=  44/81 u+=1 u-=1 ratio=1 | th= -5 f= 110 E_xx=110/243 u+=3 u-=1 ratio=3

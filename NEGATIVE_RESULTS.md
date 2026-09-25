@@ -167,3 +167,9 @@ Sur K2K2P3, on a fait 61 820 itérations en 60 s, avec des clauses interdites de
 
 Leçon : ce ne sont pas les coupes qu'il faut chercher, mais le certificat global indépendant de χ. On le trouve en analysant les
 refus à χ fixé (§6 bis).
+
+## N24 — Critère « det Λ_θ ≡ 1 + f/v (mod 4) » et invariant d'Arf 2-adique : vides (25/09, note 24)
+- Le critère (carnet principal, §23) est une tautologie : Λ_θ ⊗ Z₂ est unimodulaire pair, donc det ≡ (−1)^{f/2} ≡ 1 + f/v (mod 4)
+  dès que f est pair.
+- L'Arf local w̃·w̃/2 est automatique pour Λ₃. Pour Λ₋₄, il équivaut à σ_S ≡ 1 (mod 8), déjà démontré combinatoirement.
+- Leçon : même conclusion que N09, un cran plus haut (mod 8).

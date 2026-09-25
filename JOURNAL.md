@@ -302,3 +302,14 @@ Plan relayé : relaxation SoS de degré 2 sur les arêtes libres, symétrisée, 
   - Ne réfute pas K₁,₃ en 300 s, même avec les 18 faits A/B.
   - Diagnostic : la parité du lemme des étoiles vit au niveau χ, grâce au caractère one-hot de S1/G1 ; les bits bruts ne la voient pas.
   - Pour un bloc libre (sans grille), l'analogue doit venir des carrés one/dis : cocycle à défauts, piste principale.
+
+## 2026-09-25 (après-midi) : reprise par la session principale C2, en régime strictement mathématique
+- Contexte : l'utilisateur a imposé à la branche C2 un régime **sans aucun solveur** (plus de SAT, CP-SAT, cubes ni DRAT pour
+  décider des cas), puis (relais de C1) le retour à la *démarche* de C3. Le carnet principal (`MATH_C2_PROGRAMME.md`, branche
+  math-c2-programme) a avancé de son côté : §16 à §23, Théorèmes F, P et D, cas ancrés (6,3,3,3,2,2,2) et (6,0,3⁵) ouverts.
+- **Incident.** Croyant créer un nouveau labo, j'ai réinitialisé ce dépôt (`git init`, sans effet) et écrasé README.md, IDEES.md et
+  JOURNAL.md. Ils ont été restaurés aussitôt depuis HEAD. D'après le transcript de la session du labo, aucune modification non
+  validée de ces trois fichiers n'a été perdue : leur dernière modification précède le commit du 24/09 22:19.
+- Note 24 (`notes/24_P2_ARF_LOCAL.md`) : le niveau p = 2 est vide, invariant d'Arf compris. Elle confirme N09 et les notes 09–10.
+  Apport : une formule locale de l'Arf, contrôlée dans 50 cas sur 50 (Paley(q²), graphes de réseaux L_m(n), BvLS), qui redonne
+  σ_S ≡ 1 (mod 8). Voir aussi N24.
