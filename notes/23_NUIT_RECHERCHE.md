@@ -134,3 +134,39 @@ Conséquences pour A111111/(2,2,2), dont les composantes sont 3 « quads » de 1
 | modèle complet + (iv) + (v) + équilibre, CP-SAT 240 s | aucune réponse (non consigné comme résultat) |
 
 Bilan : l'équilibre et (iv)/(v) sont des faits nouveaux et démontrés. Ils ne suffisent pas encore à conclure.
+
+## 9. D'où vient l'équilibre, et ce que la littérature dit du cas C2 (DÉRIVÉ ; lecture)
+
+**Principe d'extension.** Soit U un ensemble quelconque de sommets de Γ et W son complémentaire. Comme A² = 12I − A + 2J, on a
+B_{UW} B_{UW}ᵀ = 12I − A_UU − A_UU² + 2J. Si w ⊥ 𝟏_U est vecteur propre de A_UU de valeur α, alors
+‖B_{UW}ᵀ w‖² = (3 − α)(4 + α)‖w‖².
+
+**Tout vecteur propre ⊥ 𝟏 d'un sous-graphe induit, de valeur 3 ou −4, se prolonge par zéro en vecteur propre de Γ.** Chaque sommet
+extérieur voit alors une somme pondérée nulle.
+
+Le lemme d'équilibre (§8) en est le cas U = N(ℓ), qui est 3-régulier : ses composantes portent la valeur propre 3.
+- Cette coïncidence est **propre à k = 14**. Le degré interne de N(ℓ) vaut 3 pour tout m, mais 3 n'est valeur propre de Γ qu'à m = 7.
+- Pour BvLS (m = 11), la variance vaut 0,24·|C|… > 0 : il n'y a pas d'équilibre. La vérification de BvLS ne s'applique donc pas à ce
+  lemme.
+- C'est une rigidité du même ordre que « les grilles sont des codes parfaits » (m ∈ {2, 7}, note 04).
+
+Portée : parmi les 2 903 types (μ, τ), **233** ont plusieurs composantes, et le lemme n'agit que sur eux :
+- (4, 8) : 168 types ;
+- (6, 6) : 55 ;
+- (4, 4, 4) : 10.
+
+Les **2 670** autres sont à composante unique, et l'équilibre y est vide.
+
+**Condition (N, F) exacte** (DÉRIVÉ, non exploitée). A_F Bᵀ = −Bᵀ(I + A_NN) + 2J donne, pour tout lointain z et tout u ∈ N(ℓ) :
+|N_F(z) ∩ S_u| = 2 − [z ∼ u] − #{u′ ∈ N_{N(ℓ)}(u) : z ∼ u′}, où S_u désigne les lointains voisins de u. Le profil N(ℓ) des 8
+voisins lointains de z est donc imposé par les seules données locales. C'est une somme de 8 profils à trouver, pour chaque z.
+
+**Littérature** (lecture du 25/09, 01 h 40).
+- Cesarz–Woldar (Algebraic Combinatorics, arXiv 2308.02978) : si 2 divise |Aut|, alors |Aut| divise 6. Pas d'élément d'ordre 14.
+  Leur lemme 3.2 est exactement notre cadre (t = (iL iR), point fixe unique x), mais sans t isolé.
+- « No involutions in the missing Moore graph » (arXiv 2606.29183) : l'identité trace–rang d'Ishida, appliquée à p = 2, élimine
+  l'involution à étoile K₁,₅₅ fixe. Pour C2, le sous-graphe fixe est {x} et l'identité est vide. Je l'ai vérifié aussi sur le graphe
+  des arêtes et sur celui des non-arêtes : elle s'y réduit à Burnside mod 2, déjà cohérent (note 20).
+- arXiv 2608.11211 : bornes heuristiques, aucune structure de droites.
+
+Aucun de ces travaux ne traite le cas C2.
