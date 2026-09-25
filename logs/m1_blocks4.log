@@ -1,0 +1,12 @@
+# m1_blocks4 H (D7 reps), alpha-skeletons, 26/09
+untyped | D7-orbits of orientations: 6 | alpha-skeletons (weighted): {1: 26880, 2: 40320, 3: 33600, 4: 16800, 5: 5040, 6: 840, 7: 60} | survivors: {}
+typed   | same totals | survivors: {}
+# all-beta, typed, first 7 orientations (time cap): 896/896 survive
+# fam n=3 typed/untyped: {(1,0,3): 48} both; n=5 partial (cap): {(1,0,5): 3} both
+# single-alpha diagnosis (scripts/h_alpha_diag.py, 65 s):
+('block', 'offset', 2, 'In=[2, 3]') 960
+('block', 'offset', 3, 'In=[2, 3]') 64
+('block', 'offset', 3, 'In=[3, 4]') 256
+('block', 'offset', 4, 'In=[3, 4]') 64
+('block', 'offset', 4, 'In=[4, 5]') 64
+('pre-28x', 'In chord') 1280
