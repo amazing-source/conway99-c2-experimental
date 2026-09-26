@@ -1,5 +1,6 @@
 """[v6: also saves, per representative orientation, its surviving leaves in the representative's OWN labelling (for union LPs).]
 [v5: + the tail lemma 26.2 (t_c = 0 => d_c in {0,2,3,6}) when there is NO sister pair (Sigma = empty).]
+[v6.1 (note 43): 26.2 in Sigma-form at every block with t_c = 0: w_c = d_c + sigma_c in {0,2,3,6} / {1,3,6} / {2,6} for sigma_c = 0/1/2.]
 [v4: A-orbit placeholders are no longer "anything": an n-vector is allowed iff it keeps the profile of (A, j, k) feasible for
 SOME third block k (union over the 5 possible k; comps of A unknown = one component).  Still sound.]
 [v3: a degree-6 block A (all six pairs anchored at A) is kept GENERIC: its D-structure is not enumerated, its 12 orbits
@@ -122,9 +123,14 @@ def orbits_from(dgs):
 def canon_skel(orbs, auts):
     return min(tuple(sorted(tuple(g[v] for v in z) for z in orbs)) for g in auts)
 
+# 26.2 in Sigma-form (C1 notes/130 par. 2, checked in C2 note 43): at a block c with no twisted pair, Out(c) is a union of components
+# of G_c (anchored classes on In(c) are closed, sister partners are singletons), so an outgoing arc c -> i forces o_c >= 3 by the
+# tail lemma 25.1; with d_c != 1 (a lone anchored pair would be self-paired): w_c = d_c + sigma_c in W_OK[sigma_c].
+W_OK = {0: (0, 2, 3, 6), 1: (1, 3, 6), 2: (2, 6)}
+
 def orientations2(twE, sisE):
     tw = {P(a, b) for a, b in twE}; sis = {P(a, b) for a, b in sisE}
-    tdeg = Counter(v for e in tw for v in e)
+    tdeg = Counter(v for e in tw for v in e); sdeg = Counter(v for e in sis for v in e)
     rest = [P(a, b) for a, b in itertools.combinations(range(N), 2) if P(a, b) not in tw and P(a, b) not in sis]
     for bits in range(1 << len(rest)):
         In = {c: [] for c in range(N)}; Out = {c: [] for c in range(N)}
@@ -136,7 +142,7 @@ def orientations2(twE, sisE):
         for c in range(N):
             out = len(Out[c]); f = 2 * out + tdeg[c]
             if f == 2 or (f == 4 and out >= 1): ok = False; break     # 19.1: digon; 4-cycle with two sisters; K22
-            if not sis and tdeg[c] == 0 and len(In[c]) not in (0, 2, 3, 6): ok = False; break   # 26.2 (Sigma = empty)
+            if tdeg[c] == 0 and len(In[c]) + sdeg[c] not in W_OK.get(sdeg[c], ()): ok = False; break   # 26.2, Sigma-form (note 43)
         if ok: yield In, tw
 
 def automorphisms2(twE, sisE):
