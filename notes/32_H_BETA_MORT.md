@@ -81,7 +81,18 @@ certificat est vérifié exactement **sur toutes les colonnes** (énumérées, a
 - **Orientation variable** (tout laissé libre) : PL **faisable**. Ancrages variables avec T = C₇ tordu : PL **faisable** aussi. Le
   relâchement mélange les orientations fractionnaires : il faut **fixer l'orientation**.
 
-## 6. Suite
+## 7. Forme lisible : une identité entière par squelette (`scripts/hb_round_all.py`, `logs/hb_round_*.jsonl`)
+Pour chaque classe : W est la matrice 21 × 21 des multiplicateurs (P2)/(PPE) du certificat, et W̃ = 2W arrondie à des entiers de
+{−2, −1, 0, 1, 2}. On remplace les 231 lignes (P2)/(PPE) par la **seule** identité Σ_{a,b} W̃_ab (P2/PPE)[a,b], en gardant toutes
+les lignes linéaires.
+
+**Résultat : infaisable pour 552 classes sur 552** (7 680 squelettes), écart minimal 19,8.
+- Chaque squelette se réfute donc par **une identité quadratique à coefficients entiers**, plus des lignes linéaires : un tableau de
+  types de colonnes vérifiable ligne à ligne.
+- Ce sont des réponses du solveur PL : ces identités uniques ne sont pas certifiées en exact ici. La preuve est portée par les
+  certificats complets du §3. La forme « une identité » sert à la lecture et à la relecture humaine.
+
+## 8. Suite
 Le même moteur s'applique à toute configuration à carrés « un bloc » : mélanges quelconques et tout-tordu (« structures » l'applique
 au tout-tordu, S15). Il demande :
 - de rendre variables les structures D elles-mêmes (pivots et partenaires), et pas seulement les cycles libres ;

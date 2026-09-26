@@ -36,7 +36,7 @@ def far_solutions(blocks5, deg):
     return prs, out
 
 class GenModel:
-    def __init__(self, orient, useP2=True, forbid_linked=(), cut5=True):
+    def __init__(self, orient, useP2=True, forbid_linked=(), cut5=True, allowed_ik=None):
         """orient: dict pair -> 'tw' or anchor block (int)."""
         self.orient = orient
         self.orbits = [(R, s) for R in PAIRS for s in (0, 1)]
@@ -56,6 +56,7 @@ class GenModel:
                     o = orient[P(j, r)]
                     caps[r] = 2 if o in ('free', 'anch') else (1 if o == 'tw' else (0 if o == j else 2))
                 for k in others:
+                    if allowed_ik is not None and (i, k) not in allowed_ik.get(O, ()): continue
                     for a, b in itertools.combinations_with_replacement(others, 2):
                         nv = defaultdict(int); nv[a] += 1; nv[b] += 1
                         if any(nv[r] > caps[r] for r in nv) or nv[k] > 1: continue
@@ -228,7 +229,8 @@ class GenModel:
 
     def solve_cg(self, max_iter=200, per_type=2, tlimit=280, verbose=True):
         t0 = time.time(); m = len(self.rname)
-        cols = []            # list of entries lists
+        if not hasattr(self, 'pool'): self.pool = []
+        cols = self.pool     # persistent list of entries lists
         colkey = []
         # start: slack columns only (+ fixed m/e columns)
         it = 0
@@ -252,6 +254,7 @@ class GenModel:
             if verbose: print("  iter %d obj %.4f cols %d added %d best %.3g %.0fs" % (it, obj, len(cols), added, best, time.time() - t0)); sys.stdout.flush()
             if added == 0 or it >= max_iter or time.time() - t0 > tlimit:
                 self.last_y = y; self.last_obj = obj; self.done = (added == 0)
+                self.last_x = np.array(h.getSolution().col_value)[:len(self.fixed_cols)]
                 return obj, y
 
     def _master(self, cols):
@@ -271,8 +274,10 @@ class GenModel:
         A = csc_matrix((data, (ri, ci)), shape=(m, nc))
         lp = highspy.HighsLp(); lp.num_col_ = nc; lp.num_row_ = m
         lp.col_cost_ = np.concatenate([np.zeros(nx + nl), np.ones(2 * len(eq))])
-        lp.col_lower_ = np.zeros(nc)
-        lp.col_upper_ = np.concatenate([np.ones(nx), np.array([self.rrhs[r] for r in le], dtype=float), np.full(2 * len(eq), highspy.kHighsInf)])
+        lo = np.zeros(nx); up = np.ones(nx)
+        for t, (l_, u_) in getattr(self, 'bounds', {}).items(): lo[t] = l_; up[t] = u_
+        lp.col_upper_ = np.concatenate([up, np.array([self.rrhs[r] for r in le], dtype=float), np.full(2 * len(eq), highspy.kHighsInf)])
+        lp.col_lower_ = np.concatenate([lo, np.zeros(nc - nx)])
         b = np.array(self.rrhs, dtype=float); lp.row_lower_ = b; lp.row_upper_ = b
         lp.a_matrix_.format_ = highspy.MatrixFormat.kColwise
         lp.a_matrix_.start_ = A.indptr; lp.a_matrix_.index_ = A.indices; lp.a_matrix_.value_ = A.data
@@ -284,8 +289,10 @@ class GenModel:
         yi = np.array([int(round(v * den)) for v in y], dtype=np.int64)
         yb = sum(int(yi[r]) * int(self.rrhs[r]) for r in range(len(yi)))
         UB = 0; LB = 0
-        for (name, ent) in self.fixed_cols:
-            s = sum(int(yi[r]) * int(v) for r, v in ent); UB += max(s, 0); LB += min(s, 0)
+        bnd = getattr(self, 'bounds', {})
+        for t, (name, ent) in enumerate(self.fixed_cols):
+            s = sum(int(yi[r]) * int(v) for r, v in ent); l_, u_ = bnd.get(t, (0, 1))
+            UB += max(s * l_, s * u_); LB += min(s * l_, s * u_)
         for r in range(len(yi)):
             if self.rkind[r] == 'le':
                 s = int(yi[r]) * int(self.rrhs[r]); UB += max(s, 0); LB += min(s, 0)
@@ -315,6 +322,30 @@ class GenModel:
             UB += sum(int(v) for v in sc2[sc2 > 0]) // 2 + (1 if (sc2[sc2 > 0].sum() % 2) else 0)
             LB += -((-sum(int(v) for v in sc2[sc2 < 0])) // 2) - 1
         return (yb > UB or yb < LB), (yb / den, LB / den, UB / den)
+
+def branch_and_bound(g, tlimit, node_limit=500, verbose=True):
+    """DFS on the m (D-matching) variables; every pruned node is certified exactly (verify with node bounds).
+    Returns ('ALL_PRUNED', stats) if the whole tree is closed, else ('OPEN', stats)."""
+    t0 = time.time(); stack = [dict()]; stats = {'nodes': 0, 'certified': 0, 'cert_fail': 0, 'int_feasible_like': 0}
+    mids = [t for t, (nm, ent) in enumerate(g.fixed_cols) if nm[0] == 'm']
+    while stack:
+        if time.time() - t0 > tlimit or stats['nodes'] >= node_limit: return 'OPEN', stats
+        b = stack.pop(); g.bounds = b; stats['nodes'] += 1
+        obj, y = g.solve_cg(tlimit=max(10, tlimit - (time.time() - t0)), verbose=False)
+        if not g.done: return 'OPEN', stats
+        if obj > 1e-6:
+            ok, info = g.verify(y)
+            if ok: stats['certified'] += 1; continue
+            stats['cert_fail'] += 1; return 'OPEN', stats
+        x = g.last_x
+        frac = [(abs(x[t] - 0.5), t) for t in mids if 1e-6 < x[t] < 1 - 1e-6 and t not in b]
+        if not frac:
+            stats['int_feasible_like'] += 1; return 'OPEN', stats     # m integral: would need branching on e / columns
+        _, t = min(frac)
+        if verbose: print("   node %d obj 0 -> branch on %s (x=%.3f) depth %d %.0fs" % (stats['nodes'], g.fixed_cols[t][0][1:], x[t], len(b), time.time() - t0)); sys.stdout.flush()
+        b0 = dict(b); b0[t] = (0, 0); b1 = dict(b); b1[t] = (1, 1)
+        stack.append(b0); stack.append(b1)
+    return 'ALL_PRUNED', stats
 
 def orientation_H(In):
     """H family: T = Z7 twisted, chords anchored at their head: In[c] = blocks x with {c,x} anchored at c."""
