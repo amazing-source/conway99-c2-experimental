@@ -4,7 +4,7 @@ mix_filter6.orientations2 (19.1, 26.2) up to Aut(T), in a fixed order; shard k o
 Each orientation: orbit-level LP with every D-structure variable (orbit_colmodel_gen.OrbitModelGen).  Infeasible -> certificate
 logs/orbit_certs/ogen_<ci>_<idx>.json.gz (model 'gen', spec {"In": ...}, re-checked by orbit_verify_certs.py);
 feasible -> recorded in logs/orient_<ci>.jsonl for block fixing.
-Usage: python orient_campaign.py <ci> [k K]      env TL (s per LP, default 6000), LOWMEM"""
+Usage: python orient_campaign.py <ci> [k K]      env TL (s per LP, default 6000), LOWMEM, ONLY (comma-separated indices)"""
 import sys, os, json, time
 sys.path.insert(0, "scripts")
 import mix_filter6 as F, orbit_colmodel as OM, orbit_colmodel_gen as OG
@@ -27,8 +27,9 @@ if __name__ == "__main__":
     if os.path.exists("logs/orient_%d.jsonl" % ci):
         for line in open("logs/orient_%d.jsonl" % ci): done.add(json.loads(line)["idx"])
     out = open("logs/orient_%d.jsonl" % ci, "a")
+    only = {int(x) for x in os.environ['ONLY'].split(',')} if os.environ.get('ONLY') else None      # a chosen sample of indices
     for idx, In in enumerate(reps):
-        if idx % K != k or idx in done: continue
+        if idx % K != k or idx in done or (only is not None and idx not in only): continue
         t0 = time.time(); g = OG.OrbitModelGen(In); ncol = sum(len(M) for M in g.cols)
         obj, y = g.solve(tlimit=float(os.environ.get('TL', 6000)), verbose=False)
         rec = {"ci": ci, "idx": idx, "In": {str(c): v for c, v in In.items()}, "A": next((c for c in range(N) if len(In[c]) == 6), None),

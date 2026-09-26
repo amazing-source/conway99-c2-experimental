@@ -1,0 +1,13 @@
+orientation job 0 In {'0': [4], '1': [5], '2': [0], '3': [0, 1], '4': [1, 2], '5': [2, 3], '6': [0, 1, 2, 3, 4, 5]}: columns 2201776 rows 2202 built 15s
+  iter 1 obj 1703.64181 cols 756 added 630 best 140 lagr -3038.662 2s (master 0.5s, pricing 1.3s)
+  iter 2 obj 996.92840 cols 1386 added 630 best 104 lagr -2462.723 5s (master 2.0s, pricing 0.9s)
+  iter 3 obj 629.23765 cols 2016 added 630 best 82.8 lagr -2095.485 10s (master 4.1s, pricing 0.9s)
+  iter 4 obj 412.30628 cols 2646 added 630 best 70.3 lagr -1533.523 19s (master 8.1s, pricing 0.9s)
+  iter 5 obj 267.69319 cols 3276 added 630 best 51.7 lagr -1151.261 33s (master 13.5s, pricing 0.9s)
+  iter 6 obj 162.67815 cols 3906 added 630 best 45 lagr -987.303 57s (master 22.8s, pricing 0.8s)
+  iter 7 obj 99.78323 cols 4536 added 630 best 29.5 lagr -668.701 92s (master 34.7s, pricing 0.8s)
+  iter 8 obj 57.93945 cols 5166 added 630 best 19.9 lagr -427.073 142s (master 49.1s, pricing 1.0s)
+  iter 9 obj 35.82221 cols 5796 added 630 best 13.6 lagr -258.049 213s (master 69.7s, pricing 0.8s)
+  iter 10 obj 21.60897 cols 6426 added 630 best 8.09 lagr -156.524 317s (master 103.2s, pricing 0.8s)
+  iter 11 obj 15.07609 cols 7056 added 630 best 5.16 lagr -95.459 445s (master 127.5s, pricing 0.8s)
+  iter 12 obj 11.09929 cols 7686 added 630 best 3.82 lagr -62.323 580s (master 134.5s, pricing 0.8s)

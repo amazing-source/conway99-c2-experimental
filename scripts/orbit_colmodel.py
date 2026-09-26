@@ -239,6 +239,7 @@ class OrbitModel:
         if start == 0 or not hasattr(self, '_h'):
             le = [r for r in range(m) if self.rkind[r] == 'le']; eq = [r for r in range(m) if self.rkind[r] == 'eq']
             h = highspy.Highs(); h.setOptionValue("output_flag", False); h.setOptionValue("solver", "simplex")
+            if __import__('os').environ.get('WSPRIMAL'): h.setOptionValue("simplex_strategy", 4)   # primal: resumes from the old basis
             inf = highspy.kHighsInf
             b = np.array(self.rrhs, dtype=float)
             h.addRows(m, b, b, 0, np.array([], dtype=np.int32), np.array([], dtype=np.int32), np.array([], dtype=np.float64))
@@ -256,7 +257,10 @@ class OrbitModel:
         return self._h
 
     def solve(self, tlimit=280, per=3, verbose=True, init=None):
-        """init: optional list of (Z, q-bytes) from a related model (column reuse); kept if valid here"""
+        """init: optional list of (Z, q-bytes) from a related model (column reuse); kept if valid here.
+        env PER overrides per (columns added per orbit and iteration: the master's cost is dominated by its rows, so more columns
+        per iteration means fewer master solves)"""
+        per = int(__import__('os').environ.get('PER', per))
         t0 = time.time(); cols = []; keys = set(); self.colinfo = []; ckeys = []
         if init:
             look = {}
@@ -282,32 +286,57 @@ class OrbitModel:
             added = 0; best = 0.0; tp = time.time(); sumbest = 0.0
             lowmem = __import__('os').environ.get('LOWMEM') is not None
             if not lowmem and not hasattr(self, '_colsf'): self._colsf = [M.astype(np.float32) for M in self.cols]
-            for Z in range(self.n):
-                const, lin, Y = self.score_parts(y, Z)
-                if lowmem:                                   # no float32 cache: convert and score in chunks (RAM)
-                    lf, Yf = lin.astype(np.float32), Y.astype(np.float32); parts = []
-                    for c0 in range(0, len(self.cols[Z]), CHUNK):
-                        M = self.cols[Z][c0:c0 + CHUNK].astype(np.float32)
-                        parts.append(const + M @ lf + np.einsum('ij,ij->i', M @ Yf, M))
-                    sc = np.concatenate(parts) if parts else np.zeros(0, dtype=np.float32)
-                else:
-                    M = self._colsf[Z]
-                    sc = const + M @ lin.astype(np.float32) + np.einsum('ij,ij->i', M @ Y.astype(np.float32), M)
-                sc = sc.astype(np.float64) + self.extra_scores(y, Z, self.cols[Z])
-                sumbest += max(0.0, float(sc.max())) if len(sc) else 0.0
-                for t in np.argsort(-sc)[:per]:
-                    if sc[t] > 1e-5 and obj > 1e-7:
-                        key = (Z, self.cols[Z][t].tobytes())
-                        if key in keys: continue
-                        keys.add(key); cols.append(self.entries(Z, self.cols[Z][t])); added += 1; best = max(best, sc[t])
-                        self.colinfo.append((Z, int(np.argmax(self.cols[Z][t] == 2)))); ckeys.append(key)
+
+            def price(yv):
+                """scores of every column at the duals yv: (sum over orbits of the max score, candidates (Z, t, score))"""
+                summax = 0.0; sumpos = 0.0; cand = []
+                for Z in range(self.n):
+                    const, lin, Y = self.score_parts(yv, Z)
+                    if lowmem:                                   # no float32 cache: convert and score in chunks (RAM)
+                        lf, Yf = lin.astype(np.float32), Y.astype(np.float32); parts = []
+                        for c0 in range(0, len(self.cols[Z]), CHUNK):
+                            M = self.cols[Z][c0:c0 + CHUNK].astype(np.float32)
+                            parts.append(const + M @ lf + np.einsum('ij,ij->i', M @ Yf, M))
+                        sc = np.concatenate(parts) if parts else np.zeros(0, dtype=np.float32)
+                    else:
+                        M = self._colsf[Z]
+                        sc = const + M @ lin.astype(np.float32) + np.einsum('ij,ij->i', M @ Y.astype(np.float32), M)
+                    sc = sc.astype(np.float64) + self.extra_scores(yv, Z, self.cols[Z])
+                    if not len(sc): continue
+                    summax += float(sc.max()); sumpos += max(0.0, float(sc.max()))
+                    for t in np.argsort(-sc)[:per]:
+                        if sc[t] > 1e-5: cand.append((Z, int(t), float(sc[t])))
+                return summax, cand, sumpos
+
+            if not hasattr(self, '_rhsv'):
+                self._rhsv = np.array(self.rrhs, dtype=float); self._lemask = np.array([k == 'le' for k in self.rkind])
+            margin = lambda yv, summax: float(yv @ self._rhsv - np.maximum(yv[self._lemask] * self._rhsv[self._lemask], 0).sum() - summax)
+            alpha = float(__import__('os').environ.get('SMOOTH', 0))
+            if alpha > 0:                                        # Wentges smoothing: price at a blend of the best point and the master duals
+                if it == 1 or getattr(self, '_yc', None) is None or len(self._yc) != len(y): self._yc, self._Mc = y.copy(), -np.inf
+                ys = alpha * self._yc + (1 - alpha) * y
+                smx, cand, _ = price(ys); Ms = margin(ys, smx)
+                if Ms > self._Mc: self._yc, self._Mc = ys, Ms
+                if not cand:                                     # mispricing: fall back to the master duals
+                    smx, cand, _ = price(y); Mm = margin(y, smx)
+                    if Mm > self._Mc: self._yc, self._Mc = y.copy(), Mm
+                sumbest = obj - self._Mc if np.isfinite(self._Mc) else obj
+            else:                                                # default (unchanged): price at the master duals
+                smx, cand, sumbest = price(y)
+            for Z, t, sct in cand:
+                if obj > 1e-7:
+                    key = (Z, self.cols[Z][t].tobytes())
+                    if key in keys: continue
+                    keys.add(key); cols.append(self.entries(Z, self.cols[Z][t])); added += 1; best = max(best, sct)
+                    self.colinfo.append((Z, int(np.argmax(self.cols[Z][t] == 2)))); ckeys.append(key)
             if verbose: print("  iter %d obj %.5f cols %d added %d best %.3g lagr %.3f %.0fs (master %.1fs, pricing %.1fs)" % (it, obj, len(cols), added, best, obj - sumbest, time.time() - t0, tm, time.time() - tp)); sys.stdout.flush()
+            ycert = self._yc if alpha > 0 else y
             if obj > 1e-7 and obj - sumbest > 0.05:          # Lagrangian (Farkas) bound positive: exact check now, stop if valid
-                ok, _b = self.verify(y)
+                ok, _b = self.verify(ycert)
                 if ok:
                     self.done = True; self.final_keys = list(ckeys)
                     self.last_x = np.array(h.getSolution().col_value)[:len(cols)] if not __import__('os').environ.get('WS') else None
-                    return obj, y
+                    return obj, ycert
             if added == 0 or time.time() - t0 > tlimit:
                 self.done = added == 0
                 self.last_x = np.array(h.getSolution().col_value)[:len(cols)] if not __import__('os').environ.get('WS') else None
