@@ -39,6 +39,36 @@ def forbid_for(assign):
                     if g0.pivot[Dz] == c and Dz != W: forbid.add((Z, Dz))
     return forbid
 
+
+def closed_components(assign):
+    """closed D-classes at each fixed block c: components of the D-graph at c containing no twisted pair (balance 24.0)"""
+    out = []
+    for c, trip in assign.items():
+        adj = defaultdict(set); nodes = set()
+        for (i, x, y) in trip: adj[x].add(y); adj[y].add(x); nodes |= {x, y}
+        tw = {x for x in nodes if not (c in In and x in In[c])}            # pair {c,x} not anchored at c: twisted at c
+        seen = set()
+        for v in nodes:
+            if v in seen: continue
+            comp = set(); st = [v]
+            while st:
+                u = st.pop()
+                if u in comp: continue
+                comp.add(u); st += list(adj[u] - comp)
+            seen |= comp
+            if not (comp & tw): out.append((c, frozenset(comp)))
+    return out
+
+def balance_filter(g, comps):
+    """24.0 on each closed class S at c: every orbit Z whose pair avoids c has sum_{m in S} q_Z(orbits of {c,m}) = |S| - |P_Z & S|"""
+    for c, S in comps:
+        orbs = [o for m in S for o in g.orbs_of[frozenset((c, m))]]
+        for Z in range(g.n):
+            P = g.pair[Z]
+            if c in P: continue
+            need = len(S) - len(P & S)
+            M = g.cols[Z]; g.cols[Z] = M[M[:, orbs].sum(axis=1) == need]
+
 out = open("logs/orbit_fixcamp_%s_%d.jsonl" % (ci, job), "a")
 stack = [({}, list(range(len(leaves))), None)]; nodes = 0; t0 = time.time(); open_nodes = 0
 while stack:
@@ -52,13 +82,28 @@ while stack:
         out.write(json.dumps(rec) + chr(10)); out.flush(); print(rec)
         free_blocks = [c for c in range(7) if c != A]
         opts = {c: Counter(blockof(leaves[t], c) for t in idx) for c in free_blocks}
-        c = max(free_blocks, key=lambda b: len(opts[b]))
+        multi = [b for b in free_blocks if len(opts[b]) > 1] or free_blocks
+        c = (max if os.environ.get('RICHEST') else min)(multi, key=lambda b: len(opts[b]))   # default: fewest options > 1
         for trip in opts[c]:
             sub = [t for t in idx if blockof(leaves[t], c) == trip]
             stack.append(({c: trip}, sub, None))
         continue
     g = OG.OrbitModelGen(In, forbid=fb)
-    obj, y = g.solve(tlimit=float(os.environ.get('TL', 4000)), verbose=False, init=init)   # warm start from the parent's columns
+    if not os.environ.get('NOBALF'):
+        comps = closed_components(assign)
+        if comps:
+            balance_filter(g, comps)
+            if any(len(M) == 0 for M in g.cols):          # combinatorial kill: some orbit has no admissible column
+                rec = {"node": nodes, "assign": {str(c): len(v) for c, v in assign.items()}, "fixed_blocks": sorted(assign), "nleaves": len(idx),
+                       "status": "dead-comb", "comps": [[c, sorted(S)] for c, S in comps], "secs": round(time.time() - t1)}
+                import gzip as _gz
+                _gz.open("logs/orbit_certs/comb_%s_%d_%d.json.gz" % (ci, job, nodes), "wt").write(json.dumps({"model": "comb", "spec": {"In": po["In"],
+                    "forbid": sorted(map(list, fb)), "assign": {str(c): [list(z) for z in v] for c, v in assign.items()}, "comps": [[c, sorted(S)] for c, S in comps],
+                    "empty_orbits": [Z for Z in range(42) if len(g.cols[Z]) == 0]}}))
+                out.write(json.dumps(rec) + chr(10)); out.flush(); print(rec); continue
+            g.build_rows()
+    solver = g.solve_lazy if os.environ.get('LAZYCUTS') else g.solve
+    obj, y = solver(tlimit=float(os.environ.get('TL', 4000)), verbose=False, init=init)   # warm start from the parent's columns
     if g.done and obj > 1e-6:
         ok, b = g.verify(y)
         st = 'dead' if ok else 'certfail'
@@ -68,13 +113,13 @@ while stack:
     rec = {"node": nodes, "assign": {str(c): len(v) for c, v in assign.items()}, "fixed_blocks": sorted(assign), "nleaves": len(idx),
            "status": st, "slack": round(obj, 4), "secs": round(time.time() - t1)}
     out.write(json.dumps(rec) + "\n"); out.flush(); print(rec); sys.stdout.flush()
-    if st == 'dead': continue
+    if st in ('dead', 'dead-comb'): continue
     if st != 'feasible': open_nodes += 1; continue
     free_blocks = [c for c in range(7) if c != A and c not in assign]
     opts = {c: Counter(blockof(leaves[t], c) for t in idx) for c in free_blocks}
     cands = [c for c in free_blocks if len(opts[c]) > 1] or [c for c in free_blocks if len(opts[c]) == 1 and opts[c]]
     if not cands: print("UNRESOLVED fully fixed node", assign); open_nodes += 1; continue
-    c = max(cands, key=lambda b: len(opts[b]))
+    c = (max if os.environ.get('RICHEST') else min)(cands, key=lambda b: len(opts[b]))
     for trip in opts[c]:
         sub = [t for t in idx if blockof(leaves[t], c) == trip]
         a2 = dict(assign); a2[c] = trip; stack.append((a2, sub, getattr(g, 'final_keys', None)))

@@ -1,0 +1,27 @@
+1 0 146331 unknown limit 61 45.3s
+2 1 25986 unknown limit 61 44.9s
+3 2 8710 unknown limit 61 42.8s
+4 3 4031 unknown limit 61 42.0s
+5 4 336 unknown limit 61 39.0s
+6 5 21 unknown limit 61 35.1s
+7 6 1 dead LP 1 0.8s
+8 6 1 dead LP 1 0.8s
+9 6 1 dead LP 1 0.8s
+10 6 1 dead LP 1 0.7s
+11 6 1 dead LP 1 0.7s
+12 6 1 dead LP 1 0.8s
+13 6 1 dead LP 1 0.8s
+14 6 1 dead LP 1 0.8s
+15 6 1 dead LP 1 0.8s
+16 6 1 dead LP 1 0.7s
+17 6 1 dead LP 1 0.8s
+18 6 1 dead LP 1 0.8s
+19 6 1 dead LP 1 0.7s
+20 6 1 dead LP 1 0.8s
+21 6 1 dead LP 1 0.8s
+22 6 1 dead LP 1 0.7s
+23 6 1 dead LP 1 0.8s
+24 6 1 dead LP 1 0.7s
+25 6 1 dead LP 1 0.8s
+PAIRDFS 9 job 42: leaves 146331 nodes 25 dead leaves 19 open 37 {'unknown': 6, 'dead/LP': 19} INCOMPLETE 270s
+exit 0

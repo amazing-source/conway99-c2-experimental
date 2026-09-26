@@ -1,0 +1,8 @@
+{"node": 1, "assign": {}, "fixed_blocks": [], "nleaves": 228, "status": "feasible(known)", "slack": 0, "secs": 0}
+{"node": 2, "assign": {"0": 6}, "fixed_blocks": [0], "nleaves": 80, "status": "feasible", "slack": 0.0, "secs": 3579}
+{"node": 3, "assign": {"0": 6, "1": 6}, "fixed_blocks": [0, 1], "nleaves": 27, "status": "dead", "slack": 4.8585, "secs": 2750}
+{"node": 4, "assign": {"0": 6, "1": 6}, "fixed_blocks": [0, 1], "nleaves": 27, "status": "dead", "slack": 7.4073, "secs": 2206}
+{"node": 5, "assign": {"0": 6, "1": 6}, "fixed_blocks": [0, 1], "nleaves": 26, "status": "dead", "slack": 12.2249, "secs": 1318}
+{"node": 6, "assign": {"0": 6}, "fixed_blocks": [0], "nleaves": 71, "status": "feasible", "slack": 0.0, "secs": 994}
+{"node": 7, "assign": {"0": 6, "1": 6}, "fixed_blocks": [0, 1], "nleaves": 24, "status": "dead", "slack": 8.2367, "secs": 1531}
+{"node": 8, "assign": {"0": 6, "1": 6}, "fixed_blocks": [0, 1], "nleaves": 27, "status": "dead", "slack": 20.9458, "secs": 1350}

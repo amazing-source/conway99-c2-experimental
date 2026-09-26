@@ -200,7 +200,7 @@ def run(twE, k, K, budget, sisE=()):
 if __name__ == "__main__":
     ci, k, K, budget = sys.argv[1], int(sys.argv[2]), int(sys.argv[3]), float(sys.argv[4])
     sisE = [tuple(map(int, e)) for e in sys.argv[5].split(",")] if len(sys.argv) > 5 and sys.argv[5] else []
-    if ci.startswith("edges="): twE = [tuple(map(int, e)) for e in ci[6:].split(",")]; ci = "E" + ci[6:].replace(",", "_")
+    if ci.startswith("edges="): twE = [tuple(map(int, e)) for e in ci[6:].split(",") if e]; ci = "E" + ci[6:].replace(",", "_")
     else: ci = int(ci); twE = twisted_classes()[ci]
     reps, surv, stats, done, per_orient = run(twE, k, K, budget, sisE)
     print("twisted class", ci, twE, "| orientation classes", len(reps), "| worker", k, dict(stats), "| surviving skeleton classes", len(surv), "done" if done else "TIME CAP")

@@ -1,0 +1,14 @@
+ad2_0.json.gz: y.b 425560831 bound 351737183 margin 73.8236 rhs mismatches 0 columns 1030560 VALID 20s
+ad2_130.json.gz: y.b 186925946 bound 136382562 margin 50.5434 rhs mismatches 0 columns 2208904 VALID 48s
+ad2_132.json.gz: y.b 189272080 bound 174691128 margin 14.5810 rhs mismatches 0 columns 2208904 VALID 46s
+ad2_183.json.gz: y.b 194166304 bound 192676515 margin 1.4898 rhs mismatches 0 columns 2246136 VALID 43s
+ad2_191.json.gz: y.b 156236796 bound 149828295 margin 6.4085 rhs mismatches 0 columns 2158800 VALID 42s
+ad2_214.json.gz: y.b 127684408 bound 101414167 margin 26.2702 rhs mismatches 0 columns 2330976 VALID 43s
+ad2_223.json.gz: y.b 182415181 bound 158153340 margin 24.2618 rhs mismatches 0 columns 2164052 VALID 40s
+ad2_235.json.gz: y.b 192094815 bound 159157284 margin 32.9375 rhs mismatches 0 columns 2298892 VALID 44s
+ad2_251.json.gz: y.b 128734699 bound 114564574 margin 14.1701 rhs mismatches 0 columns 3283052 VALID 54s
+ad2_263.json.gz: y.b 125209186 bound 115243936 margin 9.9652 rhs mismatches 0 columns 3315920 VALID 55s
+ad2_307.json.gz: y.b 178337244 bound 168426005 margin 9.9112 rhs mismatches 0 columns 2272820 VALID 37s
+ad2_313.json.gz: y.b 165430351 bound 146638059 margin 18.7923 rhs mismatches 0 columns 2272820 VALID 37s
+ad2_69.json.gz: y.b 114702976 bound 114410163 margin 0.2928 rhs mismatches 0 columns 3531272 VALID 57s
+ALL VALID

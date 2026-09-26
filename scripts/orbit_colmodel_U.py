@@ -44,6 +44,7 @@ class OrbitModelU(OM.OrbitModel):
                     elif t[0] == 'tw': ty = ('one', (a, b)[s])
                     elif t[0] == 'dd': ty = ('dis',)
                     elif t[0] == 'mix': ty = ('one', t[1]) if s == 0 else ('dis',)
+                    elif t[0] == 'sib': ty = ('sib',)
                     else: raise ValueError(t)
                     self.T.append((a, b, None)); self.otype.append(ty)
         n = self.n = 42
@@ -51,10 +52,14 @@ class OrbitModelU(OM.OrbitModel):
         self.orbs_of = defaultdict(list)
         for s in range(n): self.orbs_of[self.pair[s]].append(s)
         self.sis = [next(u for u in self.orbs_of[self.pair[s]] if u != s) for s in range(n)]
-        self.free = {c: [s for s in range(n) if c in self.pair[s] and (self.otype[s][0] == 'dis' or self.otype[s][1] != c)] for c in range(N)}
+        self.free = {c: [s for s in range(n) if c in self.pair[s] and (self.otype[s][0] == 'dis' or (self.otype[s][0] == 'one' and self.otype[s][1] != c))] for c in range(N)}
         self.Sh = np.array([[2 if self.pair[a] == self.pair[b] else len(self.pair[a] & self.pair[b]) for b in range(n)] for a in range(n)])
         self.use_sis5 = False
-        self.build_columns(); self.build_rows()
+        self.sibpairs = [frozenset(k) for k, v in ptype.items() if v[0] == 'sib']
+        self.build_columns()
+        self.empty_orbits = [Z for Z in range(n) if len(self.cols[Z]) == 0]
+        if self.empty_orbits: return                     # combinatorially impossible: some orbit has no admissible column
+        self.build_rows()
 
     def _expand(self, base, prs, sols, Dpair=None, Dz=None):
         mats = []
@@ -97,6 +102,11 @@ class OrbitModelU(OM.OrbitModel):
                             prs, sols = far_solutions(fb, deg)
                             base = np.zeros(42, dtype=np.int8); base[Dz] = 2; base[F1] += 1; base[F2] += 1
                             mats += self._expand(base, [frozenset(p) for p in prs], sols)
+            elif ty[0] == 'sib':
+                i, j = a, b; Zs = self.sis[Z]; fb = [t for t in range(N) if t not in (i, j)]
+                prs, sols = far_solutions(fb, {t: 4 for t in fb})
+                base = np.zeros(42, dtype=np.int8); base[Zs] = 2
+                mats += self._expand(base, [frozenset(p) for p in prs], sols)
             else:
                 i, j = a, b; Zs = self.sis[Z]; fb = [t for t in range(N) if t not in (i, j)]
                 loops = (0, 1) if self.otype[Zs] == ('dis',) else (0,)
@@ -125,6 +135,9 @@ class OrbitModelU(OM.OrbitModel):
                                 mats += self._expand(base, prs, sols, Dpair=R, Dz=Dz)
             M = np.concatenate(mats) if mats else np.zeros((0, 42), dtype=np.int8)
             if len(M): assert (M.sum(axis=1) == 12).all(), (Z, ty)
+            for R in self.sibpairs:                           # grid lemma 8.1: exactly one neighbour in every disjoint sib pair
+                if not (R & self.pair[Z]) and len(M):
+                    o1, o2 = self.orbs_of[R]; M = M[(M[:, o1] + M[:, o2]) == 1]
             self.cols.append(M)
 
 def orient_types(In):

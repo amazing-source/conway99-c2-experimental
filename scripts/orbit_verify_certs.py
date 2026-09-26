@@ -181,3 +181,42 @@ if __name__ == "__main__":
         t0 = time.time(); yb, high, mism, ncols = check(fn); ok = yb > high and mism == 0; allok &= ok
         print("%s: y.b %d  bound %d  margin %.4f (x1e6)  rhs mismatches %d  columns %d  %s  %.0fs" % (fn.split('/')[-1], yb, high, (yb - high) / 1e6, mism, ncols, "VALID" if ok else "INVALID", time.time() - t0)); sys.stdout.flush()
     print("ALL VALID" if allok else "SOME INVALID")
+
+def check_comb(fn):
+    """combinatorial kill (model 'comb'): with the D-structure fixed at some blocks, the balance lemma 24.0 on every closed D-class
+    S at a fixed block c (sum over m in S of q_Z(orbits of {c,m}) = |S| - |P_Z & S| for Z avoiding c) leaves some orbit with NO
+    admissible column.  Re-enumerates that orbit's columns independently (gen semantics + forbid) and re-checks the balance."""
+    d = json.load(gzip.open(fn, "rt")); spec = d["spec"]
+    dd = {"model": "gen", "spec": {"In": spec["In"], "forbid": spec["forbid"]}}
+    pair, orbs, sis, opts, freeat, cand = structure(dd); n = 42
+    comps = [(int(c), set(S)) for c, S in spec["comps"]]
+    dead = []
+    for Z in spec["empty_orbits"]:
+        survivors = 0
+        for (i, j, k, Dz) in opts[Z]:
+            other = lambda s: [x for x in pair[s] if x != j][0]
+            far_b = [t for t in range(N) if t not in (i, j)]
+            for F1, F2 in itertools.combinations(cand(Z, i, j), 2):
+                if other(F1) == k and other(F2) == k: continue
+                cnt = defaultdict(int); cnt[other(F1)] += 1; cnt[other(F2)] += 1
+                deg = {t: 4 - (2 if t == k else 0) - cnt[t] for t in far_b}
+                if min(deg.values()) < 0: continue
+                prs, rows = far_rows(far_b, deg)
+                base = np.zeros(n, dtype=np.int64); base[Dz] = 2; base[F1] = 1; base[F2] = 1
+                for r in rows:
+                    v = base.copy(); ones = []
+                    for (a, b), val in zip(prs, r):
+                        o = orbs[frozenset((a, b))]
+                        if val == 2: v[o[0]] += 1; v[o[1]] += 1
+                        elif val == 1: ones.append(o)
+                    for ch in itertools.product(*ones):
+                        w = v.copy()
+                        for o in ch: w[o] += 1
+                        ok = True
+                        for c, S in comps:
+                            if c in pair[Z]: continue
+                            got = sum(int(w[o]) for m in S for o in orbs[frozenset((c, m))])
+                            if got != len(S) - len(pair[Z] & S): ok = False; break
+                        if ok: survivors += 1
+        dead.append((Z, survivors))
+    return dead

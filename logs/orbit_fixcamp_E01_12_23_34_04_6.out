@@ -1,0 +1,2 @@
+{'node': 1, 'assign': {}, 'fixed_blocks': [], 'nleaves': 7, 'status': 'dead', 'slack': 15.3821, 'secs': 1233}
+FIXCAMP E01_12_23_34_04 job 6: nodes 1 open 0 ALL DEAD 1233s

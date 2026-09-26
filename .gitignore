@@ -5,3 +5,9 @@ external_c3/
 __pycache__/
 *.pyc
 data/tmp/
+external_structures/
+external_c1/
+# grosses listes de feuilles du filtre v6 (regenerables : mix_filter6.py), certificats par feuille du moteur par paires (regenerables : pair_fast.py)
+logs/mix6_cls_*.json
+logs/pair_certs/
+logs/sigma_budget/

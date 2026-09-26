@@ -113,7 +113,8 @@ class OrbitModel:
                     rel = 'diag' if a == b else ('sister' if self.pair[a] == self.pair[b] else ('share' if self.pair[a] & self.pair[b] else 'disjoint'))
                     if irel and rel not in irel.split(','): continue
                     add(('I', a, b), 'eq', 2 * (12 * (a == b) + 4 - int(self.Sh[a, b]))); self.Ikept.add((a, b))
-        self.cuts = []
+        self.cuts = []; self.lazy_pool = []
+        lazy = __import__('os').environ.get('LAZYCUTS') is not None
         for c in range(N):
             F = self.free[c]; f = len(F)
             if f == 0: continue
@@ -121,6 +122,7 @@ class OrbitModel:
             for size in range(3, f):
                 if size in bad: continue
                 for S in itertools.combinations(F, size):
+                    if lazy and size > 3: self.lazy_pool.append((c, S)); continue      # separated later (solve_lazy)
                     add(('cut', c, S), 'le', 2 * (size - 1)); self.cuts.append((c, S))
         # static linear coefficient maps: lin_rows[Z][W] = list of row indices whose coefficient is q_Z(W) (+1) or -q_Z(W)
         self.linmap = []
@@ -255,20 +257,20 @@ class OrbitModel:
 
     def solve(self, tlimit=280, per=3, verbose=True, init=None):
         """init: optional list of (Z, q-bytes) from a related model (column reuse); kept if valid here"""
-        t0 = time.time(); cols = []; keys = set(); self.colinfo = []
+        t0 = time.time(); cols = []; keys = set(); self.colinfo = []; ckeys = []
         if init:
             look = {}
             for Z, qb in init:
                 if Z not in look: look[Z] = {self.cols[Z][t].tobytes() for t in range(len(self.cols[Z]))}
                 if qb in look[Z] and (Z, qb) not in keys:
                     q = np.frombuffer(qb, dtype=np.int8)
-                    keys.add((Z, qb)); cols.append(self.entries(Z, q)); self.colinfo.append((Z, int(np.argmax(q == 2))))
+                    keys.add((Z, qb)); cols.append(self.entries(Z, q)); self.colinfo.append((Z, int(np.argmax(q == 2)))); ckeys.append((Z, qb))
         # start: 3 random columns per orbit
         rng = np.random.default_rng(0)
         for Z in range(self.n):
             M = self.cols[Z]
             for t in rng.choice(len(M), size=min(3, len(M)), replace=False):
-                keys.add((Z, M[t].tobytes())); cols.append(self.entries(Z, M[t])); self.colinfo.append((Z, int(np.argmax(M[t] == 2))))
+                keys.add((Z, M[t].tobytes())); cols.append(self.entries(Z, M[t])); self.colinfo.append((Z, int(np.argmax(M[t] == 2)))); ckeys.append((Z, M[t].tobytes()))
         it = 0
         while True:
             it += 1
@@ -278,11 +280,19 @@ class OrbitModel:
             obj = h.getInfo().objective_function_value; tm = time.time() - tm
             y = np.array(h.getSolution().row_dual)
             added = 0; best = 0.0; tp = time.time(); sumbest = 0.0
-            if not hasattr(self, '_colsf'): self._colsf = [M.astype(np.float32) for M in self.cols]
+            lowmem = __import__('os').environ.get('LOWMEM') is not None
+            if not lowmem and not hasattr(self, '_colsf'): self._colsf = [M.astype(np.float32) for M in self.cols]
             for Z in range(self.n):
                 const, lin, Y = self.score_parts(y, Z)
-                M = self._colsf[Z]
-                sc = const + M @ lin.astype(np.float32) + np.einsum('ij,ij->i', M @ Y.astype(np.float32), M)
+                if lowmem:                                   # no float32 cache: convert and score in chunks (RAM)
+                    lf, Yf = lin.astype(np.float32), Y.astype(np.float32); parts = []
+                    for c0 in range(0, len(self.cols[Z]), CHUNK):
+                        M = self.cols[Z][c0:c0 + CHUNK].astype(np.float32)
+                        parts.append(const + M @ lf + np.einsum('ij,ij->i', M @ Yf, M))
+                    sc = np.concatenate(parts) if parts else np.zeros(0, dtype=np.float32)
+                else:
+                    M = self._colsf[Z]
+                    sc = const + M @ lin.astype(np.float32) + np.einsum('ij,ij->i', M @ Y.astype(np.float32), M)
                 sc = sc.astype(np.float64) + self.extra_scores(y, Z, self.cols[Z])
                 sumbest += max(0.0, float(sc.max())) if len(sc) else 0.0
                 for t in np.argsort(-sc)[:per]:
@@ -290,19 +300,52 @@ class OrbitModel:
                         key = (Z, self.cols[Z][t].tobytes())
                         if key in keys: continue
                         keys.add(key); cols.append(self.entries(Z, self.cols[Z][t])); added += 1; best = max(best, sc[t])
-                        self.colinfo.append((Z, int(np.argmax(self.cols[Z][t] == 2))))
+                        self.colinfo.append((Z, int(np.argmax(self.cols[Z][t] == 2)))); ckeys.append(key)
             if verbose: print("  iter %d obj %.5f cols %d added %d best %.3g lagr %.3f %.0fs (master %.1fs, pricing %.1fs)" % (it, obj, len(cols), added, best, obj - sumbest, time.time() - t0, tm, time.time() - tp)); sys.stdout.flush()
             if obj > 1e-7 and obj - sumbest > 0.05:          # Lagrangian (Farkas) bound positive: exact check now, stop if valid
                 ok, _b = self.verify(y)
                 if ok:
-                    self.done = True; self.final_keys = list(keys)
+                    self.done = True; self.final_keys = list(ckeys)
                     self.last_x = np.array(h.getSolution().col_value)[:len(cols)] if not __import__('os').environ.get('WS') else None
                     return obj, y
             if added == 0 or time.time() - t0 > tlimit:
                 self.done = added == 0
                 self.last_x = np.array(h.getSolution().col_value)[:len(cols)] if not __import__('os').environ.get('WS') else None
-                self.final_keys = list(keys)
+                self.final_keys = list(ckeys)
                 return obj, y
+
+    def add_cut_row(self, c, S):
+        r = len(self.rname); name = ('cut', c, S); self.rows[name] = r
+        self.rname.append(name); self.rkind.append('le'); self.rrhs.append(2 * (len(S) - 1)); self.cuts.append((c, S))
+        for Z in S:
+            for W in S:
+                if W != Z: self.linmap[Z][W].append((r, 1))
+
+    def solve_lazy(self, tlimit=280, per=3, verbose=True, init=None):
+        """column generation + separation of the pooled subtour cuts (sizes > 3) whenever the master is feasible"""
+        t0 = time.time(); total_added_cuts = 0
+        while True:
+            obj, y = self.solve(tlimit=max(30, tlimit - (time.time() - t0)), per=per, verbose=verbose, init=init)
+            if not self.done or obj > 1e-7 or not self.lazy_pool: return obj, y
+            # feasible master: separate the pooled cuts with the primal solution
+            x = self.last_x; keys = self.final_keys
+            if x is None or len(keys) != len(x): return obj, y
+            E = defaultdict(float)
+            for (Z, qb), xv in zip(keys, x):
+                if xv <= 1e-9: continue
+                q = np.frombuffer(qb, dtype=np.int8)
+                for F in np.nonzero(q == 1)[0]: E[(Z, int(F))] += xv
+            viol = []
+            for (c, S) in self.lazy_pool:
+                val = sum(E.get((Z, F), 0.0) for Z in S for F in S if F != Z)
+                if val > 2 * (len(S) - 1) + 1e-6: viol.append((val - 2 * (len(S) - 1), c, S))
+            if not viol: return obj, y
+            viol.sort(reverse=True)
+            for _, c, S in viol[:200]:
+                self.add_cut_row(c, S); self.lazy_pool.remove((c, S))
+            total_added_cuts += min(200, len(viol))
+            if verbose: print("  lazy cuts: %d violated, %d added (total %d)" % (len(viol), min(200, len(viol)), total_added_cuts)); sys.stdout.flush()
+            init = keys                                   # restart CG from the current columns (entries rebuilt)
 
     def verify(self, y, den=10 ** 6):
         yi = np.array([int(round(v * den)) for v in y], dtype=np.int64)
@@ -313,10 +356,16 @@ class OrbitModel:
                 s = int(yi[r]) * int(self.rrhs[r]); UB += max(s, 0); LB += min(s, 0)
         for Z in range(self.n):
             const, lin, Y = self.score_parts(yi, Z)
-            M = self.cols[Z].astype(np.int64)
-            sc = int(const) + M @ lin + np.einsum('ij,ij->i', M @ Y, M) + np.asarray(self.extra_scores(yi, Z, self.cols[Z]), dtype=np.int64)
-            UB += int(sc.max()); LB += int(sc.min())
+            if len(self.cols[Z]) == 0: continue
+            hi_, lo_ = None, None
+            for c0 in range(0, len(self.cols[Z]), CHUNK):             # chunks: bounded RAM on large column sets
+                Mi = self.cols[Z][c0:c0 + CHUNK]; M = Mi.astype(np.int64)
+                sc = int(const) + M @ lin + np.einsum('ij,ij->i', M @ Y, M) + np.asarray(self.extra_scores(yi, Z, Mi), dtype=np.int64)
+                hi_ = int(sc.max()) if hi_ is None else max(hi_, int(sc.max())); lo_ = int(sc.min()) if lo_ is None else min(lo_, int(sc.min()))
+            UB += hi_; LB += lo_
         return (yb > UB or yb < LB), (yb / den, LB / den, UB / den)
+
+CHUNK = 400000                                        # rows per chunk in pricing (LOWMEM) and verify
 
 def save_cert(g, y, path, model, spec, bounds, den=10 ** 6):
     """certificate: model type + spec (enough to rebuild the orbit labelling), integer multipliers with row labels"""

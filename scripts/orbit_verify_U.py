@@ -2,7 +2,8 @@
 No LP, no code shared with orbit_colmodel_U.py: pair types -> orbit types, free sets, and ALL columns are rebuilt here; each row is
 rebuilt from its label with its own right-hand side (stored rhs only compared).
 Orbit types from pair types: ('anch',c): both one-block via c; ('tw',): orbit 0 via min block, orbit 1 via max; ('dd',): both dis;
-('mix',c): orbit 0 one-block via c, orbit 1 dis.  Free at c: dis orbits of pairs containing c, one-block orbits with pivot != c.
+('mix',c): orbit 0 one-block via c, orbit 1 dis; ('sib',): both sister orbits (q[sister] = 2, far block sums 4, never free).
+Grid lemma 8.1: every column has exactly one neighbour in each sister pair disjoint from its own pair.  Free at c: dis orbits of pairs containing c, one-block orbits with pivot != c.
 Columns:
   one-block Z (pivot i, free j): partner = one-block orbit via i of a pair {i,k}; two distinct free neighbours at j outside the pairs
     containing i, not both in {j,k}; far pairs (avoiding i, j) with block sums 4 - 2[t=k] - n_t, values <= 2; 2 -> both orbits,
@@ -58,11 +59,14 @@ def check(fn):
                 elif t[0] == 'tw': otype.append(('one', (a, b)[s]))
                 elif t[0] == 'dd': otype.append(('dis',))
                 elif t[0] == 'mix': otype.append(('one', int(t[1])) if s == 0 else ('dis',))
+                elif t[0] == 'sib': otype.append(('sib',))
+                else: raise ValueError(t)
     n = 42
     orbs = defaultdict(list)
     for s in range(n): orbs[pair[s]].append(s)
     sis = {s: [u for u in orbs[pair[s]] if u != s][0] for s in range(n)}
-    freeat = {c: {s for s in range(n) if c in pair[s] and (otype[s][0] == 'dis' or otype[s][1] != c)} for c in range(N)}
+    freeat = {c: {s for s in range(n) if c in pair[s] and (otype[s][0] == 'dis' or (otype[s][0] == 'one' and otype[s][1] != c))} for c in range(N)}
+    sibp = [frozenset(pair[s]) for s in range(0, n, 2) if otype[s] == ('sib',)]      # sister pairs: never free
     Sh = lambda a, b: 2 if pair[a] == pair[b] else len(pair[a] & pair[b])
     one = {}; S = defaultdict(int); C = defaultdict(int); I = defaultdict(int); cuts = []
     yb = 0; mism = 0; extra = 0
@@ -124,6 +128,21 @@ def check(fn):
                                 w = v.copy()
                                 for o in ch: w[o] += 1
                                 vecs.append(w)
+        elif otype[Z] == ('sib',):
+            # sister orbit: its sister carries its 2 neighbours at i and at j (n_s = 2); far pairs with block sums 4
+            far_b = [t for t in range(N) if t not in (a, b)]
+            prs, rows = rows_of_far(far_b, {t: 4 for t in far_b})
+            base = np.zeros(n, dtype=np.int64); base[sis[Z]] = 2
+            for r in rows:
+                v = base.copy(); ones = []
+                for (p, q), val in zip(prs, r):
+                    o = orbs[frozenset((p, q))]
+                    if val == 2: v[o[0]] += 1; v[o[1]] += 1
+                    elif val == 1: ones.append(o)
+                for ch in itertools.product(*ones):
+                    w = v.copy()
+                    for o in ch: w[o] += 1
+                    vecs.append(w)
         else:
             i, j = a, b; Zs = sis[Z]; far_b = [t for t in range(N) if t not in (i, j)]
             ci = sorted(F for F in freeat[i] if F not in (Z, Zs) and j not in pair[F])
@@ -160,6 +179,10 @@ def check(fn):
                                     for o in ch: w[o] += 1
                                     vecs.append(w)
         M = np.array(vecs, dtype=np.int64); assert len(M) and (M.sum(axis=1) == 12).all()
+        for R in sibp:                          # grid lemma 8.1: exactly one neighbour in every sister pair disjoint from P_Z
+            if not (R & pair[Z]):
+                o1, o2 = orbs[R]; M = M[(M[:, o1] + M[:, o2]) == 1]
+        assert len(M), Z
         sc = const + M @ lin + np.einsum('ij,ij->i', M @ Y, M)
         ncols += len(M); high += int(sc.max())
     return yb, high, mism, ncols

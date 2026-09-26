@@ -49,7 +49,7 @@ for job, po in enumerate(jobs):
     g0 = OG.OrbitModelGen(In)
     certs = []
     for fn in glob.glob("logs/orbit_certs/gen_%s_%d.json.gz" % (ci, job)) + glob.glob("logs/orbit_certs/fc_%s_%d_*.json.gz" % (ci, job)) + \
-              glob.glob("logs/orbit_certs/fix_%s_%d_*.json.gz" % (ci, job)):
+              glob.glob("logs/orbit_certs/fix_%s_%d_*.json.gz" % (ci, job)) + glob.glob("logs/orbit_certs/comb_%s_%d_*.json.gz" % (ci, job)):
         d = json.load(gzip.open(fn, "rt"))
         if {int(k): v for k, v in d["spec"]["In"].items()} != In: continue
         certs.append(("gen", {tuple(z) for z in d["spec"].get("forbid", [])}, fn))
