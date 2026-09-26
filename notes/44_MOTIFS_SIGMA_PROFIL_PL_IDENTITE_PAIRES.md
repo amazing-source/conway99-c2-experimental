@@ -104,3 +104,36 @@ paires sur les feuilles dures (sans classe fermée d'un bloc), où les composant
 - **g⁻ = 16 impossible** (C1, notes/132). Les 8 modèles LP sont certifiés ici (logs/c1_g16_certs.jsonl). Donc g⁻ ∈ {18, 20}.
 - **g⁻ = 18** : le balayage de C1 sur les 1 166 classes t = 0 scindées tourne ici (`scripts/c1_g18_sweep_wrap.py`,
   logs/c1_g18/).
+
+## 8. Nuit du 27/09 : M1 fermé, « racine d'abord »
+- **M1 n = 5 : FERMÉ.**
+  - Le job 10 (228 feuilles) est ALL DEAD en 16 nœuds de fixation, avec branchement orbital (24 612 s).
+  - `coverage_check.py E01_12_23_34_04` : 11/11 jobs couverts par des certificats stockés.
+  - Les 11 certificats `fc_E01_12_23_34_04_10_*` sont revérifiés par `orbit_verify_certs.py` : ALL VALID
+    (logs/verify_m1n5_job10.log).
+  - Avec n = 6 (16/16), **M1 est entièrement certifié**.
+- **Racine d'abord pour les mélanges.**
+  - Constat : le PL racine au niveau orientation (toutes les D-structures, sans fixation de bloc, aucun fichier de feuilles)
+    tue tous les jobs essayés.
+    - Classe 12, échantillon de 8 jobs (0, 7, …, 49) : 8/8 morts à la racine, 190–380 s chacun.
+    - Étape 2 (jobs avec feuilles ouvertes après l'étape 1 par paires) : 12/12 morts au nœud 1.
+  - Donc l'étape 1 par feuille est superflue là où la racine meurt. Nouvel ordre : racine par orientation, et étape 1/2
+    seulement pour les racines survivantes.
+  - `scripts/root_job.py <ci> <rep>`.
+    - L'orientation est reconstruite dans l'ordre exact de `mix_filter6.run` ; vérifié sur toutes les reps des classes
+      12, 14 et 17 (0 écart).
+    - Certificat `logs/orbit_certs/root_<ci>_<rep>.json.gz` (modèle 'gen', spec {In}), qui couvre toutes les feuilles de
+      l'orientation.
+  - Essai : racine 17/0 morte en 351 s, certificat VALIDE (orbit_verify_certs).
+  - Cloud (c2-compute cd138be) :
+    - rtA = classe 13 (58 reps) + classe 17 (reps 1–6) ;
+    - rtB = classe 12 (45 reps restantes) + classe 14 (33 reps) ;
+    - ils remplacent s1c/s1d (étape 1 sur 383 000 feuilles).
+  - Local : `scripts/root_queue.sh logs/root_tasks_9.txt`, pour les 18 reps de la classe 9 qu'aucune étape 1 locale n'a
+    traitées.
+- **Cloud s1b (classe 13, étape 1 par paires) : terminé.**
+  - 58 reps, 239 627 feuilles : 198 303 mortes, 41 324 ouvertes, 0 invalide sur les échantillons.
+  - Reps 0, 4, 47 et 52 entièrement mortes. Résultats dans logs/cloud_results/.
+  - Les ouvertes seront couvertes par les racines (rtA).
+- **g⁺ ∈ {14, 16}** (C1, notes/135, test pair) : modules de C1 f66098b dans c2-compute/scripts/c1_gplus (b11a1a6), tâche gp,
+  basse priorité, après fb/sat.

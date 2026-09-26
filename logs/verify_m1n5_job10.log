@@ -1,0 +1,12 @@
+fc_E01_12_23_34_04_10_12.json.gz: y.b 16847404  bound 13993352  margin 2.8541 (x1e6)  rhs mismatches 0  columns 2331983  VALID  11s
+fc_E01_12_23_34_04_10_13.json.gz: y.b 2908821  bound 2746069  margin 0.1628 (x1e6)  rhs mismatches 0  columns 2331983  VALID  18s
+fc_E01_12_23_34_04_10_14.json.gz: y.b 13527255  bound 11660628  margin 1.8666 (x1e6)  rhs mismatches 0  columns 2331814  VALID  16s
+fc_E01_12_23_34_04_10_15.json.gz: y.b 4132923  bound 3870038  margin 0.2629 (x1e6)  rhs mismatches 0  columns 2649418  VALID  18s
+fc_E01_12_23_34_04_10_16.json.gz: y.b 5827778  bound 5077362  margin 0.7504 (x1e6)  rhs mismatches 0  columns 2649587  VALID  18s
+fc_E01_12_23_34_04_10_3.json.gz: y.b 6495986  bound 6145154  margin 0.3508 (x1e6)  rhs mismatches 0  columns 2649418  VALID  19s
+fc_E01_12_23_34_04_10_4.json.gz: y.b 7407204  bound 5341853  margin 2.0654 (x1e6)  rhs mismatches 0  columns 2649249  VALID  20s
+fc_E01_12_23_34_04_10_5.json.gz: y.b 12224976  bound 11596380  margin 0.6286 (x1e6)  rhs mismatches 0  columns 2649418  VALID  18s
+fc_E01_12_23_34_04_10_7.json.gz: y.b 8236735  bound 8160025  margin 0.0767 (x1e6)  rhs mismatches 0  columns 2649587  VALID  19s
+fc_E01_12_23_34_04_10_8.json.gz: y.b 20945889  bound 20772657  margin 0.1732 (x1e6)  rhs mismatches 0  columns 2649418  VALID  20s
+fc_E01_12_23_34_04_10_9.json.gz: y.b 23980409  bound 22325248  margin 1.6552 (x1e6)  rhs mismatches 0  columns 2649587  VALID  24s
+ALL VALID
