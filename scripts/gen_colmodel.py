@@ -332,6 +332,8 @@ if __name__ == "__main__":
         tw = {P(int(x[0]), int(x[1])) for x in sys.argv[3].split(",")}
         orient = {R: ('tw' if R in tw else 'anch') for R in PAIRS}
         sys.argv = sys.argv[:3] + sys.argv[4:]
+    elif kind == "alltw":
+        orient = {R: 'tw' for R in PAIRS}
     elif kind == "universal":
         orient = {R: 'free' for R in PAIRS}
     elif kind == "Hcirc":
