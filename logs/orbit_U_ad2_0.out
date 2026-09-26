@@ -1,0 +1,13 @@
+AD2 rep 0: columns 1030560 rows 2086 8s
+  iter 1 obj 1753.62484 cols 252 added 126 best 147 lagr -2320.925 1s (master 0.4s, pricing 0.6s)
+  iter 2 obj 1208.15581 cols 378 added 126 best 103 lagr -1859.482 2s (master 0.7s, pricing 0.4s)
+  iter 3 obj 926.04606 cols 504 added 126 best 79.6 lagr -1580.997 4s (master 1.0s, pricing 0.4s)
+  iter 4 obj 741.57756 cols 630 added 126 best 77.5 lagr -1279.553 6s (master 1.5s, pricing 0.5s)
+  iter 5 obj 643.41069 cols 756 added 126 best 58.6 lagr -943.189 8s (master 2.2s, pricing 0.4s)
+  iter 6 obj 573.93130 cols 882 added 126 best 42.5 lagr -723.337 12s (master 3.0s, pricing 0.4s)
+  iter 7 obj 521.59514 cols 1008 added 126 best 37.5 lagr -563.605 16s (master 4.2s, pricing 0.4s)
+  iter 8 obj 486.27719 cols 1134 added 126 best 35.3 lagr -425.490 21s (master 4.8s, pricing 0.4s)
+  iter 9 obj 456.56990 cols 1260 added 126 best 28.8 lagr -252.269 29s (master 7.1s, pricing 0.4s)
+  iter 10 obj 438.42415 cols 1386 added 126 best 18.7 lagr -58.711 37s (master 7.7s, pricing 0.4s)
+  iter 11 obj 425.56086 cols 1512 added 126 best 13.7 lagr 73.824 47s (master 9.3s, pricing 0.4s)
+AD2 rep 0: INFEASIBLE slack 425.5609 exact VALID (425.560831, -3816.705042, 351.737183) 62s
