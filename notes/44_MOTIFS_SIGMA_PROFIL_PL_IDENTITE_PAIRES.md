@@ -89,3 +89,18 @@ paires sur les feuilles dures (sans classe fermée d'un bloc), où les composant
 - Session cloud de l'utilisateur : elle signale le dépôt conway comme dangereux, un faux positif sur le vocabulaire
   (« attaquer le cœur »). Pas de contournement caché ; en attente de la décision de l'utilisateur.
 - Fichiers de tâches prêts : `logs/cloud_tasks_s1{a,b,c,d}.txt` (classes 9 ; 13 ; 12 ; 14 et 17 ; 883 000 feuilles).
+
+## 7. Fin de soirée (26–27/09)
+- **3K₂ ancré : MORT.** C1, notes/131 §7 et §7 bis (commit 1552b9e).
+  - Étape 1 : 24 des 48 modèles par paires sont certifiés ici en exact (Farkas au PL, certify.check ; logs/c1_step1_certs.jsonl).
+  - Les 24 autres (orbites (2,0) sur le groupe « suivant ») tombent par l'extension q:7 : aucune option (2,0) n'admet la
+    permutation signée 8.1 avec la paire frère suivante.
+  - Les 512 affectations « perm » sont tuées, énumération reproduite indépendamment par structures.
+  - **La famille ANCRÉE des motifs Σ ≠ ∅ est donc entièrement morte**, sous réserve de la relecture par structures de §7 bis.
+- **A111111 (3,3) (Sol) : MORT.**
+  - Le signe de Witt est relu par structures.
+  - Les 15 certificats, la couverture des 400 directions (groupe d'ordre 72), la classe 9 et la classe restante sont revérifiés
+    ici indépendamment (`scripts/verify_sol_A33.py`, TOUT PASSE).
+- **g⁻ = 16 impossible** (C1, notes/132). Les 8 modèles LP sont certifiés ici (logs/c1_g16_certs.jsonl). Donc g⁻ ∈ {18, 20}.
+- **g⁻ = 18** : le balayage de C1 sur les 1 166 classes t = 0 scindées tourne ici (`scripts/c1_g18_sweep_wrap.py`,
+  logs/c1_g18/).
