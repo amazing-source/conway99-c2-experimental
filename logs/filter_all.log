@@ -1,0 +1,13 @@
+class 4 rc=0 12s orientation classes 3 | worker 0 {'orient': 3, ('pruned', 4): 127, ('pruned', 5): 84, ('pruned', 6): 384, ('pruned', 7): 840, 'leaf': 384} | surviving skeleton 
+class 5 rc=0 25s orientation classes 8 | worker 0 {'orient': 8, 'leaf': 576, ('pruned', 6): 318, ('pruned', 5): 129, ('pruned', 7): 10161} | surviving skeleton classes 300 done
+class 10 rc=0 81s orientation classes 4 | worker 0 {'orient': 4, ('pruned', 7): 31740, 'leaf': 3840, ('pruned', 6): 544} | surviving skeleton classes 789 done 
+class 3 rc=0 136s orientation classes 91 | worker 0 {'orient': 91, ('pruned', 5): 342, 'leaf': 2085, ('pruned', 4): 33, ('pruned', 6): 6201, ('pruned', 7): 46812} | surviving ske
+class 7 rc=0 183s orientation classes 17 | worker 0 {'orient': 17, ('pruned', 6): 2566, ('pruned', 7): 36849, 'leaf': 13104, ('pruned', 5): 294} | surviving skeleton classes 1310
+class 8 rc=0 446s orientation classes 36 | worker 0 {'orient': 36, ('pruned', 7): 88143, 'leaf': 27888, ('pruned', 5): 198, ('pruned', 6): 6003} | surviving skeleton classes 2683
+class 11 rc=0 363s orientation classes 13 | worker 0 {'orient': 13, ('pruned', 5): 415, ('pruned', 6): 945, ('pruned', 7): 62541, 'leaf': 34272} | surviving skeleton classes 34272
+class 6 rc=0 471s orientation classes 111 | worker 0 {'orient': 111, ('pruned', 5): 79, 'leaf': 18333, ('pruned', 4): 48, ('pruned', 6): 16739, ('pruned', 7): 233757} | surviving
+class 14 rc=0 1668s orientation classes 33 | worker 0 {'orient': 33, ('pruned', 7): 223865, 'leaf': 137752, ('pruned', 6): 5760} | surviving skeleton classes 101270 done 
+class 9 rc=0 2471s orientation classes 83 | worker 0 {'orient': 83, 'leaf': 262093, ('pruned', 6): 26757, ('pruned', 7): 582701, ('pruned', 5): 147, ('pruned', 4): 46} | surviving
+class 17 rc=0 386s orientation classes 7 | worker 0 {'orient': 7, ('pruned', 6): 1458, ('pruned', 7): 97533, 'leaf': 45936} | surviving skeleton classes 41616 done 
+class 13 rc=0 2670s orientation classes 58 | worker 0 {'orient': 58, ('pruned', 6): 12773, 'leaf': 239627, ('pruned', 7): 335749} | surviving skeleton classes 218102 done 
+class 12 rc=0 3750s orientation classes 53 | worker 0 {'orient': 53, ('pruned', 6): 8927, ('pruned', 7): 328231, 'leaf': 200540, ('pruned', 5): 147} | surviving skeleton classes 20

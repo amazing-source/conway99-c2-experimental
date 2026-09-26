@@ -264,20 +264,27 @@ class OrbitModel:
             else: h = self.master(cols)
             obj = h.getInfo().objective_function_value; tm = time.time() - tm
             y = np.array(h.getSolution().row_dual)
-            added = 0; best = 0.0; tp = time.time()
+            added = 0; best = 0.0; tp = time.time(); sumbest = 0.0
             if not hasattr(self, '_colsf'): self._colsf = [M.astype(np.float32) for M in self.cols]
             for Z in range(self.n):
                 const, lin, Y = self.score_parts(y, Z)
                 M = self._colsf[Z]
                 sc = const + M @ lin.astype(np.float32) + np.einsum('ij,ij->i', M @ Y.astype(np.float32), M)
                 sc = sc.astype(np.float64) + self.extra_scores(y, Z, self.cols[Z])
+                sumbest += max(0.0, float(sc.max())) if len(sc) else 0.0
                 for t in np.argsort(-sc)[:per]:
                     if sc[t] > 1e-5 and obj > 1e-7:
                         key = (Z, self.cols[Z][t].tobytes())
                         if key in keys: continue
                         keys.add(key); cols.append(self.entries(Z, self.cols[Z][t])); added += 1; best = max(best, sc[t])
                         self.colinfo.append((Z, int(np.argmax(self.cols[Z][t] == 2))))
-            if verbose: print("  iter %d obj %.5f cols %d added %d best %.3g %.0fs (master %.1fs, pricing %.1fs)" % (it, obj, len(cols), added, best, time.time() - t0, tm, time.time() - tp)); sys.stdout.flush()
+            if verbose: print("  iter %d obj %.5f cols %d added %d best %.3g lagr %.3f %.0fs (master %.1fs, pricing %.1fs)" % (it, obj, len(cols), added, best, obj - sumbest, time.time() - t0, tm, time.time() - tp)); sys.stdout.flush()
+            if obj > 1e-7 and obj - sumbest > 0.05:          # Lagrangian (Farkas) bound positive: exact check now, stop if valid
+                ok, _b = self.verify(y)
+                if ok:
+                    self.done = True
+                    self.last_x = np.array(h.getSolution().col_value)[:len(cols)] if not __import__('os').environ.get('WS') else None
+                    return obj, y
             if added == 0 or time.time() - t0 > tlimit:
                 self.done = added == 0
                 self.last_x = np.array(h.getSolution().col_value)[:len(cols)] if not __import__('os').environ.get('WS') else None

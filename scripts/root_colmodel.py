@@ -71,7 +71,7 @@ def far_sets(fb, need):
             for dt, x in combo: rem[dt] += 1; used.discard(x); chosen.pop()
             rem[(c, s)] = r
     rec(0)
-    arr = np.array(out, dtype=np.int16).reshape(len(out), -1)
+    arr = np.array(out, dtype=np.int16).reshape(len(out), -1) if out else np.zeros((0, 8), dtype=np.int16)
     _farcache[key] = arr
     return arr
 
@@ -130,7 +130,9 @@ class RootModel:
         for Z in range(42): add(('one', Z), 'eq', 1)
         for U in range(42):
             for W in range(U + 1, 42):
-                add(('symP', U, W), 'eq', 0); add(('symM', U, W), 'eq', 0)
+                add(('symP', U, W), 'eq', 0)
+                if os.environ.get('EVEN') is not None: self.rows[('symM', U, W)] = self.rows[('symP', U, W)]   # control: only q-symmetry
+                else: add(('symM', U, W), 'eq', 0)
         even = os.environ.get('EVEN') is not None           # control: only the invariant (summed) identity
         for U in range(42):
             for W in range(U, 42):
@@ -240,9 +242,40 @@ class RootModel:
         b = np.array(self.rrhs, dtype=float); lp.row_lower_ = b; lp.row_upper_ = b
         lp.a_matrix_.format_ = highspy.MatrixFormat.kColwise
         lp.a_matrix_.start_ = A.indptr; lp.a_matrix_.index_ = A.indices; lp.a_matrix_.value_ = A.data
-        h = highspy.Highs(); h.setOptionValue("output_flag", False); h.setOptionValue("solver", "ipm"); h.setOptionValue("run_crossover", "off")
+        h = highspy.Highs(); h.setOptionValue("output_flag", False)
+        slv = os.environ.get('SOLVER', 'ipm'); h.setOptionValue("solver", slv)
+        if slv == 'ipm': h.setOptionValue("run_crossover", "off")
+        if slv == 'pdlp': h.setOptionValue("pdlp_d_gap_tol", float(os.environ.get('PDLPTOL', 1e-5)))
         h.passModel(lp); h.run()
         return h
+
+    def master_ws(self, cols, start):
+        """warm-started primal simplex master: built once, then addCols for cols[start:]"""
+        m = len(self.rname)
+        def csc(block):
+            starts = [0]; idx = []; val = []
+            for ent in block:
+                for r, v in ent: idx.append(r); val.append(float(v))
+                starts.append(len(idx))
+            return np.array(starts[:-1], dtype=np.int32), np.array(idx, dtype=np.int32), np.array(val, dtype=np.float64)
+        if start == 0 or not hasattr(self, '_h'):
+            le = [r for r in range(m) if self.rkind[r] == 'le']; eq = [r for r in range(m) if self.rkind[r] == 'eq']
+            h = highspy.Highs(); h.setOptionValue("output_flag", False); h.setOptionValue("solver", "simplex")
+            h.setOptionValue("simplex_strategy", 4)                      # primal simplex: warm start after adding columns
+            inf = highspy.kHighsInf; b = np.array(self.rrhs, dtype=float)
+            h.addRows(m, b, b, 0, np.array([], dtype=np.int32), np.array([], dtype=np.int32), np.array([], dtype=np.float64))
+            base = [[(r, 1)] for r in le] + [[(r, 1)] for r in eq] + [[(r, -1)] for r in eq]
+            st, ix, vl = csc(base)
+            cost = np.concatenate([np.zeros(len(le)), np.ones(2 * len(eq))])
+            up = np.concatenate([np.array([self.rrhs[r] for r in le], dtype=float), np.full(2 * len(eq), inf)])
+            h.addCols(len(base), cost, np.zeros(len(base)), up, len(ix), st, ix, vl)
+            self._h = h; start = 0
+        new = cols[start:]
+        if new:
+            st, ix, vl = csc(new)
+            self._h.addCols(len(new), np.zeros(len(new)), np.zeros(len(new)), np.full(len(new), highspy.kHighsInf), len(ix), st, ix, vl)
+        self._h.run()
+        return self._h
 
     def solve(self, tlimit=3000, per=3, verbose=True):
         t0 = time.time(); cols = []; keys = set(); rng = np.random.default_rng(0)
@@ -253,8 +286,11 @@ class RootModel:
         it = 0
         while True:
             it += 1; tm = time.time()
-            h = self.master(cols); obj = h.getInfo().objective_function_value; tm = time.time() - tm
+            if os.environ.get('WS'): h = self.master_ws(cols, getattr(self, '_nd', 0) if it > 1 else 0); self._nd = len(cols)
+            else: h = self.master(cols)
+            obj = h.getInfo().objective_function_value; tm = time.time() - tm
             y = np.array(h.getSolution().row_dual); Y = self.Ymat(y); added = 0; best = 0.0; tp = time.time()
+            sumbest = 0.0
             if obj > 1e-7:
                 ff = self.ffpart(Y)
                 for Z in range(42):
@@ -263,12 +299,18 @@ class RootModel:
                         if len(sc) == 0: continue
                         t = int(np.argmax(sc)); cand.append((sc[t], near, F[t]))
                     cand.sort(key=lambda z_: -z_[0])
+                    sumbest += max(0.0, cand[0][0]) if cand else 0.0
                     for sc_, near, frow in cand[:per]:
                         if sc_ <= 1e-6: break
                         rs = frozenset(near + tuple(int(v) for v in frow))
                         if (Z, rs) in keys: continue
                         keys.add((Z, rs)); cols.append(self.entries(Z, rs)); added += 1; best = max(best, sc_)
-            if verbose: print("  iter %d obj %.5f cols %d added %d best %.3g %.0fs (master %.1fs, pricing %.1fs)" % (it, obj, len(cols), added, best, time.time() - t0, tm, time.time() - tp)); sys.stdout.flush()
+            if verbose: print("  iter %d obj %.5f cols %d added %d best %.3g lagr %.3f %.0fs (master %.1fs, pricing %.1fs)" % (it, obj, len(cols), added, best, obj - sumbest, time.time() - t0, tm, time.time() - tp)); sys.stdout.flush()
+            if obj > 1e-7 and obj - sumbest > 0.05:          # Lagrangian (Farkas) bound already positive: try the exact check now
+                ok, b = self.verify(y)
+                if ok:
+                    if verbose: print("  early stop: exact Farkas check valid at iter %d" % it)
+                    self.done = True; return obj, y
             if added == 0 or time.time() - t0 > tlimit:
                 self.done = added == 0; return obj, y
 

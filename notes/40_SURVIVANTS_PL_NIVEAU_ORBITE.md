@@ -137,3 +137,24 @@ La contradiction vient donc exactement de l'information d'orbite : **laquelle de
 - **Taille** : environ 11 M colonnes implicites (6 200 configurations proches × ensembles lointains en cache). Pricing en 3 s.
 - **Contrôle prévu** (EVEN=1) : les seules lignes invariantes, sommes des lignes ± ; elles doivent redonner la faisabilité du
   niveau orbite.
+
+## 9. Verdicts négatifs de l'après-midi (tests minuscules, sauf le §9.3)
+1. **Système A-local signé** (`scripts/A_local_signed.py`).
+   - Les 30 orbites hors de A ne portent que leurs vues signées des 12 orbites de A.
+   - Lignes : Gram signée G = 11I − J + S (partie anti-invariante), Gram non signée H (1 / 2 / 3), 2 voisins libres par orbite de A,
+     lignes 11.5, et équilibre 24.0 sur les cycles de D_A.
+   - Résultat : **FAISABLE pour les 4 types** de D_A. Il n'y a pas de lemme « pas de bloc A » purement local, même signé.
+2. **𝒫 = 6I − 2Q − Sh + J ⪰ 0** (Astra, via « structures ») est **impliqué** par le PL d'orbite. En effet, M₂ − Q̄² = Σ Cov ⪰ 0,
+   Q̄ préserve span(Nb), donc Q̄² + Q̄ ⪯ R. Il reste utile seulement comme filtre exact sur des squelettes.
+3. **Niveau racine (signé), orientation M1 n = 6 job 12** : **FAISABLE dans les deux classes d'holonomie**.
+   - Convergence en 39 itérations, environ 65 min chacune ; le maître IPM monte à 250 s par itération (4 429 lignes).
+   - L'information signée ne suffit donc pas, au niveau de l'orientation, pour ce job. Il faut fixer (au moins en partie) les
+     structures D.
+   - Relecture complète du modèle par « structures » (tests T1–T4, 0 erreur) : c'est un vrai signal, pas un artefact.
+   - Solveurs essayés pour le maître : le simplexe à chaud et PDLP sont plus lents que l'IPM.
+
+**Bilan honnête.**
+- Au niveau de l'orientation, le PL d'orbite tue environ la moitié des orientations de M1 n = 6. Le reste demande de découper
+  jusqu'aux feuilles, et plusieurs classes de mélanges en ont de 10⁴ à 10⁵ par classe (filtre v6 : classes 9, 13, 14…).
+- Le calcul seul n'est pas une voie efficace pour les mélanges. Il faut un levier mathématique (lemmes structurels sur T,
+  sur le bloc A, ou un autre découpage), le calcul restant un outil de test ciblé.
