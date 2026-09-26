@@ -1,0 +1,4 @@
+{'node': 1, 'assign': {}, 'fixed_blocks': [], 'nleaves': 12, 'status': 'feasible', 'slack': 0.0, 'secs': 1046}
+{'node': 2, 'assign': {'2': 6}, 'fixed_blocks': [2], 'nleaves': 6, 'status': 'dead', 'slack': 4.1037, 'secs': 1307}
+{'node': 3, 'assign': {'2': 6}, 'fixed_blocks': [2], 'nleaves': 6, 'status': 'dead', 'slack': 6.6905, 'secs': 616}
+FIXCAMP 1 job 4: nodes 3 open 0 ALL DEAD 2970s

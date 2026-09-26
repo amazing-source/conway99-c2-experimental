@@ -8,10 +8,15 @@ squelettes à D fixé (`logs/fixedD_anchored_C1.json`, `logs/ptype_anchored_C1*.
 |---|---|---|
 | 2K2_or15 (1 choix de D) | — | **MORT**, écart 103,7, 387 s |
 | K2_or12, tournoi Z₅ (1 choix) | — | **MORT**, écart 157,2, 155 s |
-| K2_or0 (2 choix) | — | a0 **MORT**, écart 70, 566 s ; a1 en cours |
+| K2_or0 (2 choix) | — | a0 **MORT**, écart 71,5 ; a1 **MORT**, écart 69,2 |
 | 3K2_or14 (1 choix) | faisable | **faisable**, 86 s. Solution PL sauvée, remise à C1, qui le tue par q:7 (notes/131 §7, relecture par structures) |
-| K3_or0 (21 choix) | faisable | DFS des puits (`scripts/run_U_fix.py`, blocs forcés 1, 3, 5 fixés) : au bloc 0, 3 options mortes sur 6 pour l'instant |
+| K3_or0 (21 choix) | faisable | DFS des puits (`scripts/run_U_fix.py`, blocs forcés 1, 3, 5 fixés) : les **6 graphes D du puits 0 meurent tous** (3 doubles digones, 3 C₄) : **MORT** sans fixer les puits 2 et 4 |
 
+- **Bilan : la famille ANCRÉE des motifs Σ ≠ ∅ est entièrement morte.**
+  - K₃, K₂ (ses deux classes) et 2K₂ : modèle U, secteur pair, certificats revérifiés indépendamment : 2 + 2 + 6 VALIDES,
+    avec les mêmes nombres de colonnes.
+  - 3K₂ : par q:7 (C1, notes/131 §7), relecture indépendante de « structures » en cours au moment de la panne de leur
+    machine.
 - **Revérification.** `orbit_verify_U.py` est étendu aux frères (q[sœur] = 2, sommes lointaines de 4, jamais libres), au
   filtre grille 8.1 et aux partenaires interdits. Les deux certificats `sibD_*` morts sont VALIDES, avec exactement les
   mêmes nombres de colonnes que le modèle (361 552 et 410 582).
@@ -70,3 +75,17 @@ paires sur les feuilles dures (sans classe fermée d'un bloc), où les composant
   faisables ; classe 44 (|T| = 16) faisable sur ses premières orientations.
 - Les blocs entièrement tordus ont 15 graphes D possibles, soit jusqu'à environ 19 M feuilles par orientation. Essai de
   fixation de blocs sur 46/o1 (`logs/run_U_fix_c46.out`) pour mesurer à quelle profondeur l'arbre meurt.
+
+## 6. Calcul cloud (essais du 26/09, soir)
+- `scripts/cloud_worker.sh` + `scripts/cloud_stage1.py` : l'étape 1 sans les gros fichiers de feuilles.
+  - Les feuilles de chaque orientation sont régénérées par le filtre v6 : même code, même ordre. Le « rep » est l'indice
+    d'orientation de `mix_filter6.run`, et le job j est le j-ème rep AVEC feuilles.
+  - Le PL par paires tourne ensuite par tranches ; un échantillon des certificats est revérifié par le checker de
+    structures.
+  - Le modèle de structures est vendorisé sans modification (`scripts/vendor_structures`, commit 746ee31).
+- Essai local, classe 10 rep 0 : génération 31 s, 960 feuilles en 50 s, toutes mortes, 48 certificats échantillonnés
+  VALIDES.
+- Agents « remote » : non disponibles dans cette session (l'agent test a tourné en local et s'est arrêté).
+- Session cloud de l'utilisateur : elle signale le dépôt conway comme dangereux, un faux positif sur le vocabulaire
+  (« attaquer le cœur »). Pas de contournement caché ; en attente de la décision de l'utilisateur.
+- Fichiers de tâches prêts : `logs/cloud_tasks_s1{a,b,c,d}.txt` (classes 9 ; 13 ; 12 ; 14 et 17 ; 883 000 feuilles).
