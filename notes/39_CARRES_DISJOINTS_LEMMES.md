@@ -37,3 +37,40 @@ C'est une première liaison entre le graphe libre (19.1) et la géométrie du ca
 ## Suite (à la main)
 Chercher une contrainte de parité ou de comptage qui relie n_dis, le nombre de carrés disjoints, aux cycles libres (19.1 avec boucles
 possibles quand n_s = 1). Ce sont ces liaisons qui détermineront la taille de l'énumération des squelettes « avec carrés disjoints ».
+
+## Lemme 39.3 (boucle ⇒ doublement disjointe)
+Si n_s(P) = 1, **les deux orbites de P sont de type dis**.
+
+*Preuve.* Soit ρ = (i,α)(j,−β) la racine sœur voisine de u. Si U était « un bloc » via i, on aurait m_i(u) = v, un sommet du carré D.
+Or m_i(u) est l'unique voisin de u contenant (i,α), c'est-à-dire ρ. Donc D(U) serait l'orbite sœur (carré sib), contre Σ = ∅. Le cas
+« via j » est symétrique, avec π_j(u) = ρ. La sœur U′ se traite de même, par la boucle σρ ~ σu. ∎
+
+Hexagone des coins (note 23 §1.1) : u – ρ – z′ – σu – σρ – z – u. Le sommet de lien z (second voisin commun de u et σρ) ne contient
+**aucun** sommet intérieur des blocs i et j : c'est un voisin lointain commun de u et de σρ. (En raisonnant sur les droites par
+(j,β) et (i,−α), on exclut que z contienne (j,β), (i,−α), (i,α) ou (j,−β).)
+
+## Lemme 39.4 (équilibre en un bloc sans paire « à moitié »)
+En un bloc k, les étiquettes X_k se partagent en deux parties :
+- M_k : les orbites appariées via k ;
+- F_k : les orbites libres en k (ancrées ailleurs, tordues ou mixtes via l'autre bloc, ou de type dis).
+
+μ_k = τ_k sur M_k, qui est donc stable. Si **aucune paire en k n'a exactement une orbite appariée via k** (pas de paire tordue ni mixte
+« via k »), σ préserve M_k. Alors M_k et F_k sont des réunions de composantes de G_k. Sur F_k, les composantes sont les blocs des
+composantes connexes du graphe libre R_k (sœurs identifiées).
+
+## Configurations « AD » (paires ancrées et paires doublement disjointes seulement)
+Aucun bloc n'y a de paire à moitié, donc 39.4 s'applique partout. On note out_k, d_k (ancrées en k) et dis_k (paires dd en k), avec
+d_k + out_k + dis_k = 6. Le nombre d'orbites libres en k vaut f_k = 2(out_k + dis_k).
+- **Queue** (24.1 appliqué à un carré de pivot i, bras j et k) : la composante de i dans G_k est contenue dans F_k et compte ≥ 3
+  blocs. Donc **d_k ≤ 3 dès que out_k ≥ 1**, avec la version 24.2 : d_k ≤ 3 − [k → j].
+- **d_k ≠ 1** (boucle D, c'est-à-dire sib). **d_k ≠ 5** : f_k = 2, soit deux sœurs seules, impossible par 19.1, même avec une boucle,
+  puisqu'il faudrait π_k ailleurs.
+- **d_k = 4** entraîne out_k = 0 et dis_k = 2, et les deux paires dd en k **ont une boucle** (n_s = 1). En effet, avec f_k = 4, un 4-cycle
+  formé de deux paires de sœurs à n_s = 0 donnerait deux voisins communs.
+- Un bloc A (d = 6) force out ≥ 1, donc d ≤ 3, pour tous les autres blocs.
+- Carré dis (X ⊂ {i,j}, partenaire W ⊂ {k,l}) : dans G_k, la composante de l (dans F_k) compte ≥ 2 + [i ∈] + [j ∈] blocs, puisque x y
+  voit w, σw et ses intérieurs.
+- n_dd = 0 redonne les configurations ancrées, mortes par 24.3.
+
+**Statut** : lemmes PROUVÉS. Ils ne suffisent pas encore à tuer les AD à la main. Ils bornent leur énumération par les degrés, comme
+la queue l'a fait pour les ancrées. Suite : combiner avec les cycles libres à boucles et le partenariat disjoint entre paires dd.
