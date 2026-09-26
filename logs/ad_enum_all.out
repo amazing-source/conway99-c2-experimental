@@ -1,0 +1,7 @@
+n_dd = 2: Delta classes 1, AD orientation classes surviving degree + tail lemmas: 14  (1s)
+n_dd = 3: Delta classes 1, AD orientation classes surviving degree + tail lemmas: 8  (1s)
+n_dd = 4: Delta classes 5, AD orientation classes surviving degree + tail lemmas: 510  (3s)
+n_dd = 5: Delta classes 5, AD orientation classes surviving degree + tail lemmas: 853  (8s)
+n_dd = 6: Delta classes 29, AD orientation classes surviving degree + tail lemmas: 4594  (59s)
+n_dd = 7: Delta classes 34, AD orientation classes surviving degree + tail lemmas: 4328  (181s)
+n_dd = 8: Delta classes 82, AD orientation classes surviving degree + tail lemmas: 6707  (456s)

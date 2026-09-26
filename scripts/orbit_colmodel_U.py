@@ -171,3 +171,31 @@ if __name__ == "__main__" and sys.argv[1] == "ad2":
             print("AD2 rep %d: INFEASIBLE slack %.4f exact %s %s %.0fs" % (t, obj, "VALID" if ok else "FAILED", b, time.time() - t0))
         else: print("AD2 rep %d: %s obj %.5f %.0fs" % (t, "FEASIBLE" if g.done else "TIME CAP", obj, time.time() - t0))
         sys.stdout.flush()
+
+def closed_structures(ptype):
+    """blocks c whose anchored-at-c pairs form a forced closed D-structure with exact counts (no twisted/mixed pair at c):
+    in-degree 2 -> digon (16.2), in-degree 3 -> triangle (block-triangle lemma, note 41); returns [(c, arms)]"""
+    out = []
+    for c in range(N):
+        arms = []; bad = False
+        for x in range(N):
+            if x == c: continue
+            t = ptype[(min(c, x), max(c, x))]
+            if t[0] == 'anch' and t[1] == c: arms.append(x)
+            elif t[0] in ('tw', 'mix'): bad = True
+        if not bad and len(arms) in (2, 3): out.append((c, tuple(arms)))
+    return out
+
+def apply_exact_filters(g, structs):
+    """drop every column violating the exact counts N_Z = |B| - |B|[c in P_Z] - |P_Z & B| on the orbits of the pairs {c,b}, b in B"""
+    kept = 0; before = sum(len(M) for M in g.cols)
+    for (c, B) in structs:
+        orbs = [o for b in B for o in g.orbs_of[frozenset((c, b))]]
+        K = len(B)
+        for Z in range(g.n):
+            P = g.pair[Z]
+            if c in P and (P - {c}) <= set(B): continue            # an orbit of the structure itself
+            need = K - K * (c in P) - len(P & set(B))
+            M = g.cols[Z]
+            g.cols[Z] = M[M[:, orbs].sum(axis=1) == need]
+    return before, sum(len(M) for M in g.cols)
