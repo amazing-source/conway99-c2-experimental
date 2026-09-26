@@ -1,0 +1,15 @@
+zero_00: low 37079589870 high 10760944756 margin 26.3186 (x1e9) | stored low 37079589870 high 10760944756 | bound mismatches 0 | orbit columns 352800 | VALID | 6s
+zero_01: low 27593357456 high 18216198285 margin 9.3772 (x1e9) | stored low 27593357456 high 18216198285 | bound mismatches 0 | orbit columns 352800 | VALID | 7s
+zero_02: low 19346020810 high 6541551115 margin 12.8045 (x1e9) | stored low 19346020810 high 6541551115 | bound mismatches 0 | orbit columns 352800 | VALID | 7s
+zero_03: low 33477217164 high 31043414668 margin 2.4338 (x1e9) | stored low 33477217164 high 31043414668 | bound mismatches 0 | orbit columns 352800 | VALID | 8s
+zero_04: low 36678857592 high 36321321105 margin 0.3575 (x1e9) | stored low 36678857592 high 36321321105 | bound mismatches 0 | orbit columns 352800 | VALID | 7s
+zero_05: low 44223943648 high 27878995304 margin 16.3449 (x1e9) | stored low 44223943648 high 27878995304 | bound mismatches 0 | orbit columns 352800 | VALID | 6s
+zero_06: low 28991752200 high 9883407986 margin 19.1083 (x1e9) | stored low 28991752200 high 9883407986 | bound mismatches 0 | orbit columns 352800 | VALID | 8s
+zero_07: low 39236376936 high 37119033236 margin 2.1173 (x1e9) | stored low 39236376936 high 37119033236 | bound mismatches 0 | orbit columns 352800 | VALID | 7s
+zero_08: low 38098601758 high 31533602820 margin 6.5650 (x1e9) | stored low 38098601758 high 31533602820 | bound mismatches 0 | orbit columns 352800 | VALID | 7s
+zero_09: low 59668331286 high 38972158949 margin 20.6962 (x1e9) | stored low 59668331286 high 38972158949 | bound mismatches 0 | orbit columns 352800 | VALID | 7s
+zero_10: low 41374463516 high 31442802206 margin 9.9317 (x1e9) | stored low 41374463516 high 31442802206 | bound mismatches 0 | orbit columns 352800 | VALID | 7s
+zero_11: low 55066626456 high 23689531234 margin 31.3771 (x1e9) | stored low 55066626456 high 23689531234 | bound mismatches 0 | orbit columns 352800 | VALID | 6s
+zero_12: low 25151212264 high 6992738933 margin 18.1585 (x1e9) | stored low 25151212264 high 6992738933 | bound mismatches 0 | orbit columns 352800 | VALID | 7s
+zero_13: low 84820215772 high 63386267194 margin 21.4339 (x1e9) | stored low 84820215772 high 63386267194 | bound mismatches 0 | orbit columns 352800 | VALID | 6s
+ALL VALID
