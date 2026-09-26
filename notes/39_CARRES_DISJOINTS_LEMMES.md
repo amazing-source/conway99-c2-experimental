@@ -74,3 +74,16 @@ d_k + out_k + dis_k = 6. Le nombre d'orbites libres en k vaut f_k = 2(out_k + di
 
 **Statut** : lemmes PROUVÉS. Ils ne suffisent pas encore à tuer les AD à la main. Ils bornent leur énumération par les degrés, comme
 la queue l'a fait pour les ancrées. Suite : combiner avec les cycles libres à boucles et le partenariat disjoint entre paires dd.
+
+## Dichotomie par paire (« structures », 26/09 ; partie « sœurs » de Q² + Q = 12I + 4J − Sh)
+Pour une paire P non frère, d'orbites P⁺ et P⁻ : Σ_Z q_Z(P⁺) q_Z(P⁻) = 2 − n_s(P). Une orbite de profil (1,1) compte 1, une orbite de
+profil (2,1) compte 2 : c'est le partenaire D d'une orbite de P qui voit aussi l'autre orbite.
+- **n_s(P) = 1** (boucle) : exactement un double (1,1), et aucun (2,1).
+- **n_s(P) = 0** : soit **2 doubles (1,1) et des partenaires (2,0)**, soit **0 double et exactement un (2,1)**.
+- Un partenaire « un bloc » est toujours (2,0) (F1). Un profil (2,1) ne peut donc venir que d'un **partenaire dis qui voit aussi la
+  sœur**.
+
+**Correction.** Le Lemme 11.2 du carnet affirme « φ_u(R_D) = 2 pour dis », mais n'a pas de preuve écrite. On ne sait prouver que
+φ_u(R_D) ≥ 2. Avec w′ = (k,γ)(l,−δ) voisin de u, les comptes μ en (k,±γ) et (l,±δ) restent cohérents : w,w′ en (k,γ) ; σw,w′ en (l,−δ) ;
+w ≁ w′ ; les voisins communs de w et w′ sont (k,γ) et u. Donc **(2,1) n'est pas exclu localement**. La question « dis ⇒ (2,0) ou (2,1) ? »
+reste ouverte, et « structures » l'examine.
