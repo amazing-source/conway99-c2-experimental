@@ -37,8 +37,7 @@ prev = None
 for t in range(lo, hi + 1):
     if t in done: continue
     if os.environ.get('REPS') and repof[t] != t:
-        out.write(json.dumps({"leaf": t, "status": "sym", "rep": repof[t]}) + "
-"); out.flush(); continue
+        out.write(json.dumps({"leaf": t, "status": "sym", "rep": repof[t]}) + chr(10)); out.flush(); continue
     t0 = time.time()
     g = OV.OrbitModelVar(leaves[t], po["A"])
     obj, y = g.solve(tlimit=float(os.environ.get('TL', 2400)), verbose=False, init=prev)

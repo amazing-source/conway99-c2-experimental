@@ -40,26 +40,25 @@ def forbid_for(assign):
     return forbid
 
 out = open("logs/orbit_fixcamp_%s_%d.jsonl" % (ci, job), "a")
-stack = [({}, list(range(len(leaves))))]; nodes = 0; t0 = time.time(); open_nodes = 0
+stack = [({}, list(range(len(leaves))), None)]; nodes = 0; t0 = time.time(); open_nodes = 0
 while stack:
-    assign, idx = stack.pop()
+    assign, idx, init = stack.pop()
     if nodes >= maxn: open_nodes += 1 + len(stack); break
     nodes += 1; t1 = time.time()
     fb = forbid_for(assign)
     if not assign and os.environ.get('SKIPROOT'):          # orientation-level LP already known feasible
         obj, st0 = 0.0, 'feasible'
         rec = {"node": nodes, "assign": {}, "fixed_blocks": [], "nleaves": len(idx), "status": "feasible(known)", "slack": 0, "secs": 0}
-        out.write(json.dumps(rec) + "
-"); out.flush(); print(rec)
+        out.write(json.dumps(rec) + chr(10)); out.flush(); print(rec)
         free_blocks = [c for c in range(7) if c != A]
         opts = {c: Counter(blockof(leaves[t], c) for t in idx) for c in free_blocks}
         c = max(free_blocks, key=lambda b: len(opts[b]))
         for trip in opts[c]:
             sub = [t for t in idx if blockof(leaves[t], c) == trip]
-            stack.append(({c: trip}, sub))
+            stack.append(({c: trip}, sub, None))
         continue
     g = OG.OrbitModelGen(In, forbid=fb)
-    obj, y = g.solve(tlimit=float(os.environ.get('TL', 4000)), verbose=False)
+    obj, y = g.solve(tlimit=float(os.environ.get('TL', 4000)), verbose=False, init=init)   # warm start from the parent's columns
     if g.done and obj > 1e-6:
         ok, b = g.verify(y)
         st = 'dead' if ok else 'certfail'
@@ -78,5 +77,5 @@ while stack:
     c = max(cands, key=lambda b: len(opts[b]))
     for trip in opts[c]:
         sub = [t for t in idx if blockof(leaves[t], c) == trip]
-        a2 = dict(assign); a2[c] = trip; stack.append((a2, sub))
+        a2 = dict(assign); a2[c] = trip; stack.append((a2, sub, getattr(g, 'final_keys', None)))
 print("FIXCAMP %s job %d: nodes %d open %d %s %.0fs" % (ci, job, nodes, open_nodes, "ALL DEAD" if open_nodes == 0 else "INCOMPLETE", time.time() - t0))

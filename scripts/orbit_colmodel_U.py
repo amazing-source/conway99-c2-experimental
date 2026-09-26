@@ -152,3 +152,22 @@ if __name__ == "__main__":
         if g.done and obj > 1e-6:
             ok, b = g.verify(y); print("INFEASIBLE slack %.4f exact %s %s" % (obj, "VALID" if ok else "FAILED", b))
         else: print("%s obj %.5f" % ("FEASIBLE" if g.done else "TIME CAP", obj))
+
+def ad2_types(rep):
+    pt = {(0, 1): ('dd',), (2, 3): ('dd',)}
+    for k, h in rep.items():
+        a, b = map(int, k.split(",")); pt[(a, b)] = ('anch', h)
+    return pt
+
+if __name__ == "__main__" and sys.argv[1] == "ad2":
+    reps = json.load(open("logs/ad2_reps.json"))
+    for t in [int(a) for a in sys.argv[2:]]:
+        t0 = time.time(); g = OrbitModelU(ad2_types(reps[t]))
+        print("AD2 rep %d: columns %d rows %d %.0fs" % (t, sum(len(M) for M in g.cols), len(g.rname), time.time() - t0)); sys.stdout.flush()
+        obj, y = g.solve(tlimit=float(os.environ.get('TL', 5000)), verbose=os.environ.get('V') is not None)
+        if g.done and obj > 1e-6:
+            ok, b = g.verify(y)
+            if ok: OM.save_cert(g, y, "logs/orbit_certs/ad2_%d.json.gz" % t, "U", {"ptype": {"%d,%d" % k: list(v) for k, v in ad2_types(reps[t]).items()}}, b)
+            print("AD2 rep %d: INFEASIBLE slack %.4f exact %s %s %.0fs" % (t, obj, "VALID" if ok else "FAILED", b, time.time() - t0))
+        else: print("AD2 rep %d: %s obj %.5f %.0fs" % (t, "FEASIBLE" if g.done else "TIME CAP", obj, time.time() - t0))
+        sys.stdout.flush()
