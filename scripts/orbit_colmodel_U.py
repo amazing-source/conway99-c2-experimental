@@ -34,8 +34,8 @@ def far_sols_dis(blocks5, deg, R):
     return prs, out
 
 class OrbitModelU(OM.OrbitModel):
-    def __init__(self, ptype, use_I=True):
-        self.use_I = use_I; self.T = []; self.otype = []
+    def __init__(self, ptype, use_I=True, forbid=None):
+        self.use_I = use_I; self.T = []; self.otype = []; self.forbid = forbid or set()     # forbid: (orbit, partner) pairs (block fixing)
         for a in range(N):
             for b in range(a + 1, N):
                 t = ptype[(a, b)]
@@ -92,7 +92,7 @@ class OrbitModelU(OM.OrbitModel):
                 fb = [t for t in range(N) if t not in (i, j)]
                 for k in fb:
                     for Dz in self.orbs_of[frozenset((i, k))]:
-                        if self.otype[Dz] != ('one', i): continue
+                        if self.otype[Dz] != ('one', i) or (Z, Dz) in self.forbid: continue
                         for F1, F2 in itertools.combinations(cand, 2):
                             r1, r2 = other(F1, j), other(F2, j)
                             if r1 == r2 == k: continue
@@ -111,7 +111,7 @@ class OrbitModelU(OM.OrbitModel):
                 i, j = a, b; Zs = self.sis[Z]; fb = [t for t in range(N) if t not in (i, j)]
                 loops = (0, 1) if self.otype[Zs] == ('dis',) else (0,)
                 for Dz in range(self.n):
-                    if self.otype[Dz] != ('dis',) or (self.pair[Dz] & self.pair[Z]): continue
+                    if self.otype[Dz] != ('dis',) or (self.pair[Dz] & self.pair[Z]) or (Z, Dz) in self.forbid: continue
                     R = self.pair[Dz]; k, l = tuple(R)
                     ci = [F for F in self.free[i] if F not in (Z, Zs) and j not in self.pair[F]]
                     cj = [F for F in self.free[j] if F not in (Z, Zs) and i not in self.pair[F]]

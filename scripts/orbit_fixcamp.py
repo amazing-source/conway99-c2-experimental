@@ -16,6 +16,10 @@ for f in sorted(glob.glob("logs/mix6_cls_%s_S_*.json" % ci)):
         if po["leaves"]: jobs.append(po)
 po = jobs[job]; In = {int(x): v for x, v in po["In"].items()}; A = po["A"]
 leaves = [tuple(sorted(tuple(z) for z in L)) for L in po["leaves"]]
+if os.environ.get('OPEN'):                   # stage 2 (note 43): only the leaves left open by the pair-level stage (pair_fast.py)
+    keep = json.load(open(os.environ['OPEN']))["open"]
+    leaves = [leaves[t] for t in keep]
+    print("OPEN: %d leaves kept of %d" % (len(leaves), len(po["leaves"]))); sys.stdout.flush()
 g0 = OG.OrbitModelGen(In)
 blockof = lambda L, c: tuple(z for z in L if z[0] == c)
 

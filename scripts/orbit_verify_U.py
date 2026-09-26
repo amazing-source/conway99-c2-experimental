@@ -49,6 +49,7 @@ def check(fn):
     d = json.load(gzip.open(fn, "rt"))
     assert d["model"] == "U"
     ptype = {tuple(int(c) for c in k.split(",")): tuple(v) for k, v in d["spec"]["ptype"].items()}
+    forbid = {(int(a), int(b)) for a, b in d["spec"].get("forbid", [])}      # block fixing: forbidden (orbit, partner)
     pair = []; otype = []
     for a in range(N):
         for b in range(a + 1, N):
@@ -110,7 +111,7 @@ def check(fn):
             far_b = [t for t in range(N) if t not in (i, j)]
             for k in far_b:
                 for Dz in orbs[frozenset((i, k))]:
-                    if otype[Dz] != ('one', i): continue
+                    if otype[Dz] != ('one', i) or (Z, Dz) in forbid: continue
                     for F1, F2 in itertools.combinations(cand, 2):
                         if other(F1, j) == k and other(F2, j) == k: continue
                         cnt = defaultdict(int); cnt[other(F1, j)] += 1; cnt[other(F2, j)] += 1
@@ -149,7 +150,7 @@ def check(fn):
             cj = sorted(F for F in freeat[j] if F not in (Z, Zs) and i not in pair[F])
             loops = (0, 1) if otype[Zs] == ('dis',) else (0,)
             for Dz in range(n):
-                if otype[Dz] != ('dis',) or (pair[Dz] & pair[Z]): continue
+                if otype[Dz] != ('dis',) or (pair[Dz] & pair[Z]) or (Z, Dz) in forbid: continue
                 k, l = sorted(pair[Dz]); Wp = sis[Dz]
                 for loop in loops:
                     ni = 2 - loop

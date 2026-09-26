@@ -4,6 +4,8 @@ Certificates (logs/orbit_certs):
      (orbit, partner) choices.  A leaf is covered iff SOME orbit-level lift of its D-structures (labels inside anchored pairs are
      interchangeable: WLOG) uses no forbidden choice; A-block orbits are free in these models.
   leaf_<cls>_<job>_<t> : model 'var' (the leaf with A variable): covers leaf t exactly (triples compared).
+  logs/pair_certs/leaf_<cls>_<job>*.jsonl.gz : pair-level certificates of pair_fast.py (note 43), leaf index t (validity:
+     pair_verify_leaves.py).
 Symmetry: leaves in the same orbit of the orientation's stabilizer as a covered leaf are covered.
 This script only checks coverage; the validity of each certificate is checked by orbit_verify_certs.py.
 Usage: python coverage_check.py <class id>"""
@@ -56,12 +58,17 @@ for job, po in enumerate(jobs):
     leafcert = set()
     for fn in glob.glob("logs/orbit_certs/leaf_%s_%d_*.json.gz" % (ci, job)):
         d = json.load(gzip.open(fn, "rt")); leafcert.add(tuple(sorted(tuple(z) for z in d["spec"]["leaf"])))
+    pairdead = set()                          # stage 1 (note 43): leaves killed by a pair-level certificate (pair_fast.py)
+    for fn in glob.glob("logs/pair_certs/leaf_%s_%d.jsonl.gz" % (ci, job)) + glob.glob("logs/pair_certs/leaf_%s_%d_*_*.jsonl.gz" % (ci, job)):
+        for line in gzip.open(fn, "rt"):
+            r = json.loads(line)
+            if r["status"] == "dead": pairdead.add(r["leaf"])
     In_ = {c: set(v) for c, v in In.items()}; arcs = {(c, x) for c, xs in In_.items() for x in xs}
     stab = [g for g in itertools.permutations(range(N)) if {(g[c], g[x]) for (c, x) in arcs} == arcs and (A is None or g[A] == A)]
     img = lambda L, g: tuple(sorted((g[i], g[j], g[k]) for (i, j, k) in L))
     cov = [False] * len(leaves)
     for t, L in enumerate(leaves):
-        if L in leafcert: cov[t] = True; continue
+        if L in leafcert or t in pairdead: cov[t] = True; continue
         for kind, fb, fn in certs:
             if not fb or lifts_ok(g0, L, fb, A): cov[t] = True; break
     idx = {L: t for t, L in enumerate(leaves)}
