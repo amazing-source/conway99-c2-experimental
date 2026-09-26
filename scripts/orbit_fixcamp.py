@@ -22,6 +22,19 @@ if os.environ.get('OPEN'):                   # stage 2 (note 43): only the leave
     print("OPEN: %d leaves kept of %d" % (len(leaves), len(po["leaves"]))); sys.stdout.flush()
 g0 = OG.OrbitModelGen(In)
 blockof = lambda L, c: tuple(z for z in L if z[0] == c)
+import itertools as _it
+_arcs = {(c, x) for c, xs in In.items() for x in xs}
+STAB = [g for g in _it.permutations(range(7)) if {(g[c], g[x]) for (c, x) in _arcs} == _arcs and (A is None or g[A] == A)]
+
+
+def orbit_reps(opts, assign, c):
+    """orbital branching (note 44): one option per orbit of the stabiliser of the node's assignment and of block c; the leaves
+    of the other options are images of covered leaves (coverage_check.py propagates coverage along STAB)"""
+    if os.environ.get('NOSYM'): return list(opts)
+    imt = lambda o, g: tuple(sorted((g[i], g[j], g[k]) for (i, j, k) in o))
+    canon = {cc: tuple(sorted(v)) for cc, v in assign.items()}
+    H = [g for g in STAB if g[c] == c and all(imt(v, g) == canon.get(g[cc]) for cc, v in canon.items())]
+    return [o for o in opts if tuple(sorted(o)) == min(imt(o, g) for g in H)]
 
 def forbid_for(assign):
     forbid = set()
@@ -88,7 +101,7 @@ while stack:
         opts = {c: Counter(blockof(leaves[t], c) for t in idx) for c in free_blocks}
         multi = [b for b in free_blocks if len(opts[b]) > 1] or free_blocks
         c = (max if os.environ.get('RICHEST') else min)(multi, key=lambda b: len(opts[b]))   # default: fewest options > 1
-        for trip in opts[c]:
+        for trip in orbit_reps(opts[c], {}, c):
             sub = [t for t in idx if blockof(leaves[t], c) == trip]
             stack.append(({c: trip}, sub, None))
         continue
@@ -124,7 +137,7 @@ while stack:
     cands = [c for c in free_blocks if len(opts[c]) > 1] or [c for c in free_blocks if len(opts[c]) == 1 and opts[c]]
     if not cands: print("UNRESOLVED fully fixed node", assign); open_nodes += 1; continue
     c = (max if os.environ.get('RICHEST') else min)(cands, key=lambda b: len(opts[b]))
-    for trip in opts[c]:
+    for trip in orbit_reps(opts[c], assign, c):
         sub = [t for t in idx if blockof(leaves[t], c) == trip]
         a2 = dict(assign); a2[c] = trip; stack.append((a2, sub, getattr(g, 'final_keys', None)))
 print("FIXCAMP %s job %d: nodes %d open %d %s %.0fs" % (ci, job, nodes, open_nodes, "ALL DEAD" if open_nodes == 0 else "INCOMPLETE", time.time() - t0))
