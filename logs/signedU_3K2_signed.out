@@ -1,0 +1,5 @@
+C1_anch_3K2_or14 a0: U (pair-level D) columns 214656 rows 1761, empty orbits [] (5s)
+signed layer: 214656 unsigned -> 930624 signed columns; orbits without a signed column: []
+  rows after signed layer: 3156 (33s)
+  unit test entries vs score_parts: 0 mismatches of 300
+  C1_anch_3K2_or14: FEASIBLE obj 0.00000 (1234s)
