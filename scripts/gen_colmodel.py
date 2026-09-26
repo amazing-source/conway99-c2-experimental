@@ -257,6 +257,24 @@ class GenModel:
                 self.last_x = np.array(h.getSolution().col_value)[:len(self.fixed_cols)]
                 return obj, y
 
+    def set_branch_rows(self, brs):
+        """brs: list of (list of fixed-col indices, lo, hi): sum of those m's must lie in [lo, hi].  Implemented as rows
+        sum m - s = 0 with a slack column s in [lo, hi] (so certificates stay box-checkable)."""
+        self.nbase_rows = getattr(self, 'nbase_rows', len(self.rname))
+        self.nbase_fixed = getattr(self, 'nbase_fixed', len(self.fixed_cols))
+        del self.rname[self.nbase_rows:]; del self.rkind[self.nbase_rows:]; del self.rrhs[self.nbase_rows:]
+        del self.fixed_cols[self.nbase_fixed:]
+        self.bounds = {t: b for t, b in getattr(self, 'bounds', {}).items() if t < self.nbase_fixed}
+        for q, (idxs, lo, hi) in enumerate(brs):
+            r = len(self.rname); self.rname.append(('br', q)); self.rkind.append('eq'); self.rrhs.append(0)
+            for t in idxs:
+                nm, ent = self.fixed_cols[t]; self.fixed_cols[t] = (nm, [e for e in ent if e[0] < self.nbase_rows or e[0] >= r] + [(r, 1)])
+            t_s = len(self.fixed_cols); self.fixed_cols.append((('brs', q), [(r, -1)])); self.bounds[t_s] = (lo, hi)
+        # drop stale branch-row entries of previous calls from m columns
+        for t in range(self.nbase_fixed):
+            nm, ent = self.fixed_cols[t]
+            self.fixed_cols[t] = (nm, [e for e in ent if e[0] < len(self.rname)])
+
     def _master(self, cols):
         m = len(self.rname)
         allcols = [ent for (_, ent) in self.fixed_cols] + cols
@@ -345,6 +363,43 @@ def branch_and_bound(g, tlimit, node_limit=500, verbose=True):
         if verbose: print("   node %d obj 0 -> branch on %s (x=%.3f) depth %d %.0fs" % (stats['nodes'], g.fixed_cols[t][0][1:], x[t], len(b), time.time() - t0)); sys.stdout.flush()
         b0 = dict(b); b0[t] = (0, 0); b1 = dict(b); b1[t] = (1, 1)
         stack.append(b0); stack.append(b1)
+    return 'ALL_PRUNED', stats
+
+def pair_level_groups(g):
+    """aggregated D-adjacency between pairs {c,x} and {c,y} at pivot c: list of ((c, x, y), [fixed-col indices of m's])"""
+    groups = defaultdict(list)
+    for t, (nm, ent) in enumerate(g.fixed_cols):
+        if nm[0] != 'm': continue
+        O1, O2 = nm[1], nm[2]; c = next(iter(O1[0] & O2[0]))
+        x = next(iter(O1[0] - {c})); y = next(iter(O2[0] - {c}))
+        groups[(c, min(x, y), max(x, y))].append(t)
+    return list(groups.items())
+
+def bb_pairs(g, tlimit, node_limit=400, verbose=True):
+    """DFS branching on aggregated pair-level D-adjacency M_{c;x,y} in {0} vs {>=1}; pruned nodes certified exactly."""
+    t0 = time.time(); groups = pair_level_groups(g); stack = [[]]
+    stats = {'nodes': 0, 'certified': 0, 'cert_fail': 0}
+    while stack:
+        if time.time() - t0 > tlimit or stats['nodes'] >= node_limit: return 'OPEN', stats
+        brs = stack.pop(); g.set_branch_rows(brs); stats['nodes'] += 1
+        obj, y = g.solve_cg(tlimit=max(10, tlimit - (time.time() - t0)), verbose=False)
+        if not g.done: return 'OPEN', stats
+        if obj > 1e-6:
+            ok, info = g.verify(y)
+            if ok: stats['certified'] += 1; continue
+            stats['cert_fail'] += 1; return 'OPEN', stats
+        x = g.last_x
+        used = {tuple(b[0]) for b in brs}
+        cand = []
+        for key, idxs in groups:
+            if tuple(idxs) in used: continue
+            v = float(sum(x[t] for t in idxs))
+            if 1e-6 < v < 1 - 1e-6 or (1 + 1e-6 < v < 2 - 1e-6): cand.append((abs(v - round(v) - 0.5) if v < 1 else abs(v - 1.5), key, idxs, v))
+        if not cand: return 'OPEN(integral pair-level)', stats
+        _, key, idxs, v = min(cand)
+        if verbose: print("   node %d: branch on M%s = %.3f (depth %d) %.0fs" % (stats['nodes'], key, v, len(brs), time.time() - t0)); sys.stdout.flush()
+        if v < 1: stack.append(brs + [(idxs, 0, 0)]); stack.append(brs + [(idxs, 1, 2)])
+        else: stack.append(brs + [(idxs, 0, 1)]); stack.append(brs + [(idxs, 2, 2)])
     return 'ALL_PRUNED', stats
 
 def orientation_H(In):

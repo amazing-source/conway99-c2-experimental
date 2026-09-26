@@ -22,12 +22,17 @@ Session principale C2. **Statut** : petits tests uniquement, moins de 5 min chac
 | H circulante | oui | **infaisable, certifiée** (7,42 > UB 0,0013) : l'orientation entière est tuée |
 | M1 (1,0,3), première orientation survivante du filtre | oui | **infaisable, certifiée** (22,7 > 2,25), en 84 s |
 | M1 (1,0,5), In(5) = tout, bloc 6 de degré 0 | oui | **faisable** au niveau orientation |
+| M1 (1,0,4), première orientation survivante | oui | faisable au niveau orientation |
+| M1 (1,0,6), première orientation survivante | oui | faisable au niveau orientation |
 | orientation variable (tout libre) | oui | faisable |
 | T = C₇ tordu, ancrages variables | oui | faisable |
 | tout tordu, décomposition variable | oui | faisable |
 
 - **Lecture.** Au niveau « orientation fixée », le PL tue parfois tout, mais pas toujours : les structures D fractionnaires
   (mélanges de squelettes) peuvent le satisfaire. Au niveau « squelette fixé », il a tué 552 classes sur 552 (note 32).
+- **Branchement au niveau des paires** (M_{c;x,y} = 0 contre ≥ 1), orientation (1,0,5) : 28 nœuds, 9 élagages certifiés, encore
+  ouvert à 280 s (profondeur 14). M1 à bloc A coûtera cher par ce moteur seul : il faut d'abord réduire les structures de A par des
+  lemmes.
 - **Branchement sur les variables m** (DFS, élagage certifié), testé sur l'orientation (1,0,5) : profondeur 14 sans aucun élagage en
   270 s. Brancher orbite par orbite est trop fin, à cause de la symétrie des sœurs. Il faut brancher sur le **graphe D au niveau des
   paires** en chaque pivot, par exemple d'abord sur la structure du bloc A (130 structures), comme au niveau squelette.
@@ -49,8 +54,9 @@ Session principale C2. **Statut** : petits tests uniquement, moins de 5 min chac
    - Estimation : quelques heures de calcul sur 8 processus, avec certificats. **Demande d'autorisation.**
 2. **Mélanges à plusieurs cycles tordus** : les orientations ne sont pas encore énumérées. Il faut d'abord des lemmes de réduction
    (queue, 26.x, 28.x, degrés), à la main.
-3. **Tout-tordu à au plus 1 triangle** : « structures » a le même moteur par décomposition fixée. À 1 triangle, 10 classes sur 15
-   sont PL-infaisables et 5 PLNE-infaisables, sans certificat pour l'instant. Le cas sans triangle est indécis. Il reste à certifier.
+3. **Tout-tordu** : « structures », même moteur par décomposition fixée, calcul autorisé par l'utilisateur. **Le tout-tordu à
+   1 triangle est impossible et certifié** (NOTE_S17, 44264f9) : 15 classes (41 790 étiquetées), 84 certificats entiers revérifiés
+   indépendamment, couverture vérifiée. Le cas sans triangle (14 classes) est en cours.
 4. **Carrés disjoints** : à modéliser. Un type d'orbite « libre aux deux blocs » avec φ(paire D) ≥ 2 s'ajoute naturellement aux
    colonnes.
 5. **Σ ≠ ∅** : les 10 survivants de la note 20 (au moins un bloc libre) sont à revoir avec ce moteur.
