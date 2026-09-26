@@ -192,7 +192,13 @@ class FastPair:
     def certify(self, maxnodes=400):
         stats = {'nodes': 0}
         lb0, ub0 = self.cur_lb.copy(), self.cur_ub.copy()
-        obj, dual, x = self.phase1(lb0, ub0, vertex=False)            # fast first attempt at the root
+        if not hasattr(self, 'cache'): self.cache = []
+        for k_, yc in enumerate(self.cache):                          # certificates of earlier leaves (same job, same rows) often still hold
+            if self.check_int(yc, lb0, ub0):
+                self.cache.insert(0, self.cache.pop(k_)); nz = np.nonzero(yc)[0]
+                return {'status': 'dead', 'level': 'LP', 'nodes': 0, 'tree': {'cert_sparse': [[int(r), int(yc[r])] for r in nz]}}
+        vtx = os.environ.get('ROOTIPM') is None                       # default: simplex vertex duals (sparse, reusable)
+        obj, dual, x = self.phase1(lb0, ub0, vertex=vtx)
         if maxnodes == 0 and not (obj is not None and obj > 1e-7):
             return {'status': 'open', 'why': 'lp-feasible' if obj is not None else 'lp-error', 'nodes': 1}
         if obj is not None and obj > 1e-7:
@@ -200,7 +206,7 @@ class FastPair:
                 ynum = np.rint(sgn * dual * DEN).astype(np.int64)
                 ynum[np.isinf(self.cur_rhi) & np.isinf(self.cur_rlo)] = 0
                 if self.check_int(ynum, lb0, ub0):
-                    nz = np.nonzero(ynum)[0]
+                    nz = np.nonzero(ynum)[0]; self.cache.insert(0, ynum); del self.cache[int(os.environ.get('CACHE', 8)):]
                     return {'status': 'dead', 'level': 'LP', 'nodes': 1, 'tree': {'cert_sparse': [[int(r), int(ynum[r])] for r in nz]}}
             if maxnodes == 0: return {'status': 'open', 'why': 'rounding', 'nodes': 1}
 
