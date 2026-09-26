@@ -1,0 +1,5 @@
+Le filtre λ/μ et Schur laisse 5301 colonnes équilibrées ; aucune exclusion par sa recherche bornée de 800 itérations. Borne 83.599 pour énergie 84.
+Seul p=2 a terminé avant la fermeture de l’onglet : rang et rang augmenté 264. Aucun verdict sauvegardé pour p=3 ou p=7.
+MODULAR_SETUP {"columns": 7119, "equations": 391}
+MODULAR_RESULT {"p": 2, "rank": 264, "augmented_rank": 264, "inconsistent": false, "seconds": 2.7141273021698}
+

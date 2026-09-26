@@ -1,0 +1,18 @@
+A33_INDEPENDENT_COVERAGE {"group": 72, "projective_points": 400, "orbit_sizes": [6, 6, 4, 18, 36, 36, 72, 36, 36, 9, 36, 18, 18, 9, 36, 12, 12]}
+A33_INDEPENDENT_CERT {"index": 0, "energy": 6, "bound_scaled": 900, "scale": 100, "columns_checked": 6355, "valid": true}
+A33_INDEPENDENT_CERT {"index": 1, "energy": 18, "bound_scaled": 2000, "scale": 100, "columns_checked": 10345, "valid": true}
+A33_INDEPENDENT_CERT {"index": 2, "energy": 42, "bound_scaled": 4249, "scale": 100, "columns_checked": 6882, "valid": true}
+A33_INDEPENDENT_CERT {"index": 3, "energy": 12, "bound_scaled": 1245, "scale": 100, "columns_checked": 8337, "valid": true}
+A33_INDEPENDENT_CERT {"index": 4, "energy": 30, "bound_scaled": 3021, "scale": 100, "columns_checked": 7276, "valid": true}
+A33_INDEPENDENT_CERT {"index": 5, "energy": 24, "bound_scaled": 2401, "scale": 100, "columns_checked": 7081, "valid": true}
+A33_INDEPENDENT_CERT {"index": 6, "energy": 66, "bound_scaled": 66014, "scale": 1000, "columns_checked": 7116, "valid": true}
+A33_INDEPENDENT_CERT {"index": 7, "energy": 84, "bound_scaled": 84017, "scale": 1000, "columns_checked": 7023, "valid": true}
+A33_INDEPENDENT_CERT {"index": 8, "energy": 78, "bound_scaled": 78060, "scale": 1000, "columns_checked": 7035, "valid": true}
+A33_INDEPENDENT_CERT {"index": 10, "energy": 60, "bound_scaled": 6021, "scale": 100, "columns_checked": 6712, "valid": true}
+A33_INDEPENDENT_CERT {"index": 11, "energy": 96, "bound_scaled": 9659, "scale": 100, "columns_checked": 6571, "valid": true}
+A33_INDEPENDENT_CERT {"index": 12, "energy": 90, "bound_scaled": 90001, "scale": 1000, "columns_checked": 7046, "valid": true}
+A33_INDEPENDENT_CERT {"index": 13, "energy": 36, "bound_scaled": 36014, "scale": 1000, "columns_checked": 7274, "valid": true}
+A33_INDEPENDENT_CERT {"index": 14, "energy": 60, "bound_scaled": 60019, "scale": 1000, "columns_checked": 6848, "valid": true}
+A33_INDEPENDENT_CERT {"index": 15, "energy": 84, "bound_scaled": 84054, "scale": 1000, "columns_checked": 6711, "valid": true}
+A33_SURVIVOR_LINES {"points": 12, "projective_lines_through_pairs": 58, "lines_contained": 0, "maximum_intersection": 3}
+A33_HUMAN9 {"edge_weights_mod7": [2, 3, 6], "differences_mod7": [0, 1, 3, 4, 6], "required_difference": 5, "impossible": true}

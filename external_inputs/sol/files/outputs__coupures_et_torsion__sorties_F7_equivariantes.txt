@@ -1,0 +1,2 @@
+RHO_F7_SETUP {"orbit_sizes": [6, 6, 6, 6, 6, 6, 6, 3, 6, 6, 3], "groups": [[0, 8], [1, 2], [3, 5], [4, 9], [6], [7, 10]], "domains": [142, 149, 144, 141, 6, 13]}
+RHO_SYM_RESULT {"nodes": 1163, "seconds": 1.4013724327087402, "status": "exhausted"}

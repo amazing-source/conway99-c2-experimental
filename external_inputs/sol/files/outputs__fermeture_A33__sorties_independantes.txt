@@ -1,0 +1,6 @@
+A33_SIGN_INDEPENDENT {"rank": 14, "reduced_discriminant": 1, "pivots": [[4], [4], [4], [4], [4], [4], [4], [6], [3], [2], [3], [4], [0, 1, 0]], "minor_H_integer": 3508800, "minor_Q_integer": -5, "minor_H_mod7": 1, "minor_Q_mod7": 2}
+A33_WITT_CONFLICT {"ball_rank": 14, "cross_radical_rank": 3, "residual_rank": 0, "full_rank": 20, "predicted_full_discriminant_character": -1, "required_hyperbolic_character": 1, "contradiction": true}
+WITT_POSITIVE_CONTROL {"residual_disc": 1, "witt_relation_verified": true, "m": 2, "vertices": 9, "odd_coordinates": 4, "p": 3, "ball_rank": 2, "full_rank": 2, "image_ball_dimension": 2, "cross_rank": 0, "residual_rank": 0, "disc_ball": 1, "disc_full": 1, "no_false_exclusion": true}
+WITT_POSITIVE_CONTROL {"residual_disc": 2, "witt_relation_verified": true, "m": 11, "vertices": 243, "odd_coordinates": 121, "p": 3, "ball_rank": 20, "full_rank": 35, "image_ball_dimension": 24, "cross_rank": 4, "residual_rank": 7, "disc_ball": 1, "disc_full": 2, "no_false_exclusion": true}
+
+A33_KERNEL_BRIDGE {"local_kernel_dimension": 5, "universal_kernel": true, "torsion_basis": 4, "boundary_checks": 120, "balanced_dimension_formula": "dim U = 18-r0"}

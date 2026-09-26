@@ -1,0 +1,2 @@
+A33_BALL_SIGN {"rank": 14, "pivots": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 15], "det": 1, "square": true, "required_for_hyperbolic_rank20": false}
+
