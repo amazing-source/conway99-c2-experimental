@@ -67,3 +67,35 @@ n_s = 0), n_s cohérent pour les deux sœurs, et grilles frères.
 - et, comme cas particuliers, tout ce qui précède.
 
 C'est le travail suivant après les calculs en cours.
+
+## 4. Mélanges : l'explosion, et le bloc A générique (26/09, fin de matinée)
+**Constat.**
+- Classe « papillon » (deux triangles tordus partageant le bloc 0) : le filtre laisse **12 072 classes de squelettes**. À environ
+  60 s de PL chacune (IPM), cela ferait environ 200 h CPU.
+- **Tous** ces squelettes ont un bloc A de degré 6 et ne diffèrent que par la structure D de A. Il n'y a que **212 parties hors A**.
+
+**Méthode.**
+- **Filtre v3** (`mix_filter3.py`, sain) : la structure de A n'est pas énumérée.
+  - Ses orbites entrent dans les graphes libres des autres blocs comme emplacements de triplet inconnu, avec tout vecteur n admis.
+  - G_A compte pour une seule composante.
+  - Les feuilles sont des parties hors A.
+- **PL par partie hors A** (`mix_Agroup3.py`, `gen_colmodel_lam.py`) :
+  - les triplets hors A sont fixés ; la structure de A est **variable**, λ_{A,g} parcourant tous ses graphes D ;
+  - liaison au niveau paires (Σ sur les 2 orbites de R de la masse des colonnes (pivot c, k) = Σ_g λ_{c,g}·mult_g) ;
+  - certificat exact sur toutes les colonnes.
+- **Modèle λ** (enveloppe exacte des structures d'un bloc), comparé aux variables m par orbite : plus serré. L'orientation H
+  circulante donne un écart de 10,09 au lieu de 7,42. L'orientation (1,0,5) seule reste faisable.
+
+**Contrôles.**
+- Sur M1 n = 3, le filtre v3 donne 1 partie hors A. Les 23 classes de référence se réduisent, elles aussi, à 1 partie hors A.
+- Le PL la tue : écart 56, certificat exact.
+- Filtre v2 avec paires sœurs, sans sœur : **mêmes 23 classes** que le filtre M1 spécifique. Le lemme de queue 26.2 y était
+  redondant.
+- Papillon, 3 groupes tirés au hasard : infaisables et certifiés, écarts de 14 à 46, environ 70 s chacun.
+
+**Lancé** (`mix3_filter_all.sh`) : filtre v3 sur M1 n = 5 et 6 (cycles simples), puis sur les 47 classes de mélanges. L'étape PL
+suivra. L'ancien pipeline M1 s'arrête après n = 4 : n = 5 et 6 passent par v3.
+
+**Modèle unifié, contrôle tout-frère** (`sis_colmodel.py`) : Σ = K₇ donne un PL **faisable** (42 colonnes, toutes les valeurs
+lointaines à 1). La contradiction du Théorème D est dans la partie signée (Alt), invisible au niveau paires non signé. Pour Σ ≠ ∅, il
+faudra le niveau orbite (identité de « structures », 903 lignes, qui voit la partie antisymétrique) ou les signes.

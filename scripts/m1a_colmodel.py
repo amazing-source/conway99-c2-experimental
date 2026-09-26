@@ -127,7 +127,7 @@ class ColModel:
         lp.row_lower_ = b; lp.row_upper_ = b
         lp.a_matrix_.format_ = highspy.MatrixFormat.kColwise
         lp.a_matrix_.start_ = A.indptr; lp.a_matrix_.index_ = A.indices; lp.a_matrix_.value_ = A.data
-        h = highspy.Highs(); h.setOptionValue("output_flag", False); h.passModel(lp); h.run()
+        h = highspy.Highs(); h.setOptionValue("output_flag", False); h.setOptionValue("solver", "ipm"); h.setOptionValue("run_crossover", "off"); h.passModel(lp); h.run()
         self.h = h; self.le = le; self.n = n
         return h.getInfo().objective_function_value
 
