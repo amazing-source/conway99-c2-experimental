@@ -1,0 +1,2 @@
+orientation job 9 In {'0': [3], '1': [4, 5], '2': [0], '3': [1], '4': [0, 2], '5': [2, 3], '6': [0, 1, 2, 3, 4, 5]}: columns 2208532 rows 2202 built 16s
+orientation job 9: INFEASIBLE (all D variable), slack 12.8419, exact VALID (12.841779, -3059.327297, 0.000328) 1079s

@@ -1,0 +1,25 @@
+gen 2 6: orientation job 6: FEASIBLE obj 0.00000 295s
+gen E01_12_23_34_45_05 12: orientation job 12: FEASIBLE obj 0.00000 329s
+gen 0 10: orientation job 10: FEASIBLE obj 0.00000 349s
+gen E01_12_23_34_04 10: orientation job 10: FEASIBLE obj 0.00000 362s
+gen E01_12_23_34_45_05 11: orientation job 11: FEASIBLE obj 0.00000 384s
+gen E01_12_23_34_45_05 7: orientation job 7: FEASIBLE obj 0.00000 644s
+gen E01_12_23_34_45_05 15: orientation job 15: FEASIBLE obj 0.00000 532s
+gen 1 4: orientation job 4: FEASIBLE obj 0.00000 587s
+surv logs/lp_survivors_m1n6.json survivor 10: INFEASIBLE, slack 91.1199, exact check VALID (91.119918, -3004.043185, 0.000247)
+gen E01_12_23_34_45_05 9: orientation job 9: INFEASIBLE (all D variable), slack 12.8419, exact VALID (12.841779, -3059.327297, 0.000328) 1079s
+gen 1 0: orientation job 0: FEASIBLE obj 0.00000 732s
+gen E01_12_23_34_45_05 10: orientation job 10: INFEASIBLE (all D variable), slack 8.9799, exact VALID (8.979879, -2957.246678, 0.000309) 1257s
+surv logs/lp_survivors_m1n6.json survivor 11: INFEASIBLE, slack 83.2495, exact check VALID (83.249612, -2824.959172, 0.000398)
+surv logs/lp_survivors_m1n6.json survivor 12: INFEASIBLE, slack 91.7025, exact check VALID (91.702485, -2868.040806, 0.000257)
+gen E01_12_23_34_45_05 14: orientation job 14: INFEASIBLE (all D variable), slack 7.6022, exact VALID (7.602334, -2688.422591, 0.000536) 1126s
+surv logs/lp_survivors_m1n6.json survivor 13: INFEASIBLE, slack 90.7723, exact check VALID (90.772484, -2631.591431, 0.000435)
+surv logs/lp_survivors_m1n6.json survivor 14: INFEASIBLE, slack 87.7225, exact check VALID (87.722554, -2575.588159, 0.000351)
+surv logs/lp_survivors_m1n6.json survivor 15: INFEASIBLE, slack 82.1967, exact check VALID (82.19666, -2942.865861, 0.000207)
+surv logs/lp_survivors_m1n6.json survivor 16: INFEASIBLE, slack 87.5097, exact check VALID (87.50973, -2819.000086, 0.000296)
+surv logs/lp_survivors_m1n6.json survivor 17: INFEASIBLE, slack 90.9208, exact check VALID (90.920801, -2907.804631, 0.000264)
+gen E01_12_23_34_45_05 13: orientation job 13: INFEASIBLE (all D variable), slack 14.3600, exact VALID (14.359915, -2988.037898, 0.000217) 1334s
+surv logs/lp_survivors_m1n6.json survivor 18: INFEASIBLE, slack 95.5482, exact check VALID (95.548164, -3080.167507, 0.00028)
+surv logs/lp_survivors_m1n6.json survivor 19: INFEASIBLE, slack 91.0592, exact check VALID (91.059288, -2766.395458, 0.000342)
+surv logs/lp_survivors_m1n6.json survivor 20: INFEASIBLE, slack 87.8022, exact check VALID (87.802197, -2672.022529, 0.000306)
+QUEUE DONE logs/orbit_tasks1.txt

@@ -1,0 +1,14 @@
+survivor 1 (1 job 1): columns per orbit min 6431 max 14142 total 411060, rows 2088, built 2s
+survivor 1: INFEASIBLE, slack 73.3234, exact check VALID (73.32347, -2734.283099, 0.000357)
+survivor 3 (1 job 1): columns per orbit min 5111 max 16342 total 414260, rows 2088, built 2s
+survivor 3: INFEASIBLE, slack 77.0879, exact check VALID (77.087938, -2642.262254, 0.000351)
+survivor 5 (edges_01_12_23_34_45_05 job 0): columns per orbit min 4031 max 17973 total 420739, rows 2088, built 2s
+survivor 5: INFEASIBLE, slack 93.2264, exact check VALID (93.226407, -2840.366008, 0.000349)
+survivor 7 (edges_01_12_23_34_45_05 job 2): columns per orbit min 4031 max 22773 total 421708, rows 2088, built 2s
+survivor 7: INFEASIBLE, slack 89.2571, exact check VALID (89.257109, -2905.140043, 0.000333)
+survivor 9 (edges_01_12_23_34_45_05 job 2): columns per orbit min 4031 max 22773 total 421708, rows 2088, built 3s
+survivor 9: INFEASIBLE, slack 89.2571, exact check VALID (89.257156, -2909.016996, 0.000383)
+survivor 11 (edges_01_12_23_34_45_05 job 2): columns per orbit min 4031 max 17973 total 421539, rows 2088, built 2s
+survivor 11: INFEASIBLE, slack 96.5188, exact check VALID (96.518538, -2506.535135, 1.7e-05)
+survivor 13 (edges_01_12_23_34_45_05 job 2): columns per orbit min 4031 max 22773 total 421708, rows 2088, built 2s
+survivor 13: INFEASIBLE, slack 89.2571, exact check VALID (89.257079, -2907.1928, 0.000253)

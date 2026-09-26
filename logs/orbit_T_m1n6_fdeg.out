@@ -1,0 +1,21 @@
+T = [(0, 1), (1, 2), (2, 3), (3, 4), (4, 5), (0, 5)]: columns 15810156 rows 1914 built 81s
+  iter 1 obj 1883.19430 cols 252 added 126 best 155 6s
+  iter 2 obj 1363.56303 cols 378 added 126 best 124 12s
+  iter 3 obj 998.96756 cols 504 added 126 best 116 18s
+  iter 4 obj 776.72437 cols 630 added 126 best 96.7 24s
+  iter 5 obj 567.20086 cols 756 added 126 best 91.9 31s
+  iter 6 obj 413.56010 cols 882 added 126 best 76.8 37s
+  iter 7 obj 300.79864 cols 1008 added 126 best 79.9 44s
+  iter 8 obj 238.84671 cols 1134 added 126 best 76.6 51s
+  iter 9 obj 187.71969 cols 1260 added 126 best 65.7 59s
+  iter 10 obj 145.49866 cols 1386 added 126 best 70.6 68s
+  iter 11 obj 110.62444 cols 1512 added 126 best 50.5 79s
+  iter 12 obj 80.56302 cols 1638 added 126 best 53.7 90s
+  iter 13 obj 56.82918 cols 1764 added 126 best 43.1 104s
+  iter 14 obj 38.15158 cols 1890 added 126 best 39.5 121s
+  iter 15 obj 24.04553 cols 2016 added 126 best 33.5 142s
+  iter 16 obj 13.76604 cols 2142 added 126 best 26.6 165s
+  iter 17 obj 6.78202 cols 2268 added 126 best 20.7 192s
+  iter 18 obj 0.84758 cols 2394 added 126 best 15.8 226s
+  iter 19 obj 0.00000 cols 2394 added 0 best 0 262s
+T: FEASIBLE obj 0.00000 343s

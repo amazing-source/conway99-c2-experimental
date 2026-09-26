@@ -1,0 +1,12 @@
+orientation job 0 In {'0': [4], '1': [5], '2': [0], '3': [0, 1], '4': [1, 2], '5': [2, 3], '6': [0, 1, 2, 3, 4, 5]}: columns 2201776 rows 2202 built 13s
+  iter 1 obj 1703.64181 cols 252 added 126 best 140 1s (master 0.4s, pricing 0.3s)
+  iter 2 obj 1155.46340 cols 378 added 126 best 109 2s (master 0.7s, pricing 0.2s)
+  iter 3 obj 871.60900 cols 504 added 126 best 95.5 3s (master 1.7s, pricing 0.2s)
+  iter 4 obj 645.29500 cols 630 added 126 best 83.1 6s (master 2.3s, pricing 0.2s)
+  iter 5 obj 487.37414 cols 756 added 126 best 75 9s (master 3.3s, pricing 0.1s)
+  iter 6 obj 378.74226 cols 882 added 126 best 65.7 15s (master 5.1s, pricing 0.2s)
+  iter 7 obj 296.70222 cols 1008 added 126 best 52.7 22s (master 7.1s, pricing 0.2s)
+  iter 8 obj 244.37310 cols 1134 added 126 best 53.2 32s (master 9.7s, pricing 0.2s)
+  iter 9 obj 199.02912 cols 1260 added 126 best 50 44s (master 12.0s, pricing 0.2s)
+  iter 10 obj 167.25188 cols 1386 added 126 best 37.7 59s (master 15.3s, pricing 0.2s)
+  iter 11 obj 130.73288 cols 1512 added 126 best 31.1 80s (master 20.6s, pricing 0.2s)

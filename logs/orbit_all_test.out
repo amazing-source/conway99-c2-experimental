@@ -1,0 +1,21 @@
+ALL-variable model: columns 30344160 rows 1827 built 180s
+  iter 1 obj 1543.21328 cols 252 added 126 best 151 6s
+  iter 2 obj 1179.53058 cols 378 added 126 best 113 13s
+  iter 3 obj 916.02574 cols 504 added 126 best 100 20s
+  iter 4 obj 724.93994 cols 630 added 126 best 106 27s
+  iter 5 obj 579.54444 cols 756 added 126 best 90.6 34s
+  iter 6 obj 431.63140 cols 882 added 126 best 90.3 41s
+  iter 7 obj 333.28250 cols 1008 added 126 best 78.4 48s
+  iter 8 obj 266.84607 cols 1134 added 126 best 71.3 56s
+  iter 9 obj 207.22304 cols 1260 added 126 best 73 65s
+  iter 10 obj 161.92028 cols 1386 added 126 best 62.3 75s
+  iter 11 obj 119.51231 cols 1512 added 126 best 63.7 85s
+  iter 12 obj 94.56858 cols 1638 added 126 best 53.8 98s
+  iter 13 obj 68.64544 cols 1764 added 126 best 45.6 111s
+  iter 14 obj 48.50017 cols 1890 added 126 best 41.7 128s
+  iter 15 obj 33.51898 cols 2016 added 126 best 39.7 147s
+  iter 16 obj 20.02671 cols 2142 added 126 best 31.2 171s
+  iter 17 obj 11.08291 cols 2268 added 126 best 24.7 201s
+  iter 18 obj 3.51951 cols 2394 added 126 best 19.3 235s
+  iter 19 obj 0.00000 cols 2394 added 0 best 0 272s
+ALL: FEASIBLE obj 0.00000 452s

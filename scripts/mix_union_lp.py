@@ -16,7 +16,14 @@ for f in sorted(glob.glob(pat)):
     d = json.load(open(f))
     for po in d["per_orient"]:
         if po["leaves"]: jobs.append((po, [tuple(map(tuple, L)) for L in po["leaves"]], d["twE"]))
-out = open("logs/mix6_ulp_%s_%d.jsonl" % (tag, k), "w")
+import os
+outfn = "logs/mix6_ulp_%s_%d.jsonl" % (tag, k)
+done_jobs = set()
+if os.path.exists(outfn):
+    for l in open(outfn):
+        try: done_jobs.add(json.loads(l)["job"])
+        except Exception: pass
+out = open(outfn, "a")
 
 def solve(po, leaves, Adgs=None):
     a = po["A"]; In = {int(x): v for x, v in po["In"].items()}
@@ -96,7 +103,7 @@ def rec(po, leaves, depth, log):
     return res
 
 for ji, (po, leaves, twE) in enumerate(jobs):
-    if ji % K != k: continue
+    if ji % K != k or ji in done_jobs: continue
     t0 = time.time(); log = []
     bad = rec(po, leaves, 0, log)
     out.write(json.dumps({"job": ji, "twE": twE, "In": po["In"], "A": po["A"], "nleaves": len(leaves), "lps": len(log),

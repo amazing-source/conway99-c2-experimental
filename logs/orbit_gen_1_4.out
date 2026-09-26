@@ -1,0 +1,2 @@
+orientation job 4 In {'0': [3], '1': [2], '2': [0, 5], '3': [1], '4': [0, 1], '5': [3, 4], '6': [0, 1, 2, 3, 4, 5]}: columns 2207270 rows 2202 built 17s
+orientation job 4: FEASIBLE obj 0.00000 587s
