@@ -39,7 +39,8 @@ def far_solutions(blocks5, deg):
     return prs, out
 
 class GenModel:
-    def __init__(self, orient, useP2=True, forbid_linked=(), cut5=True, allowed_ik=None):
+    def __init__(self, orient, useP2=True, forbid_linked=(), cut5=True, allowed_ik=None, balA=None):
+        self.balA = balA
         """orient: dict pair -> 'tw' or anchor block (int)."""
         self.orient = orient
         self.orbits = [(R, s) for R in PAIRS for s in (0, 1)]
@@ -98,7 +99,11 @@ class GenModel:
             v[PI[P(j, r)]] = nd.get(r, 0)
         return v
 
+    def add_balanceA(self, A):
+        self.balA = A
+
     def build_rows(self):
+        self.slack_ub = {}
         rows = {}          # name -> index ; kinds
         self.rname = []; self.rkind = []; self.rrhs = []
         def add(name, kind, rhs):
@@ -139,6 +144,19 @@ class GenModel:
                 if self.useP2: add(('P2', a, b), 'eq', 16 - (4 if Ra & Rb else 0))
         for (c, pr) in self.forbid_linked:
             add(('nolink', c, pr), 'le', 1)
+        A = getattr(self, 'balA', None)
+        if A is not None:
+            others = [x for x in range(N) if x != A]
+            self.balsets = []
+            for size in range(2, 7):
+                for B in itertools.combinations(others, size):
+                    if len(others) - size == 1: continue
+                    self.balsets.append(frozenset(B))
+            for O in self.orbits:
+                if A in O[0]: continue
+                for B in self.balsets:
+                    add(('balA+', O, B), 'le', 4); add(('balA-', O, B), 'le', 4)
+                    self.slack_ub[rows['balA+', O, B]] = 10; self.slack_ub[rows['balA-', O, B]] = 10
         self.rows = rows
         # fixed (non-column) variables m, e with their row entries
         self.fixed_cols = []      # list of (name, [(row, coef)])
@@ -149,6 +167,15 @@ class GenModel:
                 for (x, y) in g: mult[(x, y)] += 1; mult[(y, x)] += 1
                 for (x, y), mu in mult.items():
                     ent.append((rows['DP', P(c, x), c, y], -mu))
+                if getattr(self, 'balA', None) == c:
+                    import networkx as nx
+                    Gd = nx.MultiGraph(); Gd.add_edges_from(g)
+                    comps = {frozenset(cc) for cc in nx.connected_components(Gd)}
+                    for O in self.orbits:
+                        if c in O[0]: continue
+                        for B in comps:
+                            if B in getattr(self, 'balsets', []):
+                                ent.append((rows['balA+', O, B], 4)); ent.append((rows['balA-', O, B], 4))
                 self.fixed_cols.append((('lam', c, gi), ent))
         for (O1, O2, t) in self.share:
             k1 = next(iter(O2[0] - {t})); k2 = next(iter(O1[0] - {t}))
@@ -195,12 +222,24 @@ class GenModel:
             self._vc[key] = vals
         return self._vc[key]
 
+    def balA_terms(self, O, y):
+        A = getattr(self, 'balA', None)
+        w = np.zeros(len(PAIRS)); cst = 0.0
+        if A is None or A in O[0]: return w, cst
+        for B in self.balsets:
+            d = y[self.rows['balA+', O, B]] - y[self.rows['balA-', O, B]]
+            if d == 0: continue
+            for x in B: w[PI[P(A, x)]] += d
+            cst -= d * (len(B) - len(B & O[0]))
+        return w, cst
+
     def column_matrix(self, O, i, j, k, nv, y):
         vals = self.vals_of(O, i, j, k, nv)
         if len(vals) == 0: return np.zeros(0), vals
         v = vals.astype(float)
         const = sum(y[r] * c for r, c in self.type_rows(O, i, j, k, nv))
-        lin = self._linpa[PI[O[0]]]
+        wb, cb = self.balA_terms(O, y); const += cb
+        lin = self._linpa[PI[O[0]]] + wb
         scores = const + v @ lin + np.einsum('ij,jk,ik->i', v, self._Q, v)
         return scores, vals
 
@@ -229,6 +268,11 @@ class GenModel:
     def entries_of(self, O, i, j, k, nv, val):
         ent = list(self.type_rows(O, i, j, k, nv))
         rows = self.rows; pa = PI[O[0]]
+        A = getattr(self, 'balA', None)
+        if A is not None and A not in O[0]:
+            for B in self.balsets:
+                dev = sum(int(val[PI[P(A, x)]]) for x in B) - (len(B) - len(B & O[0]))
+                if dev: ent.append((rows['balA+', O, B], dev)); ent.append((rows['balA-', O, B], -dev))
         for t, R in enumerate(PAIRS):
             if val[t]:
                 ent.append((rows['S', R], int(val[t]))); ent.append((rows['PPE', R], int(val[t]) ** 2))
@@ -308,7 +352,7 @@ class GenModel:
         lp.col_cost_ = np.concatenate([np.zeros(nx + nl), np.ones(2 * len(eq))])
         lo = np.zeros(nx); up = np.ones(nx)
         for t, (l_, u_) in getattr(self, 'bounds', {}).items(): lo[t] = l_; up[t] = u_
-        lp.col_upper_ = np.concatenate([up, np.array([self.rrhs[r] for r in le], dtype=float), np.full(2 * len(eq), highspy.kHighsInf)])
+        lp.col_upper_ = np.concatenate([up, np.array([self.slack_ub.get(r, self.rrhs[r]) for r in le], dtype=float), np.full(2 * len(eq), highspy.kHighsInf)])
         lp.col_lower_ = np.concatenate([lo, np.zeros(nc - nx)])
         b = np.array(self.rrhs, dtype=float); lpl = b.copy(); lpu = b.copy()
         for r in range(m):

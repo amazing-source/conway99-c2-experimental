@@ -53,3 +53,15 @@ Les queues vérifient f = 8, ce qui est compatible avec 28.5.
   - imposer l'équilibre en A comme **filtre exact de colonnes** (valable dès que la partition est fixée) ;
   - ajouter en priorité les identités (P2) des paires {A,x}, {A,y}.
 - Aucun calcul en cours n'est modifié.
+
+## 5. Accélération tentée : équilibre en A comme lignes « grand M » dans le PL à A variable (NÉGATIF)
+- **Lignes.** Pour chaque orbite Z hors A et chaque ensemble B de blocs pouvant être un cycle de A :
+  |Σ_{c∈Z} x_c (Σ_{x∈B} a_c(x) − (|B| − |P_Z ∩ B|))| ≤ 4(1 − β_B), où β_B = Σ λ_g sur les graphes D de A dont B est une composante.
+  Ces lignes sont valides : exactes quand B est un cycle, vides sinon.
+- **Test** (`scripts/_probe_gcl.py`) sur deux feuilles résistantes (papillon j5_3, M1 n = 5 partie 28) : le PL à la racine reste
+  faisable, avec un écart de 0 avec ou sans ces lignes. Le λ fractionnaire étale les structures de A, β_B est petit, et les lignes
+  deviennent vides.
+- **Conclusion.** Le coût (branchement sur A, 16 à 24 PL par feuille résistante) n'est pas réduit par cette voie. L'équilibre en A
+  n'est vraiment exact que partition fixée (41 partitions), ce qui coûterait plus cher que le branchement actuel.
+- Mesure du pipeline : en IPM, environ 15 s par PL. Les travaux lourds font environ 140 PL, surtout du branchement sur A. Rien n'a
+  encore résisté.
