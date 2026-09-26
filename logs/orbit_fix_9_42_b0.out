@@ -1,0 +1,3 @@
+class 9 job 42 block 0: 146331 leaves, 21 D-options at block 0
+option 0 (8051 leaves): INFEASIBLE slack 21.9217 1418s
+option 1 (7909 leaves): INFEASIBLE slack 12.5056 1740s

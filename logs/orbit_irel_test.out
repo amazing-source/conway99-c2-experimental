@@ -1,0 +1,2 @@
+IREL=diag,sister,share: survivor 0: INFEASIBLE, slack 7.3103, exact check VALID (7.31039, -1333.090363, 6.483105)
+IREL=diag,sister,disjoint: survivor 0: INFEASIBLE, slack 18.9137, exact check VALID (18.913714, -1225.852771, 18.001627)

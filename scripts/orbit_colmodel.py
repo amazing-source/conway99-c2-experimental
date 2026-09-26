@@ -106,8 +106,13 @@ class OrbitModel:
                     rhs = sum(12 * (a == b) + 4 - int(self.Sh[a, b]) for a in self.orbs_of[R1] for b in self.orbs_of[R2])
                     add(('IP', R1, R2), 'eq', 2 * rhs)
         elif self.use_I:
+            irel = __import__('os').environ.get('IREL')
+            self.Ikept = set()
             for a in range(n):
-                for b in range(a, n): add(('I', a, b), 'eq', 2 * (12 * (a == b) + 4 - int(self.Sh[a, b])))
+                for b in range(a, n):
+                    rel = 'diag' if a == b else ('sister' if self.pair[a] == self.pair[b] else ('share' if self.pair[a] & self.pair[b] else 'disjoint'))
+                    if irel and rel not in irel.split(','): continue
+                    add(('I', a, b), 'eq', 2 * (12 * (a == b) + 4 - int(self.Sh[a, b]))); self.Ikept.add((a, b))
         self.cuts = []
         for c in range(N):
             F = self.free[c]; f = len(F)
@@ -129,7 +134,7 @@ class OrbitModel:
                 if self.use_I == 'pair':
                     R1, R2 = self.pair[Z], self.pair[W]
                     if R1 != R2: ent[W].append((self.rows['IP', *sorted((R1, R2), key=lambda R: self.PLi[R])], 1))
-                elif self.use_I: ent[W].append((self.rows['I', a, b], 1))
+                elif self.use_I and (a, b) in self.Ikept: ent[W].append((self.rows['I', a, b], 1))
             self.linmap.append(ent)
         self.pairrows = defaultdict(list)
         if getattr(self, 'use_sis5', False):
@@ -156,8 +161,8 @@ class OrbitModel:
             for x, R1 in enumerate(self.PL):
                 for w, R2 in enumerate(self.PL[x:], x): self.IPidx[x, w] = self.IPidx[w, x] = self.rows['IP', R1, R2]
         elif self.use_I:
-            for a in range(n):
-                for b in range(a, n): self.Iidx[a, b] = self.Iidx[b, a] = self.rows['I', a, b]
+            self.Imask = np.zeros((n, n), dtype=bool)
+            for (a, b) in self.Ikept: self.Iidx[a, b] = self.Iidx[b, a] = self.rows['I', a, b]; self.Imask[a, b] = self.Imask[b, a] = True
 
     def score_parts(self, y, Z):
         """const, lin (42), Ysym (42x42) such that (A^T y)_c = const + q.lin + q^T Y q for every column q of Z"""
@@ -166,7 +171,7 @@ class OrbitModel:
             yP = np.array(y[self.IPidx], dtype=y.dtype); np.fill_diagonal(yP, 2 * np.diag(y[self.IPidx]))
             Y = self.Pagg.T.astype(y.dtype) @ yP @ self.Pagg.astype(y.dtype)
         elif self.use_I:
-            yI = y[self.Iidx]; Y = np.array(yI, dtype=y.dtype); np.fill_diagonal(Y, 2 * np.diag(yI))
+            yI = np.where(self.Imask, y[self.Iidx], 0).astype(y.dtype); Y = np.array(yI, dtype=y.dtype); np.fill_diagonal(Y, 2 * np.diag(yI))
         else: Y = np.zeros((n, n), dtype=y.dtype)
         lin = np.zeros(n, dtype=y.dtype)
         for W, lst in self.linmap[Z].items():
@@ -193,7 +198,7 @@ class OrbitModel:
         for x in range(len(nz)):
             for w in range(x, len(nz)):
                 a, b = int(nz[x]), int(nz[w])
-                ent.append((self.rows['I', min(a, b), max(a, b)], 2 * int(q[a]) * int(q[b])))
+                if (min(a, b), max(a, b)) in self.Ikept: ent.append((self.rows['I', min(a, b), max(a, b)], 2 * int(q[a]) * int(q[b])))
         d = defaultdict(int)
         for r, c in ent: d[r] += c
         return [(r, c) for r, c in d.items() if c]
@@ -248,8 +253,16 @@ class OrbitModel:
         self._h.run()
         return self._h
 
-    def solve(self, tlimit=280, per=3, verbose=True):
+    def solve(self, tlimit=280, per=3, verbose=True, init=None):
+        """init: optional list of (Z, q-bytes) from a related model (column reuse); kept if valid here"""
         t0 = time.time(); cols = []; keys = set(); self.colinfo = []
+        if init:
+            look = {}
+            for Z, qb in init:
+                if Z not in look: look[Z] = {self.cols[Z][t].tobytes() for t in range(len(self.cols[Z]))}
+                if qb in look[Z] and (Z, qb) not in keys:
+                    q = np.frombuffer(qb, dtype=np.int8)
+                    keys.add((Z, qb)); cols.append(self.entries(Z, q)); self.colinfo.append((Z, int(np.argmax(q == 2))))
         # start: 3 random columns per orbit
         rng = np.random.default_rng(0)
         for Z in range(self.n):
@@ -282,12 +295,13 @@ class OrbitModel:
             if obj > 1e-7 and obj - sumbest > 0.05:          # Lagrangian (Farkas) bound positive: exact check now, stop if valid
                 ok, _b = self.verify(y)
                 if ok:
-                    self.done = True
+                    self.done = True; self.final_keys = list(keys)
                     self.last_x = np.array(h.getSolution().col_value)[:len(cols)] if not __import__('os').environ.get('WS') else None
                     return obj, y
             if added == 0 or time.time() - t0 > tlimit:
                 self.done = added == 0
                 self.last_x = np.array(h.getSolution().col_value)[:len(cols)] if not __import__('os').environ.get('WS') else None
+                self.final_keys = list(keys)
                 return obj, y
 
     def verify(self, y, den=10 ** 6):
