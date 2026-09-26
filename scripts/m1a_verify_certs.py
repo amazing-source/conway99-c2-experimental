@@ -34,7 +34,7 @@ if __name__ == "__main__":
     lim = int(sys.argv[1]) if len(sys.argv) > 1 else 10 ** 9
     k, K = (int(sys.argv[2]), int(sys.argv[3])) if len(sys.argv) > 3 else (0, 1)
     t0 = time.time(); ok = bad = 0; mult = 0
-    files = sorted(glob.glob("logs/m1a_res_*.jsonl"))
+    files = sorted(glob.glob("logs/m1a_res_" + (sys.argv[4] if len(sys.argv) > 4 else "") + "*.jsonl"))
     if files: recs = [json.loads(l) for f in files for l in open(f)]
     else: recs = [json.loads(l) for f in sorted(glob.glob("logs/m1a_certs/m1a_res_*.jsonl.gz")) for l in gzip.open(f, "rt")]
     recs = sorted(recs, key=lambda r: r["idx"])
