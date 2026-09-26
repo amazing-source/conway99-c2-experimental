@@ -66,7 +66,7 @@ def run(ci, rep, lo, hi):
 
 
 if __name__ == "__main__":
-    sys.path.insert(0, os.environ.get('STRUCT_AD', os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'external_structures', 'ad')))
+    sys.path.insert(0, os.environ.get('STRUCT_AD', (os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'external_structures', 'ad') if os.path.isdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'external_structures', 'ad')) else os.path.join(os.path.dirname(os.path.abspath(__file__)), 'vendor_structures'))))
     cmd = sys.argv[1]
     if cmd == "reps":
         for ci in map(int, sys.argv[2:]):

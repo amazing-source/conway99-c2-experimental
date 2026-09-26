@@ -7,7 +7,7 @@ For every dead node of logs/pair_certs/<ci>_<job>.jsonl:
 Coverage: every leaf of the job agrees with the assignment of at least one dead node on all its assigned blocks.
 Usage: python pair_verify.py <ci> <job> [...more ci job pairs]"""
 import sys, json, glob, os, time
-sys.path.insert(0, os.environ.get('STRUCT_AD', os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'external_structures', 'ad')))
+sys.path.insert(0, os.environ.get('STRUCT_AD', (os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'external_structures', 'ad') if os.path.isdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'external_structures', 'ad')) else os.path.join(os.path.dirname(os.path.abspath(__file__)), 'vendor_structures'))))
 from general_model import build
 from certify import check
 N = 7

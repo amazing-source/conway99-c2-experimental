@@ -11,7 +11,7 @@ Also: every leaf of the job has a record; the leaves not dead are listed (they g
 Usage: python pair_verify_leaves.py <ci> <job> [<ci> <job> ...]      env SAMPLE=k: check only every k-th dead leaf"""
 import sys, os, json, gzip, glob, time
 from fractions import Fraction
-sys.path.insert(0, os.environ.get('STRUCT_AD', os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'external_structures', 'ad')))
+sys.path.insert(0, os.environ.get('STRUCT_AD', (os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'external_structures', 'ad') if os.path.isdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'external_structures', 'ad')) else os.path.join(os.path.dirname(os.path.abspath(__file__)), 'vendor_structures'))))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from general_model import build
 from certify import check

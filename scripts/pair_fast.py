@@ -13,7 +13,7 @@ import sys, os, json, time, gzip, itertools
 from collections import Counter
 import numpy as np
 import highspy
-sys.path.insert(0, os.environ.get('STRUCT_AD', os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'external_structures', 'ad')))
+sys.path.insert(0, os.environ.get('STRUCT_AD', (os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'external_structures', 'ad') if os.path.isdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'external_structures', 'ad')) else os.path.join(os.path.dirname(os.path.abspath(__file__)), 'vendor_structures'))))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from general_model import closed_classes, PAIRS, pr
 from pair_blockdfs import orbit_list, load_job

@@ -10,7 +10,7 @@ scripts/pair_verify.py (rebuilds the skeleton from the spec on its own, then ad/
 Usage: python pair_blockdfs.py <class id> <job> [max nodes]      (structures' lab cloned in external_structures/, gitignored; env STRUCT_AD overrides)"""
 import sys, json, glob, time, os
 from collections import Counter
-sys.path.insert(0, os.environ.get('STRUCT_AD', os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'external_structures', 'ad')))
+sys.path.insert(0, os.environ.get('STRUCT_AD', (os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'external_structures', 'ad') if os.path.isdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'external_structures', 'ad')) else os.path.join(os.path.dirname(os.path.abspath(__file__)), 'vendor_structures'))))
 from general_model import build
 from certify import certify
 N = 7
