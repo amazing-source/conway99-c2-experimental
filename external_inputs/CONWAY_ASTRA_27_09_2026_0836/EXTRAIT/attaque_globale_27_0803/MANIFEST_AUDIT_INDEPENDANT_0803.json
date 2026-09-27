@@ -1,0 +1,296 @@
+{
+  "status": "AUDIT INDEPENDANT ACQUIS; own0803 pieces frozen",
+  "own_files": [
+    {
+      "path": "AUDIT_NORME1_ET_METRIQUES.md",
+      "bytes": 8572,
+      "sha256": "73b638863453408ce1252f1a02d3b46179fbf959a75c5ee065b8929794ed9db8"
+    },
+    {
+      "path": "AUDIT_COLLAGE_E8_ET_SEPT_BLOCS.md",
+      "bytes": 9027,
+      "sha256": "e03bbcab5f20605c168e2d1a1254e577ffe39a4610a316e06e44b0079c53bd7c"
+    },
+    {
+      "path": "AUDIT_INDECOMPOSABILITE.md",
+      "bytes": 3635,
+      "sha256": "102f435498ba84f7b0e0cc12d651944ce23cafc00785056f12fde5428be47c3a"
+    },
+    {
+      "path": "AUDIT_COMPOSANTES_RACINES_ET_CARRIER.md",
+      "bytes": 5246,
+      "sha256": "096414f2f25ef26b1ced6399d630a03e2aeb7eec580d5bf8b9c862927dedd60c"
+    },
+    {
+      "path": "AUDIT_RACINES_CORANG_UN.md",
+      "bytes": 5726,
+      "sha256": "d63607b75b9b19b0df6a4a41cb73a3c86a102c72b9c8fd206c428e311b129e49"
+    },
+    {
+      "path": "AUDIT_GOLAY_ENVELOPPE.md",
+      "bytes": 4896,
+      "sha256": "402978d669f8e3f8729cecfaf375622d3f6dc2c62238b886ae46f0b9b515e047"
+    },
+    {
+      "path": "verifier_identites_courtes.mjs",
+      "bytes": 5035,
+      "sha256": "27ea92438164861646f0c6dec2aa4f74bb8588084d2c2b6af019f3a536c1c660"
+    },
+    {
+      "path": "verifier_identites_courtes.json",
+      "bytes": 3137,
+      "sha256": "8a56caa5636e43be2cfb57142c15f8426d40179e600490138904721e0233e607"
+    },
+    {
+      "path": "verifier_collage_E8_P.mjs",
+      "bytes": 6269,
+      "sha256": "d5d01a8b814026da4824c466110fa5d5c1b13cf9a63e18a2d9877a43190f6533"
+    },
+    {
+      "path": "verifier_collage_E8_P.json",
+      "bytes": 5399,
+      "sha256": "297656e5d2886d197ac773f32def39a169ae055a48036402d668823ac13c3621"
+    },
+    {
+      "path": "verifier_indecomposabilite_courte.mjs",
+      "bytes": 2609,
+      "sha256": "1584e73048859a48c55505641ad4948b6714a872dde7d8189c25ea7e0bf9124c"
+    },
+    {
+      "path": "verifier_indecomposabilite_courte.json",
+      "bytes": 5926,
+      "sha256": "dc1ad417b18d23c8633121078b6a15ebeb0f7545f47746d53cfbef690630cfb3"
+    },
+    {
+      "path": "verifier_carrier_lourd_indep.mjs",
+      "bytes": 3774,
+      "sha256": "9685ed9e61647a58302ea08462a527281cef332a3dc85beda4b686bf822bfc91"
+    },
+    {
+      "path": "verifier_carrier_lourd_indep.json",
+      "bytes": 14848,
+      "sha256": "5edb837de19e39b49a5fa3e122eb083290773a23ef7d52e5d3d8ba0c2d124d5a"
+    },
+    {
+      "path": "verifier_corang_un_indep.mjs",
+      "bytes": 3977,
+      "sha256": "b9e104067d0529b6148cce3bd20fc4b92cc53c4eb0e21f6f0a1425cc58958522"
+    },
+    {
+      "path": "verifier_corang_un_indep.json",
+      "bytes": 9633,
+      "sha256": "e90fadfd9ae4ad4d8f772e36d14347bd95172edad9a073e928af7f2561789b7f"
+    },
+    {
+      "path": "verifier_golay_enveloppe_indep.mjs",
+      "bytes": 5121,
+      "sha256": "c87c0d7b893759e386c3fecd6332435fe1231acb2834a6d8c91470202958c3a3"
+    },
+    {
+      "path": "verifier_golay_enveloppe_indep.json",
+      "bytes": 6586,
+      "sha256": "76cc2cb462ba125d9488bee80cc56857406c10c7e8fff62ec3980c29ff392cb1"
+    },
+    {
+      "path": "figer_audit_independant_0803.mjs",
+      "bytes": 5472,
+      "sha256": "6e37447c3d49079b3e6976ad52529a09fc843f7b6af2c44f626d3f70d1c99621"
+    }
+  ],
+  "inputs_read_snapshot": [
+    {
+      "path": "../dossier6_involution/NOTE_RESEAU_MINIMUM.md",
+      "bytes": 7343,
+      "sha256": "e4e75cb9f6fb194486269a7d8109b28a3e2beb5e86dcc529a5603a4d1d7ab1d3"
+    },
+    {
+      "path": "../dossier6_involution/AUDIT_GENRE.md",
+      "bytes": 13328,
+      "sha256": "759b4c66b6d788f1ea8348f1732be5eebfd66a5472b0184a70bbea675bd01235"
+    },
+    {
+      "path": "../reprise_27_0636/CONTROLES_MOMENTS_ENTIERS_REMOTE.json",
+      "bytes": 1869,
+      "sha256": "d217f73bf0105226cedd73a702bb02b08d72338b27b6e0658b5e87e0bca8fb40"
+    },
+    {
+      "path": "INDECOMPOSABILITE_GLOBALE.md",
+      "bytes": 6819,
+      "sha256": "17d643fd120452110fe5270618ea944f61bfd7124f4c72e105bd016c2f123bf0"
+    },
+    {
+      "path": "RACINES_CORANG_UN_CANDIDAT.md",
+      "bytes": 8688,
+      "sha256": "3734cbb4fa7a1f5972f029c3f8de200eee25f8b9d1058557a2cc0580b86e3fee"
+    },
+    {
+      "path": "SEPT_BLOCS_CARACTERISTIQUES_ET_COLLAGE.md",
+      "bytes": 13003,
+      "sha256": "b2a115acbde3af297479c58f9a8fca339f59cf85e3287f42fd2dcdbb70f9dccc"
+    },
+    {
+      "path": "UNIFICATION_G18_G20_RANG24.md",
+      "bytes": 7647,
+      "sha256": "f3d1aa7908e63adf707c8cede320b5a091515ce0301487ee33b334ed785ef565"
+    },
+    {
+      "path": "G18_G20_NORME14_LOURDS.md",
+      "bytes": 5847,
+      "sha256": "425056c56cc6c76182360bcb433277ad3a8686794511ee31071a2f01059f5d16"
+    },
+    {
+      "path": "G18_G20_LOURD_REGIMES.md",
+      "bytes": 5385,
+      "sha256": "866e69177f5d99ba8826dcc8877df3a5fac560bf2ee88e864f9f0a77780a5367"
+    },
+    {
+      "path": "G18_G20_CARRIER_LOURD_P0.md",
+      "bytes": 3751,
+      "sha256": "eb22e1afb618480506f605f890632f1e84c4dc2f1ccf7af18286f23ee1642b38"
+    },
+    {
+      "path": "G18_G20_CARRIER_LOURD_P0.mjs",
+      "bytes": 2164,
+      "sha256": "df1831d2029657e68bfbe28b6ca580e1d2a048581de7d806df6a3125646ed5fb"
+    },
+    {
+      "path": "G18_G20_CARRIER_LOURD_P0.json",
+      "bytes": 19422,
+      "sha256": "e87d9704659c321271c3828cca71c3dff0032e38e4e76a45780c330336e28e02"
+    },
+    {
+      "path": "G18_G20_E8_MINUSCULE.md",
+      "bytes": 4684,
+      "sha256": "08f21a278b88f7c3a12e4b40f0674f603087234471244bdbc6eff5564681e7e5"
+    },
+    {
+      "path": "G18_G20_D13_FRAME.md",
+      "bytes": 3271,
+      "sha256": "c4c5acc152a26cb8f3aa3babd3b202df3c606c7afae988a63790486b1c512142"
+    },
+    {
+      "path": "G18_G20_D11_D12_DANS_N.md",
+      "bytes": 3094,
+      "sha256": "721d0cbaa56e856281453e92b95f05686db07d1d1dff25d131a5983a51b567f9"
+    },
+    {
+      "path": "G18_G20_D12_COLLAGE.md",
+      "bytes": 4577,
+      "sha256": "14e1982694778879d232fdaa1b5b96db8a3321925b14cd2938c682f5fee5ee11"
+    },
+    {
+      "path": "G18_G20_A20_FRAME.md",
+      "bytes": 3088,
+      "sha256": "22934b9fef2d3a7653cab21464f105c4d1643dab858a9397cc2b2530e1ef8f0e"
+    },
+    {
+      "path": "CONTRE_MODELE_ENVELOPPE_G20_GOLAY.md",
+      "bytes": 7125,
+      "sha256": "5e80991d75544850a941fd42755c2bfc2974d00962e7cd5b4c9481cd5f9e6a59"
+    },
+    {
+      "path": "controle_enveloppe_g20_golay.mjs",
+      "bytes": 4629,
+      "sha256": "9c9cba2e19349cf681f256a990e69cdc0920b3eec31a8636fc5d3cba2027e9ed"
+    },
+    {
+      "path": "controle_enveloppe_g20_golay.json",
+      "bytes": 11370,
+      "sha256": "20c9d9a206626dd47d0de4a5d164da7d888d7e146db9ee01d701cf650162763e"
+    },
+    {
+      "path": "TEMPLATE_CONDITIONNEL_SHADOW24.md",
+      "bytes": 3773,
+      "sha256": "3fd25fc66b330e5a09911b8c579a2ada28f015454a8e06d7de962190e53fe5c7"
+    },
+    {
+      "path": "BILAN_ATTAQUE_GLOBALE.md",
+      "bytes": 10426,
+      "sha256": "848112e02fe930734547d1ac0bbff25f43149f4d281ab7ff764a5cdf8866e9a1"
+    },
+    {
+      "path": "controles_positifs_cadre_global.mjs",
+      "bytes": 2605,
+      "sha256": "858f415967111796dd07eef21350793f1217148fe0a322eacf20065cc110fb01"
+    },
+    {
+      "path": "controles_positifs_cadre_global.json",
+      "bytes": 1068,
+      "sha256": "c699700a3d764876711c0f4087582a1a2b95f238d58746f120ac743293fcd7ca"
+    }
+  ],
+  "runChecks": [
+    {
+      "source": "verifier_identites_courtes.mjs",
+      "result": "verifier_identites_courtes.json",
+      "exact": true
+    },
+    {
+      "source": "verifier_collage_E8_P.mjs",
+      "result": "verifier_collage_E8_P.json",
+      "exact": true
+    },
+    {
+      "source": "verifier_indecomposabilite_courte.mjs",
+      "result": "verifier_indecomposabilite_courte.json",
+      "exact": true
+    },
+    {
+      "source": "verifier_carrier_lourd_indep.mjs",
+      "result": "verifier_carrier_lourd_indep.json",
+      "exact": true
+    },
+    {
+      "source": "verifier_corang_un_indep.mjs",
+      "result": "verifier_corang_un_indep.json",
+      "exact": true
+    },
+    {
+      "source": "verifier_golay_enveloppe_indep.mjs",
+      "result": "verifier_golay_enveloppe_indep.json",
+      "exact": true
+    }
+  ],
+  "inputs_policy": "Snapshots of external sources read for audit. They are not modified or frozen by this script. Old files remain read-only.",
+  "acquired_human_proofs": [
+    "Correct separation of standard21/28 coefficient Grams, real4 block Gram and beta on imH",
+    "Known dual minimum8/7 with exact common-neighbor recount; no novelty claim",
+    "Indecomposability of N and same-rank integral minimum2 overlattices via two uniform proofs",
+    "Primitive P of seven blocks, det2^12, discr(Z/4)^6, complement rank15/classes5/2",
+    "Rank22 and rank21 root strata impossible in det49 elementary2 lattice carrying the physical real22 frame",
+    "E8 absent in integral extensions of rank<=24; D>=11 and A>=20 absent in rank22 frame lattice; D>=12 and A>=22 absent in extensions<=24",
+    "Heavy norm2 branch has6 incident roots,4 external and three physical regimes; P0 carrier degree4 excluded",
+    "Three norm8 characteristic profiles in conditional unimodular24 gluing; root3 saturation remains a constraint",
+    "Positive Golay-envelope example independently replayed: rank22det49/min3/gen3/indecomposable/dual>=10/7/char>=10, no physical frame"
+  ],
+  "scope_hypotheses": "SRG99 signed integer frame and old structural discriminant reduction for g18/g20 are assumed where named. Corank-one proof needs rank22/det49/elementary7 rank2/min2/full real frame. P0 is used only for the carrier cut. A shadowframe24 is conditional.",
+  "positive_controls": {
+    "small_H2_rebuilt_by_audit": true,
+    "H2_r": 1,
+    "H2_d": 3,
+    "H2_root_norm": 1,
+    "BvLS_r": 4,
+    "BvLS_d": 9,
+    "BvLS_root_norm": 4,
+    "new_parent_controls_reviewed_not_rerun_by_audit": true,
+    "SRG99_F7_P0_not_imposed": true
+  },
+  "remaining_open": [
+    "Both g18 and g20 involution cases",
+    "Norm2 flat and residual heavy carriers",
+    "All three characteristic8 profiles",
+    "Existence of shadowframe24",
+    "Selection of exactly42 roots/7 blocks satisfying the common physical frame in the Golay-envelope or another genus lattice"
+  ],
+  "no_solver": true,
+  "no_Web": true,
+  "no_repository_access": true,
+  "no_local_Python": true,
+  "no_heavy_local_search": true,
+  "whole_type_exclusions_added": 0,
+  "historical_local_ledger_unchanged": {
+    "g18_closed": 278,
+    "g18_open": 163
+  },
+  "self_hash_omitted": true
+}

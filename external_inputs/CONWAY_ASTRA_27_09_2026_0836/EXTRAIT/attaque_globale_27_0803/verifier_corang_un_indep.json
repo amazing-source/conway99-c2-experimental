@@ -1,0 +1,700 @@
+{
+  "exact": true,
+  "A6_class_minimum_numerators": [
+    0,
+    6,
+    10,
+    12,
+    12,
+    10,
+    6
+  ],
+  "all_nonzero_triples": 216,
+  "isotropicTriples": [
+    {
+      "classes": [
+        1,
+        2,
+        3
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        1,
+        2,
+        4
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        1,
+        3,
+        2
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        1,
+        3,
+        5
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        1,
+        4,
+        2
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        1,
+        4,
+        5
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        1,
+        5,
+        3
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        1,
+        5,
+        4
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        2,
+        1,
+        3
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        2,
+        1,
+        4
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        2,
+        3,
+        1
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        2,
+        3,
+        6
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        2,
+        4,
+        1
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        2,
+        4,
+        6
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        2,
+        6,
+        3
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        2,
+        6,
+        4
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        3,
+        1,
+        2
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        3,
+        1,
+        5
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        3,
+        2,
+        1
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        3,
+        2,
+        6
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        3,
+        5,
+        1
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        3,
+        5,
+        6
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        3,
+        6,
+        2
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        3,
+        6,
+        5
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        4,
+        1,
+        2
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        4,
+        1,
+        5
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        4,
+        2,
+        1
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        4,
+        2,
+        6
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        4,
+        5,
+        1
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        4,
+        5,
+        6
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        4,
+        6,
+        2
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        4,
+        6,
+        5
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        5,
+        1,
+        3
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        5,
+        1,
+        4
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        5,
+        3,
+        1
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        5,
+        3,
+        6
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        5,
+        4,
+        1
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        5,
+        4,
+        6
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        5,
+        6,
+        3
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        5,
+        6,
+        4
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        6,
+        2,
+        3
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        6,
+        2,
+        4
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        6,
+        3,
+        2
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        6,
+        3,
+        5
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        6,
+        4,
+        2
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        6,
+        4,
+        5
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        6,
+        5,
+        3
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    },
+    {
+      "classes": [
+        6,
+        5,
+        4
+      ],
+      "seven_minimum": 28,
+      "isotropic": true
+    }
+  ],
+  "minimum_three_nonzero": [
+    18,
+    7
+  ],
+  "planes": [
+    {
+      "diagonal": [
+        6,
+        6
+      ],
+      "only_zero_isotropic": true
+    },
+    {
+      "diagonal": [
+        6,
+        5
+      ],
+      "only_zero_isotropic": true
+    }
+  ],
+  "valuation_cases": [
+    {
+      "aprime": 0,
+      "b": 2,
+      "j": 0,
+      "reason": "cyclic discriminant49 is not elementary rank2"
+    },
+    {
+      "aprime": 1,
+      "b": 1,
+      "j": 0,
+      "reason": null
+    },
+    {
+      "aprime": 1,
+      "b": 3,
+      "j": 1,
+      "reason": "J order7 class has integral norm; anisotropic M forbids it"
+    },
+    {
+      "aprime": 2,
+      "b": 0,
+      "j": 0,
+      "reason": null
+    },
+    {
+      "aprime": 2,
+      "b": 2,
+      "j": 1,
+      "reason": "J order7 class has integral norm; anisotropic M forbids it"
+    },
+    {
+      "aprime": 3,
+      "b": 1,
+      "j": 1,
+      "reason": null
+    }
+  ],
+  "A3": [
+    {
+      "class": 0,
+      "norm": [
+        0,
+        4
+      ]
+    },
+    {
+      "class": 1,
+      "norm": [
+        3,
+        4
+      ]
+    },
+    {
+      "class": 2,
+      "norm": [
+        4,
+        4
+      ]
+    },
+    {
+      "class": 3,
+      "norm": [
+        3,
+        4
+      ]
+    }
+  ],
+  "A2A1": [
+    {
+      "class": [
+        0,
+        0
+      ],
+      "norm": [
+        0,
+        6
+      ]
+    },
+    {
+      "class": [
+        0,
+        1
+      ],
+      "norm": [
+        3,
+        6
+      ]
+    },
+    {
+      "class": [
+        1,
+        0
+      ],
+      "norm": [
+        4,
+        6
+      ]
+    },
+    {
+      "class": [
+        1,
+        1
+      ],
+      "norm": [
+        7,
+        6
+      ]
+    },
+    {
+      "class": [
+        2,
+        0
+      ],
+      "norm": [
+        4,
+        6
+      ]
+    },
+    {
+      "class": [
+        2,
+        1
+      ],
+      "norm": [
+        7,
+        6
+      ]
+    }
+  ],
+  "A1cube": [
+    {
+      "class": 0,
+      "norm": [
+        0,
+        2
+      ]
+    },
+    {
+      "class": 1,
+      "norm": [
+        1,
+        2
+      ]
+    },
+    {
+      "class": 2,
+      "norm": [
+        1,
+        2
+      ]
+    },
+    {
+      "class": 3,
+      "norm": [
+        2,
+        2
+      ]
+    },
+    {
+      "class": 4,
+      "norm": [
+        1,
+        2
+      ]
+    },
+    {
+      "class": 5,
+      "norm": [
+        2,
+        2
+      ]
+    },
+    {
+      "class": 6,
+      "norm": [
+        2,
+        2
+      ]
+    },
+    {
+      "class": 7,
+      "norm": [
+        3,
+        2
+      ]
+    }
+  ],
+  "otherPrimeCosts": {
+    "A13_order2": [
+      49,
+      14
+    ],
+    "A20_order3": [
+      [
+        98,
+        21
+      ],
+      [
+        98,
+        21
+      ]
+    ]
+  },
+  "finalCosts": [
+    {
+      "R3_det": 4,
+      "J_norm": 28,
+      "nonzero_R3_cost": [
+        43,
+        14
+      ],
+      "zero_R3_cost": [
+        22,
+        7
+      ]
+    },
+    {
+      "R3_det": 6,
+      "J_norm": 42,
+      "nonzero_R3_cost": [
+        43,
+        14
+      ],
+      "zero_R3_cost": [
+        24,
+        7
+      ]
+    }
+  ],
+  "source_sha256": "b9e104067d0529b6148cce3bd20fc4b92cc53c4eb0e21f6f0a1425cc58958522",
+  "producer_note_sha256": "3734cbb4fa7a1f5972f029c3f8de200eee25f8b9d1058557a2cc0580b86e3fee",
+  "scope": "Finite rational costs accompanying an independent human proof. Hypotheses: rank22 integral minimum2, determinant49, elementary rank2 discriminant7, and the physical frame spanning rank22. No assertion for arbitrary determinant49 genus or for every root-free lattice."
+}

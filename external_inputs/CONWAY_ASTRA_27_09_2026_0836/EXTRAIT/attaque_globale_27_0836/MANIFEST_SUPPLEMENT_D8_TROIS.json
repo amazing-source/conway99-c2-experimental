@@ -1,0 +1,50 @@
+{
+  "frozen": true,
+  "owner": "g18_algebre_neuve",
+  "files_count": 3,
+  "files": [
+    {
+      "name": "SUPPLEMENT_D8_TROIS_TOUS_COLLAGES.md",
+      "bytes": 8274,
+      "sha256": "13c0e1b0ce89931ff8fdbec41ba7ea6843e4137198f7118e79d147103b8a1ec1"
+    },
+    {
+      "name": "classifier_collages_D8_trois.mjs",
+      "bytes": 5038,
+      "sha256": "2535a462bb40d3811ed36214da4dc0555fdc741f3513371a692cf85c20aab0d7"
+    },
+    {
+      "name": "classifier_collages_D8_trois.json",
+      "bytes": 260080,
+      "sha256": "416369c633abf51a67c5e396bc9dc8cb5f188d11773b5f8973bea65ee402da93"
+    }
+  ],
+  "theorem": "Aucun collage integral unimodulaire24 de D8^3 ne porte le repere physique42+7 avec ses deux normales7, dans les cadresg18/g20.",
+  "independent_checks": [
+    "verifier_tous_collages_D8_parent.mjs",
+    "verifier_collages_D8_independant.mjs"
+  ],
+  "counts": {
+    "Lagrangians": 135,
+    "even": 30,
+    "odd": 105,
+    "min1": 37,
+    "singleton_E8": 24,
+    "double_v_D16": 12,
+    "residual": 32,
+    "forms": [
+      8,
+      24
+    ]
+  },
+  "prerequisites": [
+    "OBSTRUCTION_COQUE3_ET_D8_CUBE.md",
+    "G18_G20_QUARANTE_DEUX_GENERATEURS.md",
+    "../attaque_globale_27_0803/G18_G20_D12_COLLAGE.md"
+  ],
+  "limitations": [
+    "No exclusion of all rank24 envelopes.",
+    "No global exclusion of g18/g20.",
+    "The14 previously frozen algebra artifacts remain unchanged."
+  ]
+}

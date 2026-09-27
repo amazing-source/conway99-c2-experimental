@@ -1,0 +1,55 @@
+{
+  "exact": true,
+  "all_perfect_matchings": 105,
+  "counts": {
+    "within_component": 45,
+    "two_double_edges_D12": 12,
+    "cycle4": 48
+  },
+  "representatives": {
+    "two_double_edges_D12": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "cycle4": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        5,
+        7
+      ]
+    ]
+  },
+  "binary_selfdual_residual_min4_impossible": [
+    6,
+    4
+  ],
+  "rootful_ambient_D6_four_cycle_uniform": true,
+  "no_solver": true,
+  "scope": "Analytic proof reduces odd D6^4 glue to I2^4; finite matching check then exhausts the component multigraph. This does not close all physical frames; the f6 theorem closes only one collective regime.",
+  "source_sha256": "da2b1d39e36978070be1e2369ff19f732a4873bc27b1ab3fa0850ce06fbf43f8"
+}

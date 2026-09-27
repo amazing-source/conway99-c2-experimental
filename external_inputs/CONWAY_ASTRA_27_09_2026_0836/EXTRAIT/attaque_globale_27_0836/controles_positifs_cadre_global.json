@@ -1,0 +1,44 @@
+{
+  "exact": true,
+  "results": [
+    {
+      "vertices": 9,
+      "m": 2,
+      "r": 1,
+      "d": 3,
+      "signed_dimension": 4,
+      "root_generators_norm": 1,
+      "block_norm": 2,
+      "graph_pairs_checked": 36,
+      "polynomial": true,
+      "tight_frame": true,
+      "signed_incidence": true,
+      "twice_blocks_integral_in_root_span": true,
+      "integral_generation_by_odd_r": true,
+      "even_r_full_generation_not_asserted": false,
+      "seven_block_genus_not_imposed": true,
+      "norm3_integral_purity_hypothesis_applies": false,
+      "scope": "positive controls with their own parameters; no SRG99/F7/P0 asserted"
+    },
+    {
+      "vertices": 243,
+      "m": 11,
+      "r": 4,
+      "d": 9,
+      "signed_dimension": 121,
+      "root_generators_norm": 4,
+      "block_norm": 5,
+      "graph_pairs_checked": 29403,
+      "polynomial": true,
+      "tight_frame": true,
+      "signed_incidence": true,
+      "twice_blocks_integral_in_root_span": true,
+      "integral_generation_by_odd_r": false,
+      "even_r_full_generation_not_asserted": true,
+      "seven_block_genus_not_imposed": true,
+      "norm3_integral_purity_hypothesis_applies": false,
+      "scope": "positive controls with their own parameters; no SRG99/F7/P0 asserted"
+    }
+  ],
+  "source_sha256": "5e214c7e365581fe20af0abf1666912b61d07134443d89ad59b5cde1382cc154"
+}

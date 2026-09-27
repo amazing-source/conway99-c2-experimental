@@ -1,0 +1,28 @@
+{
+  "exact": true,
+  "trace_equality": 70,
+  "axis_multiplicities": {
+    "0": 2,
+    "3": 7,
+    "7": 3
+  },
+  "possible_column_incidence_norms": [
+    0,
+    4,
+    0
+  ],
+  "required_D7_column_incidence_norm": 2,
+  "factor_projection_norms": [
+    0,
+    4
+  ],
+  "factor_off_diagonal": [
+    0
+  ],
+  "spinor_extension": {
+    "rank": 12,
+    "index": 2,
+    "determinant": 1
+  },
+  "scope": "No D12 root sub-system in any integral extension of dimension<=24 containing the common N22 frame and dual gap8/7. No entire g18/g20 exclusion."
+}

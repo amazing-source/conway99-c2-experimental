@@ -1,0 +1,85 @@
+{
+  "exact": true,
+  "heavy": [
+    {
+      "k": 2,
+      "m": 8,
+      "subset_checks": 256,
+      "valid_subsets": 24,
+      "pair_checks": 576,
+      "minimum_common": 4,
+      "srg_maximum": 2,
+      "contradiction": true
+    },
+    {
+      "k": 3,
+      "m": 5,
+      "subset_checks": 32,
+      "valid_subsets": 1,
+      "pair_checks": 1,
+      "minimum_common": 5,
+      "srg_maximum": 2,
+      "contradiction": true
+    }
+  ],
+  "reflection_checks": 12,
+  "incident_pair_checks": 8,
+  "exterior": [
+    {
+      "coefficients": [
+        -1,
+        -1
+      ],
+      "charges": [
+        -2,
+        0
+      ]
+    },
+    {
+      "coefficients": [
+        -1,
+        1
+      ],
+      "charges": [
+        0,
+        -2
+      ]
+    },
+    {
+      "coefficients": [
+        1,
+        -1
+      ],
+      "charges": [
+        0,
+        2
+      ]
+    },
+    {
+      "coefficients": [
+        1,
+        1
+      ],
+      "charges": [
+        2,
+        0
+      ]
+    }
+  ],
+  "parity_checks": 8,
+  "heavy_remaining": {
+    "other_interior_active": 0,
+    "incident_roots": 6,
+    "external_roots": 4
+  },
+  "ternary_interior_active": [
+    0,
+    2,
+    4
+  ],
+  "scope": "Capacity and sign identities only. No graph/whole-type exclusion or g>=21 bound.",
+  "prerequisites": {
+    "heavy": "Odd eigenvector -4, F49 coefficient norm14, all coefficients0,+/-1,+/-2, SRG maximum common2",
+    "network": "Integral lattice minimum>=2 containing seven h norm4 and42u norm3, Gram3I-S, tight frame7"
+  }
+}

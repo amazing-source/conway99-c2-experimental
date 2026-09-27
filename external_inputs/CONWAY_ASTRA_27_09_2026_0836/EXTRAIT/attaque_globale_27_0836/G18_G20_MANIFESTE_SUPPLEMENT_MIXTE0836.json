@@ -1,0 +1,64 @@
+{
+  "kind": "frozen_mathematical_supplement",
+  "same_frame": "42 u + 7 h + 2 primitive normals in D6^4 cycle glue",
+  "scope": "f_A=4,f_B=2; h7 integer typeI in A/C, and symmetric version",
+  "conclusion": "the four AC-spinor centres are distinct, exactly two in B and two in D",
+  "whole_mixed_regime_excluded": false,
+  "whole_D6_frame_excluded": false,
+  "new_complete_g18_g20_type_excluded": false,
+  "earlier_frozen_own_files_verified": 14,
+  "own": [
+    {
+      "path": "G18_G20_D6_MIXTE_CENTRES_REPETES.md",
+      "bytes": 5974,
+      "sha256": "56b8fc1e58480b059e154db723a8fb699be7927a74b80d9de5f432c81e44b61e"
+    },
+    {
+      "path": "G18_G20_D6_MIXTE_CENTRES_REPETES.mjs",
+      "bytes": 3941,
+      "sha256": "b5a6d8d22a01a4fa8a51522513c3e5fa6fd8389147b44fb5a8d7123423e573dc"
+    },
+    {
+      "path": "G18_G20_D6_MIXTE_CENTRES_REPETES.json",
+      "bytes": 1997,
+      "sha256": "54067ebf5a3f6c75a5bc79b569c1b344b357e051bf82ccfc3620d0aea0fb0c6d"
+    },
+    {
+      "path": "G18_G20_MANIFESTE_SUPPLEMENT_MIXTE0836.mjs",
+      "bytes": 2278,
+      "sha256": "a874fc2f4c9579b76eaa69d77a73a27dc565b4a070b7bb153971853409f1868c"
+    }
+  ],
+  "prerequisites": [
+    {
+      "path": "G18_G20_MANIFESTE_COMBINATOIRE0836.json",
+      "bytes": 5272,
+      "sha256": "c9d0cb9ca5be2947b9654dc458d0518f259e891f11f0916784c35cdc32e11c87"
+    },
+    {
+      "path": "G18_G20_D6_SIX_SPINORS.md",
+      "bytes": 6676,
+      "sha256": "d1e8a5c45e42482e5fae1d6f52cb28c59dc561913a69b7fb542d49ab4cade0cc"
+    },
+    {
+      "path": "G18_G20_D6_QUATRE.md",
+      "bytes": 6995,
+      "sha256": "93699a1ee744fe70fa155e1f7cd2821f6f253aebdcbe097ecbef296206c3bfea"
+    },
+    {
+      "path": "AUDIT_D6_MIXTE_CENTRES_REPETES.md",
+      "bytes": 5076,
+      "sha256": "4fd9283e9436c52a42d3fab0664facea4e7ceed788ce3a250a5c69b13cd8b9c1"
+    },
+    {
+      "path": "verifier_D6_mixte_centres_independant.mjs",
+      "bytes": 4972,
+      "sha256": "96e995fc9f3f367ace1ea239aa2415a5b68f48e31beac6af57774e368efcfdd4"
+    },
+    {
+      "path": "verifier_D6_mixte_centres_independant.json",
+      "bytes": 3132,
+      "sha256": "41c50ca25e80d7c9eb70506d6b90e89bd6dca88aa7ffa80e68719e2f3af46b90"
+    }
+  ]
+}

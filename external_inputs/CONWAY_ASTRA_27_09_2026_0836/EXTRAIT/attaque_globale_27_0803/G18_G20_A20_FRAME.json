@@ -1,0 +1,170 @@
+{
+  "exact": true,
+  "same_rank_22": [
+    {
+      "n": 20,
+      "d": 0,
+      "admissible_k": [
+        1,
+        2,
+        3,
+        18,
+        19,
+        20
+      ],
+      "max_projection_norm": {
+        "numerator": 54,
+        "denominator": 21
+      },
+      "lower_trace_numerator": 2940,
+      "upper_trace_numerator": 2856,
+      "strict_gap_numerator": 84,
+      "excluded": true
+    },
+    {
+      "n": 21,
+      "d": 0,
+      "admissible_k": [
+        1,
+        2,
+        3,
+        19,
+        20,
+        21
+      ],
+      "max_projection_norm": {
+        "numerator": 57,
+        "denominator": 22
+      },
+      "lower_trace_numerator": 3234,
+      "upper_trace_numerator": 3010,
+      "strict_gap_numerator": 224,
+      "excluded": true
+    },
+    {
+      "n": 22,
+      "d": 0,
+      "admissible_k": [
+        1,
+        2,
+        3,
+        20,
+        21,
+        22
+      ],
+      "max_projection_norm": {
+        "numerator": 60,
+        "denominator": 23
+      },
+      "lower_trace_numerator": 3542,
+      "upper_trace_numerator": 3164,
+      "strict_gap_numerator": 378,
+      "excluded": true
+    }
+  ],
+  "integral_extension_dimension_at_most24": [
+    {
+      "n": 22,
+      "d": 2,
+      "admissible_k": [
+        1,
+        2,
+        3,
+        20,
+        21,
+        22
+      ],
+      "max_projection_norm": {
+        "numerator": 60,
+        "denominator": 23
+      },
+      "lower_trace_numerator": 3220,
+      "upper_trace_numerator": 3164,
+      "strict_gap_numerator": 56,
+      "excluded": true
+    },
+    {
+      "n": 23,
+      "d": 2,
+      "admissible_k": [
+        1,
+        2,
+        3,
+        21,
+        22,
+        23
+      ],
+      "max_projection_norm": {
+        "numerator": 63,
+        "denominator": 24
+      },
+      "lower_trace_numerator": 3528,
+      "upper_trace_numerator": 3318,
+      "strict_gap_numerator": 210,
+      "excluded": true
+    },
+    {
+      "n": 24,
+      "d": 2,
+      "admissible_k": [
+        1,
+        2,
+        3,
+        22,
+        23,
+        24
+      ],
+      "max_projection_norm": {
+        "numerator": 66,
+        "denominator": 25
+      },
+      "lower_trace_numerator": 3850,
+      "upper_trace_numerator": 3472,
+      "strict_gap_numerator": 378,
+      "excluded": true
+    }
+  ],
+  "boundary_not_closed_by_this_inequality": [
+    {
+      "n": 19,
+      "d": 0,
+      "admissible_k": [
+        1,
+        2,
+        3,
+        17,
+        18,
+        19
+      ],
+      "max_projection_norm": {
+        "numerator": 51,
+        "denominator": 20
+      },
+      "lower_trace_numerator": 2660,
+      "upper_trace_numerator": 2702,
+      "strict_gap_numerator": -42,
+      "excluded": false
+    },
+    {
+      "n": 21,
+      "d": 2,
+      "admissible_k": [
+        1,
+        2,
+        3,
+        19,
+        20,
+        21
+      ],
+      "max_projection_norm": {
+        "numerator": 57,
+        "denominator": 22
+      },
+      "lower_trace_numerator": 2926,
+      "upper_trace_numerator": 3010,
+      "strict_gap_numerator": -84,
+      "excluded": false
+    }
+  ],
+  "scope": "Common N22 frame and acquired dual gap8/7; no type catalogue, P0, g>=21 or entire g18/g20 exclusion."
+}

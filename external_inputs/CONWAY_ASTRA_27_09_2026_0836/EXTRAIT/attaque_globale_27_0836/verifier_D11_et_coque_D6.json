@@ -1,0 +1,174 @@
+{
+  "exact": true,
+  "scope": "D11-to-D12 root construction and true D6^4 shell counter-test, no SRG/frame realization",
+  "D11": {
+    "spinor_cases": 2048,
+    "parity_checks": 22528,
+    "D12_root_count": 264,
+    "twice_b_not_assumed_integral": true
+  },
+  "D6_countermodel": {
+    "glue_classes": [
+      {
+        "row": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "min": 0
+      },
+      {
+        "row": [
+          2,
+          1,
+          0,
+          0
+        ],
+        "min": 3
+      },
+      {
+        "row": [
+          0,
+          2,
+          1,
+          0
+        ],
+        "min": 3
+      },
+      {
+        "row": [
+          2,
+          3,
+          1,
+          0
+        ],
+        "min": 4
+      },
+      {
+        "row": [
+          0,
+          0,
+          2,
+          1
+        ],
+        "min": 3
+      },
+      {
+        "row": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "min": 6
+      },
+      {
+        "row": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "min": 4
+      },
+      {
+        "row": [
+          2,
+          3,
+          3,
+          1
+        ],
+        "min": 5
+      },
+      {
+        "row": [
+          1,
+          0,
+          0,
+          2
+        ],
+        "min": 3
+      },
+      {
+        "row": [
+          3,
+          1,
+          0,
+          2
+        ],
+        "min": 4
+      },
+      {
+        "row": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "min": 6
+      },
+      {
+        "row": [
+          3,
+          3,
+          1,
+          2
+        ],
+        "min": 5
+      },
+      {
+        "row": [
+          1,
+          0,
+          2,
+          3
+        ],
+        "min": 4
+      },
+      {
+        "row": [
+          3,
+          1,
+          2,
+          3
+        ],
+        "min": 5
+      },
+      {
+        "row": [
+          1,
+          2,
+          3,
+          3
+        ],
+        "min": 5
+      },
+      {
+        "row": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "min": 4
+      }
+    ],
+    "coset_minima": {
+      "0": 1,
+      "3": 4,
+      "4": 5,
+      "5": 4,
+      "6": 2
+    },
+    "determinant": 1,
+    "min": 2,
+    "roots": "D6^4",
+    "shell3": 4096,
+    "shell_generates_lattice": true,
+    "generators_checked": 28,
+    "Gram_rank_mod2": 24,
+    "no_42_plus_7_frame_asserted": true
+  },
+  "source_sha256": "8acc2fe7b3f9c6ed0f5c61f5f373dbcf1559b80650cef6d659cd58b12630ed8a"
+}

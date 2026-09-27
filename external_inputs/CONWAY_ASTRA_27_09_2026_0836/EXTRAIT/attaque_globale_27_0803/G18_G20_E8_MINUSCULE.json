@@ -1,0 +1,20 @@
+{
+  "exact": true,
+  "roots": 240,
+  "integer_candidate_checks": 6561,
+  "post_pair_bound_candidates": 273,
+  "integral_candidates": 129,
+  "minuscule_candidates": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "scope": "Uniform E8 sub-system obstruction in any integral extension of dimension<=29, using dual gap8/7; not g>=21 or whole-type exclusion."
+}

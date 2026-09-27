@@ -1,0 +1,126 @@
+{
+  "frozen": true,
+  "owner": "g18_algebre_neuve",
+  "directory": "outputs/attaque_globale_27_0836",
+  "files_count": 14,
+  "files": [
+    {
+      "name": "OBSTRUCTION_COQUE3_ET_D8_CUBE.md",
+      "bytes": 8670,
+      "sha256": "72363f4c8c247ce9032e4c7f7cb4d4af5f905cf529d95f32a0c2fd4942d7c962"
+    },
+    {
+      "name": "controle_coque3_D8_et_trialite.mjs",
+      "bytes": 4441,
+      "sha256": "f37c6a02a3a55727fda6208db78b58609cbad27bd3c84660cd798ab7a01f8dfc"
+    },
+    {
+      "name": "controle_coque3_D8_et_trialite.json",
+      "bytes": 2594,
+      "sha256": "f102fc83009fb6c4ff90ca1a01a037aabd4c1ffcdebfdb97edc8a5dbf49d91b6"
+    },
+    {
+      "name": "SEPT_OCTADES_RANG_BINAIRE_PETIT.md",
+      "bytes": 7444,
+      "sha256": "13534ecf47c00a28dc11b35420cf73f9eb63c93320bfd87a8c367ccbec097b4a"
+    },
+    {
+      "name": "controle_sept_octades_rang4.mjs",
+      "bytes": 4579,
+      "sha256": "dc969063f47510a85e5e376804a0a79c8788f24689dfe90c3551c9f23e7903d3"
+    },
+    {
+      "name": "controle_sept_octades_rang4.json",
+      "bytes": 11545,
+      "sha256": "8d8c19992f26efd7c85d054bb34a833e6c10f00065dcc9c10e0c35dbd0a24782"
+    },
+    {
+      "name": "D4_SIX_CYCLE_SELECTION_COMMUNE.md",
+      "bytes": 5355,
+      "sha256": "39839ca0035e0e8d2d4bdbf8b90faf1904ab1a0b72a0b7f621b2bfd0efbf9279"
+    },
+    {
+      "name": "controle_D4_cycle6_classes.mjs",
+      "bytes": 3755,
+      "sha256": "72f9bfc38c6a7c52d2607606ea6e863f7f3eb29fb38971f3b184eac312115c5b"
+    },
+    {
+      "name": "controle_D4_cycle6_classes.json",
+      "bytes": 42040,
+      "sha256": "1ad44dcf3d4e3bf0cd2a6c7fda4974c693c1ff16447e863de0951d05efe2158c"
+    },
+    {
+      "name": "COUPES_ENTIERES_SELECTION42.md",
+      "bytes": 6648,
+      "sha256": "91c41918d3c999e5771156e5b07763bfc6c9458a77378ba28c40cbf6ea78fe96"
+    },
+    {
+      "name": "controle_congruences_selection42.mjs",
+      "bytes": 4080,
+      "sha256": "53515dcbfd3a31b6889e9b27fbfee4c75f8854eea2d47cc4f0e1675cfaeeb5b8"
+    },
+    {
+      "name": "controle_congruences_selection42.json",
+      "bytes": 2558,
+      "sha256": "197e8a20d46063f4954020c8db4d9b95354bf28b39fa95a2d1caec463419184b"
+    },
+    {
+      "name": "controle_selection42_golay.mjs",
+      "bytes": 6518,
+      "sha256": "ab36c25725bec80aca4365ba6607d0276bd990dc2145bcb80d8b7a5635ccead6"
+    },
+    {
+      "name": "controle_selection42_golay.json",
+      "bytes": 20665,
+      "sha256": "3f7d688f1fdad4795b1e85fef2dd59f81027a6d8d5af85b9cda21833bafd774f"
+    }
+  ],
+  "reviewed_by": "g18_audit_neuf",
+  "results": {
+    "D8_cube": {
+      "status": "proved_and_independently_reviewed",
+      "physical_frame_impossible": true,
+      "shell4096": 4096,
+      "shell_Gram_mod2_rank": 20,
+      "physical_required_rank": 22
+    },
+    "D4_cycle6": {
+      "status": "proved_and_independently_reviewed",
+      "families": 256,
+      "refuted": 231,
+      "qualifying": 25,
+      "minimum_used_classes": 6,
+      "qualifying_realization": false
+    },
+    "seven_octads": {
+      "status": "proved_and_independently_reviewed",
+      "claim": "rank at most4 implies A in support code",
+      "fixed_normal_A": 41503,
+      "A_outside_code": true,
+      "required_rank_for_fixed_pair": 5,
+      "A_in_code_not_refuted": true
+    },
+    "selection42_congruences": {
+      "status": "independent_mathematical_derivation_reviewed",
+      "source_exact": true,
+      "syndromes_verified": 288,
+      "single_word": 7218972,
+      "checksum_mod16": 8,
+      "independent_fixture_control_in_preparation": true
+    }
+  },
+  "limitations": [
+    "No global exclusion of g18 or g20.",
+    "No modification of frozen0803 or0736 artifacts.",
+    "D4^6 qualifying families are not realized or declared impossible.",
+    "Seven-octad ranks5/6/7 and A inside the code remain open.",
+    "The42 witness selections do not assert degree10,CT or SRG common-neighbor budgets."
+  ],
+  "prerequisites": [
+    "outputs/attaque_globale_27_0836/G18_G20_QUARANTE_DEUX_GENERATEURS.md",
+    "outputs/attaque_globale_27_0836/EXCLUSION_FRAME_D8_TROIS.md",
+    "outputs/attaque_globale_27_0836/ROOTLESS_SHADOWFRAME_CODE24_ET_OCTADES.md",
+    "outputs/attaque_globale_27_0803/UNIFICATION_G18_G20_RANG24.md",
+    "outputs/attaque_globale_27_0803/controle_enveloppe_g20_golay.json"
+  ]
+}

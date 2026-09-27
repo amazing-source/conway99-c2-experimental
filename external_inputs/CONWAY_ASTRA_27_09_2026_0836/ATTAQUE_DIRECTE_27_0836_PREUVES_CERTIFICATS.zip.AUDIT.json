@@ -1,0 +1,10 @@
+{
+  "exact": true,
+  "archive": "ATTAQUE_DIRECTE_27_0836_PREUVES_CERTIFICATS.zip",
+  "bytes": 862888,
+  "entries_checked": 162,
+  "every_entry_sha256_matches": true,
+  "manifest_sha256": "f9c1cbfe16b3687256c182f26901d90ac715cc6b01ef4d20784b67622fad09b8",
+  "archive_sha256": "24e72e953d90ef5e26071460438afadb9554372315151d5fa8115ae5933cda0a",
+  "scope": "two complete own-conversation campaigns; no global g18/g20 exclusion"
+}

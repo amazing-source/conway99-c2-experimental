@@ -1,0 +1,814 @@
+{
+  "campaign": "2026-09-27 0836 UTC",
+  "scope": "full physical 42+7+2 frame, g18 and g20, no P=0",
+  "whole_goals_closed": false,
+  "former_snapshot_unchanged": true,
+  "archive": "../ATTAQUE_DIRECTE_27_0836_PREUVES_CERTIFICATS.zip",
+  "files": [
+    {
+      "path": "attaque_globale_27_0836/AUDIT_D11_ET_LIMITE_COQUE.md",
+      "bytes": 3328,
+      "sha256": "185fb4ae8216e0cab721a533bf5d8e3ee6db00c81df398b4abbef2ec44f4cfb5"
+    },
+    {
+      "path": "attaque_globale_27_0836/AUDIT_D6_MIXTE_CENTRES_REPETES.md",
+      "bytes": 5076,
+      "sha256": "4fd9283e9436c52a42d3fab0664facea4e7ceed788ce3a250a5c69b13cd8b9c1"
+    },
+    {
+      "path": "attaque_globale_27_0836/AUDIT_D6_SIX_FRACTIONNAIRES_MEME_PAIRE.md",
+      "bytes": 6249,
+      "sha256": "efca00c61ec1647e597715f360528ef8de56123e1bac8faa4304f55073d836ca"
+    },
+    {
+      "path": "attaque_globale_27_0836/AUDIT_FAMILLE_COMPLETE_D8_TROIS.md",
+      "bytes": 3520,
+      "sha256": "8aa097f81c730af7f3003d34da18a3d44241f073400a646127c6b0ab077d4189"
+    },
+    {
+      "path": "attaque_globale_27_0836/AUDIT_GENERATION42_ET_COQUE_ENTIERE.md",
+      "bytes": 3440,
+      "sha256": "0546400d993fcd659a531f5f99065d58b5806a245b067ee2f4b0dac5837e4954"
+    },
+    {
+      "path": "attaque_globale_27_0836/AUDIT_HEPTADE_RANG4_ET_D6_BLOCS.md",
+      "bytes": 5022,
+      "sha256": "bef6f38cee740d630da3b6a8e4716b1e851250a2e195f0d0e0a5ccfc58e9dce2"
+    },
+    {
+      "path": "attaque_globale_27_0836/AUDIT_Q42_ET_CLASSIFICATION_D6.md",
+      "bytes": 4581,
+      "sha256": "561b44d6c66377a816a2d663db4de52eb0d1df0ceffa428291ae68c5ea9aea12"
+    },
+    {
+      "path": "attaque_globale_27_0836/BILAN_ATTAQUE_DIRECTE_REPERE42_7.md",
+      "bytes": 21901,
+      "sha256": "120e7206bcf0cda9e6fb51a01921ad280122bc1eb71f6b4019c2f9edbda2415e"
+    },
+    {
+      "path": "attaque_globale_27_0836/BILAN_AUDIT_INDEPENDANT_0836.md",
+      "bytes": 4369,
+      "sha256": "d9842032a63c2a6aa77c4c465039a84875c3b602322cdc82a97fe7cd274b4455"
+    },
+    {
+      "path": "attaque_globale_27_0836/classer_collage_D6_quatre.json",
+      "bytes": 973,
+      "sha256": "69eb13dd3948451ae1a59a83babdfd9d631971d54fa21ebc6e7b844d0dae8877"
+    },
+    {
+      "path": "attaque_globale_27_0836/classer_collage_D6_quatre.mjs",
+      "bytes": 1832,
+      "sha256": "da2b1d39e36978070be1e2369ff19f732a4873bc27b1ab3fa0850ce06fbf43f8"
+    },
+    {
+      "path": "attaque_globale_27_0836/CLASSIFICATION_UNIFORME_D6_QUATRE.md",
+      "bytes": 3565,
+      "sha256": "8ba147c080fd977db5645784d813cc94f254284c21a71993b3f8746d85c0c3a4"
+    },
+    {
+      "path": "attaque_globale_27_0836/classifier_collages_D8_trois.json",
+      "bytes": 260080,
+      "sha256": "416369c633abf51a67c5e396bc9dc8cb5f188d11773b5f8973bea65ee402da93"
+    },
+    {
+      "path": "attaque_globale_27_0836/classifier_collages_D8_trois.mjs",
+      "bytes": 5038,
+      "sha256": "2535a462bb40d3811ed36214da4dc0555fdc741f3513371a692cf85c20aab0d7"
+    },
+    {
+      "path": "attaque_globale_27_0836/construire_archive_repere42_7.ps1",
+      "bytes": 3249,
+      "sha256": "e5d85a15cec4e7e5a2b146245acd3d19a6ea46bd2bfad14bd82179221c2aa069"
+    },
+    {
+      "path": "attaque_globale_27_0836/construire_livraison_repere42_7.mjs",
+      "bytes": 3329,
+      "sha256": "0eaa666db17201625f56e48cdd0368ab92532e6428804a96db65172cb3d6ac33"
+    },
+    {
+      "path": "attaque_globale_27_0836/contre_controle_coque_D4_six.json",
+      "bytes": 1406,
+      "sha256": "2b5afec16af8c7fd9b0edfa8d1ff6a4cd22ebe57c09c830e0853d4b9b5ade42c"
+    },
+    {
+      "path": "attaque_globale_27_0836/contre_controle_coque_D4_six.mjs",
+      "bytes": 1828,
+      "sha256": "2e5a0260a44d22f6e10bbdae6ece58fa536d342139df20e963c1556cce9b779f"
+    },
+    {
+      "path": "attaque_globale_27_0836/controle_congruences_selection42.json",
+      "bytes": 2558,
+      "sha256": "197e8a20d46063f4954020c8db4d9b95354bf28b39fa95a2d1caec463419184b"
+    },
+    {
+      "path": "attaque_globale_27_0836/controle_congruences_selection42.mjs",
+      "bytes": 4080,
+      "sha256": "53515dcbfd3a31b6889e9b27fbfee4c75f8854eea2d47cc4f0e1675cfaeeb5b8"
+    },
+    {
+      "path": "attaque_globale_27_0836/controle_coque3_D8_et_trialite.json",
+      "bytes": 2594,
+      "sha256": "f102fc83009fb6c4ff90ca1a01a037aabd4c1ffcdebfdb97edc8a5dbf49d91b6"
+    },
+    {
+      "path": "attaque_globale_27_0836/controle_coque3_D8_et_trialite.mjs",
+      "bytes": 4441,
+      "sha256": "f37c6a02a3a55727fda6208db78b58609cbad27bd3c84660cd798ab7a01f8dfc"
+    },
+    {
+      "path": "attaque_globale_27_0836/controle_D4_cycle6_classes.json",
+      "bytes": 42040,
+      "sha256": "1ad44dcf3d4e3bf0cd2a6c7fda4974c693c1ff16447e863de0951d05efe2158c"
+    },
+    {
+      "path": "attaque_globale_27_0836/controle_D4_cycle6_classes.mjs",
+      "bytes": 3755,
+      "sha256": "72f9bfc38c6a7c52d2607606ea6e863f7f3eb29fb38971f3b184eac312115c5b"
+    },
+    {
+      "path": "attaque_globale_27_0836/controle_selection42_golay.json",
+      "bytes": 20665,
+      "sha256": "3f7d688f1fdad4795b1e85fef2dd59f81027a6d8d5af85b9cda21833bafd774f"
+    },
+    {
+      "path": "attaque_globale_27_0836/controle_selection42_golay.mjs",
+      "bytes": 6518,
+      "sha256": "ab36c25725bec80aca4365ba6607d0276bd990dc2145bcb80d8b7a5635ccead6"
+    },
+    {
+      "path": "attaque_globale_27_0836/controle_sept_octades_rang4.json",
+      "bytes": 11545,
+      "sha256": "8d8c19992f26efd7c85d054bb34a833e6c10f00065dcc9c10e0c35dbd0a24782"
+    },
+    {
+      "path": "attaque_globale_27_0836/controle_sept_octades_rang4.mjs",
+      "bytes": 4579,
+      "sha256": "dc969063f47510a85e5e376804a0a79c8788f24689dfe90c3551c9f23e7903d3"
+    },
+    {
+      "path": "attaque_globale_27_0836/controles_positifs_cadre_global.json",
+      "bytes": 1360,
+      "sha256": "20727f864796caf613409d6c3ebd38fe67623e0ac79269f1caee991643abd616"
+    },
+    {
+      "path": "attaque_globale_27_0836/controles_positifs_generation42.mjs",
+      "bytes": 3362,
+      "sha256": "5e214c7e365581fe20af0abf1666912b61d07134443d89ad59b5cde1382cc154"
+    },
+    {
+      "path": "attaque_globale_27_0836/COUPES_ENTIERES_SELECTION42.md",
+      "bytes": 6648,
+      "sha256": "91c41918d3c999e5771156e5b07763bfc6c9458a77378ba28c40cbf6ea78fe96"
+    },
+    {
+      "path": "attaque_globale_27_0836/D4_SIX_CYCLE_SELECTION_COMMUNE.md",
+      "bytes": 5355,
+      "sha256": "39839ca0035e0e8d2d4bdbf8b90faf1904ab1a0b72a0b7f621b2bfd0efbf9279"
+    },
+    {
+      "path": "attaque_globale_27_0836/D4_SIX_GLUE_DIAGNOSTIC.json",
+      "bytes": 5224,
+      "sha256": "cdc22f26b323b4a06acedbb828cc030c2fa768b157bb9f226e3da65d51e1add5"
+    },
+    {
+      "path": "attaque_globale_27_0836/DOSSIER_SOURCES_SORTIES_REPERE42_7.md",
+      "bytes": 895880,
+      "sha256": "79f92752eca626c17988038cb5b58b0a6529d02726c030b276c3f79ef7476c6d"
+    },
+    {
+      "path": "attaque_globale_27_0836/ETAT_REPRISE_SNAPSHOT.md",
+      "bytes": 79191,
+      "sha256": "b6efdf6ca439965052173d3f97c5447786d69900c53d1fb7093889f440460ae7"
+    },
+    {
+      "path": "attaque_globale_27_0836/EXCLUSION_FRAME_D8_TROIS.md",
+      "bytes": 4334,
+      "sha256": "4d629388b8832bba4a47c5e9bdd2020d773b4e4ae9c9027144d5fe98efa5fb09"
+    },
+    {
+      "path": "attaque_globale_27_0836/figer_audit_independant_0836.mjs",
+      "bytes": 4326,
+      "sha256": "9049ee6fbcf9b361b43afef5527b713e499660e9ee1334be8b9e58634eec6a3d"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_D6_MIXTE_CENTRES_REPETES.json",
+      "bytes": 1997,
+      "sha256": "54067ebf5a3f6c75a5bc79b569c1b344b357e051bf82ccfc3620d0aea0fb0c6d"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_D6_MIXTE_CENTRES_REPETES.md",
+      "bytes": 5974,
+      "sha256": "56b8fc1e58480b059e154db723a8fb699be7927a74b80d9de5f432c81e44b61e"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_D6_MIXTE_CENTRES_REPETES.mjs",
+      "bytes": 3941,
+      "sha256": "b5a6d8d22a01a4fa8a51522513c3e5fa6fd8389147b44fb5a8d7123423e573dc"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_D6_QUATRE.json",
+      "bytes": 17542,
+      "sha256": "e747d9cf46a28c7981af17aa7944baeced93b21e3134eb2d49cb18bf1943014f"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_D6_QUATRE.md",
+      "bytes": 6995,
+      "sha256": "93699a1ee744fe70fa155e1f7cd2821f6f253aebdcbe097ecbef296206c3bfea"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_D6_QUATRE.mjs",
+      "bytes": 2510,
+      "sha256": "0a147df75a003db1d62fe95f8d8ac619394487fe95a98a08c091319eb4498c9b"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_D6_SIX_SPINORS.json",
+      "bytes": 6518,
+      "sha256": "9f2108673284af149c8cf925ab050f85d44ca76b8afb0461b7aba62491466ec4"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_D6_SIX_SPINORS.md",
+      "bytes": 6676,
+      "sha256": "d1e8a5c45e42482e5fae1d6f52cb28c59dc561913a69b7fb542d49ab4cade0cc"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_D6_SIX_SPINORS.mjs",
+      "bytes": 4096,
+      "sha256": "8909171e44b561967b1ef8be0c1f3577f9e095a27f0e0f16358fa925001eca30"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_DUAL_COORDONNEES.md",
+      "bytes": 3540,
+      "sha256": "4956adbbdd388ad3fb5845cccbe52a2282d4778bd48541d6fe745cbc21253583"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_MANIFESTE_COMBINATOIRE0836.json",
+      "bytes": 5272,
+      "sha256": "c9d0cb9ca5be2947b9654dc458d0518f259e891f11f0916784c35cdc32e11c87"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_MANIFESTE_COMBINATOIRE0836.mjs",
+      "bytes": 2759,
+      "sha256": "0e46b3f7eb60eb46232c75c1262f24d90b921d74d467f95d87a02919bc28521a"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_MANIFESTE_SUPPLEMENT_MIXTE0836.json",
+      "bytes": 2188,
+      "sha256": "ad690290371390771f6875293231b476953a0fa12ae3316deca3b5f0fd4e9dc3"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_MANIFESTE_SUPPLEMENT_MIXTE0836.mjs",
+      "bytes": 2278,
+      "sha256": "a874fc2f4c9579b76eaa69d77a73a27dc565b4a070b7bb153971853409f1868c"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_QUARANTE_DEUX_GENERATEURS.md",
+      "bytes": 2817,
+      "sha256": "e6a5cd6936692031d14ecf566cccb71445bcf3095fa6e6c417c6b750e6d12421"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_SEPT_BLOCS_CAPACITE.md",
+      "bytes": 4807,
+      "sha256": "eafa5a8153ccf6500d05a4c8a4329abfabe2d72fd586b10fd0cfb059a6732fd3"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_SEPT_BLOCS_CAPACITE.mjs",
+      "bytes": 5225,
+      "sha256": "e7c0a23b778a3da7cf63e6e9784f6cb7748cea841e6b202346f69381a576af53"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_STATUTS_COMBINATOIRES0836.md",
+      "bytes": 2749,
+      "sha256": "69f1b2d2b890ec7ce34c4155a1f94dd4d97d2bcafd2be46ab118840296705d54"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_TEST_SEPT_BLOCS.json",
+      "bytes": 608,
+      "sha256": "40d2e4e794668fca25bcaab3b119b40755a3ca3bd49984f68054d22587b75530"
+    },
+    {
+      "path": "attaque_globale_27_0836/G18_G20_TEST_SEPT_BLOCS.mjs",
+      "bytes": 2690,
+      "sha256": "f468983cd58b0acbf3b22e288c395ba67b9e7d7c00494780a8232c1f0020731c"
+    },
+    {
+      "path": "attaque_globale_27_0836/LIRE_D_ABORD.md",
+      "bytes": 1607,
+      "sha256": "0c9d3cfe1af61dbd0c141e8fdad98bc2e134ceb24c8192b6a48ca2607c99e772"
+    },
+    {
+      "path": "attaque_globale_27_0836/MANIFEST_ALGEBRE_0836.json",
+      "bytes": 4271,
+      "sha256": "b30898ac143684337401625df5124bc735b91148c0994533496f88c0c19813f6"
+    },
+    {
+      "path": "attaque_globale_27_0836/MANIFEST_AUDIT_INDEPENDANT_0836.json",
+      "bytes": 10217,
+      "sha256": "cc90542261ec5d36fd187a651904eb389c6034b39ae9bfe6ac5e579be474d83b"
+    },
+    {
+      "path": "attaque_globale_27_0836/MANIFEST_SUPPLEMENT_D8_TROIS.json",
+      "bytes": 1397,
+      "sha256": "6a3ad91a9a128f24807864cb6dfff66e26c8f0f32f322297836291b894b328e1"
+    },
+    {
+      "path": "attaque_globale_27_0836/OBSTRUCTION_COQUE3_ET_D8_CUBE.md",
+      "bytes": 8670,
+      "sha256": "72363f4c8c247ce9032e4c7f7cb4d4af5f905cf529d95f32a0c2fd4942d7c962"
+    },
+    {
+      "path": "attaque_globale_27_0836/PREUVES_COMPLETES_REPERE42_7.md",
+      "bytes": 380616,
+      "sha256": "9708f634c9a4672847235558c61746bce73bcd0d9b9a5432dfb0e66b95b2540d"
+    },
+    {
+      "path": "attaque_globale_27_0836/REPERE_COMPLET_GOLAY_DOMAINES.json",
+      "bytes": 2716692,
+      "sha256": "b50d1f7499926f3dfc13c58db69bb60d4a5621da0bdfe31c69fc2478f93501d6"
+    },
+    {
+      "path": "attaque_globale_27_0836/REPERE_COMPLET_GOLAY_DOMAINES.mjs",
+      "bytes": 2676,
+      "sha256": "9cb4578d1369deae546de67f59ad14df5baceebe3839273a0a8cd19098d84ba5"
+    },
+    {
+      "path": "attaque_globale_27_0836/ROOTLESS_SHADOWFRAME_CODE24_ET_OCTADES.md",
+      "bytes": 7470,
+      "sha256": "13a222669e15e92676160573bd112209f04d823fda1d8cc263f4a6453e138e39"
+    },
+    {
+      "path": "attaque_globale_27_0836/SEPT_OCTADES_RANG_BINAIRE_PETIT.md",
+      "bytes": 7444,
+      "sha256": "13534ecf47c00a28dc11b35420cf73f9eb63c93320bfd87a8c367ccbec097b4a"
+    },
+    {
+      "path": "attaque_globale_27_0836/SUPPLEMENT_D8_TROIS_TOUS_COLLAGES.md",
+      "bytes": 8274,
+      "sha256": "13c0e1b0ce89931ff8fdbec41ba7ea6843e4137198f7118e79d147103b8a1ec1"
+    },
+    {
+      "path": "attaque_globale_27_0836/THEOREME_CARACTERISTIQUE8_THETA.md",
+      "bytes": 8633,
+      "sha256": "dc70c6159e88fab9542fd83de6827396dd54c81c4d27331eb914e103e8b736d9"
+    },
+    {
+      "path": "attaque_globale_27_0836/THEOREME_MOMENTS_CARACTERISTIQUES8.md",
+      "bytes": 6188,
+      "sha256": "2fdb9e5dace239006dcc0894c20c855a095a2ccb5ac138e60e4968d1c0e9ad18"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_collages_D8_independant.json",
+      "bytes": 9374,
+      "sha256": "ab382730e1c86c2f57a5ab67ec323e889d4c7984ef92c59784e762a857374413"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_collages_D8_independant.mjs",
+      "bytes": 4258,
+      "sha256": "209842f07d8c545b244d5aaf8d9e766f5bbcf0de2e9e9508e7d5f74183058d01"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_coque_D8_mod2.json",
+      "bytes": 418,
+      "sha256": "b051a8c5659f87c85b1a8387b2a01edad1be0e702faa6dd85082145efc72db4e"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_coque_D8_mod2.mjs",
+      "bytes": 2282,
+      "sha256": "8bab28410783cea666a88b25606a6056251791caaebe008e72a9fe5aaa593cfd"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_D11_et_coque_D6.json",
+      "bytes": 2519,
+      "sha256": "dcadba627dda22ae7d43f6368e287a3715dcadb89c170726c2c2bb0977aa2339"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_D11_et_coque_D6.mjs",
+      "bytes": 3559,
+      "sha256": "8acc2fe7b3f9c6ed0f5c61f5f373dbcf1559b80650cef6d659cd58b12630ed8a"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_D6_fA6_independant.json",
+      "bytes": 8189,
+      "sha256": "54c6abdefceb0aea2da06ec66b9b5409658c052eb6dc55879bc6e027aaaa8ec7"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_D6_fA6_independant.mjs",
+      "bytes": 3385,
+      "sha256": "56642c70cb7ed0daba25f4784b1d2dde98d8e16940b4e56a5ab73d93cdb76bdb"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_D6_mixte_centres_independant.json",
+      "bytes": 3132,
+      "sha256": "41c50ca25e80d7c9eb70506d6b90e89bd6dca88aa7ffa80e68719e2f3af46b90"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_D6_mixte_centres_independant.mjs",
+      "bytes": 4972,
+      "sha256": "96e995fc9f3f367ace1ea239aa2415a5b68f48e31beac6af57774e368efcfdd4"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_frame_D8_trois.json",
+      "bytes": 2195,
+      "sha256": "21bc34b046b16c6a9dee593b830311b5c385fbe29c3fb20055a18dffd64fe504"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_frame_D8_trois.mjs",
+      "bytes": 4426,
+      "sha256": "d0d784c3a8ca6e77e0c95edcd4e5a533ae23b4f48e44044c76b84b5c0118c756"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_heptade_et_D6_bornes.json",
+      "bytes": 1004,
+      "sha256": "e71199c37b13be894d4be686df02c0f7469be0de76ef2bf8e66bf13d14226668"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_heptade_et_D6_bornes.mjs",
+      "bytes": 3961,
+      "sha256": "8efbd65240e9f736c20aefc59c6c9e5cb97af83c6348010b65fcbaa46a9e5fbc"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_moments_caracteristique8.json",
+      "bytes": 1944,
+      "sha256": "9f053c0fca4486a26d00e77f3c98cc7abaf1ebcffd14ac4540f448892a51a496"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_moments_caracteristique8.mjs",
+      "bytes": 4591,
+      "sha256": "e433d49e37d56efc8cdfd5554325a537918290a463b29f232e00dd8fa4bad064"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_Q42_et_collage_D6_independant.json",
+      "bytes": 1245,
+      "sha256": "7362e2726a9df2e1025456a60b8a5dc129c26a3daec51b2aed18d936cfa0004f"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_Q42_et_collage_D6_independant.mjs",
+      "bytes": 6448,
+      "sha256": "0e80c70704eb3831d0798e5f92135a22b5c8df9dcc028ffa5f4668cee0dc0551"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_rootless_code24.json",
+      "bytes": 1338,
+      "sha256": "c399539ed9136b6603ee4e11cb66aa21e2fc2c1b625685a2f1f0142d6ec219d0"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_rootless_code24.mjs",
+      "bytes": 2948,
+      "sha256": "ca2c51affa6ff639d7d0c90a9af388757ad5fab0e1b8138f8245fa3150a166aa"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_theta_caracteristique8.json",
+      "bytes": 3149,
+      "sha256": "22b9322b3783982431ea6ddf987a1b897b2d690d8aabf655289f9f4311e243e7"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_theta_caracteristique8.mjs",
+      "bytes": 5670,
+      "sha256": "09d42c355d9c793a3065db52416f897b85f9887fbcae4ac95ad11f7f27b7d504"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_tous_collages_D8_parent.json",
+      "bytes": 11842,
+      "sha256": "99c95d999ec7a2ca467350a8667068f6367ee6a324229fd6f7d1c42851d9eaf1"
+    },
+    {
+      "path": "attaque_globale_27_0836/verifier_tous_collages_D8_parent.mjs",
+      "bytes": 2390,
+      "sha256": "b7dbfc11b37d675cf6898807e486193aac1c2403bb182c6ee8d445ff34b02e79"
+    },
+    {
+      "path": "attaque_globale_27_0803/AUDIT_COLLAGE_E8_ET_SEPT_BLOCS.md",
+      "bytes": 9027,
+      "sha256": "e03bbcab5f20605c168e2d1a1254e577ffe39a4610a316e06e44b0079c53bd7c"
+    },
+    {
+      "path": "attaque_globale_27_0803/AUDIT_COMPOSANTES_RACINES_ET_CARRIER.md",
+      "bytes": 5246,
+      "sha256": "096414f2f25ef26b1ced6399d630a03e2aeb7eec580d5bf8b9c862927dedd60c"
+    },
+    {
+      "path": "attaque_globale_27_0803/AUDIT_GOLAY_ENVELOPPE.md",
+      "bytes": 4896,
+      "sha256": "402978d669f8e3f8729cecfaf375622d3f6dc2c62238b886ae46f0b9b515e047"
+    },
+    {
+      "path": "attaque_globale_27_0803/AUDIT_INDECOMPOSABILITE.md",
+      "bytes": 3635,
+      "sha256": "102f435498ba84f7b0e0cc12d651944ce23cafc00785056f12fde5428be47c3a"
+    },
+    {
+      "path": "attaque_globale_27_0803/AUDIT_LIVRAISON.json",
+      "bytes": 690,
+      "sha256": "5128c17504051d52e0273e1558086473d4dfe442da3203b57a18fefc805d67d1"
+    },
+    {
+      "path": "attaque_globale_27_0803/AUDIT_NORME1_ET_METRIQUES.md",
+      "bytes": 8572,
+      "sha256": "73b638863453408ce1252f1a02d3b46179fbf959a75c5ee065b8929794ed9db8"
+    },
+    {
+      "path": "attaque_globale_27_0803/AUDIT_RACINES_CORANG_UN.md",
+      "bytes": 5726,
+      "sha256": "d63607b75b9b19b0df6a4a41cb73a3c86a102c72b9c8fd206c428e311b129e49"
+    },
+    {
+      "path": "attaque_globale_27_0803/BILAN_ATTAQUE_GLOBALE.md",
+      "bytes": 10426,
+      "sha256": "848112e02fe930734547d1ac0bbff25f43149f4d281ab7ff764a5cdf8866e9a1"
+    },
+    {
+      "path": "attaque_globale_27_0803/construire_livraison.mjs",
+      "bytes": 5384,
+      "sha256": "b2aa6eaf98dfd9e060391301489679b437123cdd8362052e226d99919696465f"
+    },
+    {
+      "path": "attaque_globale_27_0803/CONTRE_MODELE_ENVELOPPE_G20_GOLAY.md",
+      "bytes": 7125,
+      "sha256": "5e80991d75544850a941fd42755c2bfc2974d00962e7cd5b4c9481cd5f9e6a59"
+    },
+    {
+      "path": "attaque_globale_27_0803/controle_enveloppe_g20_golay.json",
+      "bytes": 11370,
+      "sha256": "20c9d9a206626dd47d0de4a5d164da7d888d7e146db9ee01d701cf650162763e"
+    },
+    {
+      "path": "attaque_globale_27_0803/controle_enveloppe_g20_golay.mjs",
+      "bytes": 4629,
+      "sha256": "9c9cba2e19349cf681f256a990e69cdc0920b3eec31a8636fc5d3cba2027e9ed"
+    },
+    {
+      "path": "attaque_globale_27_0803/controles_positifs_cadre_global.json",
+      "bytes": 1068,
+      "sha256": "c699700a3d764876711c0f4087582a1a2b95f238d58746f120ac743293fcd7ca"
+    },
+    {
+      "path": "attaque_globale_27_0803/controles_positifs_cadre_global.mjs",
+      "bytes": 2605,
+      "sha256": "858f415967111796dd07eef21350793f1217148fe0a322eacf20065cc110fb01"
+    },
+    {
+      "path": "attaque_globale_27_0803/DOSSIER_COMPLET_SOURCES_ET_SORTIES.md",
+      "bytes": 320131,
+      "sha256": "9d080be5043895214a97efe4fad026d97682f147cb81eab3141a87866931f59d"
+    },
+    {
+      "path": "attaque_globale_27_0803/ETAT_REPRISE.md",
+      "bytes": 5903,
+      "sha256": "7718c40d679b990dfdaa6b8bbf6c80c287a8ff5872751f688cb34952108096a1"
+    },
+    {
+      "path": "attaque_globale_27_0803/figer_audit_independant_0803.mjs",
+      "bytes": 5472,
+      "sha256": "6e37447c3d49079b3e6976ad52529a09fc843f7b6af2c44f626d3f70d1c99621"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_A20_FRAME.json",
+      "bytes": 3187,
+      "sha256": "9357e215c5293ecad9a393021c76eb647145c872e42f088b3ae733d6c9fd8c30"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_A20_FRAME.md",
+      "bytes": 3088,
+      "sha256": "22934b9fef2d3a7653cab21464f105c4d1643dab858a9397cc2b2530e1ef8f0e"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_A20_FRAME.mjs",
+      "bytes": 1322,
+      "sha256": "a98064aaac6008a22fe23c7f619c43fc3e12298044cc3689750b76cba6cd219c"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_CARRIER_LOURD_P0.json",
+      "bytes": 19422,
+      "sha256": "e87d9704659c321271c3828cca71c3dff0032e38e4e76a45780c330336e28e02"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_CARRIER_LOURD_P0.md",
+      "bytes": 3751,
+      "sha256": "eb22e1afb618480506f605f890632f1e84c4dc2f1ccf7af18286f23ee1642b38"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_CARRIER_LOURD_P0.mjs",
+      "bytes": 2164,
+      "sha256": "df1831d2029657e68bfbe28b6ca580e1d2a048581de7d806df6a3125646ed5fb"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_D11_D12_DANS_N.md",
+      "bytes": 3094,
+      "sha256": "721d0cbaa56e856281453e92b95f05686db07d1d1dff25d131a5983a51b567f9"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_D12_COLLAGE.json",
+      "bytes": 544,
+      "sha256": "f58e897dc6725c4a2767aad2a0e4428b98d512e727c6e8a4dd92c14d263a66a2"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_D12_COLLAGE.md",
+      "bytes": 4577,
+      "sha256": "14e1982694778879d232fdaa1b5b96db8a3321925b14cd2938c682f5fee5ee11"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_D12_COLLAGE.mjs",
+      "bytes": 1198,
+      "sha256": "556aee56c84fe4efb2cc3ccaba1d6cfcaf7887651ab1cfc7ea641d665e181339"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_D13_FRAME.json",
+      "bytes": 3624,
+      "sha256": "aa522f56f9d46b6e7ba6351f8587a59bb9dc304d5a57c73e9db879565750d4d1"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_D13_FRAME.md",
+      "bytes": 3271,
+      "sha256": "c4c5acc152a26cb8f3aa3babd3b202df3c606c7afae988a63790486b1c512142"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_D13_FRAME.mjs",
+      "bytes": 771,
+      "sha256": "03016c039de57a792161963a922a5fa7579b815565f9de447d10e96c40fb3a89"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_E8_MINUSCULE.json",
+      "bytes": 401,
+      "sha256": "a211293e4081502486c35cff47b3cffad1ca62c20857d634d3ecb4124cfe6561"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_E8_MINUSCULE.md",
+      "bytes": 4684,
+      "sha256": "08f21a278b88f7c3a12e4b40f0674f603087234471244bdbc6eff5564681e7e5"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_E8_MINUSCULE.mjs",
+      "bytes": 1674,
+      "sha256": "afc067bb11e975e504d1e137a0dd9b01d31d4f5d4fda54ded7b961a6942e98ec"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_LOURD_REGIMES.json",
+      "bytes": 1885,
+      "sha256": "5c74df73d90df4b60b2e82e5724cc0ff846f4f5e7a85d3e2e50936d4a36b9604"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_LOURD_REGIMES.md",
+      "bytes": 5385,
+      "sha256": "866e69177f5d99ba8826dcc8877df3a5fac560bf2ee88e864f9f0a77780a5367"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_LOURD_REGIMES.mjs",
+      "bytes": 1968,
+      "sha256": "82320d662e70b1cf1e8f718399166e6eb8e17f300120ca91d949bc9f99cbb59d"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_MANIFESTE_COMBINATOIRE.json",
+      "bytes": 7818,
+      "sha256": "7496e183acc9902b1f2bc052ad0947b963cae633c6e58a67301ee5a7efb4f2d0"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_MANIFESTE_COMBINATOIRE.mjs",
+      "bytes": 2961,
+      "sha256": "7fdcf5bba807c80f53d4a36c8de09b4e1982cc11c62edba8aa8b9171755e25a7"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_NORME14_LOURDS.json",
+      "bytes": 1501,
+      "sha256": "c21dfdaad964077b97c5929133ee13352523c49ea11d76766884c15e83829a9e"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_NORME14_LOURDS.md",
+      "bytes": 5847,
+      "sha256": "425056c56cc6c76182360bcb433277ad3a8686794511ee31071a2f01059f5d16"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_NORME14_LOURDS.mjs",
+      "bytes": 2300,
+      "sha256": "5d8c43e6ca2dbbb7b3b17524dbaeffd1d710c6365b80f192e9e5d86d84275567"
+    },
+    {
+      "path": "attaque_globale_27_0803/G18_G20_STATUTS_ET_PARAMETRES.md",
+      "bytes": 4581,
+      "sha256": "fee7cf6ce788644c3b713130b86865d052e17fd93be43da48cc46cf3a5b1ba95"
+    },
+    {
+      "path": "attaque_globale_27_0803/INDECOMPOSABILITE_GLOBALE.md",
+      "bytes": 6819,
+      "sha256": "17d643fd120452110fe5270618ea944f61bfd7124f4c72e105bd016c2f123bf0"
+    },
+    {
+      "path": "attaque_globale_27_0803/LIRE_D_ABORD.txt",
+      "bytes": 677,
+      "sha256": "034c4b46d5be4679f9cb97eea287bb4a4cb63ba7f35e6acdfd8d2180003937d8"
+    },
+    {
+      "path": "attaque_globale_27_0803/MANIFEST_AUDIT_INDEPENDANT_0803.json",
+      "bytes": 10410,
+      "sha256": "0ca8af0714d5edcf74e6ee5295fabf8e508678008d1d455a2fcb4bc2a6858ef8"
+    },
+    {
+      "path": "attaque_globale_27_0803/MANIFESTE_ATTAQUE_GLOBALE.json",
+      "bytes": 13325,
+      "sha256": "81fa2fe3a01c4a5cc536ef31f421d6b59f2040b79f73ddd9a21fc78fa8bc136a"
+    },
+    {
+      "path": "attaque_globale_27_0803/PREUVES_COMPLETES_ATTAQUE_GLOBALE.md",
+      "bytes": 140347,
+      "sha256": "1c27d4b241421df2c1d585d5d68321bc9c4885f76614c528898716ba17569dad"
+    },
+    {
+      "path": "attaque_globale_27_0803/RACINES_CORANG_UN_CANDIDAT.md",
+      "bytes": 8688,
+      "sha256": "3734cbb4fa7a1f5972f029c3f8de200eee25f8b9d1058557a2cc0580b86e3fee"
+    },
+    {
+      "path": "attaque_globale_27_0803/SEPT_BLOCS_CARACTERISTIQUES_ET_COLLAGE.md",
+      "bytes": 13003,
+      "sha256": "b2a115acbde3af297479c58f9a8fca339f59cf85e3287f42fd2dcdbb70f9dccc"
+    },
+    {
+      "path": "attaque_globale_27_0803/TEMPLATE_CONDITIONNEL_SHADOW24.md",
+      "bytes": 3773,
+      "sha256": "3fd25fc66b330e5a09911b8c579a2ada28f015454a8e06d7de962190e53fe5c7"
+    },
+    {
+      "path": "attaque_globale_27_0803/UNIFICATION_G18_G20_RANG24.md",
+      "bytes": 7647,
+      "sha256": "f3d1aa7908e63adf707c8cede320b5a091515ce0301487ee33b334ed785ef565"
+    },
+    {
+      "path": "attaque_globale_27_0803/verifier_carrier_lourd_indep.json",
+      "bytes": 14848,
+      "sha256": "5edb837de19e39b49a5fa3e122eb083290773a23ef7d52e5d3d8ba0c2d124d5a"
+    },
+    {
+      "path": "attaque_globale_27_0803/verifier_carrier_lourd_indep.mjs",
+      "bytes": 3774,
+      "sha256": "9685ed9e61647a58302ea08462a527281cef332a3dc85beda4b686bf822bfc91"
+    },
+    {
+      "path": "attaque_globale_27_0803/verifier_collage_E8_P.json",
+      "bytes": 5399,
+      "sha256": "297656e5d2886d197ac773f32def39a169ae055a48036402d668823ac13c3621"
+    },
+    {
+      "path": "attaque_globale_27_0803/verifier_collage_E8_P.mjs",
+      "bytes": 6269,
+      "sha256": "d5d01a8b814026da4824c466110fa5d5c1b13cf9a63e18a2d9877a43190f6533"
+    },
+    {
+      "path": "attaque_globale_27_0803/verifier_corang_un_indep.json",
+      "bytes": 9633,
+      "sha256": "e90fadfd9ae4ad4d8f772e36d14347bd95172edad9a073e928af7f2561789b7f"
+    },
+    {
+      "path": "attaque_globale_27_0803/verifier_corang_un_indep.mjs",
+      "bytes": 3977,
+      "sha256": "b9e104067d0529b6148cce3bd20fc4b92cc53c4eb0e21f6f0a1425cc58958522"
+    },
+    {
+      "path": "attaque_globale_27_0803/verifier_golay_enveloppe_indep.json",
+      "bytes": 6586,
+      "sha256": "76cc2cb462ba125d9488bee80cc56857406c10c7e8fff62ec3980c29ff392cb1"
+    },
+    {
+      "path": "attaque_globale_27_0803/verifier_golay_enveloppe_indep.mjs",
+      "bytes": 5121,
+      "sha256": "c87c0d7b893759e386c3fecd6332435fe1231acb2834a6d8c91470202958c3a3"
+    },
+    {
+      "path": "attaque_globale_27_0803/verifier_identites_courtes.json",
+      "bytes": 3137,
+      "sha256": "8a56caa5636e43be2cfb57142c15f8426d40179e600490138904721e0233e607"
+    },
+    {
+      "path": "attaque_globale_27_0803/verifier_identites_courtes.mjs",
+      "bytes": 5035,
+      "sha256": "27ea92438164861646f0c6dec2aa4f74bb8588084d2c2b6af019f3a536c1c660"
+    },
+    {
+      "path": "attaque_globale_27_0803/verifier_indecomposabilite_courte.json",
+      "bytes": 5926,
+      "sha256": "dc1ad417b18d23c8633121078b6a15ebeb0f7545f47746d53cfbef690630cfb3"
+    },
+    {
+      "path": "attaque_globale_27_0803/verifier_indecomposabilite_courte.mjs",
+      "bytes": 2609,
+      "sha256": "1584e73048859a48c55505641ad4948b6714a872dde7d8189c25ea7e0bf9124c"
+    },
+    {
+      "path": "attaque_globale_27_0803/verifier_racines_corang_un.json",
+      "bytes": 2962,
+      "sha256": "49efb9c3f5ab1d11a2c053f3c3cc834c60f16b62788f72acd1982d4c37a3a503"
+    },
+    {
+      "path": "attaque_globale_27_0803/verifier_racines_corang_un.mjs",
+      "bytes": 2838,
+      "sha256": "fccfb6a5b24704fe61a80a71eceab3c32b14378b5d3de39343bf889a4e4895f0"
+    },
+    {
+      "path": "attaque_globale_27_0803/verifier_sept_blocs_caracteristiques.json",
+      "bytes": 1333,
+      "sha256": "5f6a15f3cd7ea0756fe198d602d3a94002f9f8eb6bc95df7a1a0f2f893c49ba7"
+    },
+    {
+      "path": "attaque_globale_27_0803/verifier_sept_blocs_caracteristiques.mjs",
+      "bytes": 4251,
+      "sha256": "ea97d5070fe2857af12521ee88a54bdc4949e4a9dc9e04eb2e91fbd18269e19e"
+    }
+  ]
+}

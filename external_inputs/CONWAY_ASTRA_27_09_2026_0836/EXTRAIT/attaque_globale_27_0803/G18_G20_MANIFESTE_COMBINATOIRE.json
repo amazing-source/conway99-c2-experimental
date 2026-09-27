@@ -1,0 +1,238 @@
+{
+  "frozen_own_pieces": true,
+  "own_count": 24,
+  "own": [
+    {
+      "name": "G18_G20_NORME14_LOURDS.md",
+      "bytes": 5847,
+      "sha256": "425056c56cc6c76182360bcb433277ad3a8686794511ee31071a2f01059f5d16"
+    },
+    {
+      "name": "G18_G20_NORME14_LOURDS.mjs",
+      "bytes": 2300,
+      "sha256": "5d8c43e6ca2dbbb7b3b17524dbaeffd1d710c6365b80f192e9e5d86d84275567"
+    },
+    {
+      "name": "G18_G20_NORME14_LOURDS.json",
+      "bytes": 1501,
+      "sha256": "c21dfdaad964077b97c5929133ee13352523c49ea11d76766884c15e83829a9e"
+    },
+    {
+      "name": "G18_G20_LOURD_REGIMES.md",
+      "bytes": 5385,
+      "sha256": "866e69177f5d99ba8826dcc8877df3a5fac560bf2ee88e864f9f0a77780a5367"
+    },
+    {
+      "name": "G18_G20_LOURD_REGIMES.mjs",
+      "bytes": 1968,
+      "sha256": "82320d662e70b1cf1e8f718399166e6eb8e17f300120ca91d949bc9f99cbb59d"
+    },
+    {
+      "name": "G18_G20_LOURD_REGIMES.json",
+      "bytes": 1885,
+      "sha256": "5c74df73d90df4b60b2e82e5724cc0ff846f4f5e7a85d3e2e50936d4a36b9604"
+    },
+    {
+      "name": "G18_G20_CARRIER_LOURD_P0.md",
+      "bytes": 3751,
+      "sha256": "eb22e1afb618480506f605f890632f1e84c4dc2f1ccf7af18286f23ee1642b38"
+    },
+    {
+      "name": "G18_G20_CARRIER_LOURD_P0.mjs",
+      "bytes": 2164,
+      "sha256": "df1831d2029657e68bfbe28b6ca580e1d2a048581de7d806df6a3125646ed5fb"
+    },
+    {
+      "name": "G18_G20_CARRIER_LOURD_P0.json",
+      "bytes": 19422,
+      "sha256": "e87d9704659c321271c3828cca71c3dff0032e38e4e76a45780c330336e28e02"
+    },
+    {
+      "name": "G18_G20_E8_MINUSCULE.md",
+      "bytes": 4684,
+      "sha256": "08f21a278b88f7c3a12e4b40f0674f603087234471244bdbc6eff5564681e7e5"
+    },
+    {
+      "name": "G18_G20_E8_MINUSCULE.mjs",
+      "bytes": 1674,
+      "sha256": "afc067bb11e975e504d1e137a0dd9b01d31d4f5d4fda54ded7b961a6942e98ec"
+    },
+    {
+      "name": "G18_G20_E8_MINUSCULE.json",
+      "bytes": 401,
+      "sha256": "a211293e4081502486c35cff47b3cffad1ca62c20857d634d3ecb4124cfe6561"
+    },
+    {
+      "name": "G18_G20_D13_FRAME.md",
+      "bytes": 3271,
+      "sha256": "c4c5acc152a26cb8f3aa3babd3b202df3c606c7afae988a63790486b1c512142"
+    },
+    {
+      "name": "G18_G20_D13_FRAME.mjs",
+      "bytes": 771,
+      "sha256": "03016c039de57a792161963a922a5fa7579b815565f9de447d10e96c40fb3a89"
+    },
+    {
+      "name": "G18_G20_D13_FRAME.json",
+      "bytes": 3624,
+      "sha256": "aa522f56f9d46b6e7ba6351f8587a59bb9dc304d5a57c73e9db879565750d4d1"
+    },
+    {
+      "name": "G18_G20_D12_COLLAGE.md",
+      "bytes": 4577,
+      "sha256": "14e1982694778879d232fdaa1b5b96db8a3321925b14cd2938c682f5fee5ee11"
+    },
+    {
+      "name": "G18_G20_D12_COLLAGE.mjs",
+      "bytes": 1198,
+      "sha256": "556aee56c84fe4efb2cc3ccaba1d6cfcaf7887651ab1cfc7ea641d665e181339"
+    },
+    {
+      "name": "G18_G20_D12_COLLAGE.json",
+      "bytes": 544,
+      "sha256": "f58e897dc6725c4a2767aad2a0e4428b98d512e727c6e8a4dd92c14d263a66a2"
+    },
+    {
+      "name": "G18_G20_A20_FRAME.md",
+      "bytes": 3088,
+      "sha256": "22934b9fef2d3a7653cab21464f105c4d1643dab858a9397cc2b2530e1ef8f0e"
+    },
+    {
+      "name": "G18_G20_A20_FRAME.mjs",
+      "bytes": 1322,
+      "sha256": "a98064aaac6008a22fe23c7f619c43fc3e12298044cc3689750b76cba6cd219c"
+    },
+    {
+      "name": "G18_G20_A20_FRAME.json",
+      "bytes": 3187,
+      "sha256": "9357e215c5293ecad9a393021c76eb647145c872e42f088b3ae733d6c9fd8c30"
+    },
+    {
+      "name": "G18_G20_D11_D12_DANS_N.md",
+      "bytes": 3094,
+      "sha256": "721d0cbaa56e856281453e92b95f05686db07d1d1dff25d131a5983a51b567f9"
+    },
+    {
+      "name": "G18_G20_STATUTS_ET_PARAMETRES.md",
+      "bytes": 4581,
+      "sha256": "fee7cf6ce788644c3b713130b86865d052e17fd93be43da48cc46cf3a5b1ba95"
+    },
+    {
+      "name": "G18_G20_MANIFESTE_COMBINATOIRE.mjs",
+      "bytes": 2961,
+      "sha256": "7fdcf5bba807c80f53d4a36c8de09b4e1982cc11c62edba8aa8b9171755e25a7"
+    }
+  ],
+  "bound_prerequisites": [
+    {
+      "name": "AUDIT_NORME1_ET_METRIQUES.md",
+      "bytes": 8572,
+      "sha256": "73b638863453408ce1252f1a02d3b46179fbf959a75c5ee065b8929794ed9db8"
+    },
+    {
+      "name": "AUDIT_INDECOMPOSABILITE.md",
+      "bytes": 3635,
+      "sha256": "102f435498ba84f7b0e0cc12d651944ce23cafc00785056f12fde5428be47c3a"
+    },
+    {
+      "name": "INDECOMPOSABILITE_GLOBALE.md",
+      "bytes": 6819,
+      "sha256": "17d643fd120452110fe5270618ea944f61bfd7124f4c72e105bd016c2f123bf0"
+    },
+    {
+      "name": "AUDIT_RACINES_CORANG_UN.md",
+      "bytes": 5726,
+      "sha256": "d63607b75b9b19b0df6a4a41cb73a3c86a102c72b9c8fd206c428e311b129e49"
+    },
+    {
+      "name": "RACINES_CORANG_UN_CANDIDAT.md",
+      "bytes": 8688,
+      "sha256": "3734cbb4fa7a1f5972f029c3f8de200eee25f8b9d1058557a2cc0580b86e3fee"
+    },
+    {
+      "name": "controles_positifs_cadre_global.mjs",
+      "bytes": 2605,
+      "sha256": "858f415967111796dd07eef21350793f1217148fe0a322eacf20065cc110fb01"
+    },
+    {
+      "name": "controles_positifs_cadre_global.json",
+      "bytes": 1068,
+      "sha256": "c699700a3d764876711c0f4087582a1a2b95f238d58746f120ac743293fcd7ca"
+    },
+    {
+      "name": "verifier_carrier_lourd_indep.mjs",
+      "bytes": 3774,
+      "sha256": "9685ed9e61647a58302ea08462a527281cef332a3dc85beda4b686bf822bfc91"
+    },
+    {
+      "name": "verifier_carrier_lourd_indep.json",
+      "bytes": 14848,
+      "sha256": "5edb837de19e39b49a5fa3e122eb083290773a23ef7d52e5d3d8ba0c2d124d5a"
+    }
+  ],
+  "existing_finite_tests": [
+    {
+      "name": "G18_G20_NORME14_LOURDS.json",
+      "exact": true,
+      "scope": "Capacity and sign identities only. No graph/whole-type exclusion or g>=21 bound."
+    },
+    {
+      "name": "G18_G20_LOURD_REGIMES.json",
+      "exact": true,
+      "scope": "Necessary capacity regimes for the same norm14 heavy eigenvector. Not a graph/type completion or exclusion."
+    },
+    {
+      "name": "G18_G20_CARRIER_LOURD_P0.json",
+      "exact": true,
+      "scope": "P0 excludes heavy external carrier degree4 only. Remaining carriers and g18/g20 remain open."
+    },
+    {
+      "name": "G18_G20_E8_MINUSCULE.json",
+      "exact": true,
+      "scope": "Uniform E8 sub-system obstruction in any integral extension of dimension<=29, using dual gap8/7; not g>=21 or whole-type exclusion."
+    },
+    {
+      "name": "G18_G20_D13_FRAME.json",
+      "exact": true,
+      "scope": "No D_n,n>=13, in any integral extension of dimension<=24 containing the common N22 frame and dual gap8/7. No entire g18/g20 exclusion."
+    },
+    {
+      "name": "G18_G20_D12_COLLAGE.json",
+      "exact": true,
+      "scope": "No D12 root sub-system in any integral extension of dimension<=24 containing the common N22 frame and dual gap8/7. No entire g18/g20 exclusion."
+    },
+    {
+      "name": "G18_G20_A20_FRAME.json",
+      "exact": true,
+      "scope": "Common N22 frame and acquired dual gap8/7; no type catalogue, P0, g>=21 or entire g18/g20 exclusion."
+    }
+  ],
+  "positive_controls": {
+    "exact": true,
+    "source_hash_matches": true,
+    "own_parameters_preserved": true,
+    "new_execution": false
+  },
+  "claims": {
+    "same_rank22": {
+      "E8_excluded": true,
+      "D_n_excluded_from": 11,
+      "A_n_excluded_from": 20
+    },
+    "integral_extension_dimension_at_most24": {
+      "E8_excluded": true,
+      "D_n_excluded_from": 12,
+      "A_n_excluded_from": 22
+    },
+    "root_rank20_requires_Nmax_det49_and_elementary_discriminant_dimension2": true,
+    "P0_only_for_carrier_appendix": true
+  },
+  "limitations": [
+    "No g>=21 conclusion.",
+    "No uniform g18/g20 exclusion.",
+    "The flat norm2 branch and remaining heavy regimes are open.",
+    "D11 and A20/A21 in rank24 are not closed here.",
+    "No graph is certified."
+  ],
+  "scope": "Read-only hash binding and documentary closure, not a new graph search or a proof of the full genre exclusion."
+}

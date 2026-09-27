@@ -1,0 +1,2614 @@
+{
+  "exact": true,
+  "scope": "Collage D4^6 du cycle C6 et classes utilisees par la meme selection42 ; aucune realisation physique annoncee.",
+  "adjacency": [
+    34,
+    5,
+    10,
+    20,
+    40,
+    17
+  ],
+  "glue_generator_Gram": [
+    [
+      3,
+      1,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      3,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      3,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      3,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      3,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      1,
+      3
+    ]
+  ],
+  "glue_index": 64,
+  "determinant": 1,
+  "glue_class_weight_histogram": {
+    "0": 1,
+    "3": 8,
+    "4": 21,
+    "5": 24,
+    "6": 10
+  },
+  "norm3_classes": [
+    {
+      "mask": 1,
+      "v_mask": 1,
+      "s_mask": 34,
+      "symbols": [
+        1,
+        2,
+        0,
+        0,
+        0,
+        2
+      ],
+      "weight": 3
+    },
+    {
+      "mask": 2,
+      "v_mask": 2,
+      "s_mask": 5,
+      "symbols": [
+        2,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "weight": 3
+    },
+    {
+      "mask": 4,
+      "v_mask": 4,
+      "s_mask": 10,
+      "symbols": [
+        0,
+        2,
+        1,
+        2,
+        0,
+        0
+      ],
+      "weight": 3
+    },
+    {
+      "mask": 8,
+      "v_mask": 8,
+      "s_mask": 20,
+      "symbols": [
+        0,
+        0,
+        2,
+        1,
+        2,
+        0
+      ],
+      "weight": 3
+    },
+    {
+      "mask": 16,
+      "v_mask": 16,
+      "s_mask": 40,
+      "symbols": [
+        0,
+        0,
+        0,
+        2,
+        1,
+        2
+      ],
+      "weight": 3
+    },
+    {
+      "mask": 32,
+      "v_mask": 32,
+      "s_mask": 17,
+      "symbols": [
+        2,
+        0,
+        0,
+        0,
+        2,
+        1
+      ],
+      "weight": 3
+    },
+    {
+      "mask": 21,
+      "v_mask": 21,
+      "s_mask": 0,
+      "symbols": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "weight": 3
+    },
+    {
+      "mask": 42,
+      "v_mask": 42,
+      "s_mask": 0,
+      "symbols": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "weight": 3
+    }
+  ],
+  "norm3_shell_count": 4096,
+  "all_glue_classes": [
+    {
+      "mask": 0,
+      "v_mask": 0,
+      "s_mask": 0,
+      "symbols": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "weight": 0
+    },
+    {
+      "mask": 1,
+      "v_mask": 1,
+      "s_mask": 34,
+      "symbols": [
+        1,
+        2,
+        0,
+        0,
+        0,
+        2
+      ],
+      "weight": 3
+    },
+    {
+      "mask": 2,
+      "v_mask": 2,
+      "s_mask": 5,
+      "symbols": [
+        2,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "weight": 3
+    },
+    {
+      "mask": 3,
+      "v_mask": 3,
+      "s_mask": 39,
+      "symbols": [
+        3,
+        3,
+        2,
+        0,
+        0,
+        2
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 4,
+      "v_mask": 4,
+      "s_mask": 10,
+      "symbols": [
+        0,
+        2,
+        1,
+        2,
+        0,
+        0
+      ],
+      "weight": 3
+    },
+    {
+      "mask": 5,
+      "v_mask": 5,
+      "s_mask": 40,
+      "symbols": [
+        1,
+        0,
+        1,
+        2,
+        0,
+        2
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 6,
+      "v_mask": 6,
+      "s_mask": 15,
+      "symbols": [
+        2,
+        3,
+        3,
+        2,
+        0,
+        0
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 7,
+      "v_mask": 7,
+      "s_mask": 45,
+      "symbols": [
+        3,
+        1,
+        3,
+        2,
+        0,
+        2
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 8,
+      "v_mask": 8,
+      "s_mask": 20,
+      "symbols": [
+        0,
+        0,
+        2,
+        1,
+        2,
+        0
+      ],
+      "weight": 3
+    },
+    {
+      "mask": 9,
+      "v_mask": 9,
+      "s_mask": 54,
+      "symbols": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "weight": 6
+    },
+    {
+      "mask": 10,
+      "v_mask": 10,
+      "s_mask": 17,
+      "symbols": [
+        2,
+        1,
+        0,
+        1,
+        2,
+        0
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 11,
+      "v_mask": 11,
+      "s_mask": 51,
+      "symbols": [
+        3,
+        3,
+        0,
+        1,
+        2,
+        2
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 12,
+      "v_mask": 12,
+      "s_mask": 30,
+      "symbols": [
+        0,
+        2,
+        3,
+        3,
+        2,
+        0
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 13,
+      "v_mask": 13,
+      "s_mask": 60,
+      "symbols": [
+        1,
+        0,
+        3,
+        3,
+        2,
+        2
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 14,
+      "v_mask": 14,
+      "s_mask": 27,
+      "symbols": [
+        2,
+        3,
+        1,
+        3,
+        2,
+        0
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 15,
+      "v_mask": 15,
+      "s_mask": 57,
+      "symbols": [
+        3,
+        1,
+        1,
+        3,
+        2,
+        2
+      ],
+      "weight": 6
+    },
+    {
+      "mask": 16,
+      "v_mask": 16,
+      "s_mask": 40,
+      "symbols": [
+        0,
+        0,
+        0,
+        2,
+        1,
+        2
+      ],
+      "weight": 3
+    },
+    {
+      "mask": 17,
+      "v_mask": 17,
+      "s_mask": 10,
+      "symbols": [
+        1,
+        2,
+        0,
+        2,
+        1,
+        0
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 18,
+      "v_mask": 18,
+      "s_mask": 45,
+      "symbols": [
+        2,
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "weight": 6
+    },
+    {
+      "mask": 19,
+      "v_mask": 19,
+      "s_mask": 15,
+      "symbols": [
+        3,
+        3,
+        2,
+        2,
+        1,
+        0
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 20,
+      "v_mask": 20,
+      "s_mask": 34,
+      "symbols": [
+        0,
+        2,
+        1,
+        0,
+        1,
+        2
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 21,
+      "v_mask": 21,
+      "s_mask": 0,
+      "symbols": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "weight": 3
+    },
+    {
+      "mask": 22,
+      "v_mask": 22,
+      "s_mask": 39,
+      "symbols": [
+        2,
+        3,
+        3,
+        0,
+        1,
+        2
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 23,
+      "v_mask": 23,
+      "s_mask": 5,
+      "symbols": [
+        3,
+        1,
+        3,
+        0,
+        1,
+        0
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 24,
+      "v_mask": 24,
+      "s_mask": 60,
+      "symbols": [
+        0,
+        0,
+        2,
+        3,
+        3,
+        2
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 25,
+      "v_mask": 25,
+      "s_mask": 30,
+      "symbols": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        0
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 26,
+      "v_mask": 26,
+      "s_mask": 57,
+      "symbols": [
+        2,
+        1,
+        0,
+        3,
+        3,
+        2
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 27,
+      "v_mask": 27,
+      "s_mask": 27,
+      "symbols": [
+        3,
+        3,
+        0,
+        3,
+        3,
+        0
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 28,
+      "v_mask": 28,
+      "s_mask": 54,
+      "symbols": [
+        0,
+        2,
+        3,
+        1,
+        3,
+        2
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 29,
+      "v_mask": 29,
+      "s_mask": 20,
+      "symbols": [
+        1,
+        0,
+        3,
+        1,
+        3,
+        0
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 30,
+      "v_mask": 30,
+      "s_mask": 51,
+      "symbols": [
+        2,
+        3,
+        1,
+        1,
+        3,
+        2
+      ],
+      "weight": 6
+    },
+    {
+      "mask": 31,
+      "v_mask": 31,
+      "s_mask": 17,
+      "symbols": [
+        3,
+        1,
+        1,
+        1,
+        3,
+        0
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 32,
+      "v_mask": 32,
+      "s_mask": 17,
+      "symbols": [
+        2,
+        0,
+        0,
+        0,
+        2,
+        1
+      ],
+      "weight": 3
+    },
+    {
+      "mask": 33,
+      "v_mask": 33,
+      "s_mask": 51,
+      "symbols": [
+        3,
+        2,
+        0,
+        0,
+        2,
+        3
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 34,
+      "v_mask": 34,
+      "s_mask": 20,
+      "symbols": [
+        0,
+        1,
+        2,
+        0,
+        2,
+        1
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 35,
+      "v_mask": 35,
+      "s_mask": 54,
+      "symbols": [
+        1,
+        3,
+        2,
+        0,
+        2,
+        3
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 36,
+      "v_mask": 36,
+      "s_mask": 27,
+      "symbols": [
+        2,
+        2,
+        1,
+        2,
+        2,
+        1
+      ],
+      "weight": 6
+    },
+    {
+      "mask": 37,
+      "v_mask": 37,
+      "s_mask": 57,
+      "symbols": [
+        3,
+        0,
+        1,
+        2,
+        2,
+        3
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 38,
+      "v_mask": 38,
+      "s_mask": 30,
+      "symbols": [
+        0,
+        3,
+        3,
+        2,
+        2,
+        1
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 39,
+      "v_mask": 39,
+      "s_mask": 60,
+      "symbols": [
+        1,
+        1,
+        3,
+        2,
+        2,
+        3
+      ],
+      "weight": 6
+    },
+    {
+      "mask": 40,
+      "v_mask": 40,
+      "s_mask": 5,
+      "symbols": [
+        2,
+        0,
+        2,
+        1,
+        0,
+        1
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 41,
+      "v_mask": 41,
+      "s_mask": 39,
+      "symbols": [
+        3,
+        2,
+        2,
+        1,
+        0,
+        3
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 42,
+      "v_mask": 42,
+      "s_mask": 0,
+      "symbols": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "weight": 3
+    },
+    {
+      "mask": 43,
+      "v_mask": 43,
+      "s_mask": 34,
+      "symbols": [
+        1,
+        3,
+        0,
+        1,
+        0,
+        3
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 44,
+      "v_mask": 44,
+      "s_mask": 15,
+      "symbols": [
+        2,
+        2,
+        3,
+        3,
+        0,
+        1
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 45,
+      "v_mask": 45,
+      "s_mask": 45,
+      "symbols": [
+        3,
+        0,
+        3,
+        3,
+        0,
+        3
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 46,
+      "v_mask": 46,
+      "s_mask": 10,
+      "symbols": [
+        0,
+        3,
+        1,
+        3,
+        0,
+        1
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 47,
+      "v_mask": 47,
+      "s_mask": 40,
+      "symbols": [
+        1,
+        1,
+        1,
+        3,
+        0,
+        3
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 48,
+      "v_mask": 48,
+      "s_mask": 57,
+      "symbols": [
+        2,
+        0,
+        0,
+        2,
+        3,
+        3
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 49,
+      "v_mask": 49,
+      "s_mask": 27,
+      "symbols": [
+        3,
+        2,
+        0,
+        2,
+        3,
+        1
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 50,
+      "v_mask": 50,
+      "s_mask": 60,
+      "symbols": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 51,
+      "v_mask": 51,
+      "s_mask": 30,
+      "symbols": [
+        1,
+        3,
+        2,
+        2,
+        3,
+        1
+      ],
+      "weight": 6
+    },
+    {
+      "mask": 52,
+      "v_mask": 52,
+      "s_mask": 51,
+      "symbols": [
+        2,
+        2,
+        1,
+        0,
+        3,
+        3
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 53,
+      "v_mask": 53,
+      "s_mask": 17,
+      "symbols": [
+        3,
+        0,
+        1,
+        0,
+        3,
+        1
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 54,
+      "v_mask": 54,
+      "s_mask": 54,
+      "symbols": [
+        0,
+        3,
+        3,
+        0,
+        3,
+        3
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 55,
+      "v_mask": 55,
+      "s_mask": 20,
+      "symbols": [
+        1,
+        1,
+        3,
+        0,
+        3,
+        1
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 56,
+      "v_mask": 56,
+      "s_mask": 45,
+      "symbols": [
+        2,
+        0,
+        2,
+        3,
+        1,
+        3
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 57,
+      "v_mask": 57,
+      "s_mask": 15,
+      "symbols": [
+        3,
+        2,
+        2,
+        3,
+        1,
+        1
+      ],
+      "weight": 6
+    },
+    {
+      "mask": 58,
+      "v_mask": 58,
+      "s_mask": 40,
+      "symbols": [
+        0,
+        1,
+        0,
+        3,
+        1,
+        3
+      ],
+      "weight": 4
+    },
+    {
+      "mask": 59,
+      "v_mask": 59,
+      "s_mask": 10,
+      "symbols": [
+        1,
+        3,
+        0,
+        3,
+        1,
+        1
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 60,
+      "v_mask": 60,
+      "s_mask": 39,
+      "symbols": [
+        2,
+        2,
+        3,
+        1,
+        1,
+        3
+      ],
+      "weight": 6
+    },
+    {
+      "mask": 61,
+      "v_mask": 61,
+      "s_mask": 5,
+      "symbols": [
+        3,
+        0,
+        3,
+        1,
+        1,
+        1
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 62,
+      "v_mask": 62,
+      "s_mask": 34,
+      "symbols": [
+        0,
+        3,
+        1,
+        1,
+        1,
+        3
+      ],
+      "weight": 5
+    },
+    {
+      "mask": 63,
+      "v_mask": 63,
+      "s_mask": 0,
+      "symbols": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "weight": 6
+    }
+  ],
+  "families_tested": 256,
+  "qualifying_families": 25,
+  "refuted_families": 231,
+  "minimum_used_classes": 6,
+  "qualifying_by_number_bases": {
+    "4": 9,
+    "5": 12,
+    "6": 4
+  },
+  "qualifying_by_total_classes": {
+    "6": 16,
+    "7": 8,
+    "8": 1
+  },
+  "valid": [
+    {
+      "mask": 63,
+      "bases": 6,
+      "size": 6
+    },
+    {
+      "mask": 111,
+      "bases": 5,
+      "size": 6
+    },
+    {
+      "mask": 123,
+      "bases": 5,
+      "size": 6
+    },
+    {
+      "mask": 126,
+      "bases": 5,
+      "size": 6
+    },
+    {
+      "mask": 127,
+      "bases": 6,
+      "size": 7
+    },
+    {
+      "mask": 159,
+      "bases": 5,
+      "size": 6
+    },
+    {
+      "mask": 183,
+      "bases": 5,
+      "size": 6
+    },
+    {
+      "mask": 189,
+      "bases": 5,
+      "size": 6
+    },
+    {
+      "mask": 191,
+      "bases": 6,
+      "size": 7
+    },
+    {
+      "mask": 207,
+      "bases": 4,
+      "size": 6
+    },
+    {
+      "mask": 219,
+      "bases": 4,
+      "size": 6
+    },
+    {
+      "mask": 222,
+      "bases": 4,
+      "size": 6
+    },
+    {
+      "mask": 223,
+      "bases": 5,
+      "size": 7
+    },
+    {
+      "mask": 231,
+      "bases": 4,
+      "size": 6
+    },
+    {
+      "mask": 237,
+      "bases": 4,
+      "size": 6
+    },
+    {
+      "mask": 239,
+      "bases": 5,
+      "size": 7
+    },
+    {
+      "mask": 243,
+      "bases": 4,
+      "size": 6
+    },
+    {
+      "mask": 246,
+      "bases": 4,
+      "size": 6
+    },
+    {
+      "mask": 247,
+      "bases": 5,
+      "size": 7
+    },
+    {
+      "mask": 249,
+      "bases": 4,
+      "size": 6
+    },
+    {
+      "mask": 251,
+      "bases": 5,
+      "size": 7
+    },
+    {
+      "mask": 252,
+      "bases": 4,
+      "size": 6
+    },
+    {
+      "mask": 253,
+      "bases": 5,
+      "size": 7
+    },
+    {
+      "mask": 254,
+      "bases": 5,
+      "size": 7
+    },
+    {
+      "mask": 255,
+      "bases": 6,
+      "size": 8
+    }
+  ],
+  "rejected": [
+    {
+      "mask": 0,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 1,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 2,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 3,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 4,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 5,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 6,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 7,
+      "component": 3,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 8,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 9,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 10,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 11,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 12,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 13,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 14,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 15,
+      "component": 4,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 16,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 17,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 18,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 19,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 20,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 21,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 22,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 23,
+      "component": 3,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 24,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 25,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 26,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 27,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 28,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 29,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 30,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 31,
+      "component": 5,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 32,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 33,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 34,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 35,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 36,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 37,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 38,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 39,
+      "component": 3,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 40,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 41,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 42,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 43,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 44,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 45,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 46,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 47,
+      "component": 4,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 48,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 49,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 50,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 51,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 52,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 53,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 54,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 55,
+      "component": 3,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 56,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 57,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 58,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 59,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 60,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 61,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 62,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 64,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 65,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 66,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 67,
+      "component": 3,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 68,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 69,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 70,
+      "component": 3,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 71,
+      "component": 3,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 72,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 73,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 74,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 75,
+      "component": 3,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 76,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 77,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 78,
+      "component": 5,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 79,
+      "component": 5,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 80,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 81,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 82,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 83,
+      "component": 3,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 84,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 85,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 86,
+      "component": 3,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 87,
+      "component": 3,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 88,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 89,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 90,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 91,
+      "component": 5,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 92,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 93,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 94,
+      "component": 5,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 95,
+      "component": 5,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 96,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 97,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 98,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 99,
+      "component": 3,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 100,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 101,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 102,
+      "component": 3,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 103,
+      "component": 3,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 104,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 105,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 106,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 107,
+      "component": 3,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 108,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 109,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 110,
+      "component": 5,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 112,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 113,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 114,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 115,
+      "component": 3,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 116,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 117,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 118,
+      "component": 3,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 119,
+      "component": 3,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 120,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 121,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 122,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 124,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 125,
+      "component": 1,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 128,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 129,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 130,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 131,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 132,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 133,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 134,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 135,
+      "component": 4,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 136,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 137,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 138,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 139,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 140,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 141,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 142,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 143,
+      "component": 4,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 144,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 145,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 146,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 147,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 148,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 149,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 150,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 151,
+      "component": 4,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 152,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 153,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 154,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 155,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 156,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 157,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 158,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 160,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 161,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 162,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 163,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 164,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 165,
+      "component": 2,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 166,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 167,
+      "component": 4,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 168,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 169,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 170,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 171,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 172,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 173,
+      "component": 4,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 174,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 175,
+      "component": 4,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 176,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 177,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 0
+    },
+    {
+      "mask": 178,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 179,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 180,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 181,
+      "component": 2,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 182,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 184,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 185,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 186,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 187,
+      "component": 2,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 188,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 190,
+      "component": 0,
+      "missing_class": "v",
+      "present_symbol_mask": 2
+    },
+    {
+      "mask": 192,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 193,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 194,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 195,
+      "component": 3,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 196,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 197,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 198,
+      "component": 4,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 199,
+      "component": 4,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 200,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 201,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 202,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 203,
+      "component": 3,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 204,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 205,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 206,
+      "component": 5,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 208,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 209,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 210,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 211,
+      "component": 4,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 212,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 213,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 214,
+      "component": 4,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 215,
+      "component": 4,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 216,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 217,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 218,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 220,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 221,
+      "component": 0,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 224,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 225,
+      "component": 2,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 226,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 227,
+      "component": 3,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 228,
+      "component": 2,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 229,
+      "component": 2,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 230,
+      "component": 5,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 232,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 233,
+      "component": 3,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 234,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 235,
+      "component": 3,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 236,
+      "component": 5,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 238,
+      "component": 5,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 240,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 241,
+      "component": 2,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 242,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 244,
+      "component": 2,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 245,
+      "component": 2,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 248,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    },
+    {
+      "mask": 250,
+      "component": 1,
+      "missing_class": "s",
+      "present_symbol_mask": 1
+    }
+  ],
+  "rejection_principle": "Une composante uniforme 0/v ou0/s donne quatre directions de norme1 integralement duales aux42u, contredisant le petit polaire de dimension2."
+}

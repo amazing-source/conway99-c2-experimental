@@ -1,0 +1,73 @@
+{
+  "scope": "Contrôles finis arithmétiques; aucun graphe99 ni exclusion de genre",
+  "code_P": {
+    "size": 4096,
+    "two_torsion": 64,
+    "invariant_factors": "4^6",
+    "root_classes": 42,
+    "root_order": 4,
+    "root_projection_norm": "1/2"
+  },
+  "D7_nonorthogonality_graph": {
+    "vertices": 42,
+    "degree": 20,
+    "edges": 420,
+    "connected": true
+  },
+  "characteristic10_tournament": {
+    "indegrees": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "C_epsilon": [
+      -6,
+      -6,
+      -6,
+      -6,
+      -6,
+      -6,
+      -6
+    ],
+    "squared_coefficient_norm": 70,
+    "limitations": "Condition des blocs seulement; T et appartenance au réseau non construits"
+  },
+  "counterexample_K11_squared": {
+    "rank": 22,
+    "determinant": 49,
+    "minimum": 2,
+    "characteristic_minimum": 10,
+    "dual_vector_norm": "5/7",
+    "limitations": "Contre-témoin à la borne caractéristique seule; viole min N#>=8/7"
+  },
+  "characteristic8_glue_profiles": [
+    {
+      "b_abs": [
+        1,
+        1
+      ],
+      "n3": 0,
+      "block_half_square": 3
+    },
+    {
+      "b_abs": [
+        1,
+        1
+      ],
+      "n3": 1,
+      "block_half_square": 1
+    },
+    {
+      "b_abs": [
+        1,
+        3
+      ],
+      "n3": 0,
+      "block_half_square": 1
+    }
+  ]
+}

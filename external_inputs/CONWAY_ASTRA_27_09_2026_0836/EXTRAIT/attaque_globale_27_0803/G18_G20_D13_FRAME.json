@@ -1,0 +1,126 @@
+{
+  "exact": true,
+  "rows": [
+    {
+      "Dn_rank": 13,
+      "half_weight_norm": "13/4",
+      "half_weight_exceeds_root_generator_norm3": true,
+      "common_space_dimension": 22,
+      "extension_dimension_at_most": 24,
+      "frame_trace_lower": 77,
+      "frame_trace_upper": 70,
+      "strict_gap": 7
+    },
+    {
+      "Dn_rank": 14,
+      "half_weight_norm": "14/4",
+      "half_weight_exceeds_root_generator_norm3": true,
+      "common_space_dimension": 22,
+      "extension_dimension_at_most": 24,
+      "frame_trace_lower": 84,
+      "frame_trace_upper": 70,
+      "strict_gap": 14
+    },
+    {
+      "Dn_rank": 15,
+      "half_weight_norm": "15/4",
+      "half_weight_exceeds_root_generator_norm3": true,
+      "common_space_dimension": 22,
+      "extension_dimension_at_most": 24,
+      "frame_trace_lower": 91,
+      "frame_trace_upper": 70,
+      "strict_gap": 21
+    },
+    {
+      "Dn_rank": 16,
+      "half_weight_norm": "16/4",
+      "half_weight_exceeds_root_generator_norm3": true,
+      "common_space_dimension": 22,
+      "extension_dimension_at_most": 24,
+      "frame_trace_lower": 98,
+      "frame_trace_upper": 70,
+      "strict_gap": 28
+    },
+    {
+      "Dn_rank": 17,
+      "half_weight_norm": "17/4",
+      "half_weight_exceeds_root_generator_norm3": true,
+      "common_space_dimension": 22,
+      "extension_dimension_at_most": 24,
+      "frame_trace_lower": 105,
+      "frame_trace_upper": 70,
+      "strict_gap": 35
+    },
+    {
+      "Dn_rank": 18,
+      "half_weight_norm": "18/4",
+      "half_weight_exceeds_root_generator_norm3": true,
+      "common_space_dimension": 22,
+      "extension_dimension_at_most": 24,
+      "frame_trace_lower": 112,
+      "frame_trace_upper": 70,
+      "strict_gap": 42
+    },
+    {
+      "Dn_rank": 19,
+      "half_weight_norm": "19/4",
+      "half_weight_exceeds_root_generator_norm3": true,
+      "common_space_dimension": 22,
+      "extension_dimension_at_most": 24,
+      "frame_trace_lower": 119,
+      "frame_trace_upper": 70,
+      "strict_gap": 49
+    },
+    {
+      "Dn_rank": 20,
+      "half_weight_norm": "20/4",
+      "half_weight_exceeds_root_generator_norm3": true,
+      "common_space_dimension": 22,
+      "extension_dimension_at_most": 24,
+      "frame_trace_lower": 126,
+      "frame_trace_upper": 70,
+      "strict_gap": 56
+    },
+    {
+      "Dn_rank": 21,
+      "half_weight_norm": "21/4",
+      "half_weight_exceeds_root_generator_norm3": true,
+      "common_space_dimension": 22,
+      "extension_dimension_at_most": 24,
+      "frame_trace_lower": 133,
+      "frame_trace_upper": 70,
+      "strict_gap": 63
+    },
+    {
+      "Dn_rank": 22,
+      "half_weight_norm": "22/4",
+      "half_weight_exceeds_root_generator_norm3": true,
+      "common_space_dimension": 22,
+      "extension_dimension_at_most": 24,
+      "frame_trace_lower": 140,
+      "frame_trace_upper": 70,
+      "strict_gap": 70
+    },
+    {
+      "Dn_rank": 23,
+      "half_weight_norm": "23/4",
+      "half_weight_exceeds_root_generator_norm3": true,
+      "common_space_dimension": 22,
+      "extension_dimension_at_most": 24,
+      "frame_trace_lower": 147,
+      "frame_trace_upper": 70,
+      "strict_gap": 77
+    },
+    {
+      "Dn_rank": 24,
+      "half_weight_norm": "24/4",
+      "half_weight_exceeds_root_generator_norm3": true,
+      "common_space_dimension": 22,
+      "extension_dimension_at_most": 24,
+      "frame_trace_lower": 154,
+      "frame_trace_upper": 70,
+      "strict_gap": 84
+    }
+  ],
+  "scope": "No D_n,n>=13, in any integral extension of dimension<=24 containing the common N22 frame and dual gap8/7. No entire g18/g20 exclusion."
+}

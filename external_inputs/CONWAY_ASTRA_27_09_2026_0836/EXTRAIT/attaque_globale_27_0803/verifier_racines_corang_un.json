@@ -1,0 +1,175 @@
+{
+  "scope": "Petits calculs propres associés à une preuve candidate de corang1; pas de reconstruction SRG",
+  "anisotropic_pairs": [
+    {
+      "coefficients": [
+        6,
+        6
+      ],
+      "nonzero_isotropic_vectors": 0
+    },
+    {
+      "coefficients": [
+        5,
+        6
+      ],
+      "nonzero_isotropic_vectors": 0
+    }
+  ],
+  "A6_cube_isotropic_nonzero": 48,
+  "A6_cube_all_isotropic_projection_norm": 4,
+  "rank3_class_minima": {
+    "A3": [
+      {
+        "class": 0,
+        "numerator": 0,
+        "denominator": 4
+      },
+      {
+        "class": 1,
+        "numerator": 3,
+        "denominator": 4
+      },
+      {
+        "class": 2,
+        "numerator": 4,
+        "denominator": 4
+      },
+      {
+        "class": 3,
+        "numerator": 3,
+        "denominator": 4
+      }
+    ],
+    "A2_A1": [
+      {
+        "classes": [
+          0,
+          0
+        ],
+        "numerator": 0,
+        "denominator": 6
+      },
+      {
+        "classes": [
+          0,
+          1
+        ],
+        "numerator": 3,
+        "denominator": 6
+      },
+      {
+        "classes": [
+          1,
+          0
+        ],
+        "numerator": 4,
+        "denominator": 6
+      },
+      {
+        "classes": [
+          1,
+          1
+        ],
+        "numerator": 7,
+        "denominator": 6
+      },
+      {
+        "classes": [
+          2,
+          0
+        ],
+        "numerator": 4,
+        "denominator": 6
+      },
+      {
+        "classes": [
+          2,
+          1
+        ],
+        "numerator": 7,
+        "denominator": 6
+      }
+    ],
+    "A1_cube": [
+      {
+        "mask": 1,
+        "numerator": 1,
+        "denominator": 2
+      },
+      {
+        "mask": 2,
+        "numerator": 1,
+        "denominator": 2
+      },
+      {
+        "mask": 3,
+        "numerator": 2,
+        "denominator": 2
+      },
+      {
+        "mask": 4,
+        "numerator": 1,
+        "denominator": 2
+      },
+      {
+        "mask": 5,
+        "numerator": 2,
+        "denominator": 2
+      },
+      {
+        "mask": 6,
+        "numerator": 2,
+        "denominator": 2
+      },
+      {
+        "mask": 7,
+        "numerator": 3,
+        "denominator": 2
+      }
+    ]
+  },
+  "primitive_determinant_rows": [
+    {
+      "a_prime": 0,
+      "b": 2,
+      "j": 0,
+      "status": "cyclic rank1 incompatible with elementary rank2"
+    },
+    {
+      "a_prime": 1,
+      "b": 1,
+      "j": 0,
+      "status": "candidate"
+    },
+    {
+      "a_prime": 1,
+      "b": 3,
+      "j": 1,
+      "status": "anisotropic M7, integral J order7 class"
+    },
+    {
+      "a_prime": 2,
+      "b": 0,
+      "j": 0,
+      "status": "candidate"
+    },
+    {
+      "a_prime": 2,
+      "b": 2,
+      "j": 1,
+      "status": "anisotropic M7, integral J order7 class"
+    },
+    {
+      "a_prime": 3,
+      "b": 1,
+      "j": 1,
+      "status": "candidate"
+    }
+  ],
+  "cost_bounds": [
+    "18/7+1/2=43/14>3",
+    "18/7+4/7=22/7>3",
+    "18/7+6/7=24/7>3"
+  ]
+}

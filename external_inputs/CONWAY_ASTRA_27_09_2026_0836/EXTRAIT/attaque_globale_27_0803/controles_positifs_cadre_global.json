@@ -1,0 +1,38 @@
+{
+  "exact": true,
+  "results": [
+    {
+      "vertices": 9,
+      "m": 2,
+      "r": 1,
+      "d": 3,
+      "signed_dimension": 4,
+      "root_generators_norm": 1,
+      "block_norm": 2,
+      "graph_pairs_checked": 36,
+      "polynomial": true,
+      "tight_frame": true,
+      "signed_incidence": true,
+      "seven_block_genus_not_imposed": true,
+      "norm3_integral_purity_hypothesis_applies": false,
+      "scope": "positive controls with their own parameters; no SRG99/F7/P0 asserted"
+    },
+    {
+      "vertices": 243,
+      "m": 11,
+      "r": 4,
+      "d": 9,
+      "signed_dimension": 121,
+      "root_generators_norm": 4,
+      "block_norm": 5,
+      "graph_pairs_checked": 29403,
+      "polynomial": true,
+      "tight_frame": true,
+      "signed_incidence": true,
+      "seven_block_genus_not_imposed": true,
+      "norm3_integral_purity_hypothesis_applies": false,
+      "scope": "positive controls with their own parameters; no SRG99/F7/P0 asserted"
+    }
+  ],
+  "source_sha256": "858f415967111796dd07eef21350793f1217148fe0a322eacf20065cc110fb01"
+}

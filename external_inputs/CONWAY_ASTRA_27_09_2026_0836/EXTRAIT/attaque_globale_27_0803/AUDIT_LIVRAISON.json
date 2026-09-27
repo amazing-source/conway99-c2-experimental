@@ -1,0 +1,19 @@
+{
+  "exact": true,
+  "archive": "ATTAQUE_GLOBALE_27_0803_PREUVES_CERTIFICATS.zip",
+  "archive_sha256": "e55e730bedc4ee008819647dc235873beae25aef83d908cba744af4990cfce98",
+  "entries_crc_checked": 69,
+  "files_manifest_and_source_checked": 68,
+  "manifest_sha256": "81fa2fe3a01c4a5cc536ef31f421d6b59f2040b79f73ddd9a21fc78fa8bc136a",
+  "audit_piece_hashes": [
+    {
+      "manifest": "MANIFEST_AUDIT_INDEPENDANT_0803.json",
+      "checked": 19
+    },
+    {
+      "manifest": "G18_G20_MANIFESTE_COMBINATOIRE.json",
+      "checked": 24
+    }
+  ],
+  "conclusion": "Tous les fichiers archivés sont intacts et identiques aux sources figées; les conclusions mathématiques restent partielles."
+}

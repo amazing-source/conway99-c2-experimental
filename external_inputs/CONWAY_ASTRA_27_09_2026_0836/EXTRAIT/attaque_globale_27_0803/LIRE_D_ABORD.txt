@@ -1,0 +1,10 @@
+Attaque globale du 27 septembre 2026
+
+À lire sur téléphone : BILAN_ATTAQUE_GLOBALE.md.
+Preuves seules : PREUVES_COMPLETES_ATTAQUE_GLOBALE.md.
+Tout dans un seul Markdown : DOSSIER_COMPLET_SOURCES_ET_SORTIES.md.
+Archive ZIP : textes, programmes, sorties, manifeste SHA256 et trois prérequis de cette conversation.
+
+Acquis : cadre commun g18/g20, indécomposabilité, rang des racines au plus 20, exclusions uniformes de composantes ADE.
+Non acquis : inexistence de l’involution, fermeture complète g18/g20, involution implique prisme.
+Le contrôle positif explicite montre que le genre seul ne suffit pas : le repère prescrit de 42 racines et 7 blocs reste le problème.

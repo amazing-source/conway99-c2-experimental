@@ -1,0 +1,1002 @@
+{
+  "exact": true,
+  "graphs": 9,
+  "contexts": 144,
+  "commons_rejections": 108,
+  "known_induced_prisms": 36,
+  "certificates": [
+    {
+      "B_code": 30,
+      "labelCode": 5,
+      "certificate": {
+        "six": [
+          0,
+          1,
+          6,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            7,
+            8
+          ],
+          [
+            1,
+            6,
+            9
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 30,
+      "labelCode": 6,
+      "certificate": {
+        "six": [
+          0,
+          1,
+          6,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            6,
+            9
+          ],
+          [
+            1,
+            7,
+            8
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 30,
+      "labelCode": 9,
+      "certificate": {
+        "six": [
+          0,
+          1,
+          6,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            6,
+            8
+          ],
+          [
+            1,
+            7,
+            9
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 30,
+      "labelCode": 10,
+      "certificate": {
+        "six": [
+          0,
+          1,
+          6,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            7,
+            9
+          ],
+          [
+            1,
+            6,
+            8
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 31,
+      "labelCode": 5,
+      "certificate": {
+        "six": [
+          0,
+          1,
+          6,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            7,
+            8
+          ],
+          [
+            1,
+            6,
+            9
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 31,
+      "labelCode": 6,
+      "certificate": {
+        "six": [
+          0,
+          1,
+          6,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            6,
+            9
+          ],
+          [
+            1,
+            7,
+            8
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 31,
+      "labelCode": 9,
+      "certificate": {
+        "six": [
+          0,
+          1,
+          6,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            6,
+            8
+          ],
+          [
+            1,
+            7,
+            9
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 31,
+      "labelCode": 10,
+      "certificate": {
+        "six": [
+          0,
+          1,
+          6,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            7,
+            9
+          ],
+          [
+            1,
+            6,
+            8
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 45,
+      "labelCode": 3,
+      "certificate": {
+        "six": [
+          0,
+          2,
+          5,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            7,
+            8
+          ],
+          [
+            2,
+            5,
+            9
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 45,
+      "labelCode": 6,
+      "certificate": {
+        "six": [
+          0,
+          2,
+          5,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            5,
+            9
+          ],
+          [
+            2,
+            7,
+            8
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 45,
+      "labelCode": 9,
+      "certificate": {
+        "six": [
+          0,
+          2,
+          5,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            5,
+            8
+          ],
+          [
+            2,
+            7,
+            9
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 45,
+      "labelCode": 12,
+      "certificate": {
+        "six": [
+          0,
+          2,
+          5,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            7,
+            9
+          ],
+          [
+            2,
+            5,
+            8
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 47,
+      "labelCode": 3,
+      "certificate": {
+        "six": [
+          0,
+          2,
+          5,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            7,
+            8
+          ],
+          [
+            2,
+            5,
+            9
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 47,
+      "labelCode": 6,
+      "certificate": {
+        "six": [
+          0,
+          2,
+          5,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            5,
+            9
+          ],
+          [
+            2,
+            7,
+            8
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 47,
+      "labelCode": 9,
+      "certificate": {
+        "six": [
+          0,
+          2,
+          5,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            5,
+            8
+          ],
+          [
+            2,
+            7,
+            9
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 47,
+      "labelCode": 12,
+      "certificate": {
+        "six": [
+          0,
+          2,
+          5,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            7,
+            9
+          ],
+          [
+            2,
+            5,
+            8
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 51,
+      "labelCode": 3,
+      "certificate": {
+        "six": [
+          0,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            6,
+            8
+          ],
+          [
+            3,
+            5,
+            9
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 51,
+      "labelCode": 5,
+      "certificate": {
+        "six": [
+          0,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            5,
+            8
+          ],
+          [
+            3,
+            6,
+            9
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 51,
+      "labelCode": 10,
+      "certificate": {
+        "six": [
+          0,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            5,
+            9
+          ],
+          [
+            3,
+            6,
+            8
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 51,
+      "labelCode": 12,
+      "certificate": {
+        "six": [
+          0,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            6,
+            9
+          ],
+          [
+            3,
+            5,
+            8
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 55,
+      "labelCode": 3,
+      "certificate": {
+        "six": [
+          0,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            6,
+            8
+          ],
+          [
+            3,
+            5,
+            9
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 55,
+      "labelCode": 5,
+      "certificate": {
+        "six": [
+          0,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            5,
+            8
+          ],
+          [
+            3,
+            6,
+            9
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 55,
+      "labelCode": 10,
+      "certificate": {
+        "six": [
+          0,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            5,
+            9
+          ],
+          [
+            3,
+            6,
+            8
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 55,
+      "labelCode": 12,
+      "certificate": {
+        "six": [
+          0,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            6,
+            9
+          ],
+          [
+            3,
+            5,
+            8
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 59,
+      "labelCode": 3,
+      "certificate": {
+        "six": [
+          0,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            6,
+            8
+          ],
+          [
+            3,
+            5,
+            9
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 59,
+      "labelCode": 5,
+      "certificate": {
+        "six": [
+          0,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            5,
+            8
+          ],
+          [
+            3,
+            6,
+            9
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 59,
+      "labelCode": 10,
+      "certificate": {
+        "six": [
+          0,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            5,
+            9
+          ],
+          [
+            3,
+            6,
+            8
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 59,
+      "labelCode": 12,
+      "certificate": {
+        "six": [
+          0,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            6,
+            9
+          ],
+          [
+            3,
+            5,
+            8
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 61,
+      "labelCode": 3,
+      "certificate": {
+        "six": [
+          0,
+          2,
+          5,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            7,
+            8
+          ],
+          [
+            2,
+            5,
+            9
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 61,
+      "labelCode": 6,
+      "certificate": {
+        "six": [
+          0,
+          2,
+          5,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            5,
+            9
+          ],
+          [
+            2,
+            7,
+            8
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 61,
+      "labelCode": 9,
+      "certificate": {
+        "six": [
+          0,
+          2,
+          5,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            5,
+            8
+          ],
+          [
+            2,
+            7,
+            9
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 61,
+      "labelCode": 12,
+      "certificate": {
+        "six": [
+          0,
+          2,
+          5,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            7,
+            9
+          ],
+          [
+            2,
+            5,
+            8
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 62,
+      "labelCode": 5,
+      "certificate": {
+        "six": [
+          0,
+          1,
+          6,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            7,
+            8
+          ],
+          [
+            1,
+            6,
+            9
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 62,
+      "labelCode": 6,
+      "certificate": {
+        "six": [
+          0,
+          1,
+          6,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            6,
+            9
+          ],
+          [
+            1,
+            7,
+            8
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 62,
+      "labelCode": 9,
+      "certificate": {
+        "six": [
+          0,
+          1,
+          6,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            6,
+            8
+          ],
+          [
+            1,
+            7,
+            9
+          ]
+        ],
+        "edge_count": 9
+      }
+    },
+    {
+      "B_code": 62,
+      "labelCode": 10,
+      "certificate": {
+        "six": [
+          0,
+          1,
+          6,
+          7,
+          8,
+          9
+        ],
+        "triangles": [
+          [
+            0,
+            7,
+            9
+          ],
+          [
+            1,
+            6,
+            8
+          ]
+        ],
+        "edge_count": 9
+      }
+    }
+  ],
+  "scalar_regime_categories": [
+    "0,2",
+    "0,3",
+    "1,3"
+  ],
+  "prior": [
+    {
+      "path": "G18_G20_CARRIER_LOURD_P0.mjs",
+      "sha256": "df1831d2029657e68bfbe28b6ca580e1d2a048581de7d806df6a3125646ed5fb"
+    },
+    {
+      "path": "G18_G20_CARRIER_LOURD_P0.json",
+      "sha256": "e87d9704659c321271c3828cca71c3dff0032e38e4e76a45780c330336e28e02"
+    },
+    {
+      "path": "G18_G20_LOURD_REGIMES.md",
+      "sha256": "866e69177f5d99ba8826dcc8877df3a5fac560bf2ee88e864f9f0a77780a5367"
+    }
+  ],
+  "source_sha256": "9685ed9e61647a58302ea08462a527281cef332a3dc85beda4b686bf822bfc91",
+  "scope": "Dense independent check of all degree4 external carriers under P0 and of the scalar regime possibilities. It excludes only these carriers, not the remaining heavy case or an entire involution."
+}

@@ -1,0 +1,143 @@
+{
+  "exact": true,
+  "scope": "harmonic theta normalization and a true explicit lattice counter-test, no physical graph exclusion",
+  "weighted_basis_q0_q3": [
+    [
+      "-1",
+      "-24",
+      "24",
+      "9248"
+    ],
+    [
+      "0",
+      "-1",
+      "0",
+      "300"
+    ],
+    [
+      "0",
+      "0",
+      "-1",
+      "24"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "-1"
+    ]
+  ],
+  "weighted_shadow_common4096": [
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "137438953472",
+      "0",
+      "6597069766656"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "-33554432",
+      "0",
+      "-805306368",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "8192",
+      "0",
+      "0",
+      "0",
+      "-2457600",
+      "0",
+      "33554432"
+    ],
+    [
+      "-2",
+      "0",
+      "48",
+      "0",
+      "48",
+      "0",
+      "-18496",
+      "0",
+      "393264"
+    ]
+  ],
+  "harmonic_ratio": -2,
+  "correct_operator": "(4+r/4)I - 2R",
+  "wrong_operator": "4I+R",
+  "norm3_operator": "(512+2r)I - 24R",
+  "positive": {
+    "lattice": "E8 orthogonal [D8^2+<(s,v),(v,s)>]",
+    "rank": 24,
+    "min": 2,
+    "odd": true,
+    "unimodular": true,
+    "roots": 464,
+    "characteristics8": 512,
+    "root_moment_diagonal": [
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      28,
+      28,
+      28,
+      28,
+      28,
+      28,
+      28,
+      28,
+      28,
+      28,
+      28,
+      28,
+      28,
+      28,
+      28,
+      28
+    ],
+    "shadow_moment_diagonal": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64
+    ],
+    "wrong_operator_diagonals": 24
+  },
+  "source_sha256": "e433d49e37d56efc8cdfd5554325a537918290a463b29f232e00dd8fa4bad064"
+}

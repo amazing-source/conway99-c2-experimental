@@ -1,0 +1,124 @@
+{
+  "exact": true,
+  "matching_edge_regimes": [
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "external": [
+    {
+      "difference": 4,
+      "checked": 4096,
+      "survivors": [
+        {
+          "A": 0,
+          "B": 30,
+          "degree_B": [
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "A": 0,
+          "B": 45,
+          "degree_B": [
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "A": 0,
+          "B": 51,
+          "degree_B": [
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "difference": 5,
+      "checked": 4096,
+      "survivors": [
+        {
+          "A": 0,
+          "B": 31,
+          "degree_B": [
+            3,
+            3,
+            2,
+            2
+          ]
+        },
+        {
+          "A": 0,
+          "B": 47,
+          "degree_B": [
+            3,
+            2,
+            3,
+            2
+          ]
+        },
+        {
+          "A": 0,
+          "B": 55,
+          "degree_B": [
+            3,
+            2,
+            2,
+            3
+          ]
+        },
+        {
+          "A": 0,
+          "B": 59,
+          "degree_B": [
+            2,
+            3,
+            3,
+            2
+          ]
+        },
+        {
+          "A": 0,
+          "B": 61,
+          "degree_B": [
+            2,
+            3,
+            2,
+            3
+          ]
+        },
+        {
+          "A": 0,
+          "B": 62,
+          "degree_B": [
+            2,
+            2,
+            3,
+            3
+          ]
+        }
+      ]
+    }
+  ],
+  "R3_row_checks": 84,
+  "R3_accepted_rows": 12,
+  "scope": "Necessary capacity regimes for the same norm14 heavy eigenvector. Not a graph/type completion or exclusion."
+}

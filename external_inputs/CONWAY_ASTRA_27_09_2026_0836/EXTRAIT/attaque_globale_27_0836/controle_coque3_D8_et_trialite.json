@@ -1,0 +1,181 @@
+{
+  "exact": true,
+  "scope": "Coque D8^3 complete et trialite D4 ; aucune enumeration de reperes physiques.",
+  "glue": [
+    {
+      "mask": 0,
+      "classes": [
+        0,
+        0,
+        0
+      ],
+      "min": 0,
+      "integral": true
+    },
+    {
+      "mask": 1,
+      "classes": [
+        2,
+        2,
+        0
+      ],
+      "min": 4,
+      "integral": false
+    },
+    {
+      "mask": 2,
+      "classes": [
+        0,
+        2,
+        2
+      ],
+      "min": 4,
+      "integral": false
+    },
+    {
+      "mask": 3,
+      "classes": [
+        2,
+        0,
+        2
+      ],
+      "min": 4,
+      "integral": false
+    },
+    {
+      "mask": 4,
+      "classes": [
+        1,
+        1,
+        1
+      ],
+      "min": 3,
+      "integral": true
+    },
+    {
+      "mask": 5,
+      "classes": [
+        3,
+        3,
+        1
+      ],
+      "min": 5,
+      "integral": false
+    },
+    {
+      "mask": 6,
+      "classes": [
+        1,
+        3,
+        3
+      ],
+      "min": 5,
+      "integral": false
+    },
+    {
+      "mask": 7,
+      "classes": [
+        3,
+        1,
+        3
+      ],
+      "min": 5,
+      "integral": false
+    }
+  ],
+  "root_determinant": 64,
+  "index": 8,
+  "determinant": 1,
+  "integer_sublattice_index": 4,
+  "norm3_shell_count": 4096,
+  "unsigned_triple_masks": 512,
+  "span_mod2": 22,
+  "gram_mod2_rank": 20,
+  "radical_dimension": 2,
+  "radical_ambient_masks": [
+    65535,
+    16776960
+  ],
+  "basis_mod2": [
+    3,
+    5,
+    9,
+    17,
+    33,
+    65,
+    129,
+    768,
+    1280,
+    2304,
+    4352,
+    8448,
+    16640,
+    33024,
+    196608,
+    327680,
+    589824,
+    1114112,
+    2162688,
+    4259840,
+    8454144,
+    65793
+  ],
+  "gram_rows_mod2": [
+    2097278,
+    2097277,
+    2097275,
+    2097271,
+    2097263,
+    2097247,
+    2097215,
+    2113280,
+    2113152,
+    2112896,
+    2112384,
+    2111360,
+    2109312,
+    2105216,
+    4161536,
+    4145152,
+    4112384,
+    4046848,
+    3915776,
+    3653632,
+    3129344,
+    4194303
+  ],
+  "triality": {
+    "D4_roots_tested": 24,
+    "even_spinors": 8,
+    "odd_spinors": 8,
+    "hadamard": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        -1,
+        1
+      ]
+    ],
+    "all_images_verified": true
+  },
+  "physical_root_Gram_mod2_required_rank": 22,
+  "consequence": "Aucun repere physique 42+7 dans cette enveloppe D8^3. Une composante D4 uniforme en classe est impossible pour les memes 42 u."
+}

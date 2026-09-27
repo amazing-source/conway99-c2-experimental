@@ -1,0 +1,93 @@
+{
+  "exact": true,
+  "scope": "D6^4/C4, f_A=4,f_B=2, h7 integer typeI supported in A or C, common physical normals",
+  "assumptions": [
+    "fullframe=7I24",
+    "min(N*)>=8/7",
+    "J=7I2 primitive",
+    "seven h mutually orthogonal"
+  ],
+  "all_four_centre_distributions": 1365,
+  "repeated_centre_distributions": 870,
+  "diagonal_compatible_repeated_contexts": 150,
+  "profiles": {
+    "2+2": 30,
+    "2+1+1": 120
+  },
+  "ordered_unit_support_pairs_covering_diagonal": 270,
+  "pairs_passing_root_bound": 0,
+  "local_ratio_sign_cases_checked": 64,
+  "split_profiles": [
+    {
+      "centres_B": 0,
+      "centres_D": 4,
+      "epsilon": -1,
+      "spinor_inner": -2,
+      "orthogonal": false
+    },
+    {
+      "centres_B": 0,
+      "centres_D": 4,
+      "epsilon": 1,
+      "spinor_inner": 2,
+      "orthogonal": false
+    },
+    {
+      "centres_B": 1,
+      "centres_D": 3,
+      "epsilon": -1,
+      "spinor_inner": -1,
+      "orthogonal": false
+    },
+    {
+      "centres_B": 1,
+      "centres_D": 3,
+      "epsilon": 1,
+      "spinor_inner": 1,
+      "orthogonal": false
+    },
+    {
+      "centres_B": 2,
+      "centres_D": 2,
+      "epsilon": -1,
+      "spinor_inner": 0,
+      "orthogonal": true
+    },
+    {
+      "centres_B": 2,
+      "centres_D": 2,
+      "epsilon": 1,
+      "spinor_inner": 0,
+      "orthogonal": true
+    },
+    {
+      "centres_B": 3,
+      "centres_D": 1,
+      "epsilon": -1,
+      "spinor_inner": 1,
+      "orthogonal": false
+    },
+    {
+      "centres_B": 3,
+      "centres_D": 1,
+      "epsilon": 1,
+      "spinor_inner": -1,
+      "orthogonal": false
+    },
+    {
+      "centres_B": 4,
+      "centres_D": 0,
+      "epsilon": -1,
+      "spinor_inner": 2,
+      "orthogonal": false
+    },
+    {
+      "centres_B": 4,
+      "centres_D": 0,
+      "epsilon": 1,
+      "spinor_inner": -2,
+      "orthogonal": false
+    }
+  ],
+  "conclusion": "the four centres of the AC-spinor blocks must be distinct, two in B and two in D; whole mixed regime not excluded"
+}

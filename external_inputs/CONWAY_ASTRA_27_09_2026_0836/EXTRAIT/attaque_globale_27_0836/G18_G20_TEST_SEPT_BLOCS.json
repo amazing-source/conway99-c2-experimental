@@ -1,0 +1,13 @@
+{
+  "exact": true,
+  "bitset_profiles_compared": 42,
+  "abstract_noise_profiles_ignored": 3,
+  "one_class_removal_detected": true,
+  "golden_Golay_charges_membership": true,
+  "golden_complete_shell_size": 704,
+  "golden_line_count": 352,
+  "code_sha256": "a1cf04f6f3282140a70a2f207961fb82e32c254af716869c87d917ab1a04e80c",
+  "B_sha256": "640a6ffee26828d0be66dc2f2667238b07d29dcba63de5e4814a0a143ff70576",
+  "shell_sha256": "f5878a046782bc5fd505cac914e16c12eff3e1dbc9a73a232fe20403afe92827",
+  "scope": "Source fixtures and reconstruction only; no seven-block coverage, physical49-frame or graph claimed."
+}

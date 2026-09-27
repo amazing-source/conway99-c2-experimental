@@ -1,0 +1,148 @@
+{
+  "exact": true,
+  "scope": "D8^3 glue family excluded for complete physical42+7 frame and two norm7 normals, not all U24",
+  "classes": [
+    {
+      "row": [
+        0,
+        0,
+        0
+      ],
+      "minima": 0
+    },
+    {
+      "row": [
+        1,
+        1,
+        0
+      ],
+      "minima": 4
+    },
+    {
+      "row": [
+        0,
+        1,
+        1
+      ],
+      "minima": 4
+    },
+    {
+      "row": [
+        1,
+        0,
+        1
+      ],
+      "minima": 4
+    },
+    {
+      "row": [
+        2,
+        2,
+        2
+      ],
+      "minima": 3
+    },
+    {
+      "row": [
+        3,
+        3,
+        2
+      ],
+      "minima": 5
+    },
+    {
+      "row": [
+        2,
+        3,
+        3
+      ],
+      "minima": 5
+    },
+    {
+      "row": [
+        3,
+        2,
+        3
+      ],
+      "minima": 5
+    }
+  ],
+  "glue_gram": [
+    [
+      4,
+      2,
+      1
+    ],
+    [
+      2,
+      4,
+      1
+    ],
+    [
+      1,
+      1,
+      3
+    ]
+  ],
+  "lattice_determinant": 1,
+  "integer_sublattice_index": 4,
+  "root_count": 336,
+  "shell3": 4096,
+  "shell4": 90192,
+  "noninteger_shell4": 49152,
+  "explicit_characteristics8": 384,
+  "character_checks": 65664,
+  "energy_lower_bound_with_half_block": 60,
+  "energy_available": 56,
+  "half_square_checks": [
+    {
+      "halves": [
+        0,
+        0
+      ],
+      "square_sum_mod1_numerator4": 0,
+      "integer": true
+    },
+    {
+      "halves": [
+        0,
+        1
+      ],
+      "square_sum_mod1_numerator4": 1,
+      "integer": false
+    },
+    {
+      "halves": [
+        1,
+        0
+      ],
+      "square_sum_mod1_numerator4": 1,
+      "integer": false
+    },
+    {
+      "halves": [
+        1,
+        1
+      ],
+      "square_sum_mod1_numerator4": 2,
+      "integer": false
+    }
+  ],
+  "physical_indices": [
+    {
+      "g": 18,
+      "physical_index": 343,
+      "integer_sublattice_index": 4,
+      "contradiction": true
+    },
+    {
+      "g": 20,
+      "physical_index": 49,
+      "integer_sublattice_index": 4,
+      "contradiction": true
+    }
+  ],
+  "no_P0": true,
+  "no_all_U_classification": true,
+  "source_sha256": "d0d784c3a8ca6e77e0c95edcd4e5a533ae23b4f48e44044c76b84b5c0118c756"
+}

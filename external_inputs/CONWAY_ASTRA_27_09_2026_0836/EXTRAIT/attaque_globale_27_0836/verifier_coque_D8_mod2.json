@@ -1,0 +1,13 @@
+{
+  "exact": true,
+  "scope": "D8^3 shell parity Gram and integer D7 generator coefficients; no general shell rank bound",
+  "D7_columns": 42,
+  "integer_Cz_checks": 7,
+  "parity_words": 512,
+  "coordinate_rank": 22,
+  "Gram_rank_mod2": 20,
+  "radical_dimension": 2,
+  "required_physical_Gram_rank": 22,
+  "frame_excluded": true,
+  "source_sha256": "8bab28410783cea666a88b25606a6056251791caaebe008e72a9fe5aaa593cfd"
+}

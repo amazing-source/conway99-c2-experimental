@@ -1,0 +1,161 @@
+{
+  "kind": "frozen_own_mathematical_sources_and_bounded_controls",
+  "scope": "physical frame49, explicit envelopes; no new complete local type or g18/g20 exclusion",
+  "conclusions": {
+    "generation42": true,
+    "D11_in_U_dim24_excluded": true,
+    "D6_cycle_individual_h_classification_complete": true,
+    "D6_six_spinors_one_opposite_pair_excluded": true,
+    "D6_cycle_whole_frame_excluded": false,
+    "seven_Golay_selections_exhausted": false
+  },
+  "independent_f6_report": "acquired; separate supplement, not substituted by producer control",
+  "own": [
+    {
+      "path": "G18_G20_QUARANTE_DEUX_GENERATEURS.md",
+      "bytes": 2817,
+      "sha256": "e6a5cd6936692031d14ecf566cccb71445bcf3095fa6e6c417c6b750e6d12421"
+    },
+    {
+      "path": "G18_G20_DUAL_COORDONNEES.md",
+      "bytes": 3540,
+      "sha256": "4956adbbdd388ad3fb5845cccbe52a2282d4778bd48541d6fe745cbc21253583"
+    },
+    {
+      "path": "G18_G20_D6_QUATRE.md",
+      "bytes": 6995,
+      "sha256": "93699a1ee744fe70fa155e1f7cd2821f6f253aebdcbe097ecbef296206c3bfea"
+    },
+    {
+      "path": "G18_G20_D6_QUATRE.mjs",
+      "bytes": 2510,
+      "sha256": "0a147df75a003db1d62fe95f8d8ac619394487fe95a98a08c091319eb4498c9b"
+    },
+    {
+      "path": "G18_G20_D6_QUATRE.json",
+      "bytes": 17542,
+      "sha256": "e747d9cf46a28c7981af17aa7944baeced93b21e3134eb2d49cb18bf1943014f"
+    },
+    {
+      "path": "G18_G20_D6_SIX_SPINORS.md",
+      "bytes": 6676,
+      "sha256": "d1e8a5c45e42482e5fae1d6f52cb28c59dc561913a69b7fb542d49ab4cade0cc"
+    },
+    {
+      "path": "G18_G20_D6_SIX_SPINORS.mjs",
+      "bytes": 4096,
+      "sha256": "8909171e44b561967b1ef8be0c1f3577f9e095a27f0e0f16358fa925001eca30"
+    },
+    {
+      "path": "G18_G20_D6_SIX_SPINORS.json",
+      "bytes": 6518,
+      "sha256": "9f2108673284af149c8cf925ab050f85d44ca76b8afb0461b7aba62491466ec4"
+    },
+    {
+      "path": "G18_G20_SEPT_BLOCS_CAPACITE.md",
+      "bytes": 4807,
+      "sha256": "eafa5a8153ccf6500d05a4c8a4329abfabe2d72fd586b10fd0cfb059a6732fd3"
+    },
+    {
+      "path": "G18_G20_SEPT_BLOCS_CAPACITE.mjs",
+      "bytes": 5225,
+      "sha256": "e7c0a23b778a3da7cf63e6e9784f6cb7748cea841e6b202346f69381a576af53"
+    },
+    {
+      "path": "G18_G20_TEST_SEPT_BLOCS.mjs",
+      "bytes": 2690,
+      "sha256": "f468983cd58b0acbf3b22e288c395ba67b9e7d7c00494780a8232c1f0020731c"
+    },
+    {
+      "path": "G18_G20_TEST_SEPT_BLOCS.json",
+      "bytes": 608,
+      "sha256": "40d2e4e794668fca25bcaab3b119b40755a3ca3bd49984f68054d22587b75530"
+    },
+    {
+      "path": "G18_G20_STATUTS_COMBINATOIRES0836.md",
+      "bytes": 2749,
+      "sha256": "69f1b2d2b890ec7ce34c4155a1f94dd4d97d2bcafd2be46ab118840296705d54"
+    },
+    {
+      "path": "G18_G20_MANIFESTE_COMBINATOIRE0836.mjs",
+      "bytes": 2759,
+      "sha256": "0e46b3f7eb60eb46232c75c1262f24d90b921d74d467f95d87a02919bc28521a"
+    }
+  ],
+  "prerequisites": [
+    {
+      "path": "../attaque_globale_27_0803/UNIFICATION_G18_G20_RANG24.md",
+      "bytes": 7647,
+      "sha256": "f3d1aa7908e63adf707c8cede320b5a091515ce0301487ee33b334ed785ef565"
+    },
+    {
+      "path": "../attaque_globale_27_0803/SEPT_BLOCS_CARACTERISTIQUES_ET_COLLAGE.md",
+      "bytes": 13003,
+      "sha256": "b2a115acbde3af297479c58f9a8fca339f59cf85e3287f42fd2dcdbb70f9dccc"
+    },
+    {
+      "path": "../attaque_globale_27_0803/AUDIT_COLLAGE_E8_ET_SEPT_BLOCS.md",
+      "bytes": 9027,
+      "sha256": "e03bbcab5f20605c168e2d1a1254e577ffe39a4610a316e06e44b0079c53bd7c"
+    },
+    {
+      "path": "../attaque_globale_27_0803/G18_G20_D12_COLLAGE.md",
+      "bytes": 4577,
+      "sha256": "14e1982694778879d232fdaa1b5b96db8a3321925b14cd2938c682f5fee5ee11"
+    },
+    {
+      "path": "../attaque_globale_27_0803/G18_G20_MANIFESTE_COMBINATOIRE.json",
+      "bytes": 7818,
+      "sha256": "7496e183acc9902b1f2bc052ad0947b963cae633c6e58a67301ee5a7efb4f2d0"
+    },
+    {
+      "path": "AUDIT_GENERATION42_ET_COQUE_ENTIERE.md",
+      "bytes": 3440,
+      "sha256": "0546400d993fcd659a531f5f99065d58b5806a245b067ee2f4b0dac5837e4954"
+    },
+    {
+      "path": "AUDIT_D11_ET_LIMITE_COQUE.md",
+      "bytes": 3328,
+      "sha256": "185fb4ae8216e0cab721a533bf5d8e3ee6db00c81df398b4abbef2ec44f4cfb5"
+    },
+    {
+      "path": "verifier_D11_et_coque_D6.mjs",
+      "bytes": 3559,
+      "sha256": "8acc2fe7b3f9c6ed0f5c61f5f373dbcf1559b80650cef6d659cd58b12630ed8a"
+    },
+    {
+      "path": "verifier_D11_et_coque_D6.json",
+      "bytes": 2519,
+      "sha256": "dcadba627dda22ae7d43f6368e287a3715dcadb89c170726c2c2bb0977aa2339"
+    },
+    {
+      "path": "AUDIT_D6_SIX_FRACTIONNAIRES_MEME_PAIRE.md",
+      "bytes": 6249,
+      "sha256": "efca00c61ec1647e597715f360528ef8de56123e1bac8faa4304f55073d836ca"
+    },
+    {
+      "path": "verifier_D6_fA6_independant.mjs",
+      "bytes": 3385,
+      "sha256": "56642c70cb7ed0daba25f4784b1d2dde98d8e16940b4e56a5ab73d93cdb76bdb"
+    },
+    {
+      "path": "verifier_D6_fA6_independant.json",
+      "bytes": 8189,
+      "sha256": "54c6abdefceb0aea2da06ec66b9b5409658c052eb6dc55879bc6e027aaaa8ec7"
+    }
+  ],
+  "checks": [
+    {
+      "path": "G18_G20_D6_QUATRE.json",
+      "exact": true
+    },
+    {
+      "path": "G18_G20_D6_SIX_SPINORS.json",
+      "exact": true
+    },
+    {
+      "path": "G18_G20_TEST_SEPT_BLOCS.json",
+      "exact": true
+    }
+  ]
+}

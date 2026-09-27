@@ -1,0 +1,869 @@
+{
+  "exact": true,
+  "scope": "Lemme sept appuis de rang binaire <=4 et paire de normales fixe 0803. Aucun balayage de septuplets.",
+  "quotient_classes": 7,
+  "multiplicity_bound": 3,
+  "multisets_with_odd_xor_zero": 148,
+  "odd_support_cardinalities": {
+    "3": 147,
+    "7": 1
+  },
+  "multiplicity_profiles": {
+    "3,2,1,1": 84,
+    "3,3,1": 21,
+    "2,2,1,1,1": 42,
+    "1,1,1,1,1,1,1": 1
+  },
+  "polarities_tested": 128,
+  "admissible_polarities": 56,
+  "polarities": [
+    {
+      "mask": 1,
+      "multiplicities": [
+        8,
+        4,
+        0,
+        4,
+        0,
+        4,
+        0,
+        4
+      ],
+      "octad_index_of_A": 0
+    },
+    {
+      "mask": 2,
+      "multiplicities": [
+        8,
+        0,
+        4,
+        4,
+        0,
+        0,
+        4,
+        4
+      ],
+      "octad_index_of_A": 1
+    },
+    {
+      "mask": 4,
+      "multiplicities": [
+        8,
+        4,
+        4,
+        0,
+        0,
+        4,
+        4,
+        0
+      ],
+      "octad_index_of_A": 2
+    },
+    {
+      "mask": 8,
+      "multiplicities": [
+        8,
+        0,
+        0,
+        0,
+        4,
+        4,
+        4,
+        4
+      ],
+      "octad_index_of_A": 3
+    },
+    {
+      "mask": 11,
+      "multiplicities": [
+        4,
+        0,
+        0,
+        4,
+        0,
+        4,
+        4,
+        8
+      ],
+      "octad_index_of_A": 6
+    },
+    {
+      "mask": 13,
+      "multiplicities": [
+        4,
+        4,
+        0,
+        0,
+        0,
+        8,
+        4,
+        4
+      ],
+      "octad_index_of_A": 5
+    },
+    {
+      "mask": 14,
+      "multiplicities": [
+        4,
+        0,
+        4,
+        0,
+        0,
+        4,
+        8,
+        4
+      ],
+      "octad_index_of_A": 4
+    },
+    {
+      "mask": 16,
+      "multiplicities": [
+        8,
+        4,
+        0,
+        4,
+        4,
+        0,
+        4,
+        0
+      ],
+      "octad_index_of_A": 4
+    },
+    {
+      "mask": 19,
+      "multiplicities": [
+        4,
+        4,
+        0,
+        8,
+        0,
+        0,
+        4,
+        4
+      ],
+      "octad_index_of_A": 5
+    },
+    {
+      "mask": 21,
+      "multiplicities": [
+        4,
+        8,
+        0,
+        4,
+        0,
+        4,
+        4,
+        0
+      ],
+      "octad_index_of_A": 6
+    },
+    {
+      "mask": 22,
+      "multiplicities": [
+        4,
+        4,
+        4,
+        4,
+        0,
+        0,
+        8,
+        0
+      ],
+      "octad_index_of_A": 3
+    },
+    {
+      "mask": 26,
+      "multiplicities": [
+        4,
+        0,
+        0,
+        4,
+        4,
+        0,
+        8,
+        4
+      ],
+      "octad_index_of_A": 2
+    },
+    {
+      "mask": 28,
+      "multiplicities": [
+        4,
+        4,
+        0,
+        0,
+        4,
+        4,
+        8,
+        0
+      ],
+      "octad_index_of_A": 1
+    },
+    {
+      "mask": 31,
+      "multiplicities": [
+        0,
+        4,
+        0,
+        4,
+        0,
+        4,
+        8,
+        4
+      ],
+      "octad_index_of_A": 0
+    },
+    {
+      "mask": 32,
+      "multiplicities": [
+        8,
+        0,
+        4,
+        4,
+        4,
+        4,
+        0,
+        0
+      ],
+      "octad_index_of_A": 5
+    },
+    {
+      "mask": 35,
+      "multiplicities": [
+        4,
+        0,
+        4,
+        8,
+        0,
+        4,
+        0,
+        4
+      ],
+      "octad_index_of_A": 4
+    },
+    {
+      "mask": 37,
+      "multiplicities": [
+        4,
+        4,
+        4,
+        4,
+        0,
+        8,
+        0,
+        0
+      ],
+      "octad_index_of_A": 3
+    },
+    {
+      "mask": 38,
+      "multiplicities": [
+        4,
+        0,
+        8,
+        4,
+        0,
+        4,
+        4,
+        0
+      ],
+      "octad_index_of_A": 6
+    },
+    {
+      "mask": 41,
+      "multiplicities": [
+        4,
+        0,
+        0,
+        4,
+        4,
+        8,
+        0,
+        4
+      ],
+      "octad_index_of_A": 2
+    },
+    {
+      "mask": 44,
+      "multiplicities": [
+        4,
+        0,
+        4,
+        0,
+        4,
+        8,
+        4,
+        0
+      ],
+      "octad_index_of_A": 0
+    },
+    {
+      "mask": 47,
+      "multiplicities": [
+        0,
+        0,
+        4,
+        4,
+        0,
+        8,
+        4,
+        4
+      ],
+      "octad_index_of_A": 1
+    },
+    {
+      "mask": 49,
+      "multiplicities": [
+        4,
+        4,
+        0,
+        8,
+        4,
+        4,
+        0,
+        0
+      ],
+      "octad_index_of_A": 1
+    },
+    {
+      "mask": 50,
+      "multiplicities": [
+        4,
+        0,
+        4,
+        8,
+        4,
+        0,
+        4,
+        0
+      ],
+      "octad_index_of_A": 0
+    },
+    {
+      "mask": 55,
+      "multiplicities": [
+        0,
+        4,
+        4,
+        8,
+        0,
+        4,
+        4,
+        0
+      ],
+      "octad_index_of_A": 2
+    },
+    {
+      "mask": 56,
+      "multiplicities": [
+        4,
+        0,
+        0,
+        4,
+        8,
+        4,
+        4,
+        0
+      ],
+      "octad_index_of_A": 6
+    },
+    {
+      "mask": 59,
+      "multiplicities": [
+        0,
+        0,
+        0,
+        8,
+        4,
+        4,
+        4,
+        4
+      ],
+      "octad_index_of_A": 3
+    },
+    {
+      "mask": 61,
+      "multiplicities": [
+        0,
+        4,
+        0,
+        4,
+        4,
+        8,
+        4,
+        0
+      ],
+      "octad_index_of_A": 4
+    },
+    {
+      "mask": 62,
+      "multiplicities": [
+        0,
+        0,
+        4,
+        4,
+        4,
+        4,
+        8,
+        0
+      ],
+      "octad_index_of_A": 5
+    },
+    {
+      "mask": 64,
+      "multiplicities": [
+        8,
+        4,
+        4,
+        0,
+        4,
+        0,
+        0,
+        4
+      ],
+      "octad_index_of_A": 6
+    },
+    {
+      "mask": 67,
+      "multiplicities": [
+        4,
+        4,
+        4,
+        4,
+        0,
+        0,
+        0,
+        8
+      ],
+      "octad_index_of_A": 3
+    },
+    {
+      "mask": 69,
+      "multiplicities": [
+        4,
+        8,
+        4,
+        0,
+        0,
+        4,
+        0,
+        4
+      ],
+      "octad_index_of_A": 4
+    },
+    {
+      "mask": 70,
+      "multiplicities": [
+        4,
+        4,
+        8,
+        0,
+        0,
+        0,
+        4,
+        4
+      ],
+      "octad_index_of_A": 5
+    },
+    {
+      "mask": 73,
+      "multiplicities": [
+        4,
+        4,
+        0,
+        0,
+        4,
+        4,
+        0,
+        8
+      ],
+      "octad_index_of_A": 1
+    },
+    {
+      "mask": 74,
+      "multiplicities": [
+        4,
+        0,
+        4,
+        0,
+        4,
+        0,
+        4,
+        8
+      ],
+      "octad_index_of_A": 0
+    },
+    {
+      "mask": 79,
+      "multiplicities": [
+        0,
+        4,
+        4,
+        0,
+        0,
+        4,
+        4,
+        8
+      ],
+      "octad_index_of_A": 2
+    },
+    {
+      "mask": 81,
+      "multiplicities": [
+        4,
+        8,
+        0,
+        4,
+        4,
+        0,
+        0,
+        4
+      ],
+      "octad_index_of_A": 2
+    },
+    {
+      "mask": 84,
+      "multiplicities": [
+        4,
+        8,
+        4,
+        0,
+        4,
+        0,
+        4,
+        0
+      ],
+      "octad_index_of_A": 0
+    },
+    {
+      "mask": 87,
+      "multiplicities": [
+        0,
+        8,
+        4,
+        4,
+        0,
+        0,
+        4,
+        4
+      ],
+      "octad_index_of_A": 1
+    },
+    {
+      "mask": 88,
+      "multiplicities": [
+        4,
+        4,
+        0,
+        0,
+        8,
+        0,
+        4,
+        4
+      ],
+      "octad_index_of_A": 5
+    },
+    {
+      "mask": 91,
+      "multiplicities": [
+        0,
+        4,
+        0,
+        4,
+        4,
+        0,
+        4,
+        8
+      ],
+      "octad_index_of_A": 4
+    },
+    {
+      "mask": 93,
+      "multiplicities": [
+        0,
+        8,
+        0,
+        0,
+        4,
+        4,
+        4,
+        4
+      ],
+      "octad_index_of_A": 3
+    },
+    {
+      "mask": 94,
+      "multiplicities": [
+        0,
+        4,
+        4,
+        0,
+        4,
+        0,
+        8,
+        4
+      ],
+      "octad_index_of_A": 6
+    },
+    {
+      "mask": 98,
+      "multiplicities": [
+        4,
+        0,
+        8,
+        4,
+        4,
+        0,
+        0,
+        4
+      ],
+      "octad_index_of_A": 2
+    },
+    {
+      "mask": 100,
+      "multiplicities": [
+        4,
+        4,
+        8,
+        0,
+        4,
+        4,
+        0,
+        0
+      ],
+      "octad_index_of_A": 1
+    },
+    {
+      "mask": 103,
+      "multiplicities": [
+        0,
+        4,
+        8,
+        4,
+        0,
+        4,
+        0,
+        4
+      ],
+      "octad_index_of_A": 0
+    },
+    {
+      "mask": 104,
+      "multiplicities": [
+        4,
+        0,
+        4,
+        0,
+        8,
+        4,
+        0,
+        4
+      ],
+      "octad_index_of_A": 4
+    },
+    {
+      "mask": 107,
+      "multiplicities": [
+        0,
+        0,
+        4,
+        4,
+        4,
+        4,
+        0,
+        8
+      ],
+      "octad_index_of_A": 5
+    },
+    {
+      "mask": 109,
+      "multiplicities": [
+        0,
+        4,
+        4,
+        0,
+        4,
+        8,
+        0,
+        4
+      ],
+      "octad_index_of_A": 6
+    },
+    {
+      "mask": 110,
+      "multiplicities": [
+        0,
+        0,
+        8,
+        0,
+        4,
+        4,
+        4,
+        4
+      ],
+      "octad_index_of_A": 3
+    },
+    {
+      "mask": 112,
+      "multiplicities": [
+        4,
+        4,
+        4,
+        4,
+        8,
+        0,
+        0,
+        0
+      ],
+      "octad_index_of_A": 3
+    },
+    {
+      "mask": 115,
+      "multiplicities": [
+        0,
+        4,
+        4,
+        8,
+        4,
+        0,
+        0,
+        4
+      ],
+      "octad_index_of_A": 6
+    },
+    {
+      "mask": 117,
+      "multiplicities": [
+        0,
+        8,
+        4,
+        4,
+        4,
+        4,
+        0,
+        0
+      ],
+      "octad_index_of_A": 5
+    },
+    {
+      "mask": 118,
+      "multiplicities": [
+        0,
+        4,
+        8,
+        4,
+        4,
+        0,
+        4,
+        0
+      ],
+      "octad_index_of_A": 4
+    },
+    {
+      "mask": 121,
+      "multiplicities": [
+        0,
+        4,
+        0,
+        4,
+        8,
+        4,
+        0,
+        4
+      ],
+      "octad_index_of_A": 0
+    },
+    {
+      "mask": 122,
+      "multiplicities": [
+        0,
+        0,
+        4,
+        4,
+        8,
+        0,
+        4,
+        4
+      ],
+      "octad_index_of_A": 1
+    },
+    {
+      "mask": 124,
+      "multiplicities": [
+        0,
+        4,
+        4,
+        0,
+        8,
+        4,
+        4,
+        0
+      ],
+      "octad_index_of_A": 2
+    }
+  ],
+  "binary_generator_exponents": [
+    0,
+    1,
+    5,
+    6,
+    7,
+    9,
+    11
+  ],
+  "generators": [
+    8391395,
+    8394182,
+    8399756,
+    8410904,
+    8433200,
+    8477792,
+    8566976,
+    8745344,
+    9102080,
+    9815552,
+    11242496,
+    14096384
+  ],
+  "code_weight_histogram": {
+    "0": 1,
+    "8": 759,
+    "12": 2576,
+    "16": 759,
+    "24": 1
+  },
+  "large_coefficient_support": {
+    "D1": [
+      0,
+      1,
+      2,
+      9
+    ],
+    "D2": [
+      3,
+      4,
+      13,
+      15
+    ],
+    "mask": 41503,
+    "in_code": false,
+    "syndrome": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0
+    ],
+    "offending_generator_index": 0,
+    "offending_generator_mask": 8391395
+  },
+  "physical_seven_support_minimum_binary_rank_for_this_pair": 5,
+  "remaining_scope": "Support ranks 5,6,7 and other normal pairs are not excluded."
+}

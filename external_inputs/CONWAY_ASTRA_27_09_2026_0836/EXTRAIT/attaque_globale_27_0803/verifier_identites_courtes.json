@@ -1,0 +1,189 @@
+{
+  "exact": true,
+  "localPolynomialChecks": 245,
+  "global_M_parity_cases": 211,
+  "seven_coefficient_relations_Gram": 21,
+  "seven_image_columns_standard_Gram": 28,
+  "mod7_coincidence": true,
+  "heavyNorm14": [
+    {
+      "heavy": 2,
+      "negative_vertices": 8,
+      "min_negative_neighbors": 6,
+      "min_common": 4
+    },
+    {
+      "heavy": 3,
+      "negative_vertices": 5,
+      "min_negative_neighbors": 5,
+      "min_common": 5
+    }
+  ],
+  "pairLoads": [
+    {
+      "coefficients": [
+        1,
+        1
+      ],
+      "loads": [
+        2,
+        0
+      ]
+    },
+    {
+      "coefficients": [
+        1,
+        -1
+      ],
+      "loads": [
+        0,
+        2
+      ]
+    },
+    {
+      "coefficients": [
+        -1,
+        1
+      ],
+      "loads": [
+        0,
+        -2
+      ]
+    },
+    {
+      "coefficients": [
+        -1,
+        -1
+      ],
+      "loads": [
+        -2,
+        0
+      ]
+    }
+  ],
+  "characteristic10Profiles": [
+    {
+      "root_abs3": 0,
+      "root_abs5": 0,
+      "block_half_abs2": 0,
+      "block_half_abs1": 7
+    },
+    {
+      "root_abs3": 0,
+      "root_abs5": 0,
+      "block_half_abs2": 1,
+      "block_half_abs1": 3
+    },
+    {
+      "root_abs3": 0,
+      "root_abs5": 1,
+      "block_half_abs2": 0,
+      "block_half_abs1": 1
+    },
+    {
+      "root_abs3": 1,
+      "root_abs5": 0,
+      "block_half_abs2": 0,
+      "block_half_abs1": 5
+    },
+    {
+      "root_abs3": 1,
+      "root_abs5": 0,
+      "block_half_abs2": 1,
+      "block_half_abs1": 1
+    },
+    {
+      "root_abs3": 2,
+      "root_abs5": 0,
+      "block_half_abs2": 0,
+      "block_half_abs1": 3
+    },
+    {
+      "root_abs3": 3,
+      "root_abs5": 0,
+      "block_half_abs2": 0,
+      "block_half_abs1": 1
+    }
+  ],
+  "Hamming_H2_control": {
+    "graph_vertices": 9,
+    "degree": 4,
+    "r": 1,
+    "d": 3,
+    "S": [
+      [
+        -1,
+        0,
+        1,
+        -1
+      ],
+      [
+        0,
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        -1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "H": [
+      [
+        2,
+        0,
+        -1,
+        1
+      ],
+      [
+        0,
+        2,
+        -1,
+        -1
+      ],
+      [
+        -1,
+        -1,
+        1,
+        0
+      ],
+      [
+        1,
+        -1,
+        0,
+        1
+      ]
+    ],
+    "norm1_generator": 2,
+    "coefficient_vector": [
+      -1,
+      -1,
+      1,
+      0
+    ],
+    "P": [
+      2,
+      6,
+      4
+    ],
+    "Q": [
+      1,
+      3,
+      8
+    ],
+    "external_common_pairs": 3,
+    "norm1_NOT_rejected": true
+  },
+  "frozen_BvLS_positive_control_sha256": "d217f73bf0105226cedd73a702bb02b08d72338b27b6e0658b5e87e0bca8fb40",
+  "positive_scope": "H2 is rebuilt directly. BvLS integer/p3 control remains acquired and frozen, not rerun or assigned SRG99 constants.",
+  "source_sha256": "27ea92438164861646f0c6dec2aa4f74bb8588084d2c2b6af019f3a536c1c660",
+  "scope": "Checks polynomial/parity/coefficient identities and a true small positive graph. The norm1 impossibility for SRG99 is a human proof, not a finite catalogue sweep."
+}

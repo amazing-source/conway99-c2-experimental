@@ -1,0 +1,164 @@
+{
+  "exact": true,
+  "stats": {
+    "distributions": 1365,
+    "distributions_with_repeat": 870,
+    "diagonal_surviving_distributions": 405,
+    "diagonal_surviving_repeated_distributions": 150,
+    "normal_support_pairs_before_root_cut": 900,
+    "repeated_normal_support_pairs": 270,
+    "minimum_common_axes_for_repeated": 3
+  },
+  "examples": [
+    {
+      "centre_multiplicities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2
+      ],
+      "unit_component": "D",
+      "s1": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "s2": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "common_axes": 4
+    },
+    {
+      "centre_multiplicities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2
+      ],
+      "unit_component": "D",
+      "s1": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "s2": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "common_axes": 3
+    }
+  ],
+  "hypothesis": "Four h have spinors on AC, two on BD, and h7 is integral and supported on AC; full physical frame and common normal root-dual bound.",
+  "conclusion": "The four centres of the AC spinor blocks must be distinct and split as two in B and two in D. The mixed regime is not wholly refuted.",
+  "orthogonality_corollary": {
+    "local_cases": 64,
+    "split_checks": [
+      {
+        "centres_B": 0,
+        "centres_D": 4,
+        "epsilon": -1,
+        "spinor_inner": -2,
+        "orthogonal": false
+      },
+      {
+        "centres_B": 0,
+        "centres_D": 4,
+        "epsilon": 1,
+        "spinor_inner": 2,
+        "orthogonal": false
+      },
+      {
+        "centres_B": 1,
+        "centres_D": 3,
+        "epsilon": -1,
+        "spinor_inner": -1,
+        "orthogonal": false
+      },
+      {
+        "centres_B": 1,
+        "centres_D": 3,
+        "epsilon": 1,
+        "spinor_inner": 1,
+        "orthogonal": false
+      },
+      {
+        "centres_B": 2,
+        "centres_D": 2,
+        "epsilon": -1,
+        "spinor_inner": 0,
+        "orthogonal": true
+      },
+      {
+        "centres_B": 2,
+        "centres_D": 2,
+        "epsilon": 1,
+        "spinor_inner": 0,
+        "orthogonal": true
+      },
+      {
+        "centres_B": 3,
+        "centres_D": 1,
+        "epsilon": -1,
+        "spinor_inner": 1,
+        "orthogonal": false
+      },
+      {
+        "centres_B": 3,
+        "centres_D": 1,
+        "epsilon": 1,
+        "spinor_inner": -1,
+        "orthogonal": false
+      },
+      {
+        "centres_B": 4,
+        "centres_D": 0,
+        "epsilon": -1,
+        "spinor_inner": 2,
+        "orthogonal": false
+      },
+      {
+        "centres_B": 4,
+        "centres_D": 0,
+        "epsilon": 1,
+        "spinor_inner": -2,
+        "orthogonal": false
+      }
+    ],
+    "only_split": [
+      2,
+      2
+    ]
+  },
+  "source_sha256": "96e995fc9f3f367ace1ea239aa2415a5b68f48e31beac6af57774e368efcfdd4"
+}

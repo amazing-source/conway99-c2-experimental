@@ -1,0 +1,48 @@
+{
+  "exact": true,
+  "method": "Orthogonal subspace enumeration, then direct integer Q expansion on two existing fixtures.",
+  "binary_space_stages": [
+    {
+      "dimension": 2,
+      "spaces": 63
+    },
+    {
+      "dimension": 3,
+      "spaces": 315
+    },
+    {
+      "dimension": 4,
+      "spaces": 135
+    }
+  ],
+  "D6_selfdual_codes": {
+    "even": 30,
+    "odd_with_loop": 45,
+    "odd_two_double_edges": 12,
+    "odd_cycle4": 48
+  },
+  "Q42_witnesses": [
+    {
+      "key": "witness_wrong_xor",
+      "Q_integral": false,
+      "xor_condition": false,
+      "checksum": 0,
+      "dodecads": 17
+    },
+    {
+      "key": "witness_correct_xor_wrong_Q_rows",
+      "Q_integral": true,
+      "xor_condition": true,
+      "checksum": 8,
+      "dodecads": 18,
+      "singleMask": 7218972,
+      "singleInCode": false,
+      "syndromes": 288,
+      "shadowMask": 9558243,
+      "shadowSumMod8": 4
+    }
+  ],
+  "input_sha256": "3f7d688f1fdad4795b1e85fef2dd59f81027a6d8d5af85b9cda21833bafd774f",
+  "source_sha256": "0e80c70704eb3831d0798e5f92135a22b5c8df9dcc028ffa5f4668cee0dc0551",
+  "scope": "Classification of odd integral D6^4 ambient glue and congruences of two fixed selections; no physical frame existence or whole-g18/g20 exclusion."
+}

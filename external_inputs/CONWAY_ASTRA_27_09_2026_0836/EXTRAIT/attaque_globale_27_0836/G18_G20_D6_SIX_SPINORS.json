@@ -1,0 +1,483 @@
+{
+  "exact": true,
+  "scope": "D6^4/C4, same physical frame49+two primitive normals; f_A=6 only",
+  "assumptions": [
+    "fullframe=7I24",
+    "min(N*)>=8/7",
+    "J=7I2 primitive",
+    "seven h mutually orthogonal"
+  ],
+  "centre_distributions_checked": 1716,
+  "characteristic_capacity_passed": 569,
+  "exact_characteristic_capacity_passed": 16,
+  "distributions_with_one_relaxed_normal": 16,
+  "relaxed_two_normal_pairs": 0,
+  "common_four_axis_signed_pairs_checked": 256,
+  "one_normal_cases": [
+    {
+      "mB": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mD": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        2
+      ],
+      "normal_options": [
+        {
+          "unit_component": "D",
+          "support": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "mB": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mD": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        2
+      ],
+      "normal_options": [
+        {
+          "unit_component": "D",
+          "support": [
+            0,
+            1,
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "mB": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mD": [
+        0,
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      "normal_options": [
+        {
+          "unit_component": "D",
+          "support": [
+            0,
+            1,
+            2,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "mB": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mD": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      "normal_options": [
+        {
+          "unit_component": "D",
+          "support": [
+            0,
+            1,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "mB": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mD": [
+        0,
+        0,
+        2,
+        0,
+        2,
+        0
+      ],
+      "normal_options": [
+        {
+          "unit_component": "D",
+          "support": [
+            0,
+            1,
+            3,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "mB": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mD": [
+        0,
+        0,
+        2,
+        2,
+        0,
+        0
+      ],
+      "normal_options": [
+        {
+          "unit_component": "D",
+          "support": [
+            0,
+            1,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "mB": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mD": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        2
+      ],
+      "normal_options": [
+        {
+          "unit_component": "D",
+          "support": [
+            0,
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "mB": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mD": [
+        0,
+        2,
+        0,
+        0,
+        2,
+        0
+      ],
+      "normal_options": [
+        {
+          "unit_component": "D",
+          "support": [
+            0,
+            2,
+            3,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "mB": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mD": [
+        0,
+        2,
+        0,
+        2,
+        0,
+        0
+      ],
+      "normal_options": [
+        {
+          "unit_component": "D",
+          "support": [
+            0,
+            2,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "mB": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mD": [
+        0,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "normal_options": [
+        {
+          "unit_component": "D",
+          "support": [
+            0,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "mB": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mD": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "normal_options": [
+        {
+          "unit_component": "D",
+          "support": [
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "mB": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mD": [
+        2,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "normal_options": [
+        {
+          "unit_component": "D",
+          "support": [
+            1,
+            2,
+            3,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "mB": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mD": [
+        2,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "normal_options": [
+        {
+          "unit_component": "D",
+          "support": [
+            1,
+            2,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "mB": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mD": [
+        2,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "normal_options": [
+        {
+          "unit_component": "D",
+          "support": [
+            1,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "mB": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mD": [
+        2,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "normal_options": [
+        {
+          "unit_component": "D",
+          "support": [
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "mB": [
+        3,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mD": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "normal_options": [
+        {
+          "unit_component": "B",
+          "support": [
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusion": "f_A=6 impossible; symmetric f_B=6 impossible; no global g18/g20 exclusion"
+}
