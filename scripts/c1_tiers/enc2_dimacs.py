@@ -1,7 +1,7 @@
 """C2: DIMACS export of structures' SECOND encoding (sat_local2.py, iota-pairs) for record i of a C1 types file, with C1's
 lex-leader under Stab_B6(mu, tau) (prefix 6).  Both encodings index far roots and non-mu pairs identically (checked), and every
 other variable is determined by x, so the symmetry breaking on x is sound here too.
-Usage: python enc2_dimacs.py TYPES.json I OUTDIR [--cuts] [--digon] [--path] [--sec] [--twist] [--ident=k] [--balance] [--beta[=all|zero]] [--nolex] [--out=FILE]      writes OUTDIR/type_%04d_enc2.cnf
+Usage: python enc2_dimacs.py TYPES.json I OUTDIR [--cuts] [--digon] [--path] [--sec] [--twist] [--ident=k] [--balance] [--beta[=all|zero]] [--betadis=v1,v2,...] [--nolex] [--out=FILE]      writes OUTDIR/type_%04d_enc2.cnf
 --cuts: structures' lemma cuts (NOTE_S29 s.9; sat_local2.encode(cuts=True)), named in the CNF comment"""
 import sys, os, json, itertools, time
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -15,10 +15,14 @@ cuts = '--cuts' in sys.argv; digon = '--digon' in sys.argv; path = '--path' in s
 ident = next((int(a.split('=')[1]) if '=' in a else 0 for a in sys.argv if a.startswith('--ident')), None); nolex = '--nolex' in sys.argv
 balance = '--balance' in sys.argv; beta = next(((a.split('=')[1] if '=' in a else 'card') for a in sys.argv if a.startswith('--beta')), None)
 outo = next((a.split('=', 1)[1] for a in sys.argv if a.startswith('--out=')), None)
+betadis = next(([int(t) for t in a.split('=', 1)[1].split(',') if t != ''] for a in sys.argv if a.startswith('--betadis=')), None)
 cnf, pool, far, edges = encode(rec['mu'], rec['tau'], (), cuts=cuts, digon=digon, path=path, sec=sec, twist=twist, **({'ident': ident} if ident is not None else {}), **({'balance': True} if balance else {}), **({'beta': beta} if beta else {}))
+if betadis is not None:                                          # beta CUBE (C1): fix beta_v for every non-pivot label (1 = dis)
+    npl = [v for v in range(12) if rec['mu'][v] != rec['tau'][v]]
+    for v in npl: cnf.append([pool.id(('beta', v)) if v in betadis else -pool.id(('beta', v))])
 G = stabiliser(rec['mu'], rec['tau']); cnt = itertools.count()
 if len(G) > 1 and not nolex:
     cnf.extend(lexleader_clauses(rec['mu'], lambda z, e: pool.id(('x', z, e)), lambda: pool.id(('lex', next(cnt))), prefix_roots=6, G=G))
 os.makedirs(od, exist_ok=True); path = outo if outo else os.path.join(od, 'type_%04d_enc2%s.cnf' % (i, ('c' if cuts else '') + ('d' if digon else '') + ('p' if path else '') + ('s' if sec else '') + ('t' if twist else '') + ('i' if ident is not None else '') + ('b' if balance else '') + (('_beta' + beta) if beta else '') + ('_nolex' if nolex else '')))
-cnf.to_file(path, comments=['c C2 enc2_dimacs (structures sat_local2' + (' + lemma cuts NOTE_S29 s.9' if cuts else '') + (' + DIGON balance (C1)' if digon else '') + (' + PATH excess (C1)' if path else '') + (' + SEC (structures; valid only without dis squares)' if sec else '') + (' + TWIST identity (C1)' if twist else '') + (' + IDENT (C1, slack <= %d)' % ident if ident is not None else '') + (' + BALANCE (note 23 s.8)' if balance else '') + ((' + BETA %s (SEC/SEC-dis per label, C1 Lemma 1)' % beta) if beta else '') + ('' if nolex else ' + C1 lex-leader') + ') type %d mu %s tau %s |Stab| %d prefix 6' % (i, rec['mu'], rec['tau'], len(G))])
+cnf.to_file(path, comments=['c C2 enc2_dimacs (structures sat_local2' + (' + lemma cuts NOTE_S29 s.9' if cuts else '') + (' + DIGON balance (C1)' if digon else '') + (' + PATH excess (C1)' if path else '') + (' + SEC (structures; valid only without dis squares)' if sec else '') + (' + TWIST identity (C1)' if twist else '') + (' + IDENT (C1, slack <= %d)' % ident if ident is not None else '') + (' + BALANCE (note 23 s.8)' if balance else '') + ((' + BETA %s (SEC/SEC-dis per label, C1 Lemma 1)' % beta) if beta else '') + ((' + BETA CUBE dis=%s' % betadis) if betadis is not None else '') + ('' if nolex else ' + C1 lex-leader') + ') type %d mu %s tau %s |Stab| %d prefix 6' % (i, rec['mu'], rec['tau'], len(G))])
 print('%d %s |Stab|=%d vars=%d clauses=%d DIMACS %s (%.0fs)' % (i, rec.get('anch_tw'), len(G), pool.top, len(cnf.clauses), path, time.time() - t0))

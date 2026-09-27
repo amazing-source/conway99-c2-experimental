@@ -86,3 +86,22 @@ La ligne d'arrivée ci-dessous est une liste FINIE et UNIFORME d'instances. Prop
   - En parallèle : la couche signée du PL et le 7-adique (C1).
 - **Outil de symétrie déclarable** (structures, `spec_local.py`, 3dfa451) : spec compilée octet pour octet, invariance vérifiée
   sous les générateurs de Stab, LEX régénéré. Il servira pour les types de (A) restés inconnus sans lex.
+
+## 8. Ligne d'arrivée (C) : les enveloppes réseaux (dossier Sol/Astra du 27/09, relu par structures)
+- **Source.** external_inputs/CONWAY_ASTRA_27_09_2026_0836 (commit f2198e8 ; sha256 de l'archive 24e72e95…da0a).
+- **Cadre (relu par structures : « tout tient »).**
+  - Le réseau physique N est de rang 22, avec det N = 7^(22−g) et min N* ≥ 8/7. Γ₄₂ = N (identité (G)).
+  - Discriminant non scindé : il découle de notre Théorème B′ (N = √7·K₋*, det U₀ ≡ det U₁ ≡ (−1)^{g/2}).
+  - Donc une ENVELOPPE U existe à g = 18 comme à g = 20 : impaire, unimodulaire, de rang 24, min ≥ 2, contenant N ⊥ 7I₂
+    d'indice 49 ou 343. Elle porte le repère (F) : 42 u de norme 3, 7 h de norme 4, 2 normales de norme 7,
+    Σu⊗u + Σh⊗h + Σy⊗y = 7I₂₄.
+- **Ligne (C).** Aucune U de la liste FINIE (classification de Borcherds : rang 24, impaire, sans vecteur de norme 1) ne porte le
+  repère ⟹ pas d'involution, globalement : (A), (B), Σ et dis tombent d'un coup.
+- **Déjà exclu par le dossier** (à relire en détail par C1) : la famille D8³, les composantes D≥11, la strate D6⁴ (6,0) avec les
+  coupes 4+2, D4⁶ en partie, et le cas sans racines (qui force un code [24,12,8]).
+- **Répartition.**
+  - C1 : la liste explicite des enveloppes et leur statut.
+  - structures : une recherche finie du repère par enveloppe (SAT/CP) et les contrôles positifs.
+  - C2 : le calcul sur le PC labo et l'organisation. Les voies locales (A)/(B) continuent en fond.
+- **Calibrage (A) par cubes β.** 12/12 cubes INCONNUS à 5 min (types 1502 et 1793, 6 pivots, 2 à 4 dis). La route locale ne se
+  termine pas sans un lemme nouveau sur les étiquettes dis.
