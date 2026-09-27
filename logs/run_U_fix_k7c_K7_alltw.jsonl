@@ -1,0 +1,4 @@
+{"node": 1, "assign": {}, "status": "feasible", "secs": 138}
+{"node": 2, "assign": {"0": [[1, 2], [3, 4], [5, 6]]}, "status": "feasible", "secs": 147}
+{"node": 3, "assign": {"0": [[1, 2], [3, 4], [5, 6]], "1": [[0, 3], [2, 5], [4, 6]]}, "status": "feasible", "secs": 145}
+{"node": 4, "assign": {"0": [[1, 2], [3, 4], [5, 6]], "1": [[0, 3], [2, 5], [4, 6]], "2": [[0, 6], [1, 5], [3, 4]]}, "corners": [[1, 2, 5]], "status": "feasible", "secs": 189}

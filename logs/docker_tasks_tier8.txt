@@ -7,6 +7,13 @@ cnf/e2cdp/type_0011_enc2cdp.cnf 21600 kissat
 cnf/e2cdp/type_0012_enc2cdp.cnf 21600 kissat
 cnf/e2cdp/type_0013_enc2cdp.cnf 21600 kissat
 cnf/e2cdp/type_0014_enc2cdp.cnf 21600 kissat
+cnf/t06/type_0067_enc2cd.cnf 21600 kissat
+cnf/t06/type_0077_enc2cd.cnf 21600 kissat
+cnf/t06/type_0079_enc2cd.cnf 21600 kissat
+cnf/t06/type_0093_enc2cd.cnf 21600 kissat
+cnf/t06/type_0094_enc2cd.cnf 21600 kissat
+cnf/t06/type_0104_enc2cd.cnf 21600 kissat
+cnf/t06/type_0105_enc2cd.cnf 21600 kissat
 cnf/t32/type_0000_enc2cd.cnf 3600 kissat
 cnf/t40/type_0000_enc2cd.cnf 3600 kissat
 cnf/t12/type_0007_enc2cd.cnf 3600 kissat
@@ -70,10 +77,3 @@ cnf/t6/type_0096_enc2cd.cnf 3600 kissat
 cnf/t6/type_0097_enc2cd.cnf 3600 kissat
 cnf/t6/type_0098_enc2cd.cnf 3600 kissat
 cnf/t6/type_0099_enc2cd.cnf 3600 kissat
-cnf/t06/type_0067_enc2cd.cnf 3600 kissat
-cnf/t06/type_0077_enc2cd.cnf 3600 kissat
-cnf/t06/type_0079_enc2cd.cnf 3600 kissat
-cnf/t06/type_0093_enc2cd.cnf 3600 kissat
-cnf/t06/type_0094_enc2cd.cnf 3600 kissat
-cnf/t06/type_0104_enc2cd.cnf 3600 kissat
-cnf/t06/type_0105_enc2cd.cnf 3600 kissat

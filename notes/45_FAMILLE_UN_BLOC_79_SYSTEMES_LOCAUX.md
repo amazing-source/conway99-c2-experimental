@@ -149,3 +149,10 @@ ci-dessous sont UNSAT (avec preuve DRAT vérifiée).
   - Relecture indépendante demandée à structures.
 - **État K₇ (06:30).** Racine faisable (135 s) ; nœud 2 (bloc 0 = {12,34,56}) faisable (144 s) ; fixation en cours,
   `logs/run_U_fix_k7fix_K7_alltw.jsonl`.
+- **K₇ par le PL d'orbite + coin (06:40) : ne ferme pas.**
+  - Le lemme du coin est codé en suppressions de colonnes (R1 e = 0 et R4 ω = 0), re-dérivées par orbit_verify_U (lab c78f316).
+  - Racine faisable. Bloc 0 : 1 option sous S₇, faisable. Bloc 1 : 4 options (stabilisateur d'ordre 8).
+  - Le nœud {0: 12|34|56, 1: 03|25|46, 2: 06|15|34}, avec le coin (1,2,5), reste FAISABLE. Ensuite, 15 options par bloc et
+    stabilisateur trivial : ~10⁵–10⁶ nœuds. Arrêté.
+  - Le tout-tordu non simple repose donc sur les 7 SAT (0,6), passés en tête de la file kissat après les 9 tier-8. Autres voies
+    possibles : un lemme de simplicité, ou q:7 dans la couche signée.
