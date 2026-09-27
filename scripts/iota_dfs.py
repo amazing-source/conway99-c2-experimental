@@ -4,8 +4,10 @@ node dies when the LP is infeasible (Farkas certificate, exact check with struct
 lowest unpaired non-mu edge; children = its admissible partners, ONE per orbit of the stabiliser of the node under the
 label group G = <permutations commuting with sigma (i^1) and mu and tau> (orbital branching; the model's invariance under G
 is checked numerically first).
-Usage: python iota_dfs.py <model.npz> <index.json> [max nodes]      output: logs/iota_dfs_<name>.jsonl (one line per node)"""
-import sys, os, json, time, itertools
+Usage: python iota_dfs.py <model.npz> <index.json> [max nodes]      output: logs/iota_dfs_<name>.jsonl (one line per node)
+Certificates: every dead node's exact Farkas vector goes to logs/iota_certs_<name>.jsonl.gz (node, fixed pairs, cert), so the
+whole tree can be re-checked with structures' certify.leaf_ok; progress line every 200 nodes; final line says ALL DEAD or not."""
+import sys, os, json, time, itertools, gzip
 from collections import Counter
 import numpy as np, scipy.sparse as sp
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -66,9 +68,12 @@ print("label group |G| = %d, model-invariant: %d" % (len(G), len(GOOD))); sys.st
 
 B = BB(A, lo, hi, lb0, ub0)
 name = os.path.basename(npz).replace('.npz', ''); out = open("logs/iota_dfs_%s.jsonl" % name, "w")
+certs = gzip.open("logs/iota_certs_%s.jsonl.gz" % name, "wt"); uncert = 0; leaf_feas = 0
 stack = [()]; nodes = 0; depth_stat = Counter(); dead_stat = Counter(); t0 = time.time()
 while stack and nodes < maxn:
     fixed = stack.pop(); nodes += 1
+    if nodes % 200 == 0:
+        print("  nodes %d stack %d  depth hist %s  dead %s  uncertified %d  %.0fs" % (nodes, len(stack), dict(sorted(depth_stat.items())), dict(sorted(dead_stat.items())), uncert, time.time() - t0)); sys.stdout.flush()
     lb, ub = lb0.copy(), ub0.copy()
     used = set()
     for n in fixed: lb[n] = ub[n] = 1; used |= set(IP[n])
@@ -78,16 +83,18 @@ while stack and nodes < maxn:
     if obj is None or obj > 1e-7:
         c = B.cert(dual, lb, ub) if obj is not None else None
         dead_stat[d] += 1
+        if c: certs.write(json.dumps({"node": nodes, "fixed": list(fixed), "cert": c["cert"]}) + chr(10))
+        else: uncert += 1
         out.write(json.dumps({"node": nodes, "fixed": list(fixed), "status": "dead" if c else "lp-dead-uncertified"}) + chr(10))
         continue
     free = [i for i in range(len(E)) if i not in used]
-    if not free: out.write(json.dumps({"node": nodes, "fixed": list(fixed), "status": "LEAF-FEASIBLE"}) + chr(10)); print("LEAF-FEASIBLE", fixed); continue
+    if not free: out.write(json.dumps({"node": nodes, "fixed": list(fixed), "status": "LEAF-FEASIBLE"}) + chr(10)); print("LEAF-FEASIBLE", fixed); leaf_feas += 1; continue
     i = free[0]
     cands = [n for n, p in enumerate(IP) if i in p and ub[n] > 0]
     # orbital branching: stabiliser of the fixed set and of edge i
     fset = set(fixed); H = [perm for g, perm in GOOD if all(perm[n] in fset for n in fixed) and gedge(E[i], g) == E[i]]
     reps = [n for n in cands if n == min(int(perm[n]) for perm in H)] if H else cands
     for n in reps: stack.append(fixed + (n,))
-    if nodes % 200 == 0:
-        print("  nodes %d stack %d  depth hist %s  dead %s  %.0fs" % (nodes, len(stack), dict(sorted(depth_stat.items())), dict(sorted(dead_stat.items())), time.time() - t0)); sys.stdout.flush()
-print("IOTA-DFS %s: nodes %d, stack left %d, depth hist %s, dead %s, %.0fs" % (name, nodes, len(stack), dict(sorted(depth_stat.items())), dict(sorted(dead_stat.items())), time.time() - t0))
+certs.close()
+print("IOTA-DFS %s: nodes %d, stack left %d, uncertified dead %d, depth hist %s, dead %s, %.0fs  %s" % (name, nodes, len(stack), uncert, dict(sorted(depth_stat.items())), dict(sorted(dead_stat.items())), time.time() - t0,
+      "ALL DEAD" if not stack and uncert == 0 and leaf_feas == 0 else "INCOMPLETE (%d feasible leaves)" % leaf_feas))

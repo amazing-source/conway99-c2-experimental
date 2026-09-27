@@ -156,3 +156,23 @@ ci-dessous sont UNSAT (avec preuve DRAT vérifiée).
     stabilisateur trivial : ~10⁵–10⁶ nœuds. Arrêté.
   - Le tout-tordu non simple repose donc sur les 7 SAT (0,6), passés en tête de la file kissat après les 9 tier-8. Autres voies
     possibles : un lemme de simplicité, ou q:7 dans la couche signée.
+
+## 9. Premiers certificats déclarables (27/09, 09:00–09:17)
+- **Tri rapide des 79** (structures, portable, glucose 15 s, encodage 2 avec tous les lemmes applicables, sans lex-leader ;
+  involution/sweep79.log) : 23 UNSAT, plus rel 10 et 14 avec --ident=1 (identité générale de C1).
+- **Certificats (C2, PC labo)** : ces 25 types sont ré-exportés
+  - en encodage 2 avec --cuts --digon --path --sec --twist (et --ident=1 pour rel 10 et 14), **SANS lex-leader** (--nolex) ;
+  - puis résolus par cadical.exe 3.0.1 (build win64 de C1) avec une preuve DRAT, et vérifiés par drat-trim.exe.
+- **Résultat : 25/25 UNSAT, 25/25 « s VERIFIED ».**
+  - rel 0, 1, 3, 4, 5, 7, 10, 11, 12, 14, 15, 17, 18, 19, 20, 21, 26, 28, 42, 45, 48, 55, 56, 58, 59.
+  - De 1 à 124 s par résolution, preuves de 8 à 290 Mo, vérification ≤ 8 s.
+  - Journal : `logs/decl_proofs.log` (sha des CNF) ; CNF dans sat/cnf/decl/, preuves dans sat/out/.
+  - Correspondance rel → fichiers de types : `logs/rel79_map.json`.
+- **Dépendances de ces certificats.**
+  - L'encodage 2 du système local (structures, relu).
+  - Les lemmes cuts (NOTE_S29 §9), digon, path et twist (C1, relus par structures), ident (C1).
+  - SEC (structures) : valide car il n'y a PAS de carré dis, ce qui est le cas du périmètre du théorème.
+- **Reste le noyau dur : 54 types.** 7 (0,6), 9 (2,4), 4 (6,0), 16 (2,2), 12 (1,4), 3 (3,0), 3 (3,2).
+  - kissat avec lex-leader tourne en mode haut.
+  - Voie PL pour les (0,6) : iota_dfs sur les exports --sec de structures (1546e59), où le PL meurt à profondeur ≤ 8 sur les
+    vrais ι. Il tourne en mode bas sur rel 25, 41 et 43.
