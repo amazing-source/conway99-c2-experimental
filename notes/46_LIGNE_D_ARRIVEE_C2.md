@@ -51,3 +51,15 @@ La ligne d'arrivée ci-dessous est une liste FINIE et UNIFORME d'instances. Prop
 - Les étoiles libres (β ≡ 1, SEC-dis partout) : inconnues à 40 s au portable (glucose) sur 2 types.
 - Mesure au PC : ~20 étoiles libres à 1 h, dès que structures a poussé --beta. Elle dira si la ligne d'arrivée se compte en
   jours ou en semaines.
+
+## 6. Raffinement (C1, vérifié par C2) : les étoiles libres deviennent UNE famille globale
+- **Lemme (bris d'égalité).** On choisit comme bloc lourd un c qui maximise (w_c, #piv_c) dans l'ordre lexicographique. Si c est
+  une étoile libre, la configuration est TOUT-DIS : n_dis = 21, Σ = ∅, et les 7 blocs sont des étoiles libres à d = 12.
+- **Preuve.**
+  - w_max = d_c ≤ 12, donc tous les w ≤ 12. Or Σw = 84 + 4|Σ| ≥ 84, d'où |Σ| = 0 et w ≡ 12.
+  - Un bloc à pivots aurait w = 12 et #piv > 0, et gagnerait le bris d'égalité. Il n'y en a donc aucun. ∎
+- **Nouvelle ligne d'arrivée : X / 1 521 + (B).**
+  - **(A)** I(τ) pour les 1 521 types À PIVOTS (958 à 2, 407 à 4, 156 à ≥ 6), avec β, SEC/SEC-dis et 2#piv + Σβ ≥ 12.
+  - **(B)** La famille globale TOUT-DIS : 7 étoiles libres, SEC-dis partout, et le graphe D est un 2-facteur de KG(7,2). C1 en fait
+    son chantier mathématique.
+  - Si les étoiles libres tout-SEC-dis sont UNSAT en mono-bloc, (B) tombe aussi par les 1 787 instances locales.
