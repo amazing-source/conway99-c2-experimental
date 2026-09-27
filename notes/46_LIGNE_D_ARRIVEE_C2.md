@@ -63,3 +63,26 @@ La ligne d'arrivée ci-dessous est une liste FINIE et UNIFORME d'instances. Prop
   - **(B)** La famille globale TOUT-DIS : 7 étoiles libres, SEC-dis partout, et le graphe D est un 2-facteur de KG(7,2). C1 en fait
     son chantier mathématique.
   - Si les étoiles libres tout-SEC-dis sont UNSAT en mono-bloc, (B) tombe aussi par les 1 787 instances locales.
+
+## 7. État du 27/09, fin de matinée
+- **(A) = 1 507 types.**
+  - L'élimination de Σ est inconditionnelle : les notes 18–19 (RSF/χ = relaxations de l'étage Q, paires non frères libres) ont
+    été relues par C2 ; le carnet §7 (Thm D) et §11–13 l'ont été par C1, sans hypothèse « un bloc ».
+  - Donc Σ fait partie des 9 motifs, de degré ≤ 2. Les 14 types à ≥ 3 blocs pivots frères sortent : (6,3) 7, (8,3) 2, (8,4) 2,
+    (12,3/4/6) 1+1+1. Liste : `logs/finishA_excluded_sigma.json`.
+  - Une seconde relecture indépendante est proposée par structures.
+- **Organisation des passes sur (A).**
+  - Passe 1 : sans preuve, plafond 30 min, ids en ordre aléatoire. Elle sert aussi de calibrage. Journal :
+    `logs/finish_A_pass1.log`.
+  - Passe 2 : la preuve DRAT (plus drat-trim) n'est rejouée que pour les UNSAT, dans `logs/finish_A.log`. Les preuves atteignaient
+    ~3 Go en 24 min : trop gros pour être gardées sur les inconnues.
+- **(B) — PL d'orbites réduit par symétrie** (`scripts/sym_alldis.py`) : FAISABLE.
+  - G = S₇ ⋉ Z₂²¹, transitif sur les 42 orbites. Réduction exacte : 22 classes de lignes sommées, sur les 6 387 120 colonnes de
+    Z₀.
+  - Le PL non signé ne tue pas le tout-dis ; il faut les signes et le niveau étiquette (C1).
+- **Plan (B) de C1.**
+  - Recensement mono-bloc des 1 787 étoiles libres en --beta=all. Échantillon de 20 en cours (`logs/finish_B_freestars.log`).
+  - Puis un modèle à deux blocs tout-dis sur les couples survivants.
+  - En parallèle : la couche signée du PL et le 7-adique (C1).
+- **Outil de symétrie déclarable** (structures, `spec_local.py`, 3dfa451) : spec compilée octet pour octet, invariance vérifiée
+  sous les générateurs de Stab, LEX régénéré. Il servira pour les types de (A) restés inconnus sans lex.
