@@ -4,6 +4,7 @@ Certificates (logs/orbit_certs):
      (orbit, partner) choices.  A leaf is covered iff SOME orbit-level lift of its D-structures (labels inside anchored pairs are
      interchangeable: WLOG) uses no forbidden choice; A-block orbits are free in these models.
   leaf_<cls>_<job>_<t> : model 'var' (the leaf with A variable): covers leaf t exactly (triples compared).
+  root_<cls>_<rep> / ogen_<cls>_<idx> : orientation-level root (no forbid), matched to the job by its orientation In.
   logs/pair_certs/leaf_<cls>_<job>*.jsonl.gz : pair-level certificates of pair_fast.py (note 43), leaf index t (validity:
      pair_verify_leaves.py).
 Symmetry: leaves in the same orbit of the orientation's stabilizer as a covered leaf are covered.
@@ -44,6 +45,11 @@ def lifts_ok(g0, leaf, forbid, A):
         if not found: return False
     return True
 
+ROOTS = defaultdict(list)                     # root-first (note 44 s.8): root_<cls>_<rep> covers every leaf of its orientation
+for fn in glob.glob("logs/orbit_certs/root_%s_*.json.gz" % ci) + glob.glob("logs/orbit_certs/ogen_%s_*.json.gz" % ci):
+    d = json.load(gzip.open(fn, "rt"))
+    if not d["spec"].get("forbid"): ROOTS[tuple(sorted((int(k), tuple(sorted(v))) for k, v in d["spec"]["In"].items()))].append(fn)
+
 total = 0; covered_all = 0; report = []
 for job, po in enumerate(jobs):
     In = {int(x): v for x, v in po["In"].items()}; A = po["A"]
@@ -55,6 +61,7 @@ for job, po in enumerate(jobs):
         d = json.load(gzip.open(fn, "rt"))
         if {int(k): v for k, v in d["spec"]["In"].items()} != In: continue
         certs.append(("gen", {tuple(z) for z in d["spec"].get("forbid", [])}, fn))
+    for fn in ROOTS.get(tuple(sorted((c, tuple(sorted(v))) for c, v in In.items())), []): certs.append(("gen", set(), fn))
     leafcert = set()
     for fn in glob.glob("logs/orbit_certs/leaf_%s_%d_*.json.gz" % (ci, job)):
         d = json.load(gzip.open(fn, "rt")); leafcert.add(tuple(sorted(tuple(z) for z in d["spec"]["leaf"])))
