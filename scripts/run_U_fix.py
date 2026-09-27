@@ -34,6 +34,30 @@ def forbid_for(g, assign):
     return fb
 
 
+def corner_filters(g, assign):
+    """Corner lemma (carnet s.15, re-read by C1 and structures 27/09; purely local, no simplicity of circuits, no Sigma = empty):
+    pair ij twisted, A1 = its orbit with pivot i, B1 = with pivot j; if the fixed D-graphs give D(A1) in ik and D(B1) in jk for the
+    SAME k (blocks i and j fixed), then with A2 = D(A1), B2 = D(B1), beta = {i,j,k}, F = the 12 orbits of the pairs outside beta:
+    e = G_{A2 B2} = 0 (columns of A2 with q(B2) >= 1 and of B2 with q(A2) >= 1 deleted) and omega(A1) = omega(B1) = 0 (columns of
+    A1, B1 with #{V in F : q(V) >= 1} != 6 deleted).  Only twisted pairs (one pivot orbit per end).  Returns (filters, corners)."""
+    third = {}
+    for c, edges in assign.items():
+        for (x, y) in edges: third[(c, x)] = y; third[(c, y)] = x
+    piv = lambda a, b: [o for o in g.orbs_of[frozenset((a, b))] if g.otype[o] == ('one', a)]
+    cf, corners = defaultdict(list), []
+    for i in range(N):
+        for j in range(i + 1, N):
+            if (i, j) not in third or (j, i) not in third or third[(i, j)] != third[(j, i)]: continue
+            k = third[(i, j)]
+            A1, B1, A2, B2 = piv(i, j), piv(j, i), piv(i, k), piv(j, k)
+            if not all(len(v) == 1 for v in (A1, B1, A2, B2)): continue
+            A1, B1, A2, B2 = A1[0], B1[0], A2[0], B2[0]
+            F = sorted(s for s in range(g.n) if not (g.pair[s] & {i, j, k}))
+            cf[A2].append(('zero', B2)); cf[B2].append(('zero', A2))
+            cf[A1].append(('cnt', tuple(F), 6)); cf[B1].append(('cnt', tuple(F), 6)); corners.append((i, j, k))
+    return dict(cf), corners
+
+
 def ptype_auts(pt):
     """block permutations preserving the skeleton (anch c -> anch g(c), mix c -> mix g(c), other types kept): the unified model is
     invariant under them (orbit labels are only relabelled), so a dead node kills its whole orbit (orbital branching)"""
@@ -70,8 +94,10 @@ if __name__ == "__main__":
         assign = stack.pop(); node += 1; t0 = time.time()
         g = OU.OrbitModelU(pt, forbid=None)
         fb = forbid_for(g, assign)
-        if fb: g = OU.OrbitModelU(pt, forbid=fb)
+        cf, corners = corner_filters(g, assign) if os.environ.get('CORNER') else ({}, [])
+        if fb or cf: g = OU.OrbitModelU(pt, forbid=fb, colfilter=cf)
         rec = {"node": node, "assign": {str(c): [list(e) for e in v] for c, v in assign.items()}}
+        if corners: rec["corners"] = corners
         if g.empty_orbits:
             rec["status"] = "dead-comb"; rec["empty_orbits"] = g.empty_orbits
         else:
@@ -79,7 +105,9 @@ if __name__ == "__main__":
             if g.done and obj > 1e-6:
                 ok, b = g.verify(y); rec["status"] = "dead" if ok else "certfail"; rec["slack"] = round(obj, 4)
                 if ok: OM.save_cert(g, y, "logs/orbit_certs/%s_%s_n%d.json.gz" % (prefix, tag, node), "U",
-                                    {"ptype": it["ptype"], "forbid": sorted(map(list, fb)), "assign": rec["assign"]}, b)
+                                    {"ptype": it["ptype"], "forbid": sorted(map(list, fb)), "assign": rec["assign"],
+                                     "colfilter": sorted([Z] + [f[0], list(f[1]) if f[0] == 'cnt' else f[1]] + ([f[2]] if f[0] == 'cnt' else []) for Z, L in cf.items() for f in L),
+                                     "corners": corners}, b)
             else: rec["status"] = "feasible" if g.done else "timeout"
         rec["secs"] = round(time.time() - t0); out.write(json.dumps(rec) + chr(10)); out.flush()
         print("UFIX %s node %d assign %s: %s %ds" % (tag, node, rec["assign"], rec["status"], rec["secs"])); sys.stdout.flush()

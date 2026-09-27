@@ -34,8 +34,9 @@ def far_sols_dis(blocks5, deg, R):
     return prs, out
 
 class OrbitModelU(OM.OrbitModel):
-    def __init__(self, ptype, use_I=True, forbid=None):
+    def __init__(self, ptype, use_I=True, forbid=None, colfilter=None):
         self.use_I = use_I; self.T = []; self.otype = []; self.forbid = forbid or set()     # forbid: (orbit, partner) pairs (block fixing)
+        self.colfilter = colfilter or {}      # Z -> [('zero', W) | ('cnt', [F...], v)]: corner lemma (carnet s.15) deletions, run_U_fix
         for a in range(N):
             for b in range(a + 1, N):
                 t = ptype[(a, b)]
@@ -138,6 +139,10 @@ class OrbitModelU(OM.OrbitModel):
             for R in self.sibpairs:                           # grid lemma 8.1: exactly one neighbour in every disjoint sib pair
                 if not (R & self.pair[Z]) and len(M):
                     o1, o2 = self.orbs_of[R]; M = M[(M[:, o1] + M[:, o2]) == 1]
+            for f in self.colfilter.get(Z, []):               # corner lemma: e = 0 ('zero') and omega = 0 ('cnt' over F_beta)
+                if len(M) == 0: break
+                if f[0] == 'zero': M = M[M[:, f[1]] == 0]
+                else: M = M[(M[:, list(f[1])] >= 1).sum(axis=1) == f[2]]
             self.cols.append(M)
 
 def orient_types(In):

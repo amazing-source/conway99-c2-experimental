@@ -12,6 +12,10 @@ Columns:
     the sister is dis; 2 - loop free neighbours at each of i, j (outside P's pair), never both in {.,k} nor both in {.,l} at the same
     block; far pairs (avoiding i, j) with block sums 4 - n^i_t - n^j_t; R has value 2 + x (x in {0,1}: the partner gets 2, its
     sister x); other far pairs <= 2 as above.
+Corner lemma (carnet s.15; re-read by C1 and structures 27/09, local, no simplicity): spec 'colfilter' is RE-DERIVED here from
+  spec 'assign' (own code: pair ij twisted, D(A1) in ik and D(B1) in jk for the same k, blocks i, j fixed) and must match; then
+  columns of A2 with q(B2) >= 1 / of B2 with q(A2) >= 1 are deleted (e = 0) and columns of A1, B1 need exactly 6 neighbour
+  orbits among the 12 orbits of the pairs avoiding {i,j,k} (omega = 0).
 Rows: one, S, C, I (doubled), cut (<= 2(|S|-1), |S| not a union of even cycles >= 4, S inside the free set of c).
 Valid: y.b > sum_Z max_c (A^T y)_c + sum_cut max(0, y rhs).
 Usage: python orbit_verify_U.py <cert files>"""
@@ -50,6 +54,7 @@ def check(fn):
     assert d["model"] == "U"
     ptype = {tuple(int(c) for c in k.split(",")): tuple(v) for k, v in d["spec"]["ptype"].items()}
     forbid = {(int(a), int(b)) for a, b in d["spec"].get("forbid", [])}      # block fixing: forbidden (orbit, partner)
+    cfl = d["spec"].get("colfilter", [])
     pair = []; otype = []
     for a in range(N):
         for b in range(a + 1, N):
@@ -68,6 +73,25 @@ def check(fn):
     sis = {s: [u for u in orbs[pair[s]] if u != s][0] for s in range(n)}
     freeat = {c: {s for s in range(n) if c in pair[s] and (otype[s][0] == 'dis' or (otype[s][0] == 'one' and otype[s][1] != c))} for c in range(N)}
     sibp = [frozenset(pair[s]) for s in range(0, n, 2) if otype[s] == ('sib',)]      # sister pairs: never free
+    # corner lemma filters, re-derived from the fixed blocks and compared with the stored list
+    nxt = {}
+    for c, es in d["spec"].get("assign", {}).items():
+        for x, y in es: nxt[(int(c), x)] = y; nxt[(int(c), y)] = x
+    own = set()
+    for i in range(N):
+        for j in range(i + 1, N):
+            k = nxt.get((i, j))
+            if k is None or nxt.get((j, i)) != k: continue
+            pv = lambda a, b: [s for s in orbs[frozenset((a, b))] if otype[s] == ('one', a)]
+            q = [pv(i, j), pv(j, i), pv(i, k), pv(j, k)]
+            if any(len(v) != 1 for v in q): continue
+            A1, B1, A2, B2 = (v[0] for v in q)
+            F = tuple(sorted(s for s in range(n) if not (pair[s] & {i, j, k})))
+            own |= {(A2, 'zero', B2), (B2, 'zero', A2), (A1, 'cnt', F, 6), (B1, 'cnt', F, 6)}
+    stored = {(f[0], 'zero', f[2]) if f[1] == 'zero' else (f[0], 'cnt', tuple(f[2]), f[3]) for f in cfl}
+    assert stored == own, ("colfilter does not match the corner lemma on the fixed blocks", sorted(stored ^ own)[:4])
+    cfilt = defaultdict(list)
+    for f in own: cfilt[f[0]].append(f[1:])
     Sh = lambda a, b: 2 if pair[a] == pair[b] else len(pair[a] & pair[b])
     one = {}; S = defaultdict(int); C = defaultdict(int); I = defaultdict(int); cuts = []
     yb = 0; mism = 0; extra = 0
@@ -183,6 +207,8 @@ def check(fn):
         for R in sibp:                          # grid lemma 8.1: exactly one neighbour in every sister pair disjoint from P_Z
             if not (R & pair[Z]):
                 o1, o2 = orbs[R]; M = M[(M[:, o1] + M[:, o2]) == 1]
+        for f in cfilt.get(Z, []):              # corner lemma
+            M = M[M[:, f[1]] == 0] if f[0] == 'zero' else M[(M[:, list(f[1])] >= 1).sum(axis=1) == f[2]]
         assert len(M), Z
         sc = const + M @ lin + np.einsum('ij,ij->i', M @ Y, M)
         ncols += len(M); high += int(sc.max())
