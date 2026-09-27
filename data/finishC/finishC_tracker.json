@@ -1295,9 +1295,11 @@
    "nroots": 208,
    "nb1": "D_8^3",
    "nb2": "D_8^3",
-   "status": "open",
-   "by": "open",
-   "reviewed_by": [],
+   "status": "excluded (1 reader)",
+   "by": "C1 notes/139 s.2 criterion (E): D8 spinor cost 28 > 26; depends on Sol's theta theorems",
+   "reviewed_by": [
+    "C1"
+   ],
    "certificate": null
   },
   {
@@ -1482,9 +1484,11 @@
    "nroots": 256,
    "nb1": "A_{15}D_9",
    "nb2": "D_{10}E_7^2",
-   "status": "open",
-   "by": "open",
-   "reviewed_by": [],
+   "status": "excluded (1 reader)",
+   "by": "C1 notes/139 s.2 criterion (E): 36 > 32",
+   "reviewed_by": [
+    "C1"
+   ],
    "certificate": null
   },
   {
@@ -1570,9 +1574,11 @@
    "nroots": 304,
    "nb1": "D_{10}E_7^2",
    "nb2": "D_{12}^2",
-   "status": "open",
-   "by": "open",
-   "reviewed_by": [],
+   "status": "excluded (1 reader)",
+   "by": "C1 notes/139 s.2 criterion (E): 45 > 38",
+   "reviewed_by": [
+    "C1"
+   ],
    "certificate": null
   },
   {
@@ -1604,8 +1610,11 @@
    "nb1": "D_8^3",
    "nb2": "D_{16}E_8",
    "status": "excluded",
-   "by": "excluded (Sol 0836: D8^3)",
-   "reviewed_by": [],
+   "by": "Sol 0836 D8^3; re-read C1 notes/139 (check_d8cube_trap.py)",
+   "reviewed_by": [
+    "Sol",
+    "C1"
+   ],
    "certificate": null
   },
   {
@@ -1615,8 +1624,11 @@
    "nb1": "D_8^3",
    "nb2": "E_8^3",
    "status": "excluded",
-   "by": "excluded (Sol 0836: D8^3)",
-   "reviewed_by": [],
+   "by": "Sol 0836 D8^3; re-read C1 notes/139 (check_d8cube_trap.py)",
+   "reviewed_by": [
+    "Sol",
+    "C1"
+   ],
    "certificate": null
   },
   {
@@ -1670,8 +1682,11 @@
    "nb1": "D_{12}^2",
    "nb2": "D_{16}E_8",
    "status": "excluded",
-   "by": "excluded (Sol 0836: D>=11)",
-   "reviewed_by": [],
+   "by": "Sol 0836 D>=12 (G18_G20_D12_COLLAGE); re-read C1 notes/139 s.3",
+   "reviewed_by": [
+    "Sol",
+    "C1"
+   ],
    "certificate": null
   },
   {
@@ -1681,8 +1696,11 @@
    "nb1": "E_8^3",
    "nb2": "D_{16}E_8",
    "status": "excluded",
-   "by": "excluded (Sol 0836: E8)",
-   "reviewed_by": [],
+   "by": "Sol 0836 E8 (minuscule weight 0 => span E8 in N-perp); re-read C1 notes/139 s.2-3",
+   "reviewed_by": [
+    "Sol",
+    "C1"
+   ],
    "certificate": null
   },
   {
@@ -1692,8 +1710,11 @@
    "nb1": "D_{12}^2",
    "nb2": "D_{24}",
    "status": "excluded",
-   "by": "excluded (Sol 0836: D>=11)",
-   "reviewed_by": [],
+   "by": "Sol 0836 D>=12; re-read C1 notes/139 s.3",
+   "reviewed_by": [
+    "Sol",
+    "C1"
+   ],
    "certificate": null
   },
   {
@@ -1714,8 +1735,11 @@
    "nb1": "D_{16}E_8",
    "nb2": "D_{24}",
    "status": "excluded",
-   "by": "excluded (Sol 0836: D>=11)",
-   "reviewed_by": [],
+   "by": "Sol 0836 D>=12; re-read C1 notes/139 s.3",
+   "reviewed_by": [
+    "Sol",
+    "C1"
+   ],
    "certificate": null
   }
  ]
