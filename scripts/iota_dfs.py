@@ -66,12 +66,22 @@ for g in G:
     if Counter(rowkey(r, perm) for r in range(A.shape[0])) == base: GOOD.append((g, perm))
 print("label group |G| = %d, model-invariant: %d" % (len(G), len(GOOD))); sys.stdout.flush()
 
+# SECFIRST=1 (structures/C1, 27/09): branch first, for each NON-pivot label v (mu[v] != tau[v]), on WHICH secant iota-pair is centred
+# at v (both edges contain v); children = each admissible such pair, plus one child 'no secant at v' (all forbidden), so the
+# branching is complete without any lemma; then the usual edge branching.
+NP = [v for v in range(12) if mu[v] != tau[v]]
+cent = {}
+for n, (e1, e2) in enumerate(IP):
+    c = set(E[e1]) & set(E[e2])
+    if len(c) == 1: cent.setdefault(next(iter(c)), []).append(n)
+SECFIRST = bool(os.environ.get('SECFIRST'))
+if SECFIRST: print("secant-first branching on non-pivot labels", NP, "| candidates per label", {v: len(cent.get(v, [])) for v in NP}); sys.stdout.flush()
 B = BB(A, lo, hi, lb0, ub0)
 name = os.path.basename(npz).replace('.npz', ''); out = open("logs/iota_dfs_%s.jsonl" % name, "w")
 certs = gzip.open("logs/iota_certs_%s.jsonl.gz" % name, "wt"); uncert = 0; leaf_feas = 0
-stack = [()]; nodes = 0; depth_stat = Counter(); dead_stat = Counter(); t0 = time.time()
+stack = [((), frozenset())]; nodes = 0; depth_stat = Counter(); dead_stat = Counter(); t0 = time.time()
 while stack and nodes < maxn:
-    fixed = stack.pop(); nodes += 1
+    fixed, noc = stack.pop(); nodes += 1
     if nodes % 200 == 0:
         print("  nodes %d stack %d  depth hist %s  dead %s  uncertified %d  %.0fs" % (nodes, len(stack), dict(sorted(depth_stat.items())), dict(sorted(dead_stat.items())), uncert, time.time() - t0)); sys.stdout.flush()
     lb, ub = lb0.copy(), ub0.copy()
@@ -79,22 +89,35 @@ while stack and nodes < maxn:
     for n in fixed: lb[n] = ub[n] = 1; used |= set(IP[n])
     for n, p in enumerate(IP):
         if n not in fixed and (p[0] in used or p[1] in used): ub[n] = 0
+    for v in noc:
+        for n in cent.get(v, []): ub[n] = 0
     obj, dual, x = B.lp(lb, ub); d = len(fixed); depth_stat[d] += 1
     if obj is None or obj > 1e-7:
         c = B.cert(dual, lb, ub) if obj is not None else None
         dead_stat[d] += 1
-        if c: certs.write(json.dumps({"node": nodes, "fixed": list(fixed), "cert": c["cert"]}) + chr(10))
+        if c: certs.write(json.dumps({"node": nodes, "fixed": list(fixed), "nocenter": sorted(noc), "cert": c["cert"]}) + chr(10))
         else: uncert += 1
-        out.write(json.dumps({"node": nodes, "fixed": list(fixed), "status": "dead" if c else "lp-dead-uncertified"}) + chr(10))
+        out.write(json.dumps({"node": nodes, "fixed": list(fixed), "nocenter": sorted(noc), "status": "dead" if c else "lp-dead-uncertified"}) + chr(10))
         continue
+    if SECFIRST:
+        done = {v for v in NP if v in noc or any(n in cent.get(v, []) for n in fixed)}
+        todo = [v for v in NP if v not in done]
+        if todo:
+            v = todo[0]; fset = set(fixed)
+            H = [(g, perm) for g, perm in GOOD if g[v] == v and all(perm[n] in fset for n in fixed) and all(g[w] in noc for w in noc)]
+            cands = [n for n in cent.get(v, []) if ub[n] > 0]
+            reps = [n for n in cands if n == min(int(perm[n]) for _, perm in H)] if H else cands
+            stack.append((fixed, noc | {v}))
+            for n in reps: stack.append((fixed + (n,), noc))
+            continue
     free = [i for i in range(len(E)) if i not in used]
-    if not free: out.write(json.dumps({"node": nodes, "fixed": list(fixed), "status": "LEAF-FEASIBLE"}) + chr(10)); print("LEAF-FEASIBLE", fixed); leaf_feas += 1; continue
+    if not free: out.write(json.dumps({"node": nodes, "fixed": list(fixed), "nocenter": sorted(noc), "status": "LEAF-FEASIBLE"}) + chr(10)); print("LEAF-FEASIBLE", fixed); leaf_feas += 1; continue
     i = free[0]
     cands = [n for n, p in enumerate(IP) if i in p and ub[n] > 0]
     # orbital branching: stabiliser of the fixed set and of edge i
-    fset = set(fixed); H = [perm for g, perm in GOOD if all(perm[n] in fset for n in fixed) and gedge(E[i], g) == E[i]]
+    fset = set(fixed); H = [perm for g, perm in GOOD if all(perm[n] in fset for n in fixed) and gedge(E[i], g) == E[i] and all(g[w] in noc for w in noc)]
     reps = [n for n in cands if n == min(int(perm[n]) for perm in H)] if H else cands
-    for n in reps: stack.append(fixed + (n,))
+    for n in reps: stack.append((fixed + (n,), noc))
 certs.close()
 print("IOTA-DFS %s: nodes %d, stack left %d, uncertified dead %d, depth hist %s, dead %s, %.0fs  %s" % (name, nodes, len(stack), uncert, dict(sorted(depth_stat.items())), dict(sorted(dead_stat.items())), time.time() - t0,
       "ALL DEAD" if not stack and uncert == 0 and leaf_feas == 0 else "INCOMPLETE (%d feasible leaves)" % leaf_feas))

@@ -1,0 +1,7 @@
+C:\Users\RESEARCHER\Desktop\c2_experimental\sat\cnf\all\t6\type_0067_enc2cdpst.cnf
+C:\Users\RESEARCHER\Desktop\c2_experimental\sat\cnf\all\t6\type_0077_enc2cdpst.cnf
+C:\Users\RESEARCHER\Desktop\c2_experimental\sat\cnf\all\t6\type_0079_enc2cdpst.cnf
+C:\Users\RESEARCHER\Desktop\c2_experimental\sat\cnf\all\t6\type_0093_enc2cdpst.cnf
+C:\Users\RESEARCHER\Desktop\c2_experimental\sat\cnf\all\t6\type_0094_enc2cdpst.cnf
+C:\Users\RESEARCHER\Desktop\c2_experimental\sat\cnf\all\t6\type_0104_enc2cdpst.cnf
+C:\Users\RESEARCHER\Desktop\c2_experimental\sat\cnf\all\t6\type_0105_enc2cdpst.cnf

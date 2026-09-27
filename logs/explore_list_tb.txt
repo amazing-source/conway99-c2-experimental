@@ -1,0 +1,5 @@
+C:\Users\RESEARCHER\Desktop\c2_experimental\sat\cnf\tb\tb0_glue_rand1_twist.cnf
+C:\Users\RESEARCHER\Desktop\c2_experimental\sat\cnf\tb\tb0_full_twist.cnf
+C:\Users\RESEARCHER\Desktop\c2_experimental\sat\cnf\tb\tb0_glue_rand1.cnf
+C:\Users\RESEARCHER\Desktop\c2_experimental\sat\cnf\tb\tb0_glue_rand1_full.cnf
+C:\Users\RESEARCHER\Desktop\c2_experimental\sat\cnf\tb\tb0_full.cnf
