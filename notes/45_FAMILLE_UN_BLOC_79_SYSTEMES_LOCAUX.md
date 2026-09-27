@@ -43,6 +43,12 @@ ci-dessous sont UNSAT (avec preuve DRAT vérifiée).
     - L'échelle de C1 est VÉRIFIÉE : somme 42 + 2|Σ| − 2n_dis, parité par bloc, 10 pivots impossibles.
     - Recompte indépendant des classes par nombre de pivots : 0 → 1787, 2 → 958, 4 → 407, 6 → 106, 8 → 39, 12 → 11.
     - Classes pertinentes à ≥ 6 : **79**, identique à C1.
+  - **Recompte au niveau des ensembles (structures, lab bce7fac, `involution/recount_profiles_ge6.py`, formes canoniques sous
+    B₆)** : ses 156 classes à ≥ 6 pivots sont exactement all_ge6 de C1, avec le même profil et la même pertinence.
+    - Les fichiers tier6_rel (56), tier12_rel (4), tier8_rel (9), tier_32 (6), tier_40 (4) et allonblock_ge6_rel (79) sont
+      tous pertinents et distincts. **Recompte des tiers : ✔.**
+  - Deux étapes sur les 9 types (2,4) : chaque ι trouvé meurt en étape 2 (6 au PL, 3 en PLNE). La classe 4 a un quasi-design,
+    mort au PL.
   - Indice : sur 3 des 9 classes (2,4) pertinentes, les ι trouvés meurent en étape 2 (2 au PL, 1 en PLNE), comme pour les blocs
     pleins et mixtes. UNSAT probable.
 - **C2** :
@@ -88,3 +94,22 @@ ci-dessous sont UNSAT (avec preuve DRAT vérifiée).
   - la parité par bloc ;
   - la formule 42 + 2|Σ| − 2n_dis.
 - **Cloud** : tierpi, les 77 classes à arête π (≥ 6 pivots, pour Σ ≠ ∅), après les 79 (c2-compute f0e73c7).
+
+## 7. Lemme des coupes (structures, NOTE_S29 §9 ; généralise le lemme de C1, notes/134)
+- **Énoncé.** Soit c un bloc de type quelconque (μ, τ), et p un bloc gauche ancré en c : p+ et p− sont pivots (μ = τ sur eux),
+  sans paire frère. Posons Sp = {p+, p−, μp+, μp−}. Dans toute solution du système local en c :
+  - aucun des 30 quadruplets e ∪ ι(e) ne contient les 4 étiquettes de Sp ;
+  - au plus un en contient 3 ;
+  - aucun n'en contient 3 si μp+ et μp− sont dans un même bloc.
+- **Preuve.**
+  - Le (ii) par blocs donne une couverture 2 de Sp par les 10 quadruplets passant par p.
+  - L'inclusion-exclusion sur le quasi-design donne a₀ = 3 − a₃ − 3a₄ (2 − a₃ − 3a₄ pour un digone).
+  - Les étiquettes de Sp sont des pivots, donc jamais centres d'une paire sécante (K₃[b,b] = 0).
+- **Usage.** `sat_local2.py --cuts` (structures) ; l'énoncé est écrit en commentaire dans le DIMACS. Exemple : 132 clauses sur
+  tier8_0.
+- **Route LP indépendante.**
+  - structures a exporté les 9 modèles d'étape 1' des types tier-8 (involution/s1p_tier8_0…8.npz, même disposition que les
+    blocs pleins : 1 410 ι-paires, 22 560 variables, 1 635 lignes).
+  - Correctif export_s1p : [b ∈ e] + [b ∈ f] pour les ι-paires sécantes.
+  - `scripts/iota_dfs.py` : DFS sur les ι partiels, PL à chaque nœud, certificats de Farkas exacts, branchement orbital.
+  - Correspondance : s1p_tier8_k ↔ tier8_rel[k] ↔ source 6 + k.
