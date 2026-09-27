@@ -137,3 +137,16 @@ paires sur les feuilles dures (sans classe fermée d'un bloc), où les composant
   - Les ouvertes seront couvertes par les racines (rtA).
 - **g⁺ ∈ {14, 16}** (C1, notes/135, test pair) : modules de C1 f66098b dans c2-compute/scripts/c1_gplus (b11a1a6), tâche gp,
   basse priorité, après fb/sat.
+- **Cloud s1a (classe 9, étape 1 par paires) : terminé.**
+  - 35 reps sans A, 258 637 feuilles : 194 567 mortes, 64 070 ouvertes, dont 62 527 pour la rep 82 (job 42).
+  - Reps 37 et 49 entièrement mortes.
+  - Les 8 jobs A de la classe 9 (reps 0–3 et 8–11) attendent fb/sat. La racine 9/0 (bloc A = 6) est FAISABLE : le bloc A
+    est libre dans le modèle 'gen'.
+- **Profils de blocs à grand T** (pour le système local de structures/C1) : `logs/large_T_block_profiles.json`.
+  - 1 104 classes d'orientation, 7 728 blocs.
+  - Recensement de (|ancrées en c|, |tordues en c|) : |ancrées| = 0 pour 995 blocs, (6,0) pour 13.
+- **Calibrage de structures (NOTE_S29 §8)** : le système local ne tue sans doute pas C2 d'un coup.
+  - Types pleins et mixtes : chaque ι meurt au PL.
+  - Étoiles libres (ÉTL) : l'étape 2 est PL-faisable.
+  - Cible réaliste : réduire C2 au cas « tous les blocs sont des ÉTL ».
+  - Tâche cloud etl : sat_local sur 3 types ÉTL aléatoires, à la recherche d'une première solution locale à m = 7.
