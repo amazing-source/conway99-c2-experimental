@@ -1,0 +1,16 @@
+{"id": 1502, "dis": [0, 1], "ndis": 2, "status": "UNKNOWN", "secs": 300.0, "cnf_sha": "5cbfa88e051e5e62"}
+{"id": 1502, "dis": [0, 1, 2], "ndis": 3, "status": "UNKNOWN", "secs": 300.0, "cnf_sha": "d43109b14d386f22"}
+{"id": 1502, "dis": [0, 1, 4], "ndis": 3, "status": "UNKNOWN", "secs": 300.0, "cnf_sha": "0efda0d18603ea0f"}
+{"id": 1502, "dis": [0, 1, 9], "ndis": 3, "status": "UNKNOWN", "secs": 300.0, "cnf_sha": "05a0f6c30aaa44fb"}
+{"id": 1502, "dis": [0, 1, 11], "ndis": 3, "status": "UNKNOWN", "secs": 300.0, "cnf_sha": "c89c3be69831ac8f"}
+{"id": 1502, "dis": [0, 1, 2, 4], "ndis": 4, "status": "UNKNOWN", "secs": 300.0, "cnf_sha": "ef4c4db7f11ac3c2"}
+{"id": 1502, "dis": [0, 1, 2, 9], "ndis": 4, "status": "UNKNOWN", "secs": 300.0, "cnf_sha": "096ba88b115a95b4"}
+{"id": 1502, "dis": [0, 1, 2, 11], "ndis": 4, "status": "UNKNOWN", "secs": 300.0, "cnf_sha": "8d26702023e720a7"}
+{"id": 1502, "dis": [0, 1, 4, 9], "ndis": 4, "status": "UNKNOWN", "secs": 300.0, "cnf_sha": "fd8c4c64beb20b92"}
+{"id": 1502, "dis": [0, 1, 4, 11], "ndis": 4, "status": "UNKNOWN", "secs": 300.0, "cnf_sha": "696432366ec26209"}
+{"id": 1502, "dis": [0, 1, 9, 11], "ndis": 4, "status": "UNKNOWN", "secs": 300.0, "cnf_sha": "01ed2d65be77157e"}
+{"id": 1502, "dis": [0, 1, 2, 4, 9], "ndis": 5, "status": "UNKNOWN", "secs": 300.0, "cnf_sha": "25378ba2b94efa55"}
+{"id": 1502, "dis": [0, 1, 2, 4, 11], "ndis": 5, "status": "UNKNOWN", "secs": 300.0, "cnf_sha": "f425fdb8b553a16d"}
+{"id": 1502, "dis": [0, 1, 2, 9, 11], "ndis": 5, "status": "UNKNOWN", "secs": 300.0, "cnf_sha": "5a181533f207ad0a"}
+{"id": 1502, "dis": [0, 1, 4, 9, 11], "ndis": 5, "status": "UNKNOWN", "secs": 300.0, "cnf_sha": "297b01c66764f2a9"}
+{"id": 1502, "dis": [0, 1, 2, 4, 9, 11], "ndis": 6, "status": "UNKNOWN", "secs": 300.0, "cnf_sha": "af163bfbfc251217"}

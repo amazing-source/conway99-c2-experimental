@@ -1,0 +1,18 @@
+type 1793: 6 pivots, non-pivot labels [1, 3, 4, 6, 7, 10], forced dis [6, 7], 16 patterns (16 to run)
+  dis=[6, 7]: UNKNOWN 300s
+  dis=[1, 6, 7]: UNKNOWN 300s
+  dis=[3, 6, 7]: UNKNOWN 300s
+  dis=[4, 6, 7]: UNKNOWN 300s
+  dis=[6, 7, 10]: UNKNOWN 300s
+  dis=[1, 3, 6, 7]: UNKNOWN 300s
+  dis=[1, 4, 6, 7]: UNKNOWN 300s
+  dis=[1, 6, 7, 10]: UNKNOWN 300s
+  dis=[3, 4, 6, 7]: UNKNOWN 300s
+  dis=[3, 6, 7, 10]: UNKNOWN 300s
+  dis=[4, 6, 7, 10]: UNKNOWN 300s
+  dis=[1, 3, 4, 6, 7]: UNKNOWN 300s
+  dis=[1, 3, 6, 7, 10]: UNKNOWN 300s
+  dis=[1, 4, 6, 7, 10]: UNKNOWN 300s
+  dis=[3, 4, 6, 7, 10]: UNKNOWN 300s
+  dis=[1, 3, 4, 6, 7, 10]: UNKNOWN 300s
+CUBES 1793: {'UNKNOWN': 16} | by #dis: {2: {'UNKNOWN': 1}, 3: {'UNKNOWN': 4}, 4: {'UNKNOWN': 6}, 5: {'UNKNOWN': 4}, 6: {'UNKNOWN': 1}}

@@ -105,3 +105,10 @@ La ligne d'arrivée ci-dessous est une liste FINIE et UNIFORME d'instances. Prop
   - C2 : le calcul sur le PC labo et l'organisation. Les voies locales (A)/(B) continuent en fond.
 - **Calibrage (A) par cubes β.** 12/12 cubes INCONNUS à 5 min (types 1502 et 1793, 6 pivots, 2 à 4 dis). La route locale ne se
   termine pas sans un lemme nouveau sur les étiquettes dis.
+- **Calibrage final des cubes β de (A)** : 32/32 INCONNUS à 5 min (types 1502 et 1793, #dis de 2 à 6, cadical natif). (A) compte
+  77 838 cubes. La route locale est suspendue en attendant un lemme nouveau sur les étiquettes dis. **(C) devient la voie
+  principale.**
+- **(C), suite.**
+  - C1 : 141 classes de (y₁, y₂) pour O₂₄ (conway99-c1 48eabf2). Le piège (P) y est vide, pour une raison démontrée, et le test
+    d'engendrement ne coupe rien.
+  - structures : les 156 enveloppes explicites (structures-lab 9ee7828). Le piège de C1 tourne sur les 156, au PC labo.
