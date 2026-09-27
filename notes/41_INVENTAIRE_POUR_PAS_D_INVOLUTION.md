@@ -24,7 +24,7 @@ branche involution. Objectif : Aut(Γ) = 1, avec « pas d'ordre 3 » de C3, vér
 | Σ ≠ ∅, motifs de Σ entre les deux | **MORT** sauf 9 motifs (systèmes χ / RSF, DRAT) | labo notes 18–19, `data/survivors_after19.txt` |
 | **Σ ≠ ∅ : 9 motifs survivants** K₂, P₃, 2K₂, K₃, P₄, P₃+K₂, 3K₂, P₅, 2P₃ | **OUVERT** (paires non frères de type « un bloc » ou « dis ») | notes 19–20 |
 | Σ = ∅, tout « un bloc », T = ∅ (tout ancré) | **MORT** (à la main) | lemme de la queue, carnet §24 |
-| Σ = ∅, tout « un bloc », T = K₇ (tout tordu) | **MORT** (à la main pour ≥ 2 triangles ; certificats sinon, revérifiés par C2) | « structures » S8/S11/S17, carnet §32 |
+| Σ = ∅, tout « un bloc », T = K₇ (tout tordu) | **MORT pour les circuits SIMPLES seulement** (trou trouvé le 27/09 : systèmes de transitions non simples non couverts, note 45 §8) | « structures » S8/S11/S17, carnet §32 |
 | Σ = ∅, tout « un bloc », T = un cycle (M1), n = 3, 4 | **MORT** (certificats stockés, revérifiés) | carnet §30–§31, labo notes 34 et 36 |
 | M1, n = 7 (H) | **MORT** (H = H-β à la main ; H-β : 552 classes, certificats revérifiés) | carnet §28–§29 |
 | M1, n = 5 et n = 6 | **EN FERMETURE** (§2) | labo note 40 |

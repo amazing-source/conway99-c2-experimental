@@ -113,3 +113,26 @@ ci-dessous sont UNSAT (avec preuve DRAT vérifiée).
   - Correctif export_s1p : [b ∈ e] + [b ∈ f] pour les ι-paires sécantes.
   - `scripts/iota_dfs.py` : DFS sur les ι partiels, PL à chaque nœud, certificats de Farkas exacts, branchement orbital.
   - Correspondance : s1p_tier8_k ↔ tier8_rel[k] ↔ source 6 + k.
+
+## 8. Les (0,6) et le trou du tout-tordu (27/09, matin)
+- **Comptage (C2 ; vérifié par C1 et structures).**
+  - Les étiquettes par bloc sont en nombre pair, donc dans {0, 2, 4, 6, 8, 12}.
+  - Si toutes les classes pertinentes à ≥ 6 étiquettes sont UNSAT, SAUF (0,6), alors chaque bloc est (0,6) ou porte ≤ 4
+    étiquettes.
+  - Avec k blocs (0,6) : 42 ≤ 6k + 4(7 − k), donc k = 7. Tout bloc est alors (0,6), et T = K₇ (tout tordu).
+- **TROU (structures, confirmé par C1).** « T = K₇ mort » (carnet §14/§26/§32, structures S8/S11/S17/S19) suppose que les
+  chaînes de paires tordues sont des cycles SIMPLES de K₇ (les 121 215 décompositions de k7_cycle_decomp.py).
+  - Or §14 ne prouve que la 2-régularité du graphe D.
+  - En tout-tordu, D est un système de TRANSITIONS : en chaque bloc, les 6 orbites pivots sont appariées librement. Les circuits
+    peuvent donc repasser par un bloc, par exemple le papillon i–a–b–i–c–d–i.
+  - Il y a 15⁷ ≈ 1,7·10⁸ systèmes étiquetés, dont seulement 121 215 à circuits simples.
+  - Restent valables pour le non-simple : S8.2, S8.5 et le lemme du coin.
+- **Conséquence.** Le théorème Σ = ∅ « un bloc » demande les 79 instances, tier06 compris, OU les 72 plus une preuve du
+  tout-tordu non simple. **tier06 reste sur le chemin critique.**
+- **Attaque du tout-tordu non simple par le PL d'orbite (C2, 06:30).**
+  - `scripts/root_K7.py` : orbit_colmodel_gen avec In[c] = [] pour tout c. Toute structure D y est, donc tout système de
+    transitions, simple ou non. 1 764 000 colonnes.
+  - Si la racine est faisable : fixation de blocs, 15 appariements par bloc, avec branchement orbital sous S₇.
+- **Lemmes ajoutés aux encodages (structures, relus par C1)** : --digon (équilibre de digone, types à digone ancré) et --path
+  (« exactement un excès » en chaque bloc chemin ancré non frère, lab 0d4f1fb). Les voies tier8 tournent en encodage 2 avec
+  cuts + digon (types 6–8) et cuts + digon + path (types 9–14).
