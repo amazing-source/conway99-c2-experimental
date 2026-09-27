@@ -136,3 +136,16 @@ ci-dessous sont UNSAT (avec preuve DRAT vérifiée).
 - **Lemmes ajoutés aux encodages (structures, relus par C1)** : --digon (équilibre de digone, types à digone ancré) et --path
   (« exactement un excès » en chaque bloc chemin ancré non frère, lab 0d4f1fb). Les voies tier8 tournent en encodage 2 avec
   cuts + digon (types 6–8) et cuts + digon + path (types 9–14).
+- **Lemme du coin (carnet §15), relu pas à pas par C1 le 27/09.** Il n'utilise ni la simplicité des circuits, ni Σ = ∅.
+  - **Hypothèses.** Une paire ij, dont les orbites A₁ et B₁ ont leurs carrés D de même troisième bloc k : D(A₁) = A₂ ⊂ ik et
+    D(B₁) = B₂ ⊂ jk.
+  - **Conclusions.** e = G_{A₂B₂} = 0 ; ω(A₁) = ω(B₁) = 0 ; Y_A ∩ R_B = R_A ∩ Y_B = ∅ ; far(A₁,B₁) = 2 ; far(A₁,B₂) = 3.
+  - **Dépendances.** Lemme 1, Lemme 3, l'identité G² + G = 8I + 4J − Sh − 2(GD + DG) − 2D, le lemme 9.2 et le compte μ = 2.
+  - **Lignes d'orbite (C1)**, à ajouter au modèle U si l'arbre K₇ est trop gros :
+    - R1 (e = 0, 840 lignes) ;
+    - R2/R3 (Y ∩ R = ∅) ;
+    - R4 (ω = 0) ;
+    - aux nœuds où les transitions en i et j sont fixées, elles deviennent des suppressions de colonnes.
+  - Relecture indépendante demandée à structures.
+- **État K₇ (06:30).** Racine faisable (135 s) ; nœud 2 (bloc 0 = {12,34,56}) faisable (144 s) ; fixation en cours,
+  `logs/run_U_fix_k7fix_K7_alltw.jsonl`.
