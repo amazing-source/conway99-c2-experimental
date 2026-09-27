@@ -39,7 +39,12 @@ ci-dessous sont UNSAT (avec preuve DRAT vérifiée).
   - (a) Complétude de l'énumération par profil : recompte indépendant (`involution/recount_profile24.py`), 15 classes de
     profil (2,4), dont 9 pertinentes, identique à C1.
   - (b) Validité de l'encodage en bloc non plein.
-  - Tiers 6, 12, (3,2) et (4,0) : pas encore recomptés par structures. **À faire avant de conclure.**
+  - **Complément de structures (commit 67d5f57).**
+    - L'échelle de C1 est VÉRIFIÉE : somme 42 + 2|Σ| − 2n_dis, parité par bloc, 10 pivots impossibles.
+    - Recompte indépendant des classes par nombre de pivots : 0 → 1787, 2 → 958, 4 → 407, 6 → 106, 8 → 39, 12 → 11.
+    - Classes pertinentes à ≥ 6 : **79**, identique à C1.
+  - Indice : sur 3 des 9 classes (2,4) pertinentes, les ι trouvés meurent en étape 2 (2 au PL, 1 en PLNE), comme pour les blocs
+    pleins et mixtes. UNSAT probable.
 - **C2** :
   - Les 79 classes (`allonblock_ge6_rel.json`, C1 040ec06) = tier8_rel 9 + tier6_rel 56 + tier12_rel 4 + tier_32 6 +
     tier_40 4, contrôlé comme multiensembles de (μ, τ).
