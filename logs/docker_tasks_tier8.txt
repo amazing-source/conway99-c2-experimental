@@ -1,0 +1,9 @@
+cnf/e2cd/type_0006_enc2cd.cnf 21600 kissat
+cnf/e2cd/type_0007_enc2cd.cnf 21600 kissat
+cnf/e2cd/type_0008_enc2cd.cnf 21600 kissat
+cnf/e2cd/type_0009_enc2cd.cnf 21600 kissat
+cnf/e2cd/type_0010_enc2cd.cnf 21600 kissat
+cnf/e2cd/type_0011_enc2cd.cnf 21600 kissat
+cnf/e2cd/type_0012_enc2cd.cnf 21600 kissat
+cnf/e2cd/type_0013_enc2cd.cnf 21600 kissat
+cnf/e2cd/type_0014_enc2cd.cnf 21600 kissat
