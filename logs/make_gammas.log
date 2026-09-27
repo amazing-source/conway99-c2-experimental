@@ -1,0 +1,58 @@
+19:21:26 003 (conway99-c1 b8ae56e, 600s): TIMEOUT after 600s
+19:22:07 078 (conway99-c1 b8ae56e, 1s): {"id": 78, "roots": "a_8a_5^2a_3", "components": 4, "glue_code_size": 648, "gamma_order": 4, "candidates_after_glue": 32, "seconds": 1.2, "table_group": "4"}
+19:22:12 064 (conway99-c1 b8ae56e, 6s): {"id": 64, "roots": "a_5^4", "components": 4, "glue_code_size": 1296, "gamma_order": 24, "candidates_after_glue": 384, "seconds": 5.6, "table_group": "24"}
+19:22:16 062 (conway99-c1 b8ae56e, 4s): {"id": 62, "roots": "a_6a_5a_5a_3a_2", "components": 5, "glue_code_size": 3024, "gamma_order": 2, "candidates_after_glue": 64, "seconds": 4.0, "table_group": "2"}
+19:22:23 068 (conway99-c1 b8ae56e, 6s): {"id": 68, "roots": "a_6d_5a_4a_4a_2", "components": 5, "glue_code_size": 2100, "gamma_order": 2, "candidates_after_glue": 64, "seconds": 5.9, "table_group": "2"}
+19:22:42 074 (conway99-c1 b8ae56e, 19s): {"id": 74, "roots": "a_7a_6a_5a_2a_1", "components": 5, "glue_code_size": 2016, "gamma_order": 2, "candidates_after_glue": 16, "seconds": 15.1, "table_group": "2"}
+19:23:08 075 (conway99-c1 b8ae56e, 27s): {"id": 75, "roots": "a_6a_6a_5a_4a_1", "components": 5, "glue_code_size": 2940, "gamma_order": 2, "candidates_after_glue": 32, "seconds": 20.0, "table_group": "2"}
+19:23:29 054 (conway99-c1 b8ae56e, 20s): {"id": 54, "roots": "a_6d_4a_4^2a_2", "components": 5, "glue_code_size": 2100, "gamma_order": 4, "candidates_after_glue": 192, "seconds": 16.1, "table_group": "4"}
+19:23:48 057 (conway99-c1 b8ae56e, 19s): {"id": 57, "roots": "a_5a_5a_4^2a_3", "components": 5, "glue_code_size": 1800, "gamma_order": 4, "candidates_after_glue": 128, "seconds": 13.5, "table_group": "4"}
+19:24:16 060 (conway99-c1 b8ae56e, 29s): {"id": 60, "roots": "a_7a_4^2a_3^2", "components": 5, "glue_code_size": 3200, "gamma_order": 4, "candidates_after_glue": 128, "seconds": 23.3, "table_group": "4"}
+19:24:30 066 (conway99-c1 b8ae56e, 14s): {"id": 66, "roots": "a_7a_5a_4^2a_1", "components": 5, "glue_code_size": 1200, "gamma_order": 4, "candidates_after_glue": 32, "seconds": 9.6, "table_group": "4"}
+19:24:59 073 (conway99-c1 b8ae56e, 29s): {"id": 73, "roots": "a_8a_4^2a_3^2", "components": 5, "glue_code_size": 3600, "gamma_order": 4, "candidates_after_glue": 128, "seconds": 25.0, "table_group": "4"}
+19:25:09 065 (conway99-c1 b8ae56e, 10s): {"id": 65, "roots": "a_7a_5^2a_2^2", "components": 5, "glue_code_size": 432, "gamma_order": 8, "candidates_after_glue": 16, "seconds": 4.8, "table_group": "8"}
+19:25:33 055 (conway99-c1 b8ae56e, 25s): {"id": 55, "roots": "a_6a_5a_4a_3a_2a_1", "components": 6, "glue_code_size": 2520, "gamma_order": 2, "candidates_after_glue": 32, "seconds": 18.4, "table_group": "2"}
+19:27:18 038 (conway99-c1 b8ae56e, 104s): {"id": 38, "roots": "d_4a_4^2a_4a_2^2", "components": 6, "glue_code_size": 4500, "gamma_order": 4, "candidates_after_glue": 2304, "seconds": 100.1, "table_group": "4"}
+19:27:41 041 (conway99-c1 b8ae56e, 24s): {"id": 41, "roots": "a_5a_4^2a_3a_3a_1", "components": 6, "glue_code_size": 2400, "gamma_order": 4, "candidates_after_glue": 128, "seconds": 19.6, "table_group": "4"}
+19:28:12 045 (conway99-c1 b8ae56e, 30s): {"id": 45, "roots": "a_5^2a_4^2a_1^2", "components": 6, "glue_code_size": 3600, "gamma_order": 4, "candidates_after_glue": 128, "seconds": 27.1, "table_group": "4"}
+19:28:33 047 (conway99-c1 b8ae56e, 21s): {"id": 47, "roots": "a_5^2a_4a_3a_2^2", "components": 6, "glue_code_size": 2160, "gamma_order": 4, "candidates_after_glue": 32, "seconds": 17.5, "table_group": "4"}
+19:29:10 053 (conway99-c1 b8ae56e, 37s): {"id": 53, "roots": "d_5a_4a_4^2a_2^2", "components": 6, "glue_code_size": 4500, "gamma_order": 4, "candidates_after_glue": 768, "seconds": 33.0, "table_group": "4"}
+19:29:34 061 (conway99-c1 b8ae56e, 24s): {"id": 61, "roots": "a_6^2a_4a_3a_1^2", "components": 6, "glue_code_size": 3920, "gamma_order": 4, "candidates_after_glue": 64, "seconds": 19.0, "table_group": "4"}
+19:30:08 063 (conway99-c1 b8ae56e, 33s): {"id": 63, "roots": "a_6^2a_3^2a_2^2", "components": 6, "glue_code_size": 7056, "gamma_order": 4, "candidates_after_glue": 512, "seconds": 32.1, "table_group": "4"}
+19:30:19 070 (conway99-c1 b8ae56e, 11s): {"id": 70, "roots": "d_5a_5^2d_4a_1^2", "components": 6, "glue_code_size": 576, "gamma_order": 4, "candidates_after_glue": 32, "seconds": 7.1, "table_group": "4"}
+19:30:27 071 (conway99-c1 b8ae56e, 8s): {"id": 71, "roots": "a_5^2a_5d_4a_3a_1", "components": 6, "glue_code_size": 288, "gamma_order": 4, "candidates_after_glue": 8, "seconds": 4.3, "table_group": "4"}
+19:30:54 036 (conway99-c1 b8ae56e, 26s): {"id": 36, "roots": "a_5^2a_3^2a_2^2", "components": 6, "glue_code_size": 2592, "gamma_order": 8, "candidates_after_glue": 512, "seconds": 21.1, "table_group": "8"}
+19:31:57 043 (conway99-c1 b8ae56e, 63s): {"id": 43, "roots": "a_4^3a_3^3", "components": 6, "glue_code_size": 4000, "gamma_order": 12, "candidates_after_glue": 2304, "seconds": 57.0, "table_group": "12"}
+19:34:12 033 (conway99-c1 b8ae56e, 135s): {"id": 33, "roots": "a_4^2a_3^4", "components": 6, "glue_code_size": 6400, "gamma_order": 16, "candidates_after_glue": 3072, "seconds": 128.7, "table_group": "16"}
+19:34:36 048 (conway99-c1 b8ae56e, 24s): {"id": 48, "roots": "a_4^4a_3^2", "components": 6, "glue_code_size": 2000, "gamma_order": 16, "candidates_after_glue": 128, "seconds": 18.7, "table_group": "16"}
+19:34:47 049 (conway99-c1 b8ae56e, 12s): {"id": 49, "roots": "d_5d_4a_3^4", "components": 6, "glue_code_size": 512, "gamma_order": 16, "candidates_after_glue": 64, "seconds": 6.7, "table_group": "16"}
+19:35:03 051 (conway99-c1 b8ae56e, 15s): {"id": 51, "roots": "a_5^2d_4^2a_1^2", "components": 6, "glue_code_size": 576, "gamma_order": 16, "candidates_after_glue": 128, "seconds": 9.8, "table_group": "16"}
+19:35:10 069 (conway99-c1 b8ae56e, 8s): {"id": 69, "roots": "d_5^2a_3^4", "components": 6, "glue_code_size": 256, "gamma_order": 16, "candidates_after_glue": 32, "seconds": 4.6, "table_group": "16"}
+19:35:35 042 (conway99-c1 b8ae56e, 25s): {"id": 42, "roots": "d_4^2a_3^4", "components": 6, "glue_code_size": 512, "gamma_order": 32, "candidates_after_glue": 64, "seconds": 21.6, "table_group": "32"}
+19:38:35 020 (conway99-c1 b8ae56e, 180s): TIMEOUT after 180s
+19:39:37 032 (conway99-c1 b8ae56e, 62s): {"id": 32, "roots": "a_5a_4a_3a_3a_2a_2a_1", "components": 7, "glue_code_size": 8640, "gamma_order": 2, "candidates_after_glue": 256, "seconds": 55.6, "table_group": "2"}
+19:40:13 046 (conway99-c1 b8ae56e, 36s): {"id": 46, "roots": "a_6a_4a_4a_3a_2a_1a_1", "components": 7, "glue_code_size": 8400, "gamma_order": 2, "candidates_after_glue": 128, "seconds": 32.4, "table_group": "2"}
+19:40:21 067 (conway99-c1 b8ae56e, 9s): {"id": 67, "roots": "a_7a_5d_4a_3a_1a_1a_1", "components": 7, "glue_code_size": 768, "gamma_order": 2, "candidates_after_glue": 8, "seconds": 4.8, "table_group": "2"}
+19:40:34 056 (conway99-c1 b8ae56e, 13s): {"id": 56, "roots": "a_5^2d_4a_3^2a_1^2", "components": 7, "glue_code_size": 1152, "gamma_order": 4, "candidates_after_glue": 64, "seconds": 8.7, "table_group": "4"}
+19:40:46 058 (conway99-c1 b8ae56e, 12s): {"id": 58, "roots": "a_5^2d_4a_3^2a_1^2", "components": 7, "glue_code_size": 1152, "gamma_order": 8, "candidates_after_glue": 64, "seconds": 9.2, "table_group": "8"}
+19:41:16 035 (conway99-c1 b8ae56e, 30s): {"id": 35, "roots": "a_5a_4^3a_1^3", "components": 7, "glue_code_size": 3000, "gamma_order": 12, "candidates_after_glue": 576, "seconds": 28.7, "table_group": "12"}
+19:43:34 037 (conway99-c1 b8ae56e, 137s): {"id": 37, "roots": "a_6a_3^3a_2^3", "components": 7, "glue_code_size": 6048, "gamma_order": 12, "candidates_after_glue": 4608, "seconds": 134.8, "table_group": "12"}
+19:46:23 018 (conway99-c1 b8ae56e, 169s): {"id": 18, "roots": "a_4a_3^2a_3a_2^2a_1^2", "components": 8, "glue_code_size": 11520, "gamma_order": 4, "candidates_after_glue": 1536, "seconds": 167.2, "table_group": "4"}
+19:47:48 029 (conway99-c1 b8ae56e, 86s): {"id": 29, "roots": "a_4^2a_3^2a_2^2a_1^2", "components": 8, "glue_code_size": 7200, "gamma_order": 4, "candidates_after_glue": 1024, "seconds": 82.8, "table_group": "4"}
+19:50:49 034 (conway99-c1 b8ae56e, 180s): TIMEOUT after 180s
+19:51:03 039 (conway99-c1 b8ae56e, 14s): {"id": 39, "roots": "a_5d_4a_3^2a_3a_1^2a_1", "components": 8, "glue_code_size": 1536, "gamma_order": 4, "candidates_after_glue": 32, "seconds": 11.0, "table_group": "4"}
+19:51:12 050 (conway99-c1 b8ae56e, 9s): {"id": 50, "roots": "d_5a_5a_3^2a_3a_1^2a_1", "components": 8, "glue_code_size": 768, "gamma_order": 4, "candidates_after_glue": 16, "seconds": 6.8, "table_group": "4"}
+19:52:11 026 (conway99-c1 b8ae56e, 59s): {"id": 26, "roots": "a_5a_3^2a_2^4a_1", "components": 8, "glue_code_size": 2592, "gamma_order": 16, "candidates_after_glue": 384, "seconds": 56.6, "table_group": "16"}
+19:55:11 021 (conway99-c1 b8ae56e, 180s): TIMEOUT after 180s
+19:58:11 022 (conway99-c1 b8ae56e, 180s): TIMEOUT after 180s
+20:01:11 031 (conway99-c1 b8ae56e, 180s): TIMEOUT after 180s
+20:04:11 013 (conway99-c1 b8ae56e, 180s): TIMEOUT after 180s
+20:07:11 008 (conway99-c1 b8ae56e, 180s): TIMEOUT after 180s
+20:10:11 015 (conway99-c1 b8ae56e, 180s): TIMEOUT after 180s
+20:10:21 052 (conway99-c1 b8ae56e, 10s): {"id": 52, "roots": "a_7a_3^4a_1^4", "components": 9, "glue_code_size": 512, "gamma_order": 16, "candidates_after_glue": 32, "seconds": 7.5, "table_group": "16"}
+20:12:23 023 (conway99-c1 b8ae56e, 122s): {"id": 23, "roots": "d_4a_3^4a_1^4", "components": 9, "glue_code_size": 2048, "gamma_order": 32, "candidates_after_glue": 1024, "seconds": 119.8, "table_group": "32"}
+20:15:06 027 (conway99-c1 b8ae56e, 163s): {"id": 27, "roots": "d_4a_3^4a_1^4", "components": 9, "glue_code_size": 2048, "gamma_order": 48, "candidates_after_glue": 384, "seconds": 160.6, "table_group": "48"}
+20:15:58 040 (conway99-c1 b8ae56e, 52s): {"id": 40, "roots": "a_5^2a_3^2a_1^2a_1^2a_1^2", "components": 10, "glue_code_size": 2304, "gamma_order": 8, "candidates_after_glue": 64, "seconds": 49.7, "table_group": "8"}
+20:18:58 011 (conway99-c1 b8ae56e, 180s): TIMEOUT after 180s
+20:21:58 014 (conway99-c1 b8ae56e, 180s): TIMEOUT after 180s
+20:24:58 019 (conway99-c1 b8ae56e, 180s): TIMEOUT after 180s
